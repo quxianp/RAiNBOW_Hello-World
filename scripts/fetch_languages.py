@@ -252,6 +252,7 @@ def fetch_linguist() -> list:
                     "type": meta.get("type"),
                     "color": meta.get("color"),
                     "extensions": list(meta.get("extensions") or []),
+                    "filenames": list(meta.get("filenames") or []),
                     "interpreters": list(meta.get("interpreters") or []),
                     "aliases": list(meta.get("aliases") or []),
                     "tm_scope": meta.get("tm_scope"),
@@ -614,21 +615,28 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true", help="reuse caches only")
     ap.add_argument("--refresh", action="store_true", help="ignore caches")
+    ap.add_argument(
+        "--only",
+        action="append",
+        default=None,
+        choices=["linguist", "wikipedia", "other", "builtin"],
+        help="fetch just these sources (repeatable)",
+    )
     args = ap.parse_args()
 
     DATA.mkdir(parents=True, exist_ok=True)
     LOGS.mkdir(parents=True, exist_ok=True)
     detect_proxy()
-    log("=== fetch_languages start ===")
+    want = set(args.only) if args.only else {"linguist", "wikipedia", "other", "builtin"}
+    log(f"=== fetch_languages start (sources: {', '.join(sorted(want))}) ===")
 
-    builtin = load_builtin()
+    builtin = load_builtin() if "builtin" in want else {}
 
-    if args.offline:
-        log("offline mode: reusing cached network sources")
-        fetch_linguist() if (DATA / "linguist.json").exists() else None
-    else:
+    if "linguist" in want:
         fetch_linguist()
+    if "wikipedia" in want and not args.offline:
         fetch_wikipedia()
+    if "other" in want and not args.offline:
         fetch_other()
 
     summary = {

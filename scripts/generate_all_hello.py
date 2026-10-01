@@ -322,7 +322,7 @@ HELLO: dict[str, str] = {
     "gleam": 'pub fn main() {\n  io.println("Hello World!")\n}\n',
     "idris": 'module Main\n\nmain : IO ()\nmain = putStrLn "Hello World!"\n',
     "lean": 'def main : IO Unit :=\n  IO.println "Hello World!"\n',
-    "agda": 'module hello where\n\npostulate\n  String : Set\n  _≡_ : {A : Set} → A → A → Set\n',
+    "agda": 'module hello where\n\npostulate\n  String : Set\n  _閳摜 : {A : Set} 閳?A 閳?A 閳?Set\n',
     "coq": 'Definition hello : string := "Hello World!".\n',
     "isabelle": 'theory Hello\n  imports Main\nbegin\n\n  lemma greeting: "Hello World!" \\<in> {undefined}\\<^sub> \\<^sub> * x \\<^sub> \\<^sub>.\n\nend\n',
     "tla+": '---- MODULE Hello ----\nEXTENDS Naturals\nVARIABLE msg\nInit == msg = "Hello World!"\nNext == UNCHANGED msg\nSpec == Init /\\ [][Next]_msg\n=================\n',
@@ -666,6 +666,35 @@ RUNNERS: dict[str, str] = {
 FALLBACK_INTERPRETER = "see https://esolangs.org/ and https://rosettacode.org/"
 
 
+# languages Linguist matches by exact filename: give them a fitting comment syntax
+FILENAME_COMMENT = {
+    ".npmrc": "#", ".browserslistrc": "#", ".gitattributes": "#",
+    ".gitmessage": "#", ".git-blame-ignore-revs": "#", ".shellcheckrc": "#",
+    ".tm_properties": "#", "torrc": "#", "crontab": "#", "Procfile": "#",
+    "HOSTS": "#", "ROOT": "#", "go.mod": "//", "go.work": "//", "go.sum": "",
+    "go.work.sum": "", "Gemfile.lock": "#", "MANIFEST.MF": "#",
+    "meson.build": "#", "meson_options.txt": "#", "dune-project": "#",
+    "xmake.lua": "--", "bird.conf": "#", "Singularity": "#", "Earthfile": "#",
+    "APKBUILD": "#", "m3makefile": "#", "m3overrides": "#",
+    "language-subtag-registry.txt": "", "hosts.txt": "#",
+    "requirements.txt": "#", "requirements-dev.txt": "#",
+    "dev-requirements.txt": "#", "requirements.lock.txt": "#",
+    "ant.xml": "<!--", "build.xml": "<!--", "firestore.rules": "//",
+    "akita.js": "//",
+}
+
+
+def comment_style_for(ext: str, fname: str | None = None):
+    """Filename match wins over extension match for config-style languages."""
+    if fname:
+        c = FILENAME_COMMENT.get(fname)
+        if c is not None:
+            if c == "":
+                return C_NONE
+            return (c, None, None)
+    return comment_style(ext, BLOCK_COMMENT)
+
+
 def comment_style(ext: str, block: dict | None = None):
     """Return (line, block_start, block_end) for an extension."""
     if block:
@@ -731,9 +760,10 @@ def program_for(name: str, ext: str) -> tuple[str, bool]:
     return "", False
 
 
-def default_program(name: str, ext: str, colour_note: str) -> str:
+def default_program(name: str, ext: str, colour_note: str,
+                   fname: str | None = None) -> str:
     """Best-effort equivalent when we have no curated template."""
-    line, bs, be = comment_style(ext, BLOCK_COMMENT)
+    line, bs, be = comment_style_for(ext, fname)
     c = f"{line} " if line else ""
     if bs:
         c_open, c_close = f"{bs} ", be
@@ -778,9 +808,10 @@ def normalise(text: str) -> str:
 
 
 def build_file(name: str, ext: str, colour: str | None, hue: float | None,
-               note: str, layer: str, path_rel: str) -> str:
+               note: str, layer: str, path_rel: str,
+               fname: str | None = None) -> str:
     prog, known = program_for(name, ext)
-    line, bs, be = comment_style(ext, BLOCK_COMMENT)
+    line, bs, be = comment_style_for(ext, fname)
     if line:
         c = f"{line} "
     elif bs:
@@ -824,7 +855,7 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
             head_lines.insert(1, f"  note       : {extra}")
         else:
             head_lines.insert(1, f"  note: {extra}")
-        prog, _ = default_program(name, ext, "Hello World!")
+        prog, _ = default_program(name, ext, "Hello World!", fname)
 
     text = normalise("\n".join(head_lines) + "\n\n" + prog)
     if not text.endswith("\n"):
@@ -836,8 +867,10 @@ def safe_dir(base: Path, slug: str, taken: dict) -> Path:
     d = base / slug
     n = taken.get(slug, 0)
     taken[slug] = n + 1
-    if n:
+    while d.exists() and any(d.iterdir()):
         d = base / f"{slug}-{n + 1}"
+        n += 1
+        taken[slug] = n
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -869,20 +902,18 @@ def main() -> int:
     for rec in rainbow["languages"]:
         name = rec["name"]
         ext = rec["extension"] or ""
-        if not ext:
-            ext = f".{rec['slug'].replace('-', '_')}"
         d = safe_dir(core_dir, rec["slug"], taken_core)
-        fname = "hello" + ext
+        fname = rec.get("filename") or ("hello" + ext)
         path = d / fname
         text = build_file(
             name,
             ext,
             f"#{rec['color']}" if rec["color"] else None,
             rec.get("hue"),
-            "Linguist has no extension for this language; this file uses the "
-            "canonical name as its extension so it is still counted in the bar.",
+            "Linguist recognises this language by filename, not by extension.",
             "core",
             f"hello/core/{rec['slug']}/{fname}",
+            fname=fname,
         )
         path.write_text(text, encoding="utf-8", newline="\n")
         manifest.append(

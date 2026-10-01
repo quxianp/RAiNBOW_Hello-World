@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "name": "core languages within 600-800",
+      "ok": true,
+      "detail": "689 core languages"
+    },
+    {
+      "name": "core == every Linguist coloured language that can be detected",
+      "ok": true,
+      "detail": "linguist coloured=694 core=689 deferred=5 (no extension and no filename -> moved to hello/full)"
+    },
+    {
+      "name": "every core file exists",
+      "ok": true,
+      "detail": "0 missing: []"
+    },
+    {
+      "name": "core share window 0.05%-0.5%",
+      "ok": true,
+      "detail": "min 0.1451% max 0.1454% ideal 0.1451%"
+    },
+    {
+      "name": "shares sum to 100%",
+      "ok": true,
+      "detail": "sum 100.000000%"
+    },
+    {
+      "name": "share spread is tight",
+      "ok": true,
+      "detail": "stdev 0.000016 pp"
+    },
+    {
+      "name": "counted bytes non-trivial",
+      "ok": true,
+      "detail": "1411098 bytes counted"
+    },
+    {
+      "name": "full layer >= 2400 files",
+      "ok": true,
+      "detail": "6417 files"
+    },
+    {
+      "name": "total language files >= 3000",
+      "ok": true,
+      "detail": "689 core + 6417 full = 7106"
+    },
+    {
+      "name": ".gitattributes un-vendors hello/core",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": ".gitattributes vendors hello/full",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": ".gitattributes marks README as documentation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": ".gitattributes default is vendored",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "every core file is recognisable by Linguist",
+      "ok": true,
+      "detail": "0 unrecognisable: []"
+    },
+    {
+      "name": "colour wheel fully covered",
+      "ok": true,
+      "detail": "missing []"
+    },
+    {
+      "name": "hues span the wheel",
+      "ok": true,
+      "detail": "min 0.0 max 359.6"
+    },
+    {
+      "name": "languages ordered by hue",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hello/manifest.json exists",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "merged inventory >= 3000 languages",
+      "ok": true,
+      "detail": "7105 languages"
+    }
+  ],
+  "passed": 19,
+  "total": 19,
+  "core_languages": 689,
+  "core_files": 689,
+  "full_files": 6417,
+  "total_language_files": 7106,
+  "merged_languages": 7105,
+  "counted_bytes": 1411098,
+  "share_min_pct": 0.145135,
+  "share_max_pct": 0.145419,
+  "share_sum_pct": 100.0,
+  "buckets": {
+    "red-orange": 80,
+    "orange": 35,
+    "amber": 49,
+    "yellow": 27,
+    "yellow-green": 26,
+    "green": 23,
+    "spring-green": 34,
+    "green-cyan": 30,
+    "cyan": 29,
+    "cyan-blue": 59,
+    "azure": 95,
+    "blue": 57,
+    "violet": 28,
+    "purple": 32,
+    "magenta": 12,
+    "pink": 17,
+    "rose": 20,
+    "red": 36
+  },
+  "failed": []
+}

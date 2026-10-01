@@ -7,6 +7,7 @@
       ".bsl",
       ".os"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bsl",
@@ -26,6 +27,7 @@
     "extensions": [
       ".2da"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.2da",
@@ -45,6 +47,7 @@
     "extensions": [
       ".4dm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.4dm",
@@ -64,6 +67,7 @@
     "extensions": [
       ".abap"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.abap",
@@ -83,6 +87,7 @@
     "extensions": [
       ".asddls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.abapcds",
@@ -102,6 +107,7 @@
     "extensions": [
       ".abnf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.abnf",
@@ -122,6 +128,7 @@
       ".asc",
       ".ash"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ags"
@@ -143,6 +150,7 @@
     "extensions": [
       ".aidl"
     ],
+    "filenames": [],
     "interpreters": [
       "aidl"
     ],
@@ -164,6 +172,7 @@
     "extensions": [
       ".al"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.al",
@@ -183,6 +192,7 @@
     "extensions": [
       ".alg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.algol60",
@@ -203,6 +213,7 @@
       ".ampl",
       ".mod"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ampl",
@@ -222,6 +233,7 @@
     "extensions": [
       ".g4"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.antlr",
@@ -241,6 +253,7 @@
     "extensions": [
       ".apib"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.markdown.source.gfm.apib",
@@ -261,6 +274,7 @@
       ".apl",
       ".dyalog"
     ],
+    "filenames": [],
     "interpreters": [
       "apl",
       "aplx",
@@ -285,6 +299,7 @@
       ".asl",
       ".dsl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.asl",
@@ -305,6 +320,7 @@
       ".asn",
       ".asn1"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.asn",
@@ -329,6 +345,7 @@
       ".aspx",
       ".axd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "aspx",
@@ -353,6 +370,7 @@
       ".hats",
       ".sats"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ats2"
@@ -374,6 +392,7 @@
     "extensions": [
       ".as"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "actionscript 3",
@@ -399,6 +418,7 @@
       ".ada",
       ".ads"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ada95",
@@ -421,6 +441,7 @@
     "extensions": [
       ".txt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ad block filters",
@@ -445,6 +466,7 @@
     "extensions": [
       ".afm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "acfm",
@@ -469,6 +491,7 @@
     "extensions": [
       ".agda"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.agda",
@@ -488,6 +511,7 @@
     "extensions": [
       ".ak"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.aiken",
@@ -507,6 +531,7 @@
     "extensions": [
       ".aleo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.aleo",
@@ -526,6 +551,7 @@
     "extensions": [
       ".als"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.alloy",
@@ -543,6 +569,9 @@
     "type": "programming",
     "color": "#0D597F",
     "extensions": [],
+    "filenames": [
+      "APKBUILD"
+    ],
     "interpreters": [],
     "aliases": [
       "abuild",
@@ -568,6 +597,7 @@
       ".PrjPCB",
       ".SchDoc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "altium"
@@ -590,6 +620,7 @@
       ".as",
       ".angelscript"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.angelscript",
@@ -609,6 +640,7 @@
     "extensions": [
       ".lp"
     ],
+    "filenames": [],
     "interpreters": [
       "clingo"
     ],
@@ -628,6 +660,10 @@
     "type": "data",
     "color": "#A9157E",
     "extensions": [],
+    "filenames": [
+      "ant.xml",
+      "build.xml"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml.ant",
@@ -649,6 +685,7 @@
       ".antlers.php",
       ".antlers.xml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.statamic",
@@ -668,6 +705,11 @@
     "extensions": [
       ".apacheconf",
       ".vhost"
+    ],
+    "filenames": [
+      ".htaccess",
+      "apache2.conf",
+      "httpd.conf"
     ],
     "interpreters": [],
     "aliases": [
@@ -693,6 +735,7 @@
       ".apex",
       ".trigger"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.apex",
@@ -712,6 +755,7 @@
     "extensions": [
       ".agc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.agc",
@@ -732,6 +776,7 @@
       ".applescript",
       ".scpt"
     ],
+    "filenames": [],
     "interpreters": [
       "osascript"
     ],
@@ -756,6 +801,7 @@
     "extensions": [
       ".arc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -775,6 +821,7 @@
     "extensions": [
       ".ets"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ets",
@@ -796,6 +843,7 @@
       ".adoc",
       ".asc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.asciidoc",
@@ -815,6 +863,7 @@
     "extensions": [
       ".aj"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.aspectj",
@@ -840,6 +889,7 @@
       ".nasm",
       ".s"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "asm",
@@ -862,6 +912,7 @@
     "extensions": [
       ".astro"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.astro",
@@ -881,6 +932,7 @@
     "extensions": [
       ".asy"
     ],
+    "filenames": [],
     "interpreters": [
       "asy"
     ],
@@ -902,6 +954,7 @@
     "extensions": [
       ".aug"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -924,6 +977,7 @@
       ".ah2",
       ".ahkl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ahk"
@@ -945,6 +999,7 @@
     "extensions": [
       ".au3"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "au3",
@@ -968,6 +1023,7 @@
     "extensions": [
       ".avdl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.avro",
@@ -991,6 +1047,7 @@
       ".mawk",
       ".nawk"
     ],
+    "filenames": [],
     "interpreters": [
       "awk",
       "gawk",
@@ -1015,6 +1072,7 @@
     "extensions": [
       ".b"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c",
@@ -1034,6 +1092,7 @@
     "extensions": [
       ".mch"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.b",
@@ -1053,6 +1112,7 @@
     "extensions": [
       ".bas"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "basic for android"
@@ -1074,6 +1134,7 @@
     "extensions": [
       ".baml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.baml",
@@ -1093,6 +1154,7 @@
     "extensions": [
       ".bas"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.basic",
@@ -1112,6 +1174,7 @@
     "extensions": [
       ".bbcode"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.bbcode",
@@ -1129,6 +1192,9 @@
     "type": "data",
     "color": "#b6d7e4",
     "extensions": [],
+    "filenames": [
+      "bird.conf"
+    ],
     "interpreters": [],
     "aliases": [
       "bird",
@@ -1151,6 +1217,7 @@
     "extensions": [
       ".bqn"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bqn",
@@ -1170,6 +1237,7 @@
     "extensions": [
       ".bal"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ballerina",
@@ -1189,6 +1257,10 @@
     "extensions": [
       ".bat",
       ".cmd"
+    ],
+    "filenames": [
+      "gradlew.bat",
+      "mvnw.cmd"
     ],
     "interpreters": [],
     "aliases": [
@@ -1214,6 +1286,7 @@
     "extensions": [
       ".bf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cs",
@@ -1234,6 +1307,7 @@
       ".befunge",
       ".bf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.befunge",
@@ -1253,6 +1327,7 @@
     "extensions": [
       ".bend"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bend2"
@@ -1274,6 +1349,7 @@
     "extensions": [
       ".be"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "be"
@@ -1296,6 +1372,7 @@
       ".bib",
       ".bibtex"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.bibtex",
@@ -1315,6 +1392,7 @@
     "extensions": [
       ".bst"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bst",
@@ -1335,6 +1413,7 @@
       ".bicep",
       ".bicepparam"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bicep",
@@ -1354,6 +1433,7 @@
     "extensions": [
       ".bs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.csswg",
@@ -1373,6 +1453,7 @@
     "extensions": [
       ".bison"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yacc",
@@ -1395,6 +1476,7 @@
       ".bbclass",
       ".inc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bb",
@@ -1415,6 +1497,7 @@
       ".blade",
       ".blade.php"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.php.blade",
@@ -1435,6 +1518,7 @@
       ".bb",
       ".decls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "b3d",
@@ -1459,6 +1543,7 @@
     "extensions": [
       ".bmx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bmax"
@@ -1480,6 +1565,7 @@
     "extensions": [
       ".blp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "blp"
@@ -1501,6 +1587,7 @@
     "extensions": [
       ".bsv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bluespec bsv",
@@ -1523,6 +1610,7 @@
     "extensions": [
       ".bs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bh",
@@ -1545,6 +1633,7 @@
     "extensions": [
       ".boo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.boo",
@@ -1564,6 +1653,7 @@
     "extensions": [
       ".bpl"
     ],
+    "filenames": [],
     "interpreters": [
       "boogie"
     ],
@@ -1586,6 +1676,7 @@
       ".b",
       ".bf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bf",
@@ -1605,6 +1696,7 @@
     "extensions": [
       ".bs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.brs",
@@ -1624,6 +1716,7 @@
     "extensions": [
       ".brs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.brs",
@@ -1641,6 +1734,10 @@
     "type": "data",
     "color": "#ffd539",
     "extensions": [],
+    "filenames": [
+      ".browserslistrc",
+      "browserslist"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.browserslist",
@@ -1660,6 +1757,7 @@
     "extensions": [
       ".bru"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bru",
@@ -1679,6 +1777,7 @@
     "extensions": [
       ".bst"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -1702,6 +1801,7 @@
       ".h.in",
       ".idc"
     ],
+    "filenames": [],
     "interpreters": [
       "tcc"
     ],
@@ -1727,6 +1827,7 @@
       ".csx",
       ".linq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "csharp",
@@ -1769,6 +1870,7 @@
       ".tpp",
       ".txx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "cpp"
@@ -1790,6 +1892,7 @@
     "extensions": [
       ".c-objdump"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "objdump.x86asm",
@@ -1809,6 +1912,7 @@
     "extensions": [
       ".chs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "c2hs"
@@ -1830,6 +1934,7 @@
     "extensions": [
       ".c3"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c3",
@@ -1849,6 +1954,7 @@
     "extensions": [
       ".cds"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "cds"
@@ -1870,6 +1976,7 @@
     "extensions": [
       ".cil"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cil",
@@ -1889,6 +1996,7 @@
     "extensions": [
       ".clp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clips",
@@ -1908,6 +2016,9 @@
     "extensions": [
       ".cmake",
       ".cmake.in"
+    ],
+    "filenames": [
+      "CMakeLists.txt"
     ],
     "interpreters": [],
     "aliases": [],
@@ -1932,6 +2043,7 @@
       ".cobol",
       ".cpy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cobol",
@@ -1949,6 +2061,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "CODEOWNERS"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.codeowners",
@@ -1968,6 +2083,7 @@
     "extensions": [
       ".dae"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -1987,6 +2103,7 @@
     "extensions": [
       ".cql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cql",
@@ -2006,6 +2123,7 @@
     "extensions": [
       ".cson"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.coffee",
@@ -2025,6 +2143,7 @@
     "extensions": [
       ".css"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.css",
@@ -2044,6 +2163,7 @@
     "extensions": [
       ".csv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.csv",
@@ -2063,6 +2183,7 @@
     "extensions": [
       ".cue"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cue",
@@ -2082,6 +2203,7 @@
     "extensions": [
       ".w"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -2100,6 +2222,10 @@
     "color": "#483465",
     "extensions": [
       ".cabal"
+    ],
+    "filenames": [
+      "cabal.config",
+      "cabal.project"
     ],
     "interpreters": [],
     "aliases": [
@@ -2122,6 +2248,9 @@
     "extensions": [
       ".caddyfile"
     ],
+    "filenames": [
+      "Caddyfile"
+    ],
     "interpreters": [],
     "aliases": [
       "Caddy"
@@ -2143,6 +2272,7 @@
     "extensions": [
       ".cdc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cadence",
@@ -2162,6 +2292,7 @@
     "extensions": [
       ".cairo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cairo",
@@ -2181,6 +2312,7 @@
     "extensions": [
       ".cairo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cairo0",
@@ -2200,6 +2332,7 @@
     "extensions": [
       ".mligo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mligo",
@@ -2219,6 +2352,7 @@
     "extensions": [
       ".cj"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cj",
@@ -2238,6 +2372,7 @@
     "extensions": [
       ".capnp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.capnp",
@@ -2257,6 +2392,7 @@
     "extensions": [
       ".carbon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.carbon",
@@ -2276,6 +2412,7 @@
     "extensions": [
       ".mss"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "Carto"
@@ -2297,6 +2434,7 @@
     "extensions": [
       ".ceylon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ceylon",
@@ -2316,6 +2454,7 @@
     "extensions": [
       ".chpl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "chpl"
@@ -2337,6 +2476,7 @@
     "extensions": [
       ".ch"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -2367,6 +2507,16 @@
       ".sha384",
       ".sha512"
     ],
+    "filenames": [
+      "MD5SUMS",
+      "SHA1SUMS",
+      "SHA256SUMS",
+      "SHA256SUMS.txt",
+      "SHA512SUMS",
+      "checksums.txt",
+      "cksums",
+      "md5sum.txt"
+    ],
     "interpreters": [],
     "aliases": [
       "checksum",
@@ -2392,6 +2542,7 @@
     "extensions": [
       ".ck"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.java",
@@ -2411,6 +2562,7 @@
     "extensions": [
       ".circom"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.circom",
@@ -2430,6 +2582,7 @@
     "extensions": [
       ".cirru"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cirru",
@@ -2449,6 +2602,7 @@
     "extensions": [
       ".clw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clarion",
@@ -2468,6 +2622,7 @@
     "extensions": [
       ".clar"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clar",
@@ -2487,6 +2642,7 @@
     "extensions": [
       ".asp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "asp"
@@ -2509,6 +2665,7 @@
       ".icl",
       ".dcl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clean",
@@ -2528,6 +2685,7 @@
     "extensions": [
       ".click"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.click",
@@ -2556,6 +2714,9 @@
       ".cljx",
       ".hic"
     ],
+    "filenames": [
+      "riemann.config"
+    ],
     "interpreters": [
       "bb"
     ],
@@ -2577,6 +2738,7 @@
     "extensions": [
       ".soy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "soy"
@@ -2596,6 +2758,9 @@
     "type": "data",
     "color": "#FFA000",
     "extensions": [],
+    "filenames": [
+      "firestore.rules"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.firestore",
@@ -2615,6 +2780,7 @@
     "extensions": [
       ".clue"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clue",
@@ -2635,6 +2801,7 @@
       ".conllu",
       ".conll"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "CoNLL",
@@ -2658,6 +2825,7 @@
       ".ql",
       ".qll"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ql"
@@ -2684,6 +2852,9 @@
       ".coffee.erb",
       ".iced"
     ],
+    "filenames": [
+      "Cakefile"
+    ],
     "interpreters": [
       "coffee"
     ],
@@ -2709,6 +2880,7 @@
       ".cfm",
       ".cfml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "cfm",
@@ -2732,6 +2904,7 @@
     "extensions": [
       ".cfc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "cfc"
@@ -2760,6 +2933,7 @@
       ".podsl",
       ".sexp"
     ],
+    "filenames": [],
     "interpreters": [
       "lisp",
       "sbcl",
@@ -2787,6 +2961,7 @@
     "extensions": [
       ".cwl"
     ],
+    "filenames": [],
     "interpreters": [
       "cwl-runner"
     ],
@@ -2811,6 +2986,7 @@
       ".cp",
       ".cps"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pascal",
@@ -2830,6 +3006,7 @@
     "extensions": [
       ".cook"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cooklang",
@@ -2849,6 +3026,7 @@
     "extensions": [
       ".cl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cool",
@@ -2872,6 +3050,7 @@
       ".cpp-objdump",
       ".cxx-objdump"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "c++-objdump"
@@ -2893,6 +3072,7 @@
     "extensions": [
       ".creole"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.creole",
@@ -2912,6 +3092,7 @@
     "extensions": [
       ".cr"
     ],
+    "filenames": [],
     "interpreters": [
       "crystal"
     ],
@@ -2934,6 +3115,7 @@
       ".orc",
       ".udo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "csound-orc"
@@ -2955,6 +3137,7 @@
     "extensions": [
       ".csd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "csound-csd"
@@ -2976,6 +3159,7 @@
     "extensions": [
       ".sco"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "csound-sco"
@@ -2998,6 +3182,7 @@
       ".cu",
       ".cuh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cuda-c++",
@@ -3017,6 +3202,7 @@
     "extensions": [
       ".cue"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cuesheet",
@@ -3036,6 +3222,7 @@
     "extensions": [
       ".curry"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.curry",
@@ -3055,6 +3242,7 @@
     "extensions": [
       ".cy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.js",
@@ -3073,6 +3261,9 @@
     "color": "#00b3fd",
     "extensions": [
       ".cylc"
+    ],
+    "filenames": [
+      "suite.rc"
     ],
     "interpreters": [],
     "aliases": [],
@@ -3094,6 +3285,7 @@
       ".cyp",
       ".cypher"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cypher",
@@ -3115,6 +3307,7 @@
       ".pxd",
       ".pxi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pyrex"
@@ -3137,6 +3330,7 @@
       ".d",
       ".di"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "Dlang"
@@ -3158,6 +3352,7 @@
     "extensions": [
       ".d-objdump"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "objdump.x86asm",
@@ -3177,6 +3372,7 @@
     "extensions": [
       ".d2"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "d2lang"
@@ -3198,6 +3394,7 @@
     "extensions": [
       ".com"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "dcl"
@@ -3219,6 +3416,7 @@
     "extensions": [
       ".dm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "byond"
@@ -3241,6 +3439,7 @@
       ".zone",
       ".arpa"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.zone_file",
@@ -3260,6 +3459,7 @@
     "extensions": [
       ".d"
     ],
+    "filenames": [],
     "interpreters": [
       "dtrace"
     ],
@@ -3283,6 +3483,7 @@
     "extensions": [
       ".dfy"
     ],
+    "filenames": [],
     "interpreters": [
       "dafny"
     ],
@@ -3305,6 +3506,7 @@
       ".darcspatch",
       ".dpatch"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "dpatch"
@@ -3326,6 +3528,7 @@
     "extensions": [
       ".dart"
     ],
+    "filenames": [],
     "interpreters": [
       "dart"
     ],
@@ -3347,6 +3550,7 @@
     "extensions": [
       ".das"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.daslang",
@@ -3366,6 +3570,7 @@
     "extensions": [
       ".dwl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.data-weave",
@@ -3385,6 +3590,7 @@
     "extensions": [
       ".dsc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.deb-control",
@@ -3404,6 +3610,7 @@
     "extensions": [
       ".dsc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.denizenscript",
@@ -3423,6 +3630,7 @@
     "extensions": [
       ".dhall"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.haskell",
@@ -3443,6 +3651,7 @@
       ".diff",
       ".patch"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "udiff"
@@ -3464,6 +3673,7 @@
     "extensions": [
       ".x"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -3483,6 +3693,10 @@
     "extensions": [
       ".dockerfile",
       ".containerfile"
+    ],
+    "filenames": [
+      "Containerfile",
+      "Dockerfile"
     ],
     "interpreters": [],
     "aliases": [
@@ -3505,6 +3719,7 @@
     "extensions": [
       ".djs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -3524,6 +3739,22 @@
     "extensions": [
       ".env"
     ],
+    "filenames": [
+      ".env",
+      ".env.ci",
+      ".env.dev",
+      ".env.development",
+      ".env.development.local",
+      ".env.example",
+      ".env.local",
+      ".env.prod",
+      ".env.production",
+      ".env.sample",
+      ".env.staging",
+      ".env.template",
+      ".env.test",
+      ".env.testing"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.dotenv",
@@ -3541,6 +3772,9 @@
     "type": "programming",
     "color": "#89421e",
     "extensions": [],
+    "filenames": [
+      "dune-project"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.dune",
@@ -3563,6 +3797,7 @@
       ".intr",
       ".lid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.dylan",
@@ -3582,6 +3817,7 @@
     "extensions": [
       ".e"
     ],
+    "filenames": [],
     "interpreters": [
       "rune"
     ],
@@ -3604,6 +3840,7 @@
       ".eml",
       ".mbox"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "email",
@@ -3628,6 +3865,7 @@
     "extensions": [
       ".ebnf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ebnf",
@@ -3648,6 +3886,7 @@
       ".ecl",
       ".eclxml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ecl",
@@ -3667,6 +3906,7 @@
     "extensions": [
       ".ecl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.prolog.eclipse",
@@ -3689,6 +3929,7 @@
       ".ejs.t",
       ".jst"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.js",
@@ -3708,6 +3949,7 @@
     "extensions": [
       ".eq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cs",
@@ -3728,6 +3970,7 @@
       ".sch",
       ".brd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -3745,6 +3988,9 @@
     "type": "programming",
     "color": "#2af0ff",
     "extensions": [],
+    "filenames": [
+      "Earthfile"
+    ],
     "interpreters": [],
     "aliases": [
       "Earthfile"
@@ -3766,6 +4012,7 @@
     "extensions": [
       ".eb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.python",
@@ -3785,6 +4032,7 @@
     "extensions": [
       ".epj"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.json",
@@ -3804,6 +4052,7 @@
     "extensions": [
       ".html"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ecmarkdown"
@@ -3825,6 +4074,7 @@
     "extensions": [
       ".edge"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.edge",
@@ -3845,6 +4095,7 @@
       ".edgeql",
       ".esdl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "esdl"
@@ -3864,6 +4115,9 @@
     "type": "data",
     "color": "#fff1f2",
     "extensions": [
+      ".editorconfig"
+    ],
+    "filenames": [
       ".editorconfig"
     ],
     "interpreters": [],
@@ -3887,6 +4141,7 @@
     "extensions": [
       ".edc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -3906,6 +4161,7 @@
     "extensions": [
       ".e"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.eiffel",
@@ -3925,6 +4181,9 @@
     "extensions": [
       ".ex",
       ".exs"
+    ],
+    "filenames": [
+      "mix.lock"
     ],
     "interpreters": [
       "elixir"
@@ -3947,6 +4206,7 @@
     "extensions": [
       ".elm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.elm",
@@ -3966,6 +4226,7 @@
     "extensions": [
       ".elv"
     ],
+    "filenames": [],
     "interpreters": [
       "elvish"
     ],
@@ -3985,6 +4246,7 @@
     "type": "programming",
     "color": "#55BB55",
     "extensions": [],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.elvish-transcript",
@@ -4005,6 +4267,19 @@
       ".el",
       ".emacs",
       ".emacs.desktop"
+    ],
+    "filenames": [
+      ".abbrev_defs",
+      ".emacs",
+      ".emacs.desktop",
+      ".gnus",
+      ".spacemacs",
+      ".viper",
+      "Cask",
+      "Eask",
+      "Project.ede",
+      "_emacs",
+      "abbrev_defs"
     ],
     "interpreters": [],
     "aliases": [
@@ -4031,6 +4306,7 @@
       ".em",
       ".emberscript"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.coffee",
@@ -4057,6 +4333,12 @@
       ".xrl",
       ".yrl"
     ],
+    "filenames": [
+      "Emakefile",
+      "rebar.config",
+      "rebar.config.lock",
+      "rebar.lock"
+    ],
     "interpreters": [
       "escript"
     ],
@@ -4079,6 +4361,7 @@
       ".e",
       ".ex"
     ],
+    "filenames": [],
     "interpreters": [
       "eui",
       "euiw"
@@ -4103,6 +4386,7 @@
       ".fsi",
       ".fsx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "fsharp"
@@ -4125,6 +4409,7 @@
       ".fst",
       ".fsti"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "fstar"
@@ -4146,6 +4431,7 @@
     "extensions": [
       ".flf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "FIGfont"
@@ -4167,6 +4453,7 @@
     "extensions": [
       ".fir"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.firrtl",
@@ -4187,6 +4474,7 @@
       ".fx",
       ".flux"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4207,6 +4495,7 @@
       ".fpp",
       ".fppi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fpp",
@@ -4225,6 +4514,10 @@
     "color": "#636746",
     "extensions": [
       ".factor"
+    ],
+    "filenames": [
+      ".factor-boot-rc",
+      ".factor-rc"
     ],
     "interpreters": [],
     "aliases": [],
@@ -4246,6 +4539,9 @@
       ".fy",
       ".fancypack"
     ],
+    "filenames": [
+      "Fakefile"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fancy",
@@ -4265,6 +4561,7 @@
     "extensions": [
       ".fan"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fan",
@@ -4284,6 +4581,7 @@
     "extensions": [
       ".dsp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.faust",
@@ -4303,6 +4601,7 @@
     "extensions": [
       ".fnl"
     ],
+    "filenames": [],
     "interpreters": [
       "fennel"
     ],
@@ -4324,6 +4623,7 @@
     "extensions": [
       ".f"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4343,6 +4643,7 @@
     "extensions": [
       ".fs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4362,6 +4663,7 @@
     "extensions": [
       ".fbs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.flatbuffers",
@@ -4381,6 +4683,7 @@
     "extensions": [
       ".flix"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.flix",
@@ -4400,6 +4703,7 @@
     "extensions": [
       ".ftl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ftl",
@@ -4420,6 +4724,7 @@
       ".for",
       ".eam.fs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4446,6 +4751,7 @@
       ".frt",
       ".fs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.forth",
@@ -4468,6 +4774,7 @@
       ".for",
       ".fpp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fortran",
@@ -4490,6 +4797,7 @@
       ".f08",
       ".f95"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fortran.modern",
@@ -4510,6 +4818,7 @@
       ".bi",
       ".bas"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "fb"
@@ -4532,6 +4841,7 @@
       ".ftl",
       ".ftlh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ftl"
@@ -4553,6 +4863,7 @@
     "extensions": [
       ".fr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.haskell",
@@ -4572,6 +4883,7 @@
     "extensions": [
       ".fut"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.futhark",
@@ -4594,6 +4906,7 @@
       ".gco",
       ".gcode"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gcode",
@@ -4613,6 +4926,7 @@
     "extensions": [
       ".gaml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4632,6 +4946,7 @@
     "extensions": [
       ".gms"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4655,6 +4970,7 @@
       ".gi",
       ".tst"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gap",
@@ -4674,6 +4990,7 @@
     "extensions": [
       ".md"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lisp",
@@ -4694,6 +5011,7 @@
       ".gdb",
       ".gdbinit"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gdb",
@@ -4713,6 +5031,7 @@
     "extensions": [
       ".gd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gdscript",
@@ -4733,6 +5052,7 @@
       ".gdshader",
       ".gdshaderinc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gdshader",
@@ -4752,6 +5072,7 @@
     "extensions": [
       ".ged"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gedcom",
@@ -4793,6 +5114,7 @@
       ".vsh",
       ".vshader"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.glsl",
@@ -4812,6 +5134,9 @@
     "extensions": [
       ".gn",
       ".gni"
+    ],
+    "filenames": [
+      ".gn"
     ],
     "interpreters": [
       "gn"
@@ -4836,6 +5161,7 @@
       ".csc",
       ".gsh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gsc",
@@ -4855,6 +5181,7 @@
     "extensions": [
       ".gml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -4872,6 +5199,9 @@
     "type": "data",
     "color": "#701516",
     "extensions": [],
+    "filenames": [
+      "Gemfile.lock"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gemfile-lock",
@@ -4891,6 +5221,7 @@
     "extensions": [
       ".gmi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gemtext"
@@ -4912,6 +5243,7 @@
     "extensions": [
       ".4gl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.genero-4gl",
@@ -4931,6 +5263,7 @@
     "extensions": [
       ".per"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.genero-per",
@@ -4950,6 +5283,7 @@
     "extensions": [
       ".gs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -4969,6 +5303,7 @@
     "extensions": [
       ".kid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xml+genshi",
@@ -4991,6 +5326,7 @@
     "extensions": [
       ".ebuild"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.shell",
@@ -5010,6 +5346,7 @@
     "extensions": [
       ".eclass"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.shell",
@@ -5044,6 +5381,7 @@
       ".ncl",
       ".sol"
     ],
+    "filenames": [],
     "interpreters": [
       "gerbv",
       "gerbview"
@@ -5069,6 +5407,7 @@
       ".po",
       ".pot"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pot"
@@ -5091,6 +5430,7 @@
       ".feature",
       ".story"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "cucumber"
@@ -5110,6 +5450,9 @@
     "type": "data",
     "color": "#F44D27",
     "extensions": [],
+    "filenames": [
+      ".gitattributes"
+    ],
     "interpreters": [],
     "aliases": [
       "gitattributes"
@@ -5129,6 +5472,10 @@
     "type": "data",
     "color": "#F44D27",
     "extensions": [],
+    "filenames": [
+      ".gitmessage",
+      "COMMIT_EDITMSG"
+    ],
     "interpreters": [],
     "aliases": [
       "commit"
@@ -5150,6 +5497,12 @@
     "extensions": [
       ".gitconfig"
     ],
+    "filenames": [
+      ".gitconfig",
+      ".gitmodules",
+      ".tgitconfig",
+      "config.worktree"
+    ],
     "interpreters": [],
     "aliases": [
       "gitconfig",
@@ -5170,6 +5523,9 @@
     "type": "data",
     "color": "#F44D27",
     "extensions": [],
+    "filenames": [
+      ".git-blame-ignore-revs"
+    ],
     "interpreters": [],
     "aliases": [
       "Git Blame Ignore Revs"
@@ -5191,6 +5547,7 @@
     "extensions": [
       ".gleam"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gleam",
@@ -5210,6 +5567,7 @@
     "extensions": [
       ".gjs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gjs"
@@ -5231,6 +5589,7 @@
     "extensions": [
       ".gts"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gts"
@@ -5252,6 +5611,7 @@
     "extensions": [
       ".glf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tcl",
@@ -5271,6 +5631,7 @@
     "extensions": [
       ".bdf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bdf",
@@ -5290,6 +5651,7 @@
     "extensions": [
       ".gno"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gnolang"
@@ -5316,6 +5678,7 @@
       ".plot",
       ".plt"
     ],
+    "filenames": [],
     "interpreters": [
       "gnuplot"
     ],
@@ -5337,6 +5700,7 @@
     "extensions": [
       ".go"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "golang"
@@ -5356,6 +5720,10 @@
     "type": "data",
     "color": "#00ADD8",
     "extensions": [],
+    "filenames": [
+      "go.sum",
+      "go.work.sum"
+    ],
     "interpreters": [],
     "aliases": [
       "go.sum",
@@ -5378,6 +5746,9 @@
     "type": "data",
     "color": "#00ADD8",
     "extensions": [],
+    "filenames": [
+      "go.mod"
+    ],
     "interpreters": [],
     "aliases": [
       "go.mod",
@@ -5404,6 +5775,9 @@
       ".tmpl",
       ".tpl"
     ],
+    "filenames": [
+      "_helpers.tpl"
+    ],
     "interpreters": [],
     "aliases": [
       "gotmpl"
@@ -5423,6 +5797,9 @@
     "type": "data",
     "color": "#00ADD8",
     "extensions": [],
+    "filenames": [
+      "go.work"
+    ],
     "interpreters": [],
     "aliases": [
       "go.work",
@@ -5448,6 +5825,9 @@
       ".tres",
       ".tscn"
     ],
+    "filenames": [
+      "project.godot"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gdresource",
@@ -5467,6 +5847,7 @@
     "extensions": [
       ".golo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.golo",
@@ -5489,6 +5870,7 @@
       ".gsx",
       ".vark"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.gosu.2",
@@ -5508,6 +5890,7 @@
     "extensions": [
       ".grace"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.grace",
@@ -5527,6 +5910,7 @@
     "extensions": [
       ".gradle"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.groovy.gradle",
@@ -5546,6 +5930,7 @@
     "extensions": [
       ".gradle.kts"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kotlin",
@@ -5565,6 +5950,7 @@
     "extensions": [
       ".gf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gf"
@@ -5586,6 +5972,7 @@
     "extensions": [
       ".gml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -5607,6 +5994,7 @@
       ".gql",
       ".graphqls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.graphql",
@@ -5627,6 +6015,7 @@
       ".dot",
       ".gv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.dot",
@@ -5649,6 +6038,9 @@
       ".gtpl",
       ".gvy"
     ],
+    "filenames": [
+      "Jenkinsfile"
+    ],
     "interpreters": [
       "groovy"
     ],
@@ -5670,6 +6062,7 @@
     "extensions": [
       ".gsp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gsp",
@@ -5691,6 +6084,10 @@
     "color": "#7fe719",
     "extensions": [
       ".gtkrc"
+    ],
+    "filenames": [
+      "gtkrc",
+      "gtkrc-2.0"
     ],
     "interpreters": [],
     "aliases": [
@@ -5714,6 +6111,9 @@
     "color": "#106da9",
     "extensions": [
       ".cfg"
+    ],
+    "filenames": [
+      "haproxy.cfg"
     ],
     "interpreters": [],
     "aliases": [],
@@ -5739,6 +6139,7 @@
       ".tofu",
       ".workflow"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "HashiCorp Configuration Language",
@@ -5762,6 +6163,7 @@
     "extensions": [
       ".hip"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -5785,6 +6187,7 @@
       ".fxh",
       ".hlsli"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hlsl",
@@ -5803,6 +6206,10 @@
     "color": "#9ff8ee",
     "extensions": [
       ".hocon"
+    ],
+    "filenames": [
+      ".scalafix.conf",
+      ".scalafmt.conf"
     ],
     "interpreters": [],
     "aliases": [],
@@ -5829,6 +6236,7 @@
       ".xht",
       ".xhtml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xhtml"
@@ -5850,6 +6258,7 @@
     "extensions": [
       ".ecr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ecr"
@@ -5873,6 +6282,7 @@
       ".heex",
       ".leex"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "eex",
@@ -5898,6 +6308,7 @@
       ".erb.deface",
       ".rhtml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "erb",
@@ -5921,6 +6332,7 @@
     "extensions": [
       ".phtml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.php",
@@ -5941,6 +6353,7 @@
       ".cshtml",
       ".razor"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "razor"
@@ -5962,6 +6375,7 @@
     "extensions": [
       ".http"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.httpspec",
@@ -5981,6 +6395,7 @@
     "extensions": [
       ".hxml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hxml",
@@ -6003,6 +6418,7 @@
       ".hhi",
       ".php"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hack",
@@ -6023,6 +6439,7 @@
       ".haml",
       ".haml.deface"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.haml",
@@ -6043,6 +6460,7 @@
       ".handlebars",
       ".hbs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "hbs",
@@ -6065,6 +6483,7 @@
     "extensions": [
       ".hb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.harbour",
@@ -6084,6 +6503,7 @@
     "extensions": [
       ".ha"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -6105,6 +6525,7 @@
       ".hs-boot",
       ".hsc"
     ],
+    "filenames": [],
     "interpreters": [
       "runghc",
       "runhaskell",
@@ -6129,6 +6550,7 @@
       ".hx",
       ".hxsl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hx",
@@ -6149,6 +6571,7 @@
       ".q",
       ".hql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hql",
@@ -6168,6 +6591,7 @@
     "extensions": [
       ".hc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hc",
@@ -6185,6 +6609,11 @@
     "type": "data",
     "color": "#308888",
     "extensions": [],
+    "filenames": [
+      "HOSTS",
+      "hosts",
+      "hosts.txt"
+    ],
     "interpreters": [],
     "aliases": [
       "hosts"
@@ -6206,6 +6635,7 @@
     "extensions": [
       ".hurl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hurl",
@@ -6225,6 +6655,7 @@
     "extensions": [
       ".hy"
     ],
+    "filenames": [],
     "interpreters": [
       "hy"
     ],
@@ -6248,6 +6679,7 @@
     "extensions": [
       ".bf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -6268,6 +6700,7 @@
       ".pro",
       ".dlm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.idl",
@@ -6287,6 +6720,7 @@
     "extensions": [
       ".ipf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "igor",
@@ -6309,6 +6743,7 @@
     "extensions": [
       ".il"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ilasm",
@@ -6347,6 +6782,18 @@
       ".timer",
       ".url"
     ],
+    "filenames": [
+      ".buckconfig",
+      ".coveragerc",
+      ".flake8",
+      ".gitreview",
+      ".pylintrc",
+      "HOSTS",
+      "buildozer.spec",
+      "hosts",
+      "pylintrc",
+      "vlcrc"
+    ],
     "interpreters": [],
     "aliases": [
       "conf",
@@ -6370,6 +6817,7 @@
       ".irclog",
       ".weechatlog"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "irc",
@@ -6392,6 +6840,7 @@
     "extensions": [
       ".ispc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ispc",
@@ -6412,6 +6861,7 @@
       ".idr",
       ".lidr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.idris",
@@ -6430,6 +6880,32 @@
     "color": "#000000",
     "extensions": [
       ".gitignore"
+    ],
+    "filenames": [
+      ".agignore",
+      ".atomignore",
+      ".babelignore",
+      ".bzrignore",
+      ".ckignore",
+      ".coffeelintignore",
+      ".cvsignore",
+      ".dockerignore",
+      ".easignore",
+      ".eleventyignore",
+      ".eslint-ignore",
+      ".eslintignore",
+      ".gitignore",
+      ".ignore",
+      ".markdownlintignore",
+      ".nodemonignore",
+      ".npmignore",
+      ".prettierignore",
+      ".rgignore",
+      ".stylelintignore",
+      ".vercelignore",
+      ".vscodeignore",
+      "gitignore-global",
+      "gitignore_global"
     ],
     "interpreters": [],
     "aliases": [
@@ -6454,6 +6930,7 @@
     "extensions": [
       ".hexpat"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ImHex",
@@ -6477,6 +6954,7 @@
     "extensions": [
       ".ijm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ijm"
@@ -6498,6 +6976,7 @@
     "extensions": [
       ".imba"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.imba",
@@ -6518,6 +6997,7 @@
       ".ni",
       ".i7x"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "i7",
@@ -6540,6 +7020,7 @@
     "extensions": [
       ".ink"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ink",
@@ -6560,6 +7041,7 @@
       ".iss",
       ".isl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.inno",
@@ -6579,6 +7061,7 @@
     "extensions": [
       ".io"
     ],
+    "filenames": [],
     "interpreters": [
       "io"
     ],
@@ -6600,6 +7083,7 @@
     "extensions": [
       ".ik"
     ],
+    "filenames": [],
     "interpreters": [
       "ioke"
     ],
@@ -6621,6 +7105,7 @@
     "extensions": [
       ".thy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.isabelle.theory",
@@ -6638,6 +7123,9 @@
     "type": "programming",
     "color": "#FEFE00",
     "extensions": [],
+    "filenames": [
+      "ROOT"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.isabelle.root",
@@ -6657,6 +7145,7 @@
     "extensions": [
       ".ijs"
     ],
+    "filenames": [],
     "interpreters": [
       "jconsole"
     ],
@@ -6676,6 +7165,9 @@
     "type": "data",
     "color": "#b07219",
     "extensions": [],
+    "filenames": [
+      "MANIFEST.MF"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -6695,6 +7187,7 @@
     "extensions": [
       ".j"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "jass2"
@@ -6716,6 +7209,7 @@
     "extensions": [
       ".jcl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jcl",
@@ -6736,6 +7230,7 @@
       ".flex",
       ".jflex"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jflex",
@@ -6775,6 +7270,28 @@
       ".webmanifest",
       ".yy",
       ".yyp"
+    ],
+    "filenames": [
+      ".all-contributorsrc",
+      ".arcconfig",
+      ".auto-changelog",
+      ".c8rc",
+      ".htmlhintrc",
+      ".imgbotconfig",
+      ".nycrc",
+      ".releaserc",
+      ".secrets.baseline",
+      ".tern-config",
+      ".tern-project",
+      ".watchmanconfig",
+      "MODULE.bazel.lock",
+      "Package.resolved",
+      "Pipfile.lock",
+      "bun.lock",
+      "composer.lock",
+      "deno.lock",
+      "flake.lock",
+      "mcmod.info"
     ],
     "interpreters": [],
     "aliases": [
@@ -6818,6 +7335,23 @@
       ".sublime_session",
       ".tsconfig.json"
     ],
+    "filenames": [
+      ".babelrc",
+      ".devcontainer.json",
+      ".eslintrc",
+      ".eslintrc.json",
+      ".jscsrc",
+      ".jshintrc",
+      ".jslintrc",
+      ".oxlintrc.json",
+      ".swcrc",
+      "api-extractor.json",
+      "devcontainer.json",
+      "jsconfig.json",
+      "language-configuration.json",
+      "tsconfig.json",
+      "tslint.json"
+    ],
     "interpreters": [],
     "aliases": [
       "jsonc"
@@ -6839,6 +7373,7 @@
     "extensions": [
       ".json5"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.js",
@@ -6858,6 +7393,7 @@
     "extensions": [
       ".jsonld"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.js",
@@ -6877,6 +7413,7 @@
     "extensions": [
       ".jq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jsoniq",
@@ -6896,6 +7433,7 @@
     "extensions": [
       ".jac"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jac",
@@ -6915,6 +7453,7 @@
     "extensions": [
       ".jai"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jai",
@@ -6934,6 +7473,7 @@
     "extensions": [
       ".janet"
     ],
+    "filenames": [],
     "interpreters": [
       "janet"
     ],
@@ -6955,6 +7495,7 @@
     "extensions": [
       ".j"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jasmin",
@@ -6976,6 +7517,7 @@
       ".jav",
       ".jsh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.java",
@@ -6995,6 +7537,7 @@
     "extensions": [
       ".properties"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.java-properties",
@@ -7015,6 +7558,7 @@
       ".jsp",
       ".tag"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "jsp"
@@ -7036,6 +7580,7 @@
     "extensions": [
       ".jte"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "jte"
@@ -7081,6 +7626,9 @@
       ".xsjs",
       ".xsjslib"
     ],
+    "filenames": [
+      "Jakefile"
+    ],
     "interpreters": [
       "bun",
       "chakra",
@@ -7116,6 +7664,7 @@
     "extensions": [
       ".js.erb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.js",
@@ -7135,6 +7684,7 @@
     "extensions": [
       ".snap"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jest.snap",
@@ -7156,6 +7706,7 @@
       ".mpl",
       ".msd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "mps"
@@ -7179,6 +7730,7 @@
       ".j2",
       ".jinja2"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "django",
@@ -7203,6 +7755,7 @@
     "extensions": [
       ".jison"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jison",
@@ -7222,6 +7775,7 @@
     "extensions": [
       ".jisonlex"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jisonlex",
@@ -7242,6 +7796,7 @@
       ".ol",
       ".iol"
     ],
+    "filenames": [],
     "interpreters": [
       "jolie"
     ],
@@ -7264,6 +7819,7 @@
       ".jsonnet",
       ".libsonnet"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.jsonnet",
@@ -7283,6 +7839,7 @@
     "extensions": [
       ".jl"
     ],
+    "filenames": [],
     "interpreters": [
       "julia"
     ],
@@ -7302,6 +7859,7 @@
     "type": "programming",
     "color": "#a270ba",
     "extensions": [],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.julia.console",
@@ -7320,6 +7878,9 @@
     "color": "#DA5B0B",
     "extensions": [
       ".ipynb"
+    ],
+    "filenames": [
+      "Notebook"
     ],
     "interpreters": [],
     "aliases": [
@@ -7342,6 +7903,14 @@
     "extensions": [
       ".just"
     ],
+    "filenames": [
+      ".JUSTFILE",
+      ".Justfile",
+      ".justfile",
+      "JUSTFILE",
+      "Justfile",
+      "justfile"
+    ],
     "interpreters": [],
     "aliases": [
       "Justfile"
@@ -7363,6 +7932,10 @@
     "extensions": [
       ".k"
     ],
+    "filenames": [
+      "kcl.mod",
+      "kcl.mod.lock"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kcl",
@@ -7382,6 +7955,7 @@
     "extensions": [
       ".kdl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kdl",
@@ -7401,6 +7975,7 @@
     "extensions": [
       ".k"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.k",
@@ -7420,6 +7995,7 @@
     "extensions": [
       ".krl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -7439,6 +8015,7 @@
     "extensions": [
       ".ksy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ksy"
@@ -7459,6 +8036,9 @@
     "color": "#6f8042",
     "extensions": [
       ".kak"
+    ],
+    "filenames": [
+      "kakrc"
     ],
     "interpreters": [],
     "aliases": [
@@ -7482,6 +8062,7 @@
     "extensions": [
       ".ks"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kerboscript",
@@ -7502,6 +8083,9 @@
       ".kicad_pcb",
       ".kicad_mod",
       ".kicad_wks"
+    ],
+    "filenames": [
+      "fp-lib-table"
     ],
     "interpreters": [],
     "aliases": [
@@ -7524,6 +8108,7 @@
     "extensions": [
       ".brd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pcb.board",
@@ -7545,6 +8130,7 @@
       ".kicad_sym",
       ".sch"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "eeschema schematic"
@@ -7566,6 +8152,7 @@
     "extensions": [
       ".ks"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kickstart",
@@ -7585,6 +8172,7 @@
     "extensions": [
       ".kit"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.basic",
@@ -7604,6 +8192,7 @@
     "extensions": [
       ".ash"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ash",
@@ -7623,6 +8212,7 @@
     "extensions": [
       ".kk"
     ],
+    "filenames": [],
     "interpreters": [
       "koka"
     ],
@@ -7646,6 +8236,7 @@
       ".ktm",
       ".kts"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kotlin",
@@ -7666,6 +8257,7 @@
       ".csl",
       ".kql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.kusto",
@@ -7685,6 +8277,7 @@
     "extensions": [
       ".lfe"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lisp",
@@ -7704,6 +8297,7 @@
     "extensions": [
       ".ll"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.llvm",
@@ -7723,6 +8317,7 @@
     "extensions": [
       ".td"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "tablegen"
@@ -7744,6 +8339,7 @@
     "extensions": [
       ".lol"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lolcode",
@@ -7764,6 +8360,7 @@
       ".lsl",
       ".lslp"
     ],
+    "filenames": [],
     "interpreters": [
       "lsl"
     ],
@@ -7785,6 +8382,7 @@
     "extensions": [
       ".asy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ltspice.symbol",
@@ -7806,6 +8404,7 @@
       ".lvclass",
       ".lvlib"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -7825,6 +8424,7 @@
     "extensions": [
       ".lp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lp",
@@ -7844,6 +8444,7 @@
     "extensions": [
       ".langium"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.langium",
@@ -7863,6 +8464,7 @@
     "extensions": [
       ".lark"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lark",
@@ -7885,6 +8487,7 @@
       ".lasso8",
       ".lasso9"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "lassoscript"
@@ -7906,6 +8509,7 @@
     "extensions": [
       ".latte"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.smarty",
@@ -7926,6 +8530,7 @@
       ".lean",
       ".hlean"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lean",
@@ -7945,6 +8550,7 @@
     "extensions": [
       ".lean"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "lean4"
@@ -7966,6 +8572,7 @@
     "extensions": [
       ".leo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.leo",
@@ -7985,6 +8592,7 @@
     "extensions": [
       ".less"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "less-css"
@@ -8007,6 +8615,10 @@
       ".l",
       ".lex"
     ],
+    "filenames": [
+      "Lexer.x",
+      "lexer.x"
+    ],
     "interpreters": [],
     "aliases": [
       "flex"
@@ -8028,6 +8640,7 @@
     "extensions": [
       ".ligo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ligo",
@@ -8048,6 +8661,7 @@
       ".ly",
       ".ily"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lilypond",
@@ -8068,6 +8682,7 @@
       ".b",
       ".m"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -8087,6 +8702,7 @@
     "extensions": [
       ".lp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -8108,6 +8724,9 @@
       ".lds",
       ".x"
     ],
+    "filenames": [
+      "ld.script"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c.linker",
@@ -8127,6 +8746,7 @@
     "extensions": [
       ".mod"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -8146,6 +8766,7 @@
     "extensions": [
       ".liquid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.liquid",
@@ -8165,6 +8786,7 @@
     "extensions": [
       ".liq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.liquidsoap",
@@ -8184,6 +8806,7 @@
     "extensions": [
       ".lagda"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -8204,6 +8827,7 @@
       ".litcoffee",
       ".coffee.md"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "litcoffee"
@@ -8225,6 +8849,7 @@
     "extensions": [
       ".lhs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "lhaskell",
@@ -8247,6 +8872,7 @@
     "extensions": [
       ".livecodescript"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.livecodescript",
@@ -8266,6 +8892,9 @@
     "extensions": [
       ".ls",
       "._ls"
+    ],
+    "filenames": [
+      "Slakefile"
     ],
     "interpreters": [],
     "aliases": [
@@ -8289,6 +8918,7 @@
     "extensions": [
       ".lobster"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lobster",
@@ -8310,6 +8940,7 @@
       ".x",
       ".xi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.logos",
@@ -8330,6 +8961,7 @@
       ".lgt",
       ".logtalk"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.logtalk",
@@ -8350,6 +8982,7 @@
       ".lkml",
       ".lookml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -8369,6 +9002,7 @@
     "extensions": [
       ".ls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.loomscript",
@@ -8395,6 +9029,9 @@
       ".rockspec",
       ".wlua"
     ],
+    "filenames": [
+      ".luacheckrc"
+    ],
     "interpreters": [
       "lua",
       "luajit"
@@ -8417,6 +9054,7 @@
     "extensions": [
       ".luau"
     ],
+    "filenames": [],
     "interpreters": [
       "luau"
     ],
@@ -8439,6 +9077,7 @@
       ".mumps",
       ".m"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "mumps"
@@ -8461,6 +9100,7 @@
       ".m3u",
       ".m3u8"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "hls playlist",
@@ -8484,6 +9124,7 @@
       ".m4",
       ".mc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.m4",
@@ -8502,6 +9143,9 @@
     "color": null,
     "extensions": [
       ".m4"
+    ],
+    "filenames": [
+      "configure.ac"
     ],
     "interpreters": [],
     "aliases": [
@@ -8525,6 +9169,7 @@
       ".matlab",
       ".m"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "octave"
@@ -8547,6 +9192,7 @@
       ".ms",
       ".mcr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.maxscript",
@@ -8566,6 +9212,7 @@
     "extensions": [
       ".mdx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mdx",
@@ -8585,6 +9232,7 @@
     "extensions": [
       ".mlir"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mlir",
@@ -8605,6 +9253,7 @@
       ".mq4",
       ".mqh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mql5",
@@ -8625,6 +9274,7 @@
       ".mq5",
       ".mqh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mql5",
@@ -8644,6 +9294,7 @@
     "extensions": [
       ".mtml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.basic",
@@ -8664,6 +9315,7 @@
       ".muf",
       ".m"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -8683,6 +9335,7 @@
     "extensions": [
       ".m2"
     ],
+    "filenames": [],
     "interpreters": [
       "M2"
     ],
@@ -8711,6 +9364,22 @@
       ".mk",
       ".mkfile"
     ],
+    "filenames": [
+      "BSDmakefile",
+      "GNUmakefile",
+      "Kbuild",
+      "Makefile",
+      "Makefile.am",
+      "Makefile.boot",
+      "Makefile.frag",
+      "Makefile.in",
+      "Makefile.inc",
+      "Makefile.pc",
+      "Makefile.wat",
+      "makefile",
+      "makefile.sco",
+      "mkfile"
+    ],
     "interpreters": [
       "make"
     ],
@@ -8737,6 +9406,7 @@
       ".mako",
       ".mao"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.mako",
@@ -8766,6 +9436,9 @@
       ".scd",
       ".workbook"
     ],
+    "filenames": [
+      "contents.lr"
+    ],
     "interpreters": [],
     "aliases": [
       "md",
@@ -8788,6 +9461,7 @@
     "extensions": [
       ".marko"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "markojs"
@@ -8809,6 +9483,7 @@
     "extensions": [
       ".mask"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mask",
@@ -8828,6 +9503,7 @@
     "extensions": [
       ".mps"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.source.mps",
@@ -8845,6 +9521,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "pom.xml"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml.pom",
@@ -8868,6 +9547,7 @@
       ".mxt",
       ".pat"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "max/msp",
@@ -8890,6 +9570,7 @@
     "extensions": [
       ".metta"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.metta",
@@ -8910,6 +9591,7 @@
       ".m",
       ".moo"
     ],
+    "filenames": [],
     "interpreters": [
       "mmi"
     ],
@@ -8932,6 +9614,7 @@
       ".mmd",
       ".mermaid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "mermaid example"
@@ -8951,6 +9634,10 @@
     "type": "programming",
     "color": "#007800",
     "extensions": [],
+    "filenames": [
+      "meson.build",
+      "meson_options.txt"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.meson",
@@ -8970,6 +9657,7 @@
     "extensions": [
       ".metal"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -8989,6 +9677,7 @@
     "extensions": [
       ".dsp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9008,6 +9697,7 @@
     "extensions": [
       ".sln"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.solution",
@@ -9027,6 +9717,7 @@
     "extensions": [
       ".minid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9046,6 +9737,7 @@
     "extensions": [
       ".ms"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ms",
@@ -9066,6 +9758,7 @@
       ".yaml",
       ".yml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.miniyaml",
@@ -9085,6 +9778,7 @@
     "extensions": [
       ".mzn"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mzn",
@@ -9104,6 +9798,7 @@
     "extensions": [
       ".dzn"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mzn",
@@ -9123,6 +9818,7 @@
     "extensions": [
       ".mint"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mint",
@@ -9144,6 +9840,7 @@
       ".duby",
       ".mirah"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ruby",
@@ -9163,6 +9860,7 @@
     "extensions": [
       ".mo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.modelica",
@@ -9182,6 +9880,7 @@
     "extensions": [
       ".mod"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.modula2",
@@ -9204,6 +9903,7 @@
       ".m3",
       ".mg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.modula-3",
@@ -9224,6 +9924,10 @@
       ".mms",
       ".mmk"
     ],
+    "filenames": [
+      "descrip.mmk",
+      "descrip.mms"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9243,6 +9947,7 @@
     "extensions": [
       ".mojo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mojo",
@@ -9263,6 +9968,7 @@
       ".monkey",
       ".monkey2"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.monkey",
@@ -9282,6 +9988,7 @@
     "extensions": [
       ".mc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mc",
@@ -9301,6 +10008,7 @@
     "extensions": [
       ".moo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9319,6 +10027,10 @@
     "color": "#b92381",
     "extensions": [
       ".mbt"
+    ],
+    "filenames": [
+      "moon.mod",
+      "moon.pkg"
     ],
     "interpreters": [],
     "aliases": [],
@@ -9339,6 +10051,7 @@
     "extensions": [
       ".moon"
     ],
+    "filenames": [],
     "interpreters": [
       "moon"
     ],
@@ -9360,6 +10073,7 @@
     "extensions": [
       ".mo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mo",
@@ -9383,6 +10097,7 @@
       ".s",
       ".x68"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "m68k"
@@ -9404,6 +10119,7 @@
     "extensions": [
       ".move"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.move",
@@ -9423,6 +10139,7 @@
     "extensions": [
       ".muse"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "amusewiki",
@@ -9445,6 +10162,7 @@
     "extensions": [
       ".mustache"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.smarty",
@@ -9464,6 +10182,7 @@
     "extensions": [
       ".myt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9484,6 +10203,7 @@
       ".nasl",
       ".inc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nasl",
@@ -9503,6 +10223,7 @@
     "extensions": [
       ".ncl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ncl",
@@ -9522,6 +10243,7 @@
     "extensions": [
       ".neon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "nette object notation",
@@ -9544,6 +10266,7 @@
     "extensions": [
       ".nl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9563,6 +10286,7 @@
     "extensions": [
       ".mod"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9580,6 +10304,9 @@
     "type": "data",
     "color": "#cb3837",
     "extensions": [],
+    "filenames": [
+      ".npmrc"
+    ],
     "interpreters": [],
     "aliases": [
       "npmrc"
@@ -9602,6 +10329,7 @@
       ".nsi",
       ".nsh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nsis",
@@ -9621,6 +10349,7 @@
     "extensions": [
       ".nss"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c.nwscript",
@@ -9640,6 +10369,7 @@
     "extensions": [
       ".nas"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nasal",
@@ -9660,6 +10390,7 @@
       ".ne",
       ".nearley"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ne",
@@ -9679,6 +10410,7 @@
     "extensions": [
       ".n"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nemerle",
@@ -9699,6 +10431,7 @@
       ".axs",
       ".axi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.netlinx",
@@ -9719,6 +10452,7 @@
       ".axs.erb",
       ".axi.erb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.netlinx.erb",
@@ -9738,6 +10472,7 @@
     "extensions": [
       ".nlogo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lisp",
@@ -9759,6 +10494,7 @@
       ".lisp",
       ".lsp"
     ],
+    "filenames": [],
     "interpreters": [
       "newlisp"
     ],
@@ -9779,6 +10515,9 @@
     "color": "#3ac486",
     "extensions": [
       ".nf"
+    ],
+    "filenames": [
+      "nextflow.config"
     ],
     "interpreters": [
       "nextflow"
@@ -9803,6 +10542,9 @@
       ".nginxconf",
       ".vhost"
     ],
+    "filenames": [
+      "nginx.conf"
+    ],
     "interpreters": [],
     "aliases": [
       "nginx configuration file"
@@ -9824,6 +10566,7 @@
     "extensions": [
       ".ncl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nickel",
@@ -9847,6 +10590,9 @@
       ".nimrod",
       ".nims"
     ],
+    "filenames": [
+      "nim.cfg"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nim",
@@ -9866,6 +10612,7 @@
     "extensions": [
       ".ninja"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ninja",
@@ -9885,6 +10632,7 @@
     "extensions": [
       ".nit"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nit",
@@ -9904,6 +10652,7 @@
     "extensions": [
       ".nix"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "nixos"
@@ -9925,6 +10674,7 @@
     "extensions": [
       ".nr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "nargo"
@@ -9945,6 +10695,9 @@
     "color": "#c9df40",
     "extensions": [
       ".nu"
+    ],
+    "filenames": [
+      "Nukefile"
     ],
     "interpreters": [
       "nush"
@@ -9971,6 +10724,7 @@
       ".numpyw",
       ".numsc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -9990,6 +10744,7 @@
     "extensions": [
       ".njk"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "njk"
@@ -10011,6 +10766,7 @@
     "extensions": [
       ".nu"
     ],
+    "filenames": [],
     "interpreters": [
       "nu"
     ],
@@ -10035,6 +10791,7 @@
     "extensions": [
       ".json"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.json",
@@ -10055,6 +10812,7 @@
       ".yaml",
       ".yml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -10074,6 +10832,7 @@
     "extensions": [
       ".json"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.json",
@@ -10094,6 +10853,7 @@
       ".yaml",
       ".yml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -10119,6 +10879,7 @@
       ".mll",
       ".mly"
     ],
+    "filenames": [],
     "interpreters": [
       "ocaml",
       "ocamlrun",
@@ -10142,6 +10903,7 @@
     "extensions": [
       ".msg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "omnetpp-msg"
@@ -10163,6 +10925,7 @@
     "extensions": [
       ".ned"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "omnetpp-ned"
@@ -10184,6 +10947,7 @@
     "extensions": [
       ".ob2"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.modula2",
@@ -10203,6 +10967,7 @@
     "extensions": [
       ".objdump"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "objdump.x86asm",
@@ -10222,6 +10987,7 @@
     "extensions": [
       ".odin"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.odin-ehr",
@@ -10241,6 +11007,7 @@
     "extensions": [
       ".cls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.objectscript",
@@ -10261,6 +11028,7 @@
       ".m",
       ".h"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "obj-c",
@@ -10284,6 +11052,7 @@
     "extensions": [
       ".mm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "obj-c++",
@@ -10308,6 +11077,7 @@
       ".j",
       ".sj"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "obj-j",
@@ -10331,6 +11101,7 @@
     "extensions": [
       ".odin"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "odinlang",
@@ -10353,6 +11124,7 @@
     "extensions": [
       ".omgrofl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -10372,6 +11144,7 @@
     "extensions": [
       ".opa"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.opa",
@@ -10391,6 +11164,7 @@
     "extensions": [
       ".opal"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.opal",
@@ -10410,6 +11184,7 @@
     "extensions": [
       ".rego"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rego",
@@ -10427,6 +11202,7 @@
     "type": "data",
     "color": "#85ea2d",
     "extensions": [],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "oasv2"
@@ -10446,6 +11222,7 @@
     "type": "data",
     "color": "#85ea2d",
     "extensions": [],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "oasv3"
@@ -10468,6 +11245,7 @@
       ".cl",
       ".opencl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c",
@@ -10489,6 +11267,7 @@
       ".cls",
       ".w"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "progress",
@@ -10512,6 +11291,7 @@
     "extensions": [
       ".qasm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.qasm",
@@ -10529,6 +11309,7 @@
     "type": "programming",
     "color": null,
     "extensions": [],
+    "filenames": [],
     "interpreters": [
       "openrc-run"
     ],
@@ -10552,6 +11333,7 @@
     "extensions": [
       ".scad"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.scad",
@@ -10572,6 +11354,7 @@
       ".plist",
       ".glyphs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.plist",
@@ -10591,6 +11374,7 @@
     "extensions": [
       ".fea"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "AFDKO"
@@ -10610,6 +11394,13 @@
     "type": "data",
     "color": "#476732",
     "extensions": [],
+    "filenames": [
+      ".ackrc",
+      ".rspec",
+      ".yardopts",
+      "ackrc",
+      "mocha.opts"
+    ],
     "interpreters": [],
     "aliases": [
       "opts",
@@ -10632,6 +11423,7 @@
     "extensions": [
       ".org"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -10651,6 +11443,7 @@
     "extensions": [
       ".opy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "opy"
@@ -10672,6 +11465,7 @@
     "extensions": [
       ".overpassql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.overpassql",
@@ -10693,6 +11487,7 @@
       ".oxh",
       ".oxo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ox",
@@ -10712,6 +11507,7 @@
     "extensions": [
       ".oxygene"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -10731,6 +11527,7 @@
     "extensions": [
       ".oz"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.oz",
@@ -10750,6 +11547,7 @@
     "extensions": [
       ".p4"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.p4",
@@ -10769,6 +11567,7 @@
     "extensions": [
       ".pddl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pddl",
@@ -10789,6 +11588,7 @@
       ".pegjs",
       ".peggy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.peggy",
@@ -10816,6 +11616,12 @@
       ".php5",
       ".phps",
       ".phpt"
+    ],
+    "filenames": [
+      ".php",
+      ".php_cs",
+      ".php_cs.dist",
+      "Phakefile"
     ],
     "interpreters": [
       "php"
@@ -10855,6 +11661,7 @@
       ".trg",
       ".vw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -10875,6 +11682,7 @@
       ".pgsql",
       ".sql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sql",
@@ -10895,6 +11703,7 @@
       ".pov",
       ".inc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pov-ray",
@@ -10917,6 +11726,7 @@
     "extensions": [
       ".pact"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pact",
@@ -10936,6 +11746,7 @@
     "extensions": [
       ".pan"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pan",
@@ -10955,6 +11766,7 @@
     "extensions": [
       ".psc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.papyrus.skyrim",
@@ -10974,6 +11786,7 @@
     "extensions": [
       ".parrot"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -10993,6 +11806,7 @@
     "extensions": [
       ".pasm"
     ],
+    "filenames": [],
     "interpreters": [
       "parrot"
     ],
@@ -11016,6 +11830,7 @@
     "extensions": [
       ".pir"
     ],
+    "filenames": [],
     "interpreters": [
       "parrot"
     ],
@@ -11045,6 +11860,7 @@
       ".pascal",
       ".pp"
     ],
+    "filenames": [],
     "interpreters": [
       "instantfpc"
     ],
@@ -11071,6 +11887,7 @@
       ".inc",
       ".sma"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pawn",
@@ -11090,6 +11907,7 @@
     "extensions": [
       ".pep"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pep8",
@@ -11118,6 +11936,14 @@
       ".psgi",
       ".t"
     ],
+    "filenames": [
+      ".latexmkrc",
+      "Makefile.PL",
+      "Rexfile",
+      "ack",
+      "cpanfile",
+      "latexmkrc"
+    ],
     "interpreters": [
       "cperl",
       "perl"
@@ -11143,6 +11969,7 @@
       ".pic",
       ".chem"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pikchr"
@@ -11164,6 +11991,7 @@
     "extensions": [
       ".pkl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -11183,6 +12011,7 @@
     "extensions": [
       ".l"
     ],
+    "filenames": [],
     "interpreters": [
       "picolisp",
       "pil"
@@ -11205,6 +12034,7 @@
     "extensions": [
       ".pig"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pig_latin",
@@ -11225,6 +12055,7 @@
       ".pike",
       ".pmod"
     ],
+    "filenames": [],
     "interpreters": [
       "pike"
     ],
@@ -11244,6 +12075,12 @@
     "type": "data",
     "color": "#FFD343",
     "extensions": [],
+    "filenames": [
+      "dev-requirements.txt",
+      "requirements-dev.txt",
+      "requirements.lock.txt",
+      "requirements.txt"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pip-requirements",
@@ -11263,6 +12100,7 @@
     "extensions": [
       ".pkl"
     ],
+    "filenames": [],
     "interpreters": [
       "pkl"
     ],
@@ -11286,6 +12124,7 @@
       ".iuml",
       ".plantuml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.wsd",
@@ -11305,6 +12144,7 @@
     "extensions": [
       ".pod"
     ],
+    "filenames": [],
     "interpreters": [
       "perl"
     ],
@@ -11327,6 +12167,7 @@
       ".pod",
       ".pod6"
     ],
+    "filenames": [],
     "interpreters": [
       "perl6"
     ],
@@ -11348,6 +12189,7 @@
     "extensions": [
       ".pogo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pogoscript",
@@ -11367,6 +12209,7 @@
     "extensions": [
       ".polar"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.polar",
@@ -11386,6 +12229,7 @@
     "extensions": [
       ".pony"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.pony",
@@ -11405,6 +12249,7 @@
     "extensions": [
       ".por"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.portugol",
@@ -11425,6 +12270,7 @@
       ".pcss",
       ".postcss"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.postcss",
@@ -11447,6 +12293,7 @@
       ".epsi",
       ".pfa"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "postscr"
@@ -11468,6 +12315,7 @@
     "extensions": [
       ".pq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "powerquery"
@@ -11492,6 +12340,7 @@
       ".sru",
       ".srw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.powerbuilder",
@@ -11513,6 +12362,7 @@
       ".psd1",
       ".psm1"
     ],
+    "filenames": [],
     "interpreters": [
       "pwsh"
     ],
@@ -11537,6 +12387,7 @@
     "extensions": [
       ".praat"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.praat",
@@ -11556,6 +12407,7 @@
     "extensions": [
       ".prisma"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.prisma",
@@ -11575,6 +12427,7 @@
     "extensions": [
       ".pc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c",
@@ -11594,6 +12447,7 @@
     "extensions": [
       ".pde"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.processing",
@@ -11611,6 +12465,9 @@
     "type": "programming",
     "color": "#3B2F63",
     "extensions": [],
+    "filenames": [
+      "Procfile"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.procfile",
@@ -11630,6 +12487,7 @@
     "extensions": [
       ".pro"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -11653,6 +12511,7 @@
       ".prolog",
       ".yap"
     ],
+    "filenames": [],
     "interpreters": [
       "swipl",
       "yap"
@@ -11675,6 +12534,7 @@
     "extensions": [
       ".pml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.promela",
@@ -11694,6 +12554,7 @@
     "extensions": [
       ".spin"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.spin",
@@ -11713,6 +12574,7 @@
     "extensions": [
       ".proto"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "proto",
@@ -11739,6 +12601,7 @@
       ".pbtxt",
       ".txtpb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "text proto",
@@ -11762,6 +12625,7 @@
       ".asc",
       ".pub"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -11782,6 +12646,7 @@
       ".jade",
       ".pug"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.jade",
@@ -11800,6 +12665,9 @@
     "color": "#302B6D",
     "extensions": [
       ".pp"
+    ],
+    "filenames": [
+      "Modulefile"
     ],
     "interpreters": [],
     "aliases": [],
@@ -11820,6 +12688,7 @@
     "extensions": [
       ".pd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -11840,6 +12709,7 @@
       ".pb",
       ".pbi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -11859,6 +12729,7 @@
     "extensions": [
       ".purs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.purescript",
@@ -11878,6 +12749,7 @@
     "extensions": [
       ".arr"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.arr",
@@ -11913,6 +12785,13 @@
       ".wsgi",
       ".xpy"
     ],
+    "filenames": [
+      ".gclient",
+      "DEPS",
+      "SConscript",
+      "SConstruct",
+      "wscript"
+    ],
     "interpreters": [
       "python",
       "python2",
@@ -11943,6 +12822,7 @@
     "type": "programming",
     "color": "#3572A5",
     "extensions": [],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pycon"
@@ -11964,6 +12844,7 @@
     "extensions": [
       ".pytb"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.python.traceback",
@@ -11983,6 +12864,7 @@
     "extensions": [
       ".qs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "qsharp"
@@ -12005,6 +12887,7 @@
       ".qml",
       ".qbs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.qml",
@@ -12025,6 +12908,7 @@
       ".pro",
       ".pri"
     ],
+    "filenames": [],
     "interpreters": [
       "qmake"
     ],
@@ -12046,6 +12930,10 @@
     "extensions": [
       ".qs"
     ],
+    "filenames": [
+      "installscript.qs",
+      "toolchain_installscript.qs"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.js",
@@ -12063,6 +12951,10 @@
     "type": "programming",
     "color": "#882233",
     "extensions": [],
+    "filenames": [
+      "m3makefile",
+      "m3overrides"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.quake",
@@ -12082,6 +12974,7 @@
     "extensions": [
       ".qc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.quakec",
@@ -12101,6 +12994,7 @@
     "extensions": [
       ".sip"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tcl",
@@ -12121,6 +13015,7 @@
       ".bas",
       ".bi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "qb",
@@ -12146,6 +13041,7 @@
     "extensions": [
       ".qnt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.quint",
@@ -12167,6 +13063,12 @@
       ".rd",
       ".rhistory",
       ".rsx"
+    ],
+    "filenames": [
+      ".Rapp.history",
+      ".Rhistory",
+      ".Rprofile",
+      "expr-dist"
     ],
     "interpreters": [
       "Rscript"
@@ -12192,6 +13094,7 @@
     "extensions": [
       ".raml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -12211,6 +13114,7 @@
     "extensions": [
       ".rascript"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rascript",
@@ -12230,6 +13134,7 @@
     "extensions": [
       ".rbs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rbs",
@@ -12249,6 +13154,7 @@
     "extensions": [
       ".rdoc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.rdoc",
@@ -12273,6 +13179,7 @@
       ".rbtbar",
       ".rbuistate"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vbnet",
@@ -12294,6 +13201,7 @@
       ".pprx",
       ".rex"
     ],
+    "filenames": [],
     "interpreters": [
       "regina",
       "rexx"
@@ -12319,6 +13227,7 @@
       ".qmd",
       ".rmd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.md",
@@ -12338,6 +13247,7 @@
     "extensions": [
       ".ron"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ron",
@@ -12359,6 +13269,7 @@
       ".action",
       ".srv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "rosmsg"
@@ -12380,6 +13291,7 @@
     "extensions": [
       ".x"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "rpcgen",
@@ -12404,6 +13316,7 @@
       ".rpgle",
       ".sqlrpgle"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ile rpg",
@@ -12426,6 +13339,7 @@
     "extensions": [
       ".spec"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "specfile"
@@ -12448,6 +13362,7 @@
       ".rnh",
       ".rno"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.runoff",
@@ -12470,6 +13385,7 @@
       ".rktl",
       ".scrbl"
     ],
+    "filenames": [],
     "interpreters": [
       "racket"
     ],
@@ -12491,6 +13407,7 @@
     "extensions": [
       ".rl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ragel-rb",
@@ -12525,6 +13442,7 @@
       ".rakumod",
       ".t"
     ],
+    "filenames": [],
     "interpreters": [
       "perl6",
       "raku",
@@ -12551,6 +13469,7 @@
     "extensions": [
       ".rsc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rascal",
@@ -12570,6 +13489,7 @@
     "extensions": [
       ".raw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "raw"
@@ -12592,6 +13512,7 @@
       ".res",
       ".resi"
     ],
+    "filenames": [],
     "interpreters": [
       "ocaml"
     ],
@@ -12611,6 +13532,10 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      ".inputrc",
+      "inputrc"
+    ],
     "interpreters": [],
     "aliases": [
       "inputrc",
@@ -12634,6 +13559,7 @@
       ".re",
       ".rei"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.reason",
@@ -12653,6 +13579,7 @@
     "extensions": [
       ".religo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.religo",
@@ -12676,6 +13603,7 @@
       ".r3",
       ".rebol"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rebol",
@@ -12693,6 +13621,9 @@
     "type": "data",
     "color": "#0673ba",
     "extensions": [],
+    "filenames": [
+      "language-subtag-registry.txt"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.record-jar",
@@ -12713,6 +13644,7 @@
       ".red",
       ".reds"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "red/system"
@@ -12734,6 +13666,7 @@
     "extensions": [
       ".cw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -12751,6 +13684,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "_redirects"
+    ],
     "interpreters": [],
     "aliases": [
       "redirects"
@@ -12772,6 +13708,7 @@
     "extensions": [
       ".reds"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.redscript",
@@ -12792,6 +13729,7 @@
       ".regexp",
       ".regex"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "regexp",
@@ -12814,6 +13752,7 @@
     "extensions": [
       ".rpy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "renpy"
@@ -12836,6 +13775,7 @@
       ".rs",
       ".rsh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -12855,6 +13795,7 @@
     "extensions": [
       ".r"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rez",
@@ -12874,6 +13815,7 @@
     "extensions": [
       ".rhai"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.rhai",
@@ -12893,6 +13835,7 @@
     "extensions": [
       ".rtf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.rtf",
@@ -12912,6 +13855,7 @@
     "extensions": [
       ".ring"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ring",
@@ -12931,6 +13875,7 @@
     "extensions": [
       ".riot"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.riot",
@@ -12951,6 +13896,7 @@
       ".robot",
       ".resource"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.robot",
@@ -12968,6 +13914,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "robots.txt"
+    ],
     "interpreters": [],
     "aliases": [
       "robots",
@@ -12991,6 +13940,7 @@
     "extensions": [
       ".roc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.roc",
@@ -13011,6 +13961,7 @@
       ".v",
       ".coq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "coq",
@@ -13060,6 +14011,13 @@
       ".rno",
       ".tmac"
     ],
+    "filenames": [
+      "eqnrc",
+      "mmn",
+      "mmt",
+      "troffrc",
+      "troffrc-end"
+    ],
     "interpreters": [],
     "aliases": [
       "groff",
@@ -13107,6 +14065,7 @@
       ".man",
       ".mdoc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.roff",
@@ -13126,6 +14085,7 @@
     "extensions": [
       ".rg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clojure",
@@ -13145,6 +14105,7 @@
     "extensions": [
       ".rsc"
     ],
+    "filenames": [],
     "interpreters": [
       "RouterOS"
     ],
@@ -13187,6 +14148,31 @@
       ".thor",
       ".watchr"
     ],
+    "filenames": [
+      ".irbrc",
+      ".pryrc",
+      ".simplecov",
+      "Appraisals",
+      "Berksfile",
+      "Brewfile",
+      "Buildfile",
+      "Capfile",
+      "Dangerfile",
+      "Deliverfile",
+      "Fastfile",
+      "Gemfile",
+      "Guardfile",
+      "Jarfile",
+      "Mavenfile",
+      "Podfile",
+      "Puppetfile",
+      "Rakefile",
+      "Snapfile",
+      "Steepfile",
+      "Thorfile",
+      "Vagrantfile",
+      "buildfile"
+    ],
     "interpreters": [
       "ruby",
       "macruby",
@@ -13219,6 +14205,7 @@
       ".rs",
       ".rs.in"
     ],
+    "filenames": [],
     "interpreters": [
       "rust-script"
     ],
@@ -13242,6 +14229,7 @@
     "extensions": [
       ".sas"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sas",
@@ -13261,6 +14249,7 @@
     "extensions": [
       ".scss"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.css.scss",
@@ -13279,6 +14268,13 @@
     "color": null,
     "extensions": [
       ".te"
+    ],
+    "filenames": [
+      "file_contexts",
+      "genfs_contexts",
+      "initial_sids",
+      "port_contexts",
+      "security_classes"
     ],
     "interpreters": [],
     "aliases": [
@@ -13302,6 +14298,7 @@
     "extensions": [
       ".sip"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -13323,6 +14320,7 @@
       ".smt",
       ".z3"
     ],
+    "filenames": [],
     "interpreters": [
       "boolector",
       "cvc4",
@@ -13354,6 +14352,7 @@
       ".sparql",
       ".rq"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sparql",
@@ -13374,6 +14373,7 @@
       ".sqf",
       ".hqf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sqf",
@@ -13400,6 +14400,7 @@
       ".udf",
       ".viw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sql",
@@ -13420,6 +14421,7 @@
       ".sql",
       ".db2"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sql",
@@ -13439,6 +14441,7 @@
     "extensions": [
       ".srt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.lisp",
@@ -13456,6 +14459,14 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "ssh-config",
+      "ssh_config",
+      "sshconfig",
+      "sshconfig.snip",
+      "sshd-config",
+      "sshd_config"
+    ],
     "interpreters": [],
     "aliases": [
       "sshconfig",
@@ -13480,6 +14491,7 @@
     "extensions": [
       ".star"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.star",
@@ -13499,6 +14511,7 @@
     "extensions": [
       ".stl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "ascii stl",
@@ -13521,6 +14534,7 @@
     "extensions": [
       ".ston"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.smalltalk",
@@ -13540,6 +14554,7 @@
     "extensions": [
       ".svg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml.svg",
@@ -13561,6 +14576,7 @@
       ".swg",
       ".swig"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c++",
@@ -13581,6 +14597,7 @@
       ".sage",
       ".sagews"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.python",
@@ -13600,6 +14617,7 @@
     "extensions": [
       ".sail"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sail",
@@ -13619,6 +14637,7 @@
     "extensions": [
       ".sls"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "saltstack",
@@ -13641,6 +14660,7 @@
     "extensions": [
       ".sass"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sass",
@@ -13663,6 +14683,7 @@
       ".sbt",
       ".sc"
     ],
+    "filenames": [],
     "interpreters": [
       "scala"
     ],
@@ -13684,6 +14705,7 @@
     "extensions": [
       ".scaml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.scaml",
@@ -13703,6 +14725,7 @@
     "extensions": [
       ".scenic"
     ],
+    "filenames": [],
     "interpreters": [
       "scenic"
     ],
@@ -13729,6 +14752,7 @@
       ".sps",
       ".ss"
     ],
+    "filenames": [],
     "interpreters": [
       "scheme",
       "guile",
@@ -13758,6 +14782,7 @@
       ".sce",
       ".tst"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.scilab",
@@ -13777,6 +14802,7 @@
     "extensions": [
       ".self"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -13796,6 +14822,7 @@
     "extensions": [
       ".shader"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.shaderlab",
@@ -13830,6 +14857,49 @@
       ".zsh",
       ".zsh-theme"
     ],
+    "filenames": [
+      ".bash_aliases",
+      ".bash_functions",
+      ".bash_history",
+      ".bash_logout",
+      ".bash_profile",
+      ".bashrc",
+      ".cshrc",
+      ".envrc",
+      ".flaskenv",
+      ".kshrc",
+      ".login",
+      ".profile",
+      ".tmux.conf",
+      ".xinitrc",
+      ".xsession",
+      ".zlogin",
+      ".zlogout",
+      ".zprofile",
+      ".zshenv",
+      ".zshrc",
+      "9fs",
+      "PKGBUILD",
+      "bash_aliases",
+      "bash_logout",
+      "bash_profile",
+      "bashrc",
+      "cshrc",
+      "gradlew",
+      "kshrc",
+      "login",
+      "man",
+      "mvnw",
+      "profile",
+      "tmux.conf",
+      "xinitrc",
+      "xsession",
+      "zlogin",
+      "zlogout",
+      "zprofile",
+      "zshenv",
+      "zshrc"
+    ],
     "interpreters": [
       "ash",
       "bash",
@@ -13863,6 +14933,9 @@
     "type": "data",
     "color": "#cecfcb",
     "extensions": [],
+    "filenames": [
+      ".shellcheckrc"
+    ],
     "interpreters": [],
     "aliases": [
       "shellcheckrc"
@@ -13884,6 +14957,7 @@
     "extensions": [
       ".sh-session"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bash session",
@@ -13906,6 +14980,7 @@
     "extensions": [
       ".shen"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.shen",
@@ -13925,6 +15000,7 @@
     "extensions": [
       ".sieve"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sieve",
@@ -13944,6 +15020,7 @@
     "extensions": [
       ".sfv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "sfv"
@@ -13963,6 +15040,9 @@
     "type": "programming",
     "color": "#64E6AD",
     "extensions": [],
+    "filenames": [
+      "Singularity"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.singularity",
@@ -13982,6 +15062,7 @@
     "extensions": [
       ".slang"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.slang",
@@ -14001,6 +15082,7 @@
     "extensions": [
       ".sl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.slash",
@@ -14020,6 +15102,7 @@
     "extensions": [
       ".ice"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ice",
@@ -14039,6 +15122,7 @@
     "extensions": [
       ".slim"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.slim",
@@ -14058,6 +15142,7 @@
     "extensions": [
       ".slint"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.slint",
@@ -14077,6 +15162,7 @@
     "extensions": [
       ".cocci"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "coccinelle"
@@ -14098,6 +15184,7 @@
     "extensions": [
       ".smali"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.smali",
@@ -14118,6 +15205,7 @@
       ".st",
       ".cs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "squeak"
@@ -14139,6 +15227,7 @@
     "extensions": [
       ".tpl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.smarty",
@@ -14158,6 +15247,7 @@
     "extensions": [
       ".smithy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.smithy",
@@ -14177,6 +15267,9 @@
     "extensions": [
       ".smk",
       ".snakefile"
+    ],
+    "filenames": [
+      "Snakefile"
     ],
     "interpreters": [],
     "aliases": [
@@ -14199,6 +15292,7 @@
     "extensions": [
       ".sol"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.solidity",
@@ -14216,6 +15310,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "Android.bp"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.bp",
@@ -14236,6 +15333,7 @@
       ".sp",
       ".inc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "sourcemod"
@@ -14257,6 +15355,7 @@
     "extensions": [
       ".zed"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.spicedb",
@@ -14276,6 +15375,7 @@
     "extensions": [
       ".sfd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.sfd",
@@ -14295,6 +15395,7 @@
     "extensions": [
       ".nut"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nut",
@@ -14314,6 +15415,7 @@
     "extensions": [
       ".stan"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.stan",
@@ -14336,6 +15438,7 @@
       ".sig",
       ".sml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "sml"
@@ -14357,6 +15460,16 @@
     "extensions": [
       ".bzl",
       ".star"
+    ],
+    "filenames": [
+      "BUCK",
+      "BUILD",
+      "BUILD.bazel",
+      "MODULE.bazel",
+      "Tiltfile",
+      "WORKSPACE",
+      "WORKSPACE.bazel",
+      "WORKSPACE.bzlmod"
     ],
     "interpreters": [],
     "aliases": [
@@ -14386,6 +15499,7 @@
       ".matah",
       ".sthlp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.stata",
@@ -14405,6 +15519,7 @@
     "extensions": [
       ".st"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.string-template",
@@ -14424,6 +15539,7 @@
     "extensions": [
       ".styl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.stylus",
@@ -14443,6 +15559,7 @@
     "extensions": [
       ".srt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.srt",
@@ -14462,6 +15579,7 @@
     "extensions": [
       ".sss"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.css.postcss.sugarss",
@@ -14482,6 +15600,7 @@
       ".sc",
       ".scd"
     ],
+    "filenames": [],
     "interpreters": [
       "sclang",
       "scsynth"
@@ -14504,6 +15623,7 @@
     "extensions": [
       ".surql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "surql"
@@ -14525,6 +15645,7 @@
     "extensions": [
       ".svx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -14544,6 +15665,7 @@
     "extensions": [
       ".svelte"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.svelte",
@@ -14563,6 +15685,7 @@
     "extensions": [
       ".sw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.sway",
@@ -14582,6 +15705,7 @@
     "extensions": [
       ".rnw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.tex.latex.sweave",
@@ -14601,6 +15725,7 @@
     "extensions": [
       ".swift"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.swift",
@@ -14622,6 +15747,7 @@
       ".svh",
       ".vh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.systemverilog",
@@ -14642,6 +15768,7 @@
       ".8xp",
       ".8xp.txt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.8xp",
@@ -14661,6 +15788,7 @@
     "extensions": [
       ".tlv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tlverilog",
@@ -14680,6 +15808,7 @@
     "extensions": [
       ".tla"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tla",
@@ -14699,6 +15828,7 @@
     "extensions": [
       ".tmdl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "Tabular Model Definition Language"
@@ -14721,6 +15851,17 @@
       ".toml",
       ".toml.example"
     ],
+    "filenames": [
+      "Cargo.lock",
+      "Cargo.toml.orig",
+      "Gopkg.lock",
+      "Pipfile",
+      "mise.local.lock",
+      "mise.lock",
+      "pdm.lock",
+      "poetry.lock",
+      "uv.lock"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.toml",
@@ -14740,6 +15881,7 @@
     "extensions": [
       ".tsp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "travelling salesman problem",
@@ -14762,6 +15904,7 @@
     "extensions": [
       ".sql"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tsql",
@@ -14782,6 +15925,7 @@
       ".tsv",
       ".vcf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "tab-seperated values"
@@ -14803,6 +15947,7 @@
     "extensions": [
       ".tsx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "typescriptreact"
@@ -14824,6 +15969,7 @@
     "extensions": [
       ".txl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.txl",
@@ -14843,6 +15989,7 @@
     "extensions": [
       ".tact"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tact",
@@ -14862,6 +16009,7 @@
     "extensions": [
       ".talon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.talon",
@@ -14881,6 +16029,7 @@
     "extensions": [
       ".tape"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vhs"
@@ -14906,6 +16055,10 @@
       ".tcl.in",
       ".tm",
       ".xdc"
+    ],
+    "filenames": [
+      "owh",
+      "starfield"
     ],
     "interpreters": [
       "tclsh",
@@ -14933,6 +16086,7 @@
       ".tcsh",
       ".csh"
     ],
+    "filenames": [],
     "interpreters": [
       "tcsh",
       "csh"
@@ -14968,6 +16122,7 @@
       ".sty",
       ".toc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "latex"
@@ -14989,6 +16144,7 @@
     "extensions": [
       ".tea"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tea",
@@ -15008,6 +16164,7 @@
     "extensions": [
       ".tl"
     ],
+    "filenames": [],
     "interpreters": [
       "tl"
     ],
@@ -15029,6 +16186,7 @@
     "extensions": [
       ".t"
     ],
+    "filenames": [],
     "interpreters": [
       "lua"
     ],
@@ -15050,6 +16208,7 @@
     "extensions": [
       ".tftpl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hcl.terraform",
@@ -15071,6 +16230,7 @@
       ".texi",
       ".txi"
     ],
+    "filenames": [],
     "interpreters": [
       "makeinfo"
     ],
@@ -15096,6 +16256,34 @@
       ".ncl",
       ".no"
     ],
+    "filenames": [
+      "CITATION",
+      "CITATIONS",
+      "COPYING",
+      "COPYING.regex",
+      "COPYRIGHT.regex",
+      "FONTLOG",
+      "INSTALL",
+      "INSTALL.mysql",
+      "LICENSE",
+      "LICENSE.mysql",
+      "NEWS",
+      "README.me",
+      "README.mysql",
+      "README.nss",
+      "README.pc",
+      "click.me",
+      "delete.me",
+      "keep.me",
+      "package.mask",
+      "package.use.mask",
+      "package.use.stable.mask",
+      "read.me",
+      "readme.1st",
+      "test.me",
+      "use.mask",
+      "use.stable.mask"
+    ],
     "interpreters": [],
     "aliases": [
       "fundamental",
@@ -15118,6 +16306,7 @@
     "extensions": [
       ".TextGrid"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.textgrid",
@@ -15135,6 +16324,9 @@
     "type": "data",
     "color": "#df66e4",
     "extensions": [],
+    "filenames": [
+      ".tm_properties"
+    ],
     "interpreters": [],
     "aliases": [
       "tm-properties"
@@ -15156,6 +16348,7 @@
     "extensions": [
       ".textile"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -15175,6 +16368,7 @@
     "extensions": [
       ".thrift"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.thrift",
@@ -15194,6 +16388,7 @@
     "extensions": [
       ".toit"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.toit",
@@ -15213,6 +16408,7 @@
     "extensions": [
       ".tolk"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.tolk",
@@ -15230,6 +16426,9 @@
     "type": "data",
     "color": "#59316b",
     "extensions": [],
+    "filenames": [
+      "torrc"
+    ],
     "interpreters": [],
     "aliases": [
       "torrc"
@@ -15251,6 +16450,7 @@
     "extensions": [
       ".scm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "tsq"
@@ -15273,6 +16473,7 @@
       ".t",
       ".tu"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.turing",
@@ -15292,6 +16493,7 @@
     "extensions": [
       ".ttl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.turtle",
@@ -15311,6 +16513,7 @@
     "extensions": [
       ".twig"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.twig",
@@ -15330,6 +16533,7 @@
     "extensions": [
       ".tl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "tl"
@@ -15353,6 +16557,7 @@
       ".cts",
       ".mts"
     ],
+    "filenames": [],
     "interpreters": [
       "bun",
       "deno",
@@ -15380,6 +16585,7 @@
     "extensions": [
       ".tsp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "tsp"
@@ -15401,6 +16607,7 @@
     "extensions": [
       ".typ"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "typ"
@@ -15422,6 +16629,7 @@
     "extensions": [
       ".upc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c",
@@ -15447,6 +16655,7 @@
       ".prefab",
       ".unity"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yaml",
@@ -15467,6 +16676,7 @@
       ".s",
       ".ms"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "gas",
@@ -15490,6 +16700,7 @@
     "extensions": [
       ".uno"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.cs",
@@ -15509,6 +16720,7 @@
     "extensions": [
       ".uc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.java",
@@ -15528,6 +16740,7 @@
     "extensions": [
       ".uplc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.uplc",
@@ -15548,6 +16761,7 @@
       ".ur",
       ".urs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "Ur/Web",
@@ -15570,6 +16784,7 @@
     "extensions": [
       ".v"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vlang"
@@ -15594,6 +16809,7 @@
       ".frm",
       ".vba"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "visual basic for applications"
@@ -15615,6 +16831,7 @@
     "extensions": [
       ".vbs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vbnet",
@@ -15634,6 +16851,7 @@
     "extensions": [
       ".vcl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vcl",
@@ -15660,6 +16878,7 @@
       ".vht",
       ".vhw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vhdl",
@@ -15680,6 +16899,7 @@
       ".vala",
       ".vapi"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vala",
@@ -15700,6 +16920,7 @@
       ".vdf",
       ".vmf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "keyvalues",
@@ -15722,6 +16943,7 @@
     "extensions": [
       ".vtl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vtl",
@@ -15744,6 +16966,7 @@
     "extensions": [
       ".vto"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vento",
@@ -15764,6 +16987,7 @@
       ".v",
       ".veo"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.verilog",
@@ -15783,6 +17007,7 @@
     "extensions": [
       ".verse"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.verse",
@@ -15802,6 +17027,7 @@
     "extensions": [
       ".sd"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vespa"
@@ -15823,6 +17049,7 @@
     "extensions": [
       ".txt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "help",
@@ -15847,6 +17074,7 @@
       ".snippet",
       ".snippets"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "SnipMate",
@@ -15874,6 +17102,16 @@
       ".vimrc",
       ".vmb"
     ],
+    "filenames": [
+      ".exrc",
+      ".gvimrc",
+      ".nvimrc",
+      ".vimrc",
+      "_vimrc",
+      "gvimrc",
+      "nvimrc",
+      "vimrc"
+    ],
     "interpreters": [],
     "aliases": [
       "vim",
@@ -15899,6 +17137,7 @@
       ".vb",
       ".vbhtml"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "visual basic",
@@ -15927,6 +17166,7 @@
       ".Dsr",
       ".frm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vb6",
@@ -15952,6 +17192,7 @@
     "extensions": [
       ".volt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.d",
@@ -15971,6 +17212,7 @@
     "extensions": [
       ".vue"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.html.vue",
@@ -15990,6 +17232,7 @@
     "extensions": [
       ".vy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.vyper",
@@ -16009,6 +17252,7 @@
     "extensions": [
       ".wdl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "Workflow Description Language"
@@ -16030,6 +17274,7 @@
     "extensions": [
       ".wgsl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.wgsl",
@@ -16049,6 +17294,7 @@
     "extensions": [
       ".mtl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.wavefront.mtl",
@@ -16068,6 +17314,7 @@
     "extensions": [
       ".obj"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.wavefront.obj",
@@ -16087,6 +17334,7 @@
     "extensions": [
       ".owl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -16107,6 +17355,7 @@
       ".wast",
       ".wat"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "wast",
@@ -16129,6 +17378,7 @@
     "extensions": [
       ".wit"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "wit"
@@ -16150,6 +17400,7 @@
     "extensions": [
       ".webidl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.webidl",
@@ -16169,6 +17420,7 @@
     "extensions": [
       ".vtt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "vtt"
@@ -16188,6 +17440,9 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      ".wgetrc"
+    ],
     "interpreters": [],
     "aliases": [
       "wgetrc"
@@ -16209,6 +17464,7 @@
     "extensions": [
       ".whiley"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.whiley",
@@ -16230,6 +17486,7 @@
       ".wiki",
       ".wikitext"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "mediawiki",
@@ -16252,6 +17509,7 @@
     "extensions": [
       ".mc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.win32-messages",
@@ -16271,6 +17529,7 @@
     "extensions": [
       ".reg"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.reg",
@@ -16290,6 +17549,7 @@
     "extensions": [
       ".ws"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.witcherscript",
@@ -16318,6 +17578,7 @@
       ".wls",
       ".wlt"
     ],
+    "filenames": [],
     "interpreters": [
       "wolfram",
       "WolframKernel",
@@ -16352,6 +17613,7 @@
     "extensions": [
       ".wlk"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.wollok",
@@ -16371,6 +17633,7 @@
     "extensions": [
       ".toc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.toc",
@@ -16390,6 +17653,7 @@
     "extensions": [
       ".wren"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "wrenlang"
@@ -16411,6 +17675,7 @@
     "extensions": [
       ".xbm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xbm"
@@ -16430,6 +17695,12 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      "encodings.dir",
+      "fonts.alias",
+      "fonts.dir",
+      "fonts.scale"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.fontdir",
@@ -16450,6 +17721,7 @@
       ".xpm",
       ".pm"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xpm"
@@ -16471,6 +17743,7 @@
     "extensions": [
       ".x10"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xten"
@@ -16492,6 +17765,7 @@
     "extensions": [
       ".xc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.xc",
@@ -16509,6 +17783,11 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      ".XCompose",
+      "XCompose",
+      "xcompose"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "config.xcompose",
@@ -16639,6 +17918,18 @@
       ".xul",
       ".zcml"
     ],
+    "filenames": [
+      ".classpath",
+      ".cproject",
+      ".project",
+      "App.config",
+      "NuGet.config",
+      "Settings.StyleCop",
+      "Web.Debug.config",
+      "Web.Release.config",
+      "Web.config",
+      "packages.config"
+    ],
     "interpreters": [],
     "aliases": [
       "rss",
@@ -16668,6 +17959,7 @@
       ".tmSnippet",
       ".tmTheme"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml.plist",
@@ -16688,6 +17980,7 @@
       ".xsp-config",
       ".xsp.metadata"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -16708,6 +18001,7 @@
       ".xpl",
       ".xproc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "text.xml",
@@ -16731,6 +18025,7 @@
       ".xqm",
       ".xqy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.xq",
@@ -16750,6 +18045,7 @@
     "extensions": [
       ".xs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c",
@@ -16770,6 +18066,7 @@
       ".xslt",
       ".xsl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "xsl"
@@ -16789,6 +18086,9 @@
     "type": "programming",
     "color": "#22a079",
     "extensions": [],
+    "filenames": [
+      "xmake.lua"
+    ],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.xmake",
@@ -16813,6 +18113,7 @@
       ".xojo_toolbar",
       ".xojo_window"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.xojo",
@@ -16832,6 +18133,7 @@
     "extensions": [
       ".xsh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.python",
@@ -16851,6 +18153,7 @@
     "extensions": [
       ".xtend"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.xtend",
@@ -16879,6 +18182,18 @@
       ".yaml.sed",
       ".yml.mysql"
     ],
+    "filenames": [
+      ".clang-format",
+      ".clang-tidy",
+      ".clangd",
+      ".eslintrc",
+      ".gemrc",
+      ".releaserc",
+      "CITATION.cff",
+      "glide.lock",
+      "pixi.lock",
+      "yarn.lock"
+    ],
     "interpreters": [],
     "aliases": [
       "yml"
@@ -16900,6 +18215,7 @@
     "extensions": [
       ".yang"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yang",
@@ -16920,6 +18236,7 @@
       ".yar",
       ".yara"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yara",
@@ -16939,6 +18256,7 @@
     "extensions": [
       ".yasnippet"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "snippet",
@@ -16963,6 +18281,7 @@
       ".yacc",
       ".yy"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yacc",
@@ -16982,6 +18301,7 @@
     "extensions": [
       ".yul"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.yul",
@@ -17002,6 +18322,7 @@
       ".zap",
       ".xzap"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.zap",
@@ -17022,6 +18343,7 @@
       ".zil",
       ".mud"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.zil",
@@ -17042,6 +18364,7 @@
       ".zeek",
       ".bro"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "bro"
@@ -17063,6 +18386,7 @@
     "extensions": [
       ".zs"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.zenscript",
@@ -17082,6 +18406,7 @@
     "extensions": [
       ".zep"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.php.zephir",
@@ -17102,6 +18427,7 @@
       ".zig",
       ".zig.zon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.zig",
@@ -17123,6 +18449,7 @@
       ".zmpl",
       ".zpl"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -17142,6 +18469,7 @@
     "extensions": [
       ".zmodel"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.zmodel",
@@ -17159,6 +18487,10 @@
     "type": "data",
     "color": null,
     "extensions": [],
+    "filenames": [
+      ".curlrc",
+      "_curlrc"
+    ],
     "interpreters": [],
     "aliases": [
       "curlrc"
@@ -17178,6 +18510,9 @@
     "type": "data",
     "color": "#ead7ac",
     "extensions": [],
+    "filenames": [
+      "crontab"
+    ],
     "interpreters": [],
     "aliases": [
       "cron",
@@ -17201,6 +18536,7 @@
       ".desktop",
       ".desktop.in"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.desktop",
@@ -17219,6 +18555,14 @@
     "color": null,
     "extensions": [
       ".dircolors"
+    ],
+    "filenames": [
+      ".dir_colors",
+      ".dircolors",
+      "DIR_COLORS",
+      "_dir_colors",
+      "_dircolors",
+      "dir_colors"
     ],
     "interpreters": [],
     "aliases": [],
@@ -17240,6 +18584,7 @@
       ".ec",
       ".eh"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.c.ec",
@@ -17259,6 +18604,7 @@
     "extensions": [
       ".edn"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clojure",
@@ -17278,6 +18624,7 @@
     "extensions": [
       ".fish"
     ],
+    "filenames": [],
     "interpreters": [
       "fish"
     ],
@@ -17299,6 +18646,7 @@
     "extensions": [
       ".hoon"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.hoon",
@@ -17319,6 +18667,7 @@
       ".ics",
       ".ical"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "iCal"
@@ -17340,6 +18689,7 @@
     "extensions": [
       ".jq"
     ],
+    "filenames": [],
     "interpreters": [
       "gojq",
       "jaq",
@@ -17366,6 +18716,7 @@
     "extensions": [
       ".kv"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.python.kivy",
@@ -17385,6 +18736,7 @@
     "extensions": [
       ".mrc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.msl",
@@ -17404,6 +18756,7 @@
     "extensions": [
       ".mcfunction"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mcfunction",
@@ -17423,6 +18776,7 @@
     "extensions": [
       ".svx"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "none",
@@ -17442,6 +18796,7 @@
     "extensions": [
       ".mu"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.mupad",
@@ -17460,6 +18815,10 @@
     "color": "#2d004d",
     "extensions": [
       ".nanorc"
+    ],
+    "filenames": [
+      ".nanorc",
+      "nanorc"
     ],
     "interpreters": [],
     "aliases": [],
@@ -17480,6 +18839,7 @@
     "extensions": [
       ".nc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.nesc",
@@ -17499,6 +18859,7 @@
     "extensions": [
       ".ooc"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.ooc",
@@ -17519,6 +18880,7 @@
       ".pc",
       ".pc.in"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "pkgconf"
@@ -17540,6 +18902,7 @@
     "extensions": [
       ".q"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.q",
@@ -17562,6 +18925,7 @@
       ".rest.txt",
       ".rst.txt"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "rst"
@@ -17583,6 +18947,7 @@
     "extensions": [
       ".sed"
     ],
+    "filenames": [],
     "interpreters": [
       "gsed",
       "minised",
@@ -17607,6 +18972,7 @@
     "extensions": [
       ".templ"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.templ",
@@ -17626,6 +18992,7 @@
     "extensions": [
       ".uc"
     ],
+    "filenames": [],
     "interpreters": [
       "ucode"
     ],
@@ -17647,6 +19014,7 @@
     "extensions": [
       ".vcf"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "virtual contact file",
@@ -17669,6 +19037,7 @@
     "extensions": [
       ".wisp"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [],
     "tm_scope": "source.clojure",
@@ -17690,6 +19059,7 @@
       ".ch",
       ".prw"
     ],
+    "filenames": [],
     "interpreters": [],
     "aliases": [
       "advpl",

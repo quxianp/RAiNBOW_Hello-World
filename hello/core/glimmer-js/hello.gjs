@@ -1,5 +1,5 @@
 // Glimmer JS - Hello World! :: RAiNBOW_Hello-World
-//   note       : Linguist has no extension for this language; this file uses the canonical name as its extension so it is still counted in the bar.
+//   note       : Linguist recognises this language by filename, not by extension.
 //   colour     : #f5835f
 //   hue        : 14.4 deg
 //   layer      : core (byte-balanced rainbow bar)
@@ -8,3 +8,31 @@
 
 // Hello World!
 // Hello World!
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
+// rainbow-pad colour #f5835f :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
+// rainbow-pad colour #f5835f :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
+// rainbow-pad colour #f5835f :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
+// rainbow-pad colour #f5835f :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
+// rainbow-pad colour #f5835f :: padded to 

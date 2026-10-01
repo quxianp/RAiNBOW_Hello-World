@@ -1,5 +1,5 @@
 // xBase - Hello World! :: RAiNBOW_Hello-World
-//   note       : Linguist has no extension for this language; this file uses the canonical name as its extension so it is still counted in the bar.
+//   note       : Linguist recognises this language by filename, not by extension.
 //   colour     : #403a40
 //   hue        : 300.0 deg
 //   layer      : core (byte-balanced rainbow bar)
@@ -8,3 +8,32 @@
 
 // Hello World!
 // Hello World!
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad xBase :: RAiNBOW_Hello-World
+// rainbow-pad colour #403a40 :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad xBase :: RAiNBOW_Hello-World
+// rainbow-pad colour #403a40 :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad xBase :: RAiNBOW_Hello-World
+// rainbow-pad colour #403a40 :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad xBase :: RAiNBOW_Hello-World
+// rainbow-pad colour #403a40 :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+// rainbow-pad equal byte share keeps the language bar an even rainbow
+// rainbow-pad one segment per Linguist coloured language
+// rainbow-pad xBase :: RAiNBOW_Hello-World
+// rainbow-pad colour #403a40 :: padded to 100
+// rainbow-pad padding co

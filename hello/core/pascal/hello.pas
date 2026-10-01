@@ -1,5 +1,5 @@
 (*
-  note       : Linguist has no extension for this language; this file uses the canonical name as its extension so it is still counted in the bar.
+  note       : Linguist recognises this language by filename, not by extension.
 Pascal - Hello World! :: RAiNBOW_Hello-World
   colour     : #e3f171
   hue        : 66.6 deg
@@ -10,3 +10,30 @@ Pascal - Hello World! :: RAiNBOW_Hello-World
 
 (* Hello World!*)
 (* Hello World!*)
+(* rainbow-pad equal byte share keeps the language bar an even rainbow *)
+(* rainbow-pad one segment per Linguist coloured language *)
+(* rainbow-pad Pascal :: RAiNBOW_Hello-World *)
+(* rainbow-pad colour #e3f171 :: padded to 100 *)
+(* rainbow-pad padding comment: byte balancing for the rainbow bar *)
+(* rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World *)
+(* rainbow-pad equal byte share keeps the language bar an even rainbow *)
+(* rainbow-pad one segment per Linguist coloured language *)
+(* rainbow-pad Pascal :: RAiNBOW_Hello-World *)
+(* rainbow-pad colour #e3f171 :: padded to 100 *)
+(* rainbow-pad padding comment: byte balancing for the rainbow bar *)
+(* rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World *)
+(* rainbow-pad equal byte share keeps the language bar an even rainbow *)
+(* rainbow-pad one segment per Linguist coloured language *)
+(* rainbow-pad Pascal :: RAiNBOW_Hello-World *)
+(* rainbow-pad colour #e3f171 :: padded to 100 *)
+(* rainbow-pad padding comment: byte balancing for the rainbow bar *)
+(* rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World *)
+(* rainbow-pad equal byte share keeps the language bar an even rainbow *)
+(* rainbow-pad one segment per Linguist coloured language *)
+(* rainbow-pad Pascal :: RAiNBOW_Hello-World *)
+(* rainbow-pad colour #e3f171 :: padded to 100 *)
+(* rainbow-pad padding comment: byte balancing for the rainbow bar *)
+(* rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World *)
+(* rainbow-pad equal byte share keeps the language bar an even rainbow *)
+(* rainbow-pad one segment per Linguist coloured language *)
+(* rainbow-pad Pascal :: RAiNBOW_Hello-Worl *)

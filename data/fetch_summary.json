@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T16:26:41Z",
+  "generated": "2026-10-01T17:25:50Z",
   "sources": [
     "awesome_fp",
     "esolangs",
@@ -16,24 +16,5 @@
     "wikipedia",
     "builtin"
   ],
-  "builtin_groups": {
-    "ancient": 134,
-    "functional": 86,
-    "logic_constraint": 40,
-    "hardware": 29,
-    "blockchain": 36,
-    "data_science": 58,
-    "shell_os": 41,
-    "build_config": 71,
-    "academic": 57,
-    "quantum": 45,
-    "concurrency": 59,
-    "education": 144,
-    "golf": 78,
-    "markup_data": 109,
-    "dsl_query": 110,
-    "template": 70,
-    "esoteric": 180,
-    "misc": 143
-  }
+  "builtin_groups": {}
 }

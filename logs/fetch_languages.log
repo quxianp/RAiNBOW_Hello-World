@@ -261,3 +261,9 @@
 [00:26:41] wrote data\other_sources.json (84915 bytes)
 [00:26:41] wrote data\fetch_summary.json (805 bytes)
 [00:26:41] === fetch_languages done ===
+[01:25:48] auto-detected WinINET proxy 127.0.0.1:10818
+[01:25:48] === fetch_languages start (sources: linguist) ===
+[01:25:50] wrote data\linguist.json (399303 bytes)
+[01:25:50] linguist: 836 languages, 694 with color
+[01:25:50] wrote data\fetch_summary.json (400 bytes)
+[01:25:50] === fetch_languages done ===

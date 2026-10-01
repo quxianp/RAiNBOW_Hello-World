@@ -1,9 +1,11 @@
 core language selection report
 ============================================================
-core languages              : 694
-target share per language   : 0.1441 %
-languages without extension : 35
-                            : NPM Config, Git Attributes, Git Commit, Git Revision List, Dune, JAR Manifest, Cloud Firestore Security Rules, crontab, Pip Requirements, Browserslist, Isabelle ROOT, ShellCheck Config, OpenAPI Specification v2, OpenAPI Specification v3, Option List, Meson, Elvish Transcript, Singularity, Xmake, Hosts File, Earthly, Go Checksums, Go Module, Go Workspace, BIRD2, Alpine Abuild, Record Jar, Python console, Procfile, Julia REPL, Tor Config, TextMate Properties, Ant Build System, Quake, Gemfile.lock
+core languages              : 689
+target share per language   : 0.1451 %
+recognised by filename only : 30
+deferred to full layer      : 5 -> Elvish Transcript, Julia REPL, OpenAPI Specification v2, OpenAPI Specification v3, Python console
+languages without extension : 18
+                            : NPM Config, Git Attributes, Git Commit, Git Revision List, Dune, crontab, Browserslist, Isabelle ROOT, ShellCheck Config, Option List, Singularity, Hosts File, Earthly, Alpine Abuild, Procfile, Tor Config, TextMate Properties, Quake
 
 hue buckets (18 named slices of the colour wheel)
   red                36
@@ -12,22 +14,22 @@ hue buckets (18 named slices of the colour wheel)
   amber              49
   yellow             27
   yellow-green       26
-  green              25
-  spring-green       35
+  green              23
+  spring-green       34
   green-cyan         30
   cyan               29
   cyan-blue          59
-  azure              96
+  azure              95
   blue               57
   violet             28
-  purple             33
+  purple             32
   magenta            12
   pink               17
   rose               20
 
 linguist types
-  programming       503
-  data              113
+  programming       500
+  data              111
   markup             67
   prose              11
 

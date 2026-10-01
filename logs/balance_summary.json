@@ -1,0 +1,16 @@
+{
+  "core_languages": 689,
+  "target_bytes_each": 2048,
+  "natural_mean_bytes": 384.9,
+  "total_counted_bytes": 1411098,
+  "ideal_share_pct": 0.145138,
+  "actual_share_min_pct": 0.145135,
+  "actual_share_max_pct": 0.145419,
+  "share_stdev_pp": 1.643e-05,
+  "window_pct": [
+    0.05,
+    0.5
+  ],
+  "outside_window": [],
+  "sum_pct": 100.0
+}

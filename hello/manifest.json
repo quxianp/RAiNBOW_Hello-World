@@ -1,7 +1,7 @@
 {
  "generated_by": "scripts/generate_all_hello.py",
- "core_languages": 694,
- "full_languages": 6412,
+ "core_languages": 689,
+ "full_languages": 6417,
  "total_files": 7106,
  "with_curated_template": 255,
  "runnable_command_count": 51,
@@ -460,8 +460,8 @@
   {
    "language": "NPM Config",
    "layer": "core",
-   "path": "hello/core/npm-config/hello.npm_config",
-   "extension": ".npm_config",
+   "path": "hello/core/npm-config/.npmrc",
+   "extension": "",
    "type": "data",
    "color": "#cb3837",
    "hue": 0.41,
@@ -757,8 +757,8 @@
   {
    "language": "Git Attributes",
    "layer": "core",
-   "path": "hello/core/git-attributes/hello.git_attributes",
-   "extension": ".git_attributes",
+   "path": "hello/core/git-attributes/.gitattributes",
+   "extension": "",
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
@@ -768,8 +768,8 @@
   {
    "language": "Git Commit",
    "layer": "core",
-   "path": "hello/core/git-commit/hello.git_commit",
-   "extension": ".git_commit",
+   "path": "hello/core/git-commit/.gitmessage",
+   "extension": "",
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
@@ -790,8 +790,8 @@
   {
    "language": "Git Revision List",
    "layer": "core",
-   "path": "hello/core/git-revision-list/hello.git_revision_list",
-   "extension": ".git_revision_list",
+   "path": "hello/core/git-revision-list/.git-blame-ignore-revs",
+   "extension": "",
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
@@ -1054,8 +1054,8 @@
   {
    "language": "Dune",
    "layer": "core",
-   "path": "hello/core/dune/hello.dune",
-   "extension": ".dune",
+   "path": "hello/core/dune/dune-project",
+   "extension": "",
    "type": "programming",
    "color": "#89421e",
    "hue": 20.19,
@@ -1450,8 +1450,8 @@
   {
    "language": "JAR Manifest",
    "layer": "core",
-   "path": "hello/core/jar-manifest/hello.jar_manifest",
-   "extension": ".jar_manifest",
+   "path": "hello/core/jar-manifest/MANIFEST.MF",
+   "extension": ".MF",
    "type": "data",
    "color": "#b07219",
    "hue": 35.36,
@@ -1582,8 +1582,8 @@
   {
    "language": "Cloud Firestore Security Rules",
    "layer": "core",
-   "path": "hello/core/cloud-firestore-security-rules/hello.cloud_firestore_security_rules",
-   "extension": ".cloud_firestore_security_rules",
+   "path": "hello/core/cloud-firestore-security-rules/firestore.rules",
+   "extension": ".rules",
    "type": "data",
    "color": "#ffa000",
    "hue": 37.65,
@@ -1714,8 +1714,8 @@
   {
    "language": "crontab",
    "layer": "core",
-   "path": "hello/core/crontab/hello.crontab",
-   "extension": ".crontab",
+   "path": "hello/core/crontab/crontab",
+   "extension": "",
    "type": "data",
    "color": "#ead7ac",
    "hue": 41.61,
@@ -1879,8 +1879,8 @@
   {
    "language": "Pip Requirements",
    "layer": "core",
-   "path": "hello/core/pip-requirements/hello.pip_requirements",
-   "extension": ".pip_requirements",
+   "path": "hello/core/pip-requirements/dev-requirements.txt",
+   "extension": ".txt",
    "type": "data",
    "color": "#ffd343",
    "hue": 45.96,
@@ -1912,8 +1912,8 @@
   {
    "language": "Browserslist",
    "layer": "core",
-   "path": "hello/core/browserslist/hello.browserslist",
-   "extension": ".browserslist",
+   "path": "hello/core/browserslist/.browserslistrc",
+   "extension": "",
    "type": "data",
    "color": "#ffd539",
    "hue": 47.27,
@@ -2121,8 +2121,8 @@
   {
    "language": "Isabelle ROOT",
    "layer": "core",
-   "path": "hello/core/isabelle-root/hello.isabelle_root",
-   "extension": ".isabelle_root",
+   "path": "hello/core/isabelle-root/ROOT",
+   "extension": "",
    "type": "programming",
    "color": "#fefe00",
    "hue": 60.0,
@@ -2297,8 +2297,8 @@
   {
    "language": "ShellCheck Config",
    "layer": "core",
-   "path": "hello/core/shellcheck-config/hello.shellcheck_config",
-   "extension": ".shellcheck_config",
+   "path": "hello/core/shellcheck-config/.shellcheckrc",
+   "extension": "",
    "type": "data",
    "color": "#cecfcb",
    "hue": 75.0,
@@ -2581,28 +2581,6 @@
    "real_template": false
   },
   {
-   "language": "OpenAPI Specification v2",
-   "layer": "core",
-   "path": "hello/core/openapi-specification-v2/hello.openapi_specification_v2",
-   "extension": ".openapi_specification_v2",
-   "type": "data",
-   "color": "#85ea2d",
-   "hue": 92.06,
-   "runner": null,
-   "real_template": true
-  },
-  {
-   "language": "OpenAPI Specification v3",
-   "layer": "core",
-   "path": "hello/core/openapi-specification-v3/hello.openapi_specification_v3",
-   "extension": ".openapi_specification_v3",
-   "type": "data",
-   "color": "#85ea2d",
-   "hue": 92.06,
-   "runner": null,
-   "real_template": true
-  },
-  {
    "language": "Makefile",
    "layer": "core",
    "path": "hello/core/makefile/hello.mk",
@@ -2638,8 +2616,8 @@
   {
    "language": "Option List",
    "layer": "core",
-   "path": "hello/core/option-list/hello.option_list",
-   "extension": ".option_list",
+   "path": "hello/core/option-list/.ackrc",
+   "extension": "",
    "type": "data",
    "color": "#476732",
    "hue": 96.23,
@@ -2825,8 +2803,8 @@
   {
    "language": "Meson",
    "layer": "core",
-   "path": "hello/core/meson/hello.meson",
-   "extension": ".meson",
+   "path": "hello/core/meson/meson.build",
+   "extension": ".build",
    "type": "programming",
    "color": "#007800",
    "hue": 120.0,
@@ -2920,17 +2898,6 @@
    "hue": 120.0,
    "runner": null,
    "real_template": true
-  },
-  {
-   "language": "Elvish Transcript",
-   "layer": "core",
-   "path": "hello/core/elvish-transcript/hello.elvish_transcript",
-   "extension": ".elvish_transcript",
-   "type": "programming",
-   "color": "#55bb55",
-   "hue": 120.0,
-   "runner": null,
-   "real_template": false
   },
   {
    "language": "OMNeT++ MSG",
@@ -3221,8 +3188,8 @@
   {
    "language": "Singularity",
    "layer": "core",
-   "path": "hello/core/singularity/hello.singularity",
-   "extension": ".singularity",
+   "path": "hello/core/singularity/Singularity",
+   "extension": "",
    "type": "programming",
    "color": "#64e6ad",
    "hue": 153.69,
@@ -3320,8 +3287,8 @@
   {
    "language": "Xmake",
    "layer": "core",
-   "path": "hello/core/xmake/hello.xmake",
-   "extension": ".xmake",
+   "path": "hello/core/xmake/xmake.lua",
+   "extension": ".lua",
    "type": "programming",
    "color": "#22a079",
    "hue": 161.43,
@@ -3584,8 +3551,8 @@
   {
    "language": "Hosts File",
    "layer": "core",
-   "path": "hello/core/hosts-file/hello.hosts_file",
-   "extension": ".hosts_file",
+   "path": "hello/core/hosts-file/HOSTS",
+   "extension": "",
    "type": "data",
    "color": "#308888",
    "hue": 180.0,
@@ -3683,8 +3650,8 @@
   {
    "language": "Earthly",
    "layer": "core",
-   "path": "hello/core/earthly/hello.earthly",
-   "extension": ".earthly",
+   "path": "hello/core/earthly/Earthfile",
+   "extension": "",
    "type": "programming",
    "color": "#2af0ff",
    "hue": 184.23,
@@ -3892,8 +3859,8 @@
   {
    "language": "Go Checksums",
    "layer": "core",
-   "path": "hello/core/go-checksums/hello.go_checksums",
-   "extension": ".go_checksums",
+   "path": "hello/core/go-checksums/go.sum",
+   "extension": ".sum",
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
@@ -3903,8 +3870,8 @@
   {
    "language": "Go Module",
    "layer": "core",
-   "path": "hello/core/go-module/hello.go_module",
-   "extension": ".go_module",
+   "path": "hello/core/go-module/go.mod",
+   "extension": ".mod",
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
@@ -3925,8 +3892,8 @@
   {
    "language": "Go Workspace",
    "layer": "core",
-   "path": "hello/core/go-workspace/hello.go_workspace",
-   "extension": ".go_workspace",
+   "path": "hello/core/go-workspace/go.work",
+   "extension": ".work",
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
@@ -4178,8 +4145,8 @@
   {
    "language": "BIRD2",
    "layer": "core",
-   "path": "hello/core/bird2/hello.bird2",
-   "extension": ".bird2",
+   "path": "hello/core/bird2/bird.conf",
+   "extension": ".conf",
    "type": "data",
    "color": "#b6d7e4",
    "hue": 196.96,
@@ -4354,8 +4321,8 @@
   {
    "language": "Alpine Abuild",
    "layer": "core",
-   "path": "hello/core/alpine-abuild/hello.alpine_abuild",
-   "extension": ".alpine_abuild",
+   "path": "hello/core/alpine-abuild/APKBUILD",
+   "extension": "",
    "type": "programming",
    "color": "#0d597f",
    "hue": 200.0,
@@ -4497,8 +4464,8 @@
   {
    "language": "Record Jar",
    "layer": "core",
-   "path": "hello/core/record-jar/hello.record_jar",
-   "extension": ".record_jar",
+   "path": "hello/core/record-jar/language-subtag-registry.txt",
+   "extension": ".txt",
    "type": "data",
    "color": "#0673ba",
    "hue": 203.67,
@@ -4800,17 +4767,6 @@
    "color": "#3572a5",
    "hue": 207.32,
    "runner": "python3 \"{file}\"",
-   "real_template": true
-  },
-  {
-   "language": "Python console",
-   "layer": "core",
-   "path": "hello/core/python-console/hello.python_console",
-   "extension": ".python_console",
-   "type": "programming",
-   "color": "#3572a5",
-   "hue": 207.32,
-   "runner": null,
    "real_template": true
   },
   {
@@ -6202,8 +6158,8 @@
   {
    "language": "Procfile",
    "layer": "core",
-   "path": "hello/core/procfile/hello.procfile",
-   "extension": ".procfile",
+   "path": "hello/core/procfile/Procfile",
+   "extension": "",
    "type": "programming",
    "color": "#3b2f63",
    "hue": 253.85,
@@ -6662,21 +6618,10 @@
    "real_template": true
   },
   {
-   "language": "Julia REPL",
-   "layer": "core",
-   "path": "hello/core/julia-repl/hello.julia_repl",
-   "extension": ".julia_repl",
-   "type": "programming",
-   "color": "#a270ba",
-   "hue": 280.54,
-   "runner": null,
-   "real_template": true
-  },
-  {
    "language": "Tor Config",
    "layer": "core",
-   "path": "hello/core/tor-config/hello.tor_config",
-   "extension": ".tor_config",
+   "path": "hello/core/tor-config/torrc",
+   "extension": "",
    "type": "data",
    "color": "#59316b",
    "hue": 281.38,
@@ -6774,8 +6719,8 @@
   {
    "language": "TextMate Properties",
    "layer": "core",
-   "path": "hello/core/textmate-properties/hello.textmate_properties",
-   "extension": ".textmate_properties",
+   "path": "hello/core/textmate-properties/.tm_properties",
+   "extension": "",
    "type": "data",
    "color": "#df66e4",
    "hue": 297.62,
@@ -6950,8 +6895,8 @@
   {
    "language": "Ant Build System",
    "layer": "core",
-   "path": "hello/core/ant-build-system/hello.ant_build_system",
-   "extension": ".ant_build_system",
+   "path": "hello/core/ant-build-system/ant.xml",
+   "extension": ".xml",
    "type": "data",
    "color": "#a9157e",
    "hue": 317.43,
@@ -7192,7 +7137,7 @@
   {
    "language": "C++",
    "layer": "core",
-   "path": "hello/core/c-1/hello.cc",
+   "path": "hello/core/c-2/hello.cc",
    "extension": ".cc",
    "type": "programming",
    "color": "#f34b7d",
@@ -7357,8 +7302,8 @@
   {
    "language": "Quake",
    "layer": "core",
-   "path": "hello/core/quake/hello.quake",
-   "extension": ".quake",
+   "path": "hello/core/quake/m3makefile",
+   "extension": "",
    "type": "programming",
    "color": "#882233",
    "hue": 350.0,
@@ -7566,8 +7511,8 @@
   {
    "language": "Gemfile.lock",
    "layer": "core",
-   "path": "hello/core/gemfile-lock/hello.gemfile_lock",
-   "extension": ".gemfile_lock",
+   "path": "hello/core/gemfile-lock/Gemfile.lock",
+   "extension": ".lock",
    "type": "data",
    "color": "#701516",
    "hue": 359.34,
@@ -27177,6 +27122,17 @@
    "real_template": false
   },
   {
+   "language": "Elvish Transcript",
+   "layer": "full",
+   "path": "hello/full/elvish-transcript/hello.elvish_transcript",
+   "extension": ".elvish_transcript",
+   "type": "programming",
+   "color": "##55BB55",
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Emails",
    "layer": "full",
    "path": "hello/full/emails/hello.emails",
@@ -39915,6 +39871,17 @@
    "real_template": false
   },
   {
+   "language": "Julia REPL",
+   "layer": "full",
+   "path": "hello/full/julia-repl/hello.julia_repl",
+   "extension": ".julia_repl",
+   "type": "programming",
+   "color": "##a270ba",
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "Julia Shell",
    "layer": "full",
    "path": "hello/full/julia-shell/hello.julia_shell",
@@ -51597,6 +51564,28 @@
    "real_template": false
   },
   {
+   "language": "OpenAPI Specification v2",
+   "layer": "full",
+   "path": "hello/full/openapi-specification-v2/hello.openapi_specification_v2",
+   "extension": ".openapi_specification_v2",
+   "type": "data",
+   "color": "##85ea2d",
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "OpenAPI Specification v3",
+   "layer": "full",
+   "path": "hello/full/openapi-specification-v3/hello.openapi_specification_v3",
+   "extension": ".openapi_specification_v3",
+   "type": "data",
+   "color": "##85ea2d",
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "OpenCog",
    "layer": "full",
    "path": "hello/full/opencog/hello.opencog",
@@ -57172,6 +57161,17 @@
    "hue": null,
    "runner": null,
    "real_template": false
+  },
+  {
+   "language": "Python console",
+   "layer": "full",
+   "path": "hello/full/python-console/hello.python_console",
+   "extension": ".python_console",
+   "type": "programming",
+   "color": "##3572A5",
+   "hue": null,
+   "runner": null,
+   "real_template": true
   },
   {
    "language": "Python Server Pages",

@@ -8,4 +8,4 @@ module hello where
 
 postulate
   String : Set
-  _≡_ : {A : Set} → A → A → Set
+  _閳摜 : {A : Set} 閳?A 閳?A 閳?Set

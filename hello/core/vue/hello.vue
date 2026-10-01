@@ -1,5 +1,5 @@
 <!--
-  note       : Linguist has no extension for this language; this file uses the canonical name as its extension so it is still counted in the bar.
+  note       : Linguist recognises this language by filename, not by extension.
 Vue - Hello World! :: RAiNBOW_Hello-World
   colour     : #41b883
   hue        : 153.3 deg
@@ -10,3 +10,29 @@ Vue - Hello World! :: RAiNBOW_Hello-World
 
 <!-- Hello World!-->
 <!-- Hello World!-->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
+<!-- rainbow-pad one segment per Linguist coloured language -->
+<!-- rainbow-pad Vue :: RAiNBOW_Hello-World -->
+<!-- rainbow-pad colour #41b883 :: padded to 100 -->
+<!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
+<!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
+<!-- rainbow-pad one segment per Linguist coloured language -->
+<!-- rainbow-pad Vue :: RAiNBOW_Hello-World -->
+<!-- rainbow-pad colour #41b883 :: padded to 100 -->
+<!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
+<!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
+<!-- rainbow-pad one segment per Linguist coloured language -->
+<!-- rainbow-pad Vue :: RAiNBOW_Hello-World -->
+<!-- rainbow-pad colour #41b883 :: padded to 100 -->
+<!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
+<!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
+<!-- rainbow-pad one segment per Linguist coloured language -->
+<!-- rainbow-pad Vue :: RAiNBOW_Hello-World -->
+<!-- rainbow-pad colour #41b883 :: padded to 100 -->
+<!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
+<!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
+<!-- rainbow-pad one segment per  -->

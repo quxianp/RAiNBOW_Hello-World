@@ -22,6 +22,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from pathlib import Path
 
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -116,6 +117,7 @@ def main() -> int:
     exclusive = {ext for ext, n in claims.items() if n == 1}
 
     records = []
+    deferred = []
     for e in colored:
         rgb = hex_to_rgb(e.get("color"))
         if not rgb:
@@ -124,6 +126,21 @@ def main() -> int:
         hue = round(h * 360.0, 2)
         slug = slugify(e["name"])
         ext = pick_extension(e, exclusive)
+        # A handful of Linguist languages have neither extensions nor filenames
+        # (Julia REPL, Python console, OpenAPI v2/v3, Elvish Transcript).  Those
+        # can never be painted on the language bar, so they are moved to the
+        # full layer instead of pretending they would show up.
+        fname = None
+        if not ext:
+            names = [f for f in (e.get("filenames") or []) if f]
+            if names:
+                # Linguist matches these by *filename*, so the file must keep
+                # that exact name (.npmrc, torrc, crontab, Procfile, ...).
+                fname = names[0]
+                ext = Path(fname).suffix
+        if not ext and not fname:
+            deferred.append(e["name"])
+            continue
         mm = merged_by_name.get(e["name"].lower(), {})
         records.append(
             {
@@ -136,25 +153,34 @@ def main() -> int:
                 "saturation": round(s, 4),
                 "lightness": round(l, 4),
                 "extension": ext,
-                "extension_exclusive": ext in exclusive,
+                "filename": fname,
+                "extension_exclusive": ext in exclusive or fname is not None,
                 "type": e.get("type"),
                 "ace_mode": e.get("ace_mode"),
                 "tm_scope": e.get("tm_scope"),
                 "interpreters": e.get("interpreters") or [],
                 "aliases": e.get("aliases") or [],
                 "all_extensions": e.get("extensions") or [],
-                "path": f"hello/core/{slug}/hello{ext or ''}",
+                "path": f"hello/core/{slug}/hello{ext}",
                 "sources": mm.get("source", ["linguist"]),
                 "is_core": True,
             }
         )
 
-    # de-duplicate slugs defensively
-    seen = Counter()
+    # de-duplicate slugs defensively (generator uses the same scheme)
+    used: set[str] = set()
     for r in records:
-        if seen[r["slug"]]:
-            r["slug"] = f"{r['slug']}-{seen[r['slug']]}"
-        seen[r["slug"]] += 1
+        base = r["slug"]
+        slug, n = base, 1
+        while slug in used:
+            slug = f"{base}-{n}"
+            n += 1
+        used.add(slug)
+        r["slug"] = slug
+        fname = r.get("filename")
+        r["path"] = (
+            f"hello/core/{slug}/{fname}" if fname else f"hello/core/{slug}/hello{r['extension']}"
+        )
 
     records.sort(key=lambda r: (r["hue"], r["lightness"], r["name"].lower()))
 
@@ -177,6 +203,7 @@ def main() -> int:
         "hue_order": "ascending HSL hue",
         "min_core": MIN_CORE,
         "max_core": MAX_CORE,
+        "deferred_to_full_layer": deferred,
         "languages": records,
     }
     (CONFIG / "rainbow_langs.json").write_text(
@@ -189,11 +216,14 @@ def main() -> int:
     buckets = Counter(r["hue_bucket"] for r in records)
     types = Counter(r["type"] for r in records)
     no_ext = [r["name"] for r in records if not r["extension"]]
+    by_name = [r["name"] for r in records if r.get("filename")]
     lines = []
     lines.append("core language selection report")
     lines.append("=" * 60)
     lines.append(f"core languages              : {n}")
     lines.append(f"target share per language   : {per:.4f} %")
+    lines.append(f"recognised by filename only : {len(by_name)}")
+    lines.append(f"deferred to full layer      : {len(deferred)} -> {', '.join(deferred)}")
     lines.append(f"languages without extension : {len(no_ext)}")
     lines.append(f"                            : {', '.join(no_ext)}")
     lines.append("")
