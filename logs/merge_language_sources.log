@@ -108,3 +108,13 @@
 [01:47:04] wrote data/merged_langs.json (7325 entries)
 [01:47:04] wrote config/all-langs.json, config/core-langs.txt (693 lines)
 [01:47:04] === merge done ===
+[02:05:57] === merge_language_sources start ===
+[02:05:57] linguist: 836 records, 694 coloured
+[02:05:57] wikipedia: 37 pages ingested
+[02:05:57] other sources: 11 ingested
+[02:05:57] builtin groups: 21
+[02:05:57] merged unique languages: 7325
+[02:05:57] core (linguist coloured) : 693
+[02:05:57] wrote data/merged_langs.json (7325 entries)
+[02:05:57] wrote config/all-langs.json, config/core-langs.txt (693 lines)
+[02:05:57] === merge done ===

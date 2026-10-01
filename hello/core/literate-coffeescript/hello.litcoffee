@@ -8,3 +8,31 @@
 
 # Hello World!
 # Hello World!
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+# rainbow-pad colour #244776 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+# rainbow-pad colour #244776 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+# rainbow-pad colour #244776 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+# rainbow-pad colour #244776 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+            

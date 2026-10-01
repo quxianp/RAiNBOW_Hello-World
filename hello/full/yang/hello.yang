@@ -1,0 +1,11 @@
+// YANG - Hello World! :: RAiNBOW_Hello-World
+//   colour     : not assigned by Linguist
+//   layer      : full (byte-balanced rainbow bar)
+//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+
+module hello {
+  namespace "urn:example:hello";
+  prefix rrb;
+  container hello { leaf world { type string; } }
+}

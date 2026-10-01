@@ -1,0 +1,14 @@
+// MASM - Hello World! :: RAiNBOW_Hello-World
+//   colour     : not assigned by Linguist
+//   layer      : full (byte-balanced rainbow bar)
+//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+
+.data
+msg db "Hello World!",13,10
+.code
+main proc
+  mov ax, 4C00h
+  int 21h
+main endp
+end main

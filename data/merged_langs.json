@@ -8230,7 +8230,7 @@
  },
  {
   "name": "Ast*R***",
-  "slug": "ast*r***",
+  "slug": "ast-r",
   "key": "ast*r***",
   "aliases": [],
   "extensions": [],
@@ -14795,7 +14795,7 @@
  },
  {
   "name": "Brainf*ck",
-  "slug": "brainf*ck",
+  "slug": "brainf-ck",
   "key": "brainf*ck",
   "aliases": [],
   "extensions": [],
@@ -31512,7 +31512,7 @@
  },
  {
   "name": "Dumbf*ck",
-  "slug": "dumbf*ck",
+  "slug": "dumbf-ck",
   "key": "dumbf*ck",
   "aliases": [],
   "extensions": [],
@@ -36630,7 +36630,7 @@
  },
  {
   "name": "F*",
-  "slug": "f*",
+  "slug": "f",
   "key": "f*",
   "aliases": [
    "fstar"
@@ -52486,7 +52486,7 @@
  },
  {
   "name": "int**",
-  "slug": "int**",
+  "slug": "int",
   "key": "int**",
   "aliases": [],
   "extensions": [],
@@ -80205,7 +80205,7 @@
  },
  {
   "name": "Pepp*erdine",
-  "slug": "pepp*erdine",
+  "slug": "pepp-erdine",
   "key": "pepp*erdine",
   "aliases": [],
   "extensions": [],
@@ -84604,7 +84604,7 @@
  },
  {
   "name": "Pro*C",
-  "slug": "pro*c",
+  "slug": "pro-c",
   "key": "pro*c",
   "aliases": [],
   "extensions": [

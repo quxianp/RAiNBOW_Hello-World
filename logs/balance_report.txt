@@ -175,7 +175,7 @@ Altium Designer                   hello/core/altium-designer/hello.OutJob       
 Fluent                            hello/core/fluent/hello.ftl                     2048    0.1451  -0.0000
 LOLCODE                           hello/core/lolcode/hello.lol                    2048    0.1451  -0.0000
 Filebench WML                     hello/core/filebench-wml/hello.f                2048    0.1451  -0.0000
-Q#                                hello/core/q/hello.qs                           2048    0.1451  -0.0000
+Q#                                hello/core/q#/hello.qs                          2048    0.1451  -0.0000
 Nim                               hello/core/nim/hello.nim                        2048    0.1451  -0.0000
 Portugol                          hello/core/portugol/hello.por                   2048    0.1451  -0.0000
 Pip Requirements                  hello/core/pip-requirements/dev-requirement     2048    0.1451  -0.0000
@@ -193,7 +193,7 @@ LabVIEW                           hello/core/labview/hello.lvlib                
 DenizenScript                     hello/core/denizenscript/hello.dsc              2048    0.1451  -0.0000
 Dotenv                            hello/core/dotenv/hello.env                     2048    0.1451  -0.0000
 JavaScript                        hello/core/javascript/hello.js                  2048    0.1451  -0.0000
-JavaScript+ERB                    hello/core/javascript-erb/hello.js.erb          2048    0.1451  -0.0000
+JavaScript+ERB                    hello/core/javascript+erb/hello.js.erb          2048    0.1451  -0.0000
 World of Warcraft Addon Data      hello/core/world-of-warcraft-addon-data/hel     2048    0.1451  -0.0000
 Dafny                             hello/core/dafny/hello.dfy                      2048    0.1451  -0.0000
 JFlex                             hello/core/jflex/hello.flex                     2048    0.1451  -0.0000
@@ -269,7 +269,7 @@ Elvish                            hello/core/elvish/hello.elv                   
 FIRRTL                            hello/core/firrtl/hello.fir                     2048    0.1451  -0.0000
 KoLmafia ASH                      hello/core/kolmafia-ash/hello.ash               2048    0.1451  -0.0000
 Meson                             hello/core/meson/meson.build                    2048    0.1451  -0.0000
-OMNeT++ MSG                       hello/core/omnet-msg/hello.msg                  2048    0.1451  -0.0000
+OMNeT++ MSG                       hello/core/omnet++-msg/hello.msg                2048    0.1451  -0.0000
 Regular Expression                hello/core/regular-expression/hello.regex       2048    0.1451  -0.0000
 SRecode Template                  hello/core/srecode-template/hello.srt           2048    0.1451  -0.0000
 Yacc                              hello/core/yacc/hello.y                         2048    0.1451  -0.0000
@@ -371,7 +371,7 @@ Elm                               hello/core/elm/hello.elm                      
 Perl                              hello/core/perl/hello.ph                        2048    0.1451  -0.0000
 Cypher                            hello/core/cypher/hello.cyp                     2048    0.1451  -0.0000
 AngelScript                       hello/core/angelscript/hello.angelscript        2048    0.1451  -0.0000
-OMNeT++ NED                       hello/core/omnet-ned/hello.ned                  2048    0.1451  -0.0000
+OMNeT++ NED                       hello/core/omnet++-ned/hello.ned                2048    0.1451  -0.0000
 Apex                              hello/core/apex/hello.apex                      2048    0.1451  -0.0000
 Windows Registry Entries          hello/core/windows-registry-entries/hello.r     2048    0.1451  -0.0000
 Dockerfile                        hello/core/dockerfile/hello.dockerfile          2048    0.1451  -0.0000
@@ -498,7 +498,7 @@ CUE                               hello/core/cue/hello.cue                      
 Inno Setup                        hello/core/inno-setup/hello.iss                 2048    0.1451  -0.0000
 C3                                hello/core/c3/hello.c3                          2048    0.1451  -0.0000
 PureScript                        hello/core/purescript/hello.purs                2048    0.1451  -0.0000
-q                                 hello/core/q-1/hello.q                          2048    0.1451  -0.0000
+q                                 hello/core/q/hello.q                            2048    0.1451  -0.0000
 Nasal                             hello/core/nasal/hello.nas                      2048    0.1451  -0.0000
 ImHex Pattern Language            hello/core/imhex-pattern-language/hello.hex     2048    0.1451  -0.0000
 Racket                            hello/core/racket/hello.rkt                     2048    0.1451  -0.0000
@@ -515,8 +515,8 @@ KiCad Legacy Layout               hello/core/kicad-legacy-layout/hello.brd      
 KiCad Schematic                   hello/core/kicad-schematic/hello.kicad_sch      2048    0.1451  -0.0000
 Web Ontology Language             hello/core/web-ontology-language/hello.owl      2048    0.1451  -0.0000
 Scheme                            hello/core/scheme/hello.ss                      2048    0.1451  -0.0000
-NetLinx+ERB                       hello/core/netlinx-erb/hello.axs.erb            2048    0.1451  -0.0000
-HTML+PHP                          hello/core/html-php/hello.phtml                 2048    0.1451  -0.0000
+NetLinx+ERB                       hello/core/netlinx+erb/hello.axs.erb            2048    0.1451  -0.0000
+HTML+PHP                          hello/core/html+php/hello.phtml                 2048    0.1451  -0.0000
 PHP                               hello/core/php/hello.aw                         2048    0.1451  -0.0000
 X10                               hello/core/x10/hello.x10                        2048    0.1451  -0.0000
 mIRC Script                       hello/core/mirc-script/hello.mrc                2048    0.1451  -0.0000
@@ -546,7 +546,7 @@ Nix                               hello/core/nix/hello.nix                      
 Raku                              hello/core/raku/hello.p6                        2048    0.1451  -0.0000
 Terra                             hello/core/terra/hello.t                        2048    0.1451  -0.0000
 UrWeb                             hello/core/urweb/hello.ur                       2048    0.1451  -0.0000
-Objective-C++                     hello/core/objective-c-1/hello.mm               2048    0.1451  -0.0000
+Objective-C++                     hello/core/objective-c++/hello.mm               2048    0.1451  -0.0000
 Nemerle                           hello/core/nemerle/hello.n                      2048    0.1451  -0.0000
 Grace                             hello/core/grace/hello.grace                    2048    0.1451  -0.0000
 PDDL                              hello/core/pddl/hello.pddl                      2048    0.1451  -0.0000
@@ -561,9 +561,9 @@ MeTTa                             hello/core/metta/hello.metta                  
 NumPy                             hello/core/numpy/hello.numpy                    2048    0.1451  -0.0000
 VBA                               hello/core/vba/hello.bas                        2048    0.1451  -0.0000
 XQuery                            hello/core/xquery/hello.xq                      2048    0.1451  -0.0000
-HTML+Razor                        hello/core/html-razor/hello.razor               2049    0.1452  +0.0001
+HTML+Razor                        hello/core/html+razor/hello.razor               2049    0.1452  +0.0001
 Simple File Verification          hello/core/simple-file-verification/hello.s     2048    0.1451  -0.0000
-C#                                hello/core/c-1/hello.csx                        2048    0.1451  -0.0000
+C#                                hello/core/c#/hello.csx                         2048    0.1451  -0.0000
 Omgrofl                           hello/core/omgrofl/hello.omgrofl                2048    0.1451  -0.0000
 Classic ASP                       hello/core/classic-asp/hello.asp                2048    0.1451  -0.0000
 IL Assembly                       hello/core/il-assembly/hello.il                 2048    0.1451  -0.0000
@@ -582,7 +582,7 @@ Cabal Config                      hello/core/cabal-config/hello.cabal           
 1C Enterprise                     hello/core/1c-enterprise/hello.os               2048    0.1451  -0.0000
 TypeSpec                          hello/core/typespec/hello.tsp                   2048    0.1451  -0.0000
 Genero 4gl                        hello/core/genero-4gl/hello.4gl                 2048    0.1451  -0.0000
-HTML+ECR                          hello/core/html-ecr/hello.ecr                   2048    0.1451  -0.0000
+HTML+ECR                          hello/core/html+ecr/hello.ecr                   2048    0.1451  -0.0000
 Terraform Template                hello/core/terraform-template/hello.tftpl       2048    0.1451  -0.0000
 Vala                              hello/core/vala/hello.vala                      2048    0.1451  -0.0000
 HCL                               hello/core/hcl/hello.tf                         2048    0.1451  -0.0000
@@ -604,13 +604,13 @@ Shen                              hello/core/shen/hello.shen                    
 Arc                               hello/core/arc/hello.arc                        2048    0.1451  -0.0000
 Visual Basic .NET                 hello/core/visual-basic-net/hello.vb            2048    0.1451  -0.0000
 TLA                               hello/core/tla/hello.tla                        2048    0.1451  -0.0000
-F#                                hello/core/f/hello.fsi                          2049    0.1452  +0.0001
+F#                                hello/core/f#/hello.fsi                         2049    0.1452  +0.0001
 G-code                            hello/core/g-code/hello.cnc                     2048    0.1451  -0.0000
 Uno                               hello/core/uno/hello.uno                        2048    0.1451  -0.0000
 LookML                            hello/core/lookml/hello.lkml                    2048    0.1451  -0.0000
 Julia                             hello/core/julia/hello.jl                       2048    0.1451  -0.0000
 Tor Config                        hello/core/tor-config/torrc                     2048    0.1451  -0.0000
-HTML+EEX                          hello/core/html-eex/hello.heex                  2048    0.1451  -0.0000
+HTML+EEX                          hello/core/html+eex/hello.heex                  2048    0.1451  -0.0000
 Lambdapi                          hello/core/lambdapi/hello.lp                    2048    0.1451  -0.0000
 Emacs Lisp                        hello/core/emacs-lisp/hello.el                  2048    0.1451  -0.0000
 Dylan                             hello/core/dylan/hello.dyl                      2048    0.1451  -0.0000
@@ -656,7 +656,7 @@ MoonScript                        hello/core/moonscript/hello.moon              
 Objective-J                       hello/core/objective-j/hello.sj                 2048    0.1451  -0.0000
 Riot                              hello/core/riot/hello.riot                      2048    0.1451  -0.0000
 Futhark                           hello/core/futhark/hello.fut                    2048    0.1451  -0.0000
-C++                               hello/core/c-2/hello.cc                         2048    0.1451  -0.0000
+C++                               hello/core/c++/hello.cc                         2048    0.1451  -0.0000
 Mermaid                           hello/core/mermaid/hello.mmd                    2048    0.1451  -0.0000
 Prolog                            hello/core/prolog/hello.yap                     2048    0.1451  -0.0000
 Beef                              hello/core/beef/hello.bf                        2048    0.1451  -0.0000
@@ -683,7 +683,7 @@ Scilab                            hello/core/scilab/hello.sci                   
 mcfunction                        hello/core/mcfunction/hello.mcfunction          2048    0.1451  -0.0000
 EditorConfig                      hello/core/editorconfig/hello.editorconfig      2048    0.1451  -0.0000
 D                                 hello/core/d/hello.di                           2048    0.1451  -0.0000
-F*                                hello/core/f-1/hello.fst                        2048    0.1451  -0.0000
+F*                                hello/core/f/hello.fst                          2048    0.1451  -0.0000
 RouterOS Script                   hello/core/routeros-script/hello.rsc            2048    0.1451  -0.0000
 YAML                              hello/core/yaml/hello.mir                       2048    0.1451  -0.0000
 ApacheConf                        hello/core/apacheconf/hello.apacheconf          2048    0.1451  -0.0000
@@ -691,7 +691,7 @@ Thrift                            hello/core/thrift/hello.thrift                
 Scaml                             hello/core/scaml/hello.scaml                    2048    0.1451  -0.0000
 UnrealScript                      hello/core/unrealscript/hello.uc                2048    0.1451  -0.0000
 Gemfile.lock                      hello/core/gemfile-lock/Gemfile.lock            2048    0.1451  -0.0000
-HTML+ERB                          hello/core/html-erb/hello.erb                   2048    0.1451  -0.0000
+HTML+ERB                          hello/core/html+erb/hello.erb                   2048    0.1451  -0.0000
 RBS                               hello/core/rbs/hello.rbs                        2048    0.1451  -0.0000
 RDoc                              hello/core/rdoc/hello.rdoc                      2048    0.1451  -0.0000
 Ruby                              hello/core/ruby/hello.rb                        2048    0.1451  -0.0000

@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-01T17:47:04Z",
+ "generated": "2026-10-01T18:05:57Z",
  "total": 7325,
  "core": 693,
  "target_total": 3000,
  "stats": {
-  "generated": "2026-10-01T17:47:04Z",
+  "generated": "2026-10-01T18:05:57Z",
   "total_unique": 7325,
   "core_colored": 693,
   "linguist_total": 836,
@@ -13055,7 +13055,7 @@
   },
   {
    "name": "Ast*R***",
-   "slug": "ast*r***",
+   "slug": "ast-r",
    "extensions": [],
    "color": null,
    "type": null,
@@ -17477,7 +17477,7 @@
   },
   {
    "name": "Brainf*ck",
-   "slug": "brainf*ck",
+   "slug": "brainf-ck",
    "extensions": [],
    "color": null,
    "type": null,
@@ -28818,7 +28818,7 @@
   },
   {
    "name": "Dumbf*ck",
-   "slug": "dumbf*ck",
+   "slug": "dumbf-ck",
    "extensions": [],
    "color": null,
    "type": null,
@@ -32287,7 +32287,7 @@
   },
   {
    "name": "F*",
-   "slug": "f*",
+   "slug": "f",
    "extensions": [
     ".fst",
     ".fsti"
@@ -43011,7 +43011,7 @@
   },
   {
    "name": "int**",
-   "slug": "int**",
+   "slug": "int",
    "extensions": [],
    "color": null,
    "type": null,
@@ -61777,7 +61777,7 @@
   },
   {
    "name": "Pepp*erdine",
-   "slug": "pepp*erdine",
+   "slug": "pepp-erdine",
    "extensions": [],
    "color": null,
    "type": null,
@@ -64742,7 +64742,7 @@
   },
   {
    "name": "Pro*C",
-   "slug": "pro*c",
+   "slug": "pro-c",
    "extensions": [
     ".pc"
    ],

@@ -1,0 +1,19 @@
+// x86-64 Assembly - Hello World! :: RAiNBOW_Hello-World
+//   colour     : not assigned by Linguist
+//   layer      : full (byte-balanced rainbow bar)
+//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+
+section .data
+  msg db "Hello World!", 10
+section .text
+  global _start
+_start:
+  mov rax, 1
+  mov rdi, 1
+  lea rsi, [rel msg]
+  mov rdx, 13
+  syscall
+  mov rax, 60
+  xor rdi, rdi
+  syscall

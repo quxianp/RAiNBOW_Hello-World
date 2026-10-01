@@ -202,11 +202,11 @@ RESERVED = {
 
 
 def slugify(name: str) -> str:
-    """Filesystem-safe slug that keeps non-Latin scripts (仓颉, 文言, 易语言).
+    """Filesystem-safe slug that keeps non-Latin scripts (仓颉, 文言, 易语言)."""
+    return re.sub(r"-{2,}", "-", _slug_raw(name))[:80] or "lang"
 
-    Slashes, backslashes and Windows device names are avoided so the result is
-    usable as a directory name on every platform.
-    """
+
+def _slug_raw(name: str) -> str:
     s = unicodedata.normalize("NFKC", name).lower().strip()
     out = []
     for ch in s:

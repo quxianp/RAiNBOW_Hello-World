@@ -20,6 +20,7 @@ import colorsys
 import json
 import re
 import sys
+import unicodedata
 from collections import Counter, defaultdict
 from pathlib import Path
 from pathlib import Path
@@ -98,7 +99,7 @@ def slugify(name: str) -> str:
     s = unicodedata.normalize("NFKC", name).lower().strip()
     out = []
     for ch in s:
-        if ch.isalnum() or ch in "+#*":
+        if ch.isalnum() or ch in "+#":
             out.append(ch)
         else:
             out.append("-")

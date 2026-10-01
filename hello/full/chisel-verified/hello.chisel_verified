@@ -1,0 +1,11 @@
+// Chisel Verified - Hello World! :: RAiNBOW_Hello-World
+//   colour     : not assigned by Linguist
+//   layer      : full (byte-balanced rainbow bar)
+//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+
+import chisel3._
+
+class Hello extends Module {
+  def hello = Module(new Bundle { val out = IO(Output(Bool())) })
+}
