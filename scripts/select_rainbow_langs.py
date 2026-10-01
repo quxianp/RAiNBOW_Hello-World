@@ -1,0 +1,226 @@
+#!/usr/bin/env python3
+"""Pick the rainbow core layer.
+
+Core layer = *every* GitHub Linguist language that declares a `color`.
+Those are the only languages GitHub will paint on the repository language bar,
+so they all go into hello/core/ and every one of them gets an equal share of
+the bytes.  The list is ordered by hue so the resulting bar reads
+red -> orange -> yellow -> green -> cyan -> blue -> purple -> pink -> brown -> grey.
+
+Outputs
+-------
+config/rainbow_langs.json   ordered core records (hue, colour, extension, path)
+config/core-langs.txt       plain name list
+logs/rainbow_selection.txt  human readable report + hue histogram
+"""
+
+from __future__ import annotations
+
+import colorsys
+import json
+import re
+import sys
+from collections import Counter, defaultdict
+from pathlib import Path
+
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data"
+CONFIG = ROOT / "config"
+LOGS = ROOT / "logs"
+for d in (DATA, CONFIG, LOGS):
+    d.mkdir(parents=True, exist_ok=True)
+
+MIN_CORE = 600
+MAX_CORE = 800
+
+HUE_BUCKETS = [
+    (0, "red"), (15, "red-orange"), (30, "orange"), (45, "amber"),
+    (60, "yellow"), (80, "yellow-green"), (100, "green"), (140, "spring-green"),
+    (165, "green-cyan"), (185, "cyan"), (200, "cyan-blue"), (220, "azure"),
+    (245, "blue"), (265, "violet"), (285, "purple"), (305, "magenta"),
+    (325, "pink"), (345, "rose"), (360, "red"),
+]
+
+# extensions that Linguist maps to several languages at once -> de-prioritise
+AMBIGUOUS = {
+    ".h": "C++/Objective-C headers", ".m": "Objective-C/Matlab/Octave/Mercury",
+    ".inc": "many languages", ".t": "Perl/Tcl/Turing", ".l": "Lex/Common Lisp",
+    ".cls": "TeX/Visual Basic class/Apex", ".bas": "BASIC dialects",
+    ".sql": "SQL dialects", ".pl": "Prolog/Perl", ".sc": "Scala/Scilab",
+    ".g": "Graph/GNU/Golo", ".r": "R/Rebol/Rexx", ".p": "Pascal/Pike/Prolog",
+    ".s": "Assembly/Scheme/Smalltalk", ".f": "Fortran/FORTRAN/Futhark",
+    ".d": "D/DTrace", ".es": "JavaScript/EJS", ".mod": "Go/Modula",
+    ".bs": "Brainfuck/Boo", ".nl": "Logtalk/Nix", ".pde": "Processing/PDE",
+    ".gs": "Ghostscript/Grammar", ".fcgi": "many (CGI)", ".ncl": "NetCDF/NCL",
+}
+
+
+def load(path: Path, default=None):
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"! cannot read {path}: {exc}", file=sys.stderr)
+        return default
+
+
+def hex_to_rgb(value: str):
+    v = (value or "").lstrip("#").strip()
+    if len(v) == 3:
+        v = "".join(c * 2 for c in v)
+    if len(v) != 6 or not re.fullmatch(r"[0-9a-fA-F]{6}", v):
+        return None
+    return tuple(int(v[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def classify(hue: float) -> str:
+    for edge, label in HUE_BUCKETS:
+        if hue < edge:
+            return label
+    return "red"
+
+
+def slugify(name: str) -> str:
+    s = re.sub(r"[^A-Za-z0-9]+", "-", name).strip("-").lower()
+    return s or "lang"
+
+
+def pick_extension(entry: dict, exclusive: set) -> str:
+    exts = [e for e in (entry.get("extensions") or []) if e]
+    if not exts:
+        return ""
+    # prefer an extension no other core language claims, then the shortest
+    exts = sorted(exts, key=lambda e: (e not in exclusive, len(e)))
+    return exts[0]
+
+
+def main() -> int:
+    linguist = load(DATA / "linguist.json", []) or []
+    merged = load(DATA / "merged_langs.json", []) or []
+    merged_by_name = {m["name"].lower(): m for m in merged}
+
+    colored = [e for e in linguist if e.get("color")]
+    print(f"linguist languages with a colour: {len(colored)}")
+
+    # Which extensions are claimed by exactly one coloured language?
+    claims: dict[str, int] = defaultdict(int)
+    for e in colored:
+        for ext in e.get("extensions") or []:
+            claims[ext] += 1
+    exclusive = {ext for ext, n in claims.items() if n == 1}
+
+    records = []
+    for e in colored:
+        rgb = hex_to_rgb(e.get("color"))
+        if not rgb:
+            continue
+        h, l, s = colorsys.rgb_to_hls(*[c / 255.0 for c in rgb])
+        hue = round(h * 360.0, 2)
+        slug = slugify(e["name"])
+        ext = pick_extension(e, exclusive)
+        mm = merged_by_name.get(e["name"].lower(), {})
+        records.append(
+            {
+                "name": e["name"],
+                "slug": slug,
+                "color": (e["color"] or "").lstrip("#").lower(),
+                "rgb": list(rgb),
+                "hue": hue,
+                "hue_bucket": classify(hue),
+                "saturation": round(s, 4),
+                "lightness": round(l, 4),
+                "extension": ext,
+                "extension_exclusive": ext in exclusive,
+                "type": e.get("type"),
+                "ace_mode": e.get("ace_mode"),
+                "tm_scope": e.get("tm_scope"),
+                "interpreters": e.get("interpreters") or [],
+                "aliases": e.get("aliases") or [],
+                "all_extensions": e.get("extensions") or [],
+                "path": f"hello/core/{slug}/hello{ext or ''}",
+                "sources": mm.get("source", ["linguist"]),
+                "is_core": True,
+            }
+        )
+
+    # de-duplicate slugs defensively
+    seen = Counter()
+    for r in records:
+        if seen[r["slug"]]:
+            r["slug"] = f"{r['slug']}-{seen[r['slug']]}"
+        seen[r["slug"]] += 1
+
+    records.sort(key=lambda r: (r["hue"], r["lightness"], r["name"].lower()))
+
+    n = len(records)
+    if n > MAX_CORE:
+        print(f"! {n} > {MAX_CORE}: trimming the least saturated entries")
+        records.sort(key=lambda r: (r["hue"], -r["saturation"]))
+        records = records[:MAX_CORE]
+        records.sort(key=lambda r: (r["hue"], r["lightness"], r["name"].lower()))
+        n = len(records)
+
+    per = 100.0 / n if n else 0.0
+    for r in records:
+        r["target_percent"] = round(per, 6)
+
+    payload = {
+        "generated_by": "scripts/select_rainbow_langs.py",
+        "core_count": n,
+        "target_percent_each": round(per, 6),
+        "hue_order": "ascending HSL hue",
+        "min_core": MIN_CORE,
+        "max_core": MAX_CORE,
+        "languages": records,
+    }
+    (CONFIG / "rainbow_langs.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
+    )
+    (CONFIG / "core-langs.txt").write_text(
+        "\n".join(r["name"] for r in records) + "\n", encoding="utf-8"
+    )
+
+    buckets = Counter(r["hue_bucket"] for r in records)
+    types = Counter(r["type"] for r in records)
+    no_ext = [r["name"] for r in records if not r["extension"]]
+    lines = []
+    lines.append("core language selection report")
+    lines.append("=" * 60)
+    lines.append(f"core languages              : {n}")
+    lines.append(f"target share per language   : {per:.4f} %")
+    lines.append(f"languages without extension : {len(no_ext)}")
+    lines.append(f"                            : {', '.join(no_ext)}")
+    lines.append("")
+    lines.append("hue buckets (18 named slices of the colour wheel)")
+    for edge, label in HUE_BUCKETS[:-1]:
+        lines.append(f"  {label:<16} {buckets.get(label, 0):>4}")
+    lines.append("")
+    lines.append("linguist types")
+    for k, v in types.most_common():
+        lines.append(f"  {str(k):<16} {v:>4}")
+    lines.append("")
+    lines.append("first 20 by hue (start of the bar)")
+    for r in records[:20]:
+        lines.append(f"  {r['color']}  hue={r['hue']:>6.2f}  {r['name']}")
+    lines.append("")
+    lines.append("last 20 by hue (end of the bar)")
+    for r in records[-20:]:
+        lines.append(f"  {r['color']}  hue={r['hue']:>6.2f}  {r['name']}")
+    report = "\n".join(lines) + "\n"
+    (LOGS / "rainbow_selection.txt").write_text(report, encoding="utf-8")
+    print(report)
+    print(f"wrote config/rainbow_langs.json ({n} core languages)")
+    if n < MIN_CORE:
+        print(f"! only {n} core languages (< {MIN_CORE})")
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

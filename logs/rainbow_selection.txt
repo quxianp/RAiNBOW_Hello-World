@@ -1,0 +1,76 @@
+core language selection report
+============================================================
+core languages              : 694
+target share per language   : 0.1441 %
+languages without extension : 35
+                            : NPM Config, Git Attributes, Git Commit, Git Revision List, Dune, JAR Manifest, Cloud Firestore Security Rules, crontab, Pip Requirements, Browserslist, Isabelle ROOT, ShellCheck Config, OpenAPI Specification v2, OpenAPI Specification v3, Option List, Meson, Elvish Transcript, Singularity, Xmake, Hosts File, Earthly, Go Checksums, Go Module, Go Workspace, BIRD2, Alpine Abuild, Record Jar, Python console, Procfile, Julia REPL, Tor Config, TextMate Properties, Ant Build System, Quake, Gemfile.lock
+
+hue buckets (18 named slices of the colour wheel)
+  red                36
+  red-orange         80
+  orange             35
+  amber              49
+  yellow             27
+  yellow-green       26
+  green              25
+  spring-green       35
+  green-cyan         30
+  cyan               29
+  cyan-blue          59
+  azure              96
+  blue               57
+  violet             28
+  purple             33
+  magenta            12
+  pink               17
+  rose               20
+
+linguist types
+  programming       503
+  data              113
+  markup             67
+  prose              11
+
+first 20 by hue (start of the bar)
+  000000  hue=  0.00  Ignore List
+  220000  hue=  0.00  YARA
+  141414  hue=  0.00  reStructuredText
+  1a1a1a  hue=  0.00  Csound
+  1a1a1a  hue=  0.00  Csound Document
+  1a1a1a  hue=  0.00  Csound Score
+  1f1f1f  hue=  0.00  Volt
+  222222  hue=  0.00  Carbon
+  292929  hue=  0.00  JSON
+  292929  hue=  0.00  JSON with Comments
+  2b2b2b  hue=  0.00  Slim
+  333333  hue=  0.00  Talon
+  383838  hue=  0.00  Wren
+  3f3f3f  hue=  0.00  SQF
+  800000  hue=  0.00  Adblock Filter List
+  800000  hue=  0.00  Squirrel
+  990000  hue=  0.00  Nearley
+  9e0101  hue=  0.00  SubRip Text
+  555555  hue=  0.00  C
+  b30000  hue=  0.00  Idris
+
+last 20 by hue (end of the bar)
+  ff6375  hue=353.08  NetLogo
+  de1d31  hue=353.78  Modelica
+  ca0f21  hue=354.22  Scilab
+  e22837  hue=355.16  mcfunction
+  fff1f2  hue=355.71  EditorConfig
+  ba595e  hue=356.91  D
+  572e30  hue=357.07  F*
+  de3941  hue=357.09  RouterOS Script
+  cb171e  hue=357.67  YAML
+  d12127  hue=357.95  ApacheConf
+  d12127  hue=357.95  Thrift
+  bd181a  hue=359.27  Scaml
+  a54c4d  hue=359.33  UnrealScript
+  701516  hue=359.34  Gemfile.lock
+  701516  hue=359.34  HTML+ERB
+  701516  hue=359.34  RBS
+  701516  hue=359.34  RDoc
+  701516  hue=359.34  Ruby
+  a23738  hue=359.44  Wollok
+  ed5051  hue=359.62  ReScript

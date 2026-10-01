@@ -1,0 +1,15 @@
+* linguist-vendored
+/hello/core/** -linguist-vendored
+/hello/full/** linguist-vendored
+README.md linguist-documentation
+run.sh linguist-documentation
+install_deps.sh linguist-documentation
+demo.tape linguist-documentation
+LICENSE linguist-documentation
+scripts/** linguist-documentation
+config/** linguist-documentation
+data/** linguist-documentation
+logs/** linguist-documentation
+assets/** linguist-documentation
+.github/** linguist-documentation
+*.min.js linguist-generated

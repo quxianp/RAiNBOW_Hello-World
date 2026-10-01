@@ -1,0 +1,70 @@
+[00:18:06] === merge_language_sources start ===
+[00:18:06] linguist: 836 records, 694 coloured
+[00:18:06] wikipedia: 37 pages ingested
+[00:18:06] other sources: 14 ingested
+[00:18:06] builtin groups: 18
+[00:18:06] merged unique languages: 9896
+[00:18:06] core (linguist coloured) : 683
+[00:18:06] wrote data/merged_langs.json (9896 entries)
+[00:18:06] wrote config/all-langs.json, config/core-langs.txt (683 lines)
+[00:18:06] === merge done ===
+[00:42:52] === merge_language_sources start ===
+[00:42:52] linguist: 836 records, 694 coloured
+[00:42:52] wikipedia: 37 pages ingested
+[00:42:52] other sources: 11 ingested
+[00:42:52] builtin groups: 18
+[00:42:52] merged unique languages: 7263
+[00:42:52] core (linguist coloured) : 688
+[00:42:52] wrote data/merged_langs.json (7263 entries)
+[00:42:52] wrote config/all-langs.json, config/core-langs.txt (688 lines)
+[00:42:52] === merge done ===
+[00:43:46] === merge_language_sources start ===
+[00:43:46] linguist: 836 records, 694 coloured
+[00:43:46] wikipedia: 37 pages ingested
+[00:43:46] other sources: 11 ingested
+[00:43:46] builtin groups: 18
+[00:43:46] merged unique languages: 7167
+[00:43:46] core (linguist coloured) : 688
+[00:43:46] wrote data/merged_langs.json (7167 entries)
+[00:43:46] wrote config/all-langs.json, config/core-langs.txt (688 lines)
+[00:43:46] === merge done ===
+[01:02:13] === merge_language_sources start ===
+[01:02:13] linguist: 836 records, 694 coloured
+[01:02:13] wikipedia: 37 pages ingested
+[01:02:13] other sources: 11 ingested
+[01:02:13] builtin groups: 18
+[01:02:13] merged unique languages: 7095
+[01:02:13] core (linguist coloured) : 688
+[01:02:13] wrote data/merged_langs.json (7095 entries)
+[01:02:13] wrote config/all-langs.json, config/core-langs.txt (688 lines)
+[01:02:13] === merge done ===
+[01:04:10] === merge_language_sources start ===
+[01:04:10] linguist: 836 records, 694 coloured
+[01:04:10] wikipedia: 37 pages ingested
+[01:04:10] other sources: 11 ingested
+[01:04:10] builtin groups: 18
+[01:04:10] merged unique languages: 7095
+[01:04:10] core (linguist coloured) : 688
+[01:04:10] wrote data/merged_langs.json (7095 entries)
+[01:04:10] wrote config/all-langs.json, config/core-langs.txt (688 lines)
+[01:04:10] === merge done ===
+[01:04:52] === merge_language_sources start ===
+[01:04:52] linguist: 836 records, 694 coloured
+[01:04:52] wikipedia: 37 pages ingested
+[01:04:52] other sources: 11 ingested
+[01:04:52] builtin groups: 18
+[01:04:52] merged unique languages: 7095
+[01:04:52] core (linguist coloured) : 688
+[01:04:52] wrote data/merged_langs.json (7095 entries)
+[01:04:52] wrote config/all-langs.json, config/core-langs.txt (688 lines)
+[01:04:52] === merge done ===
+[01:06:19] === merge_language_sources start ===
+[01:06:19] linguist: 836 records, 694 coloured
+[01:06:19] wikipedia: 37 pages ingested
+[01:06:19] other sources: 11 ingested
+[01:06:19] builtin groups: 18
+[01:06:19] merged unique languages: 7105
+[01:06:19] core (linguist coloured) : 693
+[01:06:19] wrote data/merged_langs.json (7105 entries)
+[01:06:19] wrote config/all-langs.json, config/core-langs.txt (693 lines)
+[01:06:19] === merge done ===

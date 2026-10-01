@@ -1,0 +1,263 @@
+[00:09:14] auto-detected WinINET proxy 127.0.0.1:10818
+[00:09:14] === fetch_languages start ===
+[00:09:14] wrote data\builtin_langs.json (23146 bytes)
+[00:09:14] builtin fallback inventory: 1252 unique names across 18 groups
+[00:09:16] wrote data\linguist.json (371419 bytes)
+[00:09:16] linguist: 836 languages, 694 with color
+[00:09:18] wikipedia: List_of_programming_languages -> 835 candidates
+[00:09:19] wikipedia: List_of_programming_languages_by_type -> 1395 candidates
+[00:09:21] wikipedia: List_of_esoteric_programming_languages -> 1395 candidates
+[00:09:22] wikipedia: List_of_markup_languages -> 96 candidates
+[00:09:23] wikipedia: List_of_query_languages -> 446 candidates
+[00:09:24]   GET https://en.wikipedia.org/wiki/List_of_configuration_languages attempt 1/2 failed: HTTP Error 404: Not Found
+[00:09:27]   GET https://en.wikipedia.org/wiki/List_of_configuration_languages attempt 2/2 failed: HTTP Error 404: Not Found
+[00:09:31] wikipedia: List_of_configuration_languages unavailable
+[00:09:32]   GET https://en.wikipedia.org/wiki/List_of_data_serialization_formats attempt 1/2 failed: HTTP Error 404: Not Found
+[00:09:35]   GET https://en.wikipedia.org/wiki/List_of_data_serialization_formats attempt 2/2 failed: HTTP Error 404: Not Found
+[00:09:39] wikipedia: List_of_data_serialization_formats unavailable
+[00:09:40] wikipedia: List_of_stylesheet_languages -> 77 candidates
+[00:09:41]   GET https://en.wikipedia.org/wiki/List_of_template_engines attempt 1/2 failed: HTTP Error 404: Not Found
+[00:09:44]   GET https://en.wikipedia.org/wiki/List_of_template_engines attempt 2/2 failed: HTTP Error 404: Not Found
+[00:09:48] wikipedia: List_of_template_engines unavailable
+[00:09:49]   GET https://en.wikipedia.org/wiki/List_of_programming_languages_used_in_education attempt 1/2 failed: HTTP Error 404: Not Found
+[00:09:52]   GET https://en.wikipedia.org/wiki/List_of_programming_languages_used_in_education attempt 2/2 failed: HTTP Error 404: Not Found
+[00:09:56] wikipedia: List_of_programming_languages_used_in_education unavailable
+[00:09:57] wikipedia: List_of_hardware_description_languages -> 481 candidates
+[00:09:58] wikipedia: List_of_programming_languages_for_artificial_intelligence -> 512 candidates
+[00:09:59] wikipedia: List_of_concurrent_and_parallel_programming_languages -> 179 candidates
+[00:10:00]   GET https://en.wikipedia.org/wiki/List_of_quantum_programming_languages attempt 1/2 failed: HTTP Error 404: Not Found
+[00:10:03]   GET https://en.wikipedia.org/wiki/List_of_quantum_programming_languages attempt 2/2 failed: HTTP Error 404: Not Found
+[00:10:07] wikipedia: List_of_quantum_programming_languages unavailable
+[00:10:08] wikipedia: List_of_educational_programming_languages -> 218 candidates
+[00:10:09]   GET https://en.wikipedia.org/wiki/List_of_blockchain_programming_languages attempt 1/2 failed: HTTP Error 404: Not Found
+[00:10:12]   GET https://en.wikipedia.org/wiki/List_of_blockchain_programming_languages attempt 2/2 failed: HTTP Error 404: Not Found
+[00:10:16] wikipedia: List_of_blockchain_programming_languages unavailable
+[00:10:17] wikipedia: Category:Programming_languages -> 418 candidates
+[00:10:18]   GET https://en.wikipedia.org/wiki/Timeline_of_historical_programming_languages attempt 1/2 failed: HTTP Error 404: Not Found
+[00:10:21]   GET https://en.wikipedia.org/wiki/Timeline_of_historical_programming_languages attempt 2/2 failed: HTTP Error 404: Not Found
+[00:10:25] wikipedia: Timeline_of_historical_programming_languages unavailable
+[00:10:26]   GET https://en.wikipedia.org/wiki/Category:Programming_language_creation_year attempt 1/2 failed: HTTP Error 404: Not Found
+[00:10:29]   GET https://en.wikipedia.org/wiki/Category:Programming_language_creation_year attempt 2/2 failed: HTTP Error 404: Not Found
+[00:10:33] wikipedia: Category:Programming_language_creation_year unavailable
+[00:10:33] wrote data\wikipedia_langs.json (155998 bytes)
+[00:10:35] esolangs -> 4005 candidates
+[00:10:35]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 1/2 failed: HTTP Error 403: Forbidden
+[00:10:39]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 2/2 failed: HTTP Error 403: Forbidden
+[00:10:43] rosettacode: unavailable
+[00:10:43] tiobe -> 1671 candidates
+[00:10:45] ieee -> 2028 candidates
+[00:10:47] gh_topic_programming_language -> 279 candidates
+[00:10:49] gh_topic_esoteric_language -> 290 candidates
+[00:10:51] gh_topic_language -> 276 candidates
+[00:10:53] gh_collection -> 250 candidates
+[00:10:54]   GET https://github.com/LeisureKart/awesome-programming-languages attempt 1/2 failed: HTTP Error 404: Not Found
+[00:10:57]   GET https://github.com/LeisureKart/awesome-programming-languages attempt 2/2 failed: HTTP Error 404: Not Found
+[00:11:01] awesome_langs: unavailable
+[00:11:04] learn_anything -> 487 candidates
+[00:11:05]   GET https://github.com/awesome-esolangs/awesome-esolangs attempt 1/2 failed: HTTP Error 404: Not Found
+[00:11:09]   GET https://github.com/awesome-esolangs/awesome-esolangs attempt 2/2 failed: HTTP Error 404: Not Found
+[00:11:13] awesome_esolangs: unavailable
+[00:11:14]   GET https://github.com/awesome-dsl/awesome-dsl attempt 1/2 failed: HTTP Error 404: Not Found
+[00:11:18]   GET https://github.com/awesome-dsl/awesome-dsl attempt 2/2 failed: HTTP Error 404: Not Found
+[00:11:22] awesome_dsl: unavailable
+[00:11:23] awesome_fp -> 643 candidates
+[00:11:23] wrote data\esolangs.json (177598 bytes)
+[00:11:23] wrote data\rosetta_langs.json (256546 bytes)
+[00:11:23] wrote data\other_sources.json (256546 bytes)
+[00:11:23] wrote data\fetch_summary.json (841 bytes)
+[00:11:23] === fetch_languages done ===
+[00:14:22] auto-detected WinINET proxy 127.0.0.1:10818
+[00:14:22] === fetch_languages start ===
+[00:14:22] wrote data\builtin_langs.json (23146 bytes)
+[00:14:22] builtin fallback inventory: 1252 unique names across 18 groups
+[00:14:25] wrote data\linguist.json (371419 bytes)
+[00:14:25] linguist: 836 languages, 694 with color
+[00:14:26] wikipedia: List_of_programming_languages -> 769 candidates
+[00:14:27] wikipedia: List_of_programming_languages_by_type -> 1308 candidates
+[00:14:28] wikipedia: List_of_esoteric_programming_languages -> 1308 candidates
+[00:14:29] wikipedia: List_of_markup_languages -> 58 candidates
+[00:14:30] wikipedia: List_of_query_languages -> 393 candidates
+[00:14:32] wikipedia: List_of_stylesheet_languages -> 45 candidates
+[00:14:33] wikipedia: List_of_programming_languages_for_artificial_intelligence -> 477 candidates
+[00:14:34] wikipedia: List_of_concurrent_and_parallel_programming_languages -> 138 candidates
+[00:14:35] wikipedia: List_of_educational_programming_languages -> 177 candidates
+[00:14:36] wikipedia: List_of_hardware_description_languages -> 429 candidates
+[00:14:37] wikipedia: Category:Programming_languages -> 162 candidates
+[00:14:38] wikipedia: Category:Esoteric_programming_languages -> 18 candidates
+[00:14:39] wikipedia: Category:Query_languages -> 63 candidates
+[00:14:39] wikipedia: Category:Markup_languages -> 149 candidates
+[00:14:40] wikipedia: Category:Data_formats -> 2 candidates
+[00:14:41] wikipedia: Category:Template_engines -> 27 candidates
+[00:14:42] wikipedia: Category:Functional_programming_languages -> 0 candidates
+[00:14:43] wikipedia: Category:Object-oriented_programming_languages -> 140 candidates
+[00:14:43] wikipedia: Category:Concurrent_programming_languages -> 81 candidates
+[00:14:44] wikipedia: Category:Hardware_description_languages -> 39 candidates
+[00:14:45]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:14:48]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:14:52] wikipedia: Category:Type_systems -> 0 candidates
+[00:14:52]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AAssembly+languages&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:14:55]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AAssembly+languages&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:14:59] wikipedia: Category:Assembly_languages -> 0 candidates
+[00:15:00] wikipedia: Category:Formal_specification_languages -> 47 candidates
+[00:15:01] wikipedia: Category:Proof_assistants -> 28 candidates
+[00:15:01] wikipedia: Category:Command_shells -> 30 candidates
+[00:15:02] wikipedia: Category:Scripting_languages -> 161 candidates
+[00:15:03] wikipedia: Category:Interpreters_(computing) -> 21 candidates
+[00:15:04] wikipedia: Category:Compilers -> 72 candidates
+[00:15:04] wikipedia: Category:Transducers -> 38 candidates
+[00:15:05] wikipedia: Category:Programming_languages_created_in_1970 -> 6 candidates
+[00:15:06] wikipedia: Category:Programming_languages_created_in_1980 -> 5 candidates
+[00:15:07] wikipedia: Category:Programming_languages_created_in_1990 -> 2 candidates
+[00:15:08]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+created+in+2000&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:15:10]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+created+in+2000&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:15:14] wikipedia: Category:Programming_languages_created_in_2000 -> 0 candidates
+[00:15:15]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ARelational+database+management+systems&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:15:18]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ARelational+database+management+systems&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:15:22] wikipedia: Category:Relational_database_management_systems -> 0 candidates
+[00:15:23]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AC+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:15:25]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AC+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:15:29] wikipedia: Category:C_(programming_language) -> 0 candidates
+[00:15:30]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3APython+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:15:33]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3APython+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:15:37] wikipedia: Category:Python_(programming_language) -> 0 candidates
+[00:15:38]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ARuby+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 1/2 failed: HTTP Error 429: Too Many Requests
+[00:15:41]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ARuby+%28programming+language%29&cmlimit=500&cmnamespace=0%7C14%7C100&format=json attempt 2/2 failed: HTTP Error 429: Too Many Requests
+[00:15:45] wikipedia: Category:Ruby_(programming_language) -> 0 candidates
+[00:15:45] wrote data\wikipedia_langs.json (157513 bytes)
+[00:15:45] esolangs -> 4005 candidates
+[00:15:46]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 1/2 failed: HTTP Error 403: Forbidden
+[00:15:49]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 2/2 failed: HTTP Error 403: Forbidden
+[00:15:53] rosettacode: unavailable
+[00:15:54] tiobe -> 1671 candidates
+[00:15:56] ieee -> 2028 candidates
+[00:15:57] gh_topic_programming_language -> 279 candidates
+[00:15:59] gh_topic_esoteric_language -> 290 candidates
+[00:16:01] gh_topic_language -> 276 candidates
+[00:16:03] gh_topic_interpreter -> 281 candidates
+[00:16:05] gh_topic_compiler -> 272 candidates
+[00:16:07] gh_topic_esolang -> 289 candidates
+[00:16:08] gh_collection -> 250 candidates
+[00:16:10] free_programming_books -> 368 candidates
+[00:16:12] learn_anything -> 487 candidates
+[00:16:14] awesome_fp -> 643 candidates
+[00:16:14] wrote data\esolangs.json (177598 bytes)
+[00:16:14] wrote data\rosetta_langs.json (300521 bytes)
+[00:16:14] wrote data\other_sources.json (300521 bytes)
+[00:16:14] wrote data\fetch_summary.json (885 bytes)
+[00:16:14] === fetch_languages done ===
+[00:21:49] auto-detected WinINET proxy 127.0.0.1:10818
+[00:21:49] === fetch_languages start ===
+[00:21:49] wrote data\builtin_langs.json (23146 bytes)
+[00:21:49] builtin fallback inventory: 1252 unique names across 18 groups
+[00:21:51] wrote data\linguist.json (371419 bytes)
+[00:21:51] linguist: 836 languages, 694 with color
+[00:21:53] wikipedia: List_of_programming_languages -> 561 candidates
+[00:21:54] wikipedia: List_of_programming_languages_by_type -> 557 candidates
+[00:21:55] wikipedia: List_of_esoteric_programming_languages -> 557 candidates
+[00:21:56] wikipedia: List_of_markup_languages -> 27 candidates
+[00:21:57] wikipedia: List_of_query_languages -> 256 candidates
+[00:21:58] wikipedia: List_of_stylesheet_languages -> 24 candidates
+[00:22:00] wikipedia: List_of_programming_languages_for_artificial_intelligence -> 292 candidates
+[00:22:01] wikipedia: List_of_concurrent_and_parallel_programming_languages -> 86 candidates
+[00:22:02] wikipedia: List_of_educational_programming_languages -> 71 candidates
+[00:22:03] wikipedia: List_of_hardware_description_languages -> 253 candidates
+[00:22:05] wikipedia: Category:Programming_languages -> 134 candidates
+[00:22:06] wikipedia: Category:Esoteric_programming_languages -> 13 candidates
+[00:22:07] wikipedia: Category:Query_languages -> 34 candidates
+[00:22:09] wikipedia: Category:Markup_languages -> 97 candidates
+[00:22:11] wikipedia: Category:Data_formats -> 2 candidates
+[00:22:12] wikipedia: Category:Template_engines -> 23 candidates
+[00:22:14] wikipedia: Category:Functional_programming_languages -> 0 candidates
+[00:22:15] wikipedia: Category:Object-oriented_programming_languages -> 126 candidates
+[00:22:17] wikipedia: Category:Concurrent_programming_languages -> 65 candidates
+[00:22:19] wikipedia: Category:Hardware_description_languages -> 28 candidates
+[00:22:20]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=5 attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:22:24]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=5 attempt 2/4 failed: HTTP Error 429: Too Many Requests
+[00:22:31]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=5 attempt 3/4 failed: HTTP Error 429: Too Many Requests
+[00:22:40]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=5 attempt 4/4 failed: HTTP Error 429: Too Many Requests
+[00:22:49] wikipedia: Category:Type_systems -> 0 candidates
+[00:22:50]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AAssembly+languages&cml attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:22:54]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AAssembly+languages&cml attempt 2/4 failed: HTTP Error 429: Too Many Requests
+[00:23:01] wikipedia: Category:Assembly_languages -> 19 candidates
+[00:23:03] wikipedia: Category:Formal_specification_languages -> 29 candidates
+[00:23:04] wikipedia: Category:Proof_assistants -> 22 candidates
+[00:23:06] wikipedia: Category:Command_shells -> 23 candidates
+[00:23:08] wikipedia: Category:Scripting_languages -> 139 candidates
+[00:23:09] wikipedia: Category:Interpreters_(computing) -> 17 candidates
+[00:23:11] wikipedia: Category:Compilers -> 52 candidates
+[00:23:13] wikipedia: Category:Transducers -> 34 candidates
+[00:23:14] wikipedia: Category:Programming_languages_created_in_1970 -> 5 candidates
+[00:23:16] wikipedia: Category:Programming_languages_created_in_1980 -> 5 candidates
+[00:23:17]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:23:21]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 2/4 failed: HTTP Error 429: Too Many Requests
+[00:23:28]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 3/4 failed: HTTP Error 429: Too Many Requests
+[00:24:25] auto-detected WinINET proxy 127.0.0.1:10818
+[00:24:25] === fetch_languages start ===
+[00:24:25] wrote data\builtin_langs.json (23146 bytes)
+[00:24:25] builtin fallback inventory: 1252 unique names across 18 groups
+[00:24:27] wrote data\linguist.json (371419 bytes)
+[00:24:27] linguist: 836 languages, 694 with color
+[00:24:28] wikipedia: List_of_programming_languages -> 561 candidates
+[00:24:29] wikipedia: List_of_programming_languages_by_type -> 557 candidates
+[00:24:31] wikipedia: List_of_esoteric_programming_languages -> 557 candidates
+[00:24:32] wikipedia: List_of_markup_languages -> 27 candidates
+[00:24:33] wikipedia: List_of_query_languages -> 256 candidates
+[00:24:34] wikipedia: List_of_stylesheet_languages -> 24 candidates
+[00:24:35] wikipedia: List_of_programming_languages_for_artificial_intelligence -> 292 candidates
+[00:24:36] wikipedia: List_of_concurrent_and_parallel_programming_languages -> 86 candidates
+[00:24:37] wikipedia: List_of_educational_programming_languages -> 71 candidates
+[00:24:38] wikipedia: List_of_hardware_description_languages -> 253 candidates
+[00:24:39] wikipedia: Category:Programming_languages -> 134 candidates
+[00:24:41] wikipedia: Category:Esoteric_programming_languages -> 13 candidates
+[00:24:43] wikipedia: Category:Query_languages -> 34 candidates
+[00:24:44] wikipedia: Category:Markup_languages -> 97 candidates
+[00:24:46] wikipedia: Category:Data_formats -> 2 candidates
+[00:24:48] wikipedia: Category:Template_engines -> 23 candidates
+[00:24:49] wikipedia: Category:Functional_programming_languages -> 0 candidates
+[00:24:51] wikipedia: Category:Object-oriented_programming_languages -> 126 candidates
+[00:24:52] wikipedia: Category:Concurrent_programming_languages -> 65 candidates
+[00:24:54] wikipedia: Category:Hardware_description_languages -> 28 candidates
+[00:24:55]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AType+systems&cmlimit=5 attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:24:59] wikipedia: Category:Type_systems -> 9 candidates
+[00:25:01] wikipedia: Category:Assembly_languages -> 19 candidates
+[00:25:02] wikipedia: Category:Formal_specification_languages -> 29 candidates
+[00:25:04] wikipedia: Category:Proof_assistants -> 22 candidates
+[00:25:05] wikipedia: Category:Command_shells -> 23 candidates
+[00:25:07] wikipedia: Category:Scripting_languages -> 139 candidates
+[00:25:09] wikipedia: Category:Interpreters_(computing) -> 17 candidates
+[00:25:10] wikipedia: Category:Compilers -> 52 candidates
+[00:25:12] wikipedia: Category:Transducers -> 34 candidates
+[00:25:14] wikipedia: Category:Programming_languages_created_in_1970 -> 5 candidates
+[00:25:15]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:25:19]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 2/4 failed: HTTP Error 429: Too Many Requests
+[00:25:26]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 3/4 failed: HTTP Error 429: Too Many Requests
+[00:25:36]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 4/4 failed: HTTP Error 429: Too Many Requests
+[00:25:45] wikipedia: Category:Programming_languages_created_in_1980 -> 0 candidates
+[00:25:46]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 1/4 failed: HTTP Error 429: Too Many Requests
+[00:25:50]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 2/4 failed: HTTP Error 429: Too Many Requests
+[00:25:56]   GET https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AProgramming+languages+ attempt 3/4 failed: HTTP Error 429: Too Many Requests
+[00:26:06] wikipedia: Category:Programming_languages_created_in_1990 -> 2 candidates
+[00:26:08] wikipedia: Category:Programming_languages_created_in_2000 -> 3 candidates
+[00:26:09] wikipedia: Category:Relational_database_management_systems -> 54 candidates
+[00:26:11] wikipedia: Category:C_(programming_language) -> 52 candidates
+[00:26:13] wikipedia: Category:Python_(programming_language) -> 28 candidates
+[00:26:14] wikipedia: Category:Ruby_(programming_language) -> 36 candidates
+[00:26:14] wrote data\wikipedia_langs.json (79759 bytes)
+[00:26:15] esolangs -> 3336 candidates
+[00:26:16]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 1/2 failed: HTTP Error 403: Forbidden
+[00:26:19]   GET https://rosettacode.org/wiki/Category:Programming_Languages attempt 2/2 failed: HTTP Error 403: Forbidden
+[00:26:25] rosettacode: unavailable
+[00:26:26] tiobe -> 74 candidates
+[00:26:28] ieee -> 7 candidates
+[00:26:30] gh_topic_programming_language -> 53 candidates
+[00:26:32] gh_topic_esoteric_language -> 49 candidates
+[00:26:34] gh_topic_language -> 51 candidates
+[00:26:35] gh_collection -> 38 candidates
+[00:26:37] free_programming_books -> 127 candidates
+[00:26:39] learn_anything -> 200 candidates
+[00:26:41] awesome_fp -> 315 candidates
+[00:26:41] wrote data\esolangs.json (65056 bytes)
+[00:26:41] wrote data\rosetta_langs.json (84915 bytes)
+[00:26:41] wrote data\other_sources.json (84915 bytes)
+[00:26:41] wrote data\fetch_summary.json (805 bytes)
+[00:26:41] === fetch_languages done ===
