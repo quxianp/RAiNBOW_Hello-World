@@ -8,32 +8,3 @@
 package rainbow
 
 default hello := "Hello World!"
-# rainbow-pad equal byte share keeps the language bar an even rainbow
-# rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
-# rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte share keeps the language bar an even rainbow
-# rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
-# rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte share keeps the language bar an even rainbow
-# rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
-# rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte share keeps the language bar an even rainbow
-# rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
-# rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte share keeps the language bar an even rainbow
-# rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
-# rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the

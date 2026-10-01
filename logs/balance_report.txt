@@ -1,7 +1,7 @@
 byte balance report
 ====================================================================================================
 core languages            : 689
-natural mean size         : 384.9 bytes
+natural mean size         : 384.8 bytes
 target size per language  : 2048 bytes
 ideal share per language  : 0.1451 %
 allowed share window      : 0.05 % - 0.5 %

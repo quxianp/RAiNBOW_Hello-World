@@ -565,6 +565,33 @@ def harvest_esolangs(html: str) -> list:
 # source 8 : hardcoded fallback inventory
 # --------------------------------------------------------------------------
 BUILTIN_RAW = {
+    "chinese": """易语言|易语言E|E语言|EPL|易语言模块|中文编程语言|仓颉|仓颉语言|Cangjie|仓颉编程
+文言|文言文编程|Wenyan|文言编程|蚂蚁|飞灵|中关村编程语言|Mindscript|圈天地|圈圈叉|火星文编程
+汉字编程|中文汇编|象棋编程|麻将编程|中文脚本|拼音编程|汉字语言|拼音语言|郑码编程|五笔编程
+中文BASIC|中文C|中文Pascal|中文FoxPro|中文Visual Basic|中文语言|中华编程|龙语言|龙语|凌云|凌云语言
+天元|天元语言|洪荒|Genesis|易语言IDE|易语言静态库|中文Python|中文Java|中文C++|中文Rust
+武术|武术语言|太极|Taiji|八卦|Bagua|易语言模块化|易语言函数库|中文正则|汉字正则|GBK编码
+Big5编码|GB2312|GB18030|中文注释|中文标识符|Unicode中文|拼音输入法编程|五笔输入法编程|火星语
+EPL语言|易语言源码|中文脚本语言|全角编程|半角编程|汉字脚本|易语言模块化编程|中文注释编程""",
+    "assembly_dialects": """x86 Assembly|x86-64 Assembly|IA-32 Assembly|ARM Assembly|AArch64 Assembly|ARM64 Assembly
+MIPS Assembly|SPARC Assembly|68k Assembly|6502 Assembly|65C02 Assembly|Z80 Assembly|Z180 Assembly
+8080 Assembly|8086 Assembly|80486 Assembly|AVR Assembly|AVR32 Assembly|PIC Assembly|PIC16 Assembly
+PIC18 Assembly|PIC32 Assembly|8051 Assembly|MSP430 Assembly|RISC-V Assembly|RISC-V RV32I Assembly
+WebAssembly Text|WAT|WAST|PTX|NVPTX|LLVM IR|LLVM Bitcode|GNU Assembler|GAS|NASM|MASM|FASM|TASM
+Watcom Assembler|ASM.js|AssemblyScript|Inline Assembly|Hexagon Assembly|ARC Assembly|VAX Assembly
+PDP-11 Assembly|IBM 360 Assembly|IBM 5100|UNIVAC 1103|Atari 6502 Assembly|Commodore 64 Assembly
+Game Boy Assembly|Game Boy Color Assembly|NES Assembly|SNES Assembly|Genesis Assembly|3DO Assembly
+PlayStation Assembly|PowerPC Assembly|Alpha Assembly|Sparc64 Assembly|MIPS64 Assembly|Alpha64
+IT8|Plan 9 Assembly|Inferno Assembly|DWARF|COFF|OMF|Intel HEX|Motorola S-record|SREC|Opal assembler
+C--|C-- compiler|Thorn|Bee assembler|TASM32|NASM64|YASM|FASM.NET|WASM text format|LLVM Assembly""",
+    "binary_data": """Binary|Base64|Base32|Base16|Base85|Ascii85|Hexadecimal|Bitwise|Hex dump|Raw bytes
+Mach-O|ELF|PE format|DOS executable|COFF object|WebAssembly Binary|WebAssembly text format|.NET IL
+JVM Bytecode|Dalvik Bytecode|LLVM Bitcode|Bytecode|Packed pixel|Image binary|BMP binary|GIF binary
+PNG binary|JPEG binary|PDF binary|ZIP binary|7z binary|RAR binary|TAR binary|GZIP binary|BZIP2 binary
+XZ binary|Zstandard binary|LZ4 binary|Snappy binary|LZ77|LZ78|LZW|Burrows-Wheeler|Deflate|Inflate
+Huffman coding|Arithmetic coding|Run-length encoding|Base58|Base62|Base95|Morse code|Braille encoding
+NATO phonetic alphabet|Unicode code point|UTF-8|UTF-16|UTF-32|UTF-7|ASCII|ISO-8859-1|Windows-1252
+EBCDIC|BCD code|Aiken code|Hollerith code|Morse code binary|Manchester code|NRZ|RZI|Miller code""",
     "ancient": """Fortran|COBOL|COBOL-85|COBOL-2002|ALGOL|ALGOL 60|ALGOL 68|ALGOL W|Pascal|Ada|AdaCore
 APL|BASIC|VBScript|Visual Basic|Visual Basic .NET|Visual Basic 6|QuickBASIC|QBasic|BASIC-PLUS|Pascal ABC
 PL/I|PL-P|PL-360|SQL/PL|DIPLOT|MUMPS|SAIL|FLOW-MATIC|NETSOL|Executive Systems Language|TRAC

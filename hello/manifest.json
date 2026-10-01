@@ -1,9 +1,9 @@
 {
  "generated_by": "scripts/generate_all_hello.py",
  "core_languages": 689,
- "full_languages": 6417,
- "total_files": 7106,
- "with_curated_template": 255,
+ "full_languages": 6570,
+ "total_files": 7259,
+ "with_curated_template": 273,
  "runnable_command_count": 51,
  "files": [
   {
@@ -3623,7 +3623,7 @@
    "color": "#00868b",
    "hue": 182.16,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Teal",
@@ -7586,6 +7586,17 @@
    "real_template": false
   },
   {
+   "language": ".NET IL",
+   "layer": "full",
+   "path": "hello/full/net-il/hello.net_il",
+   "extension": ".net_il",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "05AB1E",
    "layer": "full",
    "path": "hello/full/05ab1e/hello.05ab1e",
@@ -7916,6 +7927,17 @@
    "real_template": false
   },
   {
+   "language": "3DO Assembly",
+   "layer": "full",
+   "path": "hello/full/3do-assembly/hello.3do_assembly",
+   "extension": ".3do_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "3switchBF",
    "layer": "full",
    "path": "hello/full/3switchbf/hello.3switchbf",
@@ -8015,6 +8037,39 @@
    "real_template": false
   },
   {
+   "language": "6502 Assembly",
+   "layer": "full",
+   "path": "hello/full/6502-assembly/hello.6502_assembly",
+   "extension": ".6502_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "65C02 Assembly",
+   "layer": "full",
+   "path": "hello/full/65c02-assembly/hello.65c02_assembly",
+   "extension": ".65c02_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "68k Assembly",
+   "layer": "full",
+   "path": "hello/full/68k-assembly/hello.68k_assembly",
+   "extension": ".68k_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "6chars",
    "layer": "full",
    "path": "hello/full/6chars/hello.6chars",
@@ -8041,6 +8096,61 @@
    "layer": "full",
    "path": "hello/full/7basic/hello.7basic",
    "extension": ".7basic",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "7z binary",
+   "layer": "full",
+   "path": "hello/full/7z-binary/hello.7z_binary",
+   "extension": ".7z_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "80486 Assembly",
+   "layer": "full",
+   "path": "hello/full/80486-assembly/hello.80486_assembly",
+   "extension": ".80486_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "8051 Assembly",
+   "layer": "full",
+   "path": "hello/full/8051-assembly/hello.8051_assembly",
+   "extension": ".8051_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "8080 Assembly",
+   "layer": "full",
+   "path": "hello/full/8080-assembly/hello.8080_assembly",
+   "extension": ".8080_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "8086 Assembly",
+   "layer": "full",
+   "path": "hello/full/8086-assembly/hello.8086_assembly",
+   "extension": ".8086_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -8217,6 +8327,17 @@
    "layer": "full",
    "path": "hello/full/aap-dtd/hello.aap_dtd",
    "extension": ".aap_dtd",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "AArch64 Assembly",
+   "layer": "full",
+   "path": "hello/full/aarch64-assembly/hello.aarch64_assembly",
+   "extension": ".aarch64_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -9621,6 +9742,17 @@
    "real_template": false
   },
   {
+   "language": "Aiken code",
+   "layer": "full",
+   "path": "hello/full/aiken-code/hello.aiken_code",
+   "extension": ".aiken_code",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "AIMMS",
    "layer": "full",
    "path": "hello/full/aimms/hello.aimms",
@@ -10219,6 +10351,28 @@
    "layer": "full",
    "path": "hello/full/alpha/hello.alpha",
    "extension": ".alpha",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Alpha Assembly",
+   "layer": "full",
+   "path": "hello/full/alpha-assembly/hello.alpha_assembly",
+   "extension": ".alpha_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Alpha64",
+   "layer": "full",
+   "path": "hello/full/alpha64/hello.alpha64",
+   "extension": ".alpha64",
    "type": null,
    "color": null,
    "hue": null,
@@ -11557,6 +11711,17 @@
    "real_template": false
   },
   {
+   "language": "ARC Assembly",
+   "layer": "full",
+   "path": "hello/full/arc-assembly/hello.arc_assembly",
+   "extension": ".arc_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "ARCAL",
    "layer": "full",
    "path": "hello/full/arcal/hello.arcal",
@@ -11689,6 +11854,17 @@
    "real_template": false
   },
   {
+   "language": "Arithmetic coding",
+   "layer": "full",
+   "path": "hello/full/arithmetic-coding/hello.arithmetic_coding",
+   "extension": ".arithmetic_coding",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Ark",
    "layer": "full",
    "path": "hello/full/ark/hello.ark",
@@ -11711,6 +11887,17 @@
    "real_template": false
   },
   {
+   "language": "ARM Assembly",
+   "layer": "full",
+   "path": "hello/full/arm-assembly/hello.arm_assembly",
+   "extension": ".arm_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "ARM Cortex-M",
    "layer": "full",
    "path": "hello/full/arm-cortex-m/hello.arm_cortex_m",
@@ -11726,6 +11913,17 @@
    "layer": "full",
    "path": "hello/full/arm-original-32-bit/hello.arm_original_32_bit",
    "extension": ".arm_original_32_bit",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "ARM64 Assembly",
+   "layer": "full",
+   "path": "hello/full/arm64-assembly/hello.arm64_assembly",
+   "extension": ".arm64_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -11997,10 +12195,32 @@
    "real_template": false
   },
   {
+   "language": "ASCII",
+   "layer": "full",
+   "path": "hello/full/ascii/hello.ascii",
+   "extension": ".ascii",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "ASCII Code",
    "layer": "full",
    "path": "hello/full/ascii-code/hello.ascii_code",
    "extension": ".ascii_code",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Ascii85",
+   "layer": "full",
+   "path": "hello/full/ascii85/hello.ascii85",
+   "extension": ".ascii85",
    "type": null,
    "color": null,
    "hue": null,
@@ -12178,6 +12398,17 @@
    "path": "hello/full/asl/hello.asl",
    "extension": ".asl",
    "type": "programming",
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "ASM.js",
+   "layer": "full",
+   "path": "hello/full/asm-js/hello.asm_js",
+   "extension": ".asm_js",
+   "type": null,
    "color": null,
    "hue": null,
    "runner": null,
@@ -12397,6 +12628,17 @@
    "layer": "full",
    "path": "hello/full/asynchronous-logic/hello.asynchronous_logic",
    "extension": ".asynchronous_logic",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Atari 6502 Assembly",
+   "layer": "full",
+   "path": "hello/full/atari-6502-assembly/hello.atari_6502_assembly",
+   "extension": ".atari_6502_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -12804,6 +13046,28 @@
    "layer": "full",
    "path": "hello/full/avif/hello.avif",
    "extension": ".avif",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "AVR Assembly",
+   "layer": "full",
+   "path": "hello/full/avr-assembly/hello.avr_assembly",
+   "extension": ".avr_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "AVR32 Assembly",
+   "layer": "full",
+   "path": "hello/full/avr32-assembly/hello.avr32_assembly",
+   "extension": ".avr32_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -13229,6 +13493,17 @@
    "real_template": false
   },
   {
+   "language": "Bagua",
+   "layer": "full",
+   "path": "hello/full/bagua/hello.bagua",
+   "extension": ".bagua",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "BaguaFuck",
    "layer": "full",
    "path": "hello/full/baguafuck/hello.baguafuck",
@@ -13394,10 +13669,76 @@
    "real_template": false
   },
   {
+   "language": "Base16",
+   "layer": "full",
+   "path": "hello/full/base16/hello.base16",
+   "extension": ".base16",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Base32",
+   "layer": "full",
+   "path": "hello/full/base32/hello.base32",
+   "extension": ".base32",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "Base58",
+   "layer": "full",
+   "path": "hello/full/base58/hello.base58",
+   "extension": ".base58",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Base62",
+   "layer": "full",
+   "path": "hello/full/base62/hello.base62",
+   "extension": ".base62",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Base64",
    "layer": "full",
    "path": "hello/full/base64/hello.base64",
    "extension": ".base64",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "Base85",
+   "layer": "full",
+   "path": "hello/full/base85/hello.base85",
+   "extension": ".base85",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Base95",
+   "layer": "full",
+   "path": "hello/full/base95/hello.base95",
+   "extension": ".base95",
    "type": null,
    "color": null,
    "hue": null,
@@ -13541,6 +13882,17 @@
    "layer": "full",
    "path": "hello/full/bbc-micro/hello.bbc_micro",
    "extension": ".bbc_micro",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "BCD code",
+   "layer": "full",
+   "path": "hello/full/bcd-code/hello.bcd_code",
+   "extension": ".bcd_code",
    "type": null,
    "color": null,
    "hue": null,
@@ -13695,6 +14047,17 @@
    "layer": "full",
    "path": "hello/full/bee/hello.bee",
    "extension": ".bee",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Bee assembler",
+   "layer": "full",
+   "path": "hello/full/bee-assembler/hello.bee_assembler",
+   "extension": ".bee_assembler",
    "type": null,
    "color": null,
    "hue": null,
@@ -14362,6 +14725,17 @@
    "real_template": false
   },
   {
+   "language": "Big5编码",
+   "layer": "full",
+   "path": "hello/full/big5/hello.big5",
+   "extension": ".big5",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "BigBrain",
    "layer": "full",
    "path": "hello/full/bigbrain/hello.bigbrain",
@@ -14426,6 +14800,17 @@
    "hue": null,
    "runner": null,
    "real_template": false
+  },
+  {
+   "language": "Binary",
+   "layer": "full",
+   "path": "hello/full/binary/hello.binary",
+   "extension": ".binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
   },
   {
    "language": "Binary Brainfuck",
@@ -14879,7 +15264,7 @@
    "real_template": false
   },
   {
-   "language": "BITwise",
+   "language": "Bitwise",
    "layer": "full",
    "path": "hello/full/bitwise/hello.bitwise",
    "extension": ".bitwise",
@@ -15323,6 +15708,17 @@
    "layer": "full",
    "path": "hello/full/bmp/hello.bmp",
    "extension": ".bmp",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "BMP binary",
+   "layer": "full",
+   "path": "hello/full/bmp-binary/hello.bmp_binary",
+   "extension": ".bmp_binary",
    "type": null,
    "color": null,
    "hue": null,
@@ -15836,6 +16232,17 @@
    "real_template": false
   },
   {
+   "language": "Braille encoding",
+   "layer": "full",
+   "path": "hello/full/braille-encoding/hello.braille_encoding",
+   "extension": ".braille_encoding",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Braimmental",
    "layer": "full",
    "path": "hello/full/braimmental/hello.braimmental",
@@ -16273,7 +16680,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Brainfuck+10",
@@ -17332,6 +17739,17 @@
    "real_template": false
   },
   {
+   "language": "Burrows-Wheeler",
+   "layer": "full",
+   "path": "hello/full/burrows-wheeler/hello.burrows_wheeler",
+   "extension": ".burrows_wheeler",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Business",
    "layer": "full",
    "path": "hello/full/business/hello.business",
@@ -17475,6 +17893,17 @@
    "real_template": false
   },
   {
+   "language": "Bytecode",
+   "layer": "full",
+   "path": "hello/full/bytecode/hello.bytecode",
+   "extension": ".bytecode",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Bytemap",
    "layer": "full",
    "path": "hello/full/bytemap/hello.bytemap",
@@ -17501,6 +17930,17 @@
    "layer": "full",
    "path": "hello/full/byter/hello.byter",
    "extension": ".byter",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "BZIP2 binary",
+   "layer": "full",
+   "path": "hello/full/bzip2-binary/hello.bzip2_binary",
+   "extension": ".bzip2_binary",
    "type": null,
    "color": null,
    "hue": null,
@@ -17644,6 +18084,28 @@
    "layer": "full",
    "path": "hello/full/c/hello.c",
    "extension": ".c",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "C--",
+   "layer": "full",
+   "path": "hello/full/c/hello.c",
+   "extension": ".c",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "C-- compiler",
+   "layer": "full",
+   "path": "hello/full/c-compiler/hello.c_compiler",
+   "extension": ".c_compiler",
    "type": null,
    "color": null,
    "hue": null,
@@ -20445,6 +20907,28 @@
    "real_template": false
   },
   {
+   "language": "COFF",
+   "layer": "full",
+   "path": "hello/full/coff/hello.coff",
+   "extension": ".coff",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "COFF object",
+   "layer": "full",
+   "path": "hello/full/coff-object/hello.coff_object",
+   "extension": ".coff_object",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Cogc",
    "layer": "full",
    "path": "hello/full/cogc/hello.cogc",
@@ -20691,6 +21175,17 @@
    "layer": "full",
    "path": "hello/full/commercial/hello.commercial",
    "extension": ".commercial",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Commodore 64 Assembly",
+   "layer": "full",
+   "path": "hello/full/commodore-64-assembly/hello.commodore_64_assembly",
+   "extension": ".commodore_64_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -22953,6 +23448,17 @@
    "real_template": false
   },
   {
+   "language": "Dalvik Bytecode",
+   "layer": "full",
+   "path": "hello/full/dalvik-bytecode/hello.dalvik_bytecode",
+   "extension": ".dalvik_bytecode",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "DAML-S",
    "layer": "full",
    "path": "hello/full/daml-s/hello.daml_s",
@@ -23881,6 +24387,17 @@
    "layer": "full",
    "path": "hello/full/deflang/hello.deflang",
    "extension": ".deflang",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Deflate",
+   "layer": "full",
+   "path": "hello/full/deflate/hello.deflate",
+   "extension": ".deflate",
    "type": null,
    "color": null,
    "hue": null,
@@ -25428,6 +25945,17 @@
    "real_template": false
   },
   {
+   "language": "DOS executable",
+   "layer": "full",
+   "path": "hello/full/dos-executable/hello.dos_executable",
+   "extension": ".dos_executable",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "DOS Wedge",
    "layer": "full",
    "path": "hello/full/dos-wedge/hello.dos_wedge",
@@ -26110,6 +26638,17 @@
    "real_template": false
   },
   {
+   "language": "DWARF",
+   "layer": "full",
+   "path": "hello/full/dwarf/hello.dwarf",
+   "extension": ".dwarf",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Dyalog APL",
    "layer": "full",
    "path": "hello/full/dyalog-apl/hello.dyalog_apl",
@@ -26345,6 +26884,17 @@
    "layer": "full",
    "path": "hello/full/easytrieve-plus/hello.easytrieve_plus",
    "extension": ".easytrieve_plus",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "EBCDIC",
+   "layer": "full",
+   "path": "hello/full/ebcdic/hello.ebcdic",
+   "extension": ".ebcdic",
    "type": null,
    "color": null,
    "hue": null,
@@ -27038,6 +27588,17 @@
    "layer": "full",
    "path": "hello/full/elevenlabs/hello.elevenlabs",
    "extension": ".elevenlabs",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "ELF",
+   "layer": "full",
+   "path": "hello/full/elf/hello.elf",
+   "extension": ".elf",
    "type": null,
    "color": null,
    "hue": null,
@@ -29293,6 +29854,28 @@
    "layer": "full",
    "path": "hello/full/fash/hello.fash",
    "extension": ".fash",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "FASM",
+   "layer": "full",
+   "path": "hello/full/fasm/hello.fasm",
+   "extension": ".fasm",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "FASM.NET",
+   "layer": "full",
+   "path": "hello/full/fasm-net/hello.fasm_net",
+   "extension": ".fasm_net",
    "type": null,
    "color": null,
    "hue": null,
@@ -32127,6 +32710,28 @@
    "real_template": false
   },
   {
+   "language": "Game Boy Assembly",
+   "layer": "full",
+   "path": "hello/full/game-boy-assembly/hello.game_boy_assembly",
+   "extension": ".game_boy_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Game Boy Color Assembly",
+   "layer": "full",
+   "path": "hello/full/game-boy-color-assembly/hello.game_boy_color_assembly",
+   "extension": ".game_boy_color_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "GameMaker",
    "layer": "full",
    "path": "hello/full/gamemaker/hello.gamemaker",
@@ -32314,10 +32919,43 @@
    "real_template": false
   },
   {
+   "language": "GB18030",
+   "layer": "full",
+   "path": "hello/full/gb18030/hello.gb18030",
+   "extension": ".gb18030",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "GB2312",
+   "layer": "full",
+   "path": "hello/full/gb2312/hello.gb2312",
+   "extension": ".gb2312",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Gbagbo",
    "layer": "full",
    "path": "hello/full/gbagbo/hello.gbagbo",
    "extension": ".gbagbo",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "GBK编码",
+   "layer": "full",
+   "path": "hello/full/gbk/hello.gbk",
+   "extension": ".gbk",
    "type": null,
    "color": null,
    "hue": null,
@@ -32611,6 +33249,17 @@
    "real_template": false
   },
   {
+   "language": "Genesis Assembly",
+   "layer": "full",
+   "path": "hello/full/genesis-assembly/hello.genesis_assembly",
+   "extension": ".genesis_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Genetic",
    "layer": "full",
    "path": "hello/full/genetic/hello.genetic",
@@ -32897,6 +33546,17 @@
    "real_template": false
   },
   {
+   "language": "GIF binary",
+   "layer": "full",
+   "path": "hello/full/gif-binary/hello.gif_binary",
+   "extension": ".gif_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "GIFt",
    "layer": "full",
    "path": "hello/full/gift/hello.gift",
@@ -33121,6 +33781,17 @@
    "layer": "full",
    "path": "hello/full/gnomelang/hello.gnomelang",
    "extension": ".gnomelang",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "GNU Assembler",
+   "layer": "full",
+   "path": "hello/full/gnu-assembler/hello.gnu_assembler",
+   "extension": ".gnu_assembler",
    "type": null,
    "color": null,
    "hue": null,
@@ -34327,6 +34998,17 @@
    "real_template": false
   },
   {
+   "language": "GZIP binary",
+   "layer": "full",
+   "path": "hello/full/gzip-binary/hello.gzip_binary",
+   "extension": ".gzip_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Haberman",
    "layer": "full",
    "path": "hello/full/haberman/hello.haberman",
@@ -35306,6 +35988,17 @@
    "real_template": false
   },
   {
+   "language": "Hex dump",
+   "layer": "full",
+   "path": "hello/full/hex-dump/hello.hex_dump",
+   "extension": ".hex_dump",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Hex0",
    "layer": "full",
    "path": "hello/full/hex0/hello.hex0",
@@ -35332,6 +36025,28 @@
    "layer": "full",
    "path": "hello/full/hex2/hello.hex2",
    "extension": ".hex2",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Hexadecimal",
+   "layer": "full",
+   "path": "hello/full/hexadecimal/hello.hexadecimal",
+   "extension": ".hexadecimal",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "Hexagon Assembly",
+   "layer": "full",
+   "path": "hello/full/hexagon-assembly/hello.hexagon_assembly",
+   "extension": ".hexagon_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -35746,6 +36461,17 @@
    "real_template": true
   },
   {
+   "language": "Hollerith code",
+   "layer": "full",
+   "path": "hello/full/hollerith-code/hello.hollerith_code",
+   "extension": ".hollerith_code",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Hollow",
    "layer": "full",
    "path": "hello/full/hollow/hello.hollow",
@@ -36069,6 +36795,17 @@
    "layer": "full",
    "path": "hello/full/huff/hello.huff",
    "extension": ".huff",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Huffman coding",
+   "layer": "full",
+   "path": "hello/full/huffman-coding/hello.huffman_coding",
+   "extension": ".huffman_coding",
    "type": null,
    "color": null,
    "hue": null,
@@ -36450,6 +37187,17 @@
    "real_template": false
   },
   {
+   "language": "IA-32 Assembly",
+   "layer": "full",
+   "path": "hello/full/ia-32-assembly/hello.ia_32_assembly",
+   "extension": ".ia_32_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "iag",
    "layer": "full",
    "path": "hello/full/iag/hello.iag",
@@ -36498,6 +37246,28 @@
    "layer": "full",
    "path": "hello/full/ibis/hello.ibis",
    "extension": ".ibis",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "IBM 360 Assembly",
+   "layer": "full",
+   "path": "hello/full/ibm-360-assembly/hello.ibm_360_assembly",
+   "extension": ".ibm_360_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "IBM 5100",
+   "layer": "full",
+   "path": "hello/full/ibm-5100/hello.ibm_5100",
+   "extension": ".ibm_5100",
    "type": null,
    "color": null,
    "hue": null,
@@ -36685,6 +37455,17 @@
    "layer": "full",
    "path": "hello/full/ida/hello.ida",
    "extension": ".ida",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "易语言IDE",
+   "layer": "full",
+   "path": "hello/full/ide/hello.ide",
+   "extension": ".ide",
    "type": null,
    "color": null,
    "hue": null,
@@ -36949,6 +37730,17 @@
    "layer": "full",
    "path": "hello/full/imacros/hello.imacros",
    "extension": ".imacros",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Image binary",
+   "layer": "full",
+   "path": "hello/full/image-binary/hello.image_binary",
+   "extension": ".image_binary",
    "type": null,
    "color": null,
    "hue": null,
@@ -37451,6 +38243,17 @@
    "real_template": false
   },
   {
+   "language": "Inferno Assembly",
+   "layer": "full",
+   "path": "hello/full/inferno-assembly/hello.inferno_assembly",
+   "extension": ".inferno_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Infilisp",
    "layer": "full",
    "path": "hello/full/infilisp/hello.infilisp",
@@ -37532,6 +38335,17 @@
    "layer": "full",
    "path": "hello/full/infinitum/hello.infinitum",
    "extension": ".infinitum",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Inflate",
+   "layer": "full",
+   "path": "hello/full/inflate/hello.inflate",
+   "extension": ".inflate",
    "type": null,
    "color": null,
    "hue": null,
@@ -37708,6 +38522,17 @@
    "layer": "full",
    "path": "hello/full/inline-assembler/hello.inline_assembler",
    "extension": ".inline_assembler",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Inline Assembly",
+   "layer": "full",
+   "path": "hello/full/inline-assembly/hello.inline_assembly",
+   "extension": ".inline_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -37906,6 +38731,17 @@
    "layer": "full",
    "path": "hello/full/intel-fortran/hello.intel_fortran",
    "extension": ".intel_fortran",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Intel HEX",
+   "layer": "full",
+   "path": "hello/full/intel-hex/hello.intel_hex",
+   "extension": ".intel_hex",
    "type": null,
    "color": null,
    "hue": null,
@@ -38573,6 +39409,17 @@
    "real_template": false
   },
   {
+   "language": "ISO-8859-1",
+   "layer": "full",
+   "path": "hello/full/iso-8859-1/hello.iso_8859_1",
+   "extension": ".iso_8859_1",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Isomorphism",
    "layer": "full",
    "path": "hello/full/isomorphism/hello.isomorphism",
@@ -38687,6 +39534,17 @@
    "layer": "full",
    "path": "hello/full/it-s-3d/hello.it_s_3d",
    "extension": ".it_s_3d",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "IT8",
+   "layer": "full",
+   "path": "hello/full/it8/hello.it8",
+   "extension": ".it8",
    "type": null,
    "color": null,
    "hue": null,
@@ -39651,6 +40509,17 @@
    "real_template": false
   },
   {
+   "language": "JPEG binary",
+   "layer": "full",
+   "path": "hello/full/jpeg-binary/hello.jpeg_binary",
+   "extension": ".jpeg_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "JQL",
    "layer": "full",
    "path": "hello/full/jql/hello.jql",
@@ -40058,7 +40927,7 @@
    "real_template": false
   },
   {
-   "language": "K",
+   "language": "k",
    "layer": "full",
    "path": "hello/full/k/hello.k",
    "extension": ".k",
@@ -42852,6 +43721,28 @@
    "real_template": false
   },
   {
+   "language": "LLVM Assembly",
+   "layer": "full",
+   "path": "hello/full/llvm-assembly/hello.llvm_assembly",
+   "extension": ".llvm_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "LLVM Bitcode",
+   "layer": "full",
+   "path": "hello/full/llvm-bitcode/hello.llvm_bitcode",
+   "extension": ".llvm_bitcode",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "LLVM IR",
    "layer": "full",
    "path": "hello/full/llvm-ir/hello.llvm_ir",
@@ -43688,6 +44579,50 @@
    "real_template": false
   },
   {
+   "language": "LZ4 binary",
+   "layer": "full",
+   "path": "hello/full/lz4-binary/hello.lz4_binary",
+   "extension": ".lz4_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "LZ77",
+   "layer": "full",
+   "path": "hello/full/lz77/hello.lz77",
+   "extension": ".lz77",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "LZ78",
+   "layer": "full",
+   "path": "hello/full/lz78/hello.lz78",
+   "extension": ".lz78",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "LZW",
+   "layer": "full",
+   "path": "hello/full/lzw/hello.lzw",
+   "extension": ".lzw",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "LZX",
    "layer": "full",
    "path": "hello/full/lzx/hello.lzx",
@@ -43780,6 +44715,17 @@
    "layer": "full",
    "path": "hello/full/macedonite/hello.macedonite",
    "extension": ".macedonite",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Mach-O",
+   "layer": "full",
+   "path": "hello/full/mach-o/hello.mach_o",
+   "extension": ".mach_o",
    "type": null,
    "color": null,
    "hue": null,
@@ -44260,6 +45206,17 @@
    "real_template": false
   },
   {
+   "language": "Manchester code",
+   "layer": "full",
+   "path": "hello/full/manchester-code/hello.manchester_code",
+   "extension": ".manchester_code",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Mang",
    "layer": "full",
    "path": "hello/full/mang/hello.mang",
@@ -44588,6 +45545,17 @@
    "hue": null,
    "runner": null,
    "real_template": false
+  },
+  {
+   "language": "MASM",
+   "layer": "full",
+   "path": "hello/full/masm/hello.masm",
+   "extension": ".masm",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
   },
   {
    "language": "MASON",
@@ -45855,6 +46823,17 @@
    "real_template": false
   },
   {
+   "language": "Miller code",
+   "layer": "full",
+   "path": "hello/full/miller-code/hello.miller_code",
+   "extension": ".miller_code",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Millipede",
    "layer": "full",
    "path": "hello/full/millipede/hello.millipede",
@@ -45980,6 +46959,17 @@
    "layer": "full",
    "path": "hello/full/mindquantum/hello.mindquantum",
    "extension": ".mindquantum",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Mindscript",
+   "layer": "full",
+   "path": "hello/full/mindscript/hello.mindscript",
+   "extension": ".mindscript",
    "type": null,
    "color": null,
    "hue": null,
@@ -46387,6 +47377,28 @@
    "layer": "full",
    "path": "hello/full/mips/hello.mips",
    "extension": ".mips",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "MIPS Assembly",
+   "layer": "full",
+   "path": "hello/full/mips-assembly/hello.mips_assembly",
+   "extension": ".mips_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "MIPS64 Assembly",
+   "layer": "full",
+   "path": "hello/full/mips64-assembly/hello.mips64_assembly",
+   "extension": ".mips64_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -47337,6 +48349,17 @@
    "color": null,
    "hue": null,
    "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "Morse code binary",
+   "layer": "full",
+   "path": "hello/full/morse-code-binary/hello.morse_code_binary",
+   "extension": ".morse_code_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
    "real_template": false
   },
   {
@@ -47388,6 +48411,17 @@
    "layer": "full",
    "path": "hello/full/motion-ui-design/hello.motion_ui_design",
    "extension": ".motion_ui_design",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Motorola S-record",
+   "layer": "full",
+   "path": "hello/full/motorola-s-record/hello.motorola_s_record",
+   "extension": ".motorola_s_record",
    "type": null,
    "color": null,
    "hue": null,
@@ -47652,6 +48686,17 @@
    "layer": "full",
    "path": "hello/full/msml/hello.msml",
    "extension": ".msml",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "MSP430 Assembly",
+   "layer": "full",
+   "path": "hello/full/msp430-assembly/hello.msp430_assembly",
+   "extension": ".msp430_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -48374,6 +49419,17 @@
    "real_template": false
   },
   {
+   "language": "NASM64",
+   "layer": "full",
+   "path": "hello/full/nasm64/hello.nasm64",
+   "extension": ".nasm64",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Nathaniel Rochester",
    "layer": "full",
    "path": "hello/full/nathaniel-rochester/hello.nathaniel_rochester",
@@ -48411,6 +49467,17 @@
    "layer": "full",
    "path": "hello/full/nationalism/hello.nationalism",
    "extension": ".nationalism",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "NATO phonetic alphabet",
+   "layer": "full",
+   "path": "hello/full/nato-phonetic-alphabet/hello.nato_phonetic_alphabet",
+   "extension": ".nato_phonetic_alphabet",
    "type": null,
    "color": null,
    "hue": null,
@@ -48631,6 +49698,17 @@
    "layer": "full",
    "path": "hello/full/nepali/hello.nepali",
    "extension": ".nepali",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "NES Assembly",
+   "layer": "full",
+   "path": "hello/full/nes-assembly/hello.nes_assembly",
+   "extension": ".nes_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -49947,6 +51025,17 @@
    "real_template": false
   },
   {
+   "language": "NRZ",
+   "layer": "full",
+   "path": "hello/full/nrz/hello.nrz",
+   "extension": ".nrz",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "NS Basic",
    "layer": "full",
    "path": "hello/full/ns-basic/hello.ns_basic",
@@ -50281,6 +51370,17 @@
    "layer": "full",
    "path": "hello/full/nusmv/hello.nusmv",
    "extension": ".nusmv",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "NVPTX",
+   "layer": "full",
+   "path": "hello/full/nvptx/hello.nvptx",
+   "extension": ".nvptx",
    "type": null,
    "color": null,
    "hue": null,
@@ -51223,6 +52323,17 @@
    "real_template": false
   },
   {
+   "language": "OMF",
+   "layer": "full",
+   "path": "hello/full/omf/hello.omf",
+   "extension": ".omf",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Omg",
    "layer": "full",
    "path": "hello/full/omg/hello.omg",
@@ -51470,6 +52581,17 @@
    "path": "hello/full/opa/hello.opa",
    "extension": ".opa",
    "type": "programming",
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Opal assembler",
+   "layer": "full",
+   "path": "hello/full/opal-assembler/hello.opal_assembler",
+   "extension": ".opal_assembler",
+   "type": null,
    "color": null,
    "hue": null,
    "runner": null,
@@ -52433,6 +53555,17 @@
    "real_template": false
   },
   {
+   "language": "Packed pixel",
+   "layer": "full",
+   "path": "hello/full/packed-pixel/hello.packed_pixel",
+   "extension": ".packed_pixel",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Packlang",
    "layer": "full",
    "path": "hello/full/packlang/hello.packlang",
@@ -53192,6 +54325,17 @@
    "real_template": false
   },
   {
+   "language": "PDF binary",
+   "layer": "full",
+   "path": "hello/full/pdf-binary/hello.pdf_binary",
+   "extension": ".pdf_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "PDF downloads",
    "layer": "full",
    "path": "hello/full/pdf-downloads/hello.pdf_downloads",
@@ -53229,6 +54373,17 @@
    "layer": "full",
    "path": "hello/full/pdp-10/hello.pdp_10",
    "extension": ".pdp_10",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PDP-11 Assembly",
+   "layer": "full",
+   "path": "hello/full/pdp-11-assembly/hello.pdp_11_assembly",
+   "extension": ".pdp_11_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -53295,6 +54450,17 @@
    "layer": "full",
    "path": "hello/full/pdp-9/hello.pdp_9",
    "extension": ".pdp_9",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PE format",
+   "layer": "full",
+   "path": "hello/full/pe-format/hello.pe_format",
+   "extension": ".pe_format",
    "type": null,
    "color": null,
    "hue": null,
@@ -53828,6 +54994,50 @@
    "hue": null,
    "runner": null,
    "real_template": true
+  },
+  {
+   "language": "PIC Assembly",
+   "layer": "full",
+   "path": "hello/full/pic-assembly/hello.pic_assembly",
+   "extension": ".pic_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PIC16 Assembly",
+   "layer": "full",
+   "path": "hello/full/pic16-assembly/hello.pic16_assembly",
+   "extension": ".pic16_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PIC18 Assembly",
+   "layer": "full",
+   "path": "hello/full/pic18-assembly/hello.pic18_assembly",
+   "extension": ".pic18_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PIC32 Assembly",
+   "layer": "full",
+   "path": "hello/full/pic32-assembly/hello.pic32_assembly",
+   "extension": ".pic32_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
   },
   {
    "language": "Pick",
@@ -54369,6 +55579,17 @@
    "real_template": false
   },
   {
+   "language": "Plan 9 Assembly",
+   "layer": "full",
+   "path": "hello/full/plan-9-assembly/hello.plan_9_assembly",
+   "extension": ".plan_9_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "PLANC",
    "layer": "full",
    "path": "hello/full/planc/hello.planc",
@@ -54472,6 +55693,17 @@
    "layer": "full",
    "path": "hello/full/playlist/hello.playlist",
    "extension": ".playlist",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PlayStation Assembly",
+   "layer": "full",
+   "path": "hello/full/playstation-assembly/hello.playstation_assembly",
+   "extension": ".playstation_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -54637,6 +55869,17 @@
    "layer": "full",
    "path": "hello/full/png/hello.png",
    "extension": ".png",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PNG binary",
+   "layer": "full",
+   "path": "hello/full/png-binary/hello.png_binary",
+   "extension": ".png_binary",
    "type": null,
    "color": null,
    "hue": null,
@@ -55385,6 +56628,17 @@
    "layer": "full",
    "path": "hello/full/powerlist/hello.powerlist",
    "extension": ".powerlist",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PowerPC Assembly",
+   "layer": "full",
+   "path": "hello/full/powerpc-assembly/hello.powerpc_assembly",
+   "extension": ".powerpc_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -56551,6 +57805,17 @@
    "layer": "full",
    "path": "hello/full/ptsl/hello.ptsl",
    "extension": ".ptsl",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "PTX",
+   "layer": "full",
+   "path": "hello/full/ptx/hello.ptx",
+   "extension": ".ptx",
    "type": null,
    "color": null,
    "hue": null,
@@ -58461,6 +59726,17 @@
    "real_template": false
   },
   {
+   "language": "RAR binary",
+   "layer": "full",
+   "path": "hello/full/rar-binary/hello.rar_binary",
+   "extension": ".rar_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "rarVM",
    "layer": "full",
    "path": "hello/full/rarvm/hello.rarvm",
@@ -58553,6 +59829,17 @@
    "layer": "full",
    "path": "hello/full/rattle/hello.rattle",
    "extension": ".rattle",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Raw bytes",
+   "layer": "full",
+   "path": "hello/full/raw-bytes/hello.raw_bytes",
+   "extension": ".raw_bytes",
    "type": null,
    "color": null,
    "hue": null,
@@ -60408,6 +61695,28 @@
    "real_template": false
   },
   {
+   "language": "RISC-V Assembly",
+   "layer": "full",
+   "path": "hello/full/risc-v-assembly/hello.risc_v_assembly",
+   "extension": ".risc_v_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "RISC-V RV32I Assembly",
+   "layer": "full",
+   "path": "hello/full/risc-v-rv32i-assembly/hello.risc_v_rv32i_assembly",
+   "extension": ".risc_v_rv32i_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "rise",
    "layer": "full",
    "path": "hello/full/rise/hello.rise",
@@ -61189,6 +62498,17 @@
    "real_template": false
   },
   {
+   "language": "Run-length encoding",
+   "layer": "full",
+   "path": "hello/full/run-length-encoding/hello.run_length_encoding",
+   "extension": ".run_length_encoding",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "RunR",
    "layer": "full",
    "path": "hello/full/runr/hello.runr",
@@ -61292,6 +62612,17 @@
    "layer": "full",
    "path": "hello/full/ryua/hello.ryua",
    "extension": ".ryua",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "RZI",
+   "layer": "full",
+   "path": "hello/full/rzi/hello.rzi",
+   "extension": ".rzi",
    "type": null,
    "color": null,
    "hue": null,
@@ -64940,6 +66271,28 @@
    "real_template": false
   },
   {
+   "language": "Snappy binary",
+   "layer": "full",
+   "path": "hello/full/snappy-binary/hello.snappy_binary",
+   "extension": ".snappy_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "SNES Assembly",
+   "layer": "full",
+   "path": "hello/full/snes-assembly/hello.snes_assembly",
+   "extension": ".snes_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Snigl",
    "layer": "full",
    "path": "hello/full/snigl/hello.snigl",
@@ -65527,6 +66880,28 @@
    "layer": "full",
    "path": "hello/full/spanish/hello.spanish",
    "extension": ".spanish",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "SPARC Assembly",
+   "layer": "full",
+   "path": "hello/full/sparc-assembly/hello.sparc_assembly",
+   "extension": ".sparc_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Sparc64 Assembly",
+   "layer": "full",
+   "path": "hello/full/sparc64-assembly/hello.sparc64_assembly",
+   "extension": ".sparc64_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -66275,6 +67650,17 @@
    "layer": "full",
    "path": "hello/full/squishy2k/hello.squishy2k",
    "extension": ".squishy2k",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "SREC",
+   "layer": "full",
+   "path": "hello/full/srec/hello.srec",
+   "extension": ".srec",
    "type": null,
    "color": null,
    "hue": null,
@@ -68878,6 +70264,17 @@
    "real_template": false
   },
   {
+   "language": "Taiji",
+   "layer": "full",
+   "path": "hello/full/taiji/hello.taiji",
+   "extension": ".taiji",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Tailor",
    "layer": "full",
    "path": "hello/full/tailor/hello.tailor",
@@ -69054,6 +70451,17 @@
    "real_template": false
   },
   {
+   "language": "TAR binary",
+   "layer": "full",
+   "path": "hello/full/tar-binary/hello.tar_binary",
+   "extension": ".tar_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "TardiSHA",
    "layer": "full",
    "path": "hello/full/tardisha/hello.tardisha",
@@ -69091,6 +70499,28 @@
    "layer": "full",
    "path": "hello/full/tarski/hello.tarski",
    "extension": ".tarski",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "TASM",
+   "layer": "full",
+   "path": "hello/full/tasm/hello.tasm",
+   "extension": ".tasm",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "TASM32",
+   "layer": "full",
+   "path": "hello/full/tasm32/hello.tasm32",
+   "extension": ".tasm32",
    "type": null,
    "color": null,
    "hue": null,
@@ -70125,6 +71555,17 @@
    "layer": "full",
    "path": "hello/full/thonklang/hello.thonklang",
    "extension": ".thonklang",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Thorn",
+   "layer": "full",
+   "path": "hello/full/thorn/hello.thorn",
+   "extension": ".thorn",
    "type": null,
    "color": null,
    "hue": null,
@@ -73124,6 +74565,28 @@
    "real_template": false
   },
   {
+   "language": "Unicode中文",
+   "layer": "full",
+   "path": "hello/full/unicode/hello.unicode",
+   "extension": ".unicode",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Unicode code point",
+   "layer": "full",
+   "path": "hello/full/unicode-code-point/hello.unicode_code_point",
+   "extension": ".unicode_code_point",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Unicodefuck",
    "layer": "full",
    "path": "hello/full/unicodefuck/hello.unicodefuck",
@@ -73238,6 +74701,17 @@
    "layer": "full",
    "path": "hello/full/unity/hello.unity",
    "extension": ".unity",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "UNIVAC 1103",
+   "layer": "full",
+   "path": "hello/full/univac-1103/hello.univac_1103",
+   "extension": ".univac_1103",
    "type": null,
    "color": null,
    "hue": null,
@@ -73597,6 +75071,50 @@
    "real_template": false
   },
   {
+   "language": "UTF-16",
+   "layer": "full",
+   "path": "hello/full/utf-16/hello.utf_16",
+   "extension": ".utf_16",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "UTF-32",
+   "layer": "full",
+   "path": "hello/full/utf-32/hello.utf_32",
+   "extension": ".utf_32",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "UTF-7",
+   "layer": "full",
+   "path": "hello/full/utf-7/hello.utf_7",
+   "extension": ".utf_7",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "UTF-8",
+   "layer": "full",
+   "path": "hello/full/utf-8/hello.utf_8",
+   "extension": ".utf_8",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "Utopia Divine",
    "layer": "full",
    "path": "hello/full/utopia-divine/hello.utopia_divine",
@@ -73821,6 +75339,17 @@
    "layer": "full",
    "path": "hello/full/vatery/hello.vatery",
    "extension": ".vatery",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "VAX Assembly",
+   "layer": "full",
+   "path": "hello/full/vax-assembly/hello.vax_assembly",
+   "extension": ".vax_assembly",
    "type": null,
    "color": null,
    "hue": null,
@@ -75093,10 +76622,10 @@
    "real_template": false
   },
   {
-   "language": "Wat",
+   "language": "WASM text format",
    "layer": "full",
-   "path": "hello/full/wat/hello.wat",
-   "extension": ".wat",
+   "path": "hello/full/wasm-text-format/hello.wasm_text_format",
+   "extension": ".wasm_text_format",
    "type": null,
    "color": null,
    "hue": null,
@@ -75104,10 +76633,32 @@
    "real_template": false
   },
   {
+   "language": "WAT",
+   "layer": "full",
+   "path": "hello/full/wat/hello.wat",
+   "extension": ".wat",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "WATBOL",
    "layer": "full",
    "path": "hello/full/watbol/hello.watbol",
    "extension": ".watbol",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Watcom Assembler",
+   "layer": "full",
+   "path": "hello/full/watcom-assembler/hello.watcom_assembler",
+   "extension": ".watcom_assembler",
    "type": null,
    "color": null,
    "hue": null,
@@ -75423,6 +76974,39 @@
    "real_template": false
   },
   {
+   "language": "WebAssembly Binary",
+   "layer": "full",
+   "path": "hello/full/webassembly-binary/hello.webassembly_binary",
+   "extension": ".webassembly_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "WebAssembly Text",
+   "layer": "full",
+   "path": "hello/full/webassembly-text/hello.webassembly_text",
+   "extension": ".webassembly_text",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "WebAssembly text format",
+   "layer": "full",
+   "path": "hello/full/webassembly-text-format/hello.webassembly_text_format",
+   "extension": ".webassembly_text_format",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "WebDNA",
    "layer": "full",
    "path": "hello/full/webdna/hello.webdna",
@@ -75608,6 +77192,17 @@
    "hue": null,
    "runner": null,
    "real_template": false
+  },
+  {
+   "language": "Wenyan",
+   "layer": "full",
+   "path": "hello/full/wenyan/hello.wenyan",
+   "extension": ".wenyan",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
   },
   {
    "language": "WFS",
@@ -75922,6 +77517,17 @@
    "layer": "full",
    "path": "hello/full/windows-powershell/hello.windows_powershell",
    "extension": ".windows_powershell",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Windows-1252",
+   "layer": "full",
+   "path": "hello/full/windows-1252/hello.windows_1252",
+   "extension": ".windows_1252",
    "type": null,
    "color": null,
    "hue": null,
@@ -76575,7 +78181,18 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
+  },
+  {
+   "language": "x86-64 Assembly",
+   "layer": "full",
+   "path": "hello/full/x86-64-assembly/hello.x86_64_assembly",
+   "extension": ".x86_64_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": true
   },
   {
    "language": "XAH",
@@ -77194,6 +78811,17 @@
    "real_template": false
   },
   {
+   "language": "XZ binary",
+   "layer": "full",
+   "path": "hello/full/xz-binary/hello.xz_binary",
+   "extension": ".xz_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Y-sharp",
    "layer": "full",
    "path": "hello/full/y-sharp/hello.y_sharp",
@@ -77385,6 +79013,17 @@
    "layer": "full",
    "path": "hello/full/yash/hello.yash",
    "extension": ".yash",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "YASM",
+   "layer": "full",
+   "path": "hello/full/yasm/hello.yasm",
+   "extension": ".yasm",
    "type": null,
    "color": null,
    "hue": null,
@@ -77722,6 +79361,28 @@
    "real_template": false
   },
   {
+   "language": "Z180 Assembly",
+   "layer": "full",
+   "path": "hello/full/z180-assembly/hello.z180_assembly",
+   "extension": ".z180_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Z80 Assembly",
+   "layer": "full",
+   "path": "hello/full/z80-assembly/hello.z80_assembly",
+   "extension": ".z80_assembly",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Zalgo",
    "layer": "full",
    "path": "hello/full/zalgo/hello.zalgo",
@@ -77898,6 +79559,17 @@
    "real_template": false
   },
   {
+   "language": "ZIP binary",
+   "layer": "full",
+   "path": "hello/full/zip-binary/hello.zip_binary",
+   "extension": ".zip_binary",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
    "language": "Zirconium",
    "layer": "full",
    "path": "hello/full/zirconium/hello.zirconium",
@@ -78056,6 +79728,17 @@
    "layer": "full",
    "path": "hello/full/zsh-plugins/hello.zsh_plugins",
    "extension": ".zsh_plugins",
+   "type": null,
+   "color": null,
+   "hue": null,
+   "runner": null,
+   "real_template": false
+  },
+  {
+   "language": "Zstandard binary",
+   "layer": "full",
+   "path": "hello/full/zstandard-binary/hello.zstandard_binary",
+   "extension": ".zstandard_binary",
    "type": null,
    "color": null,
    "hue": null,

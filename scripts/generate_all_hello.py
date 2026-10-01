@@ -595,6 +595,39 @@ HELLO: dict[str, str] = {
     "linker script": 'ENTRY(_start)\n',
     "coff": '',
     "llvm ir": 'define i32 @main() {\n  ret i32 0\n}\n',
+    # ---- 中文编程语言 ----------------------------------------------------
+    "仓颉": 'main(): Int64 {\n    println("Hello World!")\n    return 0\n}\n',
+    "cangjie": 'main(): Int64 {\n    println("Hello World!")\n    return 0\n}\n',
+    "文言": '吾語「Hello World!」\n',
+    "wenyan": '吾語「Hello World!」\n',
+    "易语言": '.版本 2\n.局部变量 文本, 文本型\n文本 ＝ “Hello World!”\n调试输出 (文本)\n',
+    "蚂蚁": '蚂蚁编程语言 // Hello World!\n输出 “Hello World!”\n',
+    "飞灵": '飞灵语言 // Hello World!\n打印 “Hello World!”\n',
+    "武林": '打印 “Hello World!”\n',
+    "太极": '打印 “Hello World!”\n',
+    # ---- 汇编方言 --------------------------------------------------------
+    "x86 assembly": 'section .data\n  msg db "Hello World!", 10\nsection .text\n  global _start\n_start:\n  mov eax, 4\n  mov ebx, 1\n  mov ecx, msg\n  mov edx, 13\n  int 0x80\n  mov eax, 1\n  xor ebx, ebx\n  int 0x80\n',
+    "x86-64 assembly": 'section .data\n  msg db "Hello World!", 10\nsection .text\n  global _start\n_start:\n  mov rax, 1\n  mov rdi, 1\n  lea rsi, [rel msg]\n  mov rdx, 13\n  syscall\n  mov rax, 60\n  xor rdi, rdi\n  syscall\n',
+    "arm assembly": '.data\nmsg: .ascii "Hello World!\\n"\n.text\n.global _start\n_start:\n  mov r0, #1\n  mov r1, =msg\n  mov r2, #13\n  mov r7, #4\n  svc #0\n  mov r0, #0\n  mov r7, #1\n  svc #0\n',
+    "6502 assembly": 'LDA #$0b\nSTA $0200\nLDX #$00\nLDA msg,x\nSTA $0201,x\nINX\nINX\nCPX #$0d\nBNE loop\nJMP $0800\nmsg:\n.byte "Hello World!", $0a, $00\n',
+    "mips assembly": '.data\nmsg: .ascii "Hello World!\\n"\n.text\n.globl main\nmain:\n  li $v0, 4\n  la $a0, msg\n  syscall\n  li $v0, 10\n  syscall\n',
+    "webassembly text": '(module\n  (data (i32.const 0) "Hello World!")\n  (func (export "_start") (result i32)\n    i32.const 0\n  )\n)\n',
+    "wat": '(module (func (export "_start") (result i32) i32.const 0))\n',
+    "nasm": 'section .data\n  msg db "Hello World!", 10\nsection .text\n  global _start\n_start:\n  mov rax, 1\n  mov rdi, 1\n  lea rsi, [rel msg]\n  mov rdx, 13\n  syscall\n',
+    "masm": '.data\nmsg db "Hello World!",13,10\n.code\nmain proc\n  mov ax, 4C00h\n  int 21h\nmain endp\nend main\n',
+    "gas": '.section .data\nmsg: .ascii "Hello World!\\n"\n.text\n.globl _start\n_start:\n  movl $4, %eax\n  movl $1, %ebx\n  movl $msg, %ecx\n  movl $13, %edx\n  int $0x80\n  movl $1, %eax\n  xorl %ebx, %ebx\n  int $0x80\n',
+    # ---- 二进制 / 编码 ---------------------------------------------------
+    "binary": '\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64\x21\x0a',
+    "base64": 'SGVsbG8gV29ybGQhCg==\n',
+    "hexadecimal": '48656c6c6f20576f726c64210a\n',
+    "utf-8": '# Hello World! written as UTF-8 bytes\nHello World!\n',
+    "base32": 'JBSWY3DPEBLW64TMMQ======\n',
+    "morse code": '.... . .-.. .-.. --- / .-- --- .-. .-.. -.. !\n',
+    "brainfuck variants": '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.\n',
+    "brainfuck++": '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.\n',
+    "brainfuck snl": '++++++++[>+<-]>.<lo>[+<++++++++++>-]<.\n',
+    "brainlol": 'loldlroOl lolOlroOl lolOlroOl lolOlroOl\n',
+    "plusfuck": '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.\n',
 }
 
 # languages we know how to actually execute: name -> shell command template
@@ -875,6 +908,16 @@ def safe_dir(base: Path, slug: str, taken: dict) -> Path:
     return d
 
 
+SAFE_EXT = re.compile(r"^\.[A-Za-z0-9._#+-]{0,24}$")
+
+
+def choose_full_extension(rec: dict) -> str:
+    for e in rec.get("extensions") or []:
+        if e and SAFE_EXT.match(e) and "/" not in e and "\\" not in e:
+            return e
+    return f".{rec['slug'].replace('-', '_')}"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--clean", action="store_true", help="wipe hello/ first")
@@ -940,10 +983,7 @@ def main() -> int:
         if rec["name"].lower() in core_names:
             continue
         ext = ""
-        if rec.get("extensions"):
-            ext = sorted(rec["extensions"], key=len)[0]
-        if not ext or ext in (".md", ".txt", ".text"):
-            ext = f".{rec['slug'].replace('-', '_')}"
+        ext = choose_full_extension(rec)
         if not ext.startswith("."):
             ext = "." + ext
         d = safe_dir(full_dir, rec["slug"], taken_full)

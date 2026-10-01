@@ -1,5 +1,23 @@
 [
  {
+  "name": ".NET IL",
+  "slug": "net-il",
+  "key": ".net il",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "05AB1E",
   "slug": "05ab1e",
   "key": "05ab1e",
@@ -52,7 +70,7 @@
  },
  {
   "name": "1#=",
-  "slug": "1",
+  "slug": "1#",
   "key": "1#",
   "aliases": [],
   "extensions": [],
@@ -70,7 +88,7 @@
  },
  {
   "name": "1#/e",
-  "slug": "1-e",
+  "slug": "1#-e",
   "key": "1#/e",
   "aliases": [],
   "extensions": [],
@@ -88,7 +106,7 @@
  },
  {
   "name": "1+1",
-  "slug": "1-1",
+  "slug": "1+1",
   "key": "1+1",
   "aliases": [],
   "extensions": [],
@@ -528,6 +546,24 @@
   "groups": []
  },
  {
+  "name": "3DO Assembly",
+  "slug": "3do-assembly",
+  "key": "3do assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "3switchBF",
   "slug": "3switchbf",
   "key": "3switchbf",
@@ -690,6 +726,60 @@
   "groups": []
  },
  {
+  "name": "6502 Assembly",
+  "slug": "6502-assembly",
+  "key": "6502 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "65C02 Assembly",
+  "slug": "65c02-assembly",
+  "key": "65c02 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "68k Assembly",
+  "slug": "68k-assembly",
+  "key": "68k assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "6chars",
   "slug": "6chars",
   "key": "6chars",
@@ -742,6 +832,96 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "7z binary",
+  "slug": "7z-binary",
+  "key": "7z binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "80486 Assembly",
+  "slug": "80486-assembly",
+  "key": "80486 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "8051 Assembly",
+  "slug": "8051-assembly",
+  "key": "8051 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "8080 Assembly",
+  "slug": "8080-assembly",
+  "key": "8080 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "8086 Assembly",
+  "slug": "8086-assembly",
+  "key": "8086 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "8BallScript",
@@ -1000,6 +1180,24 @@
   "groups": []
  },
  {
+  "name": "AArch64 Assembly",
+  "slug": "aarch64-assembly",
+  "key": "aarch64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Aardvark",
   "slug": "aardvark",
   "key": "aardvark",
@@ -1119,7 +1317,7 @@
  },
  {
   "name": "Abcdefghijklmnopqrstuvwxyz+",
-  "slug": "abcdefghijklmnopqrstuvwxyz",
+  "slug": "abcdefghijklmnopqrstuvwxyz+",
   "key": "abcdefghijklmnopqrstuvwxyz+",
   "aliases": [],
   "extensions": [],
@@ -2989,7 +3187,7 @@
  },
  {
   "name": "AHQ9+-",
-  "slug": "ahq9",
+  "slug": "ahq9+",
   "key": "ahq9+-",
   "aliases": [],
   "extensions": [],
@@ -3296,6 +3494,24 @@
   "is_core": true,
   "groups": [
    "blockchain"
+  ]
+ },
+ {
+  "name": "Aiken code",
+  "slug": "aiken-code",
+  "key": "aiken code",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -4282,6 +4498,42 @@
   "is_core": false,
   "groups": [
    "data_science"
+  ]
+ },
+ {
+  "name": "Alpha Assembly",
+  "slug": "alpha-assembly",
+  "key": "alpha assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "Alpha64",
+  "slug": "alpha64",
+  "key": "alpha64",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -6568,6 +6820,24 @@
   "groups": []
  },
  {
+  "name": "ARC Assembly",
+  "slug": "arc-assembly",
+  "key": "arc assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "ARCAL",
   "slug": "arcal",
   "key": "arcal",
@@ -6764,6 +7034,24 @@
   "groups": []
  },
  {
+  "name": "Arithmetic coding",
+  "slug": "arithmetic-coding",
+  "key": "arithmetic coding",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Ark",
   "slug": "ark",
   "key": "ark",
@@ -6815,6 +7103,24 @@
   "groups": []
  },
  {
+  "name": "ARM Assembly",
+  "slug": "arm-assembly",
+  "key": "arm assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "ARM Cortex-M",
   "slug": "arm-cortex-m",
   "key": "arm cortex-m",
@@ -6845,6 +7151,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "ARM64 Assembly",
+  "slug": "arm64-assembly",
+  "key": "arm64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "ARMLite",
@@ -6981,7 +7305,7 @@
  },
  {
   "name": "Array++",
-  "slug": "array",
+  "slug": "array++",
   "key": "array++",
   "aliases": [],
   "extensions": [],
@@ -7238,6 +7562,24 @@
   "groups": []
  },
  {
+  "name": "ASCII",
+  "slug": "ascii",
+  "key": "ascii",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "ASCII Code",
   "slug": "ascii-code",
   "key": "ascii code",
@@ -7252,6 +7594,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Ascii85",
+  "slug": "ascii85",
+  "key": "ascii85",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "AsciiDoc",
@@ -7408,7 +7768,7 @@
  },
  {
   "name": "ASF+SDF",
-  "slug": "asf-sdf",
+  "slug": "asf+sdf",
   "key": "asf+sdf",
   "aliases": [],
   "extensions": [],
@@ -7541,6 +7901,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "ASM.js",
+  "slug": "asm-js",
+  "key": "asm.js",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "asm2bf",
@@ -7705,7 +8083,7 @@
  },
  {
   "name": "AssemblerFuck++",
-  "slug": "assemblerfuck",
+  "slug": "assemblerfuck++",
   "key": "assemblerfuck++",
   "aliases": [],
   "extensions": [],
@@ -7757,7 +8135,8 @@
    "linguist",
    "wikipedia",
    "esolangs",
-   "builtin:misc"
+   "builtin:misc",
+   "builtin:assembly_dialects"
   ],
   "linguist_name": "Assembly",
   "has_linguist_color": true,
@@ -7775,12 +8154,15 @@
   "color": null,
   "type": null,
   "source": [
-   "wikipedia"
+   "wikipedia",
+   "builtin:assembly_dialects"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Assert",
@@ -7848,7 +8230,7 @@
  },
  {
   "name": "Ast*R***",
-  "slug": "ast-r",
+  "slug": "ast*r***",
   "key": "ast*r***",
   "aliases": [],
   "extensions": [],
@@ -7982,6 +8364,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Atari 6502 Assembly",
+  "slug": "atari-6502-assembly",
+  "key": "atari 6502 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Atari BASIC",
@@ -8685,6 +9085,42 @@
   ]
  },
  {
+  "name": "AVR Assembly",
+  "slug": "avr-assembly",
+  "key": "avr assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "AVR32 Assembly",
+  "slug": "avr32-assembly",
+  "key": "avr32 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Avro",
   "slug": "avro",
   "key": "avro",
@@ -9297,7 +9733,7 @@
  },
  {
   "name": "Backshar+",
-  "slug": "backshar",
+  "slug": "backshar+",
   "key": "backshar+",
   "aliases": [],
   "extensions": [],
@@ -9390,6 +9826,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Bagua",
+  "slug": "bagua",
+  "key": "bagua",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "BaguaFuck",
@@ -9669,6 +10123,78 @@
   "groups": []
  },
  {
+  "name": "Base16",
+  "slug": "base16",
+  "key": "base16",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Base32",
+  "slug": "base32",
+  "key": "base32",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Base58",
+  "slug": "base58",
+  "key": "base58",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Base62",
+  "slug": "base62",
+  "key": "base62",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Base64",
   "slug": "base64",
   "key": "base64",
@@ -9677,12 +10203,51 @@
   "color": null,
   "type": null,
   "source": [
-   "esolangs"
+   "esolangs",
+   "builtin:binary_data"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Base85",
+  "slug": "base85",
+  "key": "base85",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Base95",
+  "slug": "base95",
+  "key": "base95",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Bash Shell",
@@ -9974,6 +10539,24 @@
   "groups": []
  },
  {
+  "name": "BCD code",
+  "slug": "bcd-code",
+  "key": "bcd code",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "BCDFuck",
   "slug": "bcdfuck",
   "key": "bcdfuck",
@@ -10209,6 +10792,24 @@
   "groups": [
    "functional",
    "concurrency"
+  ]
+ },
+ {
+  "name": "Bee assembler",
+  "slug": "bee-assembler",
+  "key": "bee assembler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -10970,7 +11571,7 @@
  },
  {
   "name": "BF++",
-  "slug": "bf",
+  "slug": "bf++",
   "key": "bf++",
   "aliases": [],
   "extensions": [],
@@ -10986,7 +11587,7 @@
  },
  {
   "name": "BF+BF",
-  "slug": "bf-bf",
+  "slug": "bf+bf",
   "key": "bf+bf",
   "aliases": [],
   "extensions": [],
@@ -11286,6 +11887,24 @@
   "groups": []
  },
  {
+  "name": "Big5编码",
+  "slug": "big5编码",
+  "key": "big5编码",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
   "name": "BigBrain",
   "slug": "bigbrain",
   "key": "bigbrain",
@@ -11398,6 +12017,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Binary",
+  "slug": "binary",
+  "key": "binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Binary Brainfuck",
@@ -12118,7 +12755,7 @@
   "groups": []
  },
  {
-  "name": "BITwise",
+  "name": "Bitwise",
   "slug": "bitwise",
   "key": "bitwise",
   "aliases": [],
@@ -12126,12 +12763,14 @@
   "color": null,
   "type": null,
   "source": [
+   "builtin:binary_data",
    "builtin:golf"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
   "groups": [
+   "binary_data",
    "golf"
   ]
  },
@@ -12931,6 +13570,24 @@
   "is_core": false,
   "groups": [
    "markup_data"
+  ]
+ },
+ {
+  "name": "BMP binary",
+  "slug": "bmp-binary",
+  "key": "bmp binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -13751,6 +14408,24 @@
   "groups": []
  },
  {
+  "name": "Braille encoding",
+  "slug": "braille-encoding",
+  "key": "braille encoding",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Braimmental",
   "slug": "braimmental",
   "key": "braimmental",
@@ -13896,7 +14571,7 @@
  },
  {
   "name": "Brainbits+",
-  "slug": "brainbits",
+  "slug": "brainbits+",
   "key": "brainbits+",
   "aliases": [],
   "extensions": [],
@@ -14120,7 +14795,7 @@
  },
  {
   "name": "Brainf*ck",
-  "slug": "brainf-ck",
+  "slug": "brainf*ck",
   "key": "brainf*ck",
   "aliases": [],
   "extensions": [],
@@ -14184,7 +14859,7 @@
  },
  {
   "name": "BrainfisHQ9+",
-  "slug": "brainfishq9",
+  "slug": "brainfishq9+",
   "key": "brainfishq9+",
   "aliases": [],
   "extensions": [],
@@ -14386,7 +15061,7 @@
  },
  {
   "name": "Brainfuck+",
-  "slug": "brainfuck",
+  "slug": "brainfuck+",
   "key": "brainfuck+",
   "aliases": [],
   "extensions": [],
@@ -14402,7 +15077,7 @@
  },
  {
   "name": "Brainfuck++",
-  "slug": "brainfuck",
+  "slug": "brainfuck++",
   "key": "brainfuck++",
   "aliases": [],
   "extensions": [],
@@ -14418,7 +15093,7 @@
  },
  {
   "name": "Brainfuck+10",
-  "slug": "brainfuck-10",
+  "slug": "brainfuck+10",
   "key": "brainfuck+10",
   "aliases": [],
   "extensions": [],
@@ -14434,7 +15109,7 @@
  },
  {
   "name": "Brainfuck+3",
-  "slug": "brainfuck-3",
+  "slug": "brainfuck+3",
   "key": "brainfuck+3",
   "aliases": [],
   "extensions": [],
@@ -16064,6 +16739,24 @@
   "groups": []
  },
  {
+  "name": "Burrows-Wheeler",
+  "slug": "burrows-wheeler",
+  "key": "burrows-wheeler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Business",
   "slug": "business",
   "key": "business",
@@ -16280,6 +16973,24 @@
   "groups": []
  },
  {
+  "name": "Bytecode",
+  "slug": "bytecode",
+  "key": "bytecode",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Bytemap",
   "slug": "bytemap",
   "key": "bytemap",
@@ -16326,6 +17037,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "BZIP2 binary",
+  "slug": "bzip2-binary",
+  "key": "bzip2 binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "C",
@@ -16519,7 +17248,7 @@
  },
  {
   "name": "C#",
-  "slug": "c",
+  "slug": "c#",
   "key": "c#",
   "aliases": [
    "csharp",
@@ -16550,7 +17279,7 @@
  },
  {
   "name": "C++",
-  "slug": "c",
+  "slug": "c++",
   "key": "c++",
   "aliases": [
    "cpp"
@@ -16584,7 +17313,7 @@
  },
  {
   "name": "C++ AMP",
-  "slug": "c-amp",
+  "slug": "c++-amp",
   "key": "c++ amp",
   "aliases": [],
   "extensions": [],
@@ -16600,7 +17329,7 @@
  },
  {
   "name": "C+++",
-  "slug": "c",
+  "slug": "c+++",
   "key": "c+++",
   "aliases": [],
   "extensions": [],
@@ -16616,7 +17345,7 @@
  },
  {
   "name": "C++++",
-  "slug": "c",
+  "slug": "c++++",
   "key": "c++++",
   "aliases": [],
   "extensions": [],
@@ -16629,6 +17358,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "C--",
+  "slug": "c",
+  "key": "c--",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "C-- compiler",
+  "slug": "c-compiler",
+  "key": "c-- compiler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "C-LONG",
@@ -17418,12 +18183,15 @@
   "type": "programming",
   "source": [
    "linguist",
-   "wikipedia"
+   "wikipedia",
+   "builtin:chinese"
   ],
   "linguist_name": "Cangjie",
   "has_linguist_color": true,
   "is_core": true,
-  "groups": []
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "Cannoli",
@@ -17663,7 +18431,7 @@
  },
  {
   "name": "CAR#",
-  "slug": "car",
+  "slug": "car#",
   "key": "car#",
   "aliases": [],
   "extensions": [],
@@ -18839,7 +19607,7 @@
  },
  {
   "name": "Charm++",
-  "slug": "charm",
+  "slug": "charm++",
   "key": "charm++",
   "aliases": [],
   "extensions": [],
@@ -20389,7 +21157,7 @@
  },
  {
   "name": "CLI C#",
-  "slug": "cli-c",
+  "slug": "cli-c#",
   "key": "cli c#",
   "aliases": [],
   "extensions": [],
@@ -21455,6 +22223,42 @@
   "groups": []
  },
  {
+  "name": "COFF",
+  "slug": "coff",
+  "key": "coff",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "COFF object",
+  "slug": "coff-object",
+  "key": "coff object",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "CoffeeScript",
   "slug": "coffeescript",
   "key": "coffeescript",
@@ -21924,6 +22728,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Commodore 64 Assembly",
+  "slug": "commodore-64-assembly",
+  "key": "commodore 64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Commodore BASIC",
@@ -22789,7 +23611,7 @@
  },
  {
   "name": "Config+",
-  "slug": "config",
+  "slug": "config+",
   "key": "config+",
   "aliases": [],
   "extensions": [],
@@ -24231,7 +25053,7 @@
  },
  {
   "name": "Cree#",
-  "slug": "cree",
+  "slug": "cree#",
   "key": "cree#",
   "aliases": [],
   "extensions": [],
@@ -25835,6 +26657,24 @@
   "groups": []
  },
  {
+  "name": "Dalvik Bytecode",
+  "slug": "dalvik-bytecode",
+  "key": "dalvik bytecode",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "DAML-S",
   "slug": "daml-s",
   "key": "daml-s",
@@ -26487,7 +27327,7 @@
  },
  {
   "name": "Datalog++",
-  "slug": "datalog",
+  "slug": "datalog++",
   "key": "datalog++",
   "aliases": [],
   "extensions": [],
@@ -27013,7 +27853,7 @@
  },
  {
   "name": "Deadfish++",
-  "slug": "deadfish",
+  "slug": "deadfish++",
   "key": "deadfish++",
   "aliases": [],
   "extensions": [],
@@ -27316,6 +28156,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Deflate",
+  "slug": "deflate",
+  "key": "deflate",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Defold",
@@ -29231,7 +30089,7 @@
  },
  {
   "name": "DNA#",
-  "slug": "dna",
+  "slug": "dna#",
   "key": "dna#",
   "aliases": [],
   "extensions": [],
@@ -29745,6 +30603,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "DOS executable",
+  "slug": "dos-executable",
+  "key": "dos executable",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "DOS Wedge",
@@ -30636,7 +31512,7 @@
  },
  {
   "name": "Dumbf*ck",
-  "slug": "dumbf-ck",
+  "slug": "dumbf*ck",
   "key": "dumbf*ck",
   "aliases": [],
   "extensions": [],
@@ -30794,6 +31670,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "DWARF",
+  "slug": "dwarf",
+  "key": "dwarf",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Dyalog APL",
@@ -31243,6 +32137,24 @@
   "groups": []
  },
  {
+  "name": "EBCDIC",
+  "slug": "ebcdic",
+  "key": "ebcdic",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "EBNF",
   "slug": "ebnf",
   "key": "ebnf",
@@ -31278,7 +32190,7 @@
  },
  {
   "name": "Ebur+",
-  "slug": "ebur",
+  "slug": "ebur+",
   "key": "ebur+",
   "aliases": [],
   "extensions": [],
@@ -32488,6 +33400,24 @@
   "groups": []
  },
  {
+  "name": "ELF",
+  "slug": "elf",
+  "key": "elf",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "elfroh",
   "slug": "elfroh",
   "key": "elfroh",
@@ -32793,7 +33723,7 @@
  },
  {
   "name": "Embedded C++",
-  "slug": "embedded-c",
+  "slug": "embedded-c++",
   "key": "embedded c++",
   "aliases": [],
   "extensions": [],
@@ -33267,7 +34197,7 @@
  },
  {
   "name": "English+",
-  "slug": "english",
+  "slug": "english+",
   "key": "english+",
   "aliases": [],
   "extensions": [],
@@ -33363,7 +34293,7 @@
  },
  {
   "name": "Enrtopy++",
-  "slug": "enrtopy",
+  "slug": "enrtopy++",
   "key": "enrtopy++",
   "aliases": [],
   "extensions": [],
@@ -33621,12 +34551,15 @@
   "color": null,
   "type": null,
   "source": [
-   "esolangs"
+   "esolangs",
+   "builtin:chinese"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "EPL Main",
@@ -33659,6 +34592,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "EPL语言",
+  "slug": "epl语言",
+  "key": "epl语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "EPOAQ",
@@ -35560,6 +36511,24 @@
   "groups": []
  },
  {
+  "name": "E语言",
+  "slug": "e语言",
+  "key": "e语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
   "name": "f",
   "slug": "f",
   "key": "f",
@@ -35630,7 +36599,7 @@
  },
  {
   "name": "F#",
-  "slug": "f",
+  "slug": "f#",
   "key": "f#",
   "aliases": [
    "fsharp"
@@ -35661,7 +36630,7 @@
  },
  {
   "name": "F*",
-  "slug": "f",
+  "slug": "f*",
   "key": "f*",
   "aliases": [
    "fstar"
@@ -35999,7 +36968,7 @@
  },
  {
   "name": "Falsebrain9Q+Fishload",
-  "slug": "falsebrain9q-fishload",
+  "slug": "falsebrain9q+fishload",
   "key": "falsebrain9q+fishload",
   "aliases": [],
   "extensions": [],
@@ -36167,6 +37136,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "FASM",
+  "slug": "fasm",
+  "key": "fasm",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "FASM.NET",
+  "slug": "fasm-net",
+  "key": "fasm.net",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "FAST",
@@ -36826,7 +37831,7 @@
  },
  {
   "name": "FiM++",
-  "slug": "fim",
+  "slug": "fim++",
   "key": "fim++",
   "aliases": [],
   "extensions": [],
@@ -37116,7 +38121,7 @@
  },
  {
   "name": "FISHQ9+",
-  "slug": "fishq9",
+  "slug": "fishq9+",
   "key": "fishq9+",
   "aliases": [],
   "extensions": [],
@@ -39339,7 +40344,7 @@
  },
  {
   "name": "Fractran++",
-  "slug": "fractran",
+  "slug": "fractran++",
   "key": "fractran++",
   "aliases": [],
   "extensions": [],
@@ -40124,7 +41129,7 @@
  },
  {
   "name": "Func++",
-  "slug": "func",
+  "slug": "func++",
   "key": "func++",
   "aliases": [],
   "extensions": [],
@@ -40799,6 +41804,42 @@
   "groups": []
  },
  {
+  "name": "Game Boy Assembly",
+  "slug": "game-boy-assembly",
+  "key": "game boy assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "Game Boy Color Assembly",
+  "slug": "game-boy-color-assembly",
+  "key": "game boy color assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Game Maker Language",
   "slug": "game-maker-language",
   "key": "game maker language",
@@ -40975,7 +42016,7 @@
  },
  {
   "name": "Gaot++",
-  "slug": "gaot",
+  "slug": "gaot++",
   "key": "gaot++",
   "aliases": [],
   "extensions": [],
@@ -41157,6 +42198,42 @@
   "groups": []
  },
  {
+  "name": "GB18030",
+  "slug": "gb18030",
+  "key": "gb18030",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "GB2312",
+  "slug": "gb2312",
+  "key": "gb2312",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
   "name": "Gbagbo",
   "slug": "gbagbo",
   "key": "gbagbo",
@@ -41171,6 +42248,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "GBK编码",
+  "slug": "gbk编码",
+  "key": "gbk编码",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "GBML",
@@ -41740,12 +42835,33 @@
   "color": null,
   "type": null,
   "source": [
-   "esolangs"
+   "esolangs",
+   "builtin:chinese"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "Genesis Assembly",
+  "slug": "genesis-assembly",
+  "key": "genesis assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Genetic",
@@ -41969,7 +43085,7 @@
  },
  {
   "name": "Geom++",
-  "slug": "geom",
+  "slug": "geom++",
   "key": "geom++",
   "aliases": [],
   "extensions": [],
@@ -42301,6 +43417,24 @@
   "is_core": false,
   "groups": [
    "markup_data"
+  ]
+ },
+ {
+  "name": "GIF binary",
+  "slug": "gif-binary",
+  "key": "gif binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -42863,6 +43997,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "GNU Assembler",
+  "slug": "gnu-assembler",
+  "key": "gnu assembler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "GNU Autotools",
@@ -43777,7 +44929,7 @@
  },
  {
   "name": "GOTO++",
-  "slug": "goto",
+  "slug": "goto++",
   "key": "goto++",
   "aliases": [],
   "extensions": [],
@@ -44882,7 +46034,7 @@
  },
  {
   "name": "Gt++fy",
-  "slug": "gt-fy",
+  "slug": "gt++fy",
   "key": "gt++fy",
   "aliases": [],
   "extensions": [],
@@ -45081,6 +46233,24 @@
   "is_core": false,
   "groups": [
    "data_science"
+  ]
+ },
+ {
+  "name": "GZIP binary",
+  "slug": "gzip-binary",
+  "key": "gzip binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -46587,7 +47757,7 @@
  },
  {
   "name": "Hello++",
-  "slug": "hello",
+  "slug": "hello++",
   "key": "hello++",
   "aliases": [],
   "extensions": [],
@@ -46734,6 +47904,24 @@
   "groups": []
  },
  {
+  "name": "Hex dump",
+  "slug": "hex-dump",
+  "key": "hex dump",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Hex0",
   "slug": "hex0",
   "key": "hex0",
@@ -46780,6 +47968,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Hexadecimal",
+  "slug": "hexadecimal",
+  "key": "hexadecimal",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Hexagon Assembly",
+  "slug": "hexagon-assembly",
+  "key": "hexagon assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Hexagony",
@@ -47488,6 +48712,24 @@
   ]
  },
  {
+  "name": "Hollerith code",
+  "slug": "hollerith-code",
+  "key": "hollerith code",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Hollow",
   "slug": "hollow",
   "key": "hollow",
@@ -47850,7 +49092,7 @@
  },
  {
   "name": "HQ99+LUFTBALLONS",
-  "slug": "hq99-luftballons",
+  "slug": "hq99+luftballons",
   "key": "hq99+luftballons",
   "aliases": [],
   "extensions": [],
@@ -47960,7 +49202,7 @@
  },
  {
   "name": "HTML+ECR",
-  "slug": "html-ecr",
+  "slug": "html+ecr",
   "key": "html+ecr",
   "aliases": [
    "ecr"
@@ -47980,7 +49222,7 @@
  },
  {
   "name": "HTML+EEX",
-  "slug": "html-eex",
+  "slug": "html+eex",
   "key": "html+eex",
   "aliases": [
    "eex",
@@ -48004,7 +49246,7 @@
  },
  {
   "name": "HTML+ERB",
-  "slug": "html-erb",
+  "slug": "html+erb",
   "key": "html+erb",
   "aliases": [
    "erb",
@@ -48029,7 +49271,7 @@
  },
  {
   "name": "HTML+PHP",
-  "slug": "html-php",
+  "slug": "html+php",
   "key": "html+php",
   "aliases": [],
   "extensions": [
@@ -48047,7 +49289,7 @@
  },
  {
   "name": "HTML+Razor",
-  "slug": "html-razor",
+  "slug": "html+razor",
   "key": "html+razor",
   "aliases": [
    "razor"
@@ -48203,6 +49445,24 @@
   "is_core": false,
   "groups": [
    "blockchain"
+  ]
+ },
+ {
+  "name": "Huffman coding",
+  "slug": "huffman-coding",
+  "key": "huffman coding",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -48818,6 +50078,24 @@
   "groups": []
  },
  {
+  "name": "IA-32 Assembly",
+  "slug": "ia-32-assembly",
+  "key": "ia-32 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "iag",
   "slug": "iag",
   "key": "iag",
@@ -48897,6 +50175,42 @@
   "is_core": false,
   "groups": [
    "template"
+  ]
+ },
+ {
+  "name": "IBM 360 Assembly",
+  "slug": "ibm-360-assembly",
+  "key": "ibm 360 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "IBM 5100",
+  "slug": "ibm-5100",
+  "key": "ibm 5100",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -49719,6 +51033,24 @@
   "groups": []
  },
  {
+  "name": "Image binary",
+  "slug": "image-binary",
+  "key": "image binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "ImageFuck",
   "slug": "imagefuck",
   "key": "imagefuck",
@@ -50502,6 +51834,24 @@
   "groups": []
  },
  {
+  "name": "Inferno Assembly",
+  "slug": "inferno-assembly",
+  "key": "inferno assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Infilisp",
   "slug": "infilisp",
   "key": "infilisp",
@@ -50628,6 +51978,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Inflate",
+  "slug": "inflate",
+  "key": "inflate",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "InfluxDB",
@@ -50934,6 +52302,24 @@
   "groups": []
  },
  {
+  "name": "Inline Assembly",
+  "slug": "inline-assembly",
+  "key": "inline assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Inno Setup",
   "slug": "inno-setup",
   "key": "inno setup",
@@ -51100,7 +52486,7 @@
  },
  {
   "name": "int**",
-  "slug": "int",
+  "slug": "int**",
   "key": "int**",
   "aliases": [],
   "extensions": [],
@@ -51242,6 +52628,24 @@
   "is_core": false,
   "groups": [
    "ancient"
+  ]
+ },
+ {
+  "name": "Intel HEX",
+  "slug": "intel-hex",
+  "key": "intel hex",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -52316,6 +53720,24 @@
   "groups": []
  },
  {
+  "name": "ISO-8859-1",
+  "slug": "iso-8859-1",
+  "key": "iso-8859-1",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Isomorphism",
   "slug": "isomorphism",
   "key": "isomorphism",
@@ -52513,6 +53935,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "IT8",
+  "slug": "it8",
+  "key": "it8",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Italian",
@@ -52771,7 +54211,7 @@
  },
  {
   "name": "J++",
-  "slug": "j",
+  "slug": "j++",
   "key": "j++",
   "aliases": [],
   "extensions": [],
@@ -53583,7 +55023,7 @@
  },
  {
   "name": "JavaScript+ERB",
-  "slug": "javascript-erb",
+  "slug": "javascript+erb",
   "key": "javascript+erb",
   "aliases": [],
   "extensions": [
@@ -54390,6 +55830,24 @@
   ]
  },
  {
+  "name": "JPEG binary",
+  "slug": "jpeg-binary",
+  "key": "jpeg binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "jq",
   "slug": "jq",
   "key": "jq",
@@ -54446,7 +55904,7 @@
  },
  {
   "name": "JS++",
-  "slug": "js",
+  "slug": "js++",
   "key": "js++",
   "aliases": [],
   "extensions": [],
@@ -55158,12 +56616,15 @@
   "color": null,
   "type": null,
   "source": [
-   "wikipedia"
+   "wikipedia",
+   "builtin:binary_data"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "JVM Groovy",
@@ -55232,7 +56693,7 @@
   "groups": []
  },
  {
-  "name": "K",
+  "name": "k",
   "slug": "k",
   "key": "k",
   "aliases": [],
@@ -55493,7 +56954,7 @@
  },
  {
   "name": "Karel++",
-  "slug": "karel",
+  "slug": "karel++",
   "key": "karel++",
   "aliases": [],
   "extensions": [],
@@ -60128,6 +61589,44 @@
   "groups": []
  },
  {
+  "name": "LLVM Assembly",
+  "slug": "llvm-assembly",
+  "key": "llvm assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "LLVM Bitcode",
+  "slug": "llvm-bitcode",
+  "key": "llvm bitcode",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects",
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects",
+   "binary_data"
+  ]
+ },
+ {
   "name": "LLVM IR",
   "slug": "llvm-ir",
   "key": "llvm ir",
@@ -60136,12 +61635,14 @@
   "color": null,
   "type": null,
   "source": [
+   "builtin:assembly_dialects",
    "builtin:misc"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
   "groups": [
+   "assembly_dialects",
    "misc"
   ]
  },
@@ -61141,24 +62642,6 @@
   ]
  },
  {
-  "name": "LÖVE",
-  "slug": "love",
-  "key": "love",
-  "aliases": [],
-  "extensions": [],
-  "color": null,
-  "type": null,
-  "source": [
-   "builtin:education"
-  ],
-  "linguist_name": null,
-  "has_linguist_color": false,
-  "is_core": false,
-  "groups": [
-   "education"
-  ]
- },
- {
   "name": "Love2d",
   "slug": "love2d",
   "key": "love2d",
@@ -61561,6 +63044,78 @@
   "groups": []
  },
  {
+  "name": "LZ4 binary",
+  "slug": "lz4-binary",
+  "key": "lz4 binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "LZ77",
+  "slug": "lz77",
+  "key": "lz77",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "LZ78",
+  "slug": "lz78",
+  "key": "lz78",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "LZW",
+  "slug": "lzw",
+  "key": "lzw",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "LZX",
   "slug": "lzx",
   "key": "lzx",
@@ -61575,6 +63130,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "LÖVE",
+  "slug": "löve",
+  "key": "löve",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:education"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "education"
+  ]
  },
  {
   "name": "M",
@@ -61768,6 +63341,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Mach-O",
+  "slug": "mach-o",
+  "key": "mach-o",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Machine",
@@ -62544,6 +64135,24 @@
   "groups": []
  },
  {
+  "name": "Manchester code",
+  "slug": "manchester-code",
+  "key": "manchester code",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Mang",
   "slug": "mang",
   "key": "mang",
@@ -63108,6 +64717,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "MASM",
+  "slug": "masm",
+  "key": "masm",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "MASON",
@@ -65263,6 +66890,24 @@
   "groups": []
  },
  {
+  "name": "Miller code",
+  "slug": "miller-code",
+  "key": "miller code",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Millipede",
   "slug": "millipede",
   "key": "millipede",
@@ -65454,6 +67099,24 @@
   "is_core": false,
   "groups": [
    "quantum"
+  ]
+ },
+ {
+  "name": "Mindscript",
+  "slug": "mindscript",
+  "key": "mindscript",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
   ]
  },
  {
@@ -66137,6 +67800,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "MIPS Assembly",
+  "slug": "mips-assembly",
+  "key": "mips assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "MIPS64 Assembly",
+  "slug": "mips64-assembly",
+  "key": "mips64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "MIQ",
@@ -67773,12 +69472,33 @@
   "color": null,
   "type": null,
   "source": [
-   "esolangs"
+   "esolangs",
+   "builtin:binary_data"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "Morse code binary",
+  "slug": "morse-code-binary",
+  "key": "morse code binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Mortran",
@@ -67906,6 +69626,24 @@
   "has_linguist_color": true,
   "is_core": true,
   "groups": []
+ },
+ {
+  "name": "Motorola S-record",
+  "slug": "motorola-s-record",
+  "key": "motorola s-record",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Motorway",
@@ -68360,6 +70098,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "MSP430 Assembly",
+  "slug": "msp430-assembly",
+  "key": "msp430 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "MSR",
@@ -69407,7 +71163,7 @@
  },
  {
   "name": "NANDlang+",
-  "slug": "nandlang",
+  "slug": "nandlang+",
   "key": "nandlang+",
   "aliases": [],
   "extensions": [],
@@ -69541,6 +71297,24 @@
   "groups": []
  },
  {
+  "name": "NASM64",
+  "slug": "nasm64",
+  "key": "nasm64",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Nathaniel Rochester",
   "slug": "nathaniel-rochester",
   "key": "nathaniel rochester",
@@ -69603,6 +71377,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "NATO phonetic alphabet",
+  "slug": "nato-phonetic-alphabet",
+  "key": "nato phonetic alphabet",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "NATURAL",
@@ -70001,6 +71793,24 @@
   "groups": []
  },
  {
+  "name": "NES Assembly",
+  "slug": "nes-assembly",
+  "key": "nes assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "nesC",
   "slug": "nesc",
   "key": "nesc",
@@ -70251,7 +72061,7 @@
  },
  {
   "name": "NetLinx+ERB",
-  "slug": "netlinx-erb",
+  "slug": "netlinx+erb",
   "key": "netlinx+erb",
   "aliases": [],
   "extensions": [
@@ -72244,6 +74054,24 @@
   "groups": []
  },
  {
+  "name": "NRZ",
+  "slug": "nrz",
+  "key": "nrz",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "NS Basic",
   "slug": "ns-basic",
   "key": "ns basic",
@@ -72540,7 +74368,7 @@
  },
  {
   "name": "NUMBRS++",
-  "slug": "numbrs",
+  "slug": "numbrs++",
   "key": "numbrs++",
   "aliases": [],
   "extensions": [],
@@ -72843,6 +74671,24 @@
   "is_core": false,
   "groups": [
    "logic_constraint"
+  ]
+ },
+ {
+  "name": "NVPTX",
+  "slug": "nvptx",
+  "key": "nvptx",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -73688,7 +75534,7 @@
  },
  {
   "name": "Objective-C++",
-  "slug": "objective-c",
+  "slug": "objective-c++",
   "key": "objective-c++",
   "aliases": [
    "obj-c++",
@@ -74223,7 +76069,7 @@
  },
  {
   "name": "Ogham++",
-  "slug": "ogham",
+  "slug": "ogham++",
   "key": "ogham++",
   "aliases": [],
   "extensions": [],
@@ -74498,6 +76344,24 @@
   "groups": []
  },
  {
+  "name": "OMF",
+  "slug": "omf",
+  "key": "omf",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Omg",
   "slug": "omg",
   "key": "omg",
@@ -74573,7 +76437,7 @@
  },
  {
   "name": "OMNeT++ MSG",
-  "slug": "omnet-msg",
+  "slug": "omnet++-msg",
   "key": "omnet++ msg",
   "aliases": [
    "omnetpp-msg"
@@ -74593,7 +76457,7 @@
  },
  {
   "name": "OMNeT++ NED",
-  "slug": "omnet-ned",
+  "slug": "omnet++-ned",
   "key": "omnet++ ned",
   "aliases": [
    "omnetpp-ned"
@@ -74893,7 +76757,7 @@
  },
  {
   "name": "Ook!+",
-  "slug": "ook",
+  "slug": "ook-+",
   "key": "ook +",
   "aliases": [],
   "extensions": [],
@@ -74982,6 +76846,24 @@
    "blockchain",
    "shell_os",
    "concurrency"
+  ]
+ },
+ {
+  "name": "Opal assembler",
+  "slug": "opal-assembler",
+  "key": "opal assembler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -75496,7 +77378,7 @@
  },
  {
   "name": "operators#Operators",
-  "slug": "operators-operators",
+  "slug": "operators#operators",
   "key": "operators#operators",
   "aliases": [],
   "extensions": [],
@@ -75697,7 +77579,7 @@
  },
  {
   "name": "Or++",
-  "slug": "or",
+  "slug": "or++",
   "key": "or++",
   "aliases": [],
   "extensions": [],
@@ -76671,6 +78553,24 @@
   "groups": []
  },
  {
+  "name": "Packed pixel",
+  "slug": "packed-pixel",
+  "key": "packed pixel",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Packlang",
   "slug": "packlang",
   "key": "packlang",
@@ -76770,7 +78670,7 @@
  },
  {
   "name": "Paintfuck+",
-  "slug": "paintfuck",
+  "slug": "paintfuck+",
   "key": "paintfuck+",
   "aliases": [],
   "extensions": [],
@@ -76786,7 +78686,7 @@
  },
  {
   "name": "Paintfuck++",
-  "slug": "paintfuck",
+  "slug": "paintfuck++",
   "key": "paintfuck++",
   "aliases": [],
   "extensions": [],
@@ -77100,7 +79000,7 @@
  },
  {
   "name": "Parallel C++",
-  "slug": "parallel-c",
+  "slug": "parallel-c++",
   "key": "parallel c++",
   "aliases": [],
   "extensions": [],
@@ -77953,6 +79853,24 @@
   ]
  },
  {
+  "name": "PDF binary",
+  "slug": "pdf-binary",
+  "key": "pdf binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "PDF downloads",
   "slug": "pdf-downloads",
   "key": "pdf downloads",
@@ -78017,6 +79935,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "PDP-11 Assembly",
+  "slug": "pdp-11-assembly",
+  "key": "pdp-11 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "PDP-12",
@@ -78113,6 +80049,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "PE format",
+  "slug": "pe-format",
+  "key": "pe format",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Peano",
@@ -78251,7 +80205,7 @@
  },
  {
   "name": "Pepp*erdine",
-  "slug": "pepp-erdine",
+  "slug": "pepp*erdine",
   "key": "pepp*erdine",
   "aliases": [],
   "extensions": [],
@@ -79004,6 +80958,78 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "PIC Assembly",
+  "slug": "pic-assembly",
+  "key": "pic assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "PIC16 Assembly",
+  "slug": "pic16-assembly",
+  "key": "pic16 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "PIC18 Assembly",
+  "slug": "pic18-assembly",
+  "key": "pic18 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "PIC32 Assembly",
+  "slug": "pic32-assembly",
+  "key": "pic32 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Pick",
@@ -79942,6 +81968,24 @@
   ]
  },
  {
+  "name": "Plan 9 Assembly",
+  "slug": "plan-9-assembly",
+  "key": "plan 9 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "PLANC",
   "slug": "planc",
   "key": "planc",
@@ -80126,6 +82170,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "PlayStation Assembly",
+  "slug": "playstation-assembly",
+  "key": "playstation assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Plea",
@@ -80422,6 +82484,24 @@
   ]
  },
  {
+  "name": "PNG binary",
+  "slug": "png-binary",
+  "key": "png binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "PNID",
   "slug": "pnid",
   "key": "pnid",
@@ -80523,7 +82603,7 @@
  },
  {
   "name": "PocketFuck+",
-  "slug": "pocketfuck",
+  "slug": "pocketfuck+",
   "key": "pocketfuck+",
   "aliases": [],
   "extensions": [],
@@ -81708,6 +83788,24 @@
   "groups": []
  },
  {
+  "name": "PowerPC Assembly",
+  "slug": "powerpc-assembly",
+  "key": "powerpc assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "PowerScript",
   "slug": "powerscript",
   "key": "powerscript",
@@ -81824,7 +83922,7 @@
  },
  {
   "name": "PPAP++",
-  "slug": "ppap",
+  "slug": "ppap++",
   "key": "ppap++",
   "aliases": [],
   "extensions": [],
@@ -82506,7 +84604,7 @@
  },
  {
   "name": "Pro*C",
-  "slug": "pro-c",
+  "slug": "pro*c",
   "key": "pro*c",
   "aliases": [],
   "extensions": [
@@ -83051,7 +85149,7 @@
  },
  {
   "name": "Prolog++",
-  "slug": "prolog",
+  "slug": "prolog++",
   "key": "prolog++",
   "aliases": [],
   "extensions": [],
@@ -83681,6 +85779,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "PTX",
+  "slug": "ptx",
+  "key": "ptx",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "PUBERTY",
@@ -84916,7 +87032,7 @@
  },
  {
   "name": "Q#",
-  "slug": "q",
+  "slug": "q#",
   "key": "q#",
   "aliases": [
    "qsharp"
@@ -86513,7 +88629,7 @@
  },
  {
   "name": "R + S",
-  "slug": "r-s",
+  "slug": "r-+-s",
   "key": "r + s",
   "aliases": [],
   "extensions": [],
@@ -86563,7 +88679,7 @@
  },
  {
   "name": "R++",
-  "slug": "r",
+  "slug": "r++",
   "key": "r++",
   "aliases": [],
   "extensions": [],
@@ -87052,6 +89168,24 @@
   "groups": []
  },
  {
+  "name": "RAR binary",
+  "slug": "rar-binary",
+  "key": "rar binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "rarVM",
   "slug": "rarvm",
   "key": "rarvm",
@@ -87230,6 +89364,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Raw bytes",
+  "slug": "raw-bytes",
+  "key": "raw bytes",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Raw token data",
@@ -90369,6 +92521,42 @@
   "groups": []
  },
  {
+  "name": "RISC-V Assembly",
+  "slug": "risc-v-assembly",
+  "key": "risc-v assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "RISC-V RV32I Assembly",
+  "slug": "risc-v-rv32i-assembly",
+  "key": "risc-v rv32i assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "rise",
   "slug": "rise",
   "key": "rise",
@@ -91837,6 +94025,24 @@
   ]
  },
  {
+  "name": "Run-length encoding",
+  "slug": "run-length-encoding",
+  "key": "run-length encoding",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "RUNOFF",
   "slug": "runoff",
   "key": "runoff",
@@ -92049,6 +94255,24 @@
   "is_core": false,
   "groups": [
    "functional"
+  ]
+ },
+ {
+  "name": "RZI",
+  "slug": "rzi",
+  "key": "rzi",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -94242,7 +96466,7 @@
  },
  {
   "name": "Self-modifying Brainfuck#",
-  "slug": "self-modifying-brainfuck",
+  "slug": "self-modifying-brainfuck#",
   "key": "self-modifying brainfuck#",
   "aliases": [],
   "extensions": [],
@@ -95144,7 +97368,7 @@
  },
  {
   "name": "Setlang++",
-  "slug": "setlang",
+  "slug": "setlang++",
   "key": "setlang++",
   "aliases": [],
   "extensions": [],
@@ -96992,7 +99216,7 @@
  },
  {
   "name": "Skript+",
-  "slug": "skript",
+  "slug": "skript+",
   "key": "skript+",
   "aliases": [],
   "extensions": [],
@@ -97024,7 +99248,7 @@
  },
  {
   "name": "Skull+",
-  "slug": "skull",
+  "slug": "skull+",
   "key": "skull+",
   "aliases": [],
   "extensions": [],
@@ -97394,7 +99618,7 @@
  },
  {
   "name": "Slug+",
-  "slug": "slug",
+  "slug": "slug+",
   "key": "slug+",
   "aliases": [],
   "extensions": [],
@@ -97866,7 +100090,7 @@
  },
  {
   "name": "SMITH#",
-  "slug": "smith",
+  "slug": "smith#",
   "key": "smith#",
   "aliases": [],
   "extensions": [],
@@ -98138,6 +100362,42 @@
   "is_core": false,
   "groups": [
    "education"
+  ]
+ },
+ {
+  "name": "Snappy binary",
+  "slug": "snappy-binary",
+  "key": "snappy binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "SNES Assembly",
+  "slug": "snes-assembly",
+  "key": "snes assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -99072,6 +101332,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "SPARC Assembly",
+  "slug": "sparc-assembly",
+  "key": "sparc assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "Sparc64 Assembly",
+  "slug": "sparc64-assembly",
+  "key": "sparc64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "SPARCs Fly",
@@ -100323,6 +102619,24 @@
   "groups": []
  },
  {
+  "name": "SREC",
+  "slug": "srec",
+  "key": "srec",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "SRecode Template",
   "slug": "srecode-template",
   "key": "srecode template",
@@ -100342,7 +102656,7 @@
  },
  {
   "name": "SRL++",
-  "slug": "srl",
+  "slug": "srl++",
   "key": "srl++",
   "aliases": [],
   "extensions": [],
@@ -100543,7 +102857,7 @@
  },
  {
   "name": "Stack-based+",
-  "slug": "stack-based",
+  "slug": "stack-based+",
   "key": "stack-based+",
   "aliases": [],
   "extensions": [],
@@ -100559,7 +102873,7 @@
  },
  {
   "name": "Stack-based++",
-  "slug": "stack-based",
+  "slug": "stack-based++",
   "key": "stack-based++",
   "aliases": [],
   "extensions": [],
@@ -101974,7 +104288,7 @@
  },
  {
   "name": "Stroke+-",
-  "slug": "stroke",
+  "slug": "stroke+",
   "key": "stroke+-",
   "aliases": [],
   "extensions": [],
@@ -102434,7 +104748,7 @@
  },
  {
   "name": "Subleq+",
-  "slug": "subleq",
+  "slug": "subleq+",
   "key": "subleq+",
   "aliases": [],
   "extensions": [],
@@ -103840,7 +106154,7 @@
  },
  {
   "name": "Symbol+Lang",
-  "slug": "symbol-lang",
+  "slug": "symbol+lang",
   "key": "symbol+lang",
   "aliases": [],
   "extensions": [],
@@ -104319,7 +106633,7 @@
  },
  {
   "name": "T+Riangle",
-  "slug": "t-riangle",
+  "slug": "t+riangle",
   "key": "t+riangle",
   "aliases": [],
   "extensions": [],
@@ -104616,6 +106930,24 @@
   "groups": []
  },
  {
+  "name": "Taiji",
+  "slug": "taiji",
+  "key": "taiji",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
   "name": "Tailor",
   "slug": "tailor",
   "key": "tailor",
@@ -104896,6 +107228,24 @@
   "groups": []
  },
  {
+  "name": "TAR binary",
+  "slug": "tar-binary",
+  "key": "tar binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "TardiSHA",
   "slug": "tardisha",
   "key": "tardisha",
@@ -104958,6 +107308,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "TASM",
+  "slug": "tasm",
+  "key": "tasm",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "TASM32",
+  "slug": "tasm32",
+  "key": "tasm32",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Tau-Alpha-Upsilon",
@@ -106727,6 +109113,24 @@
   "groups": []
  },
  {
+  "name": "Thorn",
+  "slug": "thorn",
+  "key": "thorn",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "thotpatrol",
   "slug": "thotpatrol",
   "key": "thotpatrol",
@@ -106932,7 +109336,7 @@
  },
  {
   "name": "Thue++",
-  "slug": "thue",
+  "slug": "thue++",
   "key": "thue++",
   "aliases": [],
   "extensions": [],
@@ -107572,7 +109976,7 @@
  },
  {
   "name": "TLA+",
-  "slug": "tla",
+  "slug": "tla+",
   "key": "tla+",
   "aliases": [],
   "extensions": [],
@@ -111608,6 +114012,24 @@
   "groups": []
  },
  {
+  "name": "Unicode code point",
+  "slug": "unicode-code-point",
+  "key": "unicode code point",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Unicodefuck",
   "slug": "unicodefuck",
   "key": "unicodefuck",
@@ -111622,6 +114044,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Unicode中文",
+  "slug": "unicode中文",
+  "key": "unicode中文",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "Unicon",
@@ -111831,6 +114271,24 @@
   "groups": []
  },
  {
+  "name": "UNIVAC 1103",
+  "slug": "univac-1103",
+  "key": "univac 1103",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
   "name": "Univar",
   "slug": "univar",
   "key": "univar",
@@ -111878,7 +114336,8 @@
   "color": null,
   "type": "programming",
   "source": [
-   "linguist"
+   "linguist",
+   "builtin:assembly_dialects"
   ],
   "linguist_name": "Unix Assembly",
   "has_linguist_color": false,
@@ -112419,7 +114878,7 @@
  },
  {
   "name": "UTC+8",
-  "slug": "utc-8",
+  "slug": "utc+8",
   "key": "utc+8",
   "aliases": [],
   "extensions": [],
@@ -112432,6 +114891,78 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "UTF-16",
+  "slug": "utf-16",
+  "key": "utf-16",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "UTF-32",
+  "slug": "utf-32",
+  "key": "utf-32",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "UTF-7",
+  "slug": "utf-7",
+  "key": "utf-7",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
+  "name": "UTF-8",
+  "slug": "utf-8",
+  "key": "utf-8",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Utopia Divine",
@@ -112559,7 +115090,7 @@
  },
  {
   "name": "V++",
-  "slug": "v",
+  "slug": "v++",
   "key": "v++",
   "aliases": [],
   "extensions": [],
@@ -112843,6 +115374,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "VAX Assembly",
+  "slug": "vax-assembly",
+  "key": "vax assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "VAX MACRO",
@@ -113446,7 +115995,7 @@
  },
  {
   "name": "VES++",
-  "slug": "ves",
+  "slug": "ves++",
   "key": "ves++",
   "aliases": [],
   "extensions": [],
@@ -115181,7 +117730,25 @@
   "groups": []
  },
  {
-  "name": "Wat",
+  "name": "WASM text format",
+  "slug": "wasm-text-format",
+  "key": "wasm text format",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "WAT",
   "slug": "wat",
   "key": "wat",
   "aliases": [],
@@ -115189,12 +117756,14 @@
   "color": null,
   "type": null,
   "source": [
+   "builtin:assembly_dialects",
    "builtin:esoteric"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
   "groups": [
+   "assembly_dialects",
    "esoteric"
   ]
  },
@@ -115213,6 +117782,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Watcom Assembler",
+  "slug": "watcom-assembler",
+  "key": "watcom assembler",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Watcom SQL",
@@ -115724,13 +118311,32 @@
    "linguist",
    "wikipedia",
    "builtin:misc",
-   "esolangs"
+   "esolangs",
+   "builtin:assembly_dialects"
   ],
   "linguist_name": "WebAssembly",
   "has_linguist_color": true,
   "is_core": true,
   "groups": [
    "misc"
+  ]
+ },
+ {
+  "name": "WebAssembly Binary",
+  "slug": "webassembly-binary",
+  "key": "webassembly binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
   ]
  },
  {
@@ -115752,6 +118358,42 @@
   "has_linguist_color": true,
   "is_core": true,
   "groups": []
+ },
+ {
+  "name": "WebAssembly Text",
+  "slug": "webassembly-text",
+  "key": "webassembly text",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "WebAssembly text format",
+  "slug": "webassembly-text-format",
+  "key": "webassembly text format",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "WebDNA",
@@ -116048,6 +118690,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Wenyan",
+  "slug": "wenyan",
+  "key": "wenyan",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  },
  {
   "name": "WFS",
@@ -116624,6 +119284,24 @@
   "has_linguist_color": true,
   "is_core": true,
   "groups": []
+ },
+ {
+  "name": "Windows-1252",
+  "slug": "windows-1252",
+  "key": "windows-1252",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Windy",
@@ -117632,7 +120310,7 @@
  },
  {
   "name": "X++",
-  "slug": "x",
+  "slug": "x++",
   "key": "x++",
   "aliases": [],
   "extensions": [],
@@ -117744,12 +120422,33 @@
   "color": null,
   "type": null,
   "source": [
-   "wikipedia"
+   "wikipedia",
+   "builtin:assembly_dialects"
   ],
   "linguist_name": null,
   "has_linguist_color": false,
   "is_core": false,
-  "groups": []
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "x86-64 Assembly",
+  "slug": "x86-64-assembly",
+  "key": "x86-64 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "XAH",
@@ -117810,7 +120509,7 @@
  },
  {
   "name": "XBase++",
-  "slug": "xbase",
+  "slug": "xbase++",
   "key": "xbase++",
   "aliases": [],
   "extensions": [],
@@ -118907,6 +121606,24 @@
   "groups": []
  },
  {
+  "name": "XZ binary",
+  "slug": "xz-binary",
+  "key": "xz binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "Y-sharp",
   "slug": "y-sharp",
   "key": "y-sharp",
@@ -119277,6 +121994,24 @@
   "is_core": false,
   "groups": [
    "shell_os"
+  ]
+ },
+ {
+  "name": "YASM",
+  "slug": "yasm",
+  "key": "yasm",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
   ]
  },
  {
@@ -119810,7 +122545,7 @@
  },
  {
   "name": "Z++",
-  "slug": "z",
+  "slug": "z++",
   "key": "z++",
   "aliases": [],
   "extensions": [],
@@ -119824,6 +122559,42 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "Z180 Assembly",
+  "slug": "z180-assembly",
+  "key": "z180 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
+ },
+ {
+  "name": "Z80 Assembly",
+  "slug": "z80-assembly",
+  "key": "z80 assembly",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:assembly_dialects"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "assembly_dialects"
+  ]
  },
  {
   "name": "Zalgo",
@@ -120052,7 +122823,7 @@
  },
  {
   "name": "ZFC++",
-  "slug": "zfc",
+  "slug": "zfc++",
   "key": "zfc++",
   "aliases": [],
   "extensions": [],
@@ -120219,6 +122990,24 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "ZIP binary",
+  "slug": "zip-binary",
+  "key": "zip binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
  },
  {
   "name": "Zirconium",
@@ -120488,6 +123277,24 @@
   "groups": []
  },
  {
+  "name": "Zstandard binary",
+  "slug": "zstandard-binary",
+  "key": "zstandard binary",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:binary_data"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "binary_data"
+  ]
+ },
+ {
   "name": "ZTOALC L",
   "slug": "ztoalc-l",
   "key": "ztoalc l",
@@ -120648,5 +123455,1193 @@
   "has_linguist_color": false,
   "is_core": false,
   "groups": []
+ },
+ {
+  "name": "中关村编程语言",
+  "slug": "中关村编程语言",
+  "key": "中关村编程语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中华编程",
+  "slug": "中华编程",
+  "key": "中华编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文BASIC",
+  "slug": "中文basic",
+  "key": "中文basic",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文C",
+  "slug": "中文c",
+  "key": "中文c",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文C++",
+  "slug": "中文c++",
+  "key": "中文c++",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文FoxPro",
+  "slug": "中文foxpro",
+  "key": "中文foxpro",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文Java",
+  "slug": "中文java",
+  "key": "中文java",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文Pascal",
+  "slug": "中文pascal",
+  "key": "中文pascal",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文Python",
+  "slug": "中文python",
+  "key": "中文python",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文Rust",
+  "slug": "中文rust",
+  "key": "中文rust",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文Visual Basic",
+  "slug": "中文visual-basic",
+  "key": "中文visual basic",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文标识符",
+  "slug": "中文标识符",
+  "key": "中文标识符",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文正则",
+  "slug": "中文正则",
+  "key": "中文正则",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文汇编",
+  "slug": "中文汇编",
+  "key": "中文汇编",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文注释",
+  "slug": "中文注释",
+  "key": "中文注释",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文注释编程",
+  "slug": "中文注释编程",
+  "key": "中文注释编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文编程语言",
+  "slug": "中文编程语言",
+  "key": "中文编程语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文脚本",
+  "slug": "中文脚本",
+  "key": "中文脚本",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文脚本语言",
+  "slug": "中文脚本语言",
+  "key": "中文脚本语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "中文语言",
+  "slug": "中文语言",
+  "key": "中文语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "五笔编程",
+  "slug": "五笔编程",
+  "key": "五笔编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "五笔输入法编程",
+  "slug": "五笔输入法编程",
+  "key": "五笔输入法编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "仓颉",
+  "slug": "仓颉",
+  "key": "仓颉",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "仓颉编程",
+  "slug": "仓颉编程",
+  "key": "仓颉编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "仓颉语言",
+  "slug": "仓颉语言",
+  "key": "仓颉语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "全角编程",
+  "slug": "全角编程",
+  "key": "全角编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "八卦",
+  "slug": "八卦",
+  "key": "八卦",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "凌云",
+  "slug": "凌云",
+  "key": "凌云",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "凌云语言",
+  "slug": "凌云语言",
+  "key": "凌云语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "半角编程",
+  "slug": "半角编程",
+  "key": "半角编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "圈圈叉",
+  "slug": "圈圈叉",
+  "key": "圈圈叉",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "圈天地",
+  "slug": "圈天地",
+  "key": "圈天地",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "天元",
+  "slug": "天元",
+  "key": "天元",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "天元语言",
+  "slug": "天元语言",
+  "key": "天元语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "太极",
+  "slug": "太极",
+  "key": "太极",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "拼音编程",
+  "slug": "拼音编程",
+  "key": "拼音编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "拼音语言",
+  "slug": "拼音语言",
+  "key": "拼音语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "拼音输入法编程",
+  "slug": "拼音输入法编程",
+  "key": "拼音输入法编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "文言",
+  "slug": "文言",
+  "key": "文言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "文言文编程",
+  "slug": "文言文编程",
+  "key": "文言文编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "文言编程",
+  "slug": "文言编程",
+  "key": "文言编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言",
+  "slug": "易语言",
+  "key": "易语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言E",
+  "slug": "易语言e",
+  "key": "易语言e",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言IDE",
+  "slug": "易语言ide",
+  "key": "易语言ide",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言函数库",
+  "slug": "易语言函数库",
+  "key": "易语言函数库",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言模块",
+  "slug": "易语言模块",
+  "key": "易语言模块",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言模块化",
+  "slug": "易语言模块化",
+  "key": "易语言模块化",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言模块化编程",
+  "slug": "易语言模块化编程",
+  "key": "易语言模块化编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言源码",
+  "slug": "易语言源码",
+  "key": "易语言源码",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "易语言静态库",
+  "slug": "易语言静态库",
+  "key": "易语言静态库",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "武术",
+  "slug": "武术",
+  "key": "武术",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "武术语言",
+  "slug": "武术语言",
+  "key": "武术语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "汉字正则",
+  "slug": "汉字正则",
+  "key": "汉字正则",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "汉字编程",
+  "slug": "汉字编程",
+  "key": "汉字编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "汉字脚本",
+  "slug": "汉字脚本",
+  "key": "汉字脚本",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "汉字语言",
+  "slug": "汉字语言",
+  "key": "汉字语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "洪荒",
+  "slug": "洪荒",
+  "key": "洪荒",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "火星文编程",
+  "slug": "火星文编程",
+  "key": "火星文编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "火星语",
+  "slug": "火星语",
+  "key": "火星语",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "蚂蚁",
+  "slug": "蚂蚁",
+  "key": "蚂蚁",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "象棋编程",
+  "slug": "象棋编程",
+  "key": "象棋编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "郑码编程",
+  "slug": "郑码编程",
+  "key": "郑码编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "飞灵",
+  "slug": "飞灵",
+  "key": "飞灵",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "麻将编程",
+  "slug": "麻将编程",
+  "key": "麻将编程",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "龙语",
+  "slug": "龙语",
+  "key": "龙语",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
+ },
+ {
+  "name": "龙语言",
+  "slug": "龙语言",
+  "key": "龙语言",
+  "aliases": [],
+  "extensions": [],
+  "color": null,
+  "type": null,
+  "source": [
+   "builtin:chinese"
+  ],
+  "linguist_name": null,
+  "has_linguist_color": false,
+  "is_core": false,
+  "groups": [
+   "chinese"
+  ]
  }
 ]

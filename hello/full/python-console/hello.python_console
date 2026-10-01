@@ -1,7 +1,0 @@
-# Python console - Hello World! :: RAiNBOW_Hello-World
-#   colour     : ##3572A5
-#   layer      : full (byte-balanced rainbow bar)
-#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-#   reference  : see https://esolangs.org/ and https://rosettacode.org/
-
-print("Hello World!")

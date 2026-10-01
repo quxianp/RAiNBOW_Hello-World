@@ -141,12 +141,16 @@ STRIP_WORDS = re.compile(
 
 
 def norm_key(name: str) -> str:
-    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
-    s = s.lower().strip()
+    """Case/punctuation-insensitive key.  CJK and other scripts are kept."""
+    s = unicodedata.normalize("NFKC", name).lower().strip()
     s = PAREN_SUFFIX.sub("", s)
-    s = re.sub(r"[^a-z0-9+#./+* -]", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
+    out = []
+    for ch in s:
+        if ch.isalnum() or ch in "+#*/-.":
+            out.append(ch)
+        else:
+            out.append(" ")
+    return re.sub(r"\s+", " ", "".join(out)).strip()
 
 
 def accept(name: str, trusted: bool = False) -> bool:
@@ -157,7 +161,7 @@ def accept(name: str, trusted: bool = False) -> bool:
     if not trusted and len(n) < 2:
         return False
     low = n.lower()
-    if not re.search(r"[A-Za-z0-9]", n):
+    if not any(ch.isalnum() for ch in n):
         return False
     if low in JUNK_EXACT:
         return True  # real language names that collide with common words
@@ -190,10 +194,31 @@ def accept(name: str, trusted: bool = False) -> bool:
     return True
 
 
+RESERVED = {
+    "con", "prn", "aux", "nul",
+    *(f"com{i}" for i in range(1, 10)),
+    *(f"lpt{i}" for i in range(1, 10)),
+}
+
+
 def slugify(name: str) -> str:
-    s = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
-    s = re.sub(r"[^A-Za-z0-9]+", "-", s).strip("-").lower()
-    return s or "lang"
+    """Filesystem-safe slug that keeps non-Latin scripts (仓颉, 文言, 易语言).
+
+    Slashes, backslashes and Windows device names are avoided so the result is
+    usable as a directory name on every platform.
+    """
+    s = unicodedata.normalize("NFKC", name).lower().strip()
+    out = []
+    for ch in s:
+        if ch.isalnum() or ch in "+#":
+            out.append(ch)
+        else:
+            out.append("-")
+    s = re.sub(r"-{2,}", "-", "".join(out)).strip("-.")
+    s = s.lstrip(".") or "lang"
+    if s in RESERVED or re.fullmatch(r"[-_. ]+", s):
+        s = f"lang-{s}"
+    return s[:80] or "lang"
 
 
 def load(path: Path, default=None):

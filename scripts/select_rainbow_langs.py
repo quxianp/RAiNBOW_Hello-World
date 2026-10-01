@@ -87,13 +87,36 @@ def classify(hue: float) -> str:
     return "red"
 
 
+RESERVED = {
+    "con", "prn", "aux", "nul",
+    *(f"com{i}" for i in range(1, 10)),
+    *(f"lpt{i}" for i in range(1, 10)),
+}
+
+
 def slugify(name: str) -> str:
-    s = re.sub(r"[^A-Za-z0-9]+", "-", name).strip("-").lower()
-    return s or "lang"
+    s = unicodedata.normalize("NFKC", name).lower().strip()
+    out = []
+    for ch in s:
+        if ch.isalnum() or ch in "+#*":
+            out.append(ch)
+        else:
+            out.append("-")
+    s = re.sub(r"-{2,}", "-", "".join(out)).strip("-.")
+    s = s.lstrip(".") or "lang"
+    if s in RESERVED or re.fullmatch(r"[-_. ]+", s):
+        s = f"lang-{s}"
+    return s[:80] or "lang"
+
+
+SAFE_EXT = re.compile(r"^\.[A-Za-z0-9._#+-]{0,24}$")
 
 
 def pick_extension(entry: dict, exclusive: set) -> str:
-    exts = [e for e in (entry.get("extensions") or []) if e]
+    exts = [
+        e for e in (entry.get("extensions") or [])
+        if e and SAFE_EXT.match(e) and "/" not in e and "\\" not in e
+    ]
     if not exts:
         return ""
     # prefer an extension no other core language claims, then the shortest

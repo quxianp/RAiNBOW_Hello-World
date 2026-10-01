@@ -692,6 +692,7 @@
    "path": "hello/core/c/hello.c",
    "sources": [
     "linguist",
+    "builtin:chinese",
     "builtin:education",
     "builtin:misc"
    ],
@@ -930,6 +931,7 @@
     "linguist",
     "wikipedia",
     "esolangs",
+    "builtin:chinese",
     "builtin:ancient",
     "builtin:misc"
    ],
@@ -3489,6 +3491,7 @@
     "gh_topic_programming_language",
     "gh_topic_esoteric_language",
     "gh_topic_language",
+    "builtin:chinese",
     "builtin:concurrency",
     "builtin:misc"
    ],
@@ -4587,6 +4590,7 @@
     "tiobe",
     "gh_topic_language",
     "learn_anything",
+    "builtin:chinese",
     "builtin:concurrency",
     "builtin:education",
     "builtin:misc"
@@ -4939,7 +4943,8 @@
     "linguist",
     "wikipedia",
     "esolangs",
-    "builtin:misc"
+    "builtin:misc",
+    "builtin:assembly_dialects"
    ],
    "is_core": true,
    "target_percent": 0.145138
@@ -6718,7 +6723,8 @@
    ],
    "path": "hello/core/e/hello.e",
    "sources": [
-    "linguist"
+    "linguist",
+    "builtin:chinese"
    ],
    "is_core": true,
    "target_percent": 0.145138
@@ -6860,6 +6866,7 @@
     "linguist",
     "wikipedia",
     "awesome_fp",
+    "builtin:chinese",
     "builtin:ancient",
     "builtin:misc",
     "tiobe"
@@ -11336,7 +11343,8 @@
    "path": "hello/core/cangjie/hello.cj",
    "sources": [
     "linguist",
-    "wikipedia"
+    "wikipedia",
+    "builtin:chinese"
    ],
    "is_core": true,
    "target_percent": 0.145138
@@ -14973,6 +14981,7 @@
     "gh_topic_language",
     "learn_anything",
     "awesome_fp",
+    "builtin:chinese",
     "builtin:data_science",
     "builtin:concurrency",
     "builtin:education",
@@ -17088,7 +17097,8 @@
     "linguist",
     "wikipedia",
     "builtin:misc",
-    "esolangs"
+    "esolangs",
+    "builtin:assembly_dialects"
    ],
    "is_core": true,
    "target_percent": 0.145138
@@ -20496,6 +20506,7 @@
     "wikipedia",
     "builtin:ancient",
     "tiobe",
+    "builtin:chinese",
     "builtin:education",
     "builtin:misc"
    ],
@@ -21082,7 +21093,8 @@
    "path": "hello/core/xbase/hello.ch",
    "sources": [
     "linguist",
-    "wikipedia"
+    "wikipedia",
+    "builtin:chinese"
    ],
    "is_core": true,
    "target_percent": 0.145138
@@ -22358,6 +22370,7 @@
     "gh_topic_esoteric_language",
     "gh_topic_language",
     "learn_anything",
+    "builtin:chinese",
     "builtin:misc"
    ],
    "is_core": true,

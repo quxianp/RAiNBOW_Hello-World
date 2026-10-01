@@ -37,13 +37,13 @@
     },
     {
       "name": "full layer >= 2400 files",
-      "ok": true,
-      "detail": "6417 files"
+      "ok": false,
+      "detail": "5 files"
     },
     {
       "name": "total language files >= 3000",
-      "ok": true,
-      "detail": "689 core + 6417 full = 7106"
+      "ok": false,
+      "detail": "689 core + 5 full = 694"
     },
     {
       "name": ".gitattributes un-vendors hello/core",
@@ -93,16 +93,16 @@
     {
       "name": "merged inventory >= 3000 languages",
       "ok": true,
-      "detail": "7105 languages"
+      "detail": "7325 languages"
     }
   ],
-  "passed": 19,
+  "passed": 17,
   "total": 19,
   "core_languages": 689,
   "core_files": 689,
-  "full_files": 6417,
-  "total_language_files": 7106,
-  "merged_languages": 7105,
+  "full_files": 5,
+  "total_language_files": 694,
+  "merged_languages": 7325,
   "counted_bytes": 1411098,
   "share_min_pct": 0.145135,
   "share_max_pct": 0.145419,
@@ -127,5 +127,8 @@
     "rose": 20,
     "red": 36
   },
-  "failed": []
+  "failed": [
+    "full layer >= 2400 files",
+    "total language files >= 3000"
+  ]
 }

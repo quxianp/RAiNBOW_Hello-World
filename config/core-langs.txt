@@ -1,689 +1,693 @@
 Ignore List
-YARA
-reStructuredText
-Csound
-Csound Document
-Csound Score
-Volt
-Carbon
-JSON
-JSON with Comments
-Slim
-Talon
-Wren
-SQF
-Adblock Filter List
-Squirrel
-Nearley
-SubRip Text
-C
-Idris
-Pan
-Promela
-Cap'n Proto
-Red
-Asymptote
-BASIC
-Grammatical Framework
-Witcher Script
-JASS
-CMake
-Hack
-MiniYAML
-SmPL
-Mercury
-Lasso
-Wikitext
-Ren'Py
-Daslang
-KDL
-PLSQL
-OpenCL
-NPM Config
-Cairo
-Cairo Zero
-Clojure
-JCL
-REXX
-Flix
-Gerber Image
-Adobe Font Metrics
-Jinja
-Kaitai Struct
-iCalendar
-Pyret
-PostScript
-Redscript
-Wolfram Language
-EmberScript
-Reason
-ReasonLIGO
-Blade
-Smithy
-Swift
-B
-SAS
-Stylus
-Bison
-Pep8
-Git Attributes
-Git Commit
-Git Config
-Git Revision List
-Pug
-Mojo
-HTML
-Lobster
-PostCSS
-ActionScript
-Glimmer JS
-Svelte
-Genie
-Jasmin
-RON
-Cooklang
-TOML
-Max
-MATLAB
-Valve Data Format
-Mustache
-IDL
-Ballerina
-LFE
-Yul
-Pro*C
-Solidity
-Dune
-Forth
-Astro
-Mask
-Rust
-Jac
-Zig
-Faust
-Jupyter Notebook
-GSC
-Gemini
-GCC Machine Description
-Ecmarkup
-FPP
-Zmodel
-Euphoria
-Monkey C
-Golo
-BlitzMax
-OCaml
-RUNOFF
-Survex data
-FIGlet Font
-HXML
-Rez
-Zimpl
-Ragel
-Pawn
-Handlebars
-Haxe
-Rhai
-Latte
-Unified Parallel C
-Opal
-GAMS
-Bru
-JAR Manifest
-Java
-SourcePawn
-SVG
-Clarion
-Motoko
-COLLADA
-SQL
-SQLPL
-TSQL
-Rocq Prover
-Assembly
-Cloud Firestore Security Rules
-GAML
-EQ
-MDX
-Power Query
-Oz
-Dogescript
-Ceylon
-Hare
-Jai
-Glyph
-Tcl
-crontab
-Roff
-Roff Manpage
-Fennel
-Whiley
-Textile
-Smarty
-PlantUML
-Altium Designer
-LOLCODE
-Fluent
-Filebench WML
-Q#
-Nim
-Portugol
-Pip Requirements
-SuperCollider
-Scenic
-Browserslist
-Mirah
-HolyC
-Cython
-TMDL
-Parrot
-OpenSCAD
-Haml
-LabVIEW
-DenizenScript
-Dotenv
-JavaScript
-JavaScript+ERB
-World of Warcraft Addon Data
-Dafny
-JFlex
-Lex
-Rascal
-Isabelle
-Isabelle ROOT
-E
-HiveQL
-Genero per
-Twig
-Pascal
-Factor
-ooc
-Nu
-Smalltalk
-ABAP CDS
-AMPL
-Answer Set Programming
-SystemVerilog
-Component Pascal
-Batchfile
-ShellCheck Config
-Augeas
-Tree-sitter Query
-KakouneScript
-BBCode
-TI Program
-XC
-DirectX 3D File
-HLSL
-LLVM TableGen
-OverpassQL
-Chapel
-Game Maker Language
-KRL
-Xojo
-TeX
-Alloy
-GtkRC
-ChucK
-Nushell
-Pkl
-Darcs Patch
-OASv2-json
-OASv2-yaml
-OASv3-json
-OASv3-yaml
-Makefile
-OpenEdge ABL
-LilyPond
-Option List
-Shell
-OverPy
-2-Dimensional Array
-QML
-Quartus Simulation IP
-NCL
-Gosu
-POV-Ray SDL
-Nunjucks
-RPGLE
-CameLIGO
-Leo
-fish
-Jest Snapshot
-Starlark
-Crystal
-Meson
-Cuda
-FIRRTL
-Easybuild
-Regular Expression
-CLIPS
-Yacc
-SRecode Template
-Elvish
-OMNeT++ MSG
-KoLmafia ASH
-LLVM
-ATS
-StringTemplate
-sed
-Caddyfile
-Nit
-APL
-Berry
-AIDL
-Qt Script
-Vim Help File
-Vim script
-Vim Snippet
-Nginx
-Mint
-Vespa Schema Definition
-JSONiq
-CSV
-TSV
-Rebol
-Nextflow
-LSL
-Vue
-Ada
-Singularity
-Sway
-JetBrains MPS
-Cadence
-hoon
-Common Lisp
-Org
-ALGOL
-BlitzBasic
-Xmake
-Snakemake
-Visual Basic 6.0
-SugarSS
-Gno
-DM
-M3U
-LiveScript
-YASnippet
-API Blueprint
-SIP
-Salt
-BQN
-Edge
-HOCON
-ZAP
-RobotFramework
-Langium
-Dart
-Imba
-Closure Templates
-AppleScript
-QuickBASIC
-MAXScript
-Hosts File
-Circom
-VBScript
-Macaulay2
-WDL
-mdsvex
-Cangjie
-Teal
-Slang
-Earthly
-KCL
-ZenScript
-B4X
-Zephir
-templ
-Typst
-Untyped Plutus Core
-Propeller Spin
-Ioke
-ucode
-MLIR
-AL
-BitBake
-Gradle
-Gradle Kotlin DSL
-J
-Janet
-Go
-Go Checksums
-Go Module
-Go Template
-Go Workspace
-BrighterScript
-VCL
-Frege
-Jison
-Jison Lex
-Elm
-Perl
-Cypher
-AngelScript
-OMNeT++ NED
-Apex
-Windows Registry Entries
-Dockerfile
-Just
-RAML
-Graphviz (DOT)
-Groovy
-Groovy Server Pages
-MiniZinc
-Java Properties
-Java Server Pages
-Java Template Engine
-BIRD2
-Open Policy Agent
-Agda
-Literate Agda
-Marko
-Cylc
-DataWeave
-Self
-kvlang
-CAP CDS
-Koka
-Bicep
-Processing
-MTML
-Sail
-Liquid
-Alpine Abuild
-Eiffel
-INI
-CQL
-TXL
-KFramework
-Luau
-Prisma
-Clean
-KerboScript
-NetLinx
-HAProxy
-GLSL
-Record Jar
-Lark
-MQL4
-Fancy
-Tact
-HTTP
-mupad
-pkg-config
-JSON5
-PEG.js
-Stata
-Pike
-GDShader
-Tolk
-EdgeQL
-FLUX
-AutoHotkey
-PLpgSQL
-R
-RMarkdown
-Sweave
-XML
-XML Property List
-nesC
-AsciiDoc
-Motorola 68K Assembly
-GEDCOM
-Python
-Python traceback
-GDScript
-Godot Resource
-WGSL
-Jsonnet
-RAScript
-LiveCode Script
-B (Formal Method)
-ArkTS
-BibTeX
-Odin
-NMODL
-Slash
-NewLisp
-4D
-V
-Glimmer TS
-TSX
-TypeScript
-ShaderLab
-Unity3D Asset
-Mako
-AutoIt
-AGS Script
-Blueprint
-FreeMarker
-ISPC
-Modula-2
-Logtalk
-CoffeeScript
-CSON
-Literate CoffeeScript
-Fantom
-Hy
-LigoLANG
-BuildStream
-PowerShell
-Slint
-SPARQL
-JSONLD
-MQL5
-Objective-C
-Less
-Slice
-ANTLR
-Harbour
-Bluespec
-Bluespec BH
-Apollo Guidance Computer
-Verse
-Markdown
-ROS Interface
-PureBasic
-CUE
-Inno Setup
-C3
-PureScript
-q
-Nasal
-ImHex Pattern Language
-Racket
-WebAssembly
-Xonsh
-Mathematical Programming System
-Velocity Template Language
-Avro IDL
-Ring
-Aleo
-NWScript
-KiCad Layout
-KiCad Legacy Layout
-KiCad Schematic
-Web Ontology Language
-Scheme
-NetLinx+ERB
-HTML+PHP
-PHP
-X10
-mIRC Script
-D2
-ECLiPSe
-Modula-3
-VHDL
-ImageJ Macro
-Bikeshed
-wisp
-Oxygene
-Click
-Toit
-STL
-PicoLisp
-ObjectScript
-Verilog
-Clue
-FreeBASIC
-Xtend
 Terra
 CWeb
 Lua
 GAP
 IGOR Pro
 Raku
-Nix
-UrWeb
-Cirru
-Objective-C++
-Nemerle
-Grace
+Crystal
+Clue
+ECLiPSe
+GEDCOM
+NMODL
+DataWeave
+Slice
+q
+Avro IDL
+4D
+FreeMarker
+Pike
+HTTP
+Motorola 68K Assembly
+CQL
+XML
+XML Property List
+Jsonnet
+BuildStream
+Meson
+Slash
+QuickBASIC
+ArkTS
+Cangjie
+CAP CDS
+Nginx
+Processing
+Nit
+Regular Expression
+Luau
+CLIPS
+MAXScript
+Go
+Go Checksums
+Go Module
+Go Template
+Go Workspace
+hoon
+Teal
+Cylc
+Dart
+Qt Script
+ucode
+ZenScript
+BitBake
+RobotFramework
+Frege
+B4X
+Cadence
+Sway
+BlitzBasic
+PowerShell
+TXL
+Gradle
+Gradle Kotlin DSL
+Perl
+Mint
+Ada
+WebAssembly
+Mathematical Programming System
+Self
+Record Jar
+Easybuild
+MiniZinc
+Ioke
+Markdown
+OMNeT++ NED
+Janet
+NetLinx
+Apollo Guidance Computer
+Prisma
+SPARQL
+JSONLD
+LiveCode Script
 PDDL
-Puppet
-Clarity
-MiniScript
+Alpine Abuild
+ZAP
+Closure Templates
+Edge
+Harbour
+LigoLANG
+AppleScript
+Modula-2
+HAProxy
+NWScript
+Zephir
+Shen
+Bluespec
+Bluespec BH
 CodeQL
+reStructuredText
+FreeBASIC
+Fantom
+VCL
+Aleo
+Berry
+Jest Snapshot
+VBScript
+Imba
+Apex
+M3U
+LLVM
+R
+RMarkdown
+Sweave
+Vim Help File
+Vim script
+Vim Snippet
+Csound
+Csound Document
+Csound Score
+WGSL
+Stata
+ATS
+AutoIt
+PureScript
+Nasal
+Less
+kvlang
+Scheme
+Volt
+Slang
+Koka
+JetBrains MPS
+YARA
+Carbon
+ShaderLab
+Unity3D Asset
+ROS Interface
+Modula-3
+Gno
+Xmake
+Caddyfile
+PEG.js
+CSV
+TSV
+Slint
+Typst
+Xtend
+CoffeeScript
+CSON
+Literate CoffeeScript
+mupad
+C3
+Graphviz (DOT)
+Sail
+Inno Setup
+JSON5
+KRL
+NCL
+Xonsh
+JSON
+JSON with Comments
+Logtalk
+Lark
+Java Properties
+Java Server Pages
+Java Template Engine
+API Blueprint
+Earthly
+Slim
+pkg-config
+BQN
+RPGLE
+Visual Basic 6.0
+Langium
+RAScript
+nanorc
+Ring
+ISPC
+HTML+ECR
+Noir
+Brainfuck
+KiCad Layout
+KiCad Legacy Layout
+KiCad Schematic
+FIRRTL
+SugarSS
+Puppet
+Hosts File
+Tolk
+Agda
+Literate Agda
+Glimmer TS
+TSX
+TypeScript
+EdgeQL
+YASnippet
+Talon
+PLpgSQL
+Forth
+SRecode Template
+Cypher
+AIDL
+GDScript
+Godot Resource
+Python
+Python console
+Python traceback
+Blueprint
+Rebol
+Untyped Plutus Core
+STL
+Wren
+Dockerfile
+Just
+2-Dimensional Array
+Cuda
+ImHex Pattern Language
+AL
+Nextflow
+Procfile
+CameLIGO
+Racket
+Nemerle
+mIRC Script
+TeX
+Nunjucks
+LSL
+SQF
+ChucK
+Clean
+StringTemplate
+Common Lisp
+xBase
+JSONiq
+Snakemake
+KFramework
+KerboScript
+Vue
+ObjectScript
+Makefile
+Groovy
+Groovy Server Pages
+Marko
+WDL
+Objective-C
+DM
+QML
+SuperCollider
+Option List
+GDShader
+Cabal Config
+Tact
+LiveScript
+Move
+TypeSpec
+MQL5
+fish
+TLA
+MiniScript
+X10
+Yacc
+LFE
 Fortran
 Fortran Free Form
-WebAssembly Interface Type
-MeTTa
-NumPy
-VBA
-XQuery
-HTML+Razor
-Simple File Verification
-C#
-Omgrofl
-Classic ASP
+Eiffel
+Unified Parallel C
+SIP
+Nushell
+HIP
+HTML+PHP
+PHP
+V
+Velocity Template Language
 IL Assembly
-Procfile
+HTML+Razor
+Verse
+Bicep
+XQuery
+D2
+Windows Registry Entries
+Curry
+Clarity
+C
+ABAP CDS
+Bikeshed
+Elvish
+Elvish Transcript
+GLSL
+Jison
+Jison Lex
+F*
+Salt
+CUE
+Quartus Simulation IP
+Tor Config
+Smalltalk
+PureBasic
+APL
+Gherkin
+Web Ontology Language
+OpenEdge ABL
 Haskell
 Literate Haskell
-P4
-Kotlin
-Polar
-Roc
-Aiken
-Noir
-Quint
-OpenQASM
-Cabal Config
-1C Enterprise
-TypeSpec
-Genero 4gl
-HTML+ECR
-Terraform Template
-Vala
-HCL
-CSS
-Papyrus
-Vyper
-Nickel
-BAML
-Move
-Brightscript
-Elixir
-Metal
-ASP.NET
-Gentoo Ebuild
-Gentoo Eclass
-nanorc
-Shen
-Dhall
-Arc
-Visual Basic .NET
-TLA
-F#
-Uno
-G-code
-LookML
-Julia
-Tor Config
-HTML+EEX
-Lambdapi
-Emacs Lisp
-Dylan
-Gherkin
-Brainfuck
-ZIL
-AspectJ
-TextMate Properties
-xBase
-HIP
-XSLT
-Gnuplot
-PowerBuilder
-ColdFusion
-ColdFusion CFC
-Jolie
-Gleam
-Io
-Boogie
-Awk
-SpiceDB Schema
-Erlang
-Curry
-Ant Build System
-ECL
-GraphQL
-Liquidsoap
-Rouge
-SurrealQL
-MoonBit
-Antlers
-PogoScript
-Hurl
-Vento
-Sass
-QuakeC
-SCSS
-eC
-Ecere Projects
-EJS
-Debian Package Control File
-MoonScript
-Objective-J
-Riot
+MLIR
 Futhark
-C++
-Mermaid
-Prolog
-Beef
-jq
-Praat
-TextGrid
-Genshi
-Common Workflow Language
-Pact
-PigLatin
-ABAP
-TL-Verilog
-FlatBuffers
-Standard ML
-Quake
-vCard
-Stan
-Boo
-Scala
-Turing
-NetLogo
-Modelica
-Scilab
-mcfunction
-EditorConfig
-D
-F*
-RouterOS Script
-YAML
-ApacheConf
-Thrift
-Scaml
-UnrealScript
+mdsvex
+PicoLisp
+Odin
+Elm
+Grace
+Vespa Schema Definition
+WebAssembly Interface Type
+MQL4
+Genero 4gl
+Factor
+Aiken
+sed
+Alloy
+Singularity
+LookML
+AutoHotkey
+Papyrus
+Brightscript
+CSS
+RUNOFF
+BrighterScript
+templ
+Liquid
+Objective-C++
+Classic ASP
+Bison
+MeTTa
+Pkl
+POV-Ray SDL
+Dylan
+HTML+EEX
+Assembly
+LLVM TableGen
+KakouneScript
 Gemfile.lock
 HTML+ERB
 RBS
 RDoc
 Ruby
+P4
+Circom
+Game Maker Language
+Mustache
+C#
+AsciiDoc
+Prolog
+NetLinx+ERB
+wisp
+Starlark
+Kaitai Struct
+BibTeX
+Hy
+Org
+RAML
+OverPy
+Yul
+KCL
+Terraform Template
+Fancy
+Roc
+Open Policy Agent
+Nix
+Mako
+Propeller Spin
+GtkRC
+Adblock Filter List
+Squirrel
+Lambdapi
+1C Enterprise
+Xojo
+Gosu
+Jolie
+HCL
+OASv2-json
+OASv2-yaml
+OASv3-json
+OASv3-yaml
+OpenAPI Specification v2
+OpenAPI Specification v3
+VBA
+Hack
+NewLisp
+Quake
+ActionScript
+Elixir
+Golo
+FLUX
+Dune
+Shell
+ECL
+Monkey C
+Chapel
+Tree-sitter Query
+Darcs Patch
+PowerBuilder
+Metal
+eC
+Ecere Projects
+ASP.NET
+Gentoo Ebuild
+Gentoo Eclass
+Visual Basic .NET
+nesC
+Genshi
+QuakeC
+Nearley
+Liquidsoap
+Uno
+Lasso
+ImageJ Macro
+XC
+TOML
+NumPy
+Augeas
+LilyPond
+Ragel
+Quint
+Hare
+ANTLR
+SubRip Text
+J
+Vyper
+HOCON
+TI Program
+OMNeT++ MSG
 Wollok
+Julia
+Julia REPL
+IDL
+Jinja
+Beef
+SpiceDB Schema
+Sass
+UnrealScript
+Vala
+RON
+Riot
+EQ
+BAML
+Pug
+Altium Designer
+Ant Build System
+Io
+EJS
+AspectJ
+Kotlin
+Answer Set Programming
+Arc
+Solidity
+OpenQASM
+DirectX 3D File
+HLSL
+Jai
+VHDL
+Polar
+JAR Manifest
+Java
+ooc
+Component Pascal
+Stan
+Verilog
+Idris
+SAS
+Common Workflow Language
+BIRD2
+MTML
+Erlang
+F#
+MoonBit
+KoLmafia ASH
+AGS Script
+D
+Pro*C
+Scaml
+Emacs Lisp
+Glyph
+Twig
+Batchfile
+Scala
+Toit
+Awk
+Faust
+TL-Verilog
+Cap'n Proto
+Smithy
+Max
+Leo
+SCSS
+jq
+Pep8
+Mirah
+AngelScript
+Boogie
+Praat
+TextGrid
+SmPL
+Simple File Verification
+Nu
+Scilab
+Omgrofl
+BBCode
+YAML
+NPM Config
+Pan
+Rouge
+LOLCODE
+Dogescript
+UrWeb
+Cirru
+E
+OverpassQL
+BlitzMax
+Oxygene
+ShellCheck Config
+Turing
+Jasmin
+G-code
+Rocq Prover
+ApacheConf
+Thrift
+INI
+ALGOL
+Gerber Image
+FPP
+Power Query
+Daslang
+Flix
+Boo
+Whiley
+Zimpl
+Debian Package Control File
+PogoScript
+Genero per
+Macaulay2
+JCL
+REXX
+PostScript
+CMake
+Jupyter Notebook
+B (Formal Method)
+PLSQL
+SystemVerilog
+Clojure
+Clarion
+Pawn
+JFlex
+Lex
+PostCSS
+Standard ML
+ZIL
+HiveQL
+Wolfram Language
+Promela
+Modelica
+RouterOS Script
+Rust
+TextMate Properties
+Haxe
+Ceylon
+Dhall
+Nickel
+GraphQL
+Cooklang
+MATLAB
+mcfunction
+HTML
+SQL
+SQLPL
+TSQL
+Pascal
+Tcl
+Click
+OpenSCAD
+Dotenv
+AMPL
+ABAP
+crontab
+Ecmarkup
+XSLT
+iCalendar
+Zig
+Roff
+Roff Manpage
+Haml
+FlatBuffers
+ColdFusion
+ColdFusion CFC
+OpenCL
 ReScript
+Pyret
+vCard
+OCaml
+Swift
+Gnuplot
+Smarty
+TMDL
+COLLADA
+JavaScript
+JavaScript+ERB
+Valve Data Format
+Latte
+C++
+Parrot
+Redscript
+Git Attributes
+Git Commit
+Git Config
+Git Revision List
+GAMS
+Bru
+Red
+Glimmer JS
+HXML
+SourcePawn
+Filebench WML
+Blade
+Handlebars
+Pact
+World of Warcraft Addon Data
+Opal
+Portugol
+Lobster
+Mask
+Adobe Font Metrics
+Oz
+Genie
+Rhai
+Motoko
+PlantUML
+DenizenScript
+Wikitext
+Jac
+MDX
+PigLatin
+Scenic
+Q#
+LabVIEW
+Cython
+Isabelle
+Isabelle ROOT
+Asymptote
+BASIC
+Grammatical Framework
+Witcher Script
+Vento
+SurrealQL
+Hurl
+JASS
+Objective-J
+MiniYAML
+Antlers
+Mercury
+Mermaid
+Svelte
+MoonScript
+Cairo
+Cairo Zero
+Mojo
+Ballerina
+Reason
+ReasonLIGO
+Astro
+Stylus
+NetLogo
+GSC
+Gemini
+Zmodel
+Euphoria
+Ren'Py
+SVG
+Cloud Firestore Security Rules
+Gleam
+KDL
+Nim
+GAML
+Fluent
+Survex data
+GCC Machine Description
+Pip Requirements
+Browserslist
+Rez
+FIGlet Font
+Textile
+Dafny
+HolyC
+EditorConfig
+Fennel
+EmberScript
+Rascal

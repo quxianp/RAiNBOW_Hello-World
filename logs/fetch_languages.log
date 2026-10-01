@@ -267,3 +267,9 @@
 [01:25:50] linguist: 836 languages, 694 with color
 [01:25:50] wrote data\fetch_summary.json (400 bytes)
 [01:25:50] === fetch_languages done ===
+[01:38:20] auto-detected WinINET proxy 127.0.0.1:10818
+[01:38:20] === fetch_languages start (sources: builtin) ===
+[01:38:20] wrote data\builtin_langs.json (27917 bytes)
+[01:38:20] builtin fallback inventory: 1483 unique names across 21 groups
+[01:38:20] wrote data\fetch_summary.json (879 bytes)
+[01:38:20] === fetch_languages done ===
