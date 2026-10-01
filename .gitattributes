@@ -1,4 +1,4 @@
-* linguist-vendored
+* -text linguist-vendored
 /hello/core/** -linguist-vendored
 /hello/full/** linguist-vendored
 README.md linguist-documentation
