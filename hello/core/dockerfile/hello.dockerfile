@@ -1,9 +1,10 @@
-// Dockerfile - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #384d54
-//   hue        : 195.0 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=Containerfile:
+# Dockerfile - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #384d54
+#   hue        : 195.0 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 FROM alpine
 RUN echo "Hello World!"
@@ -35,5 +36,4 @@ RUN echo "Hello World!"
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Dockerfile :: RAiNBOW_Hello-World
 // rainbow-pad colour #384d54 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-       
+// rainbow-pad padding comment: byte balancing for 

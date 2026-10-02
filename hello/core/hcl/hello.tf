@@ -1,3 +1,4 @@
+# vim: set ft=opentofu:
 # HCL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #844fba
 #   hue        : 269.7 deg
@@ -35,5 +36,4 @@ output "hello" { value = "Hello World!" }
 # rainbow-pad HCL :: RAiNBOW_Hello-World
 # rainbow-pad colour #844fba :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad    
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello

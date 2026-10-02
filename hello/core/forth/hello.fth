@@ -1,9 +1,10 @@
-// Forth - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #341708
-//   hue        : 20.4 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=forth:
+# Forth - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #341708
+#   hue        : 20.4 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 ." Hello World!" cr
 // rainbow-pad equal byte share keeps the language bar an even rainbow
@@ -35,4 +36,4 @@
 // rainbow-pad Forth :: RAiNBOW_Hello-World
 // rainbow-pad colour #341708 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hell
+// rainbow-pad https://github.com/quxia

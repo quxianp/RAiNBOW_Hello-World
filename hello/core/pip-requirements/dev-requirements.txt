@@ -1,3 +1,4 @@
+# vim: set ft=pip-requirements:
 # Pip Requirements - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffd343
 #   hue        : 46.0 deg
@@ -35,5 +36,4 @@ rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Pip Requirements :: RAiNBOW_Hello-World
 # rainbow-pad colour #ffd343 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad       
+# rainbow-pad padding comment: byte balancing for the 

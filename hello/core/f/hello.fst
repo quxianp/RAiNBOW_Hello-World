@@ -1,9 +1,10 @@
-// F* - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #572e30
-//   hue        : 357.1 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=fstar:
+# F* - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #572e30
+#   hue        : 357.1 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 module Hello
 let hello : string = "Hello World!"
@@ -36,4 +37,4 @@ let hello : string = "Hello World!"
 // rainbow-pad F* :: RAiNBOW_Hello-World
 // rainbow-pad colour #572e30 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/
+// rainbow-pad https://gith

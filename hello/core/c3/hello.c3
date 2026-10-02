@@ -1,9 +1,10 @@
-// C3 - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #2563eb
-//   hue        : 221.2 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=c3:
+# C3 - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #2563eb
+#   hue        : 221.2 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 fn void main()
 {
@@ -38,4 +39,4 @@ fn void main()
 // rainbow-pad C3 :: RAiNBOW_Hello-World
 // rainbow-pad colour #2563eb :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxia
+// rainbow-pad https://gith

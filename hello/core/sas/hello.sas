@@ -1,9 +1,10 @@
--- SAS - Hello World! :: RAiNBOW_Hello-World
---   colour     : #b34936
---   hue        : 9.1 deg
---   layer      : core (byte-balanced rainbow bar)
---   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
---   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=sas:
+# SAS - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #b34936
+#   hue        : 9.1 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 put "Hello World!";
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
@@ -35,5 +36,4 @@ put "Hello World!";
 -- rainbow-pad SAS :: RAiNBOW_Hello-World
 -- rainbow-pad colour #b34936 :: padded to 100
 -- rainbow-pad padding comment: byte balancing for the rainbow bar
--- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-     
+-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hell

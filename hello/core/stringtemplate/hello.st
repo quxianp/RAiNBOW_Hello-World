@@ -1,5 +1,6 @@
+# vim: set ft=stringtemplate:
+#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # StringTemplate - Hello World! :: RAiNBOW_Hello-World
-#   note       : Linguist recognises this language by filename, not by extension.
 #   colour     : #3fb34f
 #   hue        : 128.3 deg
 #   layer      : core (byte-balanced rainbow bar)
@@ -35,5 +36,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad StringTemplate :: RAiNBOW_Hello-World
-# rainbow-pad colour #3fb34f :: padded to 100
-        
+# rainbow-pad    

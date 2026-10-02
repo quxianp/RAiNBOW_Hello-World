@@ -1,9 +1,10 @@
-' Batchfile - Hello World! :: RAiNBOW_Hello-World
-'   colour     : #c1f12e
-'   hue        : 74.8 deg
-'   layer      : core (byte-balanced rainbow bar)
-'   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-'   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=bat:
+# Batchfile - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #c1f12e
+#   hue        : 74.8 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 @echo off
 echo Hello World!
@@ -36,4 +37,4 @@ echo Hello World!
 ' rainbow-pad Batchfile :: RAiNBOW_Hello-World
 ' rainbow-pad colour #c1f12e :: padded to 100
 ' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-Wo
+' rainbow-pad https://github.com/quxia

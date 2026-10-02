@@ -1,3 +1,4 @@
+// vim: set ft=graphql:
 // GraphQL - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #e10098
 //   hue        : 319.5 deg
@@ -37,4 +38,4 @@ type Query {
 // rainbow-pad GraphQL :: RAiNBOW_Hello-World
 // rainbow-pad colour #e10098 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github
+     

@@ -1,3 +1,4 @@
+# vim: set ft=sml:
 # Standard ML - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dc566d
 #   hue        : 349.7 deg
@@ -35,4 +36,4 @@ val _ = print "Hello World!\n"
 # rainbow-pad Standard ML :: RAiNBOW_Hello-World
 # rainbow-pad colour #dc566d :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/
+# rainbow-pad https://

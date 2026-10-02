@@ -1,3 +1,4 @@
+# vim: set ft=cue:
 # CUE - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5886e1
 #   hue        : 219.8 deg
@@ -36,4 +37,4 @@ hello: "Hello World!"
 # rainbow-pad colour #5886e1 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte share keeps 
+# rainbow-pad     

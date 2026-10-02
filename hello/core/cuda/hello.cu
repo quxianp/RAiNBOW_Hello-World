@@ -1,3 +1,4 @@
+// vim: set ft=cuda:
 // Cuda - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #3a4e3a
 //   hue        : 120.0 deg
@@ -37,4 +38,4 @@ __global__ void hello() {
 // rainbow-pad Cuda :: RAiNBOW_Hello-World
 // rainbow-pad colour #3a4e3a :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://gi
+    

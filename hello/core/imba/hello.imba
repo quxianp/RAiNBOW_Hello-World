@@ -1,10 +1,11 @@
-// Imba - Hello World! :: RAiNBOW_Hello-World
-//   note       : Linguist recognises this language by filename, not by extension.
-//   colour     : #16cec6
-//   hue        : 177.4 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=imba:
+#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
+# Imba - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #16cec6
+#   hue        : 177.4 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 // Hello World!
 // Hello World!
@@ -36,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Imba :: RAiNBOW_Hello-World
 // rainbow-pad colour #16cec6 :: padded to 100
-// rainbow-pad padding comment:
+           

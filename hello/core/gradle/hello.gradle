@@ -1,3 +1,4 @@
+# vim: set ft=gradle:
 # Gradle - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #02303a
 #   hue        : 190.7 deg
@@ -35,4 +36,4 @@ task hello { doLast { println "Hello World!" } }
 # rainbow-pad Gradle :: RAiNBOW_Hello-World
 # rainbow-pad colour #02303a :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hell
+# rainbow-pad https://github.co

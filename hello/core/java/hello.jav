@@ -1,9 +1,10 @@
-// Java - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #b07219
-//   hue        : 35.4 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=java:
+# Java - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #b07219
+#   hue        : 35.4 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 public class Main {
     public static void main(String[] args) {
@@ -38,4 +39,4 @@ public class Main {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Java :: RAiNBOW_Hello-World
 // rainbow-pad colour #b07219 :: padded to 100
-// rainbow-pad padding comment
+// rainbow-pad  

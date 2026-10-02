@@ -1,9 +1,10 @@
-// Dhall - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #dfafff
-//   hue        : 276.0 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=dhall:
+# Dhall - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #dfafff
+#   hue        : 276.0 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 < "Hello World!" : Text
 // rainbow-pad equal byte share keeps the language bar an even rainbow
@@ -35,4 +36,4 @@
 // rainbow-pad Dhall :: RAiNBOW_Hello-World
 // rainbow-pad colour #dfafff :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW
+// rainbow-pad https://github.com/

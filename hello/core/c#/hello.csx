@@ -1,3 +1,4 @@
+# vim: set ft=csharp:
 # C# - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7355dd
 #   hue        : 253.2 deg
@@ -40,5 +41,4 @@ class Program {
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad C# :: RAiNBOW_Hello-World
 # rainbow-pad colour #7355dd :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad      
+# rainbow-pad padding comment: byte balancing for the rainbow b

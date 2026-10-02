@@ -1,9 +1,10 @@
-# Thrift - Hello World! :: RAiNBOW_Hello-World
-#   colour     : #d12127
-#   hue        : 357.9 deg
-#   layer      : core (byte-balanced rainbow bar)
-#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-#   reference  : see https://esolangs.org/ and https://rosettacode.org/
+// vim: set ft=thrift:
+// Thrift - Hello World! :: RAiNBOW_Hello-World
+//   colour     : #d12127
+//   hue        : 357.9 deg
+//   layer      : core (byte-balanced rainbow bar)
+//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+//   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 namespace cpp Hello
 service HelloService {
@@ -38,4 +39,4 @@ service HelloService {
 # rainbow-pad Thrift :: RAiNBOW_Hello-World
 # rainbow-pad colour #d12127 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp
+           

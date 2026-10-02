@@ -1,3 +1,4 @@
+# vim: set ft=python-traceback:
 # Python traceback - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3572a5
 #   hue        : 207.3 deg
@@ -34,5 +35,4 @@ print("Hello World!")
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Python traceback :: RAiNBOW_Hello-World
 # rainbow-pad colour #3572a5 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad       
+# rainbow-pad padding comment: byte balancing for the 

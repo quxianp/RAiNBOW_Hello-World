@@ -1,3 +1,4 @@
+# vim: set ft=carbon:
 # Carbon - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #222222
 #   hue        : 0.0 deg
@@ -37,5 +38,4 @@ fn Main() -> i32 {
 # rainbow-pad Carbon :: RAiNBOW_Hello-World
 # rainbow-pad colour #222222 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-        
+# rainbow-pad https://github.com/quxianp/RAiNBO

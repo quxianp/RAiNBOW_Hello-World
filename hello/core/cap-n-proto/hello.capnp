@@ -1,3 +1,4 @@
+# vim: set ft=cap-n-proto:
 # Cap'n Proto - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c42727
 #   hue        : 0.0 deg
@@ -37,5 +38,4 @@ struct Hello {
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Cap'n Proto :: RAiNBOW_Hello-World
 # rainbow-pad colour #c42727 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad  
+# rainbow-pad padding comment: byte balancing for the 

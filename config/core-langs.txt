@@ -232,6 +232,8 @@ OASv2-json
 OASv2-yaml
 OASv3-json
 OASv3-yaml
+OpenAPI Specification v2
+OpenAPI Specification v3
 Makefile
 OpenEdge ABL
 LilyPond
@@ -261,6 +263,7 @@ CLIPS
 Yacc
 SRecode Template
 Elvish
+Elvish Transcript
 OMNeT++ MSG
 KoLmafia ASH
 LLVM
@@ -431,6 +434,7 @@ AsciiDoc
 Motorola 68K Assembly
 GEDCOM
 Python
+Python console
 Python traceback
 GDScript
 Godot Resource
@@ -599,6 +603,7 @@ Uno
 G-code
 LookML
 Julia
+Julia REPL
 Tor Config
 HTML+EEX
 Lambdapi

@@ -1,3 +1,4 @@
+# vim: set ft=gdscript:
 # GDScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #355570
 #   hue        : 207.5 deg
@@ -38,4 +39,4 @@ func _init():
 # rainbow-pad GDScript :: RAiNBOW_Hello-World
 # rainbow-pad colour #355570 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://githu
+   

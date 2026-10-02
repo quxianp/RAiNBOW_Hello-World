@@ -1,3 +1,4 @@
+-- vim: set ft=vhdl:
 -- VHDL - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #adb2cb
 --   hue        : 230.0 deg
@@ -42,4 +43,4 @@ end architecture;
 -- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
--- rainbow-pad VHDL :: RAiNBOW
+         

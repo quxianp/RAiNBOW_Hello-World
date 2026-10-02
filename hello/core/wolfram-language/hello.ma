@@ -1,9 +1,10 @@
-// Wolfram Language - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #dd1100
-//   hue        : 4.6 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=mathematica:
+# Wolfram Language - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #dd1100
+#   hue        : 4.6 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 Print["Hello World!"]
 // rainbow-pad equal byte share keeps the language bar an even rainbow
@@ -34,4 +35,4 @@ Print["Hello World!"]
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Wolfram Language :: RAiNBOW_Hello-World
 // rainbow-pad colour #dd1100 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the
+// rainbow-pad padding comment: b

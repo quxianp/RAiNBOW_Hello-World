@@ -1,5 +1,6 @@
+; vim: set ft=tsq:
+;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; Tree-sitter Query - Hello World! :: RAiNBOW_Hello-World
-;   note       : Linguist recognises this language by filename, not by extension.
 ;   colour     : #8ea64c
 ;   hue        : 76.0 deg
 ;   layer      : core (byte-balanced rainbow bar)
@@ -35,4 +36,4 @@
 ; rainbow-pad equal byte share keeps the language bar an even rainbow
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Tree-sitter Query :: RAiNBOW_Hello-World
-; rainbow-pad colour #8ea64c :: padde
+           

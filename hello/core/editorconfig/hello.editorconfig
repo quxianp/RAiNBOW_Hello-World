@@ -1,3 +1,4 @@
+# vim: set ft=editor-config:
 # EditorConfig - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fff1f2
 #   hue        : 355.7 deg
@@ -38,4 +39,4 @@ charset = utf-8
 # rainbow-pad EditorConfig :: RAiNBOW_Hello-World
 # rainbow-pad colour #fff1f2 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/
+    

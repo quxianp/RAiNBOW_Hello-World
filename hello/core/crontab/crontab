@@ -1,3 +1,4 @@
+# vim: set ft=cron:
 # crontab - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ead7ac
 #   hue        : 41.6 deg
@@ -36,4 +37,4 @@
 # rainbow-pad crontab :: RAiNBOW_Hello-World
 # rainbow-pad colour #ead7ac :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello
+# rainbow-pad https://github.com/q

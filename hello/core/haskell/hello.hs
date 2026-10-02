@@ -1,9 +1,10 @@
--- Haskell - Hello World! :: RAiNBOW_Hello-World
---   colour     : #5e5086
---   hue        : 255.6 deg
---   layer      : core (byte-balanced rainbow bar)
---   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
---   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=haskell:
+# Haskell - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #5e5086
+#   hue        : 255.6 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 main :: IO ()
 main = putStrLn "Hello World!"
@@ -36,4 +37,3 @@ main = putStrLn "Hello World!"
 -- rainbow-pad Haskell :: RAiNBOW_Hello-World
 -- rainbow-pad colour #5e5086 :: padded to 100
 -- rainbow-pad padding comment: byte balancing for the rainbow bar
--- rainbow-pad  

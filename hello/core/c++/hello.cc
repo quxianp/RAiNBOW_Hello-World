@@ -1,3 +1,4 @@
+// vim: set ft=cpp:
 // C++ - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #f34b7d
 //   hue        : 342.1 deg
@@ -35,5 +36,4 @@ int main(){ std::cout << "Hello World!" << std::endl; }
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad C++ :: RAiNBOW_Hello-World
 // rainbow-pad colour #f34b7d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-         
+// rainbow-pad padding comment: byte balancing for the r

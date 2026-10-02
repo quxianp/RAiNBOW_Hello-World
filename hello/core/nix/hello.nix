@@ -1,3 +1,4 @@
+# vim: set ft=nixos:
 # Nix - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7e7eff
 #   hue        : 240.0 deg
@@ -36,4 +37,4 @@ builtins.trace "Hello World!" null
 # rainbow-pad colour #7e7eff :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad equal byte
+   

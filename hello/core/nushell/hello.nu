@@ -1,3 +1,4 @@
+# vim: set ft=nu-script:
 # Nushell - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4e9906
 #   hue        : 90.6 deg
@@ -35,5 +36,4 @@ print "Hello World!"
 # rainbow-pad Nushell :: RAiNBOW_Hello-World
 # rainbow-pad colour #4e9906 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad  
+# rainbow-pad https://github.com/quxianp/RAiNBOW_He

@@ -1,10 +1,11 @@
-// Aiken - Hello World! :: RAiNBOW_Hello-World
-//   note       : Linguist recognises this language by filename, not by extension.
-//   colour     : #640ff8
-//   hue        : 261.9 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=aiken:
+#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
+# Aiken - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #640ff8
+#   hue        : 261.9 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 // Hello World!
 // Hello World!
@@ -36,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Aiken :: RAiNBOW_Hello-World
 // rainbow-pad colour #640ff8 :: padded to 100
-// rainbow-pad padding co
+    

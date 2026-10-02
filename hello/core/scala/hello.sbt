@@ -1,3 +1,4 @@
+# vim: set ft=scala:
 # Scala - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c22d40
 #   hue        : 352.4 deg
@@ -37,4 +38,4 @@ object HelloWorld extends App {
 # rainbow-pad Scala :: RAiNBOW_Hello-World
 # rainbow-pad colour #c22d40 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW
+# rainbow-pad https://githu

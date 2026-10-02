@@ -1,3 +1,4 @@
+// vim: set ft=jsonc:
 // JSON with Comments - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #292929
 //   hue        : 0.0 deg
@@ -36,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad JSON with Comments :: RAiNBOW_Hello-World
 // rainbow-pad colour #292929 :: padded to 100
-// rainbow-pad padding comment: by
+            

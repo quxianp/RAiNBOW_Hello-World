@@ -1,5 +1,6 @@
+# vim: set ft=Justfile:
+#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Just - Hello World! :: RAiNBOW_Hello-World
-#   note       : Linguist recognises this language by filename, not by extension.
 #   colour     : #384d54
 #   hue        : 195.0 deg
 #   layer      : core (byte-balanced rainbow bar)
@@ -36,5 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Just :: RAiNBOW_Hello-World
 # rainbow-pad colour #384d54 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rainbow bar
-  
+# rainbow-pad padding comment: byte b

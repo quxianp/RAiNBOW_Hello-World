@@ -1,9 +1,10 @@
-// ChucK - Hello World! :: RAiNBOW_Hello-World
-//   colour     : #3f8000
-//   hue        : 90.5 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=chuck:
+# ChucK - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #3f8000
+#   hue        : 90.5 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 <<<"Hello World!", "">>>;
 // rainbow-pad equal byte share keeps the language bar an even rainbow
@@ -35,4 +36,4 @@
 // rainbow-pad ChucK :: RAiNBOW_Hello-World
 // rainbow-pad colour #3f8000 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBO
+// rainbow-pad https://github.com

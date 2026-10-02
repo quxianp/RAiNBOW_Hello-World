@@ -1,3 +1,4 @@
+# vim: set ft=vim:
 # Vim script - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #199f4b
 #   hue        : 142.4 deg
@@ -35,4 +36,4 @@ echo "Hello World!"
 # rainbow-pad Vim script :: RAiNBOW_Hello-World
 # rainbow-pad colour #199f4b :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-Wor
+# rainbow-pad https://github.com/quxian

@@ -1,10 +1,11 @@
-// IL Assembly - Hello World! :: RAiNBOW_Hello-World
-//   note       : Linguist recognises this language by filename, not by extension.
-//   colour     : #512bd4
-//   hue        : 253.5 deg
-//   layer      : core (byte-balanced rainbow bar)
-//   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-//   reference  : see https://esolangs.org/ and https://rosettacode.org/
+# vim: set ft=ilasm:
+#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
+# IL Assembly - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #512bd4
+#   hue        : 253.5 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 // Hello World!
 // Hello World!
@@ -35,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad IL Assembly :: RAiNBOW_Hello-World
-// rainbow-pad colour #512bd4 :: pad
+// rainbow-pad 

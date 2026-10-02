@@ -1,3 +1,4 @@
+# vim: set ft=hosts:
 # Hosts File - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #308888
 #   hue        : 180.0 deg
@@ -35,4 +36,4 @@
 # rainbow-pad Hosts File :: RAiNBOW_Hello-World
 # rainbow-pad colour #308888 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RA
+# rainbow-pad https://

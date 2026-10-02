@@ -1,3 +1,4 @@
+# vim: set ft=isabelle-root:
 # Isabelle ROOT - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fefe00
 #   hue        : 60.0 deg
@@ -40,4 +41,4 @@ end
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Isabelle ROOT :: RAiNBOW_Hello-World
 # rainbow-pad colour #fefe00 :: padded to 100
-# rainbow-pad padding comment: byte balancing 
+# rainbow-pad    

@@ -1,3 +1,4 @@
+; vim: set ft=scheme:
 ; Scheme - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #1e4aec
 ;   hue        : 227.2 deg
@@ -35,5 +36,4 @@
 ; rainbow-pad Scheme :: RAiNBOW_Hello-World
 ; rainbow-pad colour #1e4aec :: padded to 100
 ; rainbow-pad padding comment: byte balancing for the rainbow bar
-; rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-      
+; rainbow-pad https://github.com/quxianp/RAiN

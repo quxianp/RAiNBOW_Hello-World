@@ -1,706 +1,711 @@
 byte balance report
 ====================================================================================================
-core languages            : 689
-natural mean size         : 384.8 bytes
+core languages            : 694
+natural mean size         : 408.3 bytes
 target size per language  : 2048 bytes
-ideal share per language  : 0.1451 %
+ideal share per language  : 0.1441 %
 allowed share window      : 0.05 % - 0.5 %
 
 language                          path                                           bytes    share%     dev%
 ----------------------------------------------------------------------------------------------------
-Adblock Filter List               hello/core/adblock-filter-list/hello.txt        2048    0.1451  -0.0000
-Asymptote                         hello/core/asymptote/hello.asy                  2048    0.1451  -0.0000
-BASIC                             hello/core/basic/hello.bas                      2048    0.1451  -0.0000
-C                                 hello/core/c/hello.c                            2049    0.1452  +0.0001
-CMake                             hello/core/cmake/hello.cmake                    2048    0.1451  -0.0000
-Cap'n Proto                       hello/core/cap-n-proto/hello.capnp              2048    0.1451  -0.0000
-Carbon                            hello/core/carbon/hello.carbon                  2048    0.1451  -0.0000
-Csound                            hello/core/csound/hello.orc                     2048    0.1451  -0.0000
-Csound Document                   hello/core/csound-document/hello.csd            2048    0.1451  -0.0000
-Csound Score                      hello/core/csound-score/hello.sco               2048    0.1451  -0.0000
-Daslang                           hello/core/daslang/hello.das                    2048    0.1451  -0.0000
-Grammatical Framework             hello/core/grammatical-framework/hello.gf       2048    0.1451  -0.0000
-Hack                              hello/core/hack/hello.hhi                       2048    0.1451  -0.0000
-Idris                             hello/core/idris/hello.idr                      2048    0.1451  -0.0000
-Ignore List                       hello/core/ignore-list/hello.gitignore          2048    0.1451  -0.0000
-JASS                              hello/core/jass/hello.j                         2048    0.1451  -0.0000
-JSON                              hello/core/json/hello.har                       2048    0.1451  -0.0000
-JSON with Comments                hello/core/json-with-comments/hello.jsonc       2048    0.1451  -0.0000
-KDL                               hello/core/kdl/hello.kdl                        2048    0.1451  -0.0000
-Lasso                             hello/core/lasso/hello.las                      2048    0.1451  -0.0000
-Mercury                           hello/core/mercury/hello.moo                    2048    0.1451  -0.0000
-MiniYAML                          hello/core/miniyaml/hello.yml                   2048    0.1451  -0.0000
-Nearley                           hello/core/nearley/hello.ne                     2048    0.1451  -0.0000
-PLSQL                             hello/core/plsql/hello.vw                       2048    0.1451  -0.0000
-Pan                               hello/core/pan/hello.pan                        2048    0.1451  -0.0000
-Promela                           hello/core/promela/hello.pml                    2048    0.1451  -0.0000
-Red                               hello/core/red/hello.red                        2048    0.1451  -0.0000
-Ren'Py                            hello/core/ren-py/hello.rpy                     2048    0.1451  -0.0000
-SQF                               hello/core/sqf/hello.sqf                        2048    0.1451  -0.0000
-Slim                              hello/core/slim/hello.slim                      2048    0.1451  -0.0000
-SmPL                              hello/core/smpl/hello.cocci                     2048    0.1451  -0.0000
-Squirrel                          hello/core/squirrel/hello.nut                   2048    0.1451  -0.0000
-SubRip Text                       hello/core/subrip-text/hello.srt                2048    0.1451  -0.0000
-Talon                             hello/core/talon/hello.talon                    2048    0.1451  -0.0000
-Volt                              hello/core/volt/hello.volt                      2048    0.1451  -0.0000
-Wikitext                          hello/core/wikitext/hello.wiki                  2048    0.1451  -0.0000
-Witcher Script                    hello/core/witcher-script/hello.ws              2048    0.1451  -0.0000
-Wren                              hello/core/wren/hello.wren                      2048    0.1451  -0.0000
-YARA                              hello/core/yara/hello.yar                       2048    0.1451  -0.0000
-reStructuredText                  hello/core/restructuredtext/hello.rst           2048    0.1451  -0.0000
-OpenCL                            hello/core/opencl/hello.opencl                  2048    0.1451  -0.0000
-NPM Config                        hello/core/npm-config/.npmrc                    2048    0.1451  -0.0000
-Cairo                             hello/core/cairo/hello.cairo                    2048    0.1451  -0.0000
-Cairo Zero                        hello/core/cairo-zero/hello.cairo               2048    0.1451  -0.0000
-Clojure                           hello/core/clojure/hello.clj                    2048    0.1451  -0.0000
-JCL                               hello/core/jcl/hello.jcl                        2048    0.1451  -0.0000
-REXX                              hello/core/rexx/hello.rex                       2048    0.1451  -0.0000
-Flix                              hello/core/flix/hello.flix                      2048    0.1451  -0.0000
-Gerber Image                      hello/core/gerber-image/hello.gbr               2048    0.1451  -0.0000
-Adobe Font Metrics                hello/core/adobe-font-metrics/hello.afm         2048    0.1451  -0.0000
-Jinja                             hello/core/jinja/hello.j2                       2048    0.1451  -0.0000
-Kaitai Struct                     hello/core/kaitai-struct/hello.ksy              2048    0.1451  -0.0000
-iCalendar                         hello/core/icalendar/hello.ics                  2048    0.1451  -0.0000
-Pyret                             hello/core/pyret/hello.arr                      2048    0.1451  -0.0000
-PostScript                        hello/core/postscript/hello.ps                  2048    0.1451  -0.0000
-Redscript                         hello/core/redscript/hello.reds                 2048    0.1451  -0.0000
-Wolfram Language                  hello/core/wolfram-language/hello.ma            2048    0.1451  -0.0000
-EmberScript                       hello/core/emberscript/hello.em                 2048    0.1451  -0.0000
-Reason                            hello/core/reason/hello.rei                     2048    0.1451  -0.0000
-ReasonLIGO                        hello/core/reasonligo/hello.religo              2048    0.1451  -0.0000
-Blade                             hello/core/blade/hello.blade                    2048    0.1451  -0.0000
-Smithy                            hello/core/smithy/hello.smithy                  2048    0.1451  -0.0000
-Swift                             hello/core/swift/hello.swift                    2049    0.1452  +0.0001
-B                                 hello/core/b/hello.b                            2048    0.1451  -0.0000
-SAS                               hello/core/sas/hello.sas                        2048    0.1451  -0.0000
-Stylus                            hello/core/stylus/hello.styl                    2048    0.1451  -0.0000
-Bison                             hello/core/bison/hello.bison                    2048    0.1451  -0.0000
-Pep8                              hello/core/pep8/hello.pep                       2048    0.1451  -0.0000
-Git Attributes                    hello/core/git-attributes/.gitattributes        2048    0.1451  -0.0000
-Git Commit                        hello/core/git-commit/.gitmessage               2048    0.1451  -0.0000
-Git Config                        hello/core/git-config/hello.gitconfig           2048    0.1451  -0.0000
-Git Revision List                 hello/core/git-revision-list/.git-blame-ign     2048    0.1451  -0.0000
-Pug                               hello/core/pug/hello.pug                        2048    0.1451  -0.0000
-Mojo                              hello/core/mojo/hello.mojo                      2048    0.1451  -0.0000
-HTML                              hello/core/html/hello.hta                       2048    0.1451  -0.0000
-Lobster                           hello/core/lobster/hello.lobster                2048    0.1451  -0.0000
-PostCSS                           hello/core/postcss/hello.pcss                   2048    0.1451  -0.0000
-ActionScript                      hello/core/actionscript/hello.as                2048    0.1451  -0.0000
-Glimmer JS                        hello/core/glimmer-js/hello.gjs                 2048    0.1451  -0.0000
-Svelte                            hello/core/svelte/hello.svelte                  2049    0.1452  +0.0001
-Genie                             hello/core/genie/hello.gs                       2048    0.1451  -0.0000
-Jasmin                            hello/core/jasmin/hello.j                       2048    0.1451  -0.0000
-RON                               hello/core/ron/hello.ron                        2048    0.1451  -0.0000
-Cooklang                          hello/core/cooklang/hello.cook                  2048    0.1451  -0.0000
-TOML                              hello/core/toml/hello.toml                      2048    0.1451  -0.0000
-Max                               hello/core/max/hello.mxt                        2048    0.1451  -0.0000
-MATLAB                            hello/core/matlab/hello.matlab                  2048    0.1451  -0.0000
-Valve Data Format                 hello/core/valve-data-format/hello.vdf          2048    0.1451  -0.0000
-Mustache                          hello/core/mustache/hello.mustache              2048    0.1451  -0.0000
-IDL                               hello/core/idl/hello.dlm                        2048    0.1451  -0.0000
-Ballerina                         hello/core/ballerina/hello.bal                  2048    0.1451  -0.0000
-LFE                               hello/core/lfe/hello.lfe                        2048    0.1451  -0.0000
-Yul                               hello/core/yul/hello.yul                        2048    0.1451  -0.0000
-Pro*C                             hello/core/pro-c/hello.pc                       2048    0.1451  -0.0000
-Solidity                          hello/core/solidity/hello.sol                   2049    0.1452  +0.0001
-Dune                              hello/core/dune/dune-project                    2048    0.1451  -0.0000
-Forth                             hello/core/forth/hello.fth                      2048    0.1451  -0.0000
-Astro                             hello/core/astro/hello.astro                    2048    0.1451  -0.0000
-Mask                              hello/core/mask/hello.mask                      2048    0.1451  -0.0000
-Rust                              hello/core/rust/hello.rs.in                     2048    0.1451  -0.0000
-Jac                               hello/core/jac/hello.jac                        2048    0.1451  -0.0000
-Zig                               hello/core/zig/hello.zig                        2049    0.1452  +0.0001
-Faust                             hello/core/faust/hello.dsp                      2048    0.1451  -0.0000
-Jupyter Notebook                  hello/core/jupyter-notebook/hello.ipynb         2049    0.1452  +0.0001
-GSC                               hello/core/gsc/hello.gsc                        2048    0.1451  -0.0000
-Gemini                            hello/core/gemini/hello.gmi                     2048    0.1451  -0.0000
-GCC Machine Description           hello/core/gcc-machine-description/hello.md     2049    0.1452  +0.0001
-Ecmarkup                          hello/core/ecmarkup/hello.html                  2049    0.1452  +0.0001
-FPP                               hello/core/fpp/hello.fppi                       2048    0.1451  -0.0000
-Zmodel                            hello/core/zmodel/hello.zmodel                  2048    0.1451  -0.0000
-Euphoria                          hello/core/euphoria/hello.e                     2048    0.1451  -0.0000
-Monkey C                          hello/core/monkey-c/hello.mc                    2048    0.1451  -0.0000
-Golo                              hello/core/golo/hello.golo                      2048    0.1451  -0.0000
-BlitzMax                          hello/core/blitzmax/hello.bmx                   2048    0.1451  -0.0000
-OCaml                             hello/core/ocaml/hello.ml4                      2048    0.1451  -0.0000
-FIGlet Font                       hello/core/figlet-font/hello.flf                2048    0.1451  -0.0000
-RUNOFF                            hello/core/runoff/hello.rnh                     2048    0.1451  -0.0000
-Survex data                       hello/core/survex-data/hello.svx                2048    0.1451  -0.0000
-HXML                              hello/core/hxml/hello.hxml                      2048    0.1451  -0.0000
-Rez                               hello/core/rez/hello.r                          2048    0.1451  -0.0000
-Zimpl                             hello/core/zimpl/hello.zpl                      2048    0.1451  -0.0000
-Ragel                             hello/core/ragel/hello.rl                       2048    0.1451  -0.0000
-Pawn                              hello/core/pawn/hello.pwn                       2048    0.1451  -0.0000
-Handlebars                        hello/core/handlebars/hello.hbs                 2049    0.1452  +0.0001
-Haxe                              hello/core/haxe/hello.hx                        2048    0.1451  -0.0000
-Rhai                              hello/core/rhai/hello.rhai                      2048    0.1451  -0.0000
-Latte                             hello/core/latte/hello.latte                    2048    0.1451  -0.0000
-Unified Parallel C                hello/core/unified-parallel-c/hello.upc         2048    0.1451  -0.0000
-Opal                              hello/core/opal/hello.opal                      2048    0.1451  -0.0000
-GAMS                              hello/core/gams/hello.gms                       2048    0.1451  -0.0000
-Bru                               hello/core/bru/hello.bru                        2048    0.1451  -0.0000
-JAR Manifest                      hello/core/jar-manifest/MANIFEST.MF             2048    0.1451  -0.0000
-Java                              hello/core/java/hello.jav                       2048    0.1451  -0.0000
-SourcePawn                        hello/core/sourcepawn/hello.sp                  2048    0.1451  -0.0000
-SVG                               hello/core/svg/hello.svg                        2052    0.1454  +0.0003
-Clarion                           hello/core/clarion/hello.clw                    2048    0.1451  -0.0000
-Motoko                            hello/core/motoko/hello.mo                      2048    0.1451  -0.0000
-COLLADA                           hello/core/collada/hello.dae                    2048    0.1451  -0.0000
-SQL                               hello/core/sql/hello.tab                        2048    0.1451  -0.0000
-SQLPL                             hello/core/sqlpl/hello.db2                      2048    0.1451  -0.0000
-TSQL                              hello/core/tsql/hello.sql                       2048    0.1451  -0.0000
-Rocq Prover                       hello/core/rocq-prover/hello.coq                2048    0.1451  -0.0000
-Assembly                          hello/core/assembly/hello.a51                   2048    0.1451  -0.0000
-Cloud Firestore Security Rules    hello/core/cloud-firestore-security-rules/f     2048    0.1451  -0.0000
-GAML                              hello/core/gaml/hello.gaml                      2048    0.1451  -0.0000
-EQ                                hello/core/eq/hello.eq                          2048    0.1451  -0.0000
-MDX                               hello/core/mdx/hello.mdx                        2048    0.1451  -0.0000
-Power Query                       hello/core/power-query/hello.pq                 2048    0.1451  -0.0000
-Oz                                hello/core/oz/hello.oz                          2048    0.1451  -0.0000
-Dogescript                        hello/core/dogescript/hello.djs                 2048    0.1451  -0.0000
-Ceylon                            hello/core/ceylon/hello.ceylon                  2048    0.1451  -0.0000
-Hare                              hello/core/hare/hello.ha                        2048    0.1451  -0.0000
-Jai                               hello/core/jai/hello.jai                        2048    0.1451  -0.0000
-Glyph                             hello/core/glyph/hello.glf                      2048    0.1451  -0.0000
-Tcl                               hello/core/tcl/hello.tm                         2048    0.1451  -0.0000
-crontab                           hello/core/crontab/crontab                      2048    0.1451  -0.0000
-Roff                              hello/core/roff/hello.me                        2048    0.1451  -0.0000
-Roff Manpage                      hello/core/roff-manpage/hello.1                 2048    0.1451  -0.0000
-Fennel                            hello/core/fennel/hello.fnl                     2048    0.1451  -0.0000
-Whiley                            hello/core/whiley/hello.whiley                  2048    0.1451  -0.0000
-Textile                           hello/core/textile/hello.textile                2048    0.1451  -0.0000
-Smarty                            hello/core/smarty/hello.tpl                     2048    0.1451  -0.0000
-PlantUML                          hello/core/plantuml/hello.puml                  2048    0.1451  -0.0000
-Altium Designer                   hello/core/altium-designer/hello.OutJob         2048    0.1451  -0.0000
-Fluent                            hello/core/fluent/hello.ftl                     2048    0.1451  -0.0000
-LOLCODE                           hello/core/lolcode/hello.lol                    2048    0.1451  -0.0000
-Filebench WML                     hello/core/filebench-wml/hello.f                2048    0.1451  -0.0000
-Q#                                hello/core/q#/hello.qs                          2048    0.1451  -0.0000
-Nim                               hello/core/nim/hello.nim                        2048    0.1451  -0.0000
-Portugol                          hello/core/portugol/hello.por                   2048    0.1451  -0.0000
-Pip Requirements                  hello/core/pip-requirements/dev-requirement     2048    0.1451  -0.0000
-SuperCollider                     hello/core/supercollider/hello.sc               2048    0.1451  -0.0000
-Scenic                            hello/core/scenic/hello.scenic                  2048    0.1451  -0.0000
-Browserslist                      hello/core/browserslist/.browserslistrc         2048    0.1451  -0.0000
-Mirah                             hello/core/mirah/hello.duby                     2048    0.1451  -0.0000
-HolyC                             hello/core/holyc/hello.hc                       2048    0.1451  -0.0000
-Cython                            hello/core/cython/hello.pyx                     2048    0.1451  -0.0000
-TMDL                              hello/core/tmdl/hello.tmdl                      2048    0.1451  -0.0000
-Parrot                            hello/core/parrot/hello.parrot                  2048    0.1451  -0.0000
-OpenSCAD                          hello/core/openscad/hello.scad                  2048    0.1451  -0.0000
-Haml                              hello/core/haml/hello.haml                      2048    0.1451  -0.0000
-LabVIEW                           hello/core/labview/hello.lvlib                  2048    0.1451  -0.0000
-DenizenScript                     hello/core/denizenscript/hello.dsc              2048    0.1451  -0.0000
-Dotenv                            hello/core/dotenv/hello.env                     2048    0.1451  -0.0000
-JavaScript                        hello/core/javascript/hello.js                  2048    0.1451  -0.0000
-JavaScript+ERB                    hello/core/javascript+erb/hello.js.erb          2048    0.1451  -0.0000
-World of Warcraft Addon Data      hello/core/world-of-warcraft-addon-data/hel     2048    0.1451  -0.0000
-Dafny                             hello/core/dafny/hello.dfy                      2048    0.1451  -0.0000
-JFlex                             hello/core/jflex/hello.flex                     2048    0.1451  -0.0000
-Lex                               hello/core/lex/hello.lex                        2048    0.1451  -0.0000
-Rascal                            hello/core/rascal/hello.rsc                     2048    0.1451  -0.0000
-Isabelle                          hello/core/isabelle/hello.thy                   2048    0.1451  -0.0000
-Isabelle ROOT                     hello/core/isabelle-root/ROOT                   2048    0.1451  -0.0000
-E                                 hello/core/e/hello.e                            2048    0.1451  -0.0000
-HiveQL                            hello/core/hiveql/hello.hql                     2048    0.1451  -0.0000
-Genero per                        hello/core/genero-per/hello.per                 2048    0.1451  -0.0000
-Twig                              hello/core/twig/hello.twig                      2048    0.1451  -0.0000
-Pascal                            hello/core/pascal/hello.pas                     2049    0.1452  +0.0001
-Factor                            hello/core/factor/hello.factor                  2048    0.1451  -0.0000
-ooc                               hello/core/ooc/hello.ooc                        2048    0.1451  -0.0000
-Nu                                hello/core/nu/hello.nu                          2048    0.1451  -0.0000
-Smalltalk                         hello/core/smalltalk/hello.st                   2048    0.1451  -0.0000
-ABAP CDS                          hello/core/abap-cds/hello.asddls                2048    0.1451  -0.0000
-AMPL                              hello/core/ampl/hello.ampl                      2048    0.1451  -0.0000
-Answer Set Programming            hello/core/answer-set-programming/hello.lp      2048    0.1451  -0.0000
-SystemVerilog                     hello/core/systemverilog/hello.sv               2048    0.1451  -0.0000
-Component Pascal                  hello/core/component-pascal/hello.cps           2048    0.1451  -0.0000
-Batchfile                         hello/core/batchfile/hello.bat                  2048    0.1451  -0.0000
-ShellCheck Config                 hello/core/shellcheck-config/.shellcheckrc      2048    0.1451  -0.0000
-Augeas                            hello/core/augeas/hello.aug                     2048    0.1451  -0.0000
-Tree-sitter Query                 hello/core/tree-sitter-query/hello.scm          2048    0.1451  -0.0000
-KakouneScript                     hello/core/kakounescript/hello.kak              2048    0.1451  -0.0000
-BBCode                            hello/core/bbcode/hello.bbcode                  2048    0.1451  -0.0000
-TI Program                        hello/core/ti-program/hello.8xp                 2048    0.1451  -0.0000
-XC                                hello/core/xc/hello.xc                          2048    0.1451  -0.0000
-DirectX 3D File                   hello/core/directx-3d-file/hello.x              2048    0.1451  -0.0000
-HLSL                              hello/core/hlsl/hello.fxh                       2048    0.1451  -0.0000
-LLVM TableGen                     hello/core/llvm-tablegen/hello.td               2048    0.1451  -0.0000
-OverpassQL                        hello/core/overpassql/hello.overpassql          2048    0.1451  -0.0000
-Chapel                            hello/core/chapel/hello.chpl                    2048    0.1451  -0.0000
-Game Maker Language               hello/core/game-maker-language/hello.gml        2048    0.1451  -0.0000
-KRL                               hello/core/krl/hello.krl                        2048    0.1451  -0.0000
-Xojo                              hello/core/xojo/hello.xojo_code                 2048    0.1451  -0.0000
-TeX                               hello/core/tex/hello.tex                        2048    0.1451  -0.0000
-Alloy                             hello/core/alloy/hello.als                      2048    0.1451  -0.0000
-GtkRC                             hello/core/gtkrc/hello.gtkrc                    2048    0.1451  -0.0000
-ChucK                             hello/core/chuck/hello.ck                       2048    0.1451  -0.0000
-Nushell                           hello/core/nushell/hello.nu                     2048    0.1451  -0.0000
-Pkl                               hello/core/pkl/hello.pkl                        2048    0.1451  -0.0000
-Darcs Patch                       hello/core/darcs-patch/hello.dpatch             2048    0.1451  -0.0000
-OASv2-json                        hello/core/oasv2-json/hello.json                2048    0.1451  -0.0000
-OASv2-yaml                        hello/core/oasv2-yaml/hello.yml                 2048    0.1451  -0.0000
-OASv3-json                        hello/core/oasv3-json/hello.json                2048    0.1451  -0.0000
-OASv3-yaml                        hello/core/oasv3-yaml/hello.yml                 2048    0.1451  -0.0000
-Makefile                          hello/core/makefile/hello.mk                    2048    0.1451  -0.0000
-LilyPond                          hello/core/lilypond/hello.ly                    2048    0.1451  -0.0000
-OpenEdge ABL                      hello/core/openedge-abl/hello.p                 2048    0.1451  -0.0000
-Option List                       hello/core/option-list/.ackrc                   2048    0.1451  -0.0000
-Shell                             hello/core/shell/hello.sh                       2048    0.1451  -0.0000
-OverPy                            hello/core/overpy/hello.opy                     2048    0.1451  -0.0000
-2-Dimensional Array               hello/core/2-dimensional-array/hello.2da        2048    0.1451  -0.0000
-QML                               hello/core/qml/hello.qml                        2048    0.1451  -0.0000
-Quartus Simulation IP             hello/core/quartus-simulation-ip/hello.sip      2048    0.1451  -0.0000
-NCL                               hello/core/ncl/hello.ncl                        2048    0.1451  -0.0000
-Gosu                              hello/core/gosu/hello.gsx                       2048    0.1451  -0.0000
-POV-Ray SDL                       hello/core/pov-ray-sdl/hello.pov                2048    0.1451  -0.0000
-Nunjucks                          hello/core/nunjucks/hello.njk                   2048    0.1451  -0.0000
-RPGLE                             hello/core/rpgle/hello.rpgle                    2048    0.1451  -0.0000
-CameLIGO                          hello/core/cameligo/hello.mligo                 2048    0.1451  -0.0000
-Leo                               hello/core/leo/hello.leo                        2048    0.1451  -0.0000
-fish                              hello/core/fish/hello.fish                      2048    0.1451  -0.0000
-Jest Snapshot                     hello/core/jest-snapshot/hello.snap             2048    0.1451  -0.0000
-Starlark                          hello/core/starlark/hello.bzl                   2048    0.1451  -0.0000
-CLIPS                             hello/core/clips/hello.clp                      2048    0.1451  -0.0000
-Crystal                           hello/core/crystal/hello.cr                     2048    0.1451  -0.0000
-Cuda                              hello/core/cuda/hello.cu                        2048    0.1451  -0.0000
-Easybuild                         hello/core/easybuild/hello.eb                   2048    0.1451  -0.0000
-Elvish                            hello/core/elvish/hello.elv                     2048    0.1451  -0.0000
-FIRRTL                            hello/core/firrtl/hello.fir                     2048    0.1451  -0.0000
-KoLmafia ASH                      hello/core/kolmafia-ash/hello.ash               2048    0.1451  -0.0000
-Meson                             hello/core/meson/meson.build                    2048    0.1451  -0.0000
-OMNeT++ MSG                       hello/core/omnet++-msg/hello.msg                2048    0.1451  -0.0000
-Regular Expression                hello/core/regular-expression/hello.regex       2048    0.1451  -0.0000
-SRecode Template                  hello/core/srecode-template/hello.srt           2048    0.1451  -0.0000
-Yacc                              hello/core/yacc/hello.y                         2048    0.1451  -0.0000
-LLVM                              hello/core/llvm/hello.ll                        2048    0.1451  -0.0000
-ATS                               hello/core/ats/hello.dats                       2048    0.1451  -0.0000
-StringTemplate                    hello/core/stringtemplate/hello.st              2048    0.1451  -0.0000
-sed                               hello/core/sed/hello.sed                        2048    0.1451  -0.0000
-Caddyfile                         hello/core/caddyfile/hello.caddyfile            2048    0.1451  -0.0000
-Nit                               hello/core/nit/hello.nit                        2048    0.1451  -0.0000
-APL                               hello/core/apl/hello.apl                        2048    0.1451  -0.0000
-Berry                             hello/core/berry/hello.be                       2048    0.1451  -0.0000
-AIDL                              hello/core/aidl/hello.aidl                      2048    0.1451  -0.0000
-Qt Script                         hello/core/qt-script/hello.qs                   2048    0.1451  -0.0000
-Vim Help File                     hello/core/vim-help-file/hello.txt              2048    0.1451  -0.0000
-Vim Snippet                       hello/core/vim-snippet/hello.snip               2048    0.1451  -0.0000
-Vim script                        hello/core/vim-script/hello.vim                 2048    0.1451  -0.0000
-Nginx                             hello/core/nginx/hello.nginx                    2048    0.1451  -0.0000
-Mint                              hello/core/mint/hello.mint                      2048    0.1451  -0.0000
-Vespa Schema Definition           hello/core/vespa-schema-definition/hello.sd     2048    0.1451  -0.0000
-JSONiq                            hello/core/jsoniq/hello.jq                      2048    0.1451  -0.0000
-CSV                               hello/core/csv/hello.csv                        2048    0.1451  -0.0000
-TSV                               hello/core/tsv/hello.tsv                        2048    0.1451  -0.0000
-Rebol                             hello/core/rebol/hello.r2                       2048    0.1451  -0.0000
-Nextflow                          hello/core/nextflow/hello.nf                    2048    0.1451  -0.0000
-LSL                               hello/core/lsl/hello.lsl                        2048    0.1451  -0.0000
-Vue                               hello/core/vue/hello.vue                        2049    0.1452  +0.0001
-Ada                               hello/core/ada/hello.adb                        2048    0.1451  -0.0000
-Singularity                       hello/core/singularity/Singularity              2048    0.1451  -0.0000
-JetBrains MPS                     hello/core/jetbrains-mps/hello.mpl              2048    0.1451  -0.0000
-Sway                              hello/core/sway/hello.sw                        2048    0.1451  -0.0000
-Cadence                           hello/core/cadence/hello.cdc                    2048    0.1451  -0.0000
-hoon                              hello/core/hoon/hello.hoon                      2048    0.1451  -0.0000
-Common Lisp                       hello/core/common-lisp/hello.ny                 2048    0.1451  -0.0000
-ALGOL                             hello/core/algol/hello.alg                      2048    0.1451  -0.0000
-Org                               hello/core/org/hello.org                        2048    0.1451  -0.0000
-BlitzBasic                        hello/core/blitzbasic/hello.decls               2048    0.1451  -0.0000
-Xmake                             hello/core/xmake/xmake.lua                      2048    0.1451  -0.0000
-Snakemake                         hello/core/snakemake/hello.smk                  2048    0.1451  -0.0000
-Visual Basic 6.0                  hello/core/visual-basic-6-0/hello.ctl           2048    0.1451  -0.0000
-SugarSS                           hello/core/sugarss/hello.sss                    2048    0.1451  -0.0000
-Gno                               hello/core/gno/hello.gno                        2048    0.1451  -0.0000
-DM                                hello/core/dm/hello.dm                          2048    0.1451  -0.0000
-M3U                               hello/core/m3u/hello.m3u                        2048    0.1451  -0.0000
-LiveScript                        hello/core/livescript/hello.ls                  2048    0.1451  -0.0000
-YASnippet                         hello/core/yasnippet/hello.yasnippet            2048    0.1451  -0.0000
-API Blueprint                     hello/core/api-blueprint/hello.apib             2048    0.1451  -0.0000
-SIP                               hello/core/sip/hello.sip                        2048    0.1451  -0.0000
-Salt                              hello/core/salt/hello.sls                       2048    0.1451  -0.0000
-BQN                               hello/core/bqn/hello.bqn                        2048    0.1451  -0.0000
-Edge                              hello/core/edge/hello.edge                      2048    0.1451  -0.0000
-HOCON                             hello/core/hocon/hello.hocon                    2048    0.1451  -0.0000
-ZAP                               hello/core/zap/hello.zap                        2048    0.1451  -0.0000
-RobotFramework                    hello/core/robotframework/hello.robot           2048    0.1451  -0.0000
-Langium                           hello/core/langium/hello.langium                2048    0.1451  -0.0000
-Dart                              hello/core/dart/hello.dart                      2049    0.1452  +0.0001
-Imba                              hello/core/imba/hello.imba                      2048    0.1451  -0.0000
-Closure Templates                 hello/core/closure-templates/hello.soy          2048    0.1451  -0.0000
-AppleScript                       hello/core/applescript/hello.scpt               2048    0.1451  -0.0000
-Circom                            hello/core/circom/hello.circom                  2048    0.1451  -0.0000
-Hosts File                        hello/core/hosts-file/HOSTS                     2048    0.1451  -0.0000
-MAXScript                         hello/core/maxscript/hello.mcr                  2048    0.1451  -0.0000
-Macaulay2                         hello/core/macaulay2/hello.m2                   2048    0.1451  -0.0000
-QuickBASIC                        hello/core/quickbasic/hello.bi                  2048    0.1451  -0.0000
-VBScript                          hello/core/vbscript/hello.vbs                   2048    0.1451  -0.0000
-WDL                               hello/core/wdl/hello.wdl                        2048    0.1451  -0.0000
-mdsvex                            hello/core/mdsvex/hello.svx                     2048    0.1451  -0.0000
-Cangjie                           hello/core/cangjie/hello.cj                     2048    0.1451  -0.0000
-Teal                              hello/core/teal/hello.tl                        2048    0.1451  -0.0000
-Slang                             hello/core/slang/hello.slang                    2048    0.1451  -0.0000
-Earthly                           hello/core/earthly/Earthfile                    2048    0.1451  -0.0000
-KCL                               hello/core/kcl/hello.k                          2048    0.1451  -0.0000
-ZenScript                         hello/core/zenscript/hello.zs                   2048    0.1451  -0.0000
-B4X                               hello/core/b4x/hello.bas                        2048    0.1451  -0.0000
-Zephir                            hello/core/zephir/hello.zep                     2048    0.1451  -0.0000
-templ                             hello/core/templ/hello.templ                    2048    0.1451  -0.0000
-Typst                             hello/core/typst/hello.typ                      2048    0.1451  -0.0000
-Untyped Plutus Core               hello/core/untyped-plutus-core/hello.uplc       2048    0.1451  -0.0000
-Propeller Spin                    hello/core/propeller-spin/hello.spin            2048    0.1451  -0.0000
-Ioke                              hello/core/ioke/hello.ik                        2048    0.1451  -0.0000
-ucode                             hello/core/ucode/hello.uc                       2048    0.1451  -0.0000
-MLIR                              hello/core/mlir/hello.mlir                      2048    0.1451  -0.0000
-AL                                hello/core/al/hello.al                          2048    0.1451  -0.0000
-BitBake                           hello/core/bitbake/hello.bbclass                2048    0.1451  -0.0000
-Gradle                            hello/core/gradle/hello.gradle                  2048    0.1451  -0.0000
-Gradle Kotlin DSL                 hello/core/gradle-kotlin-dsl/hello.gradle.k     2048    0.1451  -0.0000
-J                                 hello/core/j/hello.ijs                          2048    0.1451  -0.0000
-Janet                             hello/core/janet/hello.janet                    2048    0.1451  -0.0000
-Go                                hello/core/go/hello.go                          2049    0.1452  +0.0001
-Go Checksums                      hello/core/go-checksums/go.sum                  2048    0.1451  -0.0000
-Go Module                         hello/core/go-module/go.mod                     2048    0.1451  -0.0000
-Go Template                       hello/core/go-template/hello.tmpl               2048    0.1451  -0.0000
-Go Workspace                      hello/core/go-workspace/go.work                 2048    0.1451  -0.0000
-BrighterScript                    hello/core/brighterscript/hello.bs              2048    0.1451  -0.0000
-VCL                               hello/core/vcl/hello.vcl                        2048    0.1451  -0.0000
-Frege                             hello/core/frege/hello.fr                       2048    0.1451  -0.0000
-Jison                             hello/core/jison/hello.jison                    2048    0.1451  -0.0000
-Jison Lex                         hello/core/jison-lex/hello.jisonlex             2048    0.1451  -0.0000
-Elm                               hello/core/elm/hello.elm                        2048    0.1451  -0.0000
-Perl                              hello/core/perl/hello.ph                        2048    0.1451  -0.0000
-Cypher                            hello/core/cypher/hello.cyp                     2048    0.1451  -0.0000
-AngelScript                       hello/core/angelscript/hello.angelscript        2048    0.1451  -0.0000
-OMNeT++ NED                       hello/core/omnet++-ned/hello.ned                2048    0.1451  -0.0000
-Apex                              hello/core/apex/hello.apex                      2048    0.1451  -0.0000
-Windows Registry Entries          hello/core/windows-registry-entries/hello.r     2048    0.1451  -0.0000
-Dockerfile                        hello/core/dockerfile/hello.dockerfile          2048    0.1451  -0.0000
-Just                              hello/core/just/hello.just                      2048    0.1451  -0.0000
-RAML                              hello/core/raml/hello.raml                      2048    0.1451  -0.0000
-Graphviz (DOT)                    hello/core/graphviz-dot/hello.gv                2048    0.1451  -0.0000
-Groovy                            hello/core/groovy/hello.grt                     2048    0.1451  -0.0000
-Groovy Server Pages               hello/core/groovy-server-pages/hello.gsp        2048    0.1451  -0.0000
-MiniZinc                          hello/core/minizinc/hello.mzn                   2048    0.1451  -0.0000
-Java Properties                   hello/core/java-properties/hello.properties     2048    0.1451  -0.0000
-Java Server Pages                 hello/core/java-server-pages/hello.jsp          2049    0.1452  +0.0001
-Java Template Engine              hello/core/java-template-engine/hello.jte       2048    0.1451  -0.0000
-BIRD2                             hello/core/bird2/bird.conf                      2048    0.1451  -0.0000
-Open Policy Agent                 hello/core/open-policy-agent/hello.rego         2048    0.1451  -0.0000
-Agda                              hello/core/agda/hello.agda                      2048    0.1451  -0.0000
-Literate Agda                     hello/core/literate-agda/hello.lagda            2048    0.1451  -0.0000
-Marko                             hello/core/marko/hello.marko                    2048    0.1451  -0.0000
-Cylc                              hello/core/cylc/hello.cylc                      2048    0.1451  -0.0000
-DataWeave                         hello/core/dataweave/hello.dwl                  2048    0.1451  -0.0000
-Self                              hello/core/self/hello.self                      2048    0.1451  -0.0000
-kvlang                            hello/core/kvlang/hello.kv                      2048    0.1451  -0.0000
-CAP CDS                           hello/core/cap-cds/hello.cds                    2048    0.1451  -0.0000
-Koka                              hello/core/koka/hello.kk                        2048    0.1451  -0.0000
-Bicep                             hello/core/bicep/hello.bicep                    2048    0.1451  -0.0000
-Processing                        hello/core/processing/hello.pde                 2048    0.1451  -0.0000
-MTML                              hello/core/mtml/hello.mtml                      2048    0.1451  -0.0000
-Sail                              hello/core/sail/hello.sail                      2048    0.1451  -0.0000
-Liquid                            hello/core/liquid/hello.liquid                  2048    0.1451  -0.0000
-Alpine Abuild                     hello/core/alpine-abuild/APKBUILD               2048    0.1451  -0.0000
-Eiffel                            hello/core/eiffel/hello.e                       2048    0.1451  -0.0000
-INI                               hello/core/ini/hello.ini                        2048    0.1451  -0.0000
-CQL                               hello/core/cql/hello.cql                        2048    0.1451  -0.0000
-TXL                               hello/core/txl/hello.txl                        2048    0.1451  -0.0000
-KFramework                        hello/core/kframework/hello.k                   2048    0.1451  -0.0000
-Luau                              hello/core/luau/hello.luau                      2048    0.1451  -0.0000
-Prisma                            hello/core/prisma/hello.prisma                  2048    0.1451  -0.0000
-Clean                             hello/core/clean/hello.icl                      2048    0.1451  -0.0000
-KerboScript                       hello/core/kerboscript/hello.ks                 2048    0.1451  -0.0000
-NetLinx                           hello/core/netlinx/hello.axs                    2048    0.1451  -0.0000
-HAProxy                           hello/core/haproxy/hello.cfg                    2048    0.1451  -0.0000
-GLSL                              hello/core/glsl/hello.fp                        2048    0.1451  -0.0000
-Record Jar                        hello/core/record-jar/language-subtag-regis     2048    0.1451  -0.0000
-Lark                              hello/core/lark/hello.lark                      2048    0.1451  -0.0000
-MQL4                              hello/core/mql4/hello.mq4                       2048    0.1451  -0.0000
-Fancy                             hello/core/fancy/hello.fy                       2048    0.1451  -0.0000
-Tact                              hello/core/tact/hello.tact                      2048    0.1451  -0.0000
-HTTP                              hello/core/http/hello.http                      2048    0.1451  -0.0000
-mupad                             hello/core/mupad/hello.mu                       2048    0.1451  -0.0000
-pkg-config                        hello/core/pkg-config/hello.pc.in               2048    0.1451  -0.0000
-JSON5                             hello/core/json5/hello.json5                    2048    0.1451  -0.0000
-PEG.js                            hello/core/peg-js/hello.pegjs                   2048    0.1451  -0.0000
-Stata                             hello/core/stata/hello.do                       2048    0.1451  -0.0000
-Pike                              hello/core/pike/hello.pike                      2048    0.1451  -0.0000
-GDShader                          hello/core/gdshader/hello.gdshader              2048    0.1451  -0.0000
-Tolk                              hello/core/tolk/hello.tolk                      2048    0.1451  -0.0000
-EdgeQL                            hello/core/edgeql/hello.esdl                    2048    0.1451  -0.0000
-FLUX                              hello/core/flux/hello.flux                      2048    0.1451  -0.0000
-AutoHotkey                        hello/core/autohotkey/hello.ahk                 2048    0.1451  -0.0000
-PLpgSQL                           hello/core/plpgsql/hello.pgsql                  2048    0.1451  -0.0000
-R                                 hello/core/r/hello.rd                           2048    0.1451  -0.0000
-RMarkdown                         hello/core/rmarkdown/hello.qmd                  2048    0.1451  -0.0000
-Sweave                            hello/core/sweave/hello.rnw                     2048    0.1451  -0.0000
-XML                               hello/core/xml/hello.ct                         2048    0.1451  -0.0000
-XML Property List                 hello/core/xml-property-list/hello.plist        2049    0.1452  +0.0001
-nesC                              hello/core/nesc/hello.nc                        2048    0.1451  -0.0000
-AsciiDoc                          hello/core/asciidoc/hello.adoc                  2048    0.1451  -0.0000
-Motorola 68K Assembly             hello/core/motorola-68k-assembly/hello.x68      2048    0.1451  -0.0000
-GEDCOM                            hello/core/gedcom/hello.ged                     2048    0.1451  -0.0000
-Python                            hello/core/python/hello.py                      2048    0.1451  -0.0000
-Python traceback                  hello/core/python-traceback/hello.pytb          2048    0.1451  -0.0000
-GDScript                          hello/core/gdscript/hello.gd                    2048    0.1451  -0.0000
-Godot Resource                    hello/core/godot-resource/hello.gdns            2048    0.1451  -0.0000
-WGSL                              hello/core/wgsl/hello.wgsl                      2048    0.1451  -0.0000
-Jsonnet                           hello/core/jsonnet/hello.jsonnet                2049    0.1452  +0.0001
-RAScript                          hello/core/rascript/hello.rascript              2048    0.1451  -0.0000
-LiveCode Script                   hello/core/livecode-script/hello.livecodesc     2048    0.1451  -0.0000
-B (Formal Method)                 hello/core/b-formal-method/hello.mch            2048    0.1451  -0.0000
-ArkTS                             hello/core/arkts/hello.ets                      2048    0.1451  -0.0000
-BibTeX                            hello/core/bibtex/hello.bib                     2048    0.1451  -0.0000
-Odin                              hello/core/odin/hello.odin                      2048    0.1451  -0.0000
-NMODL                             hello/core/nmodl/hello.mod                      2048    0.1451  -0.0000
-Slash                             hello/core/slash/hello.sl                       2048    0.1451  -0.0000
-NewLisp                           hello/core/newlisp/hello.nl                     2048    0.1451  -0.0000
-4D                                hello/core/4d/hello.4dm                         2048    0.1451  -0.0000
-V                                 hello/core/v/hello.v                            2048    0.1451  -0.0000
-Glimmer TS                        hello/core/glimmer-ts/hello.gts                 2048    0.1451  -0.0000
-TSX                               hello/core/tsx/hello.tsx                        2048    0.1451  -0.0000
-TypeScript                        hello/core/typescript/hello.cts                 2048    0.1451  -0.0000
-ShaderLab                         hello/core/shaderlab/hello.shader               2048    0.1451  -0.0000
-Unity3D Asset                     hello/core/unity3d-asset/hello.mat              2048    0.1451  -0.0000
-Mako                              hello/core/mako/hello.mao                       2048    0.1451  -0.0000
-AutoIt                            hello/core/autoit/hello.au3                     2048    0.1451  -0.0000
-AGS Script                        hello/core/ags-script/hello.asc                 2048    0.1451  -0.0000
-Blueprint                         hello/core/blueprint/hello.blp                  2048    0.1451  -0.0000
-FreeMarker                        hello/core/freemarker/hello.ftlh                2048    0.1451  -0.0000
-ISPC                              hello/core/ispc/hello.ispc                      2048    0.1451  -0.0000
-Modula-2                          hello/core/modula-2/hello.mod                   2048    0.1451  -0.0000
-Logtalk                           hello/core/logtalk/hello.lgt                    2048    0.1451  -0.0000
-CSON                              hello/core/cson/hello.cson                      2048    0.1451  -0.0000
-CoffeeScript                      hello/core/coffeescript/hello.cjsx              2048    0.1451  -0.0000
-Literate CoffeeScript             hello/core/literate-coffeescript/hello.litc     2048    0.1451  -0.0000
-Fantom                            hello/core/fantom/hello.fan                     2048    0.1451  -0.0000
-Hy                                hello/core/hy/hello.hy                          2048    0.1451  -0.0000
-LigoLANG                          hello/core/ligolang/hello.ligo                  2048    0.1451  -0.0000
-BuildStream                       hello/core/buildstream/hello.bst                2048    0.1451  -0.0000
-PowerShell                        hello/core/powershell/hello.ps1                 2048    0.1451  -0.0000
-Slint                             hello/core/slint/hello.slint                    2048    0.1451  -0.0000
-SPARQL                            hello/core/sparql/hello.rq                      2048    0.1451  -0.0000
-JSONLD                            hello/core/jsonld/hello.jsonld                  2048    0.1451  -0.0000
-MQL5                              hello/core/mql5/hello.mq5                       2048    0.1451  -0.0000
-Objective-C                       hello/core/objective-c/hello.m                  2048    0.1451  -0.0000
-Less                              hello/core/less/hello.less                      2048    0.1451  -0.0000
-Slice                             hello/core/slice/hello.ice                      2048    0.1451  -0.0000
-ANTLR                             hello/core/antlr/hello.g4                       2048    0.1451  -0.0000
-Harbour                           hello/core/harbour/hello.hb                     2048    0.1451  -0.0000
-Bluespec                          hello/core/bluespec/hello.bsv                   2048    0.1451  -0.0000
-Bluespec BH                       hello/core/bluespec-bh/hello.bs                 2048    0.1451  -0.0000
-Apollo Guidance Computer          hello/core/apollo-guidance-computer/hello.a     2048    0.1451  -0.0000
-Verse                             hello/core/verse/hello.verse                    2048    0.1451  -0.0000
-Markdown                          hello/core/markdown/hello.mkd                   2048    0.1451  -0.0000
-PureBasic                         hello/core/purebasic/hello.pb                   2048    0.1451  -0.0000
-ROS Interface                     hello/core/ros-interface/hello.srv              2048    0.1451  -0.0000
-CUE                               hello/core/cue/hello.cue                        2048    0.1451  -0.0000
-Inno Setup                        hello/core/inno-setup/hello.iss                 2048    0.1451  -0.0000
-C3                                hello/core/c3/hello.c3                          2048    0.1451  -0.0000
-PureScript                        hello/core/purescript/hello.purs                2048    0.1451  -0.0000
-q                                 hello/core/q/hello.q                            2048    0.1451  -0.0000
-Nasal                             hello/core/nasal/hello.nas                      2048    0.1451  -0.0000
-ImHex Pattern Language            hello/core/imhex-pattern-language/hello.hex     2048    0.1451  -0.0000
-Racket                            hello/core/racket/hello.rkt                     2048    0.1451  -0.0000
-WebAssembly                       hello/core/webassembly/hello.wat                2048    0.1451  -0.0000
-Xonsh                             hello/core/xonsh/hello.xsh                      2048    0.1451  -0.0000
-Mathematical Programming System   hello/core/mathematical-programming-system/     2048    0.1451  -0.0000
-Velocity Template Language        hello/core/velocity-template-language/hello     2048    0.1451  -0.0000
-Avro IDL                          hello/core/avro-idl/hello.avdl                  2048    0.1451  -0.0000
-Ring                              hello/core/ring/hello.ring                      2048    0.1451  -0.0000
-Aleo                              hello/core/aleo/hello.aleo                      2048    0.1451  -0.0000
-NWScript                          hello/core/nwscript/hello.nss                   2048    0.1451  -0.0000
-KiCad Layout                      hello/core/kicad-layout/hello.kicad_pcb         2048    0.1451  -0.0000
-KiCad Legacy Layout               hello/core/kicad-legacy-layout/hello.brd        2048    0.1451  -0.0000
-KiCad Schematic                   hello/core/kicad-schematic/hello.kicad_sch      2048    0.1451  -0.0000
-Web Ontology Language             hello/core/web-ontology-language/hello.owl      2048    0.1451  -0.0000
-Scheme                            hello/core/scheme/hello.ss                      2048    0.1451  -0.0000
-NetLinx+ERB                       hello/core/netlinx+erb/hello.axs.erb            2048    0.1451  -0.0000
-HTML+PHP                          hello/core/html+php/hello.phtml                 2048    0.1451  -0.0000
-PHP                               hello/core/php/hello.aw                         2048    0.1451  -0.0000
-X10                               hello/core/x10/hello.x10                        2048    0.1451  -0.0000
-mIRC Script                       hello/core/mirc-script/hello.mrc                2048    0.1451  -0.0000
-D2                                hello/core/d2/hello.d2                          2048    0.1451  -0.0000
-ECLiPSe                           hello/core/eclipse/hello.ecl                    2048    0.1451  -0.0000
-ImageJ Macro                      hello/core/imagej-macro/hello.ijm               2048    0.1451  -0.0000
-Modula-3                          hello/core/modula-3/hello.i3                    2048    0.1451  -0.0000
-VHDL                              hello/core/vhdl/hello.vhd                       2048    0.1451  -0.0000
-Bikeshed                          hello/core/bikeshed/hello.bs                    2048    0.1451  -0.0000
-wisp                              hello/core/wisp/hello.wisp                      2048    0.1451  -0.0000
-Oxygene                           hello/core/oxygene/hello.oxygene                2048    0.1451  -0.0000
-Click                             hello/core/click/hello.click                    2048    0.1451  -0.0000
-Toit                              hello/core/toit/hello.toit                      2048    0.1451  -0.0000
-STL                               hello/core/stl/hello.stl                        2048    0.1451  -0.0000
-PicoLisp                          hello/core/picolisp/hello.l                     2048    0.1451  -0.0000
-ObjectScript                      hello/core/objectscript/hello.cls               2048    0.1451  -0.0000
-Verilog                           hello/core/verilog/hello.veo                    2048    0.1451  -0.0000
-Clue                              hello/core/clue/hello.clue                      2048    0.1451  -0.0000
-FreeBASIC                         hello/core/freebasic/hello.bi                   2048    0.1451  -0.0000
-Xtend                             hello/core/xtend/hello.xtend                    2048    0.1451  -0.0000
-CWeb                              hello/core/cweb/hello.w                         2048    0.1451  -0.0000
-Cirru                             hello/core/cirru/hello.cirru                    2048    0.1451  -0.0000
-GAP                               hello/core/gap/hello.gi                         2048    0.1451  -0.0000
-IGOR Pro                          hello/core/igor-pro/hello.ipf                   2048    0.1451  -0.0000
-Lua                               hello/core/lua/hello.p8                         2048    0.1451  -0.0000
-Nix                               hello/core/nix/hello.nix                        2048    0.1451  -0.0000
-Raku                              hello/core/raku/hello.p6                        2048    0.1451  -0.0000
-Terra                             hello/core/terra/hello.t                        2048    0.1451  -0.0000
-UrWeb                             hello/core/urweb/hello.ur                       2048    0.1451  -0.0000
-Objective-C++                     hello/core/objective-c++/hello.mm               2048    0.1451  -0.0000
-Nemerle                           hello/core/nemerle/hello.n                      2048    0.1451  -0.0000
-Grace                             hello/core/grace/hello.grace                    2048    0.1451  -0.0000
-PDDL                              hello/core/pddl/hello.pddl                      2048    0.1451  -0.0000
-Puppet                            hello/core/puppet/hello.pp                      2049    0.1452  +0.0001
-Clarity                           hello/core/clarity/hello.clar                   2048    0.1451  -0.0000
-MiniScript                        hello/core/miniscript/hello.ms                  2048    0.1451  -0.0000
-CodeQL                            hello/core/codeql/hello.ql                      2048    0.1451  -0.0000
-Fortran                           hello/core/fortran/hello.f77                    2048    0.1451  -0.0000
-Fortran Free Form                 hello/core/fortran-free-form/hello.f90          2048    0.1451  -0.0000
-WebAssembly Interface Type        hello/core/webassembly-interface-type/hello     2048    0.1451  -0.0000
-MeTTa                             hello/core/metta/hello.metta                    2048    0.1451  -0.0000
-NumPy                             hello/core/numpy/hello.numpy                    2048    0.1451  -0.0000
-VBA                               hello/core/vba/hello.bas                        2048    0.1451  -0.0000
-XQuery                            hello/core/xquery/hello.xq                      2048    0.1451  -0.0000
-HTML+Razor                        hello/core/html+razor/hello.razor               2049    0.1452  +0.0001
-Simple File Verification          hello/core/simple-file-verification/hello.s     2048    0.1451  -0.0000
-C#                                hello/core/c#/hello.csx                         2048    0.1451  -0.0000
-Omgrofl                           hello/core/omgrofl/hello.omgrofl                2048    0.1451  -0.0000
-Classic ASP                       hello/core/classic-asp/hello.asp                2048    0.1451  -0.0000
-IL Assembly                       hello/core/il-assembly/hello.il                 2048    0.1451  -0.0000
-Procfile                          hello/core/procfile/Procfile                    2048    0.1451  -0.0000
-Haskell                           hello/core/haskell/hello.hs                     2048    0.1451  -0.0000
-Literate Haskell                  hello/core/literate-haskell/hello.lhs           2048    0.1451  -0.0000
-P4                                hello/core/p4/hello.p4                          2048    0.1451  -0.0000
-Kotlin                            hello/core/kotlin/hello.kt                      2049    0.1452  +0.0001
-Polar                             hello/core/polar/hello.polar                    2048    0.1451  -0.0000
-Roc                               hello/core/roc/hello.roc                        2048    0.1451  -0.0000
-Aiken                             hello/core/aiken/hello.ak                       2048    0.1451  -0.0000
-Noir                              hello/core/noir/hello.nr                        2048    0.1451  -0.0000
-Quint                             hello/core/quint/hello.qnt                      2048    0.1451  -0.0000
-OpenQASM                          hello/core/openqasm/hello.qasm                  2048    0.1451  -0.0000
-Cabal Config                      hello/core/cabal-config/hello.cabal             2048    0.1451  -0.0000
-1C Enterprise                     hello/core/1c-enterprise/hello.os               2048    0.1451  -0.0000
-TypeSpec                          hello/core/typespec/hello.tsp                   2048    0.1451  -0.0000
-Genero 4gl                        hello/core/genero-4gl/hello.4gl                 2048    0.1451  -0.0000
-HTML+ECR                          hello/core/html+ecr/hello.ecr                   2048    0.1451  -0.0000
-Terraform Template                hello/core/terraform-template/hello.tftpl       2048    0.1451  -0.0000
-Vala                              hello/core/vala/hello.vala                      2048    0.1451  -0.0000
-HCL                               hello/core/hcl/hello.tf                         2048    0.1451  -0.0000
-CSS                               hello/core/css/hello.css                        2048    0.1451  -0.0000
-Papyrus                           hello/core/papyrus/hello.psc                    2048    0.1451  -0.0000
-Vyper                             hello/core/vyper/hello.vy                       2048    0.1451  -0.0000
-Nickel                            hello/core/nickel/hello.ncl                     2048    0.1451  -0.0000
-BAML                              hello/core/baml/hello.baml                      2048    0.1451  -0.0000
-Move                              hello/core/move/hello.move                      2048    0.1451  -0.0000
-Brightscript                      hello/core/brightscript/hello.brs               2048    0.1451  -0.0000
-Elixir                            hello/core/elixir/hello.exs                     2048    0.1451  -0.0000
-Metal                             hello/core/metal/hello.metal                    2048    0.1451  -0.0000
-ASP.NET                           hello/core/asp-net/hello.axd                    2048    0.1451  -0.0000
-Gentoo Ebuild                     hello/core/gentoo-ebuild/hello.ebuild           2048    0.1451  -0.0000
-Gentoo Eclass                     hello/core/gentoo-eclass/hello.eclass           2048    0.1451  -0.0000
-nanorc                            hello/core/nanorc/hello.nanorc                  2048    0.1451  -0.0000
-Dhall                             hello/core/dhall/hello.dhall                    2048    0.1451  -0.0000
-Shen                              hello/core/shen/hello.shen                      2048    0.1451  -0.0000
-Arc                               hello/core/arc/hello.arc                        2048    0.1451  -0.0000
-Visual Basic .NET                 hello/core/visual-basic-net/hello.vb            2048    0.1451  -0.0000
-TLA                               hello/core/tla/hello.tla                        2048    0.1451  -0.0000
-F#                                hello/core/f#/hello.fsi                         2049    0.1452  +0.0001
-G-code                            hello/core/g-code/hello.cnc                     2048    0.1451  -0.0000
-Uno                               hello/core/uno/hello.uno                        2048    0.1451  -0.0000
-LookML                            hello/core/lookml/hello.lkml                    2048    0.1451  -0.0000
-Julia                             hello/core/julia/hello.jl                       2048    0.1451  -0.0000
-Tor Config                        hello/core/tor-config/torrc                     2048    0.1451  -0.0000
-HTML+EEX                          hello/core/html+eex/hello.heex                  2048    0.1451  -0.0000
-Lambdapi                          hello/core/lambdapi/hello.lp                    2048    0.1451  -0.0000
-Emacs Lisp                        hello/core/emacs-lisp/hello.el                  2048    0.1451  -0.0000
-Dylan                             hello/core/dylan/hello.dyl                      2048    0.1451  -0.0000
-Gherkin                           hello/core/gherkin/hello.story                  2048    0.1451  -0.0000
-Brainfuck                         hello/core/brainfuck/hello.b                    2048    0.1451  -0.0000
-ZIL                               hello/core/zil/hello.zil                        2048    0.1451  -0.0000
-AspectJ                           hello/core/aspectj/hello.aj                     2048    0.1451  -0.0000
-TextMate Properties               hello/core/textmate-properties/.tm_properti     2048    0.1451  -0.0000
-Gnuplot                           hello/core/gnuplot/hello.gp                     2048    0.1451  -0.0000
-HIP                               hello/core/hip/hello.hip                        2048    0.1451  -0.0000
-XSLT                              hello/core/xslt/hello.xsl                       2049    0.1452  +0.0001
-xBase                             hello/core/xbase/hello.ch                       2048    0.1451  -0.0000
-PowerBuilder                      hello/core/powerbuilder/hello.pbt               2048    0.1451  -0.0000
-ColdFusion                        hello/core/coldfusion/hello.cfm                 2048    0.1451  -0.0000
-ColdFusion CFC                    hello/core/coldfusion-cfc/hello.cfc             2048    0.1451  -0.0000
-Jolie                             hello/core/jolie/hello.ol                       2048    0.1451  -0.0000
-Gleam                             hello/core/gleam/hello.gleam                    2048    0.1451  -0.0000
-Io                                hello/core/io/hello.io                          2048    0.1451  -0.0000
-Boogie                            hello/core/boogie/hello.bpl                     2048    0.1451  -0.0000
-Awk                               hello/core/awk/hello.awk                        2048    0.1451  -0.0000
-SpiceDB Schema                    hello/core/spicedb-schema/hello.zed             2048    0.1451  -0.0000
-Erlang                            hello/core/erlang/hello.erl                     2048    0.1451  -0.0000
-Curry                             hello/core/curry/hello.curry                    2048    0.1451  -0.0000
-Ant Build System                  hello/core/ant-build-system/ant.xml             2048    0.1451  -0.0000
-ECL                               hello/core/ecl/hello.eclxml                     2048    0.1451  -0.0000
-GraphQL                           hello/core/graphql/hello.gql                    2048    0.1451  -0.0000
-Liquidsoap                        hello/core/liquidsoap/hello.liq                 2048    0.1451  -0.0000
-Rouge                             hello/core/rouge/hello.rg                       2048    0.1451  -0.0000
-SurrealQL                         hello/core/surrealql/hello.surql                2048    0.1451  -0.0000
-MoonBit                           hello/core/moonbit/hello.mbt                    2048    0.1451  -0.0000
-Antlers                           hello/core/antlers/hello.antlers.php            2048    0.1451  -0.0000
-PogoScript                        hello/core/pogoscript/hello.pogo                2048    0.1451  -0.0000
-Hurl                              hello/core/hurl/hello.hurl                      2048    0.1451  -0.0000
-Vento                             hello/core/vento/hello.vto                      2048    0.1451  -0.0000
-QuakeC                            hello/core/quakec/hello.qc                      2048    0.1451  -0.0000
-Sass                              hello/core/sass/hello.sass                      2048    0.1451  -0.0000
-SCSS                              hello/core/scss/hello.scss                      2048    0.1451  -0.0000
-Ecere Projects                    hello/core/ecere-projects/hello.epj             2048    0.1451  -0.0000
-eC                                hello/core/ec/hello.ec                          2048    0.1451  -0.0000
-EJS                               hello/core/ejs/hello.ejs                        2049    0.1452  +0.0001
-Debian Package Control File       hello/core/debian-package-control-file/hell     2048    0.1451  -0.0000
-MoonScript                        hello/core/moonscript/hello.moon                2048    0.1451  -0.0000
-Objective-J                       hello/core/objective-j/hello.sj                 2048    0.1451  -0.0000
-Riot                              hello/core/riot/hello.riot                      2048    0.1451  -0.0000
-Futhark                           hello/core/futhark/hello.fut                    2048    0.1451  -0.0000
-C++                               hello/core/c++/hello.cc                         2048    0.1451  -0.0000
-Mermaid                           hello/core/mermaid/hello.mmd                    2048    0.1451  -0.0000
-Prolog                            hello/core/prolog/hello.yap                     2048    0.1451  -0.0000
-Beef                              hello/core/beef/hello.bf                        2048    0.1451  -0.0000
-jq                                hello/core/jq/hello.jq                          2048    0.1451  -0.0000
-Praat                             hello/core/praat/hello.praat                    2048    0.1451  -0.0000
-TextGrid                          hello/core/textgrid/hello.TextGrid              2048    0.1451  -0.0000
-Genshi                            hello/core/genshi/hello.kid                     2048    0.1451  -0.0000
-Common Workflow Language          hello/core/common-workflow-language/hello.c     2048    0.1451  -0.0000
-Pact                              hello/core/pact/hello.pact                      2048    0.1451  -0.0000
-PigLatin                          hello/core/piglatin/hello.pig                   2048    0.1451  -0.0000
-ABAP                              hello/core/abap/hello.abap                      2048    0.1451  -0.0000
-TL-Verilog                        hello/core/tl-verilog/hello.tlv                 2048    0.1451  -0.0000
-FlatBuffers                       hello/core/flatbuffers/hello.fbs                2048    0.1451  -0.0000
-Standard ML                       hello/core/standard-ml/hello.fun                2048    0.1451  -0.0000
-Quake                             hello/core/quake/m3makefile                     2048    0.1451  -0.0000
-vCard                             hello/core/vcard/hello.vcf                      2048    0.1451  -0.0000
-Stan                              hello/core/stan/hello.stan                      2048    0.1451  -0.0000
-Boo                               hello/core/boo/hello.boo                        2048    0.1451  -0.0000
-Scala                             hello/core/scala/hello.sbt                      2048    0.1451  -0.0000
-Turing                            hello/core/turing/hello.tu                      2048    0.1451  -0.0000
-NetLogo                           hello/core/netlogo/hello.nlogo                  2048    0.1451  -0.0000
-Modelica                          hello/core/modelica/hello.mo                    2048    0.1451  -0.0000
-Scilab                            hello/core/scilab/hello.sci                     2048    0.1451  -0.0000
-mcfunction                        hello/core/mcfunction/hello.mcfunction          2048    0.1451  -0.0000
-EditorConfig                      hello/core/editorconfig/hello.editorconfig      2048    0.1451  -0.0000
-D                                 hello/core/d/hello.di                           2048    0.1451  -0.0000
-F*                                hello/core/f/hello.fst                          2048    0.1451  -0.0000
-RouterOS Script                   hello/core/routeros-script/hello.rsc            2048    0.1451  -0.0000
-YAML                              hello/core/yaml/hello.mir                       2048    0.1451  -0.0000
-ApacheConf                        hello/core/apacheconf/hello.apacheconf          2048    0.1451  -0.0000
-Thrift                            hello/core/thrift/hello.thrift                  2048    0.1451  -0.0000
-Scaml                             hello/core/scaml/hello.scaml                    2048    0.1451  -0.0000
-UnrealScript                      hello/core/unrealscript/hello.uc                2048    0.1451  -0.0000
-Gemfile.lock                      hello/core/gemfile-lock/Gemfile.lock            2048    0.1451  -0.0000
-HTML+ERB                          hello/core/html+erb/hello.erb                   2048    0.1451  -0.0000
-RBS                               hello/core/rbs/hello.rbs                        2048    0.1451  -0.0000
-RDoc                              hello/core/rdoc/hello.rdoc                      2048    0.1451  -0.0000
-Ruby                              hello/core/ruby/hello.rb                        2048    0.1451  -0.0000
-Wollok                            hello/core/wollok/hello.wlk                     2048    0.1451  -0.0000
-ReScript                          hello/core/rescript/hello.resi                  2048    0.1451  -0.0000
+Adblock Filter List               hello/core/adblock-filter-list/hello.txt        2048    0.1441  -0.0000
+Asymptote                         hello/core/asymptote/hello.asy                  2048    0.1441  -0.0000
+BASIC                             hello/core/basic/hello.bas                      2048    0.1441  -0.0000
+C                                 hello/core/c/hello.c                            2049    0.1442  +0.0001
+CMake                             hello/core/cmake/hello.cmake                    2048    0.1441  -0.0000
+Cap'n Proto                       hello/core/cap-n-proto/hello.capnp              2048    0.1441  -0.0000
+Carbon                            hello/core/carbon/hello.carbon                  2048    0.1441  -0.0000
+Csound                            hello/core/csound/hello.orc                     2048    0.1441  -0.0000
+Csound Document                   hello/core/csound-document/hello.csd            2048    0.1441  -0.0000
+Csound Score                      hello/core/csound-score/hello.sco               2048    0.1441  -0.0000
+Daslang                           hello/core/daslang/hello.das                    2048    0.1441  -0.0000
+Grammatical Framework             hello/core/grammatical-framework/hello.gf       2048    0.1441  -0.0000
+Hack                              hello/core/hack/hello.hhi                       2048    0.1441  -0.0000
+Idris                             hello/core/idris/hello.idr                      2048    0.1441  -0.0000
+Ignore List                       hello/core/ignore-list/hello.gitignore          2048    0.1441  -0.0000
+JASS                              hello/core/jass/hello.j                         2048    0.1441  -0.0000
+JSON                              hello/core/json/hello.har                       2048    0.1441  -0.0000
+JSON with Comments                hello/core/json-with-comments/hello.jsonc       2048    0.1441  -0.0000
+KDL                               hello/core/kdl/hello.kdl                        2048    0.1441  -0.0000
+Lasso                             hello/core/lasso/hello.las                      2048    0.1441  -0.0000
+Mercury                           hello/core/mercury/hello.moo                    2048    0.1441  -0.0000
+MiniYAML                          hello/core/miniyaml/hello.yml                   2048    0.1441  -0.0000
+Nearley                           hello/core/nearley/hello.ne                     2048    0.1441  -0.0000
+PLSQL                             hello/core/plsql/hello.vw                       2048    0.1441  -0.0000
+Pan                               hello/core/pan/hello.pan                        2048    0.1441  -0.0000
+Promela                           hello/core/promela/hello.pml                    2048    0.1441  -0.0000
+Red                               hello/core/red/hello.red                        2048    0.1441  -0.0000
+Ren'Py                            hello/core/ren-py/hello.rpy                     2048    0.1441  -0.0000
+SQF                               hello/core/sqf/hello.sqf                        2048    0.1441  -0.0000
+Slim                              hello/core/slim/hello.slim                      2048    0.1441  -0.0000
+SmPL                              hello/core/smpl/hello.cocci                     2048    0.1441  -0.0000
+Squirrel                          hello/core/squirrel/hello.nut                   2048    0.1441  -0.0000
+SubRip Text                       hello/core/subrip-text/hello.srt                2048    0.1441  -0.0000
+Talon                             hello/core/talon/hello.talon                    2048    0.1441  -0.0000
+Volt                              hello/core/volt/hello.volt                      2048    0.1441  -0.0000
+Wikitext                          hello/core/wikitext/hello.wiki                  2048    0.1441  -0.0000
+Witcher Script                    hello/core/witcher-script/hello.ws              2048    0.1441  -0.0000
+Wren                              hello/core/wren/hello.wren                      2048    0.1441  -0.0000
+YARA                              hello/core/yara/hello.yar                       2048    0.1441  -0.0000
+reStructuredText                  hello/core/restructuredtext/hello.rst           2048    0.1441  -0.0000
+OpenCL                            hello/core/opencl/hello.opencl                  2048    0.1441  -0.0000
+NPM Config                        hello/core/npm-config/.npmrc                    2048    0.1441  -0.0000
+Cairo                             hello/core/cairo/hello.cairo                    2048    0.1441  -0.0000
+Cairo Zero                        hello/core/cairo-zero/hello.cairo               2048    0.1441  -0.0000
+Clojure                           hello/core/clojure/hello.clj                    2048    0.1441  -0.0000
+JCL                               hello/core/jcl/hello.jcl                        2048    0.1441  -0.0000
+REXX                              hello/core/rexx/hello.rex                       2048    0.1441  -0.0000
+Flix                              hello/core/flix/hello.flix                      2048    0.1441  -0.0000
+Gerber Image                      hello/core/gerber-image/hello.gbr               2048    0.1441  -0.0000
+Adobe Font Metrics                hello/core/adobe-font-metrics/hello.afm         2048    0.1441  -0.0000
+Jinja                             hello/core/jinja/hello.j2                       2048    0.1441  -0.0000
+Kaitai Struct                     hello/core/kaitai-struct/hello.ksy              2048    0.1441  -0.0000
+iCalendar                         hello/core/icalendar/hello.ics                  2048    0.1441  -0.0000
+Pyret                             hello/core/pyret/hello.arr                      2048    0.1441  -0.0000
+PostScript                        hello/core/postscript/hello.ps                  2048    0.1441  -0.0000
+Redscript                         hello/core/redscript/hello.reds                 2048    0.1441  -0.0000
+Wolfram Language                  hello/core/wolfram-language/hello.ma            2048    0.1441  -0.0000
+EmberScript                       hello/core/emberscript/hello.em                 2048    0.1441  -0.0000
+Reason                            hello/core/reason/hello.rei                     2048    0.1441  -0.0000
+ReasonLIGO                        hello/core/reasonligo/hello.religo              2048    0.1441  -0.0000
+Blade                             hello/core/blade/hello.blade                    2048    0.1441  -0.0000
+Smithy                            hello/core/smithy/hello.smithy                  2048    0.1441  -0.0000
+Swift                             hello/core/swift/hello.swift                    2048    0.1441  -0.0000
+B                                 hello/core/b/hello.b                            2048    0.1441  -0.0000
+SAS                               hello/core/sas/hello.sas                        2048    0.1441  -0.0000
+Stylus                            hello/core/stylus/hello.styl                    2048    0.1441  -0.0000
+Bison                             hello/core/bison/hello.bison                    2048    0.1441  -0.0000
+Pep8                              hello/core/pep8/hello.pep                       2048    0.1441  -0.0000
+Git Attributes                    hello/core/git-attributes/.gitattributes        2048    0.1441  -0.0000
+Git Commit                        hello/core/git-commit/.gitmessage               2048    0.1441  -0.0000
+Git Config                        hello/core/git-config/hello.gitconfig           2048    0.1441  -0.0000
+Git Revision List                 hello/core/git-revision-list/.git-blame-ign     2048    0.1441  -0.0000
+Pug                               hello/core/pug/hello.pug                        2048    0.1441  -0.0000
+Mojo                              hello/core/mojo/hello.mojo                      2048    0.1441  -0.0000
+HTML                              hello/core/html/hello.hta                       2048    0.1441  -0.0000
+Lobster                           hello/core/lobster/hello.lobster                2048    0.1441  -0.0000
+PostCSS                           hello/core/postcss/hello.pcss                   2048    0.1441  -0.0000
+ActionScript                      hello/core/actionscript/hello.as                2048    0.1441  -0.0000
+Glimmer JS                        hello/core/glimmer-js/hello.gjs                 2048    0.1441  -0.0000
+Svelte                            hello/core/svelte/hello.svelte                  2049    0.1442  +0.0001
+Genie                             hello/core/genie/hello.gs                       2048    0.1441  -0.0000
+Jasmin                            hello/core/jasmin/hello.j                       2048    0.1441  -0.0000
+RON                               hello/core/ron/hello.ron                        2048    0.1441  -0.0000
+Cooklang                          hello/core/cooklang/hello.cook                  2048    0.1441  -0.0000
+TOML                              hello/core/toml/hello.toml                      2048    0.1441  -0.0000
+Max                               hello/core/max/hello.mxt                        2048    0.1441  -0.0000
+MATLAB                            hello/core/matlab/hello.matlab                  2048    0.1441  -0.0000
+Valve Data Format                 hello/core/valve-data-format/hello.vdf          2048    0.1441  -0.0000
+Mustache                          hello/core/mustache/hello.mustache              2048    0.1441  -0.0000
+IDL                               hello/core/idl/hello.dlm                        2048    0.1441  -0.0000
+Ballerina                         hello/core/ballerina/hello.bal                  2048    0.1441  -0.0000
+LFE                               hello/core/lfe/hello.lfe                        2048    0.1441  -0.0000
+Yul                               hello/core/yul/hello.yul                        2048    0.1441  -0.0000
+Pro*C                             hello/core/pro-c/hello.pc                       2048    0.1441  -0.0000
+Solidity                          hello/core/solidity/hello.sol                   2049    0.1442  +0.0001
+Dune                              hello/core/dune/dune-project                    2048    0.1441  -0.0000
+Forth                             hello/core/forth/hello.fth                      2048    0.1441  -0.0000
+Astro                             hello/core/astro/hello.astro                    2048    0.1441  -0.0000
+Mask                              hello/core/mask/hello.mask                      2048    0.1441  -0.0000
+Rust                              hello/core/rust/hello.rs.in                     2048    0.1441  -0.0000
+Jac                               hello/core/jac/hello.jac                        2048    0.1441  -0.0000
+Zig                               hello/core/zig/hello.zig                        2050    0.1442  +0.0001
+Faust                             hello/core/faust/hello.dsp                      2048    0.1441  -0.0000
+Jupyter Notebook                  hello/core/jupyter-notebook/hello.ipynb         2049    0.1442  +0.0001
+GSC                               hello/core/gsc/hello.gsc                        2048    0.1441  -0.0000
+Gemini                            hello/core/gemini/hello.gmi                     2048    0.1441  -0.0000
+GCC Machine Description           hello/core/gcc-machine-description/hello.md     2052    0.1444  +0.0003
+Ecmarkup                          hello/core/ecmarkup/hello.html                  2049    0.1442  +0.0001
+FPP                               hello/core/fpp/hello.fppi                       2048    0.1441  -0.0000
+Zmodel                            hello/core/zmodel/hello.zmodel                  2048    0.1441  -0.0000
+Euphoria                          hello/core/euphoria/hello.e                     2048    0.1441  -0.0000
+Monkey C                          hello/core/monkey-c/hello.mc                    2048    0.1441  -0.0000
+Golo                              hello/core/golo/hello.golo                      2048    0.1441  -0.0000
+BlitzMax                          hello/core/blitzmax/hello.bmx                   2048    0.1441  -0.0000
+OCaml                             hello/core/ocaml/hello.ml4                      2048    0.1441  -0.0000
+FIGlet Font                       hello/core/figlet-font/hello.flf                2048    0.1441  -0.0000
+RUNOFF                            hello/core/runoff/hello.rnh                     2048    0.1441  -0.0000
+Survex data                       hello/core/survex-data/hello.svx                2048    0.1441  -0.0000
+HXML                              hello/core/hxml/hello.hxml                      2048    0.1441  -0.0000
+Rez                               hello/core/rez/hello.r                          2048    0.1441  -0.0000
+Zimpl                             hello/core/zimpl/hello.zpl                      2048    0.1441  -0.0000
+Ragel                             hello/core/ragel/hello.rl                       2048    0.1441  -0.0000
+Pawn                              hello/core/pawn/hello.pwn                       2048    0.1441  -0.0000
+Handlebars                        hello/core/handlebars/hello.hbs                 2049    0.1442  +0.0001
+Haxe                              hello/core/haxe/hello.hx                        2048    0.1441  -0.0000
+Rhai                              hello/core/rhai/hello.rhai                      2048    0.1441  -0.0000
+Latte                             hello/core/latte/hello.latte                    2048    0.1441  -0.0000
+Unified Parallel C                hello/core/unified-parallel-c/hello.upc         2048    0.1441  -0.0000
+Opal                              hello/core/opal/hello.opal                      2048    0.1441  -0.0000
+GAMS                              hello/core/gams/hello.gms                       2048    0.1441  -0.0000
+Bru                               hello/core/bru/hello.bru                        2048    0.1441  -0.0000
+JAR Manifest                      hello/core/jar-manifest/MANIFEST.MF             2048    0.1441  -0.0000
+Java                              hello/core/java/hello.jav                       2048    0.1441  -0.0000
+SourcePawn                        hello/core/sourcepawn/hello.sp                  2048    0.1441  -0.0000
+SVG                               hello/core/svg/hello.svg                        2049    0.1442  +0.0001
+Clarion                           hello/core/clarion/hello.clw                    2048    0.1441  -0.0000
+Motoko                            hello/core/motoko/hello.mo                      2048    0.1441  -0.0000
+COLLADA                           hello/core/collada/hello.dae                    2048    0.1441  -0.0000
+SQL                               hello/core/sql/hello.tab                        2048    0.1441  -0.0000
+SQLPL                             hello/core/sqlpl/hello.db2                      2048    0.1441  -0.0000
+TSQL                              hello/core/tsql/hello.sql                       2048    0.1441  -0.0000
+Rocq Prover                       hello/core/rocq-prover/hello.coq                2048    0.1441  -0.0000
+Assembly                          hello/core/assembly/hello.a51                   2048    0.1441  -0.0000
+Cloud Firestore Security Rules    hello/core/cloud-firestore-security-rules/f     2048    0.1441  -0.0000
+GAML                              hello/core/gaml/hello.gaml                      2048    0.1441  -0.0000
+EQ                                hello/core/eq/hello.eq                          2048    0.1441  -0.0000
+MDX                               hello/core/mdx/hello.mdx                        2048    0.1441  -0.0000
+Power Query                       hello/core/power-query/hello.pq                 2048    0.1441  -0.0000
+Oz                                hello/core/oz/hello.oz                          2048    0.1441  -0.0000
+Dogescript                        hello/core/dogescript/hello.djs                 2048    0.1441  -0.0000
+Ceylon                            hello/core/ceylon/hello.ceylon                  2048    0.1441  -0.0000
+Hare                              hello/core/hare/hello.ha                        2048    0.1441  -0.0000
+Jai                               hello/core/jai/hello.jai                        2048    0.1441  -0.0000
+Glyph                             hello/core/glyph/hello.glf                      2048    0.1441  -0.0000
+Tcl                               hello/core/tcl/hello.tm                         2048    0.1441  -0.0000
+crontab                           hello/core/crontab/crontab                      2048    0.1441  -0.0000
+Roff                              hello/core/roff/hello.me                        2048    0.1441  -0.0000
+Roff Manpage                      hello/core/roff-manpage/hello.1                 2048    0.1441  -0.0000
+Fennel                            hello/core/fennel/hello.fnl                     2048    0.1441  -0.0000
+Whiley                            hello/core/whiley/hello.whiley                  2048    0.1441  -0.0000
+Textile                           hello/core/textile/hello.textile                2048    0.1441  -0.0000
+Smarty                            hello/core/smarty/hello.tpl                     2048    0.1441  -0.0000
+PlantUML                          hello/core/plantuml/hello.puml                  2048    0.1441  -0.0000
+Altium Designer                   hello/core/altium-designer/hello.OutJob         2048    0.1441  -0.0000
+Fluent                            hello/core/fluent/hello.ftl                     2048    0.1441  -0.0000
+LOLCODE                           hello/core/lolcode/hello.lol                    2048    0.1441  -0.0000
+Filebench WML                     hello/core/filebench-wml/hello.f                2048    0.1441  -0.0000
+Q#                                hello/core/q#/hello.qs                          2048    0.1441  -0.0000
+Nim                               hello/core/nim/hello.nim                        2048    0.1441  -0.0000
+Portugol                          hello/core/portugol/hello.por                   2048    0.1441  -0.0000
+Pip Requirements                  hello/core/pip-requirements/dev-requirement     2048    0.1441  -0.0000
+SuperCollider                     hello/core/supercollider/hello.sc               2048    0.1441  -0.0000
+Scenic                            hello/core/scenic/hello.scenic                  2048    0.1441  -0.0000
+Browserslist                      hello/core/browserslist/.browserslistrc         2048    0.1441  -0.0000
+Mirah                             hello/core/mirah/hello.duby                     2048    0.1441  -0.0000
+HolyC                             hello/core/holyc/hello.hc                       2048    0.1441  -0.0000
+Cython                            hello/core/cython/hello.pyx                     2048    0.1441  -0.0000
+TMDL                              hello/core/tmdl/hello.tmdl                      2048    0.1441  -0.0000
+Parrot                            hello/core/parrot/hello.parrot                  2048    0.1441  -0.0000
+OpenSCAD                          hello/core/openscad/hello.scad                  2048    0.1441  -0.0000
+Haml                              hello/core/haml/hello.haml                      2048    0.1441  -0.0000
+LabVIEW                           hello/core/labview/hello.lvlib                  2048    0.1441  -0.0000
+DenizenScript                     hello/core/denizenscript/hello.dsc              2048    0.1441  -0.0000
+Dotenv                            hello/core/dotenv/hello.env                     2048    0.1441  -0.0000
+JavaScript                        hello/core/javascript/hello.js                  2048    0.1441  -0.0000
+JavaScript+ERB                    hello/core/javascript+erb/hello.js.erb          2048    0.1441  -0.0000
+World of Warcraft Addon Data      hello/core/world-of-warcraft-addon-data/hel     2048    0.1441  -0.0000
+Dafny                             hello/core/dafny/hello.dfy                      2048    0.1441  -0.0000
+JFlex                             hello/core/jflex/hello.flex                     2048    0.1441  -0.0000
+Lex                               hello/core/lex/hello.lex                        2048    0.1441  -0.0000
+Rascal                            hello/core/rascal/hello.rsc                     2048    0.1441  -0.0000
+Isabelle                          hello/core/isabelle/hello.thy                   2048    0.1441  -0.0000
+Isabelle ROOT                     hello/core/isabelle-root/ROOT                   2048    0.1441  -0.0000
+E                                 hello/core/e/hello.e                            2048    0.1441  -0.0000
+HiveQL                            hello/core/hiveql/hello.hql                     2048    0.1441  -0.0000
+Genero per                        hello/core/genero-per/hello.per                 2048    0.1441  -0.0000
+Twig                              hello/core/twig/hello.twig                      2048    0.1441  -0.0000
+Pascal                            hello/core/pascal/hello.pas                     2048    0.1441  -0.0000
+Factor                            hello/core/factor/hello.factor                  2048    0.1441  -0.0000
+ooc                               hello/core/ooc/hello.ooc                        2048    0.1441  -0.0000
+Nu                                hello/core/nu/hello.nu                          2048    0.1441  -0.0000
+Smalltalk                         hello/core/smalltalk/hello.st                   2048    0.1441  -0.0000
+ABAP CDS                          hello/core/abap-cds/hello.asddls                2048    0.1441  -0.0000
+AMPL                              hello/core/ampl/hello.ampl                      2048    0.1441  -0.0000
+Answer Set Programming            hello/core/answer-set-programming/hello.lp      2048    0.1441  -0.0000
+SystemVerilog                     hello/core/systemverilog/hello.sv               2048    0.1441  -0.0000
+Component Pascal                  hello/core/component-pascal/hello.cps           2048    0.1441  -0.0000
+Batchfile                         hello/core/batchfile/hello.bat                  2048    0.1441  -0.0000
+ShellCheck Config                 hello/core/shellcheck-config/.shellcheckrc      2048    0.1441  -0.0000
+Augeas                            hello/core/augeas/hello.aug                     2048    0.1441  -0.0000
+Tree-sitter Query                 hello/core/tree-sitter-query/hello.scm          2048    0.1441  -0.0000
+KakouneScript                     hello/core/kakounescript/hello.kak              2048    0.1441  -0.0000
+BBCode                            hello/core/bbcode/hello.bbcode                  2048    0.1441  -0.0000
+TI Program                        hello/core/ti-program/hello.8xp                 2048    0.1441  -0.0000
+XC                                hello/core/xc/hello.xc                          2048    0.1441  -0.0000
+DirectX 3D File                   hello/core/directx-3d-file/hello.x              2048    0.1441  -0.0000
+HLSL                              hello/core/hlsl/hello.fxh                       2048    0.1441  -0.0000
+LLVM TableGen                     hello/core/llvm-tablegen/hello.td               2048    0.1441  -0.0000
+OverpassQL                        hello/core/overpassql/hello.overpassql          2048    0.1441  -0.0000
+Chapel                            hello/core/chapel/hello.chpl                    2048    0.1441  -0.0000
+Game Maker Language               hello/core/game-maker-language/hello.gml        2048    0.1441  -0.0000
+KRL                               hello/core/krl/hello.krl                        2048    0.1441  -0.0000
+Xojo                              hello/core/xojo/hello.xojo_code                 2048    0.1441  -0.0000
+TeX                               hello/core/tex/hello.tex                        2048    0.1441  -0.0000
+Alloy                             hello/core/alloy/hello.als                      2048    0.1441  -0.0000
+GtkRC                             hello/core/gtkrc/hello.gtkrc                    2048    0.1441  -0.0000
+ChucK                             hello/core/chuck/hello.ck                       2048    0.1441  -0.0000
+Nushell                           hello/core/nushell/hello.nu                     2048    0.1441  -0.0000
+Pkl                               hello/core/pkl/hello.pkl                        2048    0.1441  -0.0000
+Darcs Patch                       hello/core/darcs-patch/hello.dpatch             2048    0.1441  -0.0000
+OASv2-json                        hello/core/oasv2-json/hello.json                2048    0.1441  -0.0000
+OASv2-yaml                        hello/core/oasv2-yaml/hello.yml                 2048    0.1441  -0.0000
+OASv3-json                        hello/core/oasv3-json/hello.json                2048    0.1441  -0.0000
+OASv3-yaml                        hello/core/oasv3-yaml/hello.yml                 2048    0.1441  -0.0000
+OpenAPI Specification v2          hello/core/openapi-specification-v2/hello       2048    0.1441  -0.0000
+OpenAPI Specification v3          hello/core/openapi-specification-v3/hello       2048    0.1441  -0.0000
+Makefile                          hello/core/makefile/hello.mk                    2048    0.1441  -0.0000
+LilyPond                          hello/core/lilypond/hello.ly                    2048    0.1441  -0.0000
+OpenEdge ABL                      hello/core/openedge-abl/hello.p                 2048    0.1441  -0.0000
+Option List                       hello/core/option-list/.ackrc                   2048    0.1441  -0.0000
+Shell                             hello/core/shell/hello.sh                       2048    0.1441  -0.0000
+OverPy                            hello/core/overpy/hello.opy                     2048    0.1441  -0.0000
+2-Dimensional Array               hello/core/2-dimensional-array/hello.2da        2048    0.1441  -0.0000
+QML                               hello/core/qml/hello.qml                        2048    0.1441  -0.0000
+Quartus Simulation IP             hello/core/quartus-simulation-ip/hello.sip      2048    0.1441  -0.0000
+NCL                               hello/core/ncl/hello.ncl                        2048    0.1441  -0.0000
+Gosu                              hello/core/gosu/hello.gsx                       2048    0.1441  -0.0000
+POV-Ray SDL                       hello/core/pov-ray-sdl/hello.pov                2048    0.1441  -0.0000
+Nunjucks                          hello/core/nunjucks/hello.njk                   2048    0.1441  -0.0000
+RPGLE                             hello/core/rpgle/hello.rpgle                    2048    0.1441  -0.0000
+CameLIGO                          hello/core/cameligo/hello.mligo                 2048    0.1441  -0.0000
+Leo                               hello/core/leo/hello.leo                        2048    0.1441  -0.0000
+fish                              hello/core/fish/hello.fish                      2048    0.1441  -0.0000
+Jest Snapshot                     hello/core/jest-snapshot/hello.snap             2048    0.1441  -0.0000
+Starlark                          hello/core/starlark/hello.bzl                   2048    0.1441  -0.0000
+CLIPS                             hello/core/clips/hello.clp                      2048    0.1441  -0.0000
+Crystal                           hello/core/crystal/hello.cr                     2048    0.1441  -0.0000
+Cuda                              hello/core/cuda/hello.cu                        2048    0.1441  -0.0000
+Easybuild                         hello/core/easybuild/hello.eb                   2048    0.1441  -0.0000
+Elvish                            hello/core/elvish/hello.elv                     2048    0.1441  -0.0000
+Elvish Transcript                 hello/core/elvish-transcript/hello              2048    0.1441  -0.0000
+FIRRTL                            hello/core/firrtl/hello.fir                     2048    0.1441  -0.0000
+KoLmafia ASH                      hello/core/kolmafia-ash/hello.ash               2048    0.1441  -0.0000
+Meson                             hello/core/meson/meson.build                    2048    0.1441  -0.0000
+OMNeT++ MSG                       hello/core/omnet++-msg/hello.msg                2048    0.1441  -0.0000
+Regular Expression                hello/core/regular-expression/hello.regex       2048    0.1441  -0.0000
+SRecode Template                  hello/core/srecode-template/hello.srt           2048    0.1441  -0.0000
+Yacc                              hello/core/yacc/hello.y                         2048    0.1441  -0.0000
+LLVM                              hello/core/llvm/hello.ll                        2048    0.1441  -0.0000
+ATS                               hello/core/ats/hello.dats                       2048    0.1441  -0.0000
+StringTemplate                    hello/core/stringtemplate/hello.st              2048    0.1441  -0.0000
+sed                               hello/core/sed/hello.sed                        2048    0.1441  -0.0000
+Caddyfile                         hello/core/caddyfile/hello.caddyfile            2048    0.1441  -0.0000
+Nit                               hello/core/nit/hello.nit                        2048    0.1441  -0.0000
+APL                               hello/core/apl/hello.apl                        2048    0.1441  -0.0000
+Berry                             hello/core/berry/hello.be                       2048    0.1441  -0.0000
+AIDL                              hello/core/aidl/hello.aidl                      2048    0.1441  -0.0000
+Qt Script                         hello/core/qt-script/hello.qs                   2048    0.1441  -0.0000
+Vim Help File                     hello/core/vim-help-file/hello.txt              2048    0.1441  -0.0000
+Vim Snippet                       hello/core/vim-snippet/hello.snip               2048    0.1441  -0.0000
+Vim script                        hello/core/vim-script/hello.vim                 2048    0.1441  -0.0000
+Nginx                             hello/core/nginx/hello.nginx                    2048    0.1441  -0.0000
+Mint                              hello/core/mint/hello.mint                      2048    0.1441  -0.0000
+Vespa Schema Definition           hello/core/vespa-schema-definition/hello.sd     2048    0.1441  -0.0000
+JSONiq                            hello/core/jsoniq/hello.jq                      2048    0.1441  -0.0000
+CSV                               hello/core/csv/hello.csv                        2048    0.1441  -0.0000
+TSV                               hello/core/tsv/hello.tsv                        2048    0.1441  -0.0000
+Rebol                             hello/core/rebol/hello.r2                       2048    0.1441  -0.0000
+Nextflow                          hello/core/nextflow/hello.nf                    2048    0.1441  -0.0000
+LSL                               hello/core/lsl/hello.lsl                        2048    0.1441  -0.0000
+Vue                               hello/core/vue/hello.vue                        2049    0.1442  +0.0001
+Ada                               hello/core/ada/hello.adb                        2048    0.1441  -0.0000
+Singularity                       hello/core/singularity/Singularity              2048    0.1441  -0.0000
+JetBrains MPS                     hello/core/jetbrains-mps/hello.mpl              2048    0.1441  -0.0000
+Sway                              hello/core/sway/hello.sw                        2048    0.1441  -0.0000
+Cadence                           hello/core/cadence/hello.cdc                    2048    0.1441  -0.0000
+hoon                              hello/core/hoon/hello.hoon                      2048    0.1441  -0.0000
+Common Lisp                       hello/core/common-lisp/hello.ny                 2048    0.1441  -0.0000
+ALGOL                             hello/core/algol/hello.alg                      2048    0.1441  -0.0000
+Org                               hello/core/org/hello.org                        2048    0.1441  -0.0000
+BlitzBasic                        hello/core/blitzbasic/hello.decls               2048    0.1441  -0.0000
+Xmake                             hello/core/xmake/xmake.lua                      2048    0.1441  -0.0000
+Snakemake                         hello/core/snakemake/hello.smk                  2048    0.1441  -0.0000
+Visual Basic 6.0                  hello/core/visual-basic-6-0/hello.ctl           2048    0.1441  -0.0000
+SugarSS                           hello/core/sugarss/hello.sss                    2048    0.1441  -0.0000
+Gno                               hello/core/gno/hello.gno                        2048    0.1441  -0.0000
+DM                                hello/core/dm/hello.dm                          2048    0.1441  -0.0000
+M3U                               hello/core/m3u/hello.m3u                        2048    0.1441  -0.0000
+LiveScript                        hello/core/livescript/hello.ls                  2048    0.1441  -0.0000
+YASnippet                         hello/core/yasnippet/hello.yasnippet            2048    0.1441  -0.0000
+API Blueprint                     hello/core/api-blueprint/hello.apib             2048    0.1441  -0.0000
+SIP                               hello/core/sip/hello.sip                        2048    0.1441  -0.0000
+Salt                              hello/core/salt/hello.sls                       2048    0.1441  -0.0000
+BQN                               hello/core/bqn/hello.bqn                        2048    0.1441  -0.0000
+Edge                              hello/core/edge/hello.edge                      2048    0.1441  -0.0000
+HOCON                             hello/core/hocon/hello.hocon                    2048    0.1441  -0.0000
+ZAP                               hello/core/zap/hello.zap                        2048    0.1441  -0.0000
+RobotFramework                    hello/core/robotframework/hello.robot           2048    0.1441  -0.0000
+Langium                           hello/core/langium/hello.langium                2048    0.1441  -0.0000
+Dart                              hello/core/dart/hello.dart                      2048    0.1441  -0.0000
+Imba                              hello/core/imba/hello.imba                      2048    0.1441  -0.0000
+Closure Templates                 hello/core/closure-templates/hello.soy          2048    0.1441  -0.0000
+AppleScript                       hello/core/applescript/hello.scpt               2048    0.1441  -0.0000
+Circom                            hello/core/circom/hello.circom                  2048    0.1441  -0.0000
+Hosts File                        hello/core/hosts-file/HOSTS                     2048    0.1441  -0.0000
+MAXScript                         hello/core/maxscript/hello.mcr                  2048    0.1441  -0.0000
+Macaulay2                         hello/core/macaulay2/hello.m2                   2048    0.1441  -0.0000
+QuickBASIC                        hello/core/quickbasic/hello.bi                  2048    0.1441  -0.0000
+VBScript                          hello/core/vbscript/hello.vbs                   2048    0.1441  -0.0000
+WDL                               hello/core/wdl/hello.wdl                        2048    0.1441  -0.0000
+mdsvex                            hello/core/mdsvex/hello.svx                     2048    0.1441  -0.0000
+Cangjie                           hello/core/cangjie/hello.cj                     2048    0.1441  -0.0000
+Teal                              hello/core/teal/hello.tl                        2048    0.1441  -0.0000
+Slang                             hello/core/slang/hello.slang                    2048    0.1441  -0.0000
+Earthly                           hello/core/earthly/Earthfile                    2048    0.1441  -0.0000
+KCL                               hello/core/kcl/hello.k                          2048    0.1441  -0.0000
+ZenScript                         hello/core/zenscript/hello.zs                   2048    0.1441  -0.0000
+B4X                               hello/core/b4x/hello.bas                        2048    0.1441  -0.0000
+Zephir                            hello/core/zephir/hello.zep                     2048    0.1441  -0.0000
+templ                             hello/core/templ/hello.templ                    2048    0.1441  -0.0000
+Typst                             hello/core/typst/hello.typ                      2048    0.1441  -0.0000
+Untyped Plutus Core               hello/core/untyped-plutus-core/hello.uplc       2048    0.1441  -0.0000
+Propeller Spin                    hello/core/propeller-spin/hello.spin            2048    0.1441  -0.0000
+Ioke                              hello/core/ioke/hello.ik                        2048    0.1441  -0.0000
+ucode                             hello/core/ucode/hello.uc                       2048    0.1441  -0.0000
+MLIR                              hello/core/mlir/hello.mlir                      2048    0.1441  -0.0000
+AL                                hello/core/al/hello.al                          2048    0.1441  -0.0000
+BitBake                           hello/core/bitbake/hello.bbclass                2048    0.1441  -0.0000
+Gradle                            hello/core/gradle/hello.gradle                  2048    0.1441  -0.0000
+Gradle Kotlin DSL                 hello/core/gradle-kotlin-dsl/hello.gradle.k     2048    0.1441  -0.0000
+J                                 hello/core/j/hello.ijs                          2048    0.1441  -0.0000
+Janet                             hello/core/janet/hello.janet                    2048    0.1441  -0.0000
+Go                                hello/core/go/hello.go                          2049    0.1442  +0.0001
+Go Checksums                      hello/core/go-checksums/go.sum                  2048    0.1441  -0.0000
+Go Module                         hello/core/go-module/go.mod                     2048    0.1441  -0.0000
+Go Template                       hello/core/go-template/hello.tmpl               2048    0.1441  -0.0000
+Go Workspace                      hello/core/go-workspace/go.work                 2048    0.1441  -0.0000
+BrighterScript                    hello/core/brighterscript/hello.bs              2048    0.1441  -0.0000
+VCL                               hello/core/vcl/hello.vcl                        2048    0.1441  -0.0000
+Frege                             hello/core/frege/hello.fr                       2048    0.1441  -0.0000
+Jison                             hello/core/jison/hello.jison                    2048    0.1441  -0.0000
+Jison Lex                         hello/core/jison-lex/hello.jisonlex             2048    0.1441  -0.0000
+Elm                               hello/core/elm/hello.elm                        2048    0.1441  -0.0000
+Perl                              hello/core/perl/hello.ph                        2048    0.1441  -0.0000
+Cypher                            hello/core/cypher/hello.cyp                     2048    0.1441  -0.0000
+AngelScript                       hello/core/angelscript/hello.angelscript        2048    0.1441  -0.0000
+OMNeT++ NED                       hello/core/omnet++-ned/hello.ned                2048    0.1441  -0.0000
+Apex                              hello/core/apex/hello.apex                      2048    0.1441  -0.0000
+Windows Registry Entries          hello/core/windows-registry-entries/hello.r     2048    0.1441  -0.0000
+Dockerfile                        hello/core/dockerfile/hello.dockerfile          2048    0.1441  -0.0000
+Just                              hello/core/just/hello.just                      2048    0.1441  -0.0000
+RAML                              hello/core/raml/hello.raml                      2048    0.1441  -0.0000
+Graphviz (DOT)                    hello/core/graphviz-dot/hello.gv                2048    0.1441  -0.0000
+Groovy                            hello/core/groovy/hello.grt                     2048    0.1441  -0.0000
+Groovy Server Pages               hello/core/groovy-server-pages/hello.gsp        2048    0.1441  -0.0000
+MiniZinc                          hello/core/minizinc/hello.mzn                   2048    0.1441  -0.0000
+Java Properties                   hello/core/java-properties/hello.properties     2048    0.1441  -0.0000
+Java Server Pages                 hello/core/java-server-pages/hello.jsp          2054    0.1445  +0.0004
+Java Template Engine              hello/core/java-template-engine/hello.jte       2048    0.1441  -0.0000
+BIRD2                             hello/core/bird2/bird.conf                      2048    0.1441  -0.0000
+Open Policy Agent                 hello/core/open-policy-agent/hello.rego         2048    0.1441  -0.0000
+Agda                              hello/core/agda/hello.agda                      2048    0.1441  -0.0000
+Literate Agda                     hello/core/literate-agda/hello.lagda            2048    0.1441  -0.0000
+Marko                             hello/core/marko/hello.marko                    2048    0.1441  -0.0000
+Cylc                              hello/core/cylc/hello.cylc                      2048    0.1441  -0.0000
+DataWeave                         hello/core/dataweave/hello.dwl                  2048    0.1441  -0.0000
+Self                              hello/core/self/hello.self                      2048    0.1441  -0.0000
+kvlang                            hello/core/kvlang/hello.kv                      2048    0.1441  -0.0000
+CAP CDS                           hello/core/cap-cds/hello.cds                    2048    0.1441  -0.0000
+Koka                              hello/core/koka/hello.kk                        2048    0.1441  -0.0000
+Bicep                             hello/core/bicep/hello.bicep                    2048    0.1441  -0.0000
+Processing                        hello/core/processing/hello.pde                 2048    0.1441  -0.0000
+MTML                              hello/core/mtml/hello.mtml                      2048    0.1441  -0.0000
+Sail                              hello/core/sail/hello.sail                      2048    0.1441  -0.0000
+Liquid                            hello/core/liquid/hello.liquid                  2048    0.1441  -0.0000
+Alpine Abuild                     hello/core/alpine-abuild/APKBUILD               2048    0.1441  -0.0000
+Eiffel                            hello/core/eiffel/hello.e                       2048    0.1441  -0.0000
+INI                               hello/core/ini/hello.ini                        2048    0.1441  -0.0000
+CQL                               hello/core/cql/hello.cql                        2048    0.1441  -0.0000
+TXL                               hello/core/txl/hello.txl                        2048    0.1441  -0.0000
+KFramework                        hello/core/kframework/hello.k                   2048    0.1441  -0.0000
+Luau                              hello/core/luau/hello.luau                      2048    0.1441  -0.0000
+Prisma                            hello/core/prisma/hello.prisma                  2048    0.1441  -0.0000
+Clean                             hello/core/clean/hello.icl                      2048    0.1441  -0.0000
+KerboScript                       hello/core/kerboscript/hello.ks                 2048    0.1441  -0.0000
+NetLinx                           hello/core/netlinx/hello.axs                    2048    0.1441  -0.0000
+HAProxy                           hello/core/haproxy/hello.cfg                    2048    0.1441  -0.0000
+GLSL                              hello/core/glsl/hello.fp                        2048    0.1441  -0.0000
+Record Jar                        hello/core/record-jar/language-subtag-regis     2048    0.1441  -0.0000
+Lark                              hello/core/lark/hello.lark                      2048    0.1441  -0.0000
+MQL4                              hello/core/mql4/hello.mq4                       2048    0.1441  -0.0000
+Fancy                             hello/core/fancy/hello.fy                       2048    0.1441  -0.0000
+Tact                              hello/core/tact/hello.tact                      2048    0.1441  -0.0000
+HTTP                              hello/core/http/hello.http                      2048    0.1441  -0.0000
+mupad                             hello/core/mupad/hello.mu                       2048    0.1441  -0.0000
+pkg-config                        hello/core/pkg-config/hello.pc.in               2048    0.1441  -0.0000
+JSON5                             hello/core/json5/hello.json5                    2048    0.1441  -0.0000
+PEG.js                            hello/core/peg-js/hello.pegjs                   2048    0.1441  -0.0000
+Stata                             hello/core/stata/hello.do                       2048    0.1441  -0.0000
+Pike                              hello/core/pike/hello.pike                      2048    0.1441  -0.0000
+GDShader                          hello/core/gdshader/hello.gdshader              2048    0.1441  -0.0000
+Tolk                              hello/core/tolk/hello.tolk                      2048    0.1441  -0.0000
+EdgeQL                            hello/core/edgeql/hello.esdl                    2048    0.1441  -0.0000
+FLUX                              hello/core/flux/hello.flux                      2048    0.1441  -0.0000
+AutoHotkey                        hello/core/autohotkey/hello.ahk                 2048    0.1441  -0.0000
+PLpgSQL                           hello/core/plpgsql/hello.pgsql                  2048    0.1441  -0.0000
+R                                 hello/core/r/hello.rd                           2048    0.1441  -0.0000
+RMarkdown                         hello/core/rmarkdown/hello.qmd                  2048    0.1441  -0.0000
+Sweave                            hello/core/sweave/hello.rnw                     2048    0.1441  -0.0000
+XML                               hello/core/xml/hello.ct                         2048    0.1441  -0.0000
+XML Property List                 hello/core/xml-property-list/hello.plist        2049    0.1442  +0.0001
+nesC                              hello/core/nesc/hello.nc                        2048    0.1441  -0.0000
+AsciiDoc                          hello/core/asciidoc/hello.adoc                  2048    0.1441  -0.0000
+Motorola 68K Assembly             hello/core/motorola-68k-assembly/hello.x68      2048    0.1441  -0.0000
+GEDCOM                            hello/core/gedcom/hello.ged                     2048    0.1441  -0.0000
+Python                            hello/core/python/hello.py                      2048    0.1441  -0.0000
+Python console                    hello/core/python-console/hello                 2048    0.1441  -0.0000
+Python traceback                  hello/core/python-traceback/hello.pytb          2048    0.1441  -0.0000
+GDScript                          hello/core/gdscript/hello.gd                    2048    0.1441  -0.0000
+Godot Resource                    hello/core/godot-resource/hello.gdns            2048    0.1441  -0.0000
+WGSL                              hello/core/wgsl/hello.wgsl                      2048    0.1441  -0.0000
+Jsonnet                           hello/core/jsonnet/hello.jsonnet                2049    0.1442  +0.0001
+RAScript                          hello/core/rascript/hello.rascript              2048    0.1441  -0.0000
+LiveCode Script                   hello/core/livecode-script/hello.livecodesc     2048    0.1441  -0.0000
+B (Formal Method)                 hello/core/b-formal-method/hello.mch            2048    0.1441  -0.0000
+ArkTS                             hello/core/arkts/hello.ets                      2048    0.1441  -0.0000
+BibTeX                            hello/core/bibtex/hello.bib                     2048    0.1441  -0.0000
+Odin                              hello/core/odin/hello.odin                      2048    0.1441  -0.0000
+NMODL                             hello/core/nmodl/hello.mod                      2048    0.1441  -0.0000
+Slash                             hello/core/slash/hello.sl                       2048    0.1441  -0.0000
+NewLisp                           hello/core/newlisp/hello.nl                     2048    0.1441  -0.0000
+4D                                hello/core/4d/hello.4dm                         2048    0.1441  -0.0000
+V                                 hello/core/v/hello.v                            2048    0.1441  -0.0000
+Glimmer TS                        hello/core/glimmer-ts/hello.gts                 2048    0.1441  -0.0000
+TSX                               hello/core/tsx/hello.tsx                        2048    0.1441  -0.0000
+TypeScript                        hello/core/typescript/hello.cts                 2048    0.1441  -0.0000
+ShaderLab                         hello/core/shaderlab/hello.shader               2048    0.1441  -0.0000
+Unity3D Asset                     hello/core/unity3d-asset/hello.mat              2048    0.1441  -0.0000
+Mako                              hello/core/mako/hello.mao                       2048    0.1441  -0.0000
+AutoIt                            hello/core/autoit/hello.au3                     2048    0.1441  -0.0000
+AGS Script                        hello/core/ags-script/hello.asc                 2048    0.1441  -0.0000
+Blueprint                         hello/core/blueprint/hello.blp                  2048    0.1441  -0.0000
+FreeMarker                        hello/core/freemarker/hello.ftlh                2048    0.1441  -0.0000
+ISPC                              hello/core/ispc/hello.ispc                      2048    0.1441  -0.0000
+Modula-2                          hello/core/modula-2/hello.mod                   2048    0.1441  -0.0000
+Logtalk                           hello/core/logtalk/hello.lgt                    2048    0.1441  -0.0000
+CSON                              hello/core/cson/hello.cson                      2048    0.1441  -0.0000
+CoffeeScript                      hello/core/coffeescript/hello.cjsx              2048    0.1441  -0.0000
+Literate CoffeeScript             hello/core/literate-coffeescript/hello.litc     2048    0.1441  -0.0000
+Fantom                            hello/core/fantom/hello.fan                     2048    0.1441  -0.0000
+Hy                                hello/core/hy/hello.hy                          2048    0.1441  -0.0000
+LigoLANG                          hello/core/ligolang/hello.ligo                  2048    0.1441  -0.0000
+BuildStream                       hello/core/buildstream/hello.bst                2048    0.1441  -0.0000
+PowerShell                        hello/core/powershell/hello.ps1                 2048    0.1441  -0.0000
+Slint                             hello/core/slint/hello.slint                    2048    0.1441  -0.0000
+SPARQL                            hello/core/sparql/hello.rq                      2048    0.1441  -0.0000
+JSONLD                            hello/core/jsonld/hello.jsonld                  2048    0.1441  -0.0000
+MQL5                              hello/core/mql5/hello.mq5                       2048    0.1441  -0.0000
+Objective-C                       hello/core/objective-c/hello.m                  2048    0.1441  -0.0000
+Less                              hello/core/less/hello.less                      2048    0.1441  -0.0000
+Slice                             hello/core/slice/hello.ice                      2048    0.1441  -0.0000
+ANTLR                             hello/core/antlr/hello.g4                       2048    0.1441  -0.0000
+Harbour                           hello/core/harbour/hello.hb                     2048    0.1441  -0.0000
+Bluespec                          hello/core/bluespec/hello.bsv                   2048    0.1441  -0.0000
+Bluespec BH                       hello/core/bluespec-bh/hello.bs                 2048    0.1441  -0.0000
+Apollo Guidance Computer          hello/core/apollo-guidance-computer/hello.a     2048    0.1441  -0.0000
+Verse                             hello/core/verse/hello.verse                    2048    0.1441  -0.0000
+Markdown                          hello/core/markdown/hello.mkd                   2048    0.1441  -0.0000
+PureBasic                         hello/core/purebasic/hello.pb                   2048    0.1441  -0.0000
+ROS Interface                     hello/core/ros-interface/hello.srv              2048    0.1441  -0.0000
+CUE                               hello/core/cue/hello.cue                        2048    0.1441  -0.0000
+Inno Setup                        hello/core/inno-setup/hello.iss                 2048    0.1441  -0.0000
+C3                                hello/core/c3/hello.c3                          2048    0.1441  -0.0000
+PureScript                        hello/core/purescript/hello.purs                2048    0.1441  -0.0000
+q                                 hello/core/q/hello.q                            2048    0.1441  -0.0000
+Nasal                             hello/core/nasal/hello.nas                      2048    0.1441  -0.0000
+ImHex Pattern Language            hello/core/imhex-pattern-language/hello.hex     2048    0.1441  -0.0000
+Racket                            hello/core/racket/hello.rkt                     2048    0.1441  -0.0000
+WebAssembly                       hello/core/webassembly/hello.wat                2048    0.1441  -0.0000
+Xonsh                             hello/core/xonsh/hello.xsh                      2048    0.1441  -0.0000
+Mathematical Programming System   hello/core/mathematical-programming-system/     2048    0.1441  -0.0000
+Velocity Template Language        hello/core/velocity-template-language/hello     2048    0.1441  -0.0000
+Avro IDL                          hello/core/avro-idl/hello.avdl                  2048    0.1441  -0.0000
+Ring                              hello/core/ring/hello.ring                      2048    0.1441  -0.0000
+Aleo                              hello/core/aleo/hello.aleo                      2048    0.1441  -0.0000
+NWScript                          hello/core/nwscript/hello.nss                   2048    0.1441  -0.0000
+KiCad Layout                      hello/core/kicad-layout/hello.kicad_pcb         2048    0.1441  -0.0000
+KiCad Legacy Layout               hello/core/kicad-legacy-layout/hello.brd        2048    0.1441  -0.0000
+KiCad Schematic                   hello/core/kicad-schematic/hello.kicad_sch      2048    0.1441  -0.0000
+Web Ontology Language             hello/core/web-ontology-language/hello.owl      2048    0.1441  -0.0000
+Scheme                            hello/core/scheme/hello.ss                      2048    0.1441  -0.0000
+NetLinx+ERB                       hello/core/netlinx+erb/hello.axs.erb            2048    0.1441  -0.0000
+HTML+PHP                          hello/core/html+php/hello.phtml                 2048    0.1441  -0.0000
+PHP                               hello/core/php/hello.aw                         2048    0.1441  -0.0000
+X10                               hello/core/x10/hello.x10                        2048    0.1441  -0.0000
+mIRC Script                       hello/core/mirc-script/hello.mrc                2048    0.1441  -0.0000
+D2                                hello/core/d2/hello.d2                          2048    0.1441  -0.0000
+ECLiPSe                           hello/core/eclipse/hello.ecl                    2048    0.1441  -0.0000
+ImageJ Macro                      hello/core/imagej-macro/hello.ijm               2048    0.1441  -0.0000
+Modula-3                          hello/core/modula-3/hello.i3                    2048    0.1441  -0.0000
+VHDL                              hello/core/vhdl/hello.vhd                       2048    0.1441  -0.0000
+Bikeshed                          hello/core/bikeshed/hello.bs                    2048    0.1441  -0.0000
+wisp                              hello/core/wisp/hello.wisp                      2048    0.1441  -0.0000
+Oxygene                           hello/core/oxygene/hello.oxygene                2048    0.1441  -0.0000
+Click                             hello/core/click/hello.click                    2048    0.1441  -0.0000
+Toit                              hello/core/toit/hello.toit                      2048    0.1441  -0.0000
+STL                               hello/core/stl/hello.stl                        2048    0.1441  -0.0000
+PicoLisp                          hello/core/picolisp/hello.l                     2048    0.1441  -0.0000
+ObjectScript                      hello/core/objectscript/hello.cls               2048    0.1441  -0.0000
+Verilog                           hello/core/verilog/hello.veo                    2048    0.1441  -0.0000
+Clue                              hello/core/clue/hello.clue                      2048    0.1441  -0.0000
+FreeBASIC                         hello/core/freebasic/hello.bi                   2048    0.1441  -0.0000
+Xtend                             hello/core/xtend/hello.xtend                    2048    0.1441  -0.0000
+CWeb                              hello/core/cweb/hello.w                         2048    0.1441  -0.0000
+Cirru                             hello/core/cirru/hello.cirru                    2048    0.1441  -0.0000
+GAP                               hello/core/gap/hello.gi                         2048    0.1441  -0.0000
+IGOR Pro                          hello/core/igor-pro/hello.ipf                   2048    0.1441  -0.0000
+Lua                               hello/core/lua/hello.p8                         2048    0.1441  -0.0000
+Nix                               hello/core/nix/hello.nix                        2048    0.1441  -0.0000
+Raku                              hello/core/raku/hello.p6                        2048    0.1441  -0.0000
+Terra                             hello/core/terra/hello.t                        2048    0.1441  -0.0000
+UrWeb                             hello/core/urweb/hello.ur                       2048    0.1441  -0.0000
+Objective-C++                     hello/core/objective-c++/hello.mm               2048    0.1441  -0.0000
+Nemerle                           hello/core/nemerle/hello.n                      2048    0.1441  -0.0000
+Grace                             hello/core/grace/hello.grace                    2048    0.1441  -0.0000
+PDDL                              hello/core/pddl/hello.pddl                      2048    0.1441  -0.0000
+Puppet                            hello/core/puppet/hello.pp                      2048    0.1441  -0.0000
+Clarity                           hello/core/clarity/hello.clar                   2048    0.1441  -0.0000
+MiniScript                        hello/core/miniscript/hello.ms                  2048    0.1441  -0.0000
+CodeQL                            hello/core/codeql/hello.ql                      2048    0.1441  -0.0000
+Fortran                           hello/core/fortran/hello.f77                    2048    0.1441  -0.0000
+Fortran Free Form                 hello/core/fortran-free-form/hello.f90          2048    0.1441  -0.0000
+WebAssembly Interface Type        hello/core/webassembly-interface-type/hello     2048    0.1441  -0.0000
+MeTTa                             hello/core/metta/hello.metta                    2048    0.1441  -0.0000
+NumPy                             hello/core/numpy/hello.numpy                    2048    0.1441  -0.0000
+VBA                               hello/core/vba/hello.bas                        2048    0.1441  -0.0000
+XQuery                            hello/core/xquery/hello.xq                      2048    0.1441  -0.0000
+HTML+Razor                        hello/core/html+razor/hello.razor               2049    0.1442  +0.0001
+Simple File Verification          hello/core/simple-file-verification/hello.s     2048    0.1441  -0.0000
+C#                                hello/core/c#/hello.csx                         2048    0.1441  -0.0000
+Omgrofl                           hello/core/omgrofl/hello.omgrofl                2048    0.1441  -0.0000
+Classic ASP                       hello/core/classic-asp/hello.asp                2048    0.1441  -0.0000
+IL Assembly                       hello/core/il-assembly/hello.il                 2048    0.1441  -0.0000
+Procfile                          hello/core/procfile/Procfile                    2048    0.1441  -0.0000
+Haskell                           hello/core/haskell/hello.hs                     2048    0.1441  -0.0000
+Literate Haskell                  hello/core/literate-haskell/hello.lhs           2048    0.1441  -0.0000
+P4                                hello/core/p4/hello.p4                          2048    0.1441  -0.0000
+Kotlin                            hello/core/kotlin/hello.kt                      2049    0.1442  +0.0001
+Polar                             hello/core/polar/hello.polar                    2048    0.1441  -0.0000
+Roc                               hello/core/roc/hello.roc                        2048    0.1441  -0.0000
+Aiken                             hello/core/aiken/hello.ak                       2048    0.1441  -0.0000
+Noir                              hello/core/noir/hello.nr                        2048    0.1441  -0.0000
+Quint                             hello/core/quint/hello.qnt                      2048    0.1441  -0.0000
+OpenQASM                          hello/core/openqasm/hello.qasm                  2048    0.1441  -0.0000
+Cabal Config                      hello/core/cabal-config/hello.cabal             2048    0.1441  -0.0000
+1C Enterprise                     hello/core/1c-enterprise/hello.os               2048    0.1441  -0.0000
+TypeSpec                          hello/core/typespec/hello.tsp                   2048    0.1441  -0.0000
+Genero 4gl                        hello/core/genero-4gl/hello.4gl                 2048    0.1441  -0.0000
+HTML+ECR                          hello/core/html+ecr/hello.ecr                   2048    0.1441  -0.0000
+Terraform Template                hello/core/terraform-template/hello.tftpl       2048    0.1441  -0.0000
+Vala                              hello/core/vala/hello.vala                      2048    0.1441  -0.0000
+HCL                               hello/core/hcl/hello.tf                         2048    0.1441  -0.0000
+CSS                               hello/core/css/hello.css                        2048    0.1441  -0.0000
+Papyrus                           hello/core/papyrus/hello.psc                    2048    0.1441  -0.0000
+Vyper                             hello/core/vyper/hello.vy                       2048    0.1441  -0.0000
+Nickel                            hello/core/nickel/hello.ncl                     2048    0.1441  -0.0000
+BAML                              hello/core/baml/hello.baml                      2048    0.1441  -0.0000
+Move                              hello/core/move/hello.move                      2048    0.1441  -0.0000
+Brightscript                      hello/core/brightscript/hello.brs               2048    0.1441  -0.0000
+Elixir                            hello/core/elixir/hello.exs                     2048    0.1441  -0.0000
+Metal                             hello/core/metal/hello.metal                    2048    0.1441  -0.0000
+ASP.NET                           hello/core/asp-net/hello.axd                    2048    0.1441  -0.0000
+Gentoo Ebuild                     hello/core/gentoo-ebuild/hello.ebuild           2048    0.1441  -0.0000
+Gentoo Eclass                     hello/core/gentoo-eclass/hello.eclass           2048    0.1441  -0.0000
+nanorc                            hello/core/nanorc/hello.nanorc                  2048    0.1441  -0.0000
+Dhall                             hello/core/dhall/hello.dhall                    2048    0.1441  -0.0000
+Shen                              hello/core/shen/hello.shen                      2048    0.1441  -0.0000
+Arc                               hello/core/arc/hello.arc                        2048    0.1441  -0.0000
+Visual Basic .NET                 hello/core/visual-basic-net/hello.vb            2048    0.1441  -0.0000
+TLA                               hello/core/tla/hello.tla                        2048    0.1441  -0.0000
+F#                                hello/core/f#/hello.fsi                         2049    0.1442  +0.0001
+G-code                            hello/core/g-code/hello.cnc                     2048    0.1441  -0.0000
+Uno                               hello/core/uno/hello.uno                        2048    0.1441  -0.0000
+LookML                            hello/core/lookml/hello.lkml                    2048    0.1441  -0.0000
+Julia                             hello/core/julia/hello.jl                       2048    0.1441  -0.0000
+Julia REPL                        hello/core/julia-repl/hello                     2048    0.1441  -0.0000
+Tor Config                        hello/core/tor-config/torrc                     2048    0.1441  -0.0000
+HTML+EEX                          hello/core/html+eex/hello.heex                  2048    0.1441  -0.0000
+Lambdapi                          hello/core/lambdapi/hello.lp                    2048    0.1441  -0.0000
+Emacs Lisp                        hello/core/emacs-lisp/hello.el                  2048    0.1441  -0.0000
+Dylan                             hello/core/dylan/hello.dyl                      2048    0.1441  -0.0000
+Gherkin                           hello/core/gherkin/hello.story                  2048    0.1441  -0.0000
+Brainfuck                         hello/core/brainfuck/hello.b                    2048    0.1441  -0.0000
+ZIL                               hello/core/zil/hello.zil                        2048    0.1441  -0.0000
+AspectJ                           hello/core/aspectj/hello.aj                     2048    0.1441  -0.0000
+TextMate Properties               hello/core/textmate-properties/.tm_properti     2048    0.1441  -0.0000
+Gnuplot                           hello/core/gnuplot/hello.gp                     2048    0.1441  -0.0000
+HIP                               hello/core/hip/hello.hip                        2048    0.1441  -0.0000
+XSLT                              hello/core/xslt/hello.xsl                       2049    0.1442  +0.0001
+xBase                             hello/core/xbase/hello.ch                       2048    0.1441  -0.0000
+PowerBuilder                      hello/core/powerbuilder/hello.pbt               2048    0.1441  -0.0000
+ColdFusion                        hello/core/coldfusion/hello.cfm                 2048    0.1441  -0.0000
+ColdFusion CFC                    hello/core/coldfusion-cfc/hello.cfc             2048    0.1441  -0.0000
+Jolie                             hello/core/jolie/hello.ol                       2048    0.1441  -0.0000
+Gleam                             hello/core/gleam/hello.gleam                    2048    0.1441  -0.0000
+Io                                hello/core/io/hello.io                          2048    0.1441  -0.0000
+Boogie                            hello/core/boogie/hello.bpl                     2048    0.1441  -0.0000
+Awk                               hello/core/awk/hello.awk                        2048    0.1441  -0.0000
+SpiceDB Schema                    hello/core/spicedb-schema/hello.zed             2048    0.1441  -0.0000
+Erlang                            hello/core/erlang/hello.erl                     2048    0.1441  -0.0000
+Curry                             hello/core/curry/hello.curry                    2048    0.1441  -0.0000
+Ant Build System                  hello/core/ant-build-system/ant.xml             2048    0.1441  -0.0000
+ECL                               hello/core/ecl/hello.eclxml                     2048    0.1441  -0.0000
+GraphQL                           hello/core/graphql/hello.gql                    2048    0.1441  -0.0000
+Liquidsoap                        hello/core/liquidsoap/hello.liq                 2048    0.1441  -0.0000
+Rouge                             hello/core/rouge/hello.rg                       2048    0.1441  -0.0000
+SurrealQL                         hello/core/surrealql/hello.surql                2048    0.1441  -0.0000
+MoonBit                           hello/core/moonbit/hello.mbt                    2048    0.1441  -0.0000
+Antlers                           hello/core/antlers/hello.antlers.php            2048    0.1441  -0.0000
+PogoScript                        hello/core/pogoscript/hello.pogo                2048    0.1441  -0.0000
+Hurl                              hello/core/hurl/hello.hurl                      2048    0.1441  -0.0000
+Vento                             hello/core/vento/hello.vto                      2048    0.1441  -0.0000
+QuakeC                            hello/core/quakec/hello.qc                      2048    0.1441  -0.0000
+Sass                              hello/core/sass/hello.sass                      2048    0.1441  -0.0000
+SCSS                              hello/core/scss/hello.scss                      2048    0.1441  -0.0000
+Ecere Projects                    hello/core/ecere-projects/hello.epj             2048    0.1441  -0.0000
+eC                                hello/core/ec/hello.ec                          2048    0.1441  -0.0000
+EJS                               hello/core/ejs/hello.ejs                        2049    0.1442  +0.0001
+Debian Package Control File       hello/core/debian-package-control-file/hell     2048    0.1441  -0.0000
+MoonScript                        hello/core/moonscript/hello.moon                2048    0.1441  -0.0000
+Objective-J                       hello/core/objective-j/hello.sj                 2048    0.1441  -0.0000
+Riot                              hello/core/riot/hello.riot                      2048    0.1441  -0.0000
+Futhark                           hello/core/futhark/hello.fut                    2048    0.1441  -0.0000
+C++                               hello/core/c++/hello.cc                         2048    0.1441  -0.0000
+Mermaid                           hello/core/mermaid/hello.mmd                    2048    0.1441  -0.0000
+Prolog                            hello/core/prolog/hello.yap                     2048    0.1441  -0.0000
+Beef                              hello/core/beef/hello.bf                        2048    0.1441  -0.0000
+jq                                hello/core/jq/hello.jq                          2048    0.1441  -0.0000
+Praat                             hello/core/praat/hello.praat                    2048    0.1441  -0.0000
+TextGrid                          hello/core/textgrid/hello.TextGrid              2048    0.1441  -0.0000
+Genshi                            hello/core/genshi/hello.kid                     2048    0.1441  -0.0000
+Common Workflow Language          hello/core/common-workflow-language/hello.c     2048    0.1441  -0.0000
+Pact                              hello/core/pact/hello.pact                      2048    0.1441  -0.0000
+PigLatin                          hello/core/piglatin/hello.pig                   2048    0.1441  -0.0000
+ABAP                              hello/core/abap/hello.abap                      2048    0.1441  -0.0000
+TL-Verilog                        hello/core/tl-verilog/hello.tlv                 2048    0.1441  -0.0000
+FlatBuffers                       hello/core/flatbuffers/hello.fbs                2048    0.1441  -0.0000
+Standard ML                       hello/core/standard-ml/hello.fun                2048    0.1441  -0.0000
+Quake                             hello/core/quake/m3makefile                     2048    0.1441  -0.0000
+vCard                             hello/core/vcard/hello.vcf                      2048    0.1441  -0.0000
+Stan                              hello/core/stan/hello.stan                      2048    0.1441  -0.0000
+Boo                               hello/core/boo/hello.boo                        2048    0.1441  -0.0000
+Scala                             hello/core/scala/hello.sbt                      2048    0.1441  -0.0000
+Turing                            hello/core/turing/hello.tu                      2048    0.1441  -0.0000
+NetLogo                           hello/core/netlogo/hello.nlogo                  2048    0.1441  -0.0000
+Modelica                          hello/core/modelica/hello.mo                    2048    0.1441  -0.0000
+Scilab                            hello/core/scilab/hello.sci                     2048    0.1441  -0.0000
+mcfunction                        hello/core/mcfunction/hello.mcfunction          2048    0.1441  -0.0000
+EditorConfig                      hello/core/editorconfig/hello.editorconfig      2048    0.1441  -0.0000
+D                                 hello/core/d/hello.di                           2048    0.1441  -0.0000
+F*                                hello/core/f/hello.fst                          2048    0.1441  -0.0000
+RouterOS Script                   hello/core/routeros-script/hello.rsc            2048    0.1441  -0.0000
+YAML                              hello/core/yaml/hello.mir                       2048    0.1441  -0.0000
+ApacheConf                        hello/core/apacheconf/hello.apacheconf          2048    0.1441  -0.0000
+Thrift                            hello/core/thrift/hello.thrift                  2048    0.1441  -0.0000
+Scaml                             hello/core/scaml/hello.scaml                    2048    0.1441  -0.0000
+UnrealScript                      hello/core/unrealscript/hello.uc                2048    0.1441  -0.0000
+Gemfile.lock                      hello/core/gemfile-lock/Gemfile.lock            2048    0.1441  -0.0000
+HTML+ERB                          hello/core/html+erb/hello.erb                   2049    0.1442  +0.0001
+RBS                               hello/core/rbs/hello.rbs                        2048    0.1441  -0.0000
+RDoc                              hello/core/rdoc/hello.rdoc                      2048    0.1441  -0.0000
+Ruby                              hello/core/ruby/hello.rb                        2048    0.1441  -0.0000
+Wollok                            hello/core/wollok/hello.wlk                     2048    0.1441  -0.0000
+ReScript                          hello/core/rescript/hello.resi                  2048    0.1441  -0.0000
 ----------------------------------------------------------------------------------------------------
-TOTAL                                                                          1411098  100.0000
+TOTAL                                                                          1421341  100.0000
 
-share min / max / stdev : 0.1451 % / 0.1454 % / 0.000016 pp
+share min / max / stdev : 0.1441 % / 0.1445 % / 0.000023 pp
 outside 0.05-0.5 % window : none
 
 simulated GitHub language bar (one cell per core language)
@@ -711,4 +716,4 @@ simulated GitHub language bar (one cell per core language)
   [ 256- 383] 128 segments
   [ 384- 511] 128 segments
   [ 512- 639] 128 segments
-  [ 640- 688] 49 segments
+  [ 640- 693] 54 segments
