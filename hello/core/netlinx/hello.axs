@@ -1,4 +1,4 @@
-# vim: set ft=netlinx:
+# -*- mode: netlinx -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NetLinx - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0aa0ff
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad NetLinx :: RAiNBOW_Hello-World
-// rainbow-pad colour #0aa0ff :: padd
+// rainbow-pad colour #0aa0ff :: pad

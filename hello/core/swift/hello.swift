@@ -1,4 +1,4 @@
-// vim: set ft=swift:
+// -*- mode: swift -*-
 // Swift - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #f05138
 //   hue        : 8.2 deg

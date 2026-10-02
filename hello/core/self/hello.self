@@ -1,4 +1,4 @@
-# vim: set ft=self:
+# -*- mode: self -*-
 # Self - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0579aa
 #   hue        : 197.8 deg
@@ -36,4 +36,4 @@
 // rainbow-pad Self :: RAiNBOW_Hello-World
 // rainbow-pad colour #0579aa :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad    
+// rainbow-pad   

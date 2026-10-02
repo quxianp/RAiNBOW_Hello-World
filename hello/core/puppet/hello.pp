@@ -1,4 +1,4 @@
--- vim: set ft=puppet:
+-- -*- mode: puppet -*-
 --   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- Puppet - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #302b6d

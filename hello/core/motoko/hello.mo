@@ -1,4 +1,4 @@
-# vim: set ft=motoko:
+# -*- mode: motoko -*-
 # Motoko - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fbb03b
 #   hue        : 36.6 deg
@@ -37,4 +37,4 @@ public func main() {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Motoko :: RAiNBOW_Hello-World
 // rainbow-pad colour #fbb03b :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow b
+// rainbow-pad padding comment: byte balancing for the rainbow 

@@ -1,4 +1,4 @@
-; vim: set ft=objectscript:
+; -*- mode: objectscript -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; ObjectScript - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #424893
@@ -36,4 +36,4 @@
 ' rainbow-pad equal byte share keeps the language bar an even rainbow
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad ObjectScript :: RAiNBOW_Hello-World
-' rainbow-pad colour #424893 ::
+' rainbow-pad colour #424893 :

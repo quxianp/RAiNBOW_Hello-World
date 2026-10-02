@@ -1,4 +1,4 @@
-# vim: set ft=toit:
+# -*- mode: toit -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Toit - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c2c9fb
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Toit :: RAiNBOW_Hello-World
 // rainbow-pad colour #c2c9fb :: padded to 100
-           
+          

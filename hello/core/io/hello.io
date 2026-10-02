@@ -1,4 +1,4 @@
-# vim: set ft=io:
+# -*- mode: io -*-
 # Io - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a9188d
 #   hue        : 311.6 deg
@@ -36,4 +36,4 @@ writeln("Hello World!")
 // rainbow-pad Io :: RAiNBOW_Hello-World
 // rainbow-pad colour #a9188d :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hell

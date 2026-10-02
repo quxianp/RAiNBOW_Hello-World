@@ -1,4 +1,4 @@
-# vim: set ft=unified-parallel-c:
+# -*- mode: unified-parallel-c -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Unified Parallel C - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4e3617
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad    
+// rainbow-pad   

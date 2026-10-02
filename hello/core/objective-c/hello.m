@@ -1,4 +1,4 @@
-# vim: set ft=obj-c:
+# -*- mode: objective-c -*-
 # Objective-C - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #438eff
 #   hue        : 216.1 deg
@@ -41,4 +41,4 @@ int main() {
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Objective-C :: RAiNBOW_Hello-World
-           
+    

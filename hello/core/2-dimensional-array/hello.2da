@@ -1,4 +1,4 @@
-# vim: set ft=2-dimensional-array:
+# -*- mode: 2-dimensional-array -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # 2-Dimensional Array - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #38761d
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-           
+          

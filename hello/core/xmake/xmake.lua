@@ -1,4 +1,4 @@
-# vim: set ft=xmake:
+# -*- mode: xmake -*-
 # Xmake - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #22a079
 #   hue        : 161.4 deg
@@ -37,4 +37,4 @@ on_run(function () print("Hello World!") end)
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Xmake :: RAiNBOW_Hello-World
 -- rainbow-pad colour #22a079 :: padded to 100
--- rainbow-pad padding comment: byte bala
+-- rainbow-pad padding comment: byte bal

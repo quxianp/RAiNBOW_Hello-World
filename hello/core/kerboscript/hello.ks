@@ -1,4 +1,4 @@
-# vim: set ft=kerboscript:
+# -*- mode: kerboscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # KerboScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #41adf0
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad KerboScript :: RAiNBOW_Hello-World
-         
+        

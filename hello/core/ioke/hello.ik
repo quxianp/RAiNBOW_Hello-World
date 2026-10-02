@@ -1,4 +1,4 @@
-# vim: set ft=ioke:
+# -*- mode: ioke -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ioke - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #078193
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Ioke :: RAiNBOW_Hello-World
 // rainbow-pad colour #078193 :: padded to 100
-           
+          

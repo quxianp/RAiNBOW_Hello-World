@@ -1,4 +1,4 @@
-# vim: set ft=jai:
+# -*- mode: jai -*-
 # Jai - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ab8b4b
 #   hue        : 40.0 deg
@@ -39,4 +39,4 @@ main :: () {
 # rainbow-pad Jai :: RAiNBOW_Hello-World
 # rainbow-pad colour #ab8b4b :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RA
+# rainbow-pad https://github.com/quxianp/R

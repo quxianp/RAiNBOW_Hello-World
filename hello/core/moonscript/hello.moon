@@ -1,4 +1,4 @@
-# vim: set ft=moonscript:
+# -*- mode: moonscript -*-
 # MoonScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff4585
 #   hue        : 339.4 deg
@@ -36,4 +36,4 @@ print "Hello World!"
 // rainbow-pad MoonScript :: RAiNBOW_Hello-World
 // rainbow-pad colour #ff4585 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-  
+ 

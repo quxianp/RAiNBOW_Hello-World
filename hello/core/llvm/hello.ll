@@ -1,4 +1,4 @@
-# vim: set ft=llvm:
+# -*- mode: llvm -*-
 # LLVM - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #185619
 #   hue        : 121.0 deg
@@ -38,4 +38,4 @@ define i32 @main() {
 // rainbow-pad LLVM :: RAiNBOW_Hello-World
 // rainbow-pad colour #185619 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.
+// rainbow-pad https://github

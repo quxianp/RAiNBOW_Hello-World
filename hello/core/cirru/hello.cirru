@@ -1,4 +1,4 @@
-# vim: set ft=cirru:
+# -*- mode: cirru -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cirru - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ccccff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cirru :: RAiNBOW_Hello-World
 // rainbow-pad colour #ccccff :: padded to 100
-    
+   

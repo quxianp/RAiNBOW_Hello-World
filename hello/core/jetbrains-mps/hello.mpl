@@ -1,4 +1,4 @@
-# vim: set ft=mps:
+# -*- mode: jetbrains-mps -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # JetBrains MPS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #21d789
@@ -35,5 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad JetBrains MPS :: RAiNBOW_Hello-World
-     
+// rainbow-pad JetBrains MPS :: RAiNBOW_Hello-

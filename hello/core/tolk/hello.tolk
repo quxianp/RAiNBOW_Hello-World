@@ -1,4 +1,4 @@
-# vim: set ft=tolk:
+# -*- mode: tolk -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Tolk - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #30a1f5
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Tolk :: RAiNBOW_Hello-World
 // rainbow-pad colour #30a1f5 :: padded to 100
-           
+          

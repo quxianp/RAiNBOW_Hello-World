@@ -1,4 +1,4 @@
-# vim: set ft=chpl:
+# -*- mode: chapel -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Chapel - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8dc63f
@@ -36,5 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Chapel :: RAiNBOW_Hello-World
-// rainbow-pad colour #8dc63f :: padded to 100
-
+// rainbow-pad colour #8dc63f :: padded to 1

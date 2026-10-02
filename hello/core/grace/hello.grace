@@ -1,4 +1,4 @@
-# vim: set ft=grace:
+# -*- mode: grace -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Grace - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #615f8b
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Grace :: RAiNBOW_Hello-World
 // rainbow-pad colour #615f8b :: padded to 100
-    
+   

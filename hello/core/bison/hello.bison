@@ -1,4 +1,4 @@
-# vim: set ft=bison:
+# -*- mode: bison -*-
 # Bison - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #6a463f
 #   hue        : 9.8 deg
@@ -37,4 +37,4 @@ printer : { "Hello World!" } ;
 // rainbow-pad Bison :: RAiNBOW_Hello-World
 // rainbow-pad colour #6a463f :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://git
+// rainbow-pad https://gi

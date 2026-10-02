@@ -1,4 +1,4 @@
-# vim: set ft=omnetpp-ned:
+# -*- mode: omnet++-ned -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # OMNeT++ NED - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #08607c
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad OMNeT++ NED :: RAiNBOW_Hello-World
-         
+        

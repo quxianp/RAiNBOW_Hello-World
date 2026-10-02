@@ -229,7 +229,8 @@ HELLO: dict[str, str] = {
     "php": '<?php\necho "Hello World!\\n";',
     "python console": 'print("Hello World!")',
     "julia console": 'println("Hello World!")',
-    "julia repl": 'println("Hello World!")',
+    "julia repl": 'julia> println("Hello World!")',
+     "python console": '>>> print("Hello World!")',
     "bash": 'echo "Hello World!"',
     "shell": 'echo "Hello World!"',
     "sh": 'echo "Hello World!"',
@@ -847,9 +848,11 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
     prog, known = program_for(name, ext)
     line, bs, be = comment_style_for(ext, fname)
     if modeline:
-        # keep the banner in the same comment dialect as the modeline
+        # Keep the banner in the same comment dialect as the modeline so the
+        # first lines of the file parse as that language's comments.
         tok = modelline_prefix_token(modeline)
-        line, bs, be = tok, None, None
+        if tok in ("#", "//", "--", ";"):
+            line, bs, be = tok, None, None
     if line:
         c = f"{line} "
     elif bs:

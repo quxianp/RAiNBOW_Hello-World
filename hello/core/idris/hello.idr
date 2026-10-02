@@ -1,4 +1,4 @@
-# vim: set ft=idris:
+# -*- mode: idris -*-
 # Idris - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b30000
 #   hue        : 0.0 deg
@@ -39,4 +39,4 @@ main = putStrLn "Hello World!"
 -- rainbow-pad Idris :: RAiNBOW_Hello-World
 -- rainbow-pad colour #b30000 :: padded to 100
 -- rainbow-pad padding comment: byte balancing for the rainbow bar
-   
+  

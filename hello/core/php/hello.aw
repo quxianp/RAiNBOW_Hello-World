@@ -1,4 +1,4 @@
-# vim: set ft=inc:
+# -*- mode: php -*-
 # PHP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4f5d95
 #   hue        : 228.0 deg
@@ -37,4 +37,4 @@ echo "Hello World!\n";
 // rainbow-pad PHP :: RAiNBOW_Hello-World
 // rainbow-pad colour #4f5d95 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/R
+// rainbow-pad https://github.com/quxianp/

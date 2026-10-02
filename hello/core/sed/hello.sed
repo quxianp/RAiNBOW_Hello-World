@@ -1,4 +1,4 @@
-; vim: set ft=sed:
+; -*- mode: sed -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; sed - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #64b970
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad sed :: RAiNBOW_Hello-World
 // rainbow-pad colour #64b970 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

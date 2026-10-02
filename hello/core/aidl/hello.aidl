@@ -1,4 +1,4 @@
-# vim: set ft=aidl:
+# -*- mode: aidl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # AIDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #34eb6b
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad AIDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #34eb6b :: padded to 100
-           
+          

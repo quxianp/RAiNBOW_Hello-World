@@ -1,4 +1,4 @@
-# vim: set ft=slice:
+# -*- mode: slice -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Slice - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #003fa2
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Slice :: RAiNBOW_Hello-World
 // rainbow-pad colour #003fa2 :: padded to 100
-    
+   

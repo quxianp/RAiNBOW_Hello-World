@@ -1,4 +1,4 @@
-# vim: set ft=nmodl:
+# -*- mode: nmodl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NMODL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00356b
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad NMODL :: RAiNBOW_Hello-World
 // rainbow-pad colour #00356b :: padded to 100
-    
+   

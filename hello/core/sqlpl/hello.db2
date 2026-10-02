@@ -1,4 +1,4 @@
-# vim: set ft=sqlpl:
+# -*- mode: sqlpl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SQLPL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e38c00
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SQLPL :: RAiNBOW_Hello-World
 // rainbow-pad colour #e38c00 :: padded to 100
-     
+    

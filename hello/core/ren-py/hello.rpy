@@ -1,4 +1,4 @@
-# vim: set ft=renpy:
+# -*- mode: ren'py -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ren'Py - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff7f7f
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Ren'Py :: RAiNBOW_Hello-World
 # rainbow-pad colour #ff7f7f :: padded to 100
-# rainbow-pad padding comment:
+# rainbow-pad padding commen

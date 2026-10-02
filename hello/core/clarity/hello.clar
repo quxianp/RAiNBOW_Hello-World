@@ -1,4 +1,4 @@
-# vim: set ft=clarity:
+# -*- mode: clarity -*-
 # Clarity - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5546ff
 #   hue        : 244.9 deg
@@ -35,4 +35,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Clarity :: RAiNBOW_Hello-World
 // rainbow-pad colour #5546ff :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbo
+// rainbow-pad padding comment: byte balancing for the rainb

@@ -1,4 +1,4 @@
-# vim: set ft=fennel:
+# -*- mode: fennel -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Fennel - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fff3d7
@@ -37,4 +37,4 @@
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Fennel :: RAiNBOW_Hello-World
 ; rainbow-pad colour #fff3d7 :: padded to 100
-; rainbow-pad padding commen
+; rainbow-pad padding comme

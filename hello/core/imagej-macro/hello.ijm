@@ -1,4 +1,4 @@
-# vim: set ft=ijm:
+# -*- mode: imagej-macro -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ImageJ Macro - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #99aaff
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ImageJ Macro :: RAiNBOW_Hello-World
-           
+ 

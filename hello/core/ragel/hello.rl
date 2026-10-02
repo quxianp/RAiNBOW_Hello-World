@@ -1,4 +1,4 @@
-# vim: set ft=ragel-rb:
+# -*- mode: ragel -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ragel - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9d5200
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Ragel :: RAiNBOW_Hello-World
 // rainbow-pad colour #9d5200 :: padded to 100
-  
+    

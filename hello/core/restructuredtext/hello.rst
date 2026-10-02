@@ -1,4 +1,4 @@
-# vim: set ft=rst:
+# -*- mode: restructuredtext -*-
 # reStructuredText - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #141414
 #   hue        : 0.0 deg
@@ -37,4 +37,4 @@ Hello World!
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad reStructuredText :: RAiNBOW_Hello-World
-// rainbow-pad colour #141414 :: padded to
+// rainbow-pad colour #14141

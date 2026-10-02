@@ -1,4 +1,4 @@
-# vim: set ft=FIGfont:
+# -*- mode: figlet-font -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # FIGlet Font - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffddbb
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad FIGlet Font :: RAiNBOW_Hello-World
-// rainbow-pad
+         

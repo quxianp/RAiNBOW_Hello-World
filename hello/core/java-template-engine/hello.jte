@@ -1,4 +1,4 @@
-# vim: set ft=jte:
+# -*- mode: java-template-engine -*-
 # Java Template Engine - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2a6277
 #   hue        : 196.4 deg
@@ -37,4 +37,4 @@ public class Main {
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Java Templa
+        

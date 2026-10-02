@@ -1,4 +1,4 @@
-# vim: set ft=c3:
+# -*- mode: c3 -*-
 # C3 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2563eb
 #   hue        : 221.2 deg
@@ -39,4 +39,4 @@ fn void main()
 // rainbow-pad C3 :: RAiNBOW_Hello-World
 // rainbow-pad colour #2563eb :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://gith
+// rainbow-pad https://git

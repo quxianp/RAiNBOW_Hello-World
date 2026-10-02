@@ -1,4 +1,4 @@
-# vim: set ft=vyper:
+# -*- mode: vyper -*-
 # Vyper - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9f4cf2
 #   hue        : 270.0 deg
@@ -37,4 +37,4 @@ def hello() -> String[6]:
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Vyper :: RAiNBOW_Hello-World
 // rainbow-pad colour #9f4cf2 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow b
+// rainbow-pad padding comment: byte balancing for the rainbow 

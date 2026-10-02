@@ -1,4 +1,4 @@
-# vim: set ft=rascript:
+# -*- mode: rascript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # RAScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2c97fa
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad RAScript :: RAiNBOW_Hello-World
-// rainbow-pad colour #2c97fa 
+// rainbow-pad colour #2c97fa

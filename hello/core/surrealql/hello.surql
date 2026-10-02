@@ -1,4 +1,4 @@
-# vim: set ft=surql:
+# -*- mode: surrealql -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SurrealQL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff00a0
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SurrealQL :: RAiNBOW_Hello-World
-// rainbow-pad colour #ff00
+// rainbow-pad        

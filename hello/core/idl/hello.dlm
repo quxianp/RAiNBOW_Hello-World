@@ -1,4 +1,4 @@
-# vim: set ft=idl:
+# -*- mode: idl -*-
 # IDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a3522f
 #   hue        : 18.1 deg
@@ -36,4 +36,4 @@ print, 'Hello World!'
 // rainbow-pad IDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #a3522f :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_H
+// rainbow-pad https://github.com/quxianp/RAiNBOW_

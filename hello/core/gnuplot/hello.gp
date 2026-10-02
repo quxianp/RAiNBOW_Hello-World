@@ -1,4 +1,4 @@
-# vim: set ft=gnuplot:
+# -*- mode: gnuplot -*-
 # Gnuplot - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f0a9f0
 #   hue        : 300.0 deg
@@ -36,4 +36,4 @@ set label "Hello World!"
 // rainbow-pad Gnuplot :: RAiNBOW_Hello-World
 // rainbow-pad colour #f0a9f0 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad     
+// rainbow-pad    

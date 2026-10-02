@@ -1,4 +1,4 @@
-# vim: set ft=ignore:
+# -*- mode: ignore-list -*-
 # Ignore List - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #000000
 #   hue        : 0.0 deg
@@ -37,4 +37,4 @@ hello.txt
 # rainbow-pad Ignore List :: RAiNBOW_Hello-World
 # rainbow-pad colour #000000 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://githu
+# rainbow-pad        

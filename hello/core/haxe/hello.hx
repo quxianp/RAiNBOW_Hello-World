@@ -1,4 +1,4 @@
-# vim: set ft=haxe:
+# -*- mode: haxe -*-
 # Haxe - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #df7900
 #   hue        : 32.6 deg
@@ -36,4 +36,4 @@ class Main { static function main() { trace("Hello World!"); } }
 # rainbow-pad Haxe :: RAiNBOW_Hello-World
 # rainbow-pad colour #df7900 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.c
+# rainbow-pad https://github.

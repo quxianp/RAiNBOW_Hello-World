@@ -1,4 +1,4 @@
-# vim: set ft=modula-3:
+# -*- mode: modula-3 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Modula-3 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #223388
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Modula-3 :: RAiNBOW_Hello-World
-// rainbow-pad colour #223388 
+// rainbow-pad colour #223388

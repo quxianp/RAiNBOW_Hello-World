@@ -1,4 +1,4 @@
-# vim: set ft=dafny:
+# -*- mode: dafny -*-
 # Dafny - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffec25
 #   hue        : 54.8 deg
@@ -39,4 +39,4 @@ method Main() {
 // rainbow-pad Dafny :: RAiNBOW_Hello-World
 // rainbow-pad colour #ffec25 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-            
+           

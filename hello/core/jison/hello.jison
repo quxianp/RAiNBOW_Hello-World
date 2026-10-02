@@ -1,4 +1,4 @@
-# vim: set ft=jison:
+# -*- mode: jison -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Jison - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #56b3cb
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Jison :: RAiNBOW_Hello-World
 // rainbow-pad colour #56b3cb :: padded to 100
-    
+   

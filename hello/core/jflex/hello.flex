@@ -1,4 +1,4 @@
-# vim: set ft=jflex:
+# -*- mode: jflex -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # JFlex - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dbca00
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad JFlex :: RAiNBOW_Hello-World
 // rainbow-pad colour #dbca00 :: padded to 100
-     
+    

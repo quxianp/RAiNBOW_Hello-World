@@ -1,4 +1,4 @@
-# vim: set ft=bat:
+# -*- mode: batchfile -*-
 # Batchfile - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c1f12e
 #   hue        : 74.8 deg
@@ -37,4 +37,4 @@ echo Hello World!
 ' rainbow-pad Batchfile :: RAiNBOW_Hello-World
 ' rainbow-pad colour #c1f12e :: padded to 100
 ' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxia
+' rainbow-pad https://github.co

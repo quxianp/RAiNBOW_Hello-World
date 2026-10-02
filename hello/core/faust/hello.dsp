@@ -1,4 +1,4 @@
-# vim: set ft=faust:
+# -*- mode: faust -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Faust - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c37240
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Faust :: RAiNBOW_Hello-World
 // rainbow-pad colour #c37240 :: padded to 100
-     
+    

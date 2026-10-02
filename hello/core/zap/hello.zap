@@ -1,4 +1,4 @@
-# vim: set ft=zap:
+# -*- mode: zap -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ZAP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0d665e
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ZAP :: RAiNBOW_Hello-World
 // rainbow-pad colour #0d665e :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

@@ -1,4 +1,4 @@
-# vim: set ft=modelica:
+# -*- mode: modelica -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Modelica - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #de1d31
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Modelica :: RAiNBOW_Hello-World
-// rainbow-pad colour #de1d31 
+// rainbow-pad colour #de1d31

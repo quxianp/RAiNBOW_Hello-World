@@ -1,4 +1,4 @@
-# vim: set ft=aleo:
+# -*- mode: aleo -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Aleo - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #154bf9
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Aleo :: RAiNBOW_Hello-World
 // rainbow-pad colour #154bf9 :: padded to 100
-           
+          

@@ -1,4 +1,4 @@
-# vim: set ft=be:
+# -*- mode: berry -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Berry - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #15a13c
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Berry :: RAiNBOW_Hello-World
 // rainbow-pad colour #15a13c :: padded to 100
-       
+   

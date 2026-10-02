@@ -1,4 +1,4 @@
-# vim: set ft=meson:
+# -*- mode: meson -*-
 # Meson - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #007800
 #   hue        : 120.0 deg
@@ -37,4 +37,4 @@ message('Hello World!')
 # rainbow-pad Meson :: RAiNBOW_Hello-World
 # rainbow-pad colour #007800 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAi
+# rainbow-pad https://github.com/quxianp/RA

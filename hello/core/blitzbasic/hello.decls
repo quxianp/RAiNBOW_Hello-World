@@ -1,4 +1,4 @@
-# vim: set ft=b3d:
+# -*- mode: blitzbasic -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # BlitzBasic - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00ffae
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad BlitzBasic :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad 

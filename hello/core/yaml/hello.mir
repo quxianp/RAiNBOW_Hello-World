@@ -1,4 +1,4 @@
-# vim: set ft=yml:
+# -*- mode: yaml -*-
 # YAML - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #cb171e
 #   hue        : 357.7 deg
@@ -36,4 +36,4 @@ hello: Hello World!
 // rainbow-pad YAML :: RAiNBOW_Hello-World
 // rainbow-pad colour #cb171e :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiN
+// rainbow-pad https://github.com/quxianp/RA

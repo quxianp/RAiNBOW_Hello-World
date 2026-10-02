@@ -1,4 +1,4 @@
-# vim: set ft=mercury:
+# -*- mode: mercury -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Mercury - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff2b2b
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Mercury :: RAiNBOW_Hello-World
-// rainbow-pad colour #ff2b2b :: padded
+// rainbow-pad colour #ff2b2b :: padde

@@ -1,4 +1,4 @@
-// vim: set ft=js:
+// -*- mode: javascript -*-
 // JavaScript - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #f1e05a
 //   hue        : 53.2 deg
@@ -35,4 +35,4 @@ console.log("Hello World!");
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad JavaScript :: RAiNBOW_Hello-World
 // rainbow-pad colour #f1e05a :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow 
+// rainbow-pad padding comment: byte balancing for the

@@ -1,4 +1,4 @@
-# vim: set ft=aspectj:
+# -*- mode: aspectj -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # AspectJ - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a957b0
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad AspectJ :: RAiNBOW_Hello-World
-// rainbow-pad colour #a957b0 :: padd
+// rainbow-pad colour #a957b0 :: pad

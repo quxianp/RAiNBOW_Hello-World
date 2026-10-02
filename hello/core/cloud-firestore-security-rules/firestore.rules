@@ -1,4 +1,4 @@
-# vim: set ft=cloud-firestore-security-rules:
+# -*- mode: cloud-firestore-security-rules -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cloud Firestore Security Rules - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffa000
@@ -34,4 +34,4 @@
 // rainbow-pad padding comment: byte balancing for the rainbow bar
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
-    
+   

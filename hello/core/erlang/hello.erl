@@ -1,4 +1,4 @@
-# vim: set ft=erlang:
+# -*- mode: erlang -*-
 # Erlang - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b83998
 #   hue        : 315.1 deg
@@ -37,4 +37,4 @@ main() -> io:format("Hello World!~n").
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Erlang :: RAiNBOW_Hello-World
 // rainbow-pad colour #b83998 :: padded to 100
-// rainbow-pad padding comment: byte balanci
+// rainbow-pad padding comment: byte balanc

@@ -1,4 +1,4 @@
-# vim: set ft=shellcheckrc:
+# -*- mode: shellcheck-config -*-
 # ShellCheck Config - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #cecfcb
 #   hue        : 75.0 deg
@@ -36,4 +36,4 @@ enable=all
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad ShellCheck Config :: RAiNBOW_Hello-World
 # rainbow-pad colour #cecfcb :: padded to 100
-# rainbow-pad padding comment: byte balancing for
+# rainbow-pad padding comment: byte balanci

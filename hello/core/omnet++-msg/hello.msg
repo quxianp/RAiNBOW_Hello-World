@@ -1,4 +1,4 @@
-# vim: set ft=omnetpp-msg:
+# -*- mode: omnet++-msg -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # OMNeT++ MSG - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a0e0a0
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad OMNeT++ MSG :: RAiNBOW_Hello-World
-         
+        

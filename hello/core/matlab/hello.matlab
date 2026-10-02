@@ -1,4 +1,4 @@
-# vim: set ft=octave:
+# -*- mode: matlab -*-
 # MATLAB - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e16737
 #   hue        : 16.9 deg
@@ -36,4 +36,4 @@ disp('Hello World!');
 // rainbow-pad MATLAB :: RAiNBOW_Hello-World
 // rainbow-pad colour #e16737 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.
+// rainbow-pad https://github

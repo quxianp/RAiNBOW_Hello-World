@@ -1,4 +1,4 @@
-# vim: set ft=brightscript:
+# -*- mode: brightscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Brightscript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #662d91
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Brightscript :: RAiNBOW_Hello-World
-  
+ 

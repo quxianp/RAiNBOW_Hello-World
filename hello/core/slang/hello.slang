@@ -1,4 +1,4 @@
-# vim: set ft=slang:
+# -*- mode: slang -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Slang - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1fbec9
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Slang :: RAiNBOW_Hello-World
 // rainbow-pad colour #1fbec9 :: padded to 100
-    
+   

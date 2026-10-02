@@ -1,4 +1,4 @@
-# vim: set ft=ats2:
+# -*- mode: ats -*-
 # ATS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1ac620
 #   hue        : 122.1 deg

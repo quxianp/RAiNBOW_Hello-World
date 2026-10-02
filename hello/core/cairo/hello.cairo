@@ -1,4 +1,4 @@
-# vim: set ft=cairo:
+# -*- mode: cairo -*-
 # Cairo - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff4a48
 #   hue        : 0.7 deg
@@ -39,4 +39,4 @@ func main():
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cairo :: RAiNBOW_Hello-World
 // rainbow-pad colour #ff4a48 :: padded to 100
-// rainbow-pad padding comment: 
+// rainbow-pad padding comment:

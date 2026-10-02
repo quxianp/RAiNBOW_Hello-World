@@ -1,4 +1,4 @@
-# vim: set ft=squirrel:
+# -*- mode: squirrel -*-
 # Squirrel - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #800000
 #   hue        : 0.0 deg
@@ -35,4 +35,4 @@ function start() { print("Hello World!"); }
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Squirrel :: RAiNBOW_Hello-World
 // rainbow-pad colour #800000 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow
+// rainbow-pad padding comment: byte balancing for the rainbo

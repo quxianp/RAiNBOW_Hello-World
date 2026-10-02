@@ -1,4 +1,4 @@
-# vim: set ft=quint:
+# -*- mode: quint -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Quint - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9d6ce5
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Quint :: RAiNBOW_Hello-World
 // rainbow-pad colour #9d6ce5 :: padded to 100
-    
+   

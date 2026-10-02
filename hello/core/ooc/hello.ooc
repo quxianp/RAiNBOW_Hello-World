@@ -1,4 +1,4 @@
-# vim: set ft=ooc:
+# -*- mode: ooc -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ooc - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b0b77e
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ooc :: RAiNBOW_Hello-World
 // rainbow-pad colour #b0b77e :: padded to 100
-// rainbow-pad     
+// rainbow-pad    

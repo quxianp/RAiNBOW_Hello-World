@@ -1,4 +1,4 @@
-# vim: set ft=julia:
+# -*- mode: julia -*-
 # Julia - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a270ba
 #   hue        : 280.5 deg
@@ -37,4 +37,4 @@ println("Hello World!")
 # rainbow-pad colour #a270ba :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-  
+ 

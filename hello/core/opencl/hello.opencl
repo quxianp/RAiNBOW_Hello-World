@@ -1,4 +1,4 @@
-# vim: set ft=opencl:
+# -*- mode: opencl -*-
 # OpenCL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ed2e2d
 #   hue        : 0.3 deg
@@ -38,4 +38,4 @@ __kernel void hello() {
 // rainbow-pad OpenCL :: RAiNBOW_Hello-World
 // rainbow-pad colour #ed2e2d :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
- 
+

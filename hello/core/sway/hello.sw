@@ -1,4 +1,4 @@
-# vim: set ft=sway:
+# -*- mode: sway -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Sway - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00f58c
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Sway :: RAiNBOW_Hello-World
 // rainbow-pad colour #00f58c :: padded to 100
-           
+          

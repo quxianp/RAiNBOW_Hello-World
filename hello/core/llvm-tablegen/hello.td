@@ -1,4 +1,4 @@
-# vim: set ft=tablegen:
+# -*- mode: llvm-tablegen -*-
 # LLVM TableGen - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #6e8b3d
 #   hue        : 82.3 deg
@@ -37,4 +37,4 @@ define i32 @main() {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
 // rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: byte bal
+// rainbow-pad padding comment: by

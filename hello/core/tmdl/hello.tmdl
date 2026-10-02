@@ -1,4 +1,4 @@
-# vim: set ft=tmdl:
+# -*- mode: tmdl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TMDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f0c913
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad TMDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #f0c913 :: padded to 100
-            
+           

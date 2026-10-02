@@ -1,4 +1,4 @@
-# vim: set ft=beef:
+# -*- mode: beef -*-
 # Beef - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a52f4e
 #   hue        : 344.2 deg
@@ -37,4 +37,4 @@
 // rainbow-pad Beef :: RAiNBOW_Hello-World
 // rainbow-pad colour #a52f4e :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad    
+// rainbow-pad   

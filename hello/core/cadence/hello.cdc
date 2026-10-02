@@ -1,4 +1,4 @@
-# vim: set ft=cadence:
+# -*- mode: cadence -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cadence - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00ef8b
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cadence :: RAiNBOW_Hello-World
-// rainbow-pad colour #00ef8b :: padd
+// rainbow-pad colour #00ef8b :: pad

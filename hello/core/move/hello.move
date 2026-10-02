@@ -1,4 +1,4 @@
-// vim: set ft=move:
+// -*- mode: move -*-
 // Move - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #4a137a
 //   hue        : 272.0 deg
@@ -39,4 +39,4 @@ module Hello::main {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Move :: RAiNBOW_Hello-World
 // rainbow-pad colour #4a137a :: padded to 100
-// rainbow-pad padding comment: byte balancing f
+// rainbow-pad padding comment: byte balancing 

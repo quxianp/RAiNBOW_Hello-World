@@ -1,4 +1,4 @@
-# vim: set ft=xten:
+# -*- mode: x10 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # X10 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4b6bef

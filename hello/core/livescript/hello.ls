@@ -1,4 +1,4 @@
-# vim: set ft=live-script:
+# -*- mode: livescript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # LiveScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #499886

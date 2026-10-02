@@ -1,4 +1,4 @@
-# vim: set ft=volt:
+# -*- mode: volt -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Volt - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1f1f1f
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Volt :: RAiNBOW_Hello-World
 // rainbow-pad colour #1f1f1f :: padded to 100
-             
+            

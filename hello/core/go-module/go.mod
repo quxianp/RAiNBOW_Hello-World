@@ -1,4 +1,4 @@
-# vim: set ft=go.mod:
+# -*- mode: go-module -*-
 # Go Module - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00add8
 #   hue        : 191.9 deg
@@ -41,4 +41,4 @@ func main() {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Go Module :: RAiNBOW_Hello-World
 // rainbow-pad colour #00add8 :: padded to 100
-// rainbow-pad padding comm
+// rainbow-pad padding 

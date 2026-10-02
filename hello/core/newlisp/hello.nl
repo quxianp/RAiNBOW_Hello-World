@@ -1,4 +1,4 @@
-# vim: set ft=newlisp:
+# -*- mode: newlisp -*-
 # NewLisp - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #87aed7
 #   hue        : 210.8 deg
@@ -36,4 +36,4 @@
 // rainbow-pad NewLisp :: RAiNBOW_Hello-World
 // rainbow-pad colour #87aed7 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad     
+// rainbow-pad    

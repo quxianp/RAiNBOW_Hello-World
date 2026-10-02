@@ -1,4 +1,4 @@
--- vim: set ft=vlang:
+-- -*- mode: v -*-
 -- V - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #4f87c4
 --   hue        : 211.3 deg
@@ -39,4 +39,4 @@ fn main() {
 % rainbow-pad colour #4f87c4 :: padded to 100
 % rainbow-pad padding comment: byte balancing for the rainbow bar
 % rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-    
+       

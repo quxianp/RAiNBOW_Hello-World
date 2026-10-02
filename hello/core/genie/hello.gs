@@ -1,4 +1,4 @@
-# vim: set ft=genie:
+# -*- mode: genie -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Genie - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fb855d
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Genie :: RAiNBOW_Hello-World
 // rainbow-pad colour #fb855d :: padded to 100
-     
+    

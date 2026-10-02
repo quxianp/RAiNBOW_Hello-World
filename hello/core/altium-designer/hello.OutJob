@@ -1,4 +1,4 @@
-# vim: set ft=altium:
+# -*- mode: altium-designer -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Altium Designer - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a89663
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Altium Designer :: RAiNBOW_Hel
+// rainbow-pad Altium Designer :: R

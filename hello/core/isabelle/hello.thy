@@ -1,4 +1,4 @@
-# vim: set ft=isabelle:
+# -*- mode: isabelle -*-
 # Isabelle - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fefe00
 #   hue        : 60.0 deg
@@ -40,4 +40,4 @@ end
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Isabelle :: RAiNBOW_Hello-World
--- rainbow-pad colour #fe
+-- rainbow-pad colour #f

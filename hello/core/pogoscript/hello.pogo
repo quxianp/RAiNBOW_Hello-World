@@ -1,4 +1,4 @@
-# vim: set ft=pogoscript:
+# -*- mode: pogoscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # PogoScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d80074
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad PogoScript :: RAiNBOW_Hello-World
-// rainbow-pad  
+// rainbow-pad 

@@ -1,4 +1,4 @@
-# vim: set ft=miniscript:
+# -*- mode: miniscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # MiniScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4b4a56
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad MiniScript :: RAiNBOW_Hello-World
-// rainbow-pad  
+// rainbow-pad 

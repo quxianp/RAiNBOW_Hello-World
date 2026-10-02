@@ -1,4 +1,4 @@
-# vim: set ft=gsp:
+# -*- mode: groovy-server-pages -*-
 # Groovy Server Pages - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4298b8
 #   hue        : 196.3 deg
@@ -35,4 +35,4 @@ println "Hello World!"
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Groovy Server Pages :: RAiNBOW_Hello-World
 // rainbow-pad colour #4298b8 :: padded to 100
-// rainbow-pad      
+   

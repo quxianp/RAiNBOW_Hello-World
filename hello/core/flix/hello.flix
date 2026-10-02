@@ -1,4 +1,4 @@
-# vim: set ft=flix:
+# -*- mode: flix -*-
 # Flix - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d44a45
 #   hue        : 2.1 deg
@@ -36,4 +36,4 @@ println("Hello World!")
 // rainbow-pad Flix :: RAiNBOW_Hello-World
 // rainbow-pad colour #d44a45 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/R
+// rainbow-pad https://github.com/quxianp/

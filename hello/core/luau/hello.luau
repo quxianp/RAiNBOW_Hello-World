@@ -1,4 +1,4 @@
-# vim: set ft=luau:
+# -*- mode: luau -*-
 # Luau - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00a2ff
 #   hue        : 201.9 deg
@@ -36,4 +36,4 @@ print("Hello World!")
 // rainbow-pad Luau :: RAiNBOW_Hello-World
 // rainbow-pad colour #00a2ff :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/R
+// rainbow-pad https://github.com/quxianp/

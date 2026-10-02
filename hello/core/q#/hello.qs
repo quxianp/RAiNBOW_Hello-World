@@ -1,4 +1,4 @@
-# vim: set ft=qsharp:
+# -*- mode: q# -*-
 # Q# - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fed659
 #   hue        : 45.5 deg
@@ -40,4 +40,4 @@ namespace Microsoft.Quantum.Samples {
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Q# :: RAiNBOW_Hello-World
-// rainbow-pad colour #f
+// rainbow-pad colour #fed6

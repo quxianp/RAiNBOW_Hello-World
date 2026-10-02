@@ -1,4 +1,4 @@
-# vim: set ft=pcbnew:
+# -*- mode: kicad-layout -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # KiCad Layout - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2f4aab
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad KiCad Layout :: RAiNBOW_Hello-World
-        
+ 

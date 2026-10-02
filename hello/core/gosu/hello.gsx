@@ -1,4 +1,4 @@
-# vim: set ft=gosu:
+# -*- mode: gosu -*-
 # Gosu - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #82937f
 #   hue        : 111.0 deg
@@ -39,4 +39,4 @@ class Hello {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Gosu :: RAiNBOW_Hello-World
 // rainbow-pad colour #82937f :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbo
+// rainbow-pad padding comment: byte balancing for the rainb

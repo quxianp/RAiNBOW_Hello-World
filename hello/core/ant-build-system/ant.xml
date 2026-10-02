@@ -1,4 +1,4 @@
-<!-- vim: set ft=ant-build-system: -->
+<!-- -*- mode: ant-build-system -*- -->
 <!-- Ant Build System - Hello World! :: RAiNBOW_Hello-World
 <!--   colour     : #a9157e
 <!--   hue        : 317.4 deg
@@ -34,4 +34,4 @@
 <!-- rainbow-pad padding comment: byte balancing for the rainbow bar
 <!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 <!-- rainbow-pad equal byte share keeps the language bar an even rainbow
-<!-- rainbow-pad one segment per L
+<!-- rainbow-pad one segment per 

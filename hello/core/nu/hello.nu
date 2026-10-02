@@ -1,4 +1,4 @@
-# vim: set ft=nush:
+# -*- mode: nu -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Nu - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c9df40
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Nu :: RAiNBOW_Hello-World
 # rainbow-pad colour #c9df40 :: padded to 100
-# rainbow-pad padding comment: byte balancing for the 
+# rainbow-pad padding comment: byte balancing for the r

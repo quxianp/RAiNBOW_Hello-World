@@ -1,4 +1,4 @@
-# vim: set ft=nwscript:
+# -*- mode: nwscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NWScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #111522
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad NWScript :: RAiNBOW_Hello-World
-// rainbow-pad colour #111522 
+// rainbow-pad colour #111522

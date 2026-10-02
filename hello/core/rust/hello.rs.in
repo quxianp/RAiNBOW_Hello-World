@@ -1,4 +1,4 @@
-# vim: set ft=rs:
+# -*- mode: rust -*-
 # Rust - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dea584
 #   hue        : 22.0 deg
@@ -36,4 +36,4 @@ fn main() { println!("Hello World!"); }
 // rainbow-pad Rust :: RAiNBOW_Hello-World
 // rainbow-pad colour #dea584 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://githu
+// rainbow-pad https://gi

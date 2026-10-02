@@ -1,4 +1,4 @@
-# vim: set ft=powerbuilder:
+# -*- mode: powerbuilder -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # PowerBuilder - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8f0f8d
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad PowerBuilder :: RAiNBOW_Hello-World
-  
+ 

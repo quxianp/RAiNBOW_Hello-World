@@ -1,4 +1,4 @@
-# vim: set ft=baml:
+# -*- mode: baml -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # BAML - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a855f7
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad BAML :: RAiNBOW_Hello-World
 // rainbow-pad colour #a855f7 :: padded to 100
-           
+          

@@ -1,4 +1,4 @@
-# vim: set ft=cypher:
+# -*- mode: cypher -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cypher - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #34c0eb
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cypher :: RAiNBOW_Hello-World
-// rainbow-pad colour #34c0eb :: padded to 1
+// rainbow-pad colour #34c0eb :: padded to 

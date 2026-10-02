@@ -1,4 +1,4 @@
-# vim: set ft=jsp:
+# -*- mode: java-server-pages -*-
 # Java Server Pages - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2a6277
 #   hue        : 196.4 deg
@@ -34,5 +34,4 @@ public class Main {
 <%-- rainbow-pad Java Server Pages :: RAiNBOW_Hello-World --%>
 <%-- rainbow-pad colour #2a6277 :: padded to 100 --%>
 <%-- rainbow-pad padding comment: byte balancing for the rainbow bar --%>
-<%-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World --%>
-<%----%>
+<%-- rainbow-pad https://github.com/quxianp/RAiNBOW_ --%>

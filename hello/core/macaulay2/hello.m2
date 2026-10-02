@@ -1,4 +1,4 @@
-# vim: set ft=m2:
+# -*- mode: macaulay2 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Macaulay2 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d8ffff
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Macaulay2 :: RAiNBOW_Hello-World
-// rainbow-pad colour #d8ffff 
+// rainbow-pad        

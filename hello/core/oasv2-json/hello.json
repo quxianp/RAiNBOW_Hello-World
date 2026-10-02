@@ -1,4 +1,4 @@
-# vim: set ft=oasv2-json:
+# -*- mode: oasv2-json -*-
 # OASv2-json - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #85ea2d
 #   hue        : 92.1 deg
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad OASv2-json :: RAiNBOW_Hello-World
 // rainbow-pad colour #85ea2d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbo
+// rainbow-pad padding comment: byte balancing for the rainb

@@ -1,4 +1,4 @@
-# vim: set ft=jq:
+# -*- mode: jq -*-
 # jq - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c7254e
 #   hue        : 344.8 deg
@@ -37,4 +37,4 @@
 // rainbow-pad colour #c7254e :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-  
+ 

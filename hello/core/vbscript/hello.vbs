@@ -1,4 +1,4 @@
-; vim: set ft=vbscript:
+; -*- mode: vbscript -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; VBScript - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #15dcdc
@@ -37,4 +37,4 @@
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad VBScript :: RAiNBOW_Hello-World
 ' rainbow-pad colour #15dcdc :: padded to 100
-' rainbow-pad
+            

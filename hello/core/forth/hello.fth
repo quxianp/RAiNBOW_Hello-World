@@ -1,4 +1,4 @@
-# vim: set ft=forth:
+# -*- mode: forth -*-
 # Forth - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #341708
 #   hue        : 20.4 deg
@@ -36,4 +36,4 @@
 // rainbow-pad Forth :: RAiNBOW_Hello-World
 // rainbow-pad colour #341708 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxia
+// rainbow-pad https://github.com/quxi

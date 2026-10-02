@@ -1,4 +1,4 @@
-; vim: set ft=b4x:
+; -*- mode: b4x -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; B4X - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #00e4ff
@@ -37,4 +37,4 @@
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad B4X :: RAiNBOW_Hello-World
 ' rainbow-pad colour #00e4ff :: padded to 100
-' rainbow-pad padding comment: byte balancing fo
+' rainbow-pad padding comment: byte balancing f

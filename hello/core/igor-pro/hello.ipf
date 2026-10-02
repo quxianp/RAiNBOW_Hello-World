@@ -1,4 +1,4 @@
-# vim: set ft=igor:
+# -*- mode: igor-pro -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # IGOR Pro - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0000cc
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad IGOR Pro :: RAiNBOW_Hello-World
-// rainbow-pad colour #0000cc :: p
+// rainbow-pad colour #0000cc

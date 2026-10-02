@@ -1,4 +1,4 @@
-# vim: set ft=futhark:
+# -*- mode: futhark -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Futhark - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5f021f
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Futhark :: RAiNBOW_Hello-World
-// rainbow-pad colour #5f021f :: padd
+// rainbow-pad colour #5f021f :: pad

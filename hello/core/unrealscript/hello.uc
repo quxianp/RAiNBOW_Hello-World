@@ -1,4 +1,4 @@
-# vim: set ft=unrealscript:
+# -*- mode: unrealscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # UnrealScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a54c4d
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad UnrealScript :: RAiNBOW_Hello-World
-  
+ 

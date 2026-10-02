@@ -1,4 +1,4 @@
-# vim: set ft=cylc:
+# -*- mode: cylc -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cylc - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00b3fd
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cylc :: RAiNBOW_Hello-World
 // rainbow-pad colour #00b3fd :: padded to 100
-           
+          

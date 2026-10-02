@@ -1,4 +1,4 @@
-# vim: set ft=koka:
+# -*- mode: koka -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Koka - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #215166
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Koka :: RAiNBOW_Hello-World
 // rainbow-pad colour #215166 :: padded to 100
-           
+          

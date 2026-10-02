@@ -1,4 +1,4 @@
-# vim: set ft=elm:
+# -*- mode: elm -*-
 # Elm - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #60b5cc
 #   hue        : 192.8 deg
@@ -38,4 +38,4 @@ main = text "Hello World!"
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Elm :: RAiNBOW_Hello-World
 -- rainbow-pad colour #60b5cc :: padded to 100
--- rainbow-pad padding comment: byte balancing for the 
+-- rainbow-pad padding comment: byte balancing for the

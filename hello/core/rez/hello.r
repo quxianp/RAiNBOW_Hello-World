@@ -1,4 +1,4 @@
-# vim: set ft=rez:
+# -*- mode: rez -*-
 # Rez - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffdab3
 #   hue        : 30.8 deg
@@ -37,4 +37,4 @@ cat("Hello World!\n")
 # rainbow-pad colour #ffdab3 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad      
+# rainbow-pad     

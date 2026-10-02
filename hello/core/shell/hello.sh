@@ -1,4 +1,4 @@
-# vim: set ft=sh:
+# -*- mode: shell -*-
 # Shell - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #89e051
 #   hue        : 96.5 deg
@@ -37,4 +37,4 @@ echo "Hello World!"
 # rainbow-pad colour #89e051 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-          
+      

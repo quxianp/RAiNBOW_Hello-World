@@ -1,4 +1,4 @@
-# vim: set ft=polar:
+# -*- mode: polar -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Polar - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ae81ff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Polar :: RAiNBOW_Hello-World
 // rainbow-pad colour #ae81ff :: padded to 100
-    
+   

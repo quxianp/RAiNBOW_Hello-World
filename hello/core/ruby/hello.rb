@@ -1,4 +1,4 @@
-# vim: set ft=jruby:
+# -*- mode: ruby -*-
 # Ruby - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #701516
 #   hue        : 359.3 deg

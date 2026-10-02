@@ -1,4 +1,4 @@
-# vim: set ft=open-policy-agent:
+# -*- mode: open-policy-agent -*-
 # Open Policy Agent - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7d9199
 #   hue        : 197.1 deg
@@ -37,4 +37,4 @@ default hello := "Hello World!"
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Open Policy Agent :: RAiNBOW_Hello-World
 # rainbow-pad colour #7d9199 :: padded to 100
-# rainbow-pad       
+# rainbow-pad      

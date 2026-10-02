@@ -1,4 +1,4 @@
-# vim: set ft=arc:
+# -*- mode: arc -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Arc - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #aa2afe
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Arc :: RAiNBOW_Hello-World
 // rainbow-pad colour #aa2afe :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

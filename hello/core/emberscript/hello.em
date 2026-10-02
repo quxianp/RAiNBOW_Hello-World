@@ -1,4 +1,4 @@
-# vim: set ft=emberscript:
+# -*- mode: emberscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # EmberScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fff4f3
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad EmberScript :: RAiNBOW_Hello-World
-           
+          

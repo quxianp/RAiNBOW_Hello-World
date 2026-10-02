@@ -1,4 +1,4 @@
-# vim: set ft=yara:
+# -*- mode: yara -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # YARA - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #220000
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad YARA :: RAiNBOW_Hello-World
 // rainbow-pad colour #220000 :: padded to 100
-             
+            

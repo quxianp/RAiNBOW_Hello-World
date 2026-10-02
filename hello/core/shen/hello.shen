@@ -1,4 +1,4 @@
-# vim: set ft=shen:
+# -*- mode: shen -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Shen - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #120f14
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Shen :: RAiNBOW_Hello-World
 // rainbow-pad colour #120f14 :: padded to 100
-           
+          

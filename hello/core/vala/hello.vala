@@ -1,4 +1,4 @@
-// vim: set ft=vala:
+// -*- mode: vala -*-
 //   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 // Vala - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #a56de2
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Vala :: RAiNBOW_Hello-World
 # rainbow-pad colour #a56de2 :: padded to 100
-# rainbow-pad padding comment: by
+# rainbow-pad padding comment: b

@@ -1,4 +1,4 @@
-# vim: set ft=clarion:
+# -*- mode: clarion -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Clarion - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #db901e
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Clarion :: RAiNBOW_Hello-World
-// rainbow-pad colour #db901e :: padde
+// rainbow-pad colour #db901e :: padd

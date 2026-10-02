@@ -1,4 +1,4 @@
-# vim: set ft=Rscript:
+# -*- mode: r -*-
 # R - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #198ce7
 #   hue        : 206.5 deg
@@ -36,4 +36,5 @@ cat("Hello World!\n")
 // rainbow-pad R :: RAiNBOW_Hello-World
 // rainbow-pad colour #198ce7 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-Wo
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+ 

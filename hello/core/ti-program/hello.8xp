@@ -1,4 +1,4 @@
-# vim: set ft=ti-program:
+# -*- mode: ti-program -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TI Program - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a0aa87
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad TI Program :: RAiNBOW_Hello-World
-// rainbow-pad   
+// rainbow-pad  

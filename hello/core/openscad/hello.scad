@@ -1,4 +1,4 @@
-# vim: set ft=openscad:
+# -*- mode: openscad -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # OpenSCAD - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e5cd45
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad OpenSCAD :: RAiNBOW_Hello-World
-// rainbow-pad colour #e5cd45 :
+// rainbow-pad colour #e5cd45 

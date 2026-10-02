@@ -1,4 +1,4 @@
-# vim: set ft=firrtl:
+# -*- mode: firrtl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # FIRRTL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2f632f
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad FIRRTL :: RAiNBOW_Hello-World
-// rainbow-pad colour #2f632f :: padded to 1
+// rainbow-pad colour #2f632f :: padded to 

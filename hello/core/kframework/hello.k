@@ -1,4 +1,4 @@
-# vim: set ft=kframework:
+# -*- mode: kframework -*-
 # KFramework - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4195c5
 #   hue        : 201.8 deg
@@ -36,4 +36,4 @@
 // rainbow-pad KFramework :: RAiNBOW_Hello-World
 // rainbow-pad colour #4195c5 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-        
+       

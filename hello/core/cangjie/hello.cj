@@ -1,4 +1,4 @@
-# vim: set ft=cangjie:
+# -*- mode: cangjie -*-
 # Cangjie - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00868b
 #   hue        : 182.2 deg
@@ -38,4 +38,4 @@ main(): Int64 {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Cangjie :: RAiNBOW_Hello-World
 // rainbow-pad colour #00868b :: padded to 100
-// rainbow-pad padding comment: byte balancing for t
+// rainbow-pad padding comment: byte balancing for 

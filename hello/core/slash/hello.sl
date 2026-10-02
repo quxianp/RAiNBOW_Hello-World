@@ -1,4 +1,4 @@
-# vim: set ft=slash:
+# -*- mode: slash -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Slash - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #007eff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Slash :: RAiNBOW_Hello-World
 // rainbow-pad colour #007eff :: padded to 100
-    
+   

@@ -1,4 +1,4 @@
-# vim: set ft=bazel:
+# -*- mode: starlark -*-
 # Starlark - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #76d275
 #   hue        : 119.3 deg
@@ -36,4 +36,4 @@ print("Hello World!")
 % rainbow-pad Starlark :: RAiNBOW_Hello-World
 % rainbow-pad colour #76d275 :: padded to 100
 % rainbow-pad padding comment: byte balancing for the rainbow bar
-% rainbow-pad https://github.com/quxianp/RAiNBO
+% rainbow-pad https://github.com/quxianp/RA

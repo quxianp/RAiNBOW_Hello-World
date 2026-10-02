@@ -1,4 +1,4 @@
-# vim: set ft=xtend:
+# -*- mode: xtend -*-
 # Xtend - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #24255d
 #   hue        : 238.9 deg
@@ -37,4 +37,4 @@ class Hello {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Xtend :: RAiNBOW_Hello-World
 // rainbow-pad colour #24255d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow b
+// rainbow-pad padding comment: byte balancing for the rainbow 

@@ -1,4 +1,4 @@
-# vim: set ft=smarty:
+# -*- mode: smarty -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Smarty - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f0c040
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Smarty :: RAiNBOW_Hello-World
-// rainbow-pad colour #f0c040 :: padded to 10
+// rainbow-pad colour #f0c040 :: padded to 1

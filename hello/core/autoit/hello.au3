@@ -1,4 +1,4 @@
-# vim: set ft=au3:
+# -*- mode: autoit -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # AutoIt - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1c3552
@@ -37,4 +37,4 @@
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad AutoIt :: RAiNBOW_Hello-World
 ' rainbow-pad colour #1c3552 :: padded to 100
-' rainbow-pad padding comment:
+' rainbow-pad padding comm

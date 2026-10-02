@@ -1,4 +1,4 @@
-# vim: set ft=quakec:
+# -*- mode: quakec -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # QuakeC - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #975777
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad QuakeC :: RAiNBOW_Hello-World
-// rainbow-pad colour #975777 :: padded to 1
+// rainbow-pad colour #975777 :: padded to 

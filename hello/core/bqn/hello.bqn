@@ -1,4 +1,4 @@
-# vim: set ft=bqn:
+# -*- mode: bqn -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # BQN - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2b7067
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad BQN :: RAiNBOW_Hello-World
 // rainbow-pad colour #2b7067 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

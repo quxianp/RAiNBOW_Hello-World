@@ -1,4 +1,4 @@
-# vim: set ft=pike:
+# -*- mode: pike -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Pike - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #005390
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Pike :: RAiNBOW_Hello-World
 // rainbow-pad colour #005390 :: padded to 100
-           
+          

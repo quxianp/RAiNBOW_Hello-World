@@ -1,4 +1,4 @@
-# vim: set ft=brainfuck:
+# -*- mode: brainfuck -*-
 # Brainfuck - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2f2530
 #   hue        : 294.6 deg
@@ -34,4 +34,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Brainfuck :: RAiNBOW_Hello-World
-// rainbow-pad colour #2f2530 :: padd
+// rainbow-pad colour #2f2530 :: pad

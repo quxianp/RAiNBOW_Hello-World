@@ -1,4 +1,4 @@
-# vim: set ft=golo:
+# -*- mode: golo -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Golo - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #88562a
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Golo :: RAiNBOW_Hello-World
 // rainbow-pad colour #88562a :: padded to 100
-            
+           

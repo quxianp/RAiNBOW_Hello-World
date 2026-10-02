@@ -1,4 +1,4 @@
-# vim: set ft=tla:
+# -*- mode: tla -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TLA - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4b0079
@@ -37,4 +37,4 @@
 \* rainbow-pad one segment per Linguist coloured language
 \* rainbow-pad TLA :: RAiNBOW_Hello-World
 \* rainbow-pad colour #4b0079 :: padded to 100
-\* rainbow-pad    
+\* rainbow-pad   

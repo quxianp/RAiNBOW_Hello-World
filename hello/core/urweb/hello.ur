@@ -1,4 +1,4 @@
-# vim: set ft=Ur:
+# -*- mode: urweb -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # UrWeb - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ccccee
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad UrWeb :: RAiNBOW_Hello-World
 // rainbow-pad colour #ccccee :: padded to 100
-       
+   

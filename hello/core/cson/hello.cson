@@ -1,4 +1,4 @@
-# vim: set ft=cson:
+# -*- mode: cson -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # CSON - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #244776
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad CSON :: RAiNBOW_Hello-World
 // rainbow-pad colour #244776 :: padded to 100
-           
+          

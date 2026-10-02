@@ -1,4 +1,4 @@
-# vim: set ft=debian-package-control-file:
+# -*- mode: debian-package-control-file -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Debian Package Control File - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d70751
@@ -34,4 +34,4 @@
 // rainbow-pad padding comment: byte balancing for the rainbow bar
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad       
+// rainbow-pad      

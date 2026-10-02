@@ -1,4 +1,4 @@
-# vim: set ft=lilypond:
+# -*- mode: lilypond -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # LilyPond - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9ccc7c
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad LilyPond :: RAiNBOW_Hello-World
-// rainbow-pad colour #9ccc7c :
+// rainbow-pad colour #9ccc7c 

@@ -1,4 +1,4 @@
-# vim: set ft=torrc:
+# -*- mode: tor-config -*-
 # Tor Config - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #59316b
 #   hue        : 281.4 deg
@@ -37,4 +37,4 @@ SocksPort 9050
 # rainbow-pad Tor Config :: RAiNBOW_Hello-World
 # rainbow-pad colour #59316b :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://githu
+# rainbow-pad        

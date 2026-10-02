@@ -1,4 +1,4 @@
-# vim: set ft=stan:
+# -*- mode: stan -*-
 # Stan - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b2011d
 #   hue        : 350.5 deg
@@ -38,4 +38,3 @@ generated quantities { real y_sim = normal_rng(0, 1); }
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Stan :: RAiNBOW_Hello-World
 // rainbow-pad colour #b2011d :: padded to 100
-

@@ -1,4 +1,4 @@
-# vim: set ft=portugol:
+# -*- mode: portugol -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Portugol - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f8bd00
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Portugol :: RAiNBOW_Hello-World
-// rainbow-pad colour #f8bd00 :
+// rainbow-pad colour #f8bd00 

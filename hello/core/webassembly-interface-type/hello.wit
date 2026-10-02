@@ -1,4 +1,4 @@
-# vim: set ft=wit:
+# -*- mode: webassembly-interface-type -*-
 # WebAssembly Interface Type - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #6250e7
 #   hue        : 247.2 deg
@@ -36,4 +36,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad WebAssembly Interface Type :: RA
+// rainbow-pad WebAssem

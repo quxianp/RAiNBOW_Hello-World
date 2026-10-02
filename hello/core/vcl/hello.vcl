@@ -1,4 +1,4 @@
-# vim: set ft=vcl:
+# -*- mode: vcl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # VCL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #148aa8
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad VCL :: RAiNBOW_Hello-World
 // rainbow-pad colour #148aa8 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

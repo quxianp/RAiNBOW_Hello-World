@@ -1,4 +1,4 @@
-# vim: set ft=numpy:
+# -*- mode: numpy -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NumPy - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9c8af9
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad NumPy :: RAiNBOW_Hello-World
 // rainbow-pad colour #9c8af9 :: padded to 100
-    
+   

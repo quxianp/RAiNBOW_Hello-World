@@ -1,4 +1,4 @@
-# vim: set ft=ahk:
+# -*- mode: autohotkey -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # AutoHotkey - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #6594b9
@@ -36,5 +36,4 @@
 ' rainbow-pad equal byte share keeps the language bar an even rainbow
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad AutoHotkey :: RAiNBOW_Hello-World
-' rainbow-pad colour #6594b9 :: padded to 100
-      
+' rainbow-pad colour #6594b9 :: padded to 10

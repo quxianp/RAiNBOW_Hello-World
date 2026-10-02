@@ -1,4 +1,4 @@
-# vim: set ft=b-formal-method-:
+# -*- mode: b-(formal-method) -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # B (Formal Method) - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8aa8c5
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad B (Formal
+// rainbow-pad        

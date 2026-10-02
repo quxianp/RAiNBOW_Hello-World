@@ -1,4 +1,4 @@
-# vim: set ft=stata:
+# -*- mode: stata -*-
 # Stata - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1a5f91
 #   hue        : 205.2 deg
@@ -37,4 +37,4 @@ display "Hello World!"
 # rainbow-pad colour #1a5f91 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-   
+  

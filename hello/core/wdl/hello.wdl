@@ -1,4 +1,4 @@
-# vim: set ft=wdl:
+# -*- mode: wdl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # WDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #42f1f4
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad WDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #42f1f4 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

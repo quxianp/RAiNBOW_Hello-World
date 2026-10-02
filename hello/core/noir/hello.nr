@@ -1,4 +1,4 @@
-# vim: set ft=nargo:
+# -*- mode: noir -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Noir - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2f1f49

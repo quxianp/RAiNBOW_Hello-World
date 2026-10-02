@@ -1,4 +1,4 @@
-; vim: set ft=vba:
+; -*- mode: vba -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; VBA - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #867db1
@@ -37,4 +37,4 @@
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad VBA :: RAiNBOW_Hello-World
 ' rainbow-pad colour #867db1 :: padded to 100
-' rainbow-pad padding comment: byte balancing fo
+' rainbow-pad padding comment: byte balancing f

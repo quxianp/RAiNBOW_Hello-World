@@ -1,4 +1,4 @@
-# vim: set ft=apl:
+# -*- mode: apl -*-
 # APL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5a8164
 #   hue        : 135.4 deg
@@ -36,4 +36,4 @@
 // rainbow-pad APL :: RAiNBOW_Hello-World
 // rainbow-pad colour #5a8164 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-W
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-

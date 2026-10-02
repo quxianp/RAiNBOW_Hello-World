@@ -1,4 +1,4 @@
-// vim: set ft=odinlang:
+// -*- mode: odin -*-
 // Odin - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #60affe
 //   hue        : 210.0 deg
@@ -40,4 +40,4 @@ main :: proc() {
 # rainbow-pad Odin :: RAiNBOW_Hello-World
 # rainbow-pad colour #60affe :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-    
+       

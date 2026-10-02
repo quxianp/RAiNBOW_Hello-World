@@ -1,4 +1,4 @@
-# vim: set ft=inno-setup:
+# -*- mode: inno-setup -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Inno Setup - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #264b99
@@ -36,4 +36,4 @@
 ' rainbow-pad equal byte share keeps the language bar an even rainbow
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad Inno Setup :: RAiNBOW_Hello-World
-' rainbow-pad colour #264b99 :: padded to 100
+' rainbow-pad colour #264b99 :: padded to 10

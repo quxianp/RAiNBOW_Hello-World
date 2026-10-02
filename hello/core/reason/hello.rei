@@ -1,4 +1,4 @@
-# vim: set ft=reason:
+# -*- mode: reason -*-
 # Reason - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff5847
 #   hue        : 5.5 deg
@@ -36,4 +36,4 @@ let () = print_endline "Hello World!"
 // rainbow-pad Reason :: RAiNBOW_Hello-World
 // rainbow-pad colour #ff5847 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad 
+// rainbow-pad

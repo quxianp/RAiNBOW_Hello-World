@@ -1,4 +1,4 @@
--- vim: set ft=hiveql:
+-- -*- mode: hiveql -*-
 --   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- HiveQL - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #dce200
@@ -36,4 +36,4 @@
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad HiveQL :: RAiNBOW_Hello-World
--- rainbow-pad colour #dce200 :: padd
+-- rainbow-pad colour #dce200 :: pad

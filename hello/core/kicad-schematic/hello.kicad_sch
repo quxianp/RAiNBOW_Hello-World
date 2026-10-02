@@ -1,4 +1,4 @@
-# vim: set ft=kicad-schematic:
+# -*- mode: kicad-schematic -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # KiCad Schematic - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2f4aab
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad KiCad Schematic :: R
+// rainbow-pad KiCad Schematic :: 

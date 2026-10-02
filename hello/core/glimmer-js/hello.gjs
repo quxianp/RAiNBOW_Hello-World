@@ -1,4 +1,4 @@
-# vim: set ft=gjs:
+# -*- mode: glimmer-js -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Glimmer JS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f5835f
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Glimmer JS :: RAiNBOW_Hello-World
-// rainbow-pad colour #f
+// rainbow-pad  

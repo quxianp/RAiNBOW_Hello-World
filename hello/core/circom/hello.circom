@@ -1,4 +1,4 @@
-# vim: set ft=circom:
+# -*- mode: circom -*-
 # Circom - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #707575
 #   hue        : 180.0 deg
@@ -38,4 +38,4 @@ template Hello() {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Circom :: RAiNBOW_Hello-World
 // rainbow-pad colour #707575 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the 
+// rainbow-pad padding comment: byte balancing for the

@@ -1,4 +1,4 @@
-# vim: set ft=asm:
+# -*- mode: assembly -*-
 # Assembly - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #6e4c13
 #   hue        : 37.6 deg
@@ -36,5 +36,4 @@ section .data
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Assembly :: RAiNBOW_Hello-World
 // rainbow-pad colour #6e4c13 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
- 
+// rainbow-pad padding comment: byte balancing for the rainbow

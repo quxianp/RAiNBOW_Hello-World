@@ -1,4 +1,4 @@
-# vim: set ft=lark:
+# -*- mode: lark -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Lark - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2980b9
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Lark :: RAiNBOW_Hello-World
 // rainbow-pad colour #2980b9 :: padded to 100
-           
+          

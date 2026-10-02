@@ -1,4 +1,4 @@
-# vim: set ft=ecl:
+# -*- mode: ecl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ECL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8a1267
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ECL :: RAiNBOW_Hello-World
 // rainbow-pad colour #8a1267 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

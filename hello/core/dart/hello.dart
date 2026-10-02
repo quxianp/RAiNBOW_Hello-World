@@ -1,4 +1,4 @@
-// vim: set ft=dart:
+// -*- mode: dart -*-
 // Dart - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #00b4ab
 //   hue        : 177.0 deg
@@ -37,4 +37,3 @@ void main() {
 /* rainbow-pad one segment per Linguist coloured language */
 /* rainbow-pad Dart :: RAiNBOW_Hello-World */
 /* rainbow-pad colour #00b4ab :: padded to 100 */
-

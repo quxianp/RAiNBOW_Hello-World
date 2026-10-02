@@ -1,4 +1,4 @@
-# vim: set ft=plantuml:
+# -*- mode: plantuml -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # PlantUML - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fbbd16
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad PlantUML :: RAiNBOW_Hello-World
 # rainbow-pad colour #fbbd16 :: padded to 100
-# rainbow-pad 
+# rainbow-pad

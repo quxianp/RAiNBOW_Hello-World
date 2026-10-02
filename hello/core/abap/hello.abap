@@ -1,4 +1,4 @@
-# vim: set ft=abap:
+# -*- mode: abap -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ABAP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e8274b
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ABAP :: RAiNBOW_Hello-World
 // rainbow-pad colour #e8274b :: padded to 100
-           
+          

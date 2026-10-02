@@ -1,4 +1,4 @@
-# vim: set ft=lambdapi:
+# -*- mode: lambdapi -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Lambdapi - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8027a3
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Lambdapi :: RAiNBOW_Hello-World
-// rainbow-pad colour #8027a3 
+// rainbow-pad colour #8027a3

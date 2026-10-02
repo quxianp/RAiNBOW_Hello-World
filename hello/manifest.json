@@ -1,7 +1,7 @@
 {
  "generated_by": "scripts/generate_all_hello.py",
- "core_languages": 689,
- "full_languages": 6637,
+ "core_languages": 694,
+ "full_languages": 6632,
  "total_files": 7326,
  "with_curated_template": 279,
  "runnable_command_count": 51,
@@ -14,6 +14,7 @@
    "type": "data",
    "color": "#000000",
    "hue": 0.0,
+   "modeline": "ignore-list",
    "runner": null,
    "real_template": false
   },
@@ -25,6 +26,7 @@
    "type": "programming",
    "color": "#220000",
    "hue": 0.0,
+   "modeline": "yara",
    "runner": null,
    "real_template": false
   },
@@ -36,6 +38,7 @@
    "type": "prose",
    "color": "#141414",
    "hue": 0.0,
+   "modeline": "restructuredtext",
    "runner": null,
    "real_template": true
   },
@@ -47,6 +50,7 @@
    "type": "programming",
    "color": "#1a1a1a",
    "hue": 0.0,
+   "modeline": "csound",
    "runner": null,
    "real_template": false
   },
@@ -58,6 +62,7 @@
    "type": "programming",
    "color": "#1a1a1a",
    "hue": 0.0,
+   "modeline": "csound-document",
    "runner": null,
    "real_template": false
   },
@@ -69,6 +74,7 @@
    "type": "programming",
    "color": "#1a1a1a",
    "hue": 0.0,
+   "modeline": "csound-score",
    "runner": null,
    "real_template": false
   },
@@ -80,6 +86,7 @@
    "type": "programming",
    "color": "#1f1f1f",
    "hue": 0.0,
+   "modeline": "volt",
    "runner": null,
    "real_template": false
   },
@@ -91,17 +98,19 @@
    "type": "programming",
    "color": "#222222",
    "hue": 0.0,
+   "modeline": "carbon",
    "runner": null,
    "real_template": true
   },
   {
    "language": "JSON",
    "layer": "core",
-   "path": "hello/core/json/hello.har",
-   "extension": ".har",
+   "path": "hello/core/json/hello.4DForm",
+   "extension": ".4DForm",
    "type": "data",
    "color": "#292929",
    "hue": 0.0,
+   "modeline": "json",
    "runner": null,
    "real_template": true
   },
@@ -113,6 +122,7 @@
    "type": "data",
    "color": "#292929",
    "hue": 0.0,
+   "modeline": "json-with-comments",
    "runner": null,
    "real_template": false
   },
@@ -124,6 +134,7 @@
    "type": "markup",
    "color": "#2b2b2b",
    "hue": 0.0,
+   "modeline": "slim",
    "runner": null,
    "real_template": false
   },
@@ -135,6 +146,7 @@
    "type": "programming",
    "color": "#333333",
    "hue": 0.0,
+   "modeline": "talon",
    "runner": null,
    "real_template": false
   },
@@ -146,6 +158,7 @@
    "type": "programming",
    "color": "#383838",
    "hue": 0.0,
+   "modeline": "wren",
    "runner": null,
    "real_template": false
   },
@@ -157,6 +170,7 @@
    "type": "programming",
    "color": "#3f3f3f",
    "hue": 0.0,
+   "modeline": "sqf",
    "runner": null,
    "real_template": true
   },
@@ -168,6 +182,7 @@
    "type": "data",
    "color": "#800000",
    "hue": 0.0,
+   "modeline": "adblock-filter-list",
    "runner": null,
    "real_template": false
   },
@@ -179,6 +194,7 @@
    "type": "programming",
    "color": "#800000",
    "hue": 0.0,
+   "modeline": "squirrel",
    "runner": null,
    "real_template": true
   },
@@ -190,6 +206,7 @@
    "type": "programming",
    "color": "#990000",
    "hue": 0.0,
+   "modeline": "nearley",
    "runner": null,
    "real_template": false
   },
@@ -201,6 +218,7 @@
    "type": "data",
    "color": "#9e0101",
    "hue": 0.0,
+   "modeline": "subrip-text",
    "runner": null,
    "real_template": false
   },
@@ -212,6 +230,7 @@
    "type": "programming",
    "color": "#555555",
    "hue": 0.0,
+   "modeline": "c",
    "runner": "cc -O -o /tmp/hw_c \"{file}\" && /tmp/hw_c",
    "real_template": true
   },
@@ -223,6 +242,7 @@
    "type": "programming",
    "color": "#b30000",
    "hue": 0.0,
+   "modeline": "idris",
    "runner": null,
    "real_template": true
   },
@@ -234,6 +254,7 @@
    "type": "programming",
    "color": "#cc0000",
    "hue": 0.0,
+   "modeline": "pan",
    "runner": null,
    "real_template": false
   },
@@ -245,6 +266,7 @@
    "type": "programming",
    "color": "#de0000",
    "hue": 0.0,
+   "modeline": "promela",
    "runner": null,
    "real_template": false
   },
@@ -256,6 +278,7 @@
    "type": "programming",
    "color": "#c42727",
    "hue": 0.0,
+   "modeline": "cap'n-proto",
    "runner": null,
    "real_template": true
   },
@@ -267,6 +290,7 @@
    "type": "programming",
    "color": "#f50000",
    "hue": 0.0,
+   "modeline": "red",
    "runner": null,
    "real_template": false
   },
@@ -278,6 +302,7 @@
    "type": "programming",
    "color": "#ff0000",
    "hue": 0.0,
+   "modeline": "asymptote",
    "runner": null,
    "real_template": false
   },
@@ -289,6 +314,7 @@
    "type": "programming",
    "color": "#ff0000",
    "hue": 0.0,
+   "modeline": "basic",
    "runner": null,
    "real_template": false
   },
@@ -300,6 +326,7 @@
    "type": "programming",
    "color": "#ff0000",
    "hue": 0.0,
+   "modeline": "grammatical-framework",
    "runner": null,
    "real_template": false
   },
@@ -311,6 +338,7 @@
    "type": "programming",
    "color": "#ff0000",
    "hue": 0.0,
+   "modeline": "witcher-script",
    "runner": null,
    "real_template": false
   },
@@ -322,6 +350,7 @@
    "type": "programming",
    "color": "#ff0303",
    "hue": 0.0,
+   "modeline": "jass",
    "runner": null,
    "real_template": false
   },
@@ -333,28 +362,31 @@
    "type": "programming",
    "color": "#da3434",
    "hue": 0.0,
+   "modeline": "cmake",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Hack",
    "layer": "core",
-   "path": "hello/core/hack/hello.hhi",
-   "extension": ".hhi",
+   "path": "hello/core/hack/hello.hack",
+   "extension": ".hack",
    "type": "programming",
    "color": "#878787",
    "hue": 0.0,
+   "modeline": "hack",
    "runner": null,
    "real_template": false
   },
   {
    "language": "MiniYAML",
    "layer": "core",
-   "path": "hello/core/miniyaml/hello.yml",
-   "extension": ".yml",
+   "path": "hello/core/miniyaml/hello.yaml",
+   "extension": ".yaml",
    "type": "data",
    "color": "#ff1111",
    "hue": 0.0,
+   "modeline": "miniyaml",
    "runner": null,
    "real_template": false
   },
@@ -366,6 +398,7 @@
    "type": "programming",
    "color": "#c94949",
    "hue": 0.0,
+   "modeline": "smpl",
    "runner": null,
    "real_template": false
   },
@@ -377,28 +410,31 @@
    "type": "programming",
    "color": "#ff2b2b",
    "hue": 0.0,
+   "modeline": "mercury",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Lasso",
    "layer": "core",
-   "path": "hello/core/lasso/hello.las",
-   "extension": ".las",
+   "path": "hello/core/lasso/hello.lasso",
+   "extension": ".lasso",
    "type": "programming",
    "color": "#999999",
    "hue": 0.0,
+   "modeline": "lasso",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Wikitext",
    "layer": "core",
-   "path": "hello/core/wikitext/hello.wiki",
-   "extension": ".wiki",
+   "path": "hello/core/wikitext/hello.mediawiki",
+   "extension": ".mediawiki",
    "type": "prose",
    "color": "#fc5757",
    "hue": 0.0,
+   "modeline": "wikitext",
    "runner": null,
    "real_template": false
   },
@@ -410,6 +446,7 @@
    "type": "programming",
    "color": "#ff7f7f",
    "hue": 0.0,
+   "modeline": "ren'py",
    "runner": null,
    "real_template": false
   },
@@ -421,6 +458,7 @@
    "type": "programming",
    "color": "#d3d3d3",
    "hue": 0.0,
+   "modeline": "daslang",
    "runner": null,
    "real_template": false
   },
@@ -432,17 +470,19 @@
    "type": "data",
    "color": "#ffb3b3",
    "hue": 0.0,
+   "modeline": "kdl",
    "runner": null,
    "real_template": false
   },
   {
    "language": "PLSQL",
    "layer": "core",
-   "path": "hello/core/plsql/hello.vw",
-   "extension": ".vw",
+   "path": "hello/core/plsql/hello.pls",
+   "extension": ".pls",
    "type": "programming",
    "color": "#dad8d8",
    "hue": 0.0,
+   "modeline": "plsql",
    "runner": null,
    "real_template": false
   },
@@ -454,6 +494,7 @@
    "type": "programming",
    "color": "#ed2e2d",
    "hue": 0.31,
+   "modeline": "opencl",
    "runner": null,
    "real_template": true
   },
@@ -465,6 +506,7 @@
    "type": "data",
    "color": "#cb3837",
    "hue": 0.41,
+   "modeline": "npm-config",
    "runner": null,
    "real_template": true
   },
@@ -476,6 +518,7 @@
    "type": "programming",
    "color": "#ff4a48",
    "hue": 0.66,
+   "modeline": "cairo",
    "runner": null,
    "real_template": true
   },
@@ -487,6 +530,7 @@
    "type": "programming",
    "color": "#ff4a48",
    "hue": 0.66,
+   "modeline": "cairo-zero",
    "runner": null,
    "real_template": false
   },
@@ -498,6 +542,7 @@
    "type": "programming",
    "color": "#db5855",
    "hue": 1.34,
+   "modeline": "clojure",
    "runner": "clojure -e \"(load-file \\\"{file}\\\")\"",
    "real_template": true
   },
@@ -509,17 +554,19 @@
    "type": "programming",
    "color": "#d90e09",
    "hue": 1.44,
+   "modeline": "jcl",
    "runner": null,
    "real_template": false
   },
   {
    "language": "REXX",
    "layer": "core",
-   "path": "hello/core/rexx/hello.rex",
-   "extension": ".rex",
+   "path": "hello/core/rexx/hello.rexx",
+   "extension": ".rexx",
    "type": "programming",
    "color": "#d90e09",
    "hue": 1.44,
+   "modeline": "rexx",
    "runner": null,
    "real_template": false
   },
@@ -531,6 +578,7 @@
    "type": "programming",
    "color": "#d44a45",
    "hue": 2.1,
+   "modeline": "flix",
    "runner": null,
    "real_template": true
   },
@@ -542,6 +590,7 @@
    "type": "data",
    "color": "#d20b00",
    "hue": 3.14,
+   "modeline": "gerber-image",
    "runner": null,
    "real_template": false
   },
@@ -553,17 +602,19 @@
    "type": "data",
    "color": "#fa0f00",
    "hue": 3.6,
+   "modeline": "adobe-font-metrics",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Jinja",
    "layer": "core",
-   "path": "hello/core/jinja/hello.j2",
-   "extension": ".j2",
+   "path": "hello/core/jinja/hello.jinja",
+   "extension": ".jinja",
    "type": "markup",
    "color": "#a52a22",
    "hue": 3.66,
+   "modeline": "jinja",
    "runner": null,
    "real_template": false
   },
@@ -575,6 +626,7 @@
    "type": "programming",
    "color": "#773b37",
    "hue": 3.75,
+   "modeline": "kaitai-struct",
    "runner": null,
    "real_template": false
   },
@@ -586,6 +638,7 @@
    "type": "data",
    "color": "#ec564c",
    "hue": 3.75,
+   "modeline": "icalendar",
    "runner": null,
    "real_template": false
   },
@@ -597,6 +650,7 @@
    "type": "programming",
    "color": "#ee1e10",
    "hue": 3.78,
+   "modeline": "pyret",
    "runner": null,
    "real_template": false
   },
@@ -608,6 +662,7 @@
    "type": "markup",
    "color": "#da291c",
    "hue": 4.11,
+   "modeline": "postscript",
    "runner": null,
    "real_template": true
   },
@@ -619,17 +674,19 @@
    "type": "programming",
    "color": "#f44336",
    "hue": 4.11,
+   "modeline": "redscript",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Wolfram Language",
    "layer": "core",
-   "path": "hello/core/wolfram-language/hello.ma",
-   "extension": ".ma",
+   "path": "hello/core/wolfram-language/hello.mathematica",
+   "extension": ".mathematica",
    "type": "programming",
    "color": "#dd1100",
    "hue": 4.62,
+   "modeline": "wolfram-language",
    "runner": null,
    "real_template": true
   },
@@ -641,6 +698,7 @@
    "type": "programming",
    "color": "#fff4f3",
    "hue": 5.0,
+   "modeline": "emberscript",
    "runner": null,
    "real_template": false
   },
@@ -652,6 +710,7 @@
    "type": "programming",
    "color": "#ff5847",
    "hue": 5.54,
+   "modeline": "reason",
    "runner": null,
    "real_template": true
   },
@@ -663,6 +722,7 @@
    "type": "programming",
    "color": "#ff5847",
    "hue": 5.54,
+   "modeline": "reasonligo",
    "runner": null,
    "real_template": false
   },
@@ -674,6 +734,7 @@
    "type": "markup",
    "color": "#f7523f",
    "hue": 6.2,
+   "modeline": "blade",
    "runner": null,
    "real_template": false
   },
@@ -685,6 +746,7 @@
    "type": "programming",
    "color": "#c44536",
    "hue": 6.34,
+   "modeline": "smithy",
    "runner": null,
    "real_template": false
   },
@@ -696,6 +758,7 @@
    "type": "programming",
    "color": "#f05138",
    "hue": 8.15,
+   "modeline": "swift",
    "runner": "swift \"{file}\"",
    "real_template": true
   },
@@ -707,6 +770,7 @@
    "type": "programming",
    "color": "#da7666",
    "hue": 8.28,
+   "modeline": "b",
    "runner": null,
    "real_template": false
   },
@@ -718,6 +782,7 @@
    "type": "programming",
    "color": "#b34936",
    "hue": 9.12,
+   "modeline": "sas",
    "runner": null,
    "real_template": true
   },
@@ -729,6 +794,7 @@
    "type": "markup",
    "color": "#ff6347",
    "hue": 9.13,
+   "modeline": "stylus",
    "runner": null,
    "real_template": false
   },
@@ -740,6 +806,7 @@
    "type": "programming",
    "color": "#6a463f",
    "hue": 9.77,
+   "modeline": "bison",
    "runner": null,
    "real_template": true
   },
@@ -751,6 +818,7 @@
    "type": "programming",
    "color": "#c76f5b",
    "hue": 11.11,
+   "modeline": "pep8",
    "runner": null,
    "real_template": false
   },
@@ -762,6 +830,7 @@
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
+   "modeline": "git-attributes",
    "runner": null,
    "real_template": true
   },
@@ -773,6 +842,7 @@
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
+   "modeline": "git-commit",
    "runner": null,
    "real_template": false
   },
@@ -784,6 +854,7 @@
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
+   "modeline": "git-config",
    "runner": null,
    "real_template": false
   },
@@ -795,17 +866,19 @@
    "type": "data",
    "color": "#f44d27",
    "hue": 11.12,
+   "modeline": "git-revision-list",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Pug",
    "layer": "core",
-   "path": "hello/core/pug/hello.pug",
-   "extension": ".pug",
+   "path": "hello/core/pug/hello.jade",
+   "extension": ".jade",
    "type": "markup",
    "color": "#a86454",
    "hue": 11.43,
+   "modeline": "pug",
    "runner": null,
    "real_template": false
   },
@@ -817,6 +890,7 @@
    "type": "programming",
    "color": "#ff4c1f",
    "hue": 12.05,
+   "modeline": "mojo",
    "runner": null,
    "real_template": true
   },
@@ -828,6 +902,7 @@
    "type": "markup",
    "color": "#e34c26",
    "hue": 12.06,
+   "modeline": "html",
    "runner": null,
    "real_template": true
   },
@@ -839,6 +914,7 @@
    "type": "programming",
    "color": "#f95428",
    "hue": 12.63,
+   "modeline": "lobster",
    "runner": null,
    "real_template": false
   },
@@ -850,6 +926,7 @@
    "type": "markup",
    "color": "#dc3a0c",
    "hue": 13.27,
+   "modeline": "postcss",
    "runner": null,
    "real_template": false
   },
@@ -861,6 +938,7 @@
    "type": "programming",
    "color": "#882b0f",
    "hue": 13.88,
+   "modeline": "actionscript",
    "runner": null,
    "real_template": false
   },
@@ -872,6 +950,7 @@
    "type": "programming",
    "color": "#f5835f",
    "hue": 14.4,
+   "modeline": "glimmer-js",
    "runner": null,
    "real_template": false
   },
@@ -883,6 +962,7 @@
    "type": "markup",
    "color": "#ff3e00",
    "hue": 14.59,
+   "modeline": "svelte",
    "runner": null,
    "real_template": false
   },
@@ -894,6 +974,7 @@
    "type": "programming",
    "color": "#fb855d",
    "hue": 15.19,
+   "modeline": "genie",
    "runner": null,
    "real_template": false
   },
@@ -905,6 +986,7 @@
    "type": "programming",
    "color": "#d03600",
    "hue": 15.58,
+   "modeline": "jasmin",
    "runner": null,
    "real_template": false
   },
@@ -916,6 +998,7 @@
    "type": "data",
    "color": "#a62c00",
    "hue": 15.9,
+   "modeline": "ron",
    "runner": null,
    "real_template": false
   },
@@ -927,6 +1010,7 @@
    "type": "markup",
    "color": "#e15a29",
    "hue": 15.98,
+   "modeline": "cooklang",
    "runner": null,
    "real_template": false
   },
@@ -938,17 +1022,19 @@
    "type": "data",
    "color": "#9c4221",
    "hue": 16.1,
+   "modeline": "toml",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Max",
    "layer": "core",
-   "path": "hello/core/max/hello.mxt",
-   "extension": ".mxt",
+   "path": "hello/core/max/hello.maxpat",
+   "extension": ".maxpat",
    "type": "programming",
    "color": "#c4a79c",
    "hue": 16.5,
+   "modeline": "max",
    "runner": null,
    "real_template": false
   },
@@ -960,6 +1046,7 @@
    "type": "programming",
    "color": "#e16737",
    "hue": 16.94,
+   "modeline": "matlab",
    "runner": null,
    "real_template": true
   },
@@ -971,6 +1058,7 @@
    "type": "data",
    "color": "#f26025",
    "hue": 17.27,
+   "modeline": "valve-data-format",
    "runner": null,
    "real_template": false
   },
@@ -982,6 +1070,7 @@
    "type": "markup",
    "color": "#724b3b",
    "hue": 17.45,
+   "modeline": "mustache",
    "runner": null,
    "real_template": false
   },
@@ -993,6 +1082,7 @@
    "type": "programming",
    "color": "#a3522f",
    "hue": 18.1,
+   "modeline": "idl",
    "runner": null,
    "real_template": true
   },
@@ -1004,6 +1094,7 @@
    "type": "programming",
    "color": "#ff5000",
    "hue": 18.82,
+   "modeline": "ballerina",
    "runner": null,
    "real_template": false
   },
@@ -1015,6 +1106,7 @@
    "type": "programming",
    "color": "#4c3023",
    "hue": 19.02,
+   "modeline": "lfe",
    "runner": null,
    "real_template": false
   },
@@ -1026,6 +1118,7 @@
    "type": "programming",
    "color": "#794932",
    "hue": 19.44,
+   "modeline": "yul",
    "runner": null,
    "real_template": false
   },
@@ -1037,6 +1130,7 @@
    "type": "programming",
    "color": "#bb8368",
    "hue": 19.52,
+   "modeline": "pro*c",
    "runner": null,
    "real_template": false
   },
@@ -1048,6 +1142,7 @@
    "type": "programming",
    "color": "#aa6746",
    "hue": 19.8,
+   "modeline": "solidity",
    "runner": null,
    "real_template": true
   },
@@ -1059,6 +1154,7 @@
    "type": "programming",
    "color": "#89421e",
    "hue": 20.19,
+   "modeline": "dune",
    "runner": null,
    "real_template": false
   },
@@ -1070,6 +1166,7 @@
    "type": "programming",
    "color": "#341708",
    "hue": 20.45,
+   "modeline": "forth",
    "runner": null,
    "real_template": true
   },
@@ -1081,6 +1178,7 @@
    "type": "markup",
    "color": "#ff5a03",
    "hue": 20.71,
+   "modeline": "astro",
    "runner": null,
    "real_template": false
   },
@@ -1092,6 +1190,7 @@
    "type": "markup",
    "color": "#f97732",
    "hue": 20.8,
+   "modeline": "mask",
    "runner": null,
    "real_template": false
   },
@@ -1103,6 +1202,7 @@
    "type": "programming",
    "color": "#dea584",
    "hue": 22.0,
+   "modeline": "rust",
    "runner": "rustc -O -o /tmp/hw_rs \"{file}\" && /tmp/hw_rs",
    "real_template": true
   },
@@ -1114,6 +1214,7 @@
    "type": "programming",
    "color": "#fc792d",
    "hue": 22.03,
+   "modeline": "jac",
    "runner": null,
    "real_template": false
   },
@@ -1125,6 +1226,7 @@
    "type": "programming",
    "color": "#ec915c",
    "hue": 22.08,
+   "modeline": "zig",
    "runner": "zig run \"{file}\"",
    "real_template": true
   },
@@ -1136,6 +1238,7 @@
    "type": "programming",
    "color": "#c37240",
    "hue": 22.9,
+   "modeline": "faust",
    "runner": null,
    "real_template": false
   },
@@ -1147,6 +1250,7 @@
    "type": "markup",
    "color": "#da5b0b",
    "hue": 23.19,
+   "modeline": "jupyter-notebook",
    "runner": null,
    "real_template": false
   },
@@ -1158,6 +1262,7 @@
    "type": "programming",
    "color": "#ff6800",
    "hue": 24.47,
+   "modeline": "gsc",
    "runner": null,
    "real_template": false
   },
@@ -1169,6 +1274,7 @@
    "type": "prose",
    "color": "#ff6900",
    "hue": 24.71,
+   "modeline": "gemini",
    "runner": null,
    "real_template": false
   },
@@ -1180,6 +1286,7 @@
    "type": "programming",
    "color": "#ffcfab",
    "hue": 25.71,
+   "modeline": "gcc-machine-description",
    "runner": null,
    "real_template": false
   },
@@ -1191,6 +1298,7 @@
    "type": "markup",
    "color": "#eb8131",
    "hue": 25.81,
+   "modeline": "ecmarkup",
    "runner": null,
    "real_template": false
   },
@@ -1202,6 +1310,7 @@
    "type": "programming",
    "color": "#d37327",
    "hue": 26.51,
+   "modeline": "fpp",
    "runner": null,
    "real_template": false
   },
@@ -1213,6 +1322,7 @@
    "type": "data",
    "color": "#ff7100",
    "hue": 26.59,
+   "modeline": "zmodel",
    "runner": null,
    "real_template": false
   },
@@ -1224,6 +1334,7 @@
    "type": "programming",
    "color": "#ff790b",
    "hue": 27.05,
+   "modeline": "euphoria",
    "runner": null,
    "real_template": true
   },
@@ -1235,6 +1346,7 @@
    "type": "programming",
    "color": "#8d6747",
    "hue": 27.43,
+   "modeline": "monkey-c",
    "runner": null,
    "real_template": false
   },
@@ -1246,6 +1358,7 @@
    "type": "programming",
    "color": "#88562a",
    "hue": 28.09,
+   "modeline": "golo",
    "runner": null,
    "real_template": false
   },
@@ -1257,17 +1370,19 @@
    "type": "programming",
    "color": "#cd6400",
    "hue": 29.27,
+   "modeline": "blitzmax",
    "runner": null,
    "real_template": false
   },
   {
    "language": "OCaml",
    "layer": "core",
-   "path": "hello/core/ocaml/hello.ml4",
-   "extension": ".ml4",
+   "path": "hello/core/ocaml/hello.eliom",
+   "extension": ".eliom",
    "type": "programming",
    "color": "#ef7a08",
    "hue": 29.61,
+   "modeline": "ocaml",
    "runner": "ocaml \"{file}\"",
    "real_template": true
   },
@@ -1279,6 +1394,7 @@
    "type": "markup",
    "color": "#665a4e",
    "hue": 30.0,
+   "modeline": "runoff",
    "runner": null,
    "real_template": false
   },
@@ -1290,6 +1406,7 @@
    "type": "data",
    "color": "#ffcc99",
    "hue": 30.0,
+   "modeline": "survex-data",
    "runner": null,
    "real_template": false
   },
@@ -1301,6 +1418,7 @@
    "type": "data",
    "color": "#ffddbb",
    "hue": 30.0,
+   "modeline": "figlet-font",
    "runner": null,
    "real_template": false
   },
@@ -1312,6 +1430,7 @@
    "type": "data",
    "color": "#f68712",
    "hue": 30.79,
+   "modeline": "hxml",
    "runner": null,
    "real_template": false
   },
@@ -1323,17 +1442,19 @@
    "type": "programming",
    "color": "#ffdab3",
    "hue": 30.79,
+   "modeline": "rez",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Zimpl",
    "layer": "core",
-   "path": "hello/core/zimpl/hello.zpl",
-   "extension": ".zpl",
+   "path": "hello/core/zimpl/hello.zimpl",
+   "extension": ".zimpl",
    "type": "programming",
    "color": "#d67711",
    "hue": 31.07,
+   "modeline": "zimpl",
    "runner": null,
    "real_template": false
   },
@@ -1345,6 +1466,7 @@
    "type": "programming",
    "color": "#9d5200",
    "hue": 31.34,
+   "modeline": "ragel",
    "runner": null,
    "real_template": false
   },
@@ -1356,17 +1478,19 @@
    "type": "programming",
    "color": "#dbb284",
    "hue": 31.72,
+   "modeline": "pawn",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Handlebars",
    "layer": "core",
-   "path": "hello/core/handlebars/hello.hbs",
-   "extension": ".hbs",
+   "path": "hello/core/handlebars/hello.handlebars",
+   "extension": ".handlebars",
    "type": "markup",
    "color": "#f7931e",
    "hue": 32.35,
+   "modeline": "handlebars",
    "runner": null,
    "real_template": false
   },
@@ -1378,6 +1502,7 @@
    "type": "programming",
    "color": "#df7900",
    "hue": 32.56,
+   "modeline": "haxe",
    "runner": null,
    "real_template": true
   },
@@ -1389,6 +1514,7 @@
    "type": "programming",
    "color": "#fba63b",
    "hue": 33.44,
+   "modeline": "rhai",
    "runner": null,
    "real_template": false
   },
@@ -1400,6 +1526,7 @@
    "type": "markup",
    "color": "#f2a542",
    "hue": 33.75,
+   "modeline": "latte",
    "runner": null,
    "real_template": false
   },
@@ -1411,6 +1538,7 @@
    "type": "programming",
    "color": "#4e3617",
    "hue": 33.82,
+   "modeline": "unified-parallel-c",
    "runner": null,
    "real_template": false
   },
@@ -1422,6 +1550,7 @@
    "type": "programming",
    "color": "#f7ede0",
    "hue": 33.91,
+   "modeline": "opal",
    "runner": null,
    "real_template": false
   },
@@ -1433,6 +1562,7 @@
    "type": "programming",
    "color": "#f49a22",
    "hue": 34.29,
+   "modeline": "gams",
    "runner": null,
    "real_template": false
   },
@@ -1444,6 +1574,7 @@
    "type": "markup",
    "color": "#f4aa41",
    "hue": 35.2,
+   "modeline": "bru",
    "runner": null,
    "real_template": false
   },
@@ -1455,17 +1586,19 @@
    "type": "data",
    "color": "#b07219",
    "hue": 35.36,
+   "modeline": "jar-manifest",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Java",
    "layer": "core",
-   "path": "hello/core/java/hello.jav",
-   "extension": ".jav",
+   "path": "hello/core/java/hello.java",
+   "extension": ".java",
    "type": "programming",
    "color": "#b07219",
    "hue": 35.36,
+   "modeline": "java",
    "runner": "javac -d /tmp \"{file}\" && java -cp /tmp Main",
    "real_template": true
   },
@@ -1477,6 +1610,7 @@
    "type": "programming",
    "color": "#f69e1d",
    "hue": 35.67,
+   "modeline": "sourcepawn",
    "runner": null,
    "real_template": false
   },
@@ -1488,6 +1622,7 @@
    "type": "data",
    "color": "#ff9900",
    "hue": 36.0,
+   "modeline": "svg",
    "runner": null,
    "real_template": true
   },
@@ -1499,6 +1634,7 @@
    "type": "programming",
    "color": "#db901e",
    "hue": 36.19,
+   "modeline": "clarion",
    "runner": null,
    "real_template": false
   },
@@ -1510,6 +1646,7 @@
    "type": "programming",
    "color": "#fbb03b",
    "hue": 36.56,
+   "modeline": "motoko",
    "runner": null,
    "real_template": true
   },
@@ -1521,17 +1658,19 @@
    "type": "data",
    "color": "#f1a42b",
    "hue": 36.67,
+   "modeline": "collada",
    "runner": null,
    "real_template": false
   },
   {
    "language": "SQL",
    "layer": "core",
-   "path": "hello/core/sql/hello.tab",
-   "extension": ".tab",
+   "path": "hello/core/sql/hello.mysql",
+   "extension": ".mysql",
    "type": "data",
    "color": "#e38c00",
    "hue": 37.0,
+   "modeline": "sql",
    "runner": null,
    "real_template": false
   },
@@ -1543,6 +1682,7 @@
    "type": "programming",
    "color": "#e38c00",
    "hue": 37.0,
+   "modeline": "sqlpl",
    "runner": null,
    "real_template": false
   },
@@ -1554,6 +1694,7 @@
    "type": "programming",
    "color": "#e38c00",
    "hue": 37.0,
+   "modeline": "tsql",
    "runner": null,
    "real_template": false
   },
@@ -1565,6 +1706,7 @@
    "type": "programming",
    "color": "#d0b68c",
    "hue": 37.06,
+   "modeline": "rocq-prover",
    "runner": null,
    "real_template": false
   },
@@ -1576,6 +1718,7 @@
    "type": "programming",
    "color": "#6e4c13",
    "hue": 37.58,
+   "modeline": "assembly",
    "runner": null,
    "real_template": true
   },
@@ -1587,6 +1730,7 @@
    "type": "data",
    "color": "#ffa000",
    "hue": 37.65,
+   "modeline": "cloud-firestore-security-rules",
    "runner": null,
    "real_template": false
   },
@@ -1598,6 +1742,7 @@
    "type": "programming",
    "color": "#ffc766",
    "hue": 38.04,
+   "modeline": "gaml",
    "runner": null,
    "real_template": false
   },
@@ -1609,6 +1754,7 @@
    "type": "programming",
    "color": "#a78649",
    "hue": 38.94,
+   "modeline": "eq",
    "runner": null,
    "real_template": false
   },
@@ -1620,6 +1766,7 @@
    "type": "markup",
    "color": "#fcb32c",
    "hue": 38.94,
+   "modeline": "mdx",
    "runner": null,
    "real_template": false
   },
@@ -1631,6 +1778,7 @@
    "type": "programming",
    "color": "#d38e0d",
    "hue": 39.09,
+   "modeline": "power-query",
    "runner": null,
    "real_template": false
   },
@@ -1642,6 +1790,7 @@
    "type": "programming",
    "color": "#fab738",
    "hue": 39.28,
+   "modeline": "oz",
    "runner": null,
    "real_template": false
   },
@@ -1653,6 +1802,7 @@
    "type": "programming",
    "color": "#cca760",
    "hue": 39.44,
+   "modeline": "dogescript",
    "runner": null,
    "real_template": false
   },
@@ -1664,6 +1814,7 @@
    "type": "programming",
    "color": "#dfa535",
    "hue": 39.53,
+   "modeline": "ceylon",
    "runner": null,
    "real_template": true
   },
@@ -1675,6 +1826,7 @@
    "type": "programming",
    "color": "#9d7424",
    "hue": 39.67,
+   "modeline": "hare",
    "runner": null,
    "real_template": true
   },
@@ -1686,6 +1838,7 @@
    "type": "programming",
    "color": "#ab8b4b",
    "hue": 40.0,
+   "modeline": "jai",
    "runner": null,
    "real_template": true
   },
@@ -1697,17 +1850,19 @@
    "type": "programming",
    "color": "#c1ac7f",
    "hue": 40.91,
+   "modeline": "glyph",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Tcl",
    "layer": "core",
-   "path": "hello/core/tcl/hello.tm",
-   "extension": ".tm",
+   "path": "hello/core/tcl/hello.tcl",
+   "extension": ".tcl",
    "type": "programming",
    "color": "#e4cc98",
    "hue": 41.05,
+   "modeline": "tcl",
    "runner": "tclsh \"{file}\"",
    "real_template": true
   },
@@ -1719,17 +1874,19 @@
    "type": "data",
    "color": "#ead7ac",
    "hue": 41.61,
+   "modeline": "crontab",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Roff",
    "layer": "core",
-   "path": "hello/core/roff/hello.me",
-   "extension": ".me",
+   "path": "hello/core/roff/hello.roff",
+   "extension": ".roff",
    "type": "markup",
    "color": "#ecdebe",
    "hue": 41.74,
+   "modeline": "roff",
    "runner": null,
    "real_template": true
   },
@@ -1741,6 +1898,7 @@
    "type": "markup",
    "color": "#ecdebe",
    "hue": 41.74,
+   "modeline": "roff-manpage",
    "runner": null,
    "real_template": false
   },
@@ -1752,6 +1910,7 @@
    "type": "programming",
    "color": "#fff3d7",
    "hue": 42.0,
+   "modeline": "fennel",
    "runner": null,
    "real_template": false
   },
@@ -1763,6 +1922,7 @@
    "type": "programming",
    "color": "#d5c397",
    "hue": 42.58,
+   "modeline": "whiley",
    "runner": null,
    "real_template": false
   },
@@ -1774,6 +1934,7 @@
    "type": "prose",
    "color": "#ffe7ac",
    "hue": 42.65,
+   "modeline": "textile",
    "runner": null,
    "real_template": false
   },
@@ -1785,6 +1946,7 @@
    "type": "programming",
    "color": "#f0c040",
    "hue": 43.64,
+   "modeline": "smarty",
    "runner": null,
    "real_template": false
   },
@@ -1796,6 +1958,7 @@
    "type": "data",
    "color": "#fbbd16",
    "hue": 43.76,
+   "modeline": "plantuml",
    "runner": null,
    "real_template": false
   },
@@ -1807,6 +1970,7 @@
    "type": "data",
    "color": "#a89663",
    "hue": 44.35,
+   "modeline": "altium-designer",
    "runner": null,
    "real_template": false
   },
@@ -1818,6 +1982,7 @@
    "type": "programming",
    "color": "#cc9900",
    "hue": 45.0,
+   "modeline": "lolcode",
    "runner": "lci \"{file}\"",
    "real_template": true
   },
@@ -1829,6 +1994,7 @@
    "type": "programming",
    "color": "#ffcc33",
    "hue": 45.0,
+   "modeline": "fluent",
    "runner": null,
    "real_template": false
   },
@@ -1840,6 +2006,7 @@
    "type": "programming",
    "color": "#f6b900",
    "hue": 45.12,
+   "modeline": "filebench-wml",
    "runner": null,
    "real_template": false
   },
@@ -1851,6 +2018,7 @@
    "type": "programming",
    "color": "#fed659",
    "hue": 45.45,
+   "modeline": "q#",
    "runner": null,
    "real_template": true
   },
@@ -1862,6 +2030,7 @@
    "type": "programming",
    "color": "#ffc200",
    "hue": 45.65,
+   "modeline": "nim",
    "runner": "nim r -o:/tmp/hw_nim \"{file}\" && /tmp/hw_nim",
    "real_template": true
   },
@@ -1873,6 +2042,7 @@
    "type": "programming",
    "color": "#f8bd00",
    "hue": 45.73,
+   "modeline": "portugol",
    "runner": null,
    "real_template": false
   },
@@ -1884,6 +2054,7 @@
    "type": "data",
    "color": "#ffd343",
    "hue": 45.96,
+   "modeline": "pip-requirements",
    "runner": null,
    "real_template": true
   },
@@ -1895,6 +2066,7 @@
    "type": "programming",
    "color": "#46390b",
    "hue": 46.78,
+   "modeline": "supercollider",
    "runner": null,
    "real_template": true
   },
@@ -1906,6 +2078,7 @@
    "type": "programming",
    "color": "#fdc700",
    "hue": 47.19,
+   "modeline": "scenic",
    "runner": null,
    "real_template": false
   },
@@ -1917,17 +2090,19 @@
    "type": "data",
    "color": "#ffd539",
    "hue": 47.27,
+   "modeline": "browserslist",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Mirah",
    "layer": "core",
-   "path": "hello/core/mirah/hello.duby",
-   "extension": ".duby",
+   "path": "hello/core/mirah/hello.druby",
+   "extension": ".druby",
    "type": "programming",
    "color": "#c7a938",
    "hue": 47.41,
+   "modeline": "mirah",
    "runner": null,
    "real_template": false
   },
@@ -1939,6 +2114,7 @@
    "type": "programming",
    "color": "#ffefaf",
    "hue": 48.0,
+   "modeline": "holyc",
    "runner": null,
    "real_template": false
   },
@@ -1950,6 +2126,7 @@
    "type": "programming",
    "color": "#fedf5b",
    "hue": 48.59,
+   "modeline": "cython",
    "runner": null,
    "real_template": false
   },
@@ -1961,6 +2138,7 @@
    "type": "data",
    "color": "#f0c913",
    "hue": 49.41,
+   "modeline": "tmdl",
    "runner": null,
    "real_template": false
   },
@@ -1972,6 +2150,7 @@
    "type": "programming",
    "color": "#f3ca0a",
    "hue": 49.44,
+   "modeline": "parrot",
    "runner": null,
    "real_template": true
   },
@@ -1983,6 +2162,7 @@
    "type": "programming",
    "color": "#e5cd45",
    "hue": 51.0,
+   "modeline": "openscad",
    "runner": null,
    "real_template": false
   },
@@ -1994,17 +2174,19 @@
    "type": "markup",
    "color": "#ece2a9",
    "hue": 51.04,
+   "modeline": "haml",
    "runner": null,
    "real_template": false
   },
   {
    "language": "LabVIEW",
    "layer": "core",
-   "path": "hello/core/labview/hello.lvlib",
-   "extension": ".lvlib",
+   "path": "hello/core/labview/hello.lvproj",
+   "extension": ".lvproj",
    "type": "programming",
    "color": "#fede06",
    "hue": 52.26,
+   "modeline": "labview",
    "runner": null,
    "real_template": false
   },
@@ -2016,6 +2198,7 @@
    "type": "programming",
    "color": "#fbee96",
    "hue": 52.28,
+   "modeline": "denizenscript",
    "runner": null,
    "real_template": false
   },
@@ -2027,6 +2210,7 @@
    "type": "data",
    "color": "#e5d559",
    "hue": 53.14,
+   "modeline": "dotenv",
    "runner": null,
    "real_template": false
   },
@@ -2038,6 +2222,7 @@
    "type": "programming",
    "color": "#f1e05a",
    "hue": 53.25,
+   "modeline": "javascript",
    "runner": "node \"{file}\"",
    "real_template": true
   },
@@ -2049,6 +2234,7 @@
    "type": "programming",
    "color": "#f1e05a",
    "hue": 53.25,
+   "modeline": "javascript+erb",
    "runner": null,
    "real_template": false
   },
@@ -2060,6 +2246,7 @@
    "type": "data",
    "color": "#f7e43f",
    "hue": 53.8,
+   "modeline": "world-of-warcraft-addon-data",
    "runner": null,
    "real_template": false
   },
@@ -2071,6 +2258,7 @@
    "type": "programming",
    "color": "#ffec25",
    "hue": 54.77,
+   "modeline": "dafny",
    "runner": null,
    "real_template": true
   },
@@ -2082,6 +2270,7 @@
    "type": "programming",
    "color": "#dbca00",
    "hue": 55.34,
+   "modeline": "jflex",
    "runner": null,
    "real_template": false
   },
@@ -2093,6 +2282,7 @@
    "type": "programming",
    "color": "#dbca00",
    "hue": 55.34,
+   "modeline": "lex",
    "runner": null,
    "real_template": false
   },
@@ -2104,6 +2294,7 @@
    "type": "programming",
    "color": "#fffaa0",
    "hue": 56.84,
+   "modeline": "rascal",
    "runner": null,
    "real_template": false
   },
@@ -2115,6 +2306,7 @@
    "type": "programming",
    "color": "#fefe00",
    "hue": 60.0,
+   "modeline": "isabelle",
    "runner": null,
    "real_template": true
   },
@@ -2126,6 +2318,7 @@
    "type": "programming",
    "color": "#fefe00",
    "hue": 60.0,
+   "modeline": "isabelle-root",
    "runner": null,
    "real_template": true
   },
@@ -2137,6 +2330,7 @@
    "type": "programming",
    "color": "#ccce35",
    "hue": 60.78,
+   "modeline": "e",
    "runner": null,
    "real_template": false
   },
@@ -2148,6 +2342,7 @@
    "type": "programming",
    "color": "#dce200",
    "hue": 61.59,
+   "modeline": "hiveql",
    "runner": null,
    "real_template": false
   },
@@ -2159,6 +2354,7 @@
    "type": "markup",
    "color": "#d8df39",
    "hue": 62.53,
+   "modeline": "genero-per",
    "runner": null,
    "real_template": false
   },
@@ -2170,6 +2366,7 @@
    "type": "markup",
    "color": "#c1d026",
    "hue": 65.29,
+   "modeline": "twig",
    "runner": null,
    "real_template": false
   },
@@ -2181,6 +2378,7 @@
    "type": "programming",
    "color": "#e3f171",
    "hue": 66.56,
+   "modeline": "pascal",
    "runner": "fpc -o/tmp/hw_pas \"{file}\" && /tmp/hw_pas",
    "real_template": false
   },
@@ -2192,6 +2390,7 @@
    "type": "programming",
    "color": "#636746",
    "hue": 67.27,
+   "modeline": "factor",
    "runner": "factor -e \"(include \\\"{file}\\\")\" 2>/dev/null || echo \"Hello World!\"",
    "real_template": true
   },
@@ -2203,6 +2402,7 @@
    "type": "programming",
    "color": "#b0b77e",
    "hue": 67.37,
+   "modeline": "ooc",
    "runner": null,
    "real_template": false
   },
@@ -2214,6 +2414,7 @@
    "type": "programming",
    "color": "#c9df40",
    "hue": 68.3,
+   "modeline": "nu",
    "runner": null,
    "real_template": false
   },
@@ -2225,6 +2426,7 @@
    "type": "programming",
    "color": "#596706",
    "hue": 68.66,
+   "modeline": "smalltalk",
    "runner": "echo \"Hello World!\"",
    "real_template": true
   },
@@ -2236,6 +2438,7 @@
    "type": "programming",
    "color": "#555e25",
    "hue": 69.47,
+   "modeline": "abap-cds",
    "runner": null,
    "real_template": false
   },
@@ -2247,6 +2450,7 @@
    "type": "programming",
    "color": "#e6efbb",
    "hue": 70.38,
+   "modeline": "ampl",
    "runner": null,
    "real_template": false
   },
@@ -2258,6 +2462,7 @@
    "type": "programming",
    "color": "#a9cc29",
    "hue": 72.88,
+   "modeline": "answer-set-programming",
    "runner": null,
    "real_template": false
   },
@@ -2269,6 +2474,7 @@
    "type": "programming",
    "color": "#dae1c2",
    "hue": 73.55,
+   "modeline": "systemverilog",
    "runner": null,
    "real_template": true
   },
@@ -2280,6 +2486,7 @@
    "type": "programming",
    "color": "#b0ce4e",
    "hue": 74.06,
+   "modeline": "component-pascal",
    "runner": null,
    "real_template": false
   },
@@ -2291,6 +2498,7 @@
    "type": "programming",
    "color": "#c1f12e",
    "hue": 74.77,
+   "modeline": "batchfile",
    "runner": "echo \"Hello World!\"",
    "real_template": true
   },
@@ -2302,6 +2510,7 @@
    "type": "data",
    "color": "#cecfcb",
    "hue": 75.0,
+   "modeline": "shellcheck-config",
    "runner": null,
    "real_template": true
   },
@@ -2313,6 +2522,7 @@
    "type": "programming",
    "color": "#9cc134",
    "hue": 75.74,
+   "modeline": "augeas",
    "runner": null,
    "real_template": false
   },
@@ -2324,6 +2534,7 @@
    "type": "programming",
    "color": "#8ea64c",
    "hue": 76.0,
+   "modeline": "tree-sitter-query",
    "runner": null,
    "real_template": false
   },
@@ -2335,6 +2546,7 @@
    "type": "programming",
    "color": "#6f8042",
    "hue": 76.45,
+   "modeline": "kakounescript",
    "runner": null,
    "real_template": false
   },
@@ -2346,6 +2558,7 @@
    "type": "markup",
    "color": "#caff42",
    "hue": 76.83,
+   "modeline": "bbcode",
    "runner": null,
    "real_template": false
   },
@@ -2357,6 +2570,7 @@
    "type": "programming",
    "color": "#a0aa87",
    "hue": 77.14,
+   "modeline": "ti-program",
    "runner": null,
    "real_template": false
   },
@@ -2368,6 +2582,7 @@
    "type": "programming",
    "color": "#99da07",
    "hue": 78.48,
+   "modeline": "xc",
    "runner": null,
    "real_template": false
   },
@@ -2379,17 +2594,19 @@
    "type": "data",
    "color": "#aace60",
    "hue": 79.64,
+   "modeline": "directx-3d-file",
    "runner": null,
    "real_template": false
   },
   {
    "language": "HLSL",
    "layer": "core",
-   "path": "hello/core/hlsl/hello.fxh",
-   "extension": ".fxh",
+   "path": "hello/core/hlsl/hello.hlsl",
+   "extension": ".hlsl",
    "type": "programming",
    "color": "#aace60",
    "hue": 79.64,
+   "modeline": "hlsl",
    "runner": null,
    "real_template": true
   },
@@ -2401,6 +2618,7 @@
    "type": "programming",
    "color": "#6e8b3d",
    "hue": 82.31,
+   "modeline": "llvm-tablegen",
    "runner": null,
    "real_template": false
   },
@@ -2412,6 +2630,7 @@
    "type": "programming",
    "color": "#cce2aa",
    "hue": 83.57,
+   "modeline": "overpassql",
    "runner": null,
    "real_template": false
   },
@@ -2423,6 +2642,7 @@
    "type": "programming",
    "color": "#8dc63f",
    "hue": 85.33,
+   "modeline": "chapel",
    "runner": null,
    "real_template": false
   },
@@ -2434,6 +2654,7 @@
    "type": "programming",
    "color": "#71b417",
    "hue": 85.61,
+   "modeline": "game-maker-language",
    "runner": null,
    "real_template": false
   },
@@ -2445,6 +2666,7 @@
    "type": "programming",
    "color": "#28430a",
    "hue": 88.42,
+   "modeline": "krl",
    "runner": null,
    "real_template": false
   },
@@ -2456,6 +2678,7 @@
    "type": "programming",
    "color": "#81bd41",
    "hue": 89.03,
+   "modeline": "xojo",
    "runner": null,
    "real_template": false
   },
@@ -2467,6 +2690,7 @@
    "type": "markup",
    "color": "#3d6117",
    "hue": 89.19,
+   "modeline": "tex",
    "runner": null,
    "real_template": true
   },
@@ -2478,6 +2702,7 @@
    "type": "programming",
    "color": "#64c800",
    "hue": 90.0,
+   "modeline": "alloy",
    "runner": null,
    "real_template": true
   },
@@ -2489,6 +2714,7 @@
    "type": "data",
    "color": "#7fe719",
    "hue": 90.29,
+   "modeline": "gtkrc",
    "runner": null,
    "real_template": false
   },
@@ -2500,6 +2726,7 @@
    "type": "programming",
    "color": "#3f8000",
    "hue": 90.47,
+   "modeline": "chuck",
    "runner": null,
    "real_template": true
   },
@@ -2511,6 +2738,7 @@
    "type": "programming",
    "color": "#4e9906",
    "hue": 90.61,
+   "modeline": "nushell",
    "runner": null,
    "real_template": true
   },
@@ -2522,17 +2750,19 @@
    "type": "programming",
    "color": "#6b9543",
    "hue": 90.73,
+   "modeline": "pkl",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Darcs Patch",
    "layer": "core",
-   "path": "hello/core/darcs-patch/hello.dpatch",
-   "extension": ".dpatch",
+   "path": "hello/core/darcs-patch/hello.darcspatch",
+   "extension": ".darcspatch",
    "type": "data",
    "color": "#8eff23",
    "hue": 90.82,
+   "modeline": "darcs-patch",
    "runner": null,
    "real_template": false
   },
@@ -2544,17 +2774,19 @@
    "type": "data",
    "color": "#85ea2d",
    "hue": 92.06,
+   "modeline": "oasv2-json",
    "runner": null,
    "real_template": false
   },
   {
    "language": "OASv2-yaml",
    "layer": "core",
-   "path": "hello/core/oasv2-yaml/hello.yml",
-   "extension": ".yml",
+   "path": "hello/core/oasv2-yaml/hello.yaml",
+   "extension": ".yaml",
    "type": "data",
    "color": "#85ea2d",
    "hue": 92.06,
+   "modeline": "oasv2-yaml",
    "runner": null,
    "real_template": false
   },
@@ -2566,28 +2798,55 @@
    "type": "data",
    "color": "#85ea2d",
    "hue": 92.06,
+   "modeline": "oasv3-json",
    "runner": null,
    "real_template": false
   },
   {
    "language": "OASv3-yaml",
    "layer": "core",
-   "path": "hello/core/oasv3-yaml/hello.yml",
-   "extension": ".yml",
+   "path": "hello/core/oasv3-yaml/hello.yaml",
+   "extension": ".yaml",
    "type": "data",
    "color": "#85ea2d",
    "hue": 92.06,
+   "modeline": "oasv3-yaml",
    "runner": null,
    "real_template": false
   },
   {
+   "language": "OpenAPI Specification v2",
+   "layer": "core",
+   "path": "hello/core/openapi-specification-v2/hello",
+   "extension": "",
+   "type": "data",
+   "color": "#85ea2d",
+   "hue": 92.06,
+   "modeline": "openapi-specification-v2",
+   "runner": null,
+   "real_template": true
+  },
+  {
+   "language": "OpenAPI Specification v3",
+   "layer": "core",
+   "path": "hello/core/openapi-specification-v3/hello",
+   "extension": "",
+   "type": "data",
+   "color": "#85ea2d",
+   "hue": 92.06,
+   "modeline": "openapi-specification-v3",
+   "runner": null,
+   "real_template": true
+  },
+  {
    "language": "Makefile",
    "layer": "core",
-   "path": "hello/core/makefile/hello.mk",
-   "extension": ".mk",
+   "path": "hello/core/makefile/hello.mak",
+   "extension": ".mak",
    "type": "programming",
    "color": "#427819",
    "hue": 94.11,
+   "modeline": "makefile",
    "runner": null,
    "real_template": true
   },
@@ -2599,6 +2858,7 @@
    "type": "programming",
    "color": "#5ce600",
    "hue": 96.0,
+   "modeline": "openedge-abl",
    "runner": null,
    "real_template": false
   },
@@ -2610,6 +2870,7 @@
    "type": "programming",
    "color": "#9ccc7c",
    "hue": 96.0,
+   "modeline": "lilypond",
    "runner": null,
    "real_template": false
   },
@@ -2621,6 +2882,7 @@
    "type": "data",
    "color": "#476732",
    "hue": 96.23,
+   "modeline": "option-list",
    "runner": null,
    "real_template": true
   },
@@ -2632,6 +2894,7 @@
    "type": "programming",
    "color": "#89e051",
    "hue": 96.5,
+   "modeline": "shell",
    "runner": "sh \"{file}\"",
    "real_template": true
   },
@@ -2643,6 +2906,7 @@
    "type": "programming",
    "color": "#78b355",
    "hue": 97.66,
+   "modeline": "overpy",
    "runner": null,
    "real_template": false
   },
@@ -2654,6 +2918,7 @@
    "type": "data",
    "color": "#38761d",
    "hue": 101.8,
+   "modeline": "2-dimensional-array",
    "runner": null,
    "real_template": false
   },
@@ -2665,6 +2930,7 @@
    "type": "programming",
    "color": "#44a51c",
    "hue": 102.48,
+   "modeline": "qml",
    "runner": null,
    "real_template": false
   },
@@ -2676,6 +2942,7 @@
    "type": "data",
    "color": "#58c42e",
    "hue": 103.2,
+   "modeline": "quartus-simulation-ip",
    "runner": null,
    "real_template": false
   },
@@ -2687,6 +2954,7 @@
    "type": "programming",
    "color": "#28431f",
    "hue": 105.0,
+   "modeline": "ncl",
    "runner": null,
    "real_template": false
   },
@@ -2698,6 +2966,7 @@
    "type": "programming",
    "color": "#82937f",
    "hue": 111.0,
+   "modeline": "gosu",
    "runner": null,
    "real_template": true
   },
@@ -2709,6 +2978,7 @@
    "type": "programming",
    "color": "#6bac65",
    "hue": 114.93,
+   "modeline": "pov-ray-sdl",
    "runner": null,
    "real_template": false
   },
@@ -2720,6 +2990,7 @@
    "type": "markup",
    "color": "#3d8137",
    "hue": 115.14,
+   "modeline": "nunjucks",
    "runner": null,
    "real_template": false
   },
@@ -2731,6 +3002,7 @@
    "type": "programming",
    "color": "#2bde21",
    "hue": 116.83,
+   "modeline": "rpgle",
    "runner": null,
    "real_template": false
   },
@@ -2742,6 +3014,7 @@
    "type": "programming",
    "color": "#3be133",
    "hue": 117.24,
+   "modeline": "cameligo",
    "runner": null,
    "real_template": false
   },
@@ -2753,6 +3026,7 @@
    "type": "programming",
    "color": "#c4ffc2",
    "hue": 118.03,
+   "modeline": "leo",
    "runner": null,
    "real_template": false
   },
@@ -2764,6 +3038,7 @@
    "type": "programming",
    "color": "#4aae47",
    "hue": 118.25,
+   "modeline": "fish",
    "runner": "fish \"{file}\"",
    "real_template": true
   },
@@ -2775,6 +3050,7 @@
    "type": "data",
    "color": "#15c213",
    "hue": 119.31,
+   "modeline": "jest-snapshot",
    "runner": null,
    "real_template": false
   },
@@ -2786,6 +3062,7 @@
    "type": "programming",
    "color": "#76d275",
    "hue": 119.35,
+   "modeline": "starlark",
    "runner": null,
    "real_template": true
   },
@@ -2797,6 +3074,7 @@
    "type": "programming",
    "color": "#000100",
    "hue": 120.0,
+   "modeline": "crystal",
    "runner": "crystal eval \"$(cat \"{file}\")\"",
    "real_template": true
   },
@@ -2808,6 +3086,7 @@
    "type": "programming",
    "color": "#007800",
    "hue": 120.0,
+   "modeline": "meson",
    "runner": null,
    "real_template": true
   },
@@ -2819,6 +3098,7 @@
    "type": "programming",
    "color": "#3a4e3a",
    "hue": 120.0,
+   "modeline": "cuda",
    "runner": null,
    "real_template": true
   },
@@ -2830,6 +3110,7 @@
    "type": "programming",
    "color": "#2f632f",
    "hue": 120.0,
+   "modeline": "firrtl",
    "runner": null,
    "real_template": false
   },
@@ -2841,17 +3122,19 @@
    "type": "data",
    "color": "#069406",
    "hue": 120.0,
+   "modeline": "easybuild",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Regular Expression",
    "layer": "core",
-   "path": "hello/core/regular-expression/hello.regex",
-   "extension": ".regex",
+   "path": "hello/core/regular-expression/hello.regexp",
+   "extension": ".regexp",
    "type": "data",
    "color": "#009a00",
    "hue": 120.0,
+   "modeline": "regular-expression",
    "runner": null,
    "real_template": false
   },
@@ -2863,6 +3146,7 @@
    "type": "programming",
    "color": "#00a300",
    "hue": 120.0,
+   "modeline": "clips",
    "runner": null,
    "real_template": false
   },
@@ -2874,6 +3158,7 @@
    "type": "programming",
    "color": "#4b6c4b",
    "hue": 120.0,
+   "modeline": "yacc",
    "runner": null,
    "real_template": true
   },
@@ -2885,6 +3170,7 @@
    "type": "markup",
    "color": "#348a34",
    "hue": 120.0,
+   "modeline": "srecode-template",
    "runner": null,
    "real_template": false
   },
@@ -2896,8 +3182,21 @@
    "type": "programming",
    "color": "#55bb55",
    "hue": 120.0,
+   "modeline": "elvish",
    "runner": null,
    "real_template": true
+  },
+  {
+   "language": "Elvish Transcript",
+   "layer": "core",
+   "path": "hello/core/elvish-transcript/hello",
+   "extension": "",
+   "type": "programming",
+   "color": "#55bb55",
+   "hue": 120.0,
+   "modeline": "elvish-transcript",
+   "runner": null,
+   "real_template": false
   },
   {
    "language": "OMNeT++ MSG",
@@ -2907,6 +3206,7 @@
    "type": "programming",
    "color": "#a0e0a0",
    "hue": 120.0,
+   "modeline": "omnet++-msg",
    "runner": null,
    "real_template": false
   },
@@ -2918,6 +3218,7 @@
    "type": "programming",
    "color": "#b9d9b9",
    "hue": 120.0,
+   "modeline": "kolmafia-ash",
    "runner": null,
    "real_template": false
   },
@@ -2929,6 +3230,7 @@
    "type": "programming",
    "color": "#185619",
    "hue": 120.97,
+   "modeline": "llvm",
    "runner": null,
    "real_template": true
   },
@@ -2940,6 +3242,7 @@
    "type": "programming",
    "color": "#1ac620",
    "hue": 122.09,
+   "modeline": "ats",
    "runner": null,
    "real_template": true
   },
@@ -2951,6 +3254,7 @@
    "type": "markup",
    "color": "#3fb34f",
    "hue": 128.28,
+   "modeline": "stringtemplate",
    "runner": null,
    "real_template": false
   },
@@ -2962,6 +3266,7 @@
    "type": "programming",
    "color": "#64b970",
    "hue": 128.47,
+   "modeline": "sed",
    "runner": "sed -f \"{file}\" /dev/null",
    "real_template": false
   },
@@ -2973,6 +3278,7 @@
    "type": "data",
    "color": "#22b638",
    "hue": 128.92,
+   "modeline": "caddyfile",
    "runner": null,
    "real_template": false
   },
@@ -2984,6 +3290,7 @@
    "type": "programming",
    "color": "#009917",
    "hue": 129.02,
+   "modeline": "nit",
    "runner": null,
    "real_template": false
   },
@@ -2995,6 +3302,7 @@
    "type": "programming",
    "color": "#5a8164",
    "hue": 135.38,
+   "modeline": "apl",
    "runner": null,
    "real_template": true
   },
@@ -3006,6 +3314,7 @@
    "type": "programming",
    "color": "#15a13c",
    "hue": 136.71,
+   "modeline": "berry",
    "runner": null,
    "real_template": false
   },
@@ -3017,6 +3326,7 @@
    "type": "programming",
    "color": "#34eb6b",
    "hue": 138.03,
+   "modeline": "aidl",
    "runner": null,
    "real_template": false
   },
@@ -3028,6 +3338,7 @@
    "type": "programming",
    "color": "#00b841",
    "hue": 141.2,
+   "modeline": "qt-script",
    "runner": null,
    "real_template": false
   },
@@ -3039,6 +3350,7 @@
    "type": "prose",
    "color": "#199f4b",
    "hue": 142.39,
+   "modeline": "vim-help-file",
    "runner": null,
    "real_template": true
   },
@@ -3050,6 +3362,7 @@
    "type": "programming",
    "color": "#199f4b",
    "hue": 142.39,
+   "modeline": "vim-script",
    "runner": "vim -es -u NONE -S \"{file}\" -c q 2>/dev/null || echo \"Hello World!\"",
    "real_template": true
   },
@@ -3061,6 +3374,7 @@
    "type": "markup",
    "color": "#199f4b",
    "hue": 142.39,
+   "modeline": "vim-snippet",
    "runner": null,
    "real_template": false
   },
@@ -3072,6 +3386,7 @@
    "type": "data",
    "color": "#009639",
    "hue": 142.8,
+   "modeline": "nginx",
    "runner": null,
    "real_template": false
   },
@@ -3083,6 +3398,7 @@
    "type": "programming",
    "color": "#02b046",
    "hue": 143.45,
+   "modeline": "mint",
    "runner": null,
    "real_template": false
   },
@@ -3094,6 +3410,7 @@
    "type": "data",
    "color": "#61d790",
    "hue": 143.9,
+   "modeline": "vespa-schema-definition",
    "runner": null,
    "real_template": false
   },
@@ -3105,6 +3422,7 @@
    "type": "programming",
    "color": "#40d47e",
    "hue": 145.14,
+   "modeline": "jsoniq",
    "runner": null,
    "real_template": false
   },
@@ -3116,6 +3434,7 @@
    "type": "data",
    "color": "#237346",
    "hue": 146.25,
+   "modeline": "csv",
    "runner": null,
    "real_template": false
   },
@@ -3127,17 +3446,19 @@
    "type": "data",
    "color": "#237346",
    "hue": 146.25,
+   "modeline": "tsv",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Rebol",
    "layer": "core",
-   "path": "hello/core/rebol/hello.r2",
-   "extension": ".r2",
+   "path": "hello/core/rebol/hello.reb",
+   "extension": ".reb",
    "type": "programming",
    "color": "#358a5b",
    "hue": 146.82,
+   "modeline": "rebol",
    "runner": null,
    "real_template": false
   },
@@ -3149,6 +3470,7 @@
    "type": "programming",
    "color": "#3ac486",
    "hue": 153.04,
+   "modeline": "nextflow",
    "runner": null,
    "real_template": false
   },
@@ -3160,6 +3482,7 @@
    "type": "programming",
    "color": "#3d9970",
    "hue": 153.26,
+   "modeline": "lsl",
    "runner": null,
    "real_template": false
   },
@@ -3171,6 +3494,7 @@
    "type": "markup",
    "color": "#41b883",
    "hue": 153.28,
+   "modeline": "vue",
    "runner": null,
    "real_template": false
   },
@@ -3182,6 +3506,7 @@
    "type": "programming",
    "color": "#02f88c",
    "hue": 153.66,
+   "modeline": "ada",
    "runner": null,
    "real_template": false
   },
@@ -3193,6 +3518,7 @@
    "type": "programming",
    "color": "#64e6ad",
    "hue": 153.69,
+   "modeline": "singularity",
    "runner": null,
    "real_template": false
   },
@@ -3204,6 +3530,7 @@
    "type": "programming",
    "color": "#00f58c",
    "hue": 154.29,
+   "modeline": "sway",
    "runner": null,
    "real_template": false
   },
@@ -3215,6 +3542,7 @@
    "type": "programming",
    "color": "#21d789",
    "hue": 154.29,
+   "modeline": "jetbrains-mps",
    "runner": null,
    "real_template": false
   },
@@ -3226,6 +3554,7 @@
    "type": "programming",
    "color": "#00ef8b",
    "hue": 154.9,
+   "modeline": "cadence",
    "runner": null,
    "real_template": false
   },
@@ -3237,17 +3566,19 @@
    "type": "programming",
    "color": "#00b171",
    "hue": 158.31,
+   "modeline": "hoon",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Common Lisp",
    "layer": "core",
-   "path": "hello/core/common-lisp/hello.ny",
-   "extension": ".ny",
+   "path": "hello/core/common-lisp/hello.asd",
+   "extension": ".asd",
    "type": "programming",
    "color": "#3fb68b",
    "hue": 158.32,
+   "modeline": "common-lisp",
    "runner": null,
    "real_template": true
   },
@@ -3259,6 +3590,7 @@
    "type": "prose",
    "color": "#77aa99",
    "hue": 160.0,
+   "modeline": "org",
    "runner": null,
    "real_template": false
   },
@@ -3270,6 +3602,7 @@
    "type": "programming",
    "color": "#d1e0db",
    "hue": 160.0,
+   "modeline": "algol",
    "runner": null,
    "real_template": false
   },
@@ -3281,6 +3614,7 @@
    "type": "programming",
    "color": "#00ffae",
    "hue": 160.94,
+   "modeline": "blitzbasic",
    "runner": null,
    "real_template": false
   },
@@ -3292,6 +3626,7 @@
    "type": "programming",
    "color": "#22a079",
    "hue": 161.43,
+   "modeline": "xmake",
    "runner": null,
    "real_template": true
   },
@@ -3303,6 +3638,7 @@
    "type": "programming",
    "color": "#419179",
    "hue": 162.0,
+   "modeline": "snakemake",
    "runner": null,
    "real_template": false
   },
@@ -3314,6 +3650,7 @@
    "type": "programming",
    "color": "#2c6353",
    "hue": 162.55,
+   "modeline": "visual-basic-6.0",
    "runner": null,
    "real_template": false
   },
@@ -3325,6 +3662,7 @@
    "type": "markup",
    "color": "#2fcc9f",
    "hue": 162.8,
+   "modeline": "sugarss",
    "runner": null,
    "real_template": false
   },
@@ -3336,6 +3674,7 @@
    "type": "programming",
    "color": "#226c57",
    "hue": 162.97,
+   "modeline": "gno",
    "runner": null,
    "real_template": false
   },
@@ -3347,6 +3686,7 @@
    "type": "programming",
    "color": "#447265",
    "hue": 163.04,
+   "modeline": "dm",
    "runner": null,
    "real_template": false
   },
@@ -3358,6 +3698,7 @@
    "type": "data",
    "color": "#179c7d",
    "hue": 166.02,
+   "modeline": "m3u",
    "runner": null,
    "real_template": false
   },
@@ -3369,6 +3710,7 @@
    "type": "programming",
    "color": "#499886",
    "hue": 166.33,
+   "modeline": "livescript",
    "runner": null,
    "real_template": false
   },
@@ -3380,6 +3722,7 @@
    "type": "markup",
    "color": "#32ab90",
    "hue": 166.61,
+   "modeline": "yasnippet",
    "runner": null,
    "real_template": false
   },
@@ -3391,6 +3734,7 @@
    "type": "markup",
    "color": "#2acca8",
    "hue": 166.67,
+   "modeline": "api-blueprint",
    "runner": null,
    "real_template": false
   },
@@ -3402,6 +3746,7 @@
    "type": "programming",
    "color": "#4e8d83",
    "hue": 170.48,
+   "modeline": "sip",
    "runner": null,
    "real_template": false
   },
@@ -3413,6 +3758,7 @@
    "type": "programming",
    "color": "#57bcad",
    "hue": 171.09,
+   "modeline": "salt",
    "runner": null,
    "real_template": false
   },
@@ -3424,6 +3770,7 @@
    "type": "programming",
    "color": "#2b7067",
    "hue": 172.17,
+   "modeline": "bqn",
    "runner": null,
    "real_template": false
   },
@@ -3435,6 +3782,7 @@
    "type": "markup",
    "color": "#0dffe0",
    "hue": 172.31,
+   "modeline": "edge",
    "runner": null,
    "real_template": false
   },
@@ -3446,6 +3794,7 @@
    "type": "data",
    "color": "#9ff8ee",
    "hue": 173.26,
+   "modeline": "hocon",
    "runner": null,
    "real_template": false
   },
@@ -3457,6 +3806,7 @@
    "type": "programming",
    "color": "#0d665e",
    "hue": 174.61,
+   "modeline": "zap",
    "runner": null,
    "real_template": false
   },
@@ -3468,6 +3818,7 @@
    "type": "programming",
    "color": "#00c0b5",
    "hue": 176.56,
+   "modeline": "robotframework",
    "runner": null,
    "real_template": false
   },
@@ -3479,6 +3830,7 @@
    "type": "programming",
    "color": "#2c8c87",
    "hue": 176.88,
+   "modeline": "langium",
    "runner": null,
    "real_template": false
   },
@@ -3490,6 +3842,7 @@
    "type": "programming",
    "color": "#00b4ab",
    "hue": 177.0,
+   "modeline": "dart",
    "runner": "dart \"{file}\"",
    "real_template": true
   },
@@ -3501,6 +3854,7 @@
    "type": "programming",
    "color": "#16cec6",
    "hue": 177.39,
+   "modeline": "imba",
    "runner": null,
    "real_template": false
   },
@@ -3512,28 +3866,31 @@
    "type": "markup",
    "color": "#0d948f",
    "hue": 177.78,
+   "modeline": "closure-templates",
    "runner": null,
    "real_template": false
   },
   {
    "language": "AppleScript",
    "layer": "core",
-   "path": "hello/core/applescript/hello.scpt",
-   "extension": ".scpt",
+   "path": "hello/core/applescript/hello.applescript",
+   "extension": ".applescript",
    "type": "programming",
    "color": "#101f1f",
    "hue": 180.0,
+   "modeline": "applescript",
    "runner": null,
    "real_template": false
   },
   {
    "language": "QuickBASIC",
    "layer": "core",
-   "path": "hello/core/quickbasic/hello.bi",
-   "extension": ".bi",
+   "path": "hello/core/quickbasic/hello.bas",
+   "extension": ".bas",
    "type": "programming",
    "color": "#008080",
    "hue": 180.0,
+   "modeline": "quickbasic",
    "runner": null,
    "real_template": false
   },
@@ -3545,6 +3902,7 @@
    "type": "programming",
    "color": "#00a6a6",
    "hue": 180.0,
+   "modeline": "maxscript",
    "runner": null,
    "real_template": false
   },
@@ -3556,6 +3914,7 @@
    "type": "data",
    "color": "#308888",
    "hue": 180.0,
+   "modeline": "hosts-file",
    "runner": null,
    "real_template": true
   },
@@ -3567,6 +3926,7 @@
    "type": "programming",
    "color": "#707575",
    "hue": 180.0,
+   "modeline": "circom",
    "runner": null,
    "real_template": true
   },
@@ -3578,6 +3938,7 @@
    "type": "programming",
    "color": "#15dcdc",
    "hue": 180.0,
+   "modeline": "vbscript",
    "runner": null,
    "real_template": false
   },
@@ -3589,6 +3950,7 @@
    "type": "programming",
    "color": "#d8ffff",
    "hue": 180.0,
+   "modeline": "macaulay2",
    "runner": null,
    "real_template": false
   },
@@ -3600,6 +3962,7 @@
    "type": "programming",
    "color": "#42f1f4",
    "hue": 181.01,
+   "modeline": "wdl",
    "runner": null,
    "real_template": false
   },
@@ -3611,6 +3974,7 @@
    "type": "markup",
    "color": "#5f9ea0",
    "hue": 181.85,
+   "modeline": "mdsvex",
    "runner": null,
    "real_template": false
   },
@@ -3622,6 +3986,7 @@
    "type": "programming",
    "color": "#00868b",
    "hue": 182.16,
+   "modeline": "cangjie",
    "runner": null,
    "real_template": true
   },
@@ -3633,6 +3998,7 @@
    "type": "programming",
    "color": "#00b1bc",
    "hue": 183.51,
+   "modeline": "teal",
    "runner": null,
    "real_template": false
   },
@@ -3644,6 +4010,7 @@
    "type": "programming",
    "color": "#1fbec9",
    "hue": 183.88,
+   "modeline": "slang",
    "runner": null,
    "real_template": false
   },
@@ -3655,6 +4022,7 @@
    "type": "programming",
    "color": "#2af0ff",
    "hue": 184.23,
+   "modeline": "earthly",
    "runner": null,
    "real_template": false
   },
@@ -3666,6 +4034,7 @@
    "type": "programming",
    "color": "#7ababf",
    "hue": 184.35,
+   "modeline": "kcl",
    "runner": null,
    "real_template": false
   },
@@ -3677,6 +4046,7 @@
    "type": "programming",
    "color": "#00bcd1",
    "hue": 186.03,
+   "modeline": "zenscript",
    "runner": null,
    "real_template": false
   },
@@ -3688,6 +4058,7 @@
    "type": "programming",
    "color": "#00e4ff",
    "hue": 186.35,
+   "modeline": "b4x",
    "runner": null,
    "real_template": false
   },
@@ -3699,6 +4070,7 @@
    "type": "programming",
    "color": "#118f9e",
    "hue": 186.38,
+   "modeline": "zephir",
    "runner": null,
    "real_template": false
   },
@@ -3710,6 +4082,7 @@
    "type": "markup",
    "color": "#66d0dd",
    "hue": 186.55,
+   "modeline": "templ",
    "runner": null,
    "real_template": false
   },
@@ -3721,6 +4094,7 @@
    "type": "programming",
    "color": "#239dad",
    "hue": 186.96,
+   "modeline": "typst",
    "runner": null,
    "real_template": false
   },
@@ -3732,6 +4106,7 @@
    "type": "programming",
    "color": "#36adbd",
    "hue": 187.11,
+   "modeline": "untyped-plutus-core",
    "runner": null,
    "real_template": false
   },
@@ -3743,6 +4118,7 @@
    "type": "programming",
    "color": "#7fa2a7",
    "hue": 187.5,
+   "modeline": "propeller-spin",
    "runner": null,
    "real_template": false
   },
@@ -3754,6 +4130,7 @@
    "type": "programming",
    "color": "#078193",
    "hue": 187.71,
+   "modeline": "ioke",
    "runner": null,
    "real_template": false
   },
@@ -3765,6 +4142,7 @@
    "type": "programming",
    "color": "#00b8d4",
    "hue": 187.92,
+   "modeline": "ucode",
    "runner": null,
    "real_template": false
   },
@@ -3776,6 +4154,7 @@
    "type": "programming",
    "color": "#5ec8db",
    "hue": 189.12,
+   "modeline": "mlir",
    "runner": null,
    "real_template": false
   },
@@ -3787,17 +4166,19 @@
    "type": "programming",
    "color": "#3aa2b5",
    "hue": 189.27,
+   "modeline": "al",
    "runner": null,
    "real_template": false
   },
   {
    "language": "BitBake",
    "layer": "core",
-   "path": "hello/core/bitbake/hello.bbclass",
-   "extension": ".bbclass",
+   "path": "hello/core/bitbake/hello.bbappend",
+   "extension": ".bbappend",
    "type": "programming",
    "color": "#00bce4",
    "hue": 190.53,
+   "modeline": "bitbake",
    "runner": null,
    "real_template": false
   },
@@ -3809,6 +4190,7 @@
    "type": "data",
    "color": "#02303a",
    "hue": 190.71,
+   "modeline": "gradle",
    "runner": null,
    "real_template": true
   },
@@ -3820,6 +4202,7 @@
    "type": "data",
    "color": "#02303a",
    "hue": 190.71,
+   "modeline": "gradle-kotlin-dsl",
    "runner": null,
    "real_template": false
   },
@@ -3831,6 +4214,7 @@
    "type": "programming",
    "color": "#9eedff",
    "hue": 191.13,
+   "modeline": "j",
    "runner": null,
    "real_template": true
   },
@@ -3842,6 +4226,7 @@
    "type": "programming",
    "color": "#0886a5",
    "hue": 191.85,
+   "modeline": "janet",
    "runner": null,
    "real_template": true
   },
@@ -3853,6 +4238,7 @@
    "type": "programming",
    "color": "#00add8",
    "hue": 191.94,
+   "modeline": "go",
    "runner": "go run \"{file}\"",
    "real_template": true
   },
@@ -3864,6 +4250,7 @@
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
+   "modeline": "go-checksums",
    "runner": null,
    "real_template": false
   },
@@ -3875,17 +4262,19 @@
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
+   "modeline": "go-module",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Go Template",
    "layer": "core",
-   "path": "hello/core/go-template/hello.tmpl",
-   "extension": ".tmpl",
+   "path": "hello/core/go-template/hello.gohtml",
+   "extension": ".gohtml",
    "type": "markup",
    "color": "#00add8",
    "hue": 191.94,
+   "modeline": "go-template",
    "runner": null,
    "real_template": false
   },
@@ -3897,6 +4286,7 @@
    "type": "data",
    "color": "#00add8",
    "hue": 191.94,
+   "modeline": "go-workspace",
    "runner": null,
    "real_template": false
   },
@@ -3908,6 +4298,7 @@
    "type": "programming",
    "color": "#66aabb",
    "hue": 192.0,
+   "modeline": "brighterscript",
    "runner": null,
    "real_template": false
   },
@@ -3919,6 +4310,7 @@
    "type": "programming",
    "color": "#148aa8",
    "hue": 192.16,
+   "modeline": "vcl",
    "runner": null,
    "real_template": false
   },
@@ -3930,6 +4322,7 @@
    "type": "programming",
    "color": "#00cafe",
    "hue": 192.28,
+   "modeline": "frege",
    "runner": null,
    "real_template": false
   },
@@ -3941,6 +4334,7 @@
    "type": "programming",
    "color": "#56b3cb",
    "hue": 192.31,
+   "modeline": "jison",
    "runner": null,
    "real_template": false
   },
@@ -3952,6 +4346,7 @@
    "type": "programming",
    "color": "#56b3cb",
    "hue": 192.31,
+   "modeline": "jison-lex",
    "runner": null,
    "real_template": false
   },
@@ -3963,17 +4358,19 @@
    "type": "programming",
    "color": "#60b5cc",
    "hue": 192.78,
+   "modeline": "elm",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Perl",
    "layer": "core",
-   "path": "hello/core/perl/hello.ph",
-   "extension": ".ph",
+   "path": "hello/core/perl/hello.perl",
+   "extension": ".perl",
    "type": "programming",
    "color": "#0298c3",
    "hue": 193.37,
+   "modeline": "perl",
    "runner": "perl \"{file}\"",
    "real_template": true
   },
@@ -3985,6 +4382,7 @@
    "type": "programming",
    "color": "#34c0eb",
    "hue": 194.1,
+   "modeline": "cypher",
    "runner": null,
    "real_template": false
   },
@@ -3996,6 +4394,7 @@
    "type": "programming",
    "color": "#c7d7dc",
    "hue": 194.29,
+   "modeline": "angelscript",
    "runner": null,
    "real_template": false
   },
@@ -4007,6 +4406,7 @@
    "type": "programming",
    "color": "#08607c",
    "hue": 194.48,
+   "modeline": "omnet++-ned",
    "runner": null,
    "real_template": false
   },
@@ -4018,6 +4418,7 @@
    "type": "programming",
    "color": "#1797c0",
    "hue": 194.56,
+   "modeline": "apex",
    "runner": null,
    "real_template": false
   },
@@ -4029,6 +4430,7 @@
    "type": "data",
    "color": "#52d5ff",
    "hue": 194.57,
+   "modeline": "windows-registry-entries",
    "runner": null,
    "real_template": false
   },
@@ -4040,6 +4442,7 @@
    "type": "programming",
    "color": "#384d54",
    "hue": 195.0,
+   "modeline": "dockerfile",
    "runner": null,
    "real_template": true
   },
@@ -4051,6 +4454,7 @@
    "type": "programming",
    "color": "#384d54",
    "hue": 195.0,
+   "modeline": "just",
    "runner": null,
    "real_template": false
   },
@@ -4062,28 +4466,31 @@
    "type": "markup",
    "color": "#77d9fb",
    "hue": 195.45,
+   "modeline": "raml",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Graphviz (DOT)",
    "layer": "core",
-   "path": "hello/core/graphviz-dot/hello.gv",
-   "extension": ".gv",
+   "path": "hello/core/graphviz-dot/hello.dot",
+   "extension": ".dot",
    "type": "data",
    "color": "#2596be",
    "hue": 195.69,
+   "modeline": "graphviz-(dot)",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Groovy",
    "layer": "core",
-   "path": "hello/core/groovy/hello.grt",
-   "extension": ".grt",
+   "path": "hello/core/groovy/hello.groovy",
+   "extension": ".groovy",
    "type": "programming",
    "color": "#4298b8",
    "hue": 196.27,
+   "modeline": "groovy",
    "runner": "groovy \"{file}\"",
    "real_template": true
   },
@@ -4095,6 +4502,7 @@
    "type": "programming",
    "color": "#4298b8",
    "hue": 196.27,
+   "modeline": "groovy-server-pages",
    "runner": null,
    "real_template": false
   },
@@ -4106,6 +4514,7 @@
    "type": "programming",
    "color": "#06a9e6",
    "hue": 196.34,
+   "modeline": "minizinc",
    "runner": null,
    "real_template": false
   },
@@ -4117,6 +4526,7 @@
    "type": "data",
    "color": "#2a6277",
    "hue": 196.36,
+   "modeline": "java-properties",
    "runner": null,
    "real_template": false
   },
@@ -4128,6 +4538,7 @@
    "type": "programming",
    "color": "#2a6277",
    "hue": 196.36,
+   "modeline": "java-server-pages",
    "runner": null,
    "real_template": false
   },
@@ -4139,6 +4550,7 @@
    "type": "programming",
    "color": "#2a6277",
    "hue": 196.36,
+   "modeline": "java-template-engine",
    "runner": null,
    "real_template": false
   },
@@ -4150,6 +4562,7 @@
    "type": "data",
    "color": "#b6d7e4",
    "hue": 196.96,
+   "modeline": "bird2",
    "runner": null,
    "real_template": false
   },
@@ -4161,6 +4574,7 @@
    "type": "programming",
    "color": "#7d9199",
    "hue": 197.14,
+   "modeline": "open-policy-agent",
    "runner": null,
    "real_template": false
   },
@@ -4172,6 +4586,7 @@
    "type": "programming",
    "color": "#315665",
    "hue": 197.31,
+   "modeline": "agda",
    "runner": null,
    "real_template": true
   },
@@ -4183,6 +4598,7 @@
    "type": "programming",
    "color": "#315665",
    "hue": 197.31,
+   "modeline": "literate-agda",
    "runner": null,
    "real_template": false
   },
@@ -4194,6 +4610,7 @@
    "type": "markup",
    "color": "#42bff2",
    "hue": 197.39,
+   "modeline": "marko",
    "runner": null,
    "real_template": false
   },
@@ -4205,6 +4622,7 @@
    "type": "data",
    "color": "#00b3fd",
    "hue": 197.55,
+   "modeline": "cylc",
    "runner": null,
    "real_template": false
   },
@@ -4216,6 +4634,7 @@
    "type": "programming",
    "color": "#003a52",
    "hue": 197.56,
+   "modeline": "dataweave",
    "runner": null,
    "real_template": false
   },
@@ -4227,6 +4646,7 @@
    "type": "programming",
    "color": "#0579aa",
    "hue": 197.82,
+   "modeline": "self",
    "runner": null,
    "real_template": true
   },
@@ -4238,6 +4658,7 @@
    "type": "markup",
    "color": "#1da6e0",
    "hue": 197.85,
+   "modeline": "kvlang",
    "runner": null,
    "real_template": false
   },
@@ -4249,6 +4670,7 @@
    "type": "programming",
    "color": "#0092d1",
    "hue": 198.09,
+   "modeline": "cap-cds",
    "runner": null,
    "real_template": false
   },
@@ -4260,6 +4682,7 @@
    "type": "programming",
    "color": "#215166",
    "hue": 198.26,
+   "modeline": "koka",
    "runner": null,
    "real_template": false
   },
@@ -4271,6 +4694,7 @@
    "type": "programming",
    "color": "#519aba",
    "hue": 198.29,
+   "modeline": "bicep",
    "runner": null,
    "real_template": false
   },
@@ -4282,6 +4706,7 @@
    "type": "programming",
    "color": "#0096d8",
    "hue": 198.33,
+   "modeline": "processing",
    "runner": null,
    "real_template": true
   },
@@ -4293,6 +4718,7 @@
    "type": "markup",
    "color": "#b7e1f4",
    "hue": 198.69,
+   "modeline": "mtml",
    "runner": null,
    "real_template": false
   },
@@ -4304,6 +4730,7 @@
    "type": "programming",
    "color": "#259dd5",
    "hue": 199.09,
+   "modeline": "sail",
    "runner": null,
    "real_template": false
   },
@@ -4315,6 +4742,7 @@
    "type": "markup",
    "color": "#67b8de",
    "hue": 199.16,
+   "modeline": "liquid",
    "runner": null,
    "real_template": false
   },
@@ -4326,6 +4754,7 @@
    "type": "programming",
    "color": "#0d597f",
    "hue": 200.0,
+   "modeline": "alpine-abuild",
    "runner": null,
    "real_template": false
   },
@@ -4337,6 +4766,7 @@
    "type": "programming",
    "color": "#4d6977",
    "hue": 200.0,
+   "modeline": "eiffel",
    "runner": null,
    "real_template": false
   },
@@ -4348,6 +4778,7 @@
    "type": "data",
    "color": "#d1dbe0",
    "hue": 200.0,
+   "modeline": "ini",
    "runner": null,
    "real_template": true
   },
@@ -4359,6 +4790,7 @@
    "type": "programming",
    "color": "#006091",
    "hue": 200.28,
+   "modeline": "cql",
    "runner": null,
    "real_template": false
   },
@@ -4370,6 +4802,7 @@
    "type": "programming",
    "color": "#0178b8",
    "hue": 200.98,
+   "modeline": "txl",
    "runner": null,
    "real_template": false
   },
@@ -4381,6 +4814,7 @@
    "type": "programming",
    "color": "#4195c5",
    "hue": 201.82,
+   "modeline": "kframework",
    "runner": null,
    "real_template": false
   },
@@ -4392,6 +4826,7 @@
    "type": "programming",
    "color": "#00a2ff",
    "hue": 201.88,
+   "modeline": "luau",
    "runner": null,
    "real_template": true
   },
@@ -4403,6 +4838,7 @@
    "type": "data",
    "color": "#0c344b",
    "hue": 201.9,
+   "modeline": "prisma",
    "runner": null,
    "real_template": false
   },
@@ -4414,6 +4850,7 @@
    "type": "programming",
    "color": "#3f85af",
    "hue": 202.5,
+   "modeline": "clean",
    "runner": null,
    "real_template": false
   },
@@ -4425,6 +4862,7 @@
    "type": "programming",
    "color": "#41adf0",
    "hue": 202.97,
+   "modeline": "kerboscript",
    "runner": null,
    "real_template": false
   },
@@ -4436,6 +4874,7 @@
    "type": "programming",
    "color": "#0aa0ff",
    "hue": 203.27,
+   "modeline": "netlinx",
    "runner": null,
    "real_template": false
   },
@@ -4447,17 +4886,19 @@
    "type": "data",
    "color": "#106da9",
    "hue": 203.53,
+   "modeline": "haproxy",
    "runner": null,
    "real_template": false
   },
   {
    "language": "GLSL",
    "layer": "core",
-   "path": "hello/core/glsl/hello.fp",
-   "extension": ".fp",
+   "path": "hello/core/glsl/hello.glsl",
+   "extension": ".glsl",
    "type": "programming",
    "color": "#5686a5",
    "hue": 203.54,
+   "modeline": "glsl",
    "runner": null,
    "real_template": true
   },
@@ -4469,6 +4910,7 @@
    "type": "data",
    "color": "#0673ba",
    "hue": 203.67,
+   "modeline": "record-jar",
    "runner": null,
    "real_template": false
   },
@@ -4480,6 +4922,7 @@
    "type": "data",
    "color": "#2980b9",
    "hue": 203.75,
+   "modeline": "lark",
    "runner": null,
    "real_template": false
   },
@@ -4491,6 +4934,7 @@
    "type": "programming",
    "color": "#62a8d6",
    "hue": 203.79,
+   "modeline": "mql4",
    "runner": null,
    "real_template": false
   },
@@ -4502,6 +4946,7 @@
    "type": "programming",
    "color": "#7b9db4",
    "hue": 204.21,
+   "modeline": "fancy",
    "runner": null,
    "real_template": false
   },
@@ -4513,6 +4958,7 @@
    "type": "programming",
    "color": "#48b5ff",
    "hue": 204.26,
+   "modeline": "tact",
    "runner": null,
    "real_template": false
   },
@@ -4524,6 +4970,7 @@
    "type": "data",
    "color": "#005c9c",
    "hue": 204.62,
+   "modeline": "http",
    "runner": null,
    "real_template": false
   },
@@ -4535,6 +4982,7 @@
    "type": "programming",
    "color": "#244963",
    "hue": 204.76,
+   "modeline": "mupad",
    "runner": null,
    "real_template": false
   },
@@ -4546,6 +4994,7 @@
    "type": "data",
    "color": "#2b5e82",
    "hue": 204.83,
+   "modeline": "pkg-config",
    "runner": null,
    "real_template": false
   },
@@ -4557,6 +5006,7 @@
    "type": "data",
    "color": "#267cb9",
    "hue": 204.9,
+   "modeline": "json5",
    "runner": null,
    "real_template": true
   },
@@ -4568,6 +5018,7 @@
    "type": "programming",
    "color": "#234d6b",
    "hue": 205.0,
+   "modeline": "peg.js",
    "runner": null,
    "real_template": false
   },
@@ -4579,6 +5030,7 @@
    "type": "programming",
    "color": "#1a5f91",
    "hue": 205.21,
+   "modeline": "stata",
    "runner": null,
    "real_template": true
   },
@@ -4590,6 +5042,7 @@
    "type": "programming",
    "color": "#005390",
    "hue": 205.42,
+   "modeline": "pike",
    "runner": null,
    "real_template": false
   },
@@ -4601,6 +5054,7 @@
    "type": "programming",
    "color": "#478cbf",
    "hue": 205.5,
+   "modeline": "gdshader",
    "runner": null,
    "real_template": false
   },
@@ -4612,17 +5066,19 @@
    "type": "programming",
    "color": "#30a1f5",
    "hue": 205.58,
+   "modeline": "tolk",
    "runner": null,
    "real_template": false
   },
   {
    "language": "EdgeQL",
    "layer": "core",
-   "path": "hello/core/edgeql/hello.esdl",
-   "extension": ".esdl",
+   "path": "hello/core/edgeql/hello.edgeql",
+   "extension": ".edgeql",
    "type": "programming",
    "color": "#31a7ff",
    "hue": 205.63,
+   "modeline": "edgeql",
    "runner": null,
    "real_template": false
   },
@@ -4634,6 +5090,7 @@
    "type": "programming",
    "color": "#88ccff",
    "hue": 205.71,
+   "modeline": "flux",
    "runner": null,
    "real_template": false
   },
@@ -4645,6 +5102,7 @@
    "type": "programming",
    "color": "#6594b9",
    "hue": 206.43,
+   "modeline": "autohotkey",
    "runner": null,
    "real_template": false
   },
@@ -4656,6 +5114,7 @@
    "type": "programming",
    "color": "#336790",
    "hue": 206.45,
+   "modeline": "plpgsql",
    "runner": null,
    "real_template": false
   },
@@ -4667,6 +5126,7 @@
    "type": "programming",
    "color": "#198ce7",
    "hue": 206.5,
+   "modeline": "r",
    "runner": "Rscript \"{file}\"",
    "real_template": true
   },
@@ -4678,6 +5138,7 @@
    "type": "prose",
    "color": "#198ce7",
    "hue": 206.5,
+   "modeline": "rmarkdown",
    "runner": null,
    "real_template": false
   },
@@ -4689,17 +5150,19 @@
    "type": "prose",
    "color": "#198ce7",
    "hue": 206.5,
+   "modeline": "sweave",
    "runner": null,
    "real_template": false
   },
   {
    "language": "XML",
    "layer": "core",
-   "path": "hello/core/xml/hello.ct",
-   "extension": ".ct",
+   "path": "hello/core/xml/hello.xml",
+   "extension": ".xml",
    "type": "data",
    "color": "#0060ac",
    "hue": 206.51,
+   "modeline": "xml",
    "runner": null,
    "real_template": false
   },
@@ -4711,6 +5174,7 @@
    "type": "data",
    "color": "#0060ac",
    "hue": 206.51,
+   "modeline": "xml-property-list",
    "runner": null,
    "real_template": false
   },
@@ -4722,17 +5186,19 @@
    "type": "programming",
    "color": "#94b0c7",
    "hue": 207.06,
+   "modeline": "nesc",
    "runner": null,
    "real_template": true
   },
   {
    "language": "AsciiDoc",
    "layer": "core",
-   "path": "hello/core/asciidoc/hello.adoc",
-   "extension": ".adoc",
+   "path": "hello/core/asciidoc/hello.asciidoc",
+   "extension": ".asciidoc",
    "type": "prose",
    "color": "#73a0c5",
    "hue": 207.07,
+   "modeline": "asciidoc",
    "runner": null,
    "real_template": true
   },
@@ -4744,6 +5210,7 @@
    "type": "programming",
    "color": "#005daa",
    "hue": 207.18,
+   "modeline": "motorola-68k-assembly",
    "runner": null,
    "real_template": false
   },
@@ -4755,6 +5222,7 @@
    "type": "data",
    "color": "#003058",
    "hue": 207.27,
+   "modeline": "gedcom",
    "runner": null,
    "real_template": false
   },
@@ -4766,7 +5234,20 @@
    "type": "programming",
    "color": "#3572a5",
    "hue": 207.32,
+   "modeline": "python",
    "runner": "python3 \"{file}\"",
+   "real_template": true
+  },
+  {
+   "language": "Python console",
+   "layer": "core",
+   "path": "hello/core/python-console/hello",
+   "extension": "",
+   "type": "programming",
+   "color": "#3572a5",
+   "hue": 207.32,
+   "modeline": "python-console",
+   "runner": null,
    "real_template": true
   },
   {
@@ -4777,6 +5258,7 @@
    "type": "data",
    "color": "#3572a5",
    "hue": 207.32,
+   "modeline": "python-traceback",
    "runner": null,
    "real_template": false
   },
@@ -4788,17 +5270,19 @@
    "type": "programming",
    "color": "#355570",
    "hue": 207.46,
+   "modeline": "gdscript",
    "runner": null,
    "real_template": true
   },
   {
    "language": "Godot Resource",
    "layer": "core",
-   "path": "hello/core/godot-resource/hello.gdns",
-   "extension": ".gdns",
+   "path": "hello/core/godot-resource/hello.gdnlib",
+   "extension": ".gdnlib",
    "type": "data",
    "color": "#355570",
    "hue": 207.46,
+   "modeline": "godot-resource",
    "runner": null,
    "real_template": false
   },
@@ -4810,6 +5294,7 @@
    "type": "programming",
    "color": "#1a5e9a",
    "hue": 208.12,
+   "modeline": "wgsl",
    "runner": null,
    "real_template": true
   },
@@ -4821,6 +5306,7 @@
    "type": "programming",
    "color": "#0064bd",
    "hue": 208.25,
+   "modeline": "jsonnet",
    "runner": null,
    "real_template": true
   },
@@ -4832,6 +5318,7 @@
    "type": "programming",
    "color": "#2c97fa",
    "hue": 208.83,
+   "modeline": "rascript",
    "runner": null,
    "real_template": false
   },
@@ -4843,6 +5330,7 @@
    "type": "programming",
    "color": "#0c5ba5",
    "hue": 209.02,
+   "modeline": "livecode-script",
    "runner": null,
    "real_template": false
   },
@@ -4854,6 +5342,7 @@
    "type": "programming",
    "color": "#8aa8c5",
    "hue": 209.49,
+   "modeline": "b-(formal-method)",
    "runner": null,
    "real_template": false
   },
@@ -4865,6 +5354,7 @@
    "type": "programming",
    "color": "#0080ff",
    "hue": 209.88,
+   "modeline": "arkts",
    "runner": null,
    "real_template": false
   },
@@ -4876,6 +5366,7 @@
    "type": "markup",
    "color": "#778899",
    "hue": 210.0,
+   "modeline": "bibtex",
    "runner": null,
    "real_template": true
   },
@@ -4887,6 +5378,7 @@
    "type": "programming",
    "color": "#60affe",
    "hue": 210.0,
+   "modeline": "odin",
    "runner": null,
    "real_template": true
   },
@@ -4898,6 +5390,7 @@
    "type": "programming",
    "color": "#00356b",
    "hue": 210.28,
+   "modeline": "nmodl",
    "runner": null,
    "real_template": false
   },
@@ -4909,6 +5402,7 @@
    "type": "programming",
    "color": "#007eff",
    "hue": 210.35,
+   "modeline": "slash",
    "runner": null,
    "real_template": false
   },
@@ -4920,6 +5414,7 @@
    "type": "programming",
    "color": "#87aed7",
    "hue": 210.75,
+   "modeline": "newlisp",
    "runner": null,
    "real_template": true
   },
@@ -4931,6 +5426,7 @@
    "type": "programming",
    "color": "#004289",
    "hue": 211.09,
+   "modeline": "4d",
    "runner": null,
    "real_template": false
   },
@@ -4942,6 +5438,7 @@
    "type": "programming",
    "color": "#4f87c4",
    "hue": 211.28,
+   "modeline": "v",
    "runner": null,
    "real_template": true
   },
@@ -4953,6 +5450,7 @@
    "type": "programming",
    "color": "#3178c6",
    "hue": 211.41,
+   "modeline": "glimmer-ts",
    "runner": null,
    "real_template": false
   },
@@ -4964,6 +5462,7 @@
    "type": "programming",
    "color": "#3178c6",
    "hue": 211.41,
+   "modeline": "tsx",
    "runner": null,
    "real_template": false
   },
@@ -4975,6 +5474,7 @@
    "type": "programming",
    "color": "#3178c6",
    "hue": 211.41,
+   "modeline": "typescript",
    "runner": "npx --yes tsx \"{file}\" 2>/dev/null || echo \"Hello World!\"",
    "real_template": true
   },
@@ -4986,28 +5486,31 @@
    "type": "programming",
    "color": "#222c37",
    "hue": 211.43,
+   "modeline": "shaderlab",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Unity3D Asset",
    "layer": "core",
-   "path": "hello/core/unity3d-asset/hello.mat",
-   "extension": ".mat",
+   "path": "hello/core/unity3d-asset/hello.anim",
+   "extension": ".anim",
    "type": "data",
    "color": "#222c37",
    "hue": 211.43,
+   "modeline": "unity3d-asset",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Mako",
    "layer": "core",
-   "path": "hello/core/mako/hello.mao",
-   "extension": ".mao",
+   "path": "hello/core/mako/hello.mako",
+   "extension": ".mako",
    "type": "programming",
    "color": "#7e858d",
    "hue": 212.0,
+   "modeline": "mako",
    "runner": null,
    "real_template": false
   },
@@ -5019,6 +5522,7 @@
    "type": "programming",
    "color": "#1c3552",
    "hue": 212.22,
+   "modeline": "autoit",
    "runner": null,
    "real_template": false
   },
@@ -5030,6 +5534,7 @@
    "type": "programming",
    "color": "#b9d9ff",
    "hue": 212.57,
+   "modeline": "ags-script",
    "runner": null,
    "real_template": false
   },
@@ -5041,6 +5546,7 @@
    "type": "markup",
    "color": "#3584e4",
    "hue": 212.91,
+   "modeline": "blueprint",
    "runner": null,
    "real_template": false
   },
@@ -5052,6 +5558,7 @@
    "type": "programming",
    "color": "#0050b2",
    "hue": 213.03,
+   "modeline": "freemarker",
    "runner": null,
    "real_template": false
   },
@@ -5063,6 +5570,7 @@
    "type": "programming",
    "color": "#2d68b1",
    "hue": 213.18,
+   "modeline": "ispc",
    "runner": null,
    "real_template": false
   },
@@ -5074,6 +5582,7 @@
    "type": "programming",
    "color": "#10253f",
    "hue": 213.19,
+   "modeline": "modula-2",
    "runner": null,
    "real_template": false
   },
@@ -5085,17 +5594,19 @@
    "type": "programming",
    "color": "#295b9a",
    "hue": 213.45,
+   "modeline": "logtalk",
    "runner": null,
    "real_template": false
   },
   {
    "language": "CoffeeScript",
    "layer": "core",
-   "path": "hello/core/coffeescript/hello.cjsx",
-   "extension": ".cjsx",
+   "path": "hello/core/coffeescript/hello.coffee",
+   "extension": ".coffee",
    "type": "programming",
    "color": "#244776",
    "hue": 214.39,
+   "modeline": "coffeescript",
    "runner": null,
    "real_template": false
   },
@@ -5107,6 +5618,7 @@
    "type": "data",
    "color": "#244776",
    "hue": 214.39,
+   "modeline": "cson",
    "runner": null,
    "real_template": false
   },
@@ -5118,6 +5630,7 @@
    "type": "programming",
    "color": "#244776",
    "hue": 214.39,
+   "modeline": "literate-coffeescript",
    "runner": null,
    "real_template": false
   },
@@ -5129,6 +5642,7 @@
    "type": "programming",
    "color": "#14253c",
    "hue": 214.5,
+   "modeline": "fantom",
    "runner": null,
    "real_template": true
   },
@@ -5140,6 +5654,7 @@
    "type": "programming",
    "color": "#7790b2",
    "hue": 214.58,
+   "modeline": "hy",
    "runner": null,
    "real_template": false
   },
@@ -5151,6 +5666,7 @@
    "type": "programming",
    "color": "#0e74ff",
    "hue": 214.61,
+   "modeline": "ligolang",
    "runner": null,
    "real_template": false
   },
@@ -5162,6 +5678,7 @@
    "type": "data",
    "color": "#006bff",
    "hue": 214.82,
+   "modeline": "buildstream",
    "runner": null,
    "real_template": false
   },
@@ -5173,6 +5690,7 @@
    "type": "programming",
    "color": "#012456",
    "hue": 215.29,
+   "modeline": "powershell",
    "runner": "pwsh -NoProfile -File \"{file}\"",
    "real_template": false
   },
@@ -5184,17 +5702,19 @@
    "type": "markup",
    "color": "#2379f4",
    "hue": 215.31,
+   "modeline": "slint",
    "runner": null,
    "real_template": false
   },
   {
    "language": "SPARQL",
    "layer": "core",
-   "path": "hello/core/sparql/hello.rq",
-   "extension": ".rq",
+   "path": "hello/core/sparql/hello.sparql",
+   "extension": ".sparql",
    "type": "data",
    "color": "#0c4597",
    "hue": 215.4,
+   "modeline": "sparql",
    "runner": null,
    "real_template": false
   },
@@ -5206,6 +5726,7 @@
    "type": "data",
    "color": "#0c479c",
    "hue": 215.42,
+   "modeline": "jsonld",
    "runner": null,
    "real_template": false
   },
@@ -5217,6 +5738,7 @@
    "type": "programming",
    "color": "#4a76b8",
    "hue": 216.0,
+   "modeline": "mql5",
    "runner": null,
    "real_template": false
   },
@@ -5228,6 +5750,7 @@
    "type": "programming",
    "color": "#438eff",
    "hue": 216.06,
+   "modeline": "objective-c",
    "runner": null,
    "real_template": true
   },
@@ -5239,6 +5762,7 @@
    "type": "markup",
    "color": "#1d365d",
    "hue": 216.56,
+   "modeline": "less",
    "runner": null,
    "real_template": false
   },
@@ -5250,6 +5774,7 @@
    "type": "programming",
    "color": "#003fa2",
    "hue": 216.67,
+   "modeline": "slice",
    "runner": null,
    "real_template": false
   },
@@ -5261,6 +5786,7 @@
    "type": "programming",
    "color": "#9dc3ff",
    "hue": 216.73,
+   "modeline": "antlr",
    "runner": null,
    "real_template": false
   },
@@ -5272,6 +5798,7 @@
    "type": "programming",
    "color": "#0e60e3",
    "hue": 216.9,
+   "modeline": "harbour",
    "runner": null,
    "real_template": false
   },
@@ -5283,6 +5810,7 @@
    "type": "programming",
    "color": "#12223c",
    "hue": 217.14,
+   "modeline": "bluespec",
    "runner": null,
    "real_template": true
   },
@@ -5294,6 +5822,7 @@
    "type": "programming",
    "color": "#12223c",
    "hue": 217.14,
+   "modeline": "bluespec-bh",
    "runner": null,
    "real_template": false
   },
@@ -5305,6 +5834,7 @@
    "type": "programming",
    "color": "#0b3d91",
    "hue": 217.61,
+   "modeline": "apollo-guidance-computer",
    "runner": null,
    "real_template": false
   },
@@ -5316,28 +5846,31 @@
    "type": "programming",
    "color": "#518ef8",
    "hue": 218.08,
+   "modeline": "verse",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Markdown",
    "layer": "core",
-   "path": "hello/core/markdown/hello.mkd",
-   "extension": ".mkd",
+   "path": "hello/core/markdown/hello.livemd",
+   "extension": ".livemd",
    "type": "prose",
    "color": "#083fa1",
    "hue": 218.43,
+   "modeline": "markdown",
    "runner": null,
    "real_template": true
   },
   {
    "language": "ROS Interface",
    "layer": "core",
-   "path": "hello/core/ros-interface/hello.srv",
-   "extension": ".srv",
+   "path": "hello/core/ros-interface/hello.action",
+   "extension": ".action",
    "type": "data",
    "color": "#22314e",
    "hue": 219.55,
+   "modeline": "ros-interface",
    "runner": null,
    "real_template": false
   },
@@ -5349,6 +5882,7 @@
    "type": "programming",
    "color": "#5a6986",
    "hue": 219.55,
+   "modeline": "purebasic",
    "runner": null,
    "real_template": false
   },
@@ -5360,6 +5894,7 @@
    "type": "programming",
    "color": "#5886e1",
    "hue": 219.85,
+   "modeline": "cue",
    "runner": null,
    "real_template": true
   },
@@ -5371,6 +5906,7 @@
    "type": "programming",
    "color": "#264b99",
    "hue": 220.7,
+   "modeline": "inno-setup",
    "runner": null,
    "real_template": false
   },
@@ -5382,6 +5918,7 @@
    "type": "programming",
    "color": "#2563eb",
    "hue": 221.21,
+   "modeline": "c3",
    "runner": null,
    "real_template": true
   },
@@ -5393,6 +5930,7 @@
    "type": "programming",
    "color": "#1d222d",
    "hue": 221.25,
+   "modeline": "purescript",
    "runner": null,
    "real_template": true
   },
@@ -5404,6 +5942,7 @@
    "type": "programming",
    "color": "#0040cd",
    "hue": 221.27,
+   "modeline": "q",
    "runner": null,
    "real_template": true
   },
@@ -5415,6 +5954,7 @@
    "type": "programming",
    "color": "#1d2c4e",
    "hue": 221.63,
+   "modeline": "nasal",
    "runner": null,
    "real_template": false
   },
@@ -5426,6 +5966,7 @@
    "type": "programming",
    "color": "#3a6be0",
    "hue": 222.29,
+   "modeline": "imhex-pattern-language",
    "runner": null,
    "real_template": false
   },
@@ -5437,17 +5978,19 @@
    "type": "programming",
    "color": "#3c5caa",
    "hue": 222.55,
+   "modeline": "racket",
    "runner": "racket \"{file}\"",
    "real_template": true
   },
   {
    "language": "WebAssembly",
    "layer": "core",
-   "path": "hello/core/webassembly/hello.wat",
-   "extension": ".wat",
+   "path": "hello/core/webassembly/hello.wast",
+   "extension": ".wast",
    "type": "programming",
    "color": "#04133b",
    "hue": 223.64,
+   "modeline": "webassembly",
    "runner": null,
    "real_template": true
   },
@@ -5459,6 +6002,7 @@
    "type": "programming",
    "color": "#285eef",
    "hue": 223.72,
+   "modeline": "xonsh",
    "runner": null,
    "real_template": true
   },
@@ -5470,6 +6014,7 @@
    "type": "programming",
    "color": "#0530ad",
    "hue": 224.64,
+   "modeline": "mathematical-programming-system",
    "runner": null,
    "real_template": false
   },
@@ -5481,6 +6026,7 @@
    "type": "markup",
    "color": "#507cff",
    "hue": 224.91,
+   "modeline": "velocity-template-language",
    "runner": null,
    "real_template": false
   },
@@ -5492,6 +6038,7 @@
    "type": "data",
    "color": "#0040ff",
    "hue": 224.94,
+   "modeline": "avro-idl",
    "runner": null,
    "real_template": false
   },
@@ -5503,6 +6050,7 @@
    "type": "programming",
    "color": "#2d54cb",
    "hue": 225.19,
+   "modeline": "ring",
    "runner": null,
    "real_template": false
   },
@@ -5514,6 +6062,7 @@
    "type": "programming",
    "color": "#154bf9",
    "hue": 225.79,
+   "modeline": "aleo",
    "runner": null,
    "real_template": false
   },
@@ -5525,6 +6074,7 @@
    "type": "programming",
    "color": "#111522",
    "hue": 225.88,
+   "modeline": "nwscript",
    "runner": null,
    "real_template": false
   },
@@ -5536,6 +6086,7 @@
    "type": "data",
    "color": "#2f4aab",
    "hue": 226.94,
+   "modeline": "kicad-layout",
    "runner": null,
    "real_template": false
   },
@@ -5547,6 +6098,7 @@
    "type": "data",
    "color": "#2f4aab",
    "hue": 226.94,
+   "modeline": "kicad-legacy-layout",
    "runner": null,
    "real_template": false
   },
@@ -5558,6 +6110,7 @@
    "type": "data",
    "color": "#2f4aab",
    "hue": 226.94,
+   "modeline": "kicad-schematic",
    "runner": null,
    "real_template": false
   },
@@ -5569,17 +6122,19 @@
    "type": "data",
    "color": "#5b70bd",
    "hue": 227.14,
+   "modeline": "web-ontology-language",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Scheme",
    "layer": "core",
-   "path": "hello/core/scheme/hello.ss",
-   "extension": ".ss",
+   "path": "hello/core/scheme/hello.sld",
+   "extension": ".sld",
    "type": "programming",
    "color": "#1e4aec",
    "hue": 227.18,
+   "modeline": "scheme",
    "runner": "guile -s \"{file}\"",
    "real_template": true
   },
@@ -5591,6 +6146,7 @@
    "type": "programming",
    "color": "#747faa",
    "hue": 227.78,
+   "modeline": "netlinx+erb",
    "runner": null,
    "real_template": false
   },
@@ -5602,6 +6158,7 @@
    "type": "markup",
    "color": "#4f5d95",
    "hue": 228.0,
+   "modeline": "html+php",
    "runner": null,
    "real_template": false
   },
@@ -5613,6 +6170,7 @@
    "type": "programming",
    "color": "#4f5d95",
    "hue": 228.0,
+   "modeline": "php",
    "runner": "php \"{file}\"",
    "real_template": true
   },
@@ -5624,6 +6182,7 @@
    "type": "programming",
    "color": "#4b6bef",
    "hue": 228.29,
+   "modeline": "x10",
    "runner": null,
    "real_template": false
   },
@@ -5635,6 +6194,7 @@
    "type": "programming",
    "color": "#3d57c3",
    "hue": 228.36,
+   "modeline": "mirc-script",
    "runner": null,
    "real_template": false
   },
@@ -5646,6 +6206,7 @@
    "type": "markup",
    "color": "#526ee8",
    "hue": 228.8,
+   "modeline": "d2",
    "runner": null,
    "real_template": false
   },
@@ -5657,6 +6218,7 @@
    "type": "programming",
    "color": "#001d9d",
    "hue": 228.92,
+   "modeline": "eclipse",
    "runner": null,
    "real_template": false
   },
@@ -5668,17 +6230,19 @@
    "type": "programming",
    "color": "#223388",
    "hue": 230.0,
+   "modeline": "modula-3",
    "runner": null,
    "real_template": false
   },
   {
    "language": "VHDL",
    "layer": "core",
-   "path": "hello/core/vhdl/hello.vhd",
-   "extension": ".vhd",
+   "path": "hello/core/vhdl/hello.vhdl",
+   "extension": ".vhdl",
    "type": "programming",
    "color": "#adb2cb",
    "hue": 230.0,
+   "modeline": "vhdl",
    "runner": "ghdl -a \"{file}\" 2>/dev/null || echo \"Hello World!\"",
    "real_template": true
   },
@@ -5690,6 +6254,7 @@
    "type": "programming",
    "color": "#99aaff",
    "hue": 230.0,
+   "modeline": "imagej-macro",
    "runner": null,
    "real_template": false
   },
@@ -5701,6 +6266,7 @@
    "type": "markup",
    "color": "#5562ac",
    "hue": 231.03,
+   "modeline": "bikeshed",
    "runner": null,
    "real_template": false
   },
@@ -5712,6 +6278,7 @@
    "type": "programming",
    "color": "#7582d1",
    "hue": 231.52,
+   "modeline": "wisp",
    "runner": null,
    "real_template": false
   },
@@ -5723,6 +6290,7 @@
    "type": "programming",
    "color": "#cdd0e3",
    "hue": 231.82,
+   "modeline": "oxygene",
    "runner": null,
    "real_template": false
   },
@@ -5734,6 +6302,7 @@
    "type": "programming",
    "color": "#e4e6f3",
    "hue": 232.0,
+   "modeline": "click",
    "runner": null,
    "real_template": false
   },
@@ -5745,6 +6314,7 @@
    "type": "programming",
    "color": "#c2c9fb",
    "hue": 232.63,
+   "modeline": "toit",
    "runner": null,
    "real_template": false
   },
@@ -5756,6 +6326,7 @@
    "type": "data",
    "color": "#373b5e",
    "hue": 233.85,
+   "modeline": "stl",
    "runner": null,
    "real_template": false
   },
@@ -5767,6 +6338,7 @@
    "type": "programming",
    "color": "#6067af",
    "hue": 234.68,
+   "modeline": "picolisp",
    "runner": null,
    "real_template": true
   },
@@ -5778,6 +6350,7 @@
    "type": "programming",
    "color": "#424893",
    "hue": 235.56,
+   "modeline": "objectscript",
    "runner": null,
    "real_template": false
   },
@@ -5789,6 +6362,7 @@
    "type": "programming",
    "color": "#b2b7f8",
    "hue": 235.71,
+   "modeline": "verilog",
    "runner": "iverilog -o /tmp/hw_v \"{file}\" 2>/dev/null || echo \"Hello World!\"",
    "real_template": true
   },
@@ -5800,6 +6374,7 @@
    "type": "programming",
    "color": "#0009b5",
    "hue": 237.02,
+   "modeline": "clue",
    "runner": null,
    "real_template": false
   },
@@ -5811,6 +6386,7 @@
    "type": "programming",
    "color": "#141ac9",
    "hue": 238.01,
+   "modeline": "freebasic",
    "runner": null,
    "real_template": false
   },
@@ -5822,6 +6398,7 @@
    "type": "programming",
    "color": "#24255d",
    "hue": 238.95,
+   "modeline": "xtend",
    "runner": null,
    "real_template": true
   },
@@ -5833,6 +6410,7 @@
    "type": "programming",
    "color": "#00004c",
    "hue": 240.0,
+   "modeline": "terra",
    "runner": null,
    "real_template": false
   },
@@ -5844,28 +6422,31 @@
    "type": "programming",
    "color": "#00007a",
    "hue": 240.0,
+   "modeline": "cweb",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Lua",
    "layer": "core",
-   "path": "hello/core/lua/hello.p8",
-   "extension": ".p8",
+   "path": "hello/core/lua/hello.lua",
+   "extension": ".lua",
    "type": "programming",
    "color": "#000080",
    "hue": 240.0,
+   "modeline": "lua",
    "runner": "lua \"{file}\"",
    "real_template": true
   },
   {
    "language": "GAP",
    "layer": "core",
-   "path": "hello/core/gap/hello.gi",
-   "extension": ".gi",
+   "path": "hello/core/gap/hello.gap",
+   "extension": ".gap",
    "type": "programming",
    "color": "#0000cc",
    "hue": 240.0,
+   "modeline": "gap",
    "runner": null,
    "real_template": false
   },
@@ -5877,17 +6458,19 @@
    "type": "programming",
    "color": "#0000cc",
    "hue": 240.0,
+   "modeline": "igor-pro",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Raku",
    "layer": "core",
-   "path": "hello/core/raku/hello.p6",
-   "extension": ".p6",
+   "path": "hello/core/raku/hello.6pl",
+   "extension": ".6pl",
    "type": "programming",
    "color": "#0000fb",
    "hue": 240.0,
+   "modeline": "raku",
    "runner": null,
    "real_template": true
   },
@@ -5899,6 +6482,7 @@
    "type": "programming",
    "color": "#7e7eff",
    "hue": 240.0,
+   "modeline": "nix",
    "runner": null,
    "real_template": true
   },
@@ -5910,6 +6494,7 @@
    "type": "programming",
    "color": "#ccccee",
    "hue": 240.0,
+   "modeline": "urweb",
    "runner": null,
    "real_template": false
   },
@@ -5921,6 +6506,7 @@
    "type": "programming",
    "color": "#ccccff",
    "hue": 240.0,
+   "modeline": "cirru",
    "runner": null,
    "real_template": false
   },
@@ -5932,6 +6518,7 @@
    "type": "programming",
    "color": "#6866fb",
    "hue": 240.81,
+   "modeline": "objective-c++",
    "runner": null,
    "real_template": true
   },
@@ -5943,6 +6530,7 @@
    "type": "programming",
    "color": "#3d3c6e",
    "hue": 241.2,
+   "modeline": "nemerle",
    "runner": null,
    "real_template": false
   },
@@ -5954,6 +6542,7 @@
    "type": "programming",
    "color": "#615f8b",
    "hue": 242.73,
+   "modeline": "grace",
    "runner": null,
    "real_template": false
   },
@@ -5965,6 +6554,7 @@
    "type": "programming",
    "color": "#0d00ff",
    "hue": 243.06,
+   "modeline": "pddl",
    "runner": null,
    "real_template": false
   },
@@ -5976,6 +6566,7 @@
    "type": "programming",
    "color": "#302b6d",
    "hue": 244.55,
+   "modeline": "puppet",
    "runner": null,
    "real_template": false
   },
@@ -5987,6 +6578,7 @@
    "type": "programming",
    "color": "#5546ff",
    "hue": 244.86,
+   "modeline": "clarity",
    "runner": null,
    "real_template": true
   },
@@ -5998,6 +6590,7 @@
    "type": "programming",
    "color": "#4b4a56",
    "hue": 245.0,
+   "modeline": "miniscript",
    "runner": null,
    "real_template": false
   },
@@ -6009,6 +6602,7 @@
    "type": "programming",
    "color": "#140f46",
    "hue": 245.45,
+   "modeline": "codeql",
    "runner": null,
    "real_template": false
   },
@@ -6020,6 +6614,7 @@
    "type": "programming",
    "color": "#4d41b1",
    "hue": 246.43,
+   "modeline": "fortran",
    "runner": "gfortran -o /tmp/hw_f \"{file}\" && /tmp/hw_f",
    "real_template": false
   },
@@ -6031,6 +6626,7 @@
    "type": "programming",
    "color": "#4d41b1",
    "hue": 246.43,
+   "modeline": "fortran-free-form",
    "runner": null,
    "real_template": false
   },
@@ -6042,6 +6638,7 @@
    "type": "data",
    "color": "#6250e7",
    "hue": 247.15,
+   "modeline": "webassembly-interface-type",
    "runner": null,
    "real_template": false
   },
@@ -6053,6 +6650,7 @@
    "type": "programming",
    "color": "#6a5acd",
    "hue": 248.35,
+   "modeline": "metta",
    "runner": null,
    "real_template": false
   },
@@ -6064,6 +6662,7 @@
    "type": "programming",
    "color": "#9c8af9",
    "hue": 249.73,
+   "modeline": "numpy",
    "runner": null,
    "real_template": false
   },
@@ -6075,28 +6674,31 @@
    "type": "programming",
    "color": "#867db1",
    "hue": 250.38,
+   "modeline": "vba",
    "runner": null,
    "real_template": false
   },
   {
    "language": "XQuery",
    "layer": "core",
-   "path": "hello/core/xquery/hello.xq",
-   "extension": ".xq",
+   "path": "hello/core/xquery/hello.xquery",
+   "extension": ".xquery",
    "type": "programming",
    "color": "#5232e7",
    "hue": 250.61,
+   "modeline": "xquery",
    "runner": null,
    "real_template": false
   },
   {
    "language": "HTML+Razor",
    "layer": "core",
-   "path": "hello/core/html+razor/hello.razor",
-   "extension": ".razor",
+   "path": "hello/core/html+razor/hello.cshtml",
+   "extension": ".cshtml",
    "type": "markup",
    "color": "#512be4",
    "hue": 252.32,
+   "modeline": "html+razor",
    "runner": null,
    "real_template": false
   },
@@ -6108,17 +6710,19 @@
    "type": "data",
    "color": "#c9bfed",
    "hue": 253.04,
+   "modeline": "simple-file-verification",
    "runner": null,
    "real_template": false
   },
   {
    "language": "C#",
    "layer": "core",
-   "path": "hello/core/c#/hello.csx",
-   "extension": ".csx",
+   "path": "hello/core/c#/hello.cs.pp",
+   "extension": ".cs.pp",
    "type": "programming",
    "color": "#7355dd",
    "hue": 253.24,
+   "modeline": "c#",
    "runner": null,
    "real_template": true
   },
@@ -6130,6 +6734,7 @@
    "type": "programming",
    "color": "#cabbff",
    "hue": 253.24,
+   "modeline": "omgrofl",
    "runner": null,
    "real_template": false
   },
@@ -6141,6 +6746,7 @@
    "type": "programming",
    "color": "#6a40fd",
    "hue": 253.33,
+   "modeline": "classic-asp",
    "runner": null,
    "real_template": false
   },
@@ -6152,6 +6758,7 @@
    "type": "programming",
    "color": "#512bd4",
    "hue": 253.49,
+   "modeline": "il-assembly",
    "runner": null,
    "real_template": false
   },
@@ -6163,6 +6770,7 @@
    "type": "programming",
    "color": "#3b2f63",
    "hue": 253.85,
+   "modeline": "procfile",
    "runner": null,
    "real_template": true
   },
@@ -6174,6 +6782,7 @@
    "type": "programming",
    "color": "#5e5086",
    "hue": 255.56,
+   "modeline": "haskell",
    "runner": "runghc \"{file}\"",
    "real_template": true
   },
@@ -6185,6 +6794,7 @@
    "type": "programming",
    "color": "#5e5086",
    "hue": 255.56,
+   "modeline": "literate-haskell",
    "runner": null,
    "real_template": false
   },
@@ -6196,6 +6806,7 @@
    "type": "programming",
    "color": "#7055b5",
    "hue": 256.88,
+   "modeline": "p4",
    "runner": null,
    "real_template": false
   },
@@ -6207,6 +6818,7 @@
    "type": "programming",
    "color": "#a97bff",
    "hue": 260.91,
+   "modeline": "kotlin",
    "runner": "kotlinc -include-runtime -d /tmp/hw.jar \"{file}\" && java -jar /tmp/hw.jar",
    "real_template": true
   },
@@ -6218,6 +6830,7 @@
    "type": "programming",
    "color": "#ae81ff",
    "hue": 261.43,
+   "modeline": "polar",
    "runner": null,
    "real_template": false
   },
@@ -6229,6 +6842,7 @@
    "type": "programming",
    "color": "#7c38f5",
    "hue": 261.59,
+   "modeline": "roc",
    "runner": null,
    "real_template": true
   },
@@ -6240,6 +6854,7 @@
    "type": "programming",
    "color": "#640ff8",
    "hue": 261.89,
+   "modeline": "aiken",
    "runner": null,
    "real_template": false
   },
@@ -6251,6 +6866,7 @@
    "type": "programming",
    "color": "#2f1f49",
    "hue": 262.86,
+   "modeline": "noir",
    "runner": null,
    "real_template": false
   },
@@ -6262,6 +6878,7 @@
    "type": "programming",
    "color": "#9d6ce5",
    "hue": 264.3,
+   "modeline": "quint",
    "runner": null,
    "real_template": false
   },
@@ -6273,6 +6890,7 @@
    "type": "programming",
    "color": "#aa70ff",
    "hue": 264.34,
+   "modeline": "openqasm",
    "runner": null,
    "real_template": true
   },
@@ -6284,17 +6902,19 @@
    "type": "data",
    "color": "#483465",
    "hue": 264.49,
+   "modeline": "cabal-config",
    "runner": null,
    "real_template": false
   },
   {
    "language": "1C Enterprise",
    "layer": "core",
-   "path": "hello/core/1c-enterprise/hello.os",
-   "extension": ".os",
+   "path": "hello/core/1c-enterprise/hello.bsl",
+   "extension": ".bsl",
    "type": "programming",
    "color": "#814ccc",
    "hue": 264.84,
+   "modeline": "1c-enterprise",
    "runner": null,
    "real_template": false
   },
@@ -6306,6 +6926,7 @@
    "type": "programming",
    "color": "#4a3665",
    "hue": 265.53,
+   "modeline": "typespec",
    "runner": null,
    "real_template": false
   },
@@ -6317,6 +6938,7 @@
    "type": "programming",
    "color": "#63408e",
    "hue": 266.92,
+   "modeline": "genero-4gl",
    "runner": null,
    "real_template": false
   },
@@ -6328,6 +6950,7 @@
    "type": "markup",
    "color": "#2e1052",
    "hue": 267.27,
+   "modeline": "html+ecr",
    "runner": null,
    "real_template": false
   },
@@ -6339,6 +6962,7 @@
    "type": "markup",
    "color": "#7b42bb",
    "hue": 268.26,
+   "modeline": "terraform-template",
    "runner": null,
    "real_template": false
   },
@@ -6350,17 +6974,19 @@
    "type": "programming",
    "color": "#a56de2",
    "hue": 268.72,
+   "modeline": "vala",
    "runner": null,
    "real_template": false
   },
   {
    "language": "HCL",
    "layer": "core",
-   "path": "hello/core/hcl/hello.tf",
-   "extension": ".tf",
+   "path": "hello/core/hcl/hello.hcl",
+   "extension": ".hcl",
    "type": "programming",
    "color": "#844fba",
    "hue": 269.72,
+   "modeline": "hcl",
    "runner": null,
    "real_template": true
   },
@@ -6372,6 +6998,7 @@
    "type": "markup",
    "color": "#663399",
    "hue": 270.0,
+   "modeline": "css",
    "runner": null,
    "real_template": true
   },
@@ -6383,6 +7010,7 @@
    "type": "programming",
    "color": "#6600cc",
    "hue": 270.0,
+   "modeline": "papyrus",
    "runner": null,
    "real_template": false
   },
@@ -6394,6 +7022,7 @@
    "type": "programming",
    "color": "#9f4cf2",
    "hue": 270.0,
+   "modeline": "vyper",
    "runner": null,
    "real_template": true
   },
@@ -6405,6 +7034,7 @@
    "type": "programming",
    "color": "#e0c3fc",
    "hue": 270.53,
+   "modeline": "nickel",
    "runner": null,
    "real_template": true
   },
@@ -6416,6 +7046,7 @@
    "type": "programming",
    "color": "#a855f7",
    "hue": 270.74,
+   "modeline": "baml",
    "runner": null,
    "real_template": false
   },
@@ -6427,6 +7058,7 @@
    "type": "programming",
    "color": "#4a137a",
    "hue": 272.04,
+   "modeline": "move",
    "runner": null,
    "real_template": true
   },
@@ -6438,6 +7070,7 @@
    "type": "programming",
    "color": "#662d91",
    "hue": 274.2,
+   "modeline": "brightscript",
    "runner": null,
    "real_template": false
   },
@@ -6449,6 +7082,7 @@
    "type": "programming",
    "color": "#8847b9",
    "hue": 274.21,
+   "modeline": "elixir",
    "runner": "elixir \"{file}\"",
    "real_template": true
   },
@@ -6460,17 +7094,19 @@
    "type": "programming",
    "color": "#8f14e9",
    "hue": 274.65,
+   "modeline": "metal",
    "runner": null,
    "real_template": true
   },
   {
    "language": "ASP.NET",
    "layer": "core",
-   "path": "hello/core/asp-net/hello.axd",
-   "extension": ".axd",
+   "path": "hello/core/asp-net/hello.asax",
+   "extension": ".asax",
    "type": "programming",
    "color": "#9400ff",
    "hue": 274.82,
+   "modeline": "asp.net",
    "runner": null,
    "real_template": false
   },
@@ -6482,6 +7118,7 @@
    "type": "programming",
    "color": "#9400ff",
    "hue": 274.82,
+   "modeline": "gentoo-ebuild",
    "runner": null,
    "real_template": false
   },
@@ -6493,6 +7130,7 @@
    "type": "programming",
    "color": "#9400ff",
    "hue": 274.82,
+   "modeline": "gentoo-eclass",
    "runner": null,
    "real_template": false
   },
@@ -6504,6 +7142,7 @@
    "type": "data",
    "color": "#2d004d",
    "hue": 275.06,
+   "modeline": "nanorc",
    "runner": null,
    "real_template": false
   },
@@ -6515,6 +7154,7 @@
    "type": "programming",
    "color": "#120f14",
    "hue": 276.0,
+   "modeline": "shen",
    "runner": null,
    "real_template": false
   },
@@ -6526,6 +7166,7 @@
    "type": "programming",
    "color": "#dfafff",
    "hue": 276.0,
+   "modeline": "dhall",
    "runner": null,
    "real_template": true
   },
@@ -6537,6 +7178,7 @@
    "type": "programming",
    "color": "#aa2afe",
    "hue": 276.23,
+   "modeline": "arc",
    "runner": null,
    "real_template": false
   },
@@ -6548,6 +7190,7 @@
    "type": "programming",
    "color": "#945db7",
    "hue": 276.67,
+   "modeline": "visual-basic-.net",
    "runner": null,
    "real_template": true
   },
@@ -6559,6 +7202,7 @@
    "type": "programming",
    "color": "#4b0079",
    "hue": 277.19,
+   "modeline": "tla",
    "runner": null,
    "real_template": false
   },
@@ -6570,6 +7214,7 @@
    "type": "programming",
    "color": "#b845fc",
    "hue": 277.7,
+   "modeline": "f#",
    "runner": null,
    "real_template": true
   },
@@ -6581,6 +7226,7 @@
    "type": "programming",
    "color": "#9933cc",
    "hue": 280.0,
+   "modeline": "uno",
    "runner": null,
    "real_template": false
   },
@@ -6592,6 +7238,7 @@
    "type": "programming",
    "color": "#d08cf2",
    "hue": 280.0,
+   "modeline": "g-code",
    "runner": null,
    "real_template": false
   },
@@ -6603,6 +7250,7 @@
    "type": "programming",
    "color": "#652b81",
    "hue": 280.47,
+   "modeline": "lookml",
    "runner": null,
    "real_template": false
   },
@@ -6614,7 +7262,20 @@
    "type": "programming",
    "color": "#a270ba",
    "hue": 280.54,
+   "modeline": "julia",
    "runner": "julia \"{file}\"",
+   "real_template": true
+  },
+  {
+   "language": "Julia REPL",
+   "layer": "core",
+   "path": "hello/core/julia-repl/hello",
+   "extension": "",
+   "type": "programming",
+   "color": "#a270ba",
+   "hue": 280.54,
+   "modeline": "julia-repl",
+   "runner": null,
    "real_template": true
   },
   {
@@ -6625,17 +7286,19 @@
    "type": "data",
    "color": "#59316b",
    "hue": 281.38,
+   "modeline": "tor-config",
    "runner": null,
    "real_template": true
   },
   {
    "language": "HTML+EEX",
    "layer": "core",
-   "path": "hello/core/html+eex/hello.heex",
-   "extension": ".heex",
+   "path": "hello/core/html+eex/hello.html.eex",
+   "extension": ".html.eex",
    "type": "markup",
    "color": "#6e4a7e",
    "hue": 281.54,
+   "modeline": "html+eex",
    "runner": null,
    "real_template": false
   },
@@ -6647,6 +7310,7 @@
    "type": "programming",
    "color": "#8027a3",
    "hue": 283.06,
+   "modeline": "lambdapi",
    "runner": null,
    "real_template": false
   },
@@ -6658,28 +7322,31 @@
    "type": "programming",
    "color": "#c065db",
    "hue": 286.27,
+   "modeline": "emacs-lisp",
    "runner": "echo \"Hello World!\"",
    "real_template": true
   },
   {
    "language": "Dylan",
    "layer": "core",
-   "path": "hello/core/dylan/hello.dyl",
-   "extension": ".dyl",
+   "path": "hello/core/dylan/hello.dylan",
+   "extension": ".dylan",
    "type": "programming",
    "color": "#6c616e",
    "hue": 290.77,
+   "modeline": "dylan",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Gherkin",
    "layer": "core",
-   "path": "hello/core/gherkin/hello.story",
-   "extension": ".story",
+   "path": "hello/core/gherkin/hello.feature",
+   "extension": ".feature",
    "type": "programming",
    "color": "#5b2063",
    "hue": 292.84,
+   "modeline": "gherkin",
    "runner": null,
    "real_template": false
   },
@@ -6691,6 +7358,7 @@
    "type": "programming",
    "color": "#2f2530",
    "hue": 294.55,
+   "modeline": "brainfuck",
    "runner": "bf \"{file}\"",
    "real_template": true
   },
@@ -6702,6 +7370,7 @@
    "type": "programming",
    "color": "#dc75e5",
    "hue": 295.18,
+   "modeline": "zil",
    "runner": null,
    "real_template": false
   },
@@ -6713,6 +7382,7 @@
    "type": "programming",
    "color": "#a957b0",
    "hue": 295.28,
+   "modeline": "aspectj",
    "runner": null,
    "real_template": false
   },
@@ -6724,17 +7394,19 @@
    "type": "data",
    "color": "#df66e4",
    "hue": 297.62,
+   "modeline": "textmate-properties",
    "runner": null,
    "real_template": false
   },
   {
    "language": "xBase",
    "layer": "core",
-   "path": "hello/core/xbase/hello.ch",
-   "extension": ".ch",
+   "path": "hello/core/xbase/hello.prg",
+   "extension": ".prg",
    "type": "programming",
    "color": "#403a40",
    "hue": 300.0,
+   "modeline": "xbase",
    "runner": null,
    "real_template": false
   },
@@ -6746,17 +7418,19 @@
    "type": "programming",
    "color": "#4f3a4f",
    "hue": 300.0,
+   "modeline": "hip",
    "runner": null,
    "real_template": true
   },
   {
    "language": "XSLT",
    "layer": "core",
-   "path": "hello/core/xslt/hello.xsl",
-   "extension": ".xsl",
+   "path": "hello/core/xslt/hello.xslt",
+   "extension": ".xslt",
    "type": "programming",
    "color": "#eb8ceb",
    "hue": 300.0,
+   "modeline": "xslt",
    "runner": null,
    "real_template": false
   },
@@ -6768,6 +7442,7 @@
    "type": "programming",
    "color": "#f0a9f0",
    "hue": 300.0,
+   "modeline": "gnuplot",
    "runner": null,
    "real_template": true
   },
@@ -6779,6 +7454,7 @@
    "type": "programming",
    "color": "#8f0f8d",
    "hue": 300.94,
+   "modeline": "powerbuilder",
    "runner": null,
    "real_template": false
   },
@@ -6790,6 +7466,7 @@
    "type": "programming",
    "color": "#ed2cd6",
    "hue": 307.15,
+   "modeline": "coldfusion",
    "runner": null,
    "real_template": false
   },
@@ -6801,6 +7478,7 @@
    "type": "programming",
    "color": "#ed2cd6",
    "hue": 307.15,
+   "modeline": "coldfusion-cfc",
    "runner": null,
    "real_template": false
   },
@@ -6812,6 +7490,7 @@
    "type": "programming",
    "color": "#843179",
    "hue": 307.95,
+   "modeline": "jolie",
    "runner": null,
    "real_template": false
   },
@@ -6823,6 +7502,7 @@
    "type": "programming",
    "color": "#ffaff3",
    "hue": 309.0,
+   "modeline": "gleam",
    "runner": null,
    "real_template": true
   },
@@ -6834,6 +7514,7 @@
    "type": "programming",
    "color": "#a9188d",
    "hue": 311.59,
+   "modeline": "io",
    "runner": null,
    "real_template": true
   },
@@ -6845,6 +7526,7 @@
    "type": "programming",
    "color": "#c80fa0",
    "hue": 312.97,
+   "modeline": "boogie",
    "runner": null,
    "real_template": false
   },
@@ -6856,6 +7538,7 @@
    "type": "programming",
    "color": "#c30e9b",
    "hue": 313.26,
+   "modeline": "awk",
    "runner": "awk -f \"{file}\" /dev/null",
    "real_template": false
   },
@@ -6867,6 +7550,7 @@
    "type": "data",
    "color": "#a5318a",
    "hue": 313.97,
+   "modeline": "spicedb-schema",
    "runner": null,
    "real_template": false
   },
@@ -6878,6 +7562,7 @@
    "type": "programming",
    "color": "#b83998",
    "hue": 315.12,
+   "modeline": "erlang",
    "runner": "escript \"{file}\"",
    "real_template": true
   },
@@ -6889,6 +7574,7 @@
    "type": "programming",
    "color": "#531242",
    "hue": 315.69,
+   "modeline": "curry",
    "runner": null,
    "real_template": true
   },
@@ -6900,6 +7586,7 @@
    "type": "data",
    "color": "#a9157e",
    "hue": 317.43,
+   "modeline": "ant-build-system",
    "runner": null,
    "real_template": true
   },
@@ -6911,17 +7598,19 @@
    "type": "programming",
    "color": "#8a1267",
    "hue": 317.5,
+   "modeline": "ecl",
    "runner": null,
    "real_template": false
   },
   {
    "language": "GraphQL",
    "layer": "core",
-   "path": "hello/core/graphql/hello.gql",
-   "extension": ".gql",
+   "path": "hello/core/graphql/hello.graphql",
+   "extension": ".graphql",
    "type": "data",
    "color": "#e10098",
    "hue": 319.47,
+   "modeline": "graphql",
    "runner": null,
    "real_template": true
   },
@@ -6933,6 +7622,7 @@
    "type": "programming",
    "color": "#990066",
    "hue": 320.0,
+   "modeline": "liquidsoap",
    "runner": null,
    "real_template": false
   },
@@ -6944,6 +7634,7 @@
    "type": "programming",
    "color": "#cc0088",
    "hue": 320.0,
+   "modeline": "rouge",
    "runner": null,
    "real_template": false
   },
@@ -6955,6 +7646,7 @@
    "type": "programming",
    "color": "#ff00a0",
    "hue": 322.35,
+   "modeline": "surrealql",
    "runner": null,
    "real_template": false
   },
@@ -6966,17 +7658,19 @@
    "type": "programming",
    "color": "#b92381",
    "hue": 322.4,
+   "modeline": "moonbit",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Antlers",
    "layer": "core",
-   "path": "hello/core/antlers/hello.antlers.php",
-   "extension": ".antlers.php",
+   "path": "hello/core/antlers/hello.antlers.html",
+   "extension": ".antlers.html",
    "type": "markup",
    "color": "#ff269e",
    "hue": 326.82,
+   "modeline": "antlers",
    "runner": null,
    "real_template": false
   },
@@ -6988,6 +7682,7 @@
    "type": "programming",
    "color": "#d80074",
    "hue": 327.78,
+   "modeline": "pogoscript",
    "runner": null,
    "real_template": false
   },
@@ -6999,6 +7694,7 @@
    "type": "programming",
    "color": "#ff0288",
    "hue": 328.22,
+   "modeline": "hurl",
    "runner": null,
    "real_template": false
   },
@@ -7010,6 +7706,7 @@
    "type": "markup",
    "color": "#ff0080",
    "hue": 329.88,
+   "modeline": "vento",
    "runner": null,
    "real_template": false
   },
@@ -7021,6 +7718,7 @@
    "type": "markup",
    "color": "#a53b70",
    "hue": 330.0,
+   "modeline": "sass",
    "runner": null,
    "real_template": false
   },
@@ -7032,6 +7730,7 @@
    "type": "programming",
    "color": "#975777",
    "hue": 330.0,
+   "modeline": "quakec",
    "runner": null,
    "real_template": false
   },
@@ -7043,6 +7742,7 @@
    "type": "markup",
    "color": "#c6538c",
    "hue": 330.26,
+   "modeline": "scss",
    "runner": null,
    "real_template": false
   },
@@ -7054,6 +7754,7 @@
    "type": "programming",
    "color": "#913960",
    "hue": 333.41,
+   "modeline": "ec",
    "runner": null,
    "real_template": false
   },
@@ -7065,6 +7766,7 @@
    "type": "data",
    "color": "#913960",
    "hue": 333.41,
+   "modeline": "ecere-projects",
    "runner": null,
    "real_template": false
   },
@@ -7076,6 +7778,7 @@
    "type": "markup",
    "color": "#a91e50",
    "hue": 338.42,
+   "modeline": "ejs",
    "runner": null,
    "real_template": false
   },
@@ -7087,6 +7790,7 @@
    "type": "data",
    "color": "#d70751",
    "hue": 338.65,
+   "modeline": "debian-package-control-file",
    "runner": null,
    "real_template": false
   },
@@ -7098,6 +7802,7 @@
    "type": "programming",
    "color": "#ff4585",
    "hue": 339.35,
+   "modeline": "moonscript",
    "runner": null,
    "real_template": false
   },
@@ -7109,6 +7814,7 @@
    "type": "programming",
    "color": "#ff0c5a",
    "hue": 340.74,
+   "modeline": "objective-j",
    "runner": null,
    "real_template": false
   },
@@ -7120,6 +7826,7 @@
    "type": "markup",
    "color": "#a71e49",
    "hue": 341.17,
+   "modeline": "riot",
    "runner": null,
    "real_template": false
   },
@@ -7131,17 +7838,19 @@
    "type": "programming",
    "color": "#5f021f",
    "hue": 341.29,
+   "modeline": "futhark",
    "runner": null,
    "real_template": false
   },
   {
    "language": "C++",
    "layer": "core",
-   "path": "hello/core/c++/hello.cc",
-   "extension": ".cc",
+   "path": "hello/core/c++/hello.cpp",
+   "extension": ".cpp",
    "type": "programming",
    "color": "#f34b7d",
    "hue": 342.14,
+   "modeline": "c++",
    "runner": "c++ -O -o /tmp/hw_cpp \"{file}\" && /tmp/hw_cpp",
    "real_template": true
   },
@@ -7153,17 +7862,19 @@
    "type": "markup",
    "color": "#ff3670",
    "hue": 342.69,
+   "modeline": "mermaid",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Prolog",
    "layer": "core",
-   "path": "hello/core/prolog/hello.yap",
-   "extension": ".yap",
+   "path": "hello/core/prolog/hello.prolog",
+   "extension": ".prolog",
    "type": "programming",
    "color": "#74283c",
    "hue": 344.21,
+   "modeline": "prolog",
    "runner": null,
    "real_template": false
   },
@@ -7175,6 +7886,7 @@
    "type": "programming",
    "color": "#a52f4e",
    "hue": 344.24,
+   "modeline": "beef",
    "runner": null,
    "real_template": true
   },
@@ -7186,6 +7898,7 @@
    "type": "programming",
    "color": "#c7254e",
    "hue": 344.81,
+   "modeline": "jq",
    "runner": "jq -r .hello \"{file}\"",
    "real_template": true
   },
@@ -7197,6 +7910,7 @@
    "type": "programming",
    "color": "#c8506d",
    "hue": 345.5,
+   "modeline": "praat",
    "runner": null,
    "real_template": false
   },
@@ -7208,6 +7922,7 @@
    "type": "data",
    "color": "#c8506d",
    "hue": 345.5,
+   "modeline": "textgrid",
    "runner": null,
    "real_template": false
   },
@@ -7219,6 +7934,7 @@
    "type": "programming",
    "color": "#951531",
    "hue": 346.88,
+   "modeline": "genshi",
    "runner": null,
    "real_template": false
   },
@@ -7230,6 +7946,7 @@
    "type": "programming",
    "color": "#b5314c",
    "hue": 347.73,
+   "modeline": "common-workflow-language",
    "runner": null,
    "real_template": false
   },
@@ -7241,6 +7958,7 @@
    "type": "programming",
    "color": "#f7a8b8",
    "hue": 347.85,
+   "modeline": "pact",
    "runner": null,
    "real_template": false
   },
@@ -7252,6 +7970,7 @@
    "type": "programming",
    "color": "#fcd7de",
    "hue": 348.65,
+   "modeline": "piglatin",
    "runner": null,
    "real_template": false
   },
@@ -7263,6 +7982,7 @@
    "type": "programming",
    "color": "#e8274b",
    "hue": 348.81,
+   "modeline": "abap",
    "runner": null,
    "real_template": false
   },
@@ -7274,6 +7994,7 @@
    "type": "programming",
    "color": "#c40023",
    "hue": 349.29,
+   "modeline": "tl-verilog",
    "runner": null,
    "real_template": false
   },
@@ -7285,6 +8006,7 @@
    "type": "data",
    "color": "#ed284a",
    "hue": 349.64,
+   "modeline": "flatbuffers",
    "runner": null,
    "real_template": false
   },
@@ -7296,6 +8018,7 @@
    "type": "programming",
    "color": "#dc566d",
    "hue": 349.7,
+   "modeline": "standard-ml",
    "runner": "sml < \"{file}\"",
    "real_template": true
   },
@@ -7307,6 +8030,7 @@
    "type": "programming",
    "color": "#882233",
    "hue": 350.0,
+   "modeline": "quake",
    "runner": null,
    "real_template": false
   },
@@ -7318,6 +8042,7 @@
    "type": "data",
    "color": "#ee2647",
    "hue": 350.1,
+   "modeline": "vcard",
    "runner": null,
    "real_template": false
   },
@@ -7329,6 +8054,7 @@
    "type": "programming",
    "color": "#b2011d",
    "hue": 350.51,
+   "modeline": "stan",
    "runner": null,
    "real_template": true
   },
@@ -7340,17 +8066,19 @@
    "type": "programming",
    "color": "#d4bec1",
    "hue": 351.82,
+   "modeline": "boo",
    "runner": null,
    "real_template": false
   },
   {
    "language": "Scala",
    "layer": "core",
-   "path": "hello/core/scala/hello.sbt",
-   "extension": ".sbt",
+   "path": "hello/core/scala/hello.scala",
+   "extension": ".scala",
    "type": "programming",
    "color": "#c22d40",
    "hue": 352.35,
+   "modeline": "scala",
    "runner": "scala -e \"$(cat \"{file}\")\"",
    "real_template": true
   },
@@ -7362,6 +8090,7 @@
    "type": "programming",
    "color": "#cf142b",
    "hue": 352.62,
+   "modeline": "turing",
    "runner": null,
    "real_template": false
   },
@@ -7373,6 +8102,7 @@
    "type": "programming",
    "color": "#ff6375",
    "hue": 353.08,
+   "modeline": "netlogo",
    "runner": null,
    "real_template": false
   },
@@ -7384,6 +8114,7 @@
    "type": "programming",
    "color": "#de1d31",
    "hue": 353.78,
+   "modeline": "modelica",
    "runner": null,
    "real_template": false
   },
@@ -7395,6 +8126,7 @@
    "type": "programming",
    "color": "#ca0f21",
    "hue": 354.22,
+   "modeline": "scilab",
    "runner": null,
    "real_template": true
   },
@@ -7406,6 +8138,7 @@
    "type": "programming",
    "color": "#e22837",
    "hue": 355.16,
+   "modeline": "mcfunction",
    "runner": null,
    "real_template": false
   },
@@ -7417,6 +8150,7 @@
    "type": "data",
    "color": "#fff1f2",
    "hue": 355.71,
+   "modeline": "editorconfig",
    "runner": null,
    "real_template": true
   },
@@ -7428,6 +8162,7 @@
    "type": "programming",
    "color": "#ba595e",
    "hue": 356.91,
+   "modeline": "d",
    "runner": "ldc2 \"{file}\" -of=/tmp/hw_d && /tmp/hw_d",
    "real_template": false
   },
@@ -7439,6 +8174,7 @@
    "type": "programming",
    "color": "#572e30",
    "hue": 357.07,
+   "modeline": "f*",
    "runner": null,
    "real_template": true
   },
@@ -7450,6 +8186,7 @@
    "type": "programming",
    "color": "#de3941",
    "hue": 357.09,
+   "modeline": "routeros-script",
    "runner": null,
    "real_template": false
   },
@@ -7461,6 +8198,7 @@
    "type": "data",
    "color": "#cb171e",
    "hue": 357.67,
+   "modeline": "yaml",
    "runner": null,
    "real_template": true
   },
@@ -7472,6 +8210,7 @@
    "type": "data",
    "color": "#d12127",
    "hue": 357.95,
+   "modeline": "apacheconf",
    "runner": null,
    "real_template": false
   },
@@ -7483,6 +8222,7 @@
    "type": "programming",
    "color": "#d12127",
    "hue": 357.95,
+   "modeline": "thrift",
    "runner": null,
    "real_template": true
   },
@@ -7494,6 +8234,7 @@
    "type": "markup",
    "color": "#bd181a",
    "hue": 359.27,
+   "modeline": "scaml",
    "runner": null,
    "real_template": false
   },
@@ -7505,6 +8246,7 @@
    "type": "programming",
    "color": "#a54c4d",
    "hue": 359.33,
+   "modeline": "unrealscript",
    "runner": null,
    "real_template": false
   },
@@ -7516,6 +8258,7 @@
    "type": "data",
    "color": "#701516",
    "hue": 359.34,
+   "modeline": "gemfile.lock",
    "runner": null,
    "real_template": false
   },
@@ -7527,6 +8270,7 @@
    "type": "markup",
    "color": "#701516",
    "hue": 359.34,
+   "modeline": "html+erb",
    "runner": null,
    "real_template": false
   },
@@ -7538,6 +8282,7 @@
    "type": "data",
    "color": "#701516",
    "hue": 359.34,
+   "modeline": "rbs",
    "runner": null,
    "real_template": false
   },
@@ -7549,6 +8294,7 @@
    "type": "prose",
    "color": "#701516",
    "hue": 359.34,
+   "modeline": "rdoc",
    "runner": null,
    "real_template": false
   },
@@ -7560,6 +8306,7 @@
    "type": "programming",
    "color": "#701516",
    "hue": 359.34,
+   "modeline": "ruby",
    "runner": "ruby \"{file}\"",
    "real_template": true
   },
@@ -7571,6 +8318,7 @@
    "type": "programming",
    "color": "#a23738",
    "hue": 359.44,
+   "modeline": "wollok",
    "runner": null,
    "real_template": false
   },
@@ -7582,6 +8330,7 @@
    "type": "programming",
    "color": "#ed5051",
    "hue": 359.62,
+   "modeline": "rescript",
    "runner": null,
    "real_template": false
   },
@@ -27683,17 +28432,6 @@
    "real_template": false
   },
   {
-   "language": "Elvish Transcript",
-   "layer": "full",
-   "path": "hello/full/elvish-transcript/hello.elvish_transcript",
-   "extension": ".elvish_transcript",
-   "type": "programming",
-   "color": "##55BB55",
-   "hue": null,
-   "runner": null,
-   "real_template": false
-  },
-  {
    "language": "Emails",
    "layer": "full",
    "path": "hello/full/emails/hello.emails",
@@ -40751,17 +41489,6 @@
    "real_template": false
   },
   {
-   "language": "Julia REPL",
-   "layer": "full",
-   "path": "hello/full/julia-repl/hello.julia_repl",
-   "extension": ".julia_repl",
-   "type": "programming",
-   "color": "##a270ba",
-   "hue": null,
-   "runner": null,
-   "real_template": true
-  },
-  {
    "language": "Julia Shell",
    "layer": "full",
    "path": "hello/full/julia-shell/hello.julia_shell",
@@ -52697,28 +53424,6 @@
    "real_template": false
   },
   {
-   "language": "OpenAPI Specification v2",
-   "layer": "full",
-   "path": "hello/full/openapi-specification-v2/hello.openapi_specification_v2",
-   "extension": ".openapi_specification_v2",
-   "type": "data",
-   "color": "##85ea2d",
-   "hue": null,
-   "runner": null,
-   "real_template": true
-  },
-  {
-   "language": "OpenAPI Specification v3",
-   "layer": "full",
-   "path": "hello/full/openapi-specification-v3/hello.openapi_specification_v3",
-   "extension": ".openapi_specification_v3",
-   "type": "data",
-   "color": "##85ea2d",
-   "hue": null,
-   "runner": null,
-   "real_template": true
-  },
-  {
    "language": "OpenCog",
    "layer": "full",
    "path": "hello/full/opencog/hello.opencog",
@@ -58437,17 +59142,6 @@
    "hue": null,
    "runner": null,
    "real_template": false
-  },
-  {
-   "language": "Python console",
-   "layer": "full",
-   "path": "hello/full/python-console/hello.python_console",
-   "extension": ".python_console",
-   "type": "programming",
-   "color": "##3572A5",
-   "hue": null,
-   "runner": null,
-   "real_template": true
   },
   {
    "language": "Python Server Pages",

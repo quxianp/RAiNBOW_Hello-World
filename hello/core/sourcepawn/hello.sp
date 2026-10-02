@@ -1,4 +1,4 @@
-# vim: set ft=sourcemod:
+# -*- mode: sourcepawn -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SourcePawn - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f69e1d
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SourcePawn :: RAiNBOW_Hello-World
-// rainbow-pad    
+// rainbow-pad  

@@ -1,4 +1,4 @@
-# vim: set ft=acfm:
+# -*- mode: adobe-font-metrics -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Adobe Font Metrics - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fa0f00
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Adobe Font Metrics
+// rainbow-pad    

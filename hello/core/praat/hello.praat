@@ -1,4 +1,4 @@
-# vim: set ft=praat:
+# -*- mode: praat -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Praat - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c8506d
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Praat :: RAiNBOW_Hello-World
 // rainbow-pad colour #c8506d :: padded to 100
-    
+   

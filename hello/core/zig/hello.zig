@@ -1,4 +1,4 @@
-// vim: set ft=zig:
+// -*- mode: zig -*-
 // Zig - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #ec915c
 //   hue        : 22.1 deg

@@ -1,4 +1,4 @@
-# vim: set ft=oxygene:
+# -*- mode: oxygene -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Oxygene - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #cdd0e3
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Oxygene :: RAiNBOW_Hello-World
-// rainbow-pad colour #cdd0e3 :: padd
+// rainbow-pad colour #cdd0e3 :: pad

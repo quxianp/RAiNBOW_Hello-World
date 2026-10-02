@@ -1,4 +1,4 @@
-# vim: set ft=pawn:
+# -*- mode: pawn -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Pawn - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dbb284
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Pawn :: RAiNBOW_Hello-World
 // rainbow-pad colour #dbb284 :: padded to 100
-            
+           

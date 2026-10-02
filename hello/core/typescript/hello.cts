@@ -1,4 +1,4 @@
-# vim: set ft=ts:
+# -*- mode: typescript -*-
 # TypeScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3178c6
 #   hue        : 211.4 deg
@@ -35,5 +35,4 @@ console.log("Hello World!");
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad TypeScript :: RAiNBOW_Hello-World
 // rainbow-pad colour #3178c6 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-  
+// rainbow-pad padding comment: byte balancing for the rainb

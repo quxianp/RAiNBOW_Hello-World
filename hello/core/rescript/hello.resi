@@ -1,4 +1,4 @@
-# vim: set ft=rescript:
+# -*- mode: rescript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ReScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ed5051
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ReScript :: RAiNBOW_Hello-World
-// rainbow-pad colour #ed5051 
+// rainbow-pad colour #ed5051

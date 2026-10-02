@@ -1,4 +1,4 @@
-# vim: set ft=lolcode:
+# -*- mode: lolcode -*-
 # LOLCODE - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #cc9900
 #   hue        : 45.0 deg
@@ -38,4 +38,4 @@ KTHXBYE
 // rainbow-pad LOLCODE :: RAiNBOW_Hello-World
 // rainbow-pad colour #cc9900 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-        
+       

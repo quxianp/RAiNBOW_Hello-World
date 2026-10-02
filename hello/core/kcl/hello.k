@@ -1,4 +1,4 @@
-# vim: set ft=kcl:
+# -*- mode: kcl -*-
 # KCL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7ababf
 #   hue        : 184.3 deg
@@ -36,4 +36,4 @@
 // rainbow-pad KCL :: RAiNBOW_Hello-World
 // rainbow-pad colour #7ababf :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-W
+// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-

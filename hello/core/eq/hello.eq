@@ -1,4 +1,4 @@
-# vim: set ft=eq:
+# -*- mode: eq -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # EQ - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a78649
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad EQ :: RAiNBOW_Hello-World
 // rainbow-pad colour #a78649 :: padded to 100
-// rainbow-pad padding com
+// rainbow-pad padding co

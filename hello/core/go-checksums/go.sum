@@ -1,4 +1,4 @@
-# vim: set ft=go.sum:
+# -*- mode: go-checksums -*-
 # Go Checksums - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00add8
 #   hue        : 191.9 deg
@@ -13,13 +13,6 @@ import "fmt"
 func main() {
 	fmt.Println("Hello World!")
 }
-
-
-
-
-
-
-
 
 
 

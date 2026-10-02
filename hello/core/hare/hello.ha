@@ -1,4 +1,4 @@
-# vim: set ft=hare:
+# -*- mode: hare -*-
 # Hare - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9d7424
 #   hue        : 39.7 deg
@@ -39,4 +39,4 @@ export fn main() void {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Hare :: RAiNBOW_Hello-World
 // rainbow-pad colour #9d7424 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow ba
+// rainbow-pad padding comment: byte balancing for the rainbow b

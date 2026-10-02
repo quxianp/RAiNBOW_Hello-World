@@ -1,4 +1,4 @@
-# vim: set ft=nearley:
+# -*- mode: nearley -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Nearley - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #990000
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Nearley :: RAiNBOW_Hello-World
-// rainbow-pad colour #990000 :: padded
+// rainbow-pad colour #990000 :: padde

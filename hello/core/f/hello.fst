@@ -1,4 +1,4 @@
-# vim: set ft=fstar:
+# -*- mode: f* -*-
 # F* - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #572e30
 #   hue        : 357.1 deg
@@ -37,4 +37,4 @@ let hello : string = "Hello World!"
 // rainbow-pad F* :: RAiNBOW_Hello-World
 // rainbow-pad colour #572e30 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://gith
+// rainbow-pad https://github

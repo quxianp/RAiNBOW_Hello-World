@@ -1,4 +1,4 @@
-# vim: set ft=langium:
+# -*- mode: langium -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Langium - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2c8c87
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Langium :: RAiNBOW_Hello-World
-// rainbow-pad colour #2c8c87 :: padd
+// rainbow-pad colour #2c8c87 :: pad

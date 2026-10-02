@@ -1,4 +1,4 @@
-# vim: set ft=csound-sco:
+# -*- mode: csound-score -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Csound Score - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1a1a1a
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Csound Score :: RAiNBOW_Hello-World
-      
+   

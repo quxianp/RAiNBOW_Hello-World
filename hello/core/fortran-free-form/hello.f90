@@ -1,4 +1,4 @@
-# vim: set ft=fortran-free-form:
+# -*- mode: fortran-free-form -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Fortran Free Form - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4d41b1
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Fortran 
+// rainbow-pad        

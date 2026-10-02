@@ -1,4 +1,4 @@
-# vim: set ft=supercollider:
+# -*- mode: supercollider -*-
 # SuperCollider - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #46390b
 #   hue        : 46.8 deg
@@ -35,4 +35,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SuperCollider :: RAiNBOW_Hello-World
 // rainbow-pad colour #46390b :: padded to 100
-// rainbow-pad padding comment: byte balancin
+// rainbow-pad padding comment: byte balanci

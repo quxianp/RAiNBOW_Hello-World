@@ -1,4 +1,4 @@
-# vim: set ft=talon:
+# -*- mode: talon -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Talon - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #333333
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Talon :: RAiNBOW_Hello-World
 // rainbow-pad colour #333333 :: padded to 100
-      
+     

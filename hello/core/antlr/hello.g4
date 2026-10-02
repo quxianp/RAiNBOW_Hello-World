@@ -1,4 +1,4 @@
-# vim: set ft=antlr:
+# -*- mode: antlr -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ANTLR - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9dc3ff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ANTLR :: RAiNBOW_Hello-World
 // rainbow-pad colour #9dc3ff :: padded to 100
-    
+   

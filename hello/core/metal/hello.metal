@@ -1,4 +1,4 @@
-// vim: set ft=metal:
+// -*- mode: metal -*-
 // Metal - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #8f14e9
 //   hue        : 274.6 deg
@@ -37,4 +37,4 @@ kernel void hello() { }
 // rainbow-pad Metal :: RAiNBOW_Hello-World
 // rainbow-pad colour #8f14e9 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-   
+  

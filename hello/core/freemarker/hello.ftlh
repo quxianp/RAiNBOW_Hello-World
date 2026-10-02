@@ -1,4 +1,4 @@
-# vim: set ft=ftl:
+# -*- mode: freemarker -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # FreeMarker - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0050b2
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad FreeMarker :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad 

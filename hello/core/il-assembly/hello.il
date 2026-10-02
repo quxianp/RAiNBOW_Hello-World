@@ -1,4 +1,4 @@
-# vim: set ft=ilasm:
+# -*- mode: il-assembly -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # IL Assembly - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #512bd4
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad IL Assembly :: RAiNBOW_Hello-World
-// rainbow-pad 
+        

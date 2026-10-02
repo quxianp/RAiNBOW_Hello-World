@@ -1,4 +1,4 @@
-# vim: set ft=apollo-guidance-computer:
+# -*- mode: apollo-guidance-computer -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Apollo Guidance Computer - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0b3d91
@@ -34,4 +34,4 @@
 // rainbow-pad padding comment: byte balancing for the rainbow bar
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist
+// rainbow-pad one segment per Linguis

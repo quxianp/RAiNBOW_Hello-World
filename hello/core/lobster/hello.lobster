@@ -1,4 +1,4 @@
-# vim: set ft=lobster:
+# -*- mode: lobster -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Lobster - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f95428
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Lobster :: RAiNBOW_Hello-World
-// rainbow-pad colour #f95428 :: padde
+// rainbow-pad colour #f95428 :: padd

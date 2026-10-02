@@ -1,4 +1,4 @@
-# vim: set ft=parrot:
+# -*- mode: parrot -*-
 # Parrot - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f3ca0a
 #   hue        : 49.4 deg
@@ -36,4 +36,4 @@
 // rainbow-pad Parrot :: RAiNBOW_Hello-World
 // rainbow-pad colour #f3ca0a :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github
+// rainbow-pad https://githu

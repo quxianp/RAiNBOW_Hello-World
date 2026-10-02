@@ -1,4 +1,4 @@
-# vim: set ft=clean:
+# -*- mode: clean -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Clean - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3f85af
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Clean :: RAiNBOW_Hello-World
 // rainbow-pad colour #3f85af :: padded to 100
-    
+   

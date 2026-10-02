@@ -1,4 +1,4 @@
-# vim: set ft=saltstack:
+# -*- mode: salt -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Salt - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #57bcad
@@ -37,4 +37,4 @@
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Salt :: RAiNBOW_Hello-World
 ; rainbow-pad colour #57bcad :: padded to 100
-; rainbow-pad padding comment: byte 
+; rainbow-pad padding comment: byte bala

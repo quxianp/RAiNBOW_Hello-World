@@ -1,4 +1,4 @@
-# vim: set ft=oasv3:
+# -*- mode: openapi-specification-v3 -*-
 # OpenAPI Specification v3 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #85ea2d
 #   hue        : 92.1 deg
@@ -37,4 +37,4 @@ paths: {}
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad OpenAPI Specification v3 :: RAiNBOW
+// rainbow-pad OpenAPI Specifi

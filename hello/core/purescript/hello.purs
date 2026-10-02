@@ -1,4 +1,4 @@
-# vim: set ft=purescript:
+# -*- mode: purescript -*-
 # PureScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1d222d
 #   hue        : 221.2 deg
@@ -40,4 +40,4 @@ main = log "Hello World!"
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad PureScript :: RAiNBOW_Hello-World
-      
+     

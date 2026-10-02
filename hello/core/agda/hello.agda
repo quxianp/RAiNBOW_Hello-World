@@ -1,4 +1,4 @@
-# vim: set ft=agda:
+# -*- mode: agda -*-
 # Agda - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #315665
 #   hue        : 197.3 deg
@@ -39,4 +39,4 @@ postulate
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Agda :: RAiNBOW_Hello-World
 -- rainbow-pad colour #315665 :: padded to 100
--- rainbow-pad padding comment: byte balan
+-- rainbow-pad padding comment: byte bala

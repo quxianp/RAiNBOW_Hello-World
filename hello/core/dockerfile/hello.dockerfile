@@ -1,4 +1,4 @@
-# vim: set ft=Containerfile:
+# -*- mode: dockerfile -*-
 # Dockerfile - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #384d54
 #   hue        : 195.0 deg
@@ -36,4 +36,4 @@ RUN echo "Hello World!"
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Dockerfile :: RAiNBOW_Hello-World
 // rainbow-pad colour #384d54 :: padded to 100
-// rainbow-pad padding comment: byte balancing for 
+// rainbow-pad padding comment: byte balancing for th

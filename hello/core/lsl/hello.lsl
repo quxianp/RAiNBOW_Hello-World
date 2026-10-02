@@ -1,4 +1,4 @@
-# vim: set ft=lsl:
+# -*- mode: lsl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # LSL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3d9970
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad LSL :: RAiNBOW_Hello-World
 // rainbow-pad colour #3d9970 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

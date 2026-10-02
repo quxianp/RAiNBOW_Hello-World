@@ -1,4 +1,4 @@
-# vim: set ft=cweb:
+# -*- mode: cweb -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # CWeb - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00007a
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad CWeb :: RAiNBOW_Hello-World
 // rainbow-pad colour #00007a :: padded to 100
-           
+          

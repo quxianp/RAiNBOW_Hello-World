@@ -1,4 +1,4 @@
-# vim: set ft=processing:
+# -*- mode: processing -*-
 # Processing - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0096d8
 #   hue        : 198.3 deg
@@ -37,4 +37,4 @@ void setup() {
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Processing :: RAiNBOW_Hello-World
 // rainbow-pad colour #0096d8 :: padded to 100
-// rainbow-pad padding comment: byte balancing
+// rainbow-pad padding comment: byte balancin

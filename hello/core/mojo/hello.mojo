@@ -1,4 +1,4 @@
-# vim: set ft=mojo:
+# -*- mode: mojo -*-
 # Mojo - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff4c1f
 #   hue        : 12.1 deg
@@ -37,4 +37,4 @@ fn main():
 // rainbow-pad Mojo :: RAiNBOW_Hello-World
 // rainbow-pad colour #ff4c1f :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github
+// rainbow-pad https://githu

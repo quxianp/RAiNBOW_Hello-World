@@ -1,4 +1,4 @@
-# vim: set ft=windows-registry-entries:
+# -*- mode: windows-registry-entries -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Windows Registry Entries - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #52d5ff
@@ -34,4 +34,4 @@ REM rainbow-pad colour #52d5ff :: padded to 100
 REM rainbow-pad padding comment: byte balancing for the rainbow bar
 REM rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 REM rainbow-pad equal byte share keeps the language bar an even rainbow
-            
+           

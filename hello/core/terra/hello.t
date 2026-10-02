@@ -1,4 +1,4 @@
-# vim: set ft=terra:
+# -*- mode: terra -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Terra - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00004c
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Terra :: RAiNBOW_Hello-World
 # rainbow-pad colour #00004c :: padded to 100
-# rainbow-pad padding comment: byt
+# rainbow-pad padding comment: by

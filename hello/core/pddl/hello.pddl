@@ -1,4 +1,4 @@
-# vim: set ft=pddl:
+# -*- mode: pddl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # PDDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0d00ff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad PDDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #0d00ff :: padded to 100
-           
+          

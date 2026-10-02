@@ -1,4 +1,4 @@
-# vim: set ft=crystal:
+# -*- mode: crystal -*-
 # Crystal - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #000100
 #   hue        : 120.0 deg
@@ -36,4 +36,4 @@ puts "Hello World!"
 # rainbow-pad Crystal :: RAiNBOW_Hello-World
 # rainbow-pad colour #000100 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hell
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hel

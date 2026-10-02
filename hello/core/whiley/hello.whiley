@@ -1,4 +1,4 @@
-# vim: set ft=whiley:
+# -*- mode: whiley -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Whiley - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d5c397
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Whiley :: RAiNBOW_Hello-World
-// rainbow-pad colour #d5c397 :: padded to 10
+// rainbow-pad colour #d5c397 :: padded to 1

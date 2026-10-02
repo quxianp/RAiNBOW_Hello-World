@@ -1,4 +1,4 @@
-# vim: set ft=rascal:
+# -*- mode: rascal -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Rascal - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fffaa0
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Rascal :: RAiNBOW_Hello-World
-// rainbow-pad colour #fffaa0 :: padded to 10
+// rainbow-pad colour #fffaa0 :: padded to 1

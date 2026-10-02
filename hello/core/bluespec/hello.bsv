@@ -1,4 +1,4 @@
-# vim: set ft=bsv:
+# -*- mode: bluespec -*-
 # Bluespec - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #12223c
 #   hue        : 217.1 deg
@@ -38,4 +38,4 @@ endmodule
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Bluespec :: RAiNBOW_Hello-World
 // rainbow-pad colour #12223c :: padded to 100
-// rainbow-pad padding comment: byte balancing for 
+// rainbow-pad padding comment: byte balancin

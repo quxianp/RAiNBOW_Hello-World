@@ -1,4 +1,4 @@
-// vim: set ft=thrift:
+// -*- mode: thrift -*-
 // Thrift - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #d12127
 //   hue        : 357.9 deg
@@ -39,4 +39,4 @@ service HelloService {
 # rainbow-pad Thrift :: RAiNBOW_Hello-World
 # rainbow-pad colour #d12127 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-           
+          

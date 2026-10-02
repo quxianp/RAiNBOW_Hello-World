@@ -1,4 +1,4 @@
-# vim: set ft=fancy:
+# -*- mode: fancy -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Fancy - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7b9db4
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Fancy :: RAiNBOW_Hello-World
 // rainbow-pad colour #7b9db4 :: padded to 100
-    
+   

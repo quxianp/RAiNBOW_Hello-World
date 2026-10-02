@@ -1,4 +1,4 @@
-# vim: set ft=coq:
+# -*- mode: rocq-prover -*-
 # Rocq Prover - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d0b68c
 #   hue        : 37.1 deg
@@ -36,4 +36,4 @@ Definition hello : string := "Hello World!".
 % rainbow-pad Rocq Prover :: RAiNBOW_Hello-World
 % rainbow-pad colour #d0b68c :: padded to 100
 % rainbow-pad padding comment: byte balancing for the rainbow bar
-         
+

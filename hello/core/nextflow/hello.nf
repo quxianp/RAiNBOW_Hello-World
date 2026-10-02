@@ -1,4 +1,4 @@
-# vim: set ft=nextflow:
+# -*- mode: nextflow -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Nextflow - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3ac486
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Nextflow :: RAiNBOW_Hello-World
-// rainbow-pad colour #3ac486 
+// rainbow-pad colour #3ac486

@@ -1,4 +1,4 @@
-# vim: set ft=jar-manifest:
+# -*- mode: jar-manifest -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # JAR Manifest - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b07219
@@ -36,4 +36,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad JAR Manifest :: RAiNBOW_Hello-World
-# rainbow-pad colour #b07219 :: 
+# rainbow-pad colour #b07219 ::

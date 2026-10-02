@@ -1,4 +1,4 @@
-# vim: set ft=textgrid:
+# -*- mode: textgrid -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TextGrid - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c8506d
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad TextGrid :: RAiNBOW_Hello-World
-// rainbow-pad colour #c8506d 
+// rainbow-pad colour #c8506d

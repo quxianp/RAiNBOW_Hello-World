@@ -1,4 +1,4 @@
-# vim: set ft=ceylon:
+# -*- mode: ceylon -*-
 # Ceylon - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dfa535
 #   hue        : 39.5 deg
@@ -38,4 +38,4 @@ shared void run() {
 // rainbow-pad Ceylon :: RAiNBOW_Hello-World
 // rainbow-pad colour #dfa535 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-   
+  

@@ -1,4 +1,4 @@
-# vim: set ft=netlogo:
+# -*- mode: netlogo -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NetLogo - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff6375
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad NetLogo :: RAiNBOW_Hello-World
-// rainbow-pad colour #ff6375 :: padd
+// rainbow-pad colour #ff6375 :: pad

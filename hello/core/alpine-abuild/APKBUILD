@@ -1,4 +1,4 @@
-# vim: set ft=abuild:
+# -*- mode: alpine-abuild -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Alpine Abuild - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0d597f
@@ -36,4 +36,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Alpine Abuild :: RAiNBOW_Hello-World
-# rainbow-pad colour #0d597f ::
+# rainbow-pad colour #0

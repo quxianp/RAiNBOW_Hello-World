@@ -1,4 +1,4 @@
-# vim: set ft=opts:
+# -*- mode: option-list -*-
 # Option List - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #476732
 #   hue        : 96.2 deg
@@ -35,5 +35,4 @@ message = Hello World!
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Option List :: RAiNBOW_Hello-World
 // rainbow-pad colour #476732 :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
- 
+// rainbow-pad padding comment: byte balancing for the rainb

@@ -1,4 +1,4 @@
-# vim: set ft=csound-orc:
+# -*- mode: csound -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Csound - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #1a1a1a
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Csound :: RAiNBOW_Hello-World
-// rainbow-pad colour #1a1a1a :: padded to
+// rainbow-pad colour #1a1a1a :: padded to 10

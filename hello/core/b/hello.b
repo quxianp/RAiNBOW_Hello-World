@@ -1,4 +1,4 @@
-# vim: set ft=b:
+# -*- mode: b -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # B - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #da7666
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad B :: RAiNBOW_Hello-World
 // rainbow-pad colour #da7666 :: padded to 100
-// rainbow-pad padding comment: by
+// rainbow-pad padding comment: b

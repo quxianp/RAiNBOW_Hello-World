@@ -1,4 +1,4 @@
-; vim: set ft=vb6:
+; -*- mode: visual-basic-6.0 -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; Visual Basic 6.0 - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #2c6353
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Visual Basic 6.0 :: RAiNBOW
+// rainbow-pad Visual Basic 

@@ -1,4 +1,4 @@
-# vim: set ft=dune:
+# -*- mode: dune -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Dune - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #89421e
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Dune :: RAiNBOW_Hello-World
 # rainbow-pad colour #89421e :: padded to 100
-# rainbow-pad padding comment: byte balanc
+# rainbow-pad padding comment: byte balan

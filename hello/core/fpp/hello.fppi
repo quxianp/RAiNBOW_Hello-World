@@ -1,4 +1,4 @@
-# vim: set ft=fpp:
+# -*- mode: fpp -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # FPP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d37327
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad FPP :: RAiNBOW_Hello-World
 // rainbow-pad colour #d37327 :: padded to 100
-// rainbow-pad     
+// rainbow-pad    

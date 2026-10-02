@@ -1,4 +1,4 @@
-# vim: set ft=glyph:
+# -*- mode: glyph -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Glyph - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c1ac7f
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Glyph :: RAiNBOW_Hello-World
 // rainbow-pad colour #c1ac7f :: padded to 100
-     
+    

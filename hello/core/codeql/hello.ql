@@ -1,4 +1,4 @@
-# vim: set ft=ql:
+# -*- mode: codeql -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # CodeQL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #140f46
@@ -36,5 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad CodeQL :: RAiNBOW_Hello-World
-// rainbow-pad colour #140f46 :: padded to 100
- 
+// rainbow-pad colour #140f46 :: padded to 

@@ -1,4 +1,4 @@
-# vim: set ft=logtalk:
+# -*- mode: logtalk -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Logtalk - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #295b9a
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Logtalk :: RAiNBOW_Hello-World
-// rainbow-pad colour #295b9a :: padd
+// rainbow-pad colour #295b9a :: pad

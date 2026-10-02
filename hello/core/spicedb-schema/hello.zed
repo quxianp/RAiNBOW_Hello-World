@@ -1,4 +1,4 @@
-# vim: set ft=spicedb-schema:
+# -*- mode: spicedb-schema -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SpiceDB Schema - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a5318a
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad SpiceDB Schema :: RAiNBOW_
+// rainbow-pad SpiceDB Schema :: RAiNBOW

@@ -1,4 +1,4 @@
-# vim: set ft=nim:
+# -*- mode: nim -*-
 # Nim - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffc200
 #   hue        : 45.6 deg
@@ -37,4 +37,4 @@ echo "Hello World!"
 # rainbow-pad colour #ffc200 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad        
+# rainbow-pad       

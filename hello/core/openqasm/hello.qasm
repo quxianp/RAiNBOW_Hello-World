@@ -1,4 +1,4 @@
-# vim: set ft=openqasm:
+# -*- mode: openqasm -*-
 # OpenQASM - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #aa70ff
 #   hue        : 264.3 deg
@@ -38,4 +38,4 @@ creg c[2];
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad OpenQASM :: RAiNBOW_Hello-World
 // rainbow-pad colour #aa70ff :: padded to 100
-// rainbow-pad padding comment: byte balancing
+// rainbow-pad padding comment: byte balancin

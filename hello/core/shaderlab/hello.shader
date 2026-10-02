@@ -1,4 +1,4 @@
-# vim: set ft=shaderlab:
+# -*- mode: shaderlab -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ShaderLab - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #222c37
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ShaderLab :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad        

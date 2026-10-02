@@ -1,4 +1,4 @@
-# vim: set ft=ballerina:
+# -*- mode: ballerina -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ballerina - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff5000
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Ballerina :: RAiNBOW_Hello-World
-// rainbow-pad colour #f
+// rainbow-pad colour #

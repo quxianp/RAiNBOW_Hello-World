@@ -1,4 +1,4 @@
-; vim: set ft=racket:
+; -*- mode: racket -*-
 ; Racket - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #3c5caa
 ;   hue        : 222.6 deg
@@ -37,4 +37,4 @@
 ; rainbow-pad Racket :: RAiNBOW_Hello-World
 ; rainbow-pad colour #3c5caa :: padded to 100
 ; rainbow-pad padding comment: byte balancing for the rainbow bar
-; rainbow-pad https://github.com/quxianp
+; rainbow-pad https://github.com/quxian

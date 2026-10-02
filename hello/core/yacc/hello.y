@@ -1,4 +1,4 @@
-# vim: set ft=yacc:
+# -*- mode: yacc -*-
 # Yacc - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4b6c4b
 #   hue        : 120.0 deg
@@ -37,4 +37,4 @@ printer : { "Hello World!" } ;
 // rainbow-pad Yacc :: RAiNBOW_Hello-World
 // rainbow-pad colour #4b6c4b :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.c
+// rainbow-pad https://github.

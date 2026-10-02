@@ -1,4 +1,4 @@
-# vim: set ft=alloy:
+# -*- mode: alloy -*-
 # Alloy - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #64c800
 #   hue        : 90.0 deg
@@ -38,4 +38,4 @@ sig Hello {
 // rainbow-pad Alloy :: RAiNBOW_Hello-World
 // rainbow-pad colour #64c800 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad        
+// rainbow-pad       

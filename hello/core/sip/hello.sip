@@ -1,4 +1,4 @@
-# vim: set ft=sip:
+# -*- mode: sip -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SIP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4e8d83
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SIP :: RAiNBOW_Hello-World
 // rainbow-pad colour #4e8d83 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

@@ -1,4 +1,4 @@
-# vim: set ft=obj-j:
+# -*- mode: objective-j -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Objective-J - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff0c5a
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Objective-J :: RAiNBOW_Hello-World
-// rainbow-pad 
+        

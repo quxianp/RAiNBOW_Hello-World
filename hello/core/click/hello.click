@@ -1,4 +1,4 @@
-# vim: set ft=click:
+# -*- mode: click -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Click - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e4e6f3
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Click :: RAiNBOW_Hello-World
 // rainbow-pad colour #e4e6f3 :: padded to 100
-    
+   

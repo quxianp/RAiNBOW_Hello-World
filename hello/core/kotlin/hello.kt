@@ -1,4 +1,4 @@
-// vim: set ft=kotlin:
+// -*- mode: kotlin -*-
 // Kotlin - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #a97bff
 //   hue        : 260.9 deg
@@ -36,4 +36,4 @@ fun main() {
 /* rainbow-pad equal byte share keeps the language bar an even rainbow */
 /* rainbow-pad one segment per Linguist coloured language */
 /* rainbow-pad Kotlin :: RAiNBOW_Hello-World */
-/* rainbow-pad colour #a97bff :: */
+/* rainbow-pad colour #a97bff : */

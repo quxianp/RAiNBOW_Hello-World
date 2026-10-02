@@ -1,4 +1,4 @@
-# vim: set ft=dhall:
+# -*- mode: dhall -*-
 # Dhall - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dfafff
 #   hue        : 276.0 deg
@@ -36,4 +36,4 @@
 // rainbow-pad Dhall :: RAiNBOW_Hello-World
 // rainbow-pad colour #dfafff :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/
+// rainbow-pad https://github.com

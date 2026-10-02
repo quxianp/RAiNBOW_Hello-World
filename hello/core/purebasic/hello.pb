@@ -1,4 +1,4 @@
-# vim: set ft=purebasic:
+# -*- mode: purebasic -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # PureBasic - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5a6986
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad PureBasic :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad        

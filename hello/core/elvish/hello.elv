@@ -1,4 +1,4 @@
-# vim: set ft=elvish:
+# -*- mode: elvish -*-
 # Elvish - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #55bb55
 #   hue        : 120.0 deg
@@ -36,4 +36,4 @@ echo "Hello World!"
 // rainbow-pad Elvish :: RAiNBOW_Hello-World
 // rainbow-pad colour #55bb55 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.c
+// rainbow-pad https://github.

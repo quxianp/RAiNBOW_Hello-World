@@ -1,4 +1,4 @@
-# vim: set ft=elixir:
+# -*- mode: elixir -*-
 # Elixir - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #8847b9
 #   hue        : 274.2 deg
@@ -36,4 +36,4 @@ IO.puts "Hello World!"
 # rainbow-pad Elixir :: RAiNBOW_Hello-World
 # rainbow-pad colour #8847b9 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-Wo
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-W

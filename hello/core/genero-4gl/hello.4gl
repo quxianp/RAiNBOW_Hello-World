@@ -1,4 +1,4 @@
-# vim: set ft=genero-4gl:
+# -*- mode: genero-4gl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Genero 4gl - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #63408e
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Genero 4gl :: RAiNBOW_Hello-World
-// rainbow-pad  
+// rainbow-pad 

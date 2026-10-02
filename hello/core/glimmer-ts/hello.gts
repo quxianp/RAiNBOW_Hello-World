@@ -1,4 +1,4 @@
-# vim: set ft=gts:
+# -*- mode: glimmer-ts -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Glimmer TS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3178c6
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Glimmer TS :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad 

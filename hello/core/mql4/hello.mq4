@@ -1,4 +1,4 @@
-# vim: set ft=mql4:
+# -*- mode: mql4 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # MQL4 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #62a8d6
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad MQL4 :: RAiNBOW_Hello-World
 // rainbow-pad colour #62a8d6 :: padded to 100
-           
+          

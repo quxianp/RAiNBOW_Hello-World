@@ -1,4 +1,4 @@
-; vim: set ft=vbnet:
+; -*- mode: visual-basic-.net -*-
 ; Visual Basic .NET - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #945db7
 ;   hue        : 276.7 deg
@@ -38,4 +38,4 @@ End Module
 ' rainbow-pad equal byte share keeps the language bar an even rainbow
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad Visual Basic .NET :: RAiNBOW_Hello-World
-' rainbow-pad colour #945db7 :: 
+' rainbow-pad      

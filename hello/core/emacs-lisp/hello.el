@@ -1,4 +1,4 @@
-; vim: set ft=cask:
+; -*- mode: emacs-lisp -*-
 ; Emacs Lisp - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #c065db
 ;   hue        : 286.3 deg
@@ -36,4 +36,3 @@
 ;; rainbow-pad Emacs Lisp :: RAiNBOW_Hello-World
 ;; rainbow-pad colour #c065db :: padded to 100
 ;; rainbow-pad padding comment: byte balancing for the rainbow bar
-      

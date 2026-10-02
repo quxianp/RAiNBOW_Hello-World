@@ -1,4 +1,4 @@
-# vim: set ft=eclipse:
+# -*- mode: eclipse -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ECLiPSe - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #001d9d
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ECLiPSe :: RAiNBOW_Hello-World
-// rainbow-pad colour #001d9d :: padd
+// rainbow-pad colour #001d9d :: pad

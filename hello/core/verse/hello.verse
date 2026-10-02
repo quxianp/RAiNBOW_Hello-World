@@ -1,4 +1,4 @@
-# vim: set ft=verse:
+# -*- mode: verse -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Verse - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #518ef8
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Verse :: RAiNBOW_Hello-World
 // rainbow-pad colour #518ef8 :: padded to 100
-    
+   

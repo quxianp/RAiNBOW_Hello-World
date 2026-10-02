@@ -1,4 +1,4 @@
-# vim: set ft=fluent:
+# -*- mode: fluent -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Fluent - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffcc33
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Fluent :: RAiNBOW_Hello-World
 # rainbow-pad colour #ffcc33 :: padded to 100
-# rainbow-pad padding commen
+# rainbow-pad padding comme

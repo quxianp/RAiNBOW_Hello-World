@@ -1,4 +1,4 @@
-# vim: set ft=golang:
+# -*- mode: go -*-
 # Go - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00add8
 #   hue        : 191.9 deg
@@ -40,4 +40,4 @@ func main() {
 /* rainbow-pad equal byte share keeps the language bar an even rainbow */
 /* rainbow-pad one segment per Linguist coloured language */
 /* rainbow-pad Go :: RAiNBOW_Hello-World */
-/* rainbow-pad colour #00add8 ::  */
+/* rainbow-pad colour #00add8 :: pad */

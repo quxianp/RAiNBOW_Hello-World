@@ -1,4 +1,4 @@
-# vim: set ft=hylang:
+# -*- mode: hy -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Hy - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7790b2
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Hy :: RAiNBOW_Hello-World
 // rainbow-pad colour #7790b2 :: padded to 100
-// rainbow-pad       
+// rainbow-pad padding c

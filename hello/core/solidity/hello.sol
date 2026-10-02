@@ -1,4 +1,4 @@
-// vim: set ft=solidity:
+// -*- mode: solidity -*-
 // Solidity - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #aa6746
 //   hue        : 19.8 deg
@@ -33,4 +33,4 @@ contract Hello { function greet() public pure returns (string memory) { return "
 /* rainbow-pad padding comment: byte balancing for the rainbow bar */
 /* rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World */
 /* rainbow-pad equal byte share keeps the language bar an even rainbow */
-/* rainbow-pad one segment per Linguist coloured l */
+/* rainbow-pad one segment per Linguist coloured  */

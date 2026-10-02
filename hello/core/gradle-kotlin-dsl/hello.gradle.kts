@@ -1,4 +1,4 @@
-# vim: set ft=gradle-kotlin-dsl:
+# -*- mode: gradle-kotlin-dsl -*-
 # Gradle Kotlin DSL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #02303a
 #   hue        : 190.7 deg
@@ -34,4 +34,4 @@ task hello { doLast { println "Hello World!" } }
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Gradle Kotlin DSL :: RAiNBOW_Hello-World
-// rainbow-pad colour #02303a :: padded
+// rainbow-pad colour #02303a :: padde

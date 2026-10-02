@@ -1,4 +1,4 @@
-# vim: set ft=fsharp:
+# -*- mode: f# -*-
 # F# - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b845fc
 #   hue        : 277.7 deg
@@ -35,4 +35,4 @@ printfn "Hello World!"
 (* rainbow-pad one segment per Linguist coloured language *)
 (* rainbow-pad F# :: RAiNBOW_Hello-World *)
 (* rainbow-pad colour #b845fc :: padded to 100 *)
-(* rainbow-pad padding comment: b *)
+(* rainbow-pad padding comment: byte *)

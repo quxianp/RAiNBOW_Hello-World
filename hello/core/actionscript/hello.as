@@ -1,4 +1,4 @@
-# vim: set ft=actionscript3:
+# -*- mode: actionscript -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ActionScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #882b0f

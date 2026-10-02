@@ -1,4 +1,4 @@
-# vim: set ft=ampl:
+# -*- mode: ampl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # AMPL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #e6efbb
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad AMPL :: RAiNBOW_Hello-World
 // rainbow-pad colour #e6efbb :: padded to 100
-            
+           

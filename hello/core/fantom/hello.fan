@@ -1,4 +1,4 @@
-# vim: set ft=fantom:
+# -*- mode: fantom -*-
 # Fantom - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #14253c
 #   hue        : 214.5 deg
@@ -37,4 +37,4 @@ class Main
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Fantom :: RAiNBOW_Hello-World
 // rainbow-pad colour #14253c :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow ba
+// rainbow-pad padding comment: byte balancing for the rainbow b

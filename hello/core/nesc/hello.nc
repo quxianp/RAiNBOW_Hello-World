@@ -1,4 +1,4 @@
-# vim: set ft=nesc:
+# -*- mode: nesc -*-
 # nesC - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #94b0c7
 #   hue        : 207.1 deg
@@ -36,4 +36,4 @@ int main() { return puts("Hello World!"); }
 // rainbow-pad nesC :: RAiNBOW_Hello-World
 // rainbow-pad colour #94b0c7 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad       
+// rainbow-pad      

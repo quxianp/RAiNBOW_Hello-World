@@ -112,17 +112,18 @@ def slugify(name: str) -> str:
 
 SAFE_EXT = re.compile(r"^\.[A-Za-z0-9._#+-]{0,24}$")
 
+
 # Linguist's Modeline strategy is the highest priority detector: a Vim/Emacs
 # modeline beats every extension heuristic.  Emitting one per core file is what
 # keeps 100+ languages that share `.bas`, `.cls`, `.sql`, `.yml`, ... on separate
 # segments of the bar.
 MODELINE_PREFIX = {
-    "hash": ("#", "# vim: set ft={alias}:"),
-    "slash": ("//", "// vim: set ft={alias}:"),
-    "dash": ("--", "-- vim: set ft={alias}:"),
-    "semi": (";", "; vim: set ft={alias}:"),
-    "block": ("/*", "/* vim: set ft={alias}: */"),
-    "html": ("<!--", "<!-- vim: set ft={alias}: -->"),
+    "hash": ("#", "# -*- mode: {alias} -*-"),
+    "slash": ("//", "// -*- mode: {alias} -*-"),
+    "dash": ("--", "-- -*- mode: {alias} -*-"),
+    "semi": (";", "; -*- mode: {alias} -*-"),
+    "block": ("/*", "/* -*- mode: {alias} -*- */"),
+    "html": ("<!--", "<!-- -*- mode: {alias} -*- -->"),
 }
 
 
@@ -177,14 +178,12 @@ def modeline_for(entry: dict, ext: str, fname: str | None):
     """Return (linguist alias, modeline template) for a coloured language."""
     aliases = [a for a in (entry.get("aliases") or []) if a]
     name = entry["name"]
-    candidates = aliases + [name.lower(), name.lower().replace(" ", "-")]
-    alias = None
-    for c in candidates:
-        if c and re.fullmatch(r"[A-Za-z0-9_.#+-]{1,40}", c):
-            alias = c
-            break
-    if not alias:
-        alias = re.sub(r"[^A-Za-z0-9_.#+-]+", "-", name.lower())[:40]
+
+    # Linguist resolves Modeline results via Language.find_by_alias, and every
+    # language is indexed by its default alias (name.downcase, spaces -> '-').
+    # The default alias is the form the Emacs modeline captures (it is
+    # [^:;\s]+, which includes dashes and dots), so it always resolves.
+    alias = name.lower().replace(" ", "-")
     prefix = comment_prefix_for(ext, fname)
     template = {
         "#": MODELINE_PREFIX["hash"][1],
@@ -204,8 +203,13 @@ def pick_extension(entry: dict, exclusive: set) -> str:
     ]
     if not exts:
         return ""
-    # prefer an extension no other core language claims, then the shortest
-    exts = sorted(exts, key=lambda e: (e not in exclusive, len(e)))
+    if not exts:
+        return ""
+    # The Linguist modeline in each generated file DOES the actual detection,
+    # so the extension is only for human plausibility: take the language's own
+    # canonical first extension.  (An earlier "shortest-first" heuristic picked
+    # `.har`/`.tab`/`.rs.in` and `.4DForm`, which Linguist counts as entirely
+    # different languages.)
     return exts[0]
 
 
@@ -241,7 +245,6 @@ def main() -> int:
                 fname = names[0]
                 ext = Path(fname).suffix
         alias, prefix = modeline_for(e, ext, fname)
-        mm = merged_by_name.get(e["name"].lower(), {})
         records.append(
             {
                 "name": e["name"],
@@ -264,7 +267,7 @@ def main() -> int:
                 "aliases": e.get("aliases") or [],
                 "all_extensions": e.get("extensions") or [],
                 "path": f"hello/core/{slug}/hello{ext}",
-                "sources": mm.get("source", ["linguist"]),
+                "sources": merged_by_name.get(e["name"].lower(), {}).get("source", ["linguist"]),
                 "is_core": True,
             }
         )

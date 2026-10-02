@@ -1,4 +1,4 @@
-# vim: set ft=cfc:
+# -*- mode: coldfusion-cfc -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ColdFusion CFC - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ed2cd6
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad ColdFusion CFC :: RAiNBOW_Hello-World
+// rainbow-pad ColdFusion CFC :: RAiNBOW

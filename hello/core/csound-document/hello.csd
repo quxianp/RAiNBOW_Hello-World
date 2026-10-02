@@ -1,4 +1,4 @@
-; vim: set ft=csound-csd:
+; -*- mode: csound-document -*-
 ;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; Csound Document - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #1a1a1a
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Csound Document :: RAiNBOW_
+// rainbow-pad Csound Document :: RA

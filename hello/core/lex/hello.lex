@@ -1,4 +1,4 @@
-# vim: set ft=flex:
+# -*- mode: lex -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Lex - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #dbca00

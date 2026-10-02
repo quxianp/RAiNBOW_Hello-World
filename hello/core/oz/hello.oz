@@ -1,4 +1,4 @@
-# vim: set ft=oz:
+# -*- mode: oz -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Oz - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fab738
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Oz :: RAiNBOW_Hello-World
 // rainbow-pad colour #fab738 :: padded to 100
-// rainbow-pad padding com
+// rainbow-pad padding co

@@ -1,4 +1,4 @@
-# vim: set ft=clips:
+# -*- mode: clips -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # CLIPS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00a300
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad CLIPS :: RAiNBOW_Hello-World
 // rainbow-pad colour #00a300 :: padded to 100
-    
+   

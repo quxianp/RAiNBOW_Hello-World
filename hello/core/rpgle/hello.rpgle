@@ -1,4 +1,4 @@
-# vim: set ft=sqlrpgle:
+# -*- mode: rpgle -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # RPGLE - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2bde21
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad RPGLE :: RAiNBOW_Hello-World
 // rainbow-pad colour #2bde21 :: padded to 100
- 
+   

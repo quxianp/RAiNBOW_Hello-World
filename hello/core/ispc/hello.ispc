@@ -1,4 +1,4 @@
-# vim: set ft=ispc:
+# -*- mode: ispc -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ISPC - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2d68b1
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ISPC :: RAiNBOW_Hello-World
 // rainbow-pad colour #2d68b1 :: padded to 100
-           
+          

@@ -1,4 +1,4 @@
-# vim: set ft=hip:
+# -*- mode: hip -*-
 # HIP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4f3a4f
 #   hue        : 300.0 deg
@@ -36,4 +36,4 @@ __global__ void hello() { }
 // rainbow-pad HIP :: RAiNBOW_Hello-World
 // rainbow-pad colour #4f3a4f :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RA
+// rainbow-pad https://github.com/quxianp/R

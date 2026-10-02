@@ -1,4 +1,4 @@
-# vim: set ft=gnolang:
+# -*- mode: gno -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Gno - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #226c57
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Gno :: RAiNBOW_Hello-World
 // rainbow-pad colour #226c57 :: padded to 100
-// rainbow-pad
+// rainbow-pad   

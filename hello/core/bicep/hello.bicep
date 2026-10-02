@@ -1,4 +1,4 @@
-# vim: set ft=bicep:
+# -*- mode: bicep -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Bicep - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #519aba
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Bicep :: RAiNBOW_Hello-World
 // rainbow-pad colour #519aba :: padded to 100
-    
+   

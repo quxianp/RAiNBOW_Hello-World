@@ -1,4 +1,4 @@
--- vim: set ft=systemverilog:
+-- -*- mode: systemverilog -*-
 -- SystemVerilog - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #dae1c2
 --   hue        : 73.5 deg
@@ -37,4 +37,4 @@ endmodule
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SystemVerilog :: RAiNBOW_Hello-World
 // rainbow-pad colour #dae1c2 :: padded to 100
-   
+  

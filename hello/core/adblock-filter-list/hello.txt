@@ -1,4 +1,4 @@
-# vim: set ft=adb:
+# -*- mode: adblock-filter-list -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Adblock Filter List - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #800000
@@ -8,23 +8,6 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 Hello World!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

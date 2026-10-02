@@ -1,4 +1,4 @@
-# vim: set ft=cql:
+# -*- mode: cql -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # CQL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #006091
@@ -37,4 +37,4 @@
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad CQL :: RAiNBOW_Hello-World
 -- rainbow-pad colour #006091 :: padded to 100
--- rainbow-pad    
+-- rainbow-pad   

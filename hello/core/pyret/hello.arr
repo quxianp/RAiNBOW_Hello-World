@@ -1,4 +1,4 @@
-# vim: set ft=pyret:
+# -*- mode: pyret -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Pyret - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ee1e10
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Pyret :: RAiNBOW_Hello-World
 // rainbow-pad colour #ee1e10 :: padded to 100
-      
+     

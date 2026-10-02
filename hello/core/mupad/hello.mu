@@ -1,4 +1,4 @@
-# vim: set ft=mupad:
+# -*- mode: mupad -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # mupad - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #244963
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad mupad :: RAiNBOW_Hello-World
 // rainbow-pad colour #244963 :: padded to 100
-    
+   

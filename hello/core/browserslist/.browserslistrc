@@ -1,4 +1,4 @@
-# vim: set ft=browserslist:
+# -*- mode: browserslist -*-
 # Browserslist - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffd539
 #   hue        : 47.3 deg
@@ -38,4 +38,4 @@ last 2 versions
 # rainbow-pad Browserslist :: RAiNBOW_Hello-World
 # rainbow-pad colour #ffd539 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
- 
+

@@ -1,4 +1,4 @@
-# vim: set ft=roc:
+# -*- mode: roc -*-
 # Roc - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7c38f5
 #   hue        : 261.6 deg
@@ -38,4 +38,4 @@ main = "Hello World!"
 // rainbow-pad Roc :: RAiNBOW_Hello-World
 // rainbow-pad colour #7c38f5 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://gi
+// rainbow-pad https://g

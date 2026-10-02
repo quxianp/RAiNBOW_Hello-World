@@ -1,4 +1,4 @@
-# vim: set ft=curry:
+# -*- mode: curry -*-
 # Curry - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #531242
 #   hue        : 315.7 deg
@@ -36,4 +36,4 @@ main = putStrLn "Hello World!"
 // rainbow-pad Curry :: RAiNBOW_Hello-World
 // rainbow-pad colour #531242 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://gith
+// rainbow-pad https://git

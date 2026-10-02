@@ -1,4 +1,4 @@
-# vim: set ft=jsoniq:
+# -*- mode: jsoniq -*-
 # JSONiq - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #40d47e
 #   hue        : 145.1 deg
@@ -36,4 +36,4 @@
 // rainbow-pad JSONiq :: RAiNBOW_Hello-World
 // rainbow-pad colour #40d47e :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/qu
+// rainbow-pad https://github.com/q

@@ -1,4 +1,4 @@
-# vim: set ft=py:
+# -*- mode: python -*-
 # Python - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3572a5
 #   hue        : 207.3 deg
@@ -36,5 +36,4 @@ print("Hello World!")
 # rainbow-pad Python :: RAiNBOW_Hello-World
 # rainbow-pad colour #3572a5 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
-# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
- 
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-Wo

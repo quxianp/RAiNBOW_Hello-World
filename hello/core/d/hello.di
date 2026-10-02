@@ -1,4 +1,4 @@
-# vim: set ft=Dlang:
+# -*- mode: d -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # D - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ba595e
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad D :: RAiNBOW_Hello-World
 # rainbow-pad colour #ba595e :: padded to 100
-# rainbow-pad padding comment: byte balancing for the rain
+# rainbow-pad padding comment: byte balancing for the rainbow

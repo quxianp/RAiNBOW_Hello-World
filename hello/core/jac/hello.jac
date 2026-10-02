@@ -1,4 +1,4 @@
-# vim: set ft=jac:
+# -*- mode: jac -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Jac - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fc792d
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Jac :: RAiNBOW_Hello-World
 // rainbow-pad colour #fc792d :: padded to 100
-// rainbow-pad     
+// rainbow-pad    

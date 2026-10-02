@@ -1,4 +1,4 @@
-# vim: set ft=factor:
+# -*- mode: factor -*-
 # Factor - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #636746
 #   hue        : 67.3 deg
@@ -37,4 +37,4 @@ USING: io ;
 // rainbow-pad Factor :: RAiNBOW_Hello-World
 // rainbow-pad colour #636746 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad     
+// rainbow-pad    

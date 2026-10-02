@@ -1,4 +1,4 @@
-# vim: set ft=abap-cds:
+# -*- mode: abap-cds -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ABAP CDS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #555e25
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ABAP CDS :: RAiNBOW_Hello-World
-// rainbow-pad colour #555e25 :
+// rainbow-pad colour #555e25 

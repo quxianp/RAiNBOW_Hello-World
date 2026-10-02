@@ -1,4 +1,4 @@
-# vim: set ft=chuck:
+# -*- mode: chuck -*-
 # ChucK - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3f8000
 #   hue        : 90.5 deg
@@ -36,4 +36,4 @@
 // rainbow-pad ChucK :: RAiNBOW_Hello-World
 // rainbow-pad colour #3f8000 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com
+// rainbow-pad https://github.co

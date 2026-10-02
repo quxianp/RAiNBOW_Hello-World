@@ -1,4 +1,4 @@
-# vim: set ft=pyrex:
+# -*- mode: cython -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Cython - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #fedf5b
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Cython :: RAiNBOW_Hello-World
 # rainbow-pad colour #fedf5b :: padded to 100
-# rainbow-pad padding comment
+# rainbow-pad padding comme

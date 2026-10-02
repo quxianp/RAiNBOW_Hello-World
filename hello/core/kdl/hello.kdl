@@ -1,4 +1,4 @@
-# vim: set ft=kdl:
+# -*- mode: kdl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # KDL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffb3b3
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad KDL :: RAiNBOW_Hello-World
 // rainbow-pad colour #ffb3b3 :: padded to 100
-// rainbow-pad      
+// rainbow-pad     

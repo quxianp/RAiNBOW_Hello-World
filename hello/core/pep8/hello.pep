@@ -1,4 +1,4 @@
-# vim: set ft=pep8:
+# -*- mode: pep8 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Pep8 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c76f5b
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Pep8 :: RAiNBOW_Hello-World
 // rainbow-pad colour #c76f5b :: padded to 100
-            
+           

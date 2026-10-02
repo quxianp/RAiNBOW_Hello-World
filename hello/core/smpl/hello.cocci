@@ -1,4 +1,4 @@
-# vim: set ft=coccinelle:
+# -*- mode: smpl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SmPL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c94949
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad SmPL :: RAiNBOW_Hello-World
 // rainbow-pad colour #c94949 :: padded to 100
-       
+            

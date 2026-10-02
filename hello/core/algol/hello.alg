@@ -1,4 +1,4 @@
-# vim: set ft=algol:
+# -*- mode: algol -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ALGOL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d1e0db
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ALGOL :: RAiNBOW_Hello-World
 // rainbow-pad colour #d1e0db :: padded to 100
-    
+   

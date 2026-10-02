@@ -1,4 +1,4 @@
-# vim: set ft=g-code:
+# -*- mode: g-code -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # G-code - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #d08cf2
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad G-code :: RAiNBOW_Hello-World
-// rainbow-pad colour #d08cf2 :: padded to 1
+// rainbow-pad colour #d08cf2 :: padded to 

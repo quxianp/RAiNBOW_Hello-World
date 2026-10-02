@@ -1,4 +1,4 @@
-# vim: set ft=smithy:
+# -*- mode: smithy -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Smithy - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c44536
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Smithy :: RAiNBOW_Hello-World
 # rainbow-pad colour #c44536 :: padded to 100
-# rainbow-pad padding comment
+# rainbow-pad padding commen

@@ -1,4 +1,4 @@
-# vim: set ft=ring:
+# -*- mode: ring -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ring - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2d54cb
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Ring :: RAiNBOW_Hello-World
 // rainbow-pad colour #2d54cb :: padded to 100
-           
+          

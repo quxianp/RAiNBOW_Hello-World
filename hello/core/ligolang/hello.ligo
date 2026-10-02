@@ -1,4 +1,4 @@
-# vim: set ft=ligolang:
+# -*- mode: ligolang -*-
 # LigoLANG - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0e74ff
 #   hue        : 214.6 deg
@@ -36,4 +36,4 @@ let main () = Js.log "Hello World!"
 // rainbow-pad LigoLANG :: RAiNBOW_Hello-World
 // rainbow-pad colour #0e74ff :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
- 
+

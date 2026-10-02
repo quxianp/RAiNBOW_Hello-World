@@ -1,4 +1,4 @@
-# vim: set ft=wollok:
+# -*- mode: wollok -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Wollok - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #a23738
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Wollok :: RAiNBOW_Hello-World
-// rainbow-pad colour #a23738 :: padded to 1
+// rainbow-pad colour #a23738 :: padded to 

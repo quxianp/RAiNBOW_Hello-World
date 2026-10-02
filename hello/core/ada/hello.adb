@@ -1,4 +1,4 @@
--- vim: set ft=ada95:
+-- -*- mode: ada -*-
 --   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- Ada - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #02f88c
@@ -37,4 +37,4 @@
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Ada :: RAiNBOW_Hello-World
 -- rainbow-pad colour #02f88c :: padded to 100
-        
+         

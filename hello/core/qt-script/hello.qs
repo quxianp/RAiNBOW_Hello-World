@@ -1,4 +1,4 @@
-# vim: set ft=qt-script:
+# -*- mode: qt-script -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Qt Script - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #00b841
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Qt Script :: RAiNBOW_Hello-World
-// rainbow-pad colour #
+// rainbow-pad        

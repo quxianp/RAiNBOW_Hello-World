@@ -1,4 +1,4 @@
-# vim: set ft=gleam:
+# -*- mode: gleam -*-
 # Gleam - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffaff3
 #   hue        : 309.0 deg
@@ -36,4 +36,4 @@ pub fn main() { io.println("Hello World!") }
 // rainbow-pad Gleam :: RAiNBOW_Hello-World
 // rainbow-pad colour #ffaff3 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-             
+            

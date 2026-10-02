@@ -1,4 +1,4 @@
-# vim: set ft=moonbit:
+# -*- mode: moonbit -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # MoonBit - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #b92381
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad MoonBit :: RAiNBOW_Hello-World
-// rainbow-pad colour #b92381 :: padd
+// rainbow-pad colour #b92381 :: pad

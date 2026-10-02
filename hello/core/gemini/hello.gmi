@@ -1,4 +1,4 @@
-# vim: set ft=gemtext:
+# -*- mode: gemini -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Gemini - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff6900

@@ -1,4 +1,4 @@
-# vim: set ft=arkts:
+# -*- mode: arkts -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # ArkTS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0080ff
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad ArkTS :: RAiNBOW_Hello-World
 // rainbow-pad colour #0080ff :: padded to 100
-    
+   

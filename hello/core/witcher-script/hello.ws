@@ -1,4 +1,4 @@
-# vim: set ft=witcher-script:
+# -*- mode: witcher-script -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Witcher Script - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff0000
@@ -36,4 +36,4 @@
 ' rainbow-pad equal byte share keeps the language bar an even rainbow
 ' rainbow-pad one segment per Linguist coloured language
 ' rainbow-pad Witcher Script :: RAiNBOW_Hello-World
-' rainbow-pad      
+' rainbow-pad     

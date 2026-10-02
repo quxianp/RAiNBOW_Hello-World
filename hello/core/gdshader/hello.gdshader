@@ -1,4 +1,4 @@
-# vim: set ft=gdshader:
+# -*- mode: gdshader -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # GDShader - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #478cbf
@@ -36,4 +36,4 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad GDShader :: RAiNBOW_Hello-World
-// rainbow-pad colour #478cbf 
+// rainbow-pad colour #478cbf

@@ -1,4 +1,4 @@
-// vim: set ft=c:
+// -*- mode: c -*-
 // C - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #555555
 //   hue        : 0.0 deg
@@ -35,4 +35,4 @@ int main(void){ puts("Hello World!"); return 0; }
 /* rainbow-pad equal byte share keeps the language bar an even rainbow */
 /* rainbow-pad one segment per Linguist coloured language */
 /* rainbow-pad C :: RAiNBOW_Hello-World */
-/* rainbow-pad colour #555555 :: padded to  */
+/* rainbow-pad colour #555555 :: padded to */

@@ -1,4 +1,4 @@
-# vim: set ft=fish:
+# -*- mode: fish -*-
 # fish - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4aae47
 #   hue        : 118.2 deg
@@ -37,4 +37,4 @@ echo Hello World!
 # rainbow-pad colour #4aae47 :: padded to 100
 # rainbow-pad padding comment: byte balancing for the rainbow bar
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-# rainbow-pad  
+# rainbow-pad 

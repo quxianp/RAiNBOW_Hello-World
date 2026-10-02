@@ -1,4 +1,4 @@
-# vim: set ft=gams:
+# -*- mode: gams -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # GAMS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f49a22
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad GAMS :: RAiNBOW_Hello-World
 // rainbow-pad colour #f49a22 :: padded to 100
-            
+           

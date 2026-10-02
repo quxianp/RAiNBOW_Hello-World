@@ -1,4 +1,4 @@
-# vim: set ft=scilab:
+# -*- mode: scilab -*-
 # Scilab - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ca0f21
 #   hue        : 354.2 deg
@@ -36,4 +36,4 @@ disp('Hello World!');
 // rainbow-pad Scilab :: RAiNBOW_Hello-World
 // rainbow-pad colour #ca0f21 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github
+// rainbow-pad https://githu

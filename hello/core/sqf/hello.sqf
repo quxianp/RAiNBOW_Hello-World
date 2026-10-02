@@ -1,4 +1,4 @@
-# vim: set ft=sqf:
+# -*- mode: sqf -*-
 # SQF - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3f3f3f
 #   hue        : 0.0 deg
@@ -36,4 +36,4 @@ titleText = "Hello World!";
 // rainbow-pad SQF :: RAiNBOW_Hello-World
 // rainbow-pad colour #3f3f3f :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiN
+// rainbow-pad https://github.com/quxianp/RAi

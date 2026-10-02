@@ -1,4 +1,4 @@
-# vim: set ft=janet:
+# -*- mode: janet -*-
 # Janet - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0886a5
 #   hue        : 191.8 deg
@@ -36,4 +36,4 @@
 // rainbow-pad Janet :: RAiNBOW_Hello-World
 // rainbow-pad colour #0886a5 :: padded to 100
 // rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/q
+// rainbow-pad https://github.com/

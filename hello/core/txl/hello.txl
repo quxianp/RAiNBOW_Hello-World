@@ -1,4 +1,4 @@
-# vim: set ft=txl:
+# -*- mode: txl -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TXL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0178b8
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad TXL :: RAiNBOW_Hello-World
 // rainbow-pad colour #0178b8 :: padded to 100
-// rainbow-pad    
+// rainbow-pad   

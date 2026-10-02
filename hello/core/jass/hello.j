@@ -1,4 +1,4 @@
-# vim: set ft=jass2:
+# -*- mode: jass -*-
 # JASS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff0303
 #   hue        : 0.0 deg

@@ -1,4 +1,4 @@
-# vim: set ft=directx-3d-file:
+# -*- mode: directx-3d-file -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # DirectX 3D File - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #aace60
@@ -35,4 +35,4 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-// rainbow-pad DirectX 3D File :: RA
+// rainbow-pad DirectX 3D File :: R

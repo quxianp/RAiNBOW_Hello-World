@@ -1,4 +1,4 @@
-# vim: set ft=p4:
+# -*- mode: p4 -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # P4 - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7055b5
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad P4 :: RAiNBOW_Hello-World
 // rainbow-pad colour #7055b5 :: padded to 100
-// rainbow-pad padding co
+// rainbow-pad padding c

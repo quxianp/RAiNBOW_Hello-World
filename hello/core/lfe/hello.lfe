@@ -1,4 +1,4 @@
-# vim: set ft=lfe:
+# -*- mode: lfe -*-
 #   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # LFE - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4c3023
@@ -37,4 +37,4 @@
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad LFE :: RAiNBOW_Hello-World
 // rainbow-pad colour #4c3023 :: padded to 100
-// rainbow-pad     
+// rainbow-pad    

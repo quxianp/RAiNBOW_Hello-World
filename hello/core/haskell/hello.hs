@@ -1,4 +1,4 @@
-# vim: set ft=haskell:
+# -*- mode: haskell -*-
 # Haskell - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5e5086
 #   hue        : 255.6 deg
@@ -36,4 +36,4 @@ main = putStrLn "Hello World!"
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Haskell :: RAiNBOW_Hello-World
 -- rainbow-pad colour #5e5086 :: padded to 100
--- rainbow-pad padding comment: byte balancing for the rainbow bar
+-- rainbow-pad padding comment: byte balancing for the rainbow ba
