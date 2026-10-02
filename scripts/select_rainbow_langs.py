@@ -112,6 +112,90 @@ def slugify(name: str) -> str:
 
 SAFE_EXT = re.compile(r"^\.[A-Za-z0-9._#+-]{0,24}$")
 
+# Linguist's Modeline strategy is the highest priority detector: a Vim/Emacs
+# modeline beats every extension heuristic.  Emitting one per core file is what
+# keeps 100+ languages that share `.bas`, `.cls`, `.sql`, `.yml`, ... on separate
+# segments of the bar.
+MODELINE_PREFIX = {
+    "hash": ("#", "# vim: set ft={alias}:"),
+    "slash": ("//", "// vim: set ft={alias}:"),
+    "dash": ("--", "-- vim: set ft={alias}:"),
+    "semi": (";", "; vim: set ft={alias}:"),
+    "block": ("/*", "/* vim: set ft={alias}: */"),
+    "html": ("<!--", "<!-- vim: set ft={alias}: -->"),
+}
+
+
+def comment_prefix_for(ext: str, fname: str | None) -> str:
+    """Best guess at a comment token Linguist's modeline scanner accepts."""
+    e = (ext or "").lower()
+    if fname:
+        f = fname.lower()
+        if f.startswith(".") or f in {
+            "npmrc", "torrc", "crontab", "procfile", "hosts", "root",
+            "requirements.txt", "browserslist", "singularity", "earthfile",
+            "apkbuild", "meson.build", "dune-project", "xmake.lua",
+        }:
+            return MODELINE_PREFIX["hash"][0]
+        if f.endswith((".yml", ".yaml", ".toml", ".ini", ".cfg", ".conf",
+                        ".properties", ".gitignore", ".gitattributes")):
+            return MODELINE_PREFIX["hash"][0]
+    if e in {".py", ".rb", ".sh", ".pl", ".r", ".jl", ".yaml", ".yml", ".toml",
+             ".ini", ".cfg", ".conf", ".properties", ".rs", ".go", ".jl",
+             ".nim", ".cr", ".ex", ".exs", ".hs", ".elm", ".purs", ".coffee",
+             ".tf", ".hcl", ".nix", ".starlark", ".bazel", ".mk", ".make",
+             ".cmake", ".groovy", ".tcl", ".ps1", ".fish", ".zsh", ".ksh",
+             ".csh", ".nu", ".crontab", ".editorconfig", ".gitignore",
+             ".gitattributes", ".npmrc", ".dockerfile"}:
+        return MODELINE_PREFIX["hash"][0]
+    if e in {".md", ".markdown", ".mkd", ".html", ".htm", ".xml", ".svg",
+             ".xhtml", ".rss", ".atom", ".xsl", ".xslt", ".plist", ".ipynb"}:
+        return MODELINE_PREFIX["html"][0]
+    if e in {".sql", ".tsql", ".plpgsql", ".psql", ".hql", ".presto", ".sparql",
+             ".lisp", ".lsp", ".scm", ".ss", ".rkt", ".clj", ".cljs", ".cljc",
+             ".el", ".elisp", ".asm", ".s", ".sed", ".tcl", ".vb", ".bas",
+             ".cls", ".frm", ".ctl", ".vbs", ".vba", ".pas", ".pp", ".ada",
+             ".adb", ".ads", ".sv", ".svh", ".vhd", ".vhdl", ".4dm", ".csd",
+             ".tcl", ".smt", ".smt2", ".z3", ".v", ".vi"}:
+        return MODELINE_PREFIX["semi" if e in {
+            ".lisp", ".lsp", ".scm", ".ss", ".rkt", ".clj", ".cljs", ".cljc",
+            ".el", ".elisp", ".asm", ".s", ".sed", ".bas", ".cls", ".frm",
+            ".ctl", ".vb", ".vba", ".vbs", ".smt", ".smt2", ".z3", ".csd",
+        } else "dash"][0]
+    if e in {".c", ".h", ".cpp", ".hpp", ".cc", ".hh", ".cxx", ".cs", ".java",
+             ".kt", ".kts", ".scala", ".groovy", ".swift", ".dart", ".zig",
+             ".js", ".mjs", ".cjs", ".jsx", ".ts", ".tsx", ".css", ".scss",
+             ".less", ".sol", ".move", ".glsl", ".vert", ".frag", ".wgsl",
+             ".hlsl", ".metal", ".cu", ".cuh", ".ino", ".vue", ".svelte",
+             ".astro", ".json5", ".jsonc", ".d", ".vala", ".v", ".sv", ".hcl",
+             ".proto", ".thrift", ".graphql", ".gql", ".rhai", ".odin", ".vlang"}:
+        return MODELINE_PREFIX["slash"][0]
+    return MODELINE_PREFIX["hash"][0]
+
+
+def modeline_for(entry: dict, ext: str, fname: str | None):
+    """Return (linguist alias, modeline template) for a coloured language."""
+    aliases = [a for a in (entry.get("aliases") or []) if a]
+    name = entry["name"]
+    candidates = aliases + [name.lower(), name.lower().replace(" ", "-")]
+    alias = None
+    for c in candidates:
+        if c and re.fullmatch(r"[A-Za-z0-9_.#+-]{1,40}", c):
+            alias = c
+            break
+    if not alias:
+        alias = re.sub(r"[^A-Za-z0-9_.#+-]+", "-", name.lower())[:40]
+    prefix = comment_prefix_for(ext, fname)
+    template = {
+        "#": MODELINE_PREFIX["hash"][1],
+        "//": MODELINE_PREFIX["slash"][1],
+        "--": MODELINE_PREFIX["dash"][1],
+        ";": MODELINE_PREFIX["semi"][1],
+        "/*": MODELINE_PREFIX["block"][1],
+        "<!--": MODELINE_PREFIX["html"][1],
+    }.get(prefix, MODELINE_PREFIX["hash"][1])
+    return alias, template
+
 
 def pick_extension(entry: dict, exclusive: set) -> str:
     exts = [
@@ -150,21 +234,13 @@ def main() -> int:
         hue = round(h * 360.0, 2)
         slug = slugify(e["name"])
         ext = pick_extension(e, exclusive)
-        # A handful of Linguist languages have neither extensions nor filenames
-        # (Julia REPL, Python console, OpenAPI v2/v3, Elvish Transcript).  Those
-        # can never be painted on the language bar, so they are moved to the
-        # full layer instead of pretending they would show up.
         fname = None
         if not ext:
             names = [f for f in (e.get("filenames") or []) if f]
             if names:
-                # Linguist matches these by *filename*, so the file must keep
-                # that exact name (.npmrc, torrc, crontab, Procfile, ...).
                 fname = names[0]
                 ext = Path(fname).suffix
-        if not ext and not fname:
-            deferred.append(e["name"])
-            continue
+        alias, prefix = modeline_for(e, ext, fname)
         mm = merged_by_name.get(e["name"].lower(), {})
         records.append(
             {
@@ -178,6 +254,8 @@ def main() -> int:
                 "lightness": round(l, 4),
                 "extension": ext,
                 "filename": fname,
+                "modeline_alias": alias,
+                "modeline_prefix": prefix,
                 "extension_exclusive": ext in exclusive or fname is not None,
                 "type": e.get("type"),
                 "ace_mode": e.get("ace_mode"),

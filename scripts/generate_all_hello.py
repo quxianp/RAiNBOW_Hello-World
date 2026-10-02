@@ -842,9 +842,14 @@ def normalise(text: str) -> str:
 
 def build_file(name: str, ext: str, colour: str | None, hue: float | None,
                note: str, layer: str, path_rel: str,
-               fname: str | None = None) -> str:
+               fname: str | None = None,
+               modeline: str | None = None) -> str:
     prog, known = program_for(name, ext)
     line, bs, be = comment_style_for(ext, fname)
+    if modeline:
+        # keep the banner in the same comment dialect as the modeline
+        tok = modelline_prefix_token(modeline)
+        line, bs, be = tok, None, None
     if line:
         c = f"{line} "
     elif bs:
@@ -853,6 +858,11 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
         c = None
 
     head_lines = []
+    if modeline:
+        # Linguist's Modeline strategy outranks every extension heuristic, so
+        # this one line is what guarantees each core language keeps its own
+        # segment on the GitHub language bar.
+        head_lines.append(modeline)
     if c is not None:
         head_lines.append(f"{c}{name} - Hello World! :: RAiNBOW_Hello-World")
         head_lines.append(f"{c}  colour     : {colour or 'not assigned by Linguist'}")
@@ -908,6 +918,23 @@ def safe_dir(base: Path, slug: str, taken: dict) -> Path:
     return d
 
 
+def modelline_prefix_token(modeline: str) -> str:
+    """Recover the comment token a rendered modeline starts with."""
+    for tok in ("<!--", "/*", "//", "--", ";", "#"):
+        if modeline.startswith(tok):
+            return tok
+    return "#"
+
+
+def modeline_for(rec: dict) -> str | None:
+    """Render the Linguist modeline that pins this file to one language."""
+    tpl = rec.get("modeline_prefix")
+    alias = rec.get("modeline_alias")
+    if not tpl or not alias:
+        return None
+    return tpl.format(alias=alias)
+
+
 SAFE_EXT = re.compile(r"^\.[A-Za-z0-9._#+-]{0,24}$")
 
 
@@ -953,10 +980,11 @@ def main() -> int:
             ext,
             f"#{rec['color']}" if rec["color"] else None,
             rec.get("hue"),
-            "Linguist recognises this language by filename, not by extension.",
+            "Pinned with a Linguist modeline so it keeps its own segment on the bar.",
             "core",
             f"hello/core/{rec['slug']}/{fname}",
             fname=fname,
+            modeline=modeline_for(rec),
         )
         path.write_text(text, encoding="utf-8", newline="\n")
         manifest.append(
@@ -968,6 +996,7 @@ def main() -> int:
                 "type": rec.get("type"),
                 "color": f"#{rec['color']}" if rec["color"] else None,
                 "hue": rec.get("hue"),
+                "modeline": rec.get("modeline_alias"),
                 "runner": RUNNERS.get(name.lower()),
                 "real_template": name.lower() in HELLO,
             }
