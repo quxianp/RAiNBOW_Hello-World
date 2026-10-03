@@ -909,14 +909,19 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
     return text
 
 
-def safe_dir(base: Path, slug: str, taken: dict) -> Path:
+def safe_dir(base: Path, slug: str, taken: set) -> Path:
+    """Pick base/slug, re-using directories left behind by earlier runs.
+
+    `taken` records dirs claimed by OTHER languages in THIS run only.  The old
+    implementation treated any pre-existing non-empty dir as a collision, so a
+    plain re-run (no --clean) spawned a `-1` twin for every single language.
+    """
     d = base / slug
-    n = taken.get(slug, 0)
-    taken[slug] = n + 1
-    while d.exists() and any(d.iterdir()):
-        d = base / f"{slug}-{n + 1}"
+    n = 0
+    while str(d).lower() in taken:
         n += 1
-        taken[slug] = n
+        d = base / f"{slug}-{n}"
+    taken.add(str(d).lower())
     d.mkdir(parents=True, exist_ok=True)
     return d
 
@@ -968,8 +973,8 @@ def main() -> int:
     full_dir.mkdir(parents=True, exist_ok=True)
 
     manifest = []
-    taken_core: dict[str, int] = {}
-    taken_full: dict[str, int] = {}
+    taken_core: set = set()
+    taken_full: set = set()
 
     # ---- core layer -----------------------------------------------------
     for rec in rainbow["languages"]:
@@ -978,6 +983,7 @@ def main() -> int:
         d = safe_dir(core_dir, rec["slug"], taken_core)
         fname = rec.get("filename") or ("hello" + ext)
         path = d / fname
+        rel = f"hello/core/{d.name}/{fname}"
         text = build_file(
             name,
             ext,
@@ -985,7 +991,7 @@ def main() -> int:
             rec.get("hue"),
             "Pinned with a Linguist modeline so it keeps its own segment on the bar.",
             "core",
-            f"hello/core/{rec['slug']}/{fname}",
+            rel,
             fname=fname,
             modeline=modeline_for(rec),
         )
@@ -994,7 +1000,7 @@ def main() -> int:
             {
                 "language": name,
                 "layer": "core",
-                "path": f"hello/core/{rec['slug']}/{fname}",
+                "path": rel,
                 "extension": ext,
                 "type": rec.get("type"),
                 "color": f"#{rec['color']}" if rec["color"] else None,
@@ -1020,6 +1026,7 @@ def main() -> int:
             ext = "." + ext
         d = safe_dir(full_dir, rec["slug"], taken_full)
         fname = "hello" + ext
+        rel = f"hello/full/{d.name}/{fname}"
         text = build_file(
             rec["name"],
             ext,
@@ -1027,14 +1034,14 @@ def main() -> int:
             None,
             note,
             "full",
-            f"hello/full/{rec['slug']}/{fname}",
+            rel,
         )
         (d / fname).write_text(text, encoding="utf-8", newline="\n")
         manifest.append(
             {
                 "language": rec["name"],
                 "layer": "full",
-                "path": f"hello/full/{rec['slug']}/{fname}",
+                "path": rel,
                 "extension": ext,
                 "type": rec.get("type"),
                 "color": f"#{rec['color']}" if rec.get("color") else None,
@@ -1043,6 +1050,22 @@ def main() -> int:
                 "real_template": rec["name"].lower() in HELLO,
             }
         )
+
+    # ---- prune anything the manifest does not reference ------------------
+    # Stale `-1` twins from an older buggy run, orphaned files after a rename,
+    # empty dirs: all of it goes, so disk state == manifest state.
+    keep = {m["path"] for m in manifest}
+    for layer in (core_dir, full_dir):
+        for p in sorted(layer.rglob("*"), reverse=True):
+            rel = p.relative_to(ROOT).as_posix()
+            if p.is_file():
+                if rel not in keep:
+                    p.unlink()
+            elif p.is_dir():
+                try:
+                    p.rmdir()  # only succeeds when empty
+                except OSError:
+                    pass
 
     core_n = sum(1 for m in manifest if m["layer"] == "core")
     full_n = sum(1 for m in manifest if m["layer"] == "full")

@@ -13936,7 +13936,7 @@
   {
    "language": "B-Method",
    "layer": "full",
-   "path": "hello/full/b-method/hello.b_method",
+   "path": "hello/full/b-method-1/hello.b_method",
    "extension": ".b_method",
    "type": null,
    "color": null,
@@ -17027,7 +17027,7 @@
   {
    "language": "brain--",
    "layer": "full",
-   "path": "hello/full/brain/hello.brain",
+   "path": "hello/full/brain-1/hello.brain",
    "extension": ".brain",
    "type": null,
    "color": null,
@@ -18743,7 +18743,7 @@
   {
    "language": "C flat --",
    "layer": "full",
-   "path": "hello/full/c-flat/hello.c_flat",
+   "path": "hello/full/c-flat-1/hello.c_flat",
    "extension": ".c_flat",
    "type": null,
    "color": null,
@@ -18919,7 +18919,7 @@
   {
    "language": "C.G",
    "layer": "full",
-   "path": "hello/full/c-g/hello.c_g",
+   "path": "hello/full/c-g-1/hello.c_g",
    "extension": ".c_g",
    "type": null,
    "color": null,
@@ -21900,7 +21900,7 @@
   {
    "language": "Command-line interface",
    "layer": "full",
-   "path": "hello/full/command-line-interface/hello.command_line_interface",
+   "path": "hello/full/command-line-interface-1/hello.command_line_interface",
    "extension": ".command_line_interface",
    "type": null,
    "color": null,
@@ -27466,7 +27466,7 @@
   {
    "language": "dynamically-typed",
    "layer": "full",
-   "path": "hello/full/dynamically-typed/hello.dynamically_typed",
+   "path": "hello/full/dynamically-typed-1/hello.dynamically_typed",
    "extension": ".dynamically_typed",
    "type": null,
    "color": null,
@@ -55692,7 +55692,7 @@
   {
    "language": "pi-calculus",
    "layer": "full",
-   "path": "hello/full/pi-calculus/hello.pi_calculus",
+   "path": "hello/full/pi-calculus-1/hello.pi_calculus",
    "extension": ".pi_calculus",
    "type": null,
    "color": null,
@@ -66439,7 +66439,7 @@
   {
    "language": "Sleep.",
    "layer": "full",
-   "path": "hello/full/sleep/hello.sleep",
+   "path": "hello/full/sleep-1/hello.sleep",
    "extension": ".sleep",
    "type": null,
    "color": null,
@@ -76394,7 +76394,7 @@
   {
    "language": "VHDL-AMS",
    "layer": "full",
-   "path": "hello/full/vhdl-ams/hello.vhdl_ams",
+   "path": "hello/full/vhdl-ams-1/hello.vhdl_ams",
    "extension": ".vhdl_ams",
    "type": null,
    "color": null,
