@@ -456,7 +456,7 @@ HELLO: dict[str, str] = {
     "c++": '#include <iostream>\n\nint main() {\n    std::cout << "Hello World!" << std::endl;\n    return 0;\n}\n',
     "c#": 'using System;\n\nclass Program {\n    static void Main() {\n        Console.WriteLine("Hello World!");\n    }\n}\n',
     "f#": 'printfn "Hello World!"\n',
-    "java": 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello World!");\n    }\n}\n',
+    "java": 'class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello World!");\n    }\n}\n',
     "kotlin": 'fun main() {\n    println("Hello World!")\n}\n',
     "swift": 'print("Hello World!")\n',
     "objective-c": '#import <Foundation/Foundation.h>\n\nint main() {\n    @autoreleasepool {\n        NSLog(@"Hello World!");\n    }\n    return 0;\n}\n',
@@ -633,7 +633,7 @@ HELLO: dict[str, str] = {
 
 # languages we know how to actually execute: name -> shell command template
 RUNNERS: dict[str, str] = {
-    "python": 'python3 "{file}"',
+    "python": 'python3 "{file}" || python "{file}"',
     "ruby": 'ruby "{file}"',
     "perl": 'perl "{file}"',
     "php": 'php "{file}"',
@@ -648,13 +648,13 @@ RUNNERS: dict[str, str] = {
     "julia": 'julia "{file}"',
     "node": 'node "{file}"',
     "javascript": 'node "{file}"',
-    "typescript": 'npx --yes tsx "{file}" 2>/dev/null || echo "Hello World!"',
+    "typescript": 'npx --yes tsx "{file}" || echo "Hello World!"',
     "go": 'go run "{file}"',
     "rust": 'rustc -O -o /tmp/hw_rs "{file}" && /tmp/hw_rs',
     "c": 'cc -O -o /tmp/hw_c "{file}" && /tmp/hw_c',
     "c++": 'c++ -O -o /tmp/hw_cpp "{file}" && /tmp/hw_cpp',
-    "csharp": 'dotnet-script "{file}" 2>/dev/null || echo "Hello World!"',
-    "java": 'javac -d /tmp "{file}" && java -cp /tmp Main',
+    "csharp": 'dotnet-script "{file}" || echo "Hello World!"',
+    "java": 'java "{file}"',
     "kotlin": 'kotlinc -include-runtime -d /tmp/hw.jar "{file}" && java -jar /tmp/hw.jar',
     "scala": 'scala -e "$(cat "{file}")"',
     "groovy": 'groovy "{file}"',
@@ -681,15 +681,15 @@ RUNNERS: dict[str, str] = {
     "jq": 'jq -r .hello "{file}"',
     "awk": 'awk -f "{file}" /dev/null',
     "sed": 'sed -f "{file}" /dev/null',
-    "vim script": 'vim -es -u NONE -S "{file}" -c q 2>/dev/null || echo "Hello World!"',
+    "vim script": 'vim -es -u NONE -S "{file}" -c q || echo "Hello World!"',
     "emacs lisp": 'echo "Hello World!"',
-    "factor": 'factor -e "(include \\"{file}\\")" 2>/dev/null || echo "Hello World!"',
+    "factor": 'factor -e "(include \\"{file}\\")" || echo "Hello World!"',
     "jq": 'jq -r .hello "{file}"',
     "yang": 'echo "Hello World!"',
     "brainfuck": 'bf "{file}"',
     "lolcode": 'lci "{file}"',
-    "vhdl": 'ghdl -a "{file}" 2>/dev/null || echo "Hello World!"',
-    "verilog": 'iverilog -o /tmp/hw_v "{file}" 2>/dev/null || echo "Hello World!"',
+    "vhdl": 'ghdl -a "{file}" || echo "Hello World!"',
+    "verilog": 'iverilog -o "{out}" "{file}" || echo "Hello World!"',
     "crystal": 'crystal eval "$(cat "{file}")"',
     "d": 'ldc2 "{file}" -of=/tmp/hw_d && /tmp/hw_d',
     "nim": 'nim r -o:/tmp/hw_nim "{file}" && /tmp/hw_nim',
@@ -795,9 +795,10 @@ def program_for(name: str, ext: str) -> tuple[str, bool]:
 
 
 def default_program(name: str, ext: str, colour_note: str,
-                   fname: str | None = None) -> str:
+                    fname: str | None = None,
+                    style: tuple | None = None) -> str:
     """Best-effort equivalent when we have no curated template."""
-    line, bs, be = comment_style_for(ext, fname)
+    line, bs, be = style if style is not None else comment_style_for(ext, fname)
     c = f"{line} " if line else ""
     if bs:
         c_open, c_close = f"{bs} ", be
@@ -849,9 +850,11 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
     line, bs, be = comment_style_for(ext, fname)
     if modeline:
         # Keep the banner in the same comment dialect as the modeline so the
-        # first lines of the file parse as that language's comments.
+        # first lines of the file parse as that language's comments.  Block
+        # tokens (/*, <!--, (*) deliberately fall through: comment_style_for
+        # already returns the right block form for those extensions.
         tok = modelline_prefix_token(modeline)
-        if tok in ("#", "//", "--", ";"):
+        if tok in ("#", "//", "--", ";", '"', "!", "%"):
             line, bs, be = tok, None, None
     if line:
         c = f"{line} "
@@ -901,7 +904,8 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
             head_lines.insert(1, f"  note       : {extra}")
         else:
             head_lines.insert(1, f"  note: {extra}")
-        prog, _ = default_program(name, ext, "Hello World!", fname)
+        prog, _ = default_program(name, ext, "Hello World!", fname,
+                                  style=(line, bs, be))
 
     text = normalise("\n".join(head_lines) + "\n\n" + prog)
     if not text.endswith("\n"):
@@ -928,7 +932,7 @@ def safe_dir(base: Path, slug: str, taken: set) -> Path:
 
 def modelline_prefix_token(modeline: str) -> str:
     """Recover the comment token a rendered modeline starts with."""
-    for tok in ("<!--", "/*", "//", "--", ";", "#"):
+    for tok in ("<!--", "/*", "(*", "//", "--", ";", "#", '"', "!", "%"):
         if modeline.startswith(tok):
             return tok
     return "#"

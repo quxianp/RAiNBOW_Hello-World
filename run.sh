@@ -3,7 +3,7 @@
 #
 #   1. load deps (fallbacks everywhere, never aborts)
 #   2. opening animation: core language names flying past with a check mark
-#   3. run every runnable core language in parallel (xargs -P / GNU parallel)
+#   3. run every runnable core language in parallel (scripts/run_languages.py)
 #   4. ASCII-art "Hello World!" via figlet or toilet (or pure python)
 #   5. paint it: lolcat if present, otherwise scripts/rainbow.py (24-bit RGB)
 #   6. optional system beep
@@ -41,7 +41,16 @@ log()  { printf '%s %s\n' "$(date +%H:%M:%S)" "$*" >> "$RUN_LOG"; }
 logf() { printf '%s %s\n' "$(date +%H:%M:%S)" "$*" | tee -a "$RUN_LOG"; }
 
 have() { command -v "$1" >/dev/null 2>&1; }
-PY=python3; have python3 || PY=python
+# The WindowsApps `python3` stub prints nothing, so probe for an interpreter
+# that actually runs code instead of trusting `command -v`.
+PY=""
+for cand in python3 python py; do
+  if have "$cand" && [ "$("$cand" -c 'print(1)' 2>/dev/null)" = "1" ]; then
+    PY="$cand"
+    break
+  fi
+done
+[ -n "$PY" ] || PY=python3
 
 ESC=$'\033'
 C_RESET="$ESC[0m"; C_DIM="$ESC[2m"; C_BOLD="$ESC[1m"
@@ -69,10 +78,8 @@ have figlet  && FIGLET="figlet"
 have toilet  && TOILET="toilet"
 LOLCAT=""
 have lolcat  && LOLCAT="lolcat"
-PARALLEL=""
-have parallel && PARALLEL="parallel"
 
-logf "deps: figlet=${FIGLET:-fallback-python} toilet=${TOILET:-fallback-python} lolcat=${LOLCAT:-fallback-python/rainbow.py} parallel=${PARALLEL:-fallback-xargs}"
+logf "deps: figlet=${FIGLET:-fallback-python} toilet=${TOILET:-fallback-python} lolcat=${LOLCAT:-fallback-python/rainbow.py} runner=run_languages.py(jobs=$JOBS)"
 
 CORE_COUNT=$(find hello/core -type f 2>/dev/null | wc -l | tr -d ' ')
 FULL_COUNT=$(find hello/full -type f 2>/dev/null | wc -l | tr -d ' ')
@@ -157,6 +164,7 @@ roll_call
 
 # --------------------------------------------------------------------------
 # 3. parallel execution of every core language we know how to run
+#    (the worker pool lives in scripts/run_languages.py --run N)
 # --------------------------------------------------------------------------
 RUNNERS_FILE="logs/runners.txt"
 OUT_DIR="logs/output"
@@ -171,37 +179,10 @@ if [ "$PLANNED" -gt 0 ]; then
   printf '  %sExecuting %s languages in parallel (jobs=%s)%s\n' \
     "$C_DIM" "$PLANNED" "$JOBS" "$C_RESET"
 
-  run_one() {
-    # $1 = language, $2 = command, $3 = path
-    local name="$1" cmd="$2" path="$3"
-    local out
-    out=$(eval "$cmd" 2>&1 | head -c 400)
-    if [ -n "$(printf '%s' "$out" | tr -d '[:space:]')" ]; then
-      printf '%s\t%s\t%s\n' "$name" "ok" "$(printf '%s' "$out" | tr '\n' ' ' | tr '\t' ' ')" \
-        >> "$OUT_DIR/results.tsv"
-    else
-      printf '%s\t%s\t%s\n' "$name" "silent" "-" >> "$OUT_DIR/results.tsv"
-    fi
-  }
-  export -f run_one
-  : > "$OUT_DIR/results.tsv"
+  "$PY" scripts/run_languages.py --run 1 --jobs "$JOBS" \
+    > "$OUT_DIR/results.tsv" 2>>"$RUN_LOG" || true
 
-  if [ -n "$PARALLEL" ]; then
-    awk -F'\t' '{print $1 "\t" $2 "\t" $3}' "$RUNNERS_FILE" \
-      | parallel -j "$JOBS" -k 'run_one {}' >/dev/null 2>>"$RUN_LOG" || true
-  else
-    while IFS=$'\t' read -r name cmd path; do
-      printf '%s\0%s\0%s\0' "$name" "$cmd" "$path"
-    done < "$RUNNERS_FILE" \
-      | xargs -0 -P "$JOBS" -I{} -n1 true 2>/dev/null || true
-    # xargs has no 3-tuple split, so fall back to a plain parallel loop
-    while IFS=$'\t' read -r name cmd path; do
-      printf '%s\t%s\t%s\n' "$name" "$cmd" "$path"
-    done < "$RUNNERS_FILE" \
-      | xargs -d '\n' -P "$JOBS" -I{} bash -c 'run_one {}' >/dev/null 2>>"$RUN_LOG" || true
-  fi
-
-  OK_COUNT=$(grep -c "	ok	" "$OUT_DIR/results.tsv" 2>/dev/null || echo 0)
+  OK_COUNT=$(grep -c $'\tok\t' "$OUT_DIR/results.tsv" 2>/dev/null || echo 0)
   printf '  %s%s spoke, %s silent / unavailable%s\n' \
     "$C_DIM" "${OK_COUNT:-0}" "$PLANNED" "$C_RESET"
   log "executed ok=$OK_COUNT planned=$PLANNED"
@@ -284,7 +265,7 @@ final_rainbow_hello() {
   local i n=${#msg}
   for (( i = 0; i < n; i++ )); do
     local h=$(( (i * 360 / n) ))
-    printf '%s%s%s' "$(rgb $((255 - h / 4)) $((120 + h / 3)) $((60 + h / 2))" \
+    printf '%s%s%s' "$(rgb $((255 - h / 4)) $((120 + h / 3)) $((60 + h / 2)))" \
       "${msg:$i:1}" "$C_RESET"
   done
   printf '\n'

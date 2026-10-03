@@ -30,3 +30,6 @@ logs/s.txt
 logs/sel.txt
 *.patch
 *.bundle
+
+# per-runner scratch (compilers, run_languages.py)
+.tmp/

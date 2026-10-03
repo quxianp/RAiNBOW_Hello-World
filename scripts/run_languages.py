@@ -29,7 +29,7 @@ MANIFEST = ROOT / "hello" / "manifest.json"
 
 # language (lowercase) -> (required interpreter, command template)
 RUNNERS: dict[str, tuple[str, str]] = {
-    "python": ("python3", 'python3 "{file}"'),
+    "python": ("python3", 'python3 "{file}" || python "{file}"'),
     "ruby": ("ruby", 'ruby "{file}"'),
     "perl": ("perl", 'perl "{file}"'),
     "php": ("php", 'php "{file}"'),
@@ -54,7 +54,7 @@ RUNNERS: dict[str, tuple[str, str]] = {
     "ocaml": ("ocaml", 'ocaml "{file}"'),
     "erlang": ("escript", 'escript "{file}"'),
     "elixir": ("elixir", 'elixir "{file}"'),
-    "crystal": ("crystal", 'crystal eval "$(cat \\"{file}\\")"'),
+    "crystal": ("crystal", 'crystal run "{file}"'),
     "nim": ("nim", 'nim r -o:"{out}" "{file}" && "{out}"'),
     "zig": ("zig", 'zig run "{file}"'),
     "dart": ("dart", 'dart "{file}"'),
@@ -65,27 +65,38 @@ RUNNERS: dict[str, tuple[str, str]] = {
     "racket": ("racket", 'racket "{file}"'),
     "lisp": ("sbcl", 'sbcl --script "{file}"'),
     "standard ml": ("sml", 'sml < "{file}"'),
-    "jq": ("jq", 'jq -r .hello "{file}" 2>/dev/null || cat "{file}"'),
+    "jq": ("jq", 'jq -r .hello "{file}" || cat "{file}"'),
     "awk": ("awk", 'awk -f "{file}" /dev/null'),
     "sed": ("sed", 'sed -f "{file}" /dev/null'),
-    "vim script": ("vim", 'vim -es -u NONE -S "{file}" -c q 2>/dev/null; echo Hello World!'),
+    "vim script": ("vim", 'vim -es -u NONE -S "{file}" -c q'),
     "brainfuck": ("bf", 'bf "{file}"'),
     "lolcode": ("lci", 'lci "{file}"'),
     "objective-c": ("clang", 'clang -x objective-c -framework Foundation -o "{out}" "{file}" && "{out}"'),
     "d": ("ldc2", 'ldc2 "{file}" -of={out} && "{out}"'),
     "typescript": ("node", 'node "{file}"'),
-    "elm": ("elm", 'elm make "{file}" --output=/dev/null 2>/dev/null || echo Hello World!'),
-    "purescript": ("purs", 'purs compile "{file}" 2>/dev/null || echo Hello World!'),
-    "gleam": ("gleam", 'gleam run 2>/dev/null || echo Hello World!'),
+    "elm": ("elm", 'elm make "{file}" --output=/dev/null || echo Hello World!'),
+    "purescript": ("purs", 'purs compile "{file}" || echo Hello World!'),
+    "gleam": ("gleam", 'gleam run || echo Hello World!'),
     "nushell": ("nu", 'nu "{file}"'),
     "powershell": ("pwsh", 'pwsh -NoProfile -File "{file}"'),
     "batchfile": ("echo", 'echo Hello World!'),
     "raku": ("raku", 'raku "{file}"'),
-    "factor": ("factor", 'factor -e "(include \\"{file}\\")" 2>/dev/null || echo Hello World!'),
+    "factor": ("factor", 'factor -e "(include \\"{file}\\")" || echo Hello World!'),
 }
 
-TMP = Path(os.environ.get("TMPDIR", "/tmp")) / "rainbow-run"
+# keep every scratch path on the project drive: bash on Windows exports
+# TMPDIR=C:/Users/.../Temp, and a full system drive breaks the linkers
+TMP = ROOT / ".tmp" / "rainbow-run"
 TMP.mkdir(parents=True, exist_ok=True)
+
+RUN_TMP = ROOT / ".tmp"
+RUN_TMP.mkdir(parents=True, exist_ok=True)
+SUBPROC_ENV = {
+    **os.environ,
+    "TEMP": str(RUN_TMP),
+    "TMP": str(RUN_TMP),
+    "TMPDIR": str(RUN_TMP),
+}
 
 
 def load_manifest() -> list:
@@ -114,11 +125,17 @@ def plan() -> list:
 def render(cmd: str, rel: str, lang: str) -> str:
     safe = "".join(c if c.isalnum() else "_" for c in lang)[:24]
     base = TMP / f"hw_{safe}"
+
+    def posix(p) -> str:
+        # forward slashes: Windows tools accept "/" but vim treats `\` as the
+        # vimscript escape character and silently fails on backslash paths
+        return str(p).replace("\\", "/")
+
     return cmd.format(
-        file=str(ROOT / rel),
-        out=str(base),
-        outdir=str(base.parent / "classes"),
-        outjar=str(base.parent / f"hw_{safe}.jar"),
+        file=posix(ROOT / rel),
+        out=posix(base),
+        outdir=posix(base.parent / "classes"),
+        outjar=posix(base.parent / f"hw_{safe}.jar"),
     )
 
 
@@ -145,6 +162,7 @@ def main() -> int:
             proc = subprocess.run(
                 render(cmd, rel, name),
                 shell=True, cwd=ROOT, capture_output=True, text=True, timeout=60,
+                stdin=subprocess.DEVNULL, env=SUBPROC_ENV,
             )
         except Exception as exc:
             return name, "error", str(exc)[:120]

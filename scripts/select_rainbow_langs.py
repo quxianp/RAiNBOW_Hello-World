@@ -124,14 +124,30 @@ MODELINE_PREFIX = {
     "semi": (";", "; -*- mode: {alias} -*-"),
     "block": ("/*", "/* -*- mode: {alias} -*- */"),
     "html": ("<!--", "<!-- -*- mode: {alias} -*- -->"),
+    "quote": ('"', '" -*- mode: {alias} -*-'),
+    "percent": ("%", "% -*- mode: {alias} -*-"),
+    "bang": ("!", "! -*- mode: {alias} -*-"),
+    "ocaml": ("(*", "(* -*- mode: {alias} -*- *)"),
 }
 
 
 def comment_prefix_for(ext: str, fname: str | None) -> str:
     """Best guess at a comment token Linguist's modeline scanner accepts."""
     e = (ext or "").lower()
+    # languages whose token is not one of hash/slash/dash/semi, checked first
+    # because several of them also look like dotfiles / generic config.
+    if e in {".vim", ".vimrc", ".vba", ".vmb"}:
+        return MODELINE_PREFIX["quote"][0]
+    if e in {".erl", ".hrl"}:
+        return MODELINE_PREFIX["percent"][0]
+    if e in {".f", ".f77", ".f90", ".f95", ".f03", ".for", ".ftn", ".fpp"}:
+        return MODELINE_PREFIX["bang"][0]
+    if e in {".ml", ".mli", ".mll", ".mly"}:
+        return MODELINE_PREFIX["ocaml"][0]
     if fname:
         f = fname.lower()
+        if f.endswith((".vim", ".vimrc", ".vmb")):
+            return MODELINE_PREFIX["quote"][0]
         if f.startswith(".") or f in {
             "npmrc", "torrc", "crontab", "procfile", "hosts", "root",
             "requirements.txt", "browserslist", "singularity", "earthfile",
@@ -142,10 +158,10 @@ def comment_prefix_for(ext: str, fname: str | None) -> str:
                         ".properties", ".gitignore", ".gitattributes")):
             return MODELINE_PREFIX["hash"][0]
     if e in {".py", ".rb", ".sh", ".pl", ".r", ".jl", ".yaml", ".yml", ".toml",
-             ".ini", ".cfg", ".conf", ".properties", ".rs", ".go", ".jl",
-             ".nim", ".cr", ".ex", ".exs", ".hs", ".elm", ".purs", ".coffee",
+             ".ini", ".cfg", ".conf", ".properties", ".jl",
+             ".nim", ".cr", ".ex", ".exs", ".coffee",
              ".tf", ".hcl", ".nix", ".starlark", ".bazel", ".mk", ".make",
-             ".cmake", ".groovy", ".tcl", ".ps1", ".fish", ".zsh", ".ksh",
+             ".cmake", ".tcl", ".ps1", ".fish", ".zsh", ".ksh",
              ".csh", ".nu", ".crontab", ".editorconfig", ".gitignore",
              ".gitattributes", ".npmrc", ".dockerfile"}:
         return MODELINE_PREFIX["hash"][0]
@@ -154,18 +170,20 @@ def comment_prefix_for(ext: str, fname: str | None) -> str:
         return MODELINE_PREFIX["html"][0]
     if e in {".sql", ".tsql", ".plpgsql", ".psql", ".hql", ".presto", ".sparql",
              ".lisp", ".lsp", ".scm", ".ss", ".rkt", ".clj", ".cljs", ".cljc",
-             ".el", ".elisp", ".asm", ".s", ".sed", ".tcl", ".vb", ".bas",
+             ".el", ".elisp", ".asm", ".s", ".tcl", ".vb", ".bas",
              ".cls", ".frm", ".ctl", ".vbs", ".vba", ".pas", ".pp", ".ada",
              ".adb", ".ads", ".sv", ".svh", ".vhd", ".vhdl", ".4dm", ".csd",
-             ".tcl", ".smt", ".smt2", ".z3", ".v", ".vi"}:
+             ".smt", ".smt2", ".z3", ".v", ".vi",
+             ".hs", ".lhs", ".elm", ".purs", ".lua"}:
         return MODELINE_PREFIX["semi" if e in {
             ".lisp", ".lsp", ".scm", ".ss", ".rkt", ".clj", ".cljs", ".cljc",
-            ".el", ".elisp", ".asm", ".s", ".sed", ".bas", ".cls", ".frm",
+            ".el", ".elisp", ".asm", ".s", ".bas", ".cls", ".frm",
             ".ctl", ".vb", ".vba", ".vbs", ".smt", ".smt2", ".z3", ".csd",
         } else "dash"][0]
     if e in {".c", ".h", ".cpp", ".hpp", ".cc", ".hh", ".cxx", ".cs", ".java",
              ".kt", ".kts", ".scala", ".groovy", ".swift", ".dart", ".zig",
-             ".js", ".mjs", ".cjs", ".jsx", ".ts", ".tsx", ".css", ".scss",
+             ".js", ".mjs", ".cjs", ".jsx", ".ts", ".tsx", ".cts", ".mts",
+             ".php", ".rs", ".go", ".css", ".scss",
              ".less", ".sol", ".move", ".glsl", ".vert", ".frag", ".wgsl",
              ".hlsl", ".metal", ".cu", ".cuh", ".ino", ".vue", ".svelte",
              ".astro", ".json5", ".jsonc", ".d", ".vala", ".v", ".sv", ".hcl",
@@ -192,6 +210,10 @@ def modeline_for(entry: dict, ext: str, fname: str | None):
         ";": MODELINE_PREFIX["semi"][1],
         "/*": MODELINE_PREFIX["block"][1],
         "<!--": MODELINE_PREFIX["html"][1],
+        '"': MODELINE_PREFIX["quote"][1],
+        "%": MODELINE_PREFIX["percent"][1],
+        "!": MODELINE_PREFIX["bang"][1],
+        "(*": MODELINE_PREFIX["ocaml"][1],
     }.get(prefix, MODELINE_PREFIX["hash"][1])
     return alias, template
 
