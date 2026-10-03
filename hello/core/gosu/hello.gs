@@ -1,0 +1,43 @@
+# -*- mode: gosu -*-
+# Gosu - Hello World! :: RAiNBOW_Hello-World
+#   colour     : #82937f
+#   hue        : 111.0 deg
+#   layer      : core (byte-balanced rainbow bar)
+#   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
+#   reference  : see https://esolangs.org/ and https://rosettacode.org/
+
+class Hello {
+  static void main() {
+    println("Hello World!")
+  }
+}
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Gosu :: RAiNBOW_Hello-World
+# rainbow-pad colour #82937f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Gosu :: RAiNBOW_Hello-World
+# rainbow-pad colour #82937f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Gosu :: RAiNBOW_Hello-World
+# rainbow-pad colour #82937f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Gosu :: RAiNBOW_Hello-World
+# rainbow-pad colour #82937f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Gosu :: RAiNBOW_Hello-World
+# rainbow-pad colour #82937f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://

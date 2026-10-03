@@ -4,7 +4,7 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }

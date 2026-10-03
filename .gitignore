@@ -33,3 +33,7 @@ logs/sel.txt
 
 # per-runner scratch (compilers, run_languages.py)
 .tmp/
+
+# run.sh artifacts (regenerated on every show)
+logs/output/
+logs/runners.txt

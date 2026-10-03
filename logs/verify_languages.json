@@ -18,7 +18,7 @@
     {
       "name": "core share window 0.05%-0.5%",
       "ok": true,
-      "detail": "min 0.1441% max 0.1444% ideal 0.1441%"
+      "detail": "min 0.1441% max 0.1441% ideal 0.1441%"
     },
     {
       "name": "shares sum to 100%",
@@ -28,12 +28,12 @@
     {
       "name": "share spread is tight",
       "ok": true,
-      "detail": "stdev 0.000025 pp"
+      "detail": "stdev 0.000000 pp"
     },
     {
       "name": "counted bytes non-trivial",
       "ok": true,
-      "detail": "1421349 bytes counted"
+      "detail": "1421312 bytes counted"
     },
     {
       "name": "full layer >= 2400 files",
@@ -103,9 +103,9 @@
   "full_files": 6632,
   "total_language_files": 7326,
   "merged_languages": 7325,
-  "counted_bytes": 1421349,
-  "share_min_pct": 0.144088,
-  "share_max_pct": 0.14444,
+  "counted_bytes": 1421312,
+  "share_min_pct": 0.144092,
+  "share_max_pct": 0.144092,
   "share_sum_pct": 100.0,
   "buckets": {
     "red-orange": 80,

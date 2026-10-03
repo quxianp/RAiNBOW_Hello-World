@@ -9,32 +9,32 @@
 define i32 @main() {
   ret i32 0
 }
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
-// rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
-// rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
-// rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
-// rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
-// rainbow-pad colour #6e8b3d :: padded to 100
-// rainbow-pad padding comment: by
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
+# rainbow-pad colour #6e8b3d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
+# rainbow-pad colour #6e8b3d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
+# rainbow-pad colour #6e8b3d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
+# rainbow-pad colour #6e8b3d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad LLVM TableGen :: RAiNBOW_Hello-World
+# rainbow-pad colour #6e8b3d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow 

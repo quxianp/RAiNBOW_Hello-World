@@ -35,4 +35,4 @@ XSLT - Hello World! :: RAiNBOW_Hello-World
 <!-- rainbow-pad colour #eb8ceb :: padded to 100 -->
 <!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
 <!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
-<!-- rainbow-pad equal byte share keeps the language bar an even rainb -->
+<!-- rainbow-pad equal byte share keeps the language bar an even rainb --

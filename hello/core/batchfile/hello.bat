@@ -8,33 +8,33 @@
 
 @echo off
 echo Hello World!
-' rainbow-pad equal byte share keeps the language bar an even rainbow
-' rainbow-pad one segment per Linguist coloured language
-' rainbow-pad Batchfile :: RAiNBOW_Hello-World
-' rainbow-pad colour #c1f12e :: padded to 100
-' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-' rainbow-pad equal byte share keeps the language bar an even rainbow
-' rainbow-pad one segment per Linguist coloured language
-' rainbow-pad Batchfile :: RAiNBOW_Hello-World
-' rainbow-pad colour #c1f12e :: padded to 100
-' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-' rainbow-pad equal byte share keeps the language bar an even rainbow
-' rainbow-pad one segment per Linguist coloured language
-' rainbow-pad Batchfile :: RAiNBOW_Hello-World
-' rainbow-pad colour #c1f12e :: padded to 100
-' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-' rainbow-pad equal byte share keeps the language bar an even rainbow
-' rainbow-pad one segment per Linguist coloured language
-' rainbow-pad Batchfile :: RAiNBOW_Hello-World
-' rainbow-pad colour #c1f12e :: padded to 100
-' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-' rainbow-pad equal byte share keeps the language bar an even rainbow
-' rainbow-pad one segment per Linguist coloured language
-' rainbow-pad Batchfile :: RAiNBOW_Hello-World
-' rainbow-pad colour #c1f12e :: padded to 100
-' rainbow-pad padding comment: byte balancing for the rainbow bar
-' rainbow-pad https://github.co
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Batchfile :: RAiNBOW_Hello-World
+# rainbow-pad colour #c1f12e :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Batchfile :: RAiNBOW_Hello-World
+# rainbow-pad colour #c1f12e :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Batchfile :: RAiNBOW_Hello-World
+# rainbow-pad colour #c1f12e :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Batchfile :: RAiNBOW_Hello-World
+# rainbow-pad colour #c1f12e :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Batchfile :: RAiNBOW_Hello-World
+# rainbow-pad colour #c1f12e :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.co

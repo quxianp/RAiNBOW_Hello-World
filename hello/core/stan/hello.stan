@@ -10,31 +10,32 @@ data { int<lower=0> N; }
 parameters { real y; }
 model { y ~ normal(0, 1); }
 generated quantities { real y_sim = normal_rng(0, 1); }
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Stan :: RAiNBOW_Hello-World
-// rainbow-pad colour #b2011d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Stan :: RAiNBOW_Hello-World
-// rainbow-pad colour #b2011d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Stan :: RAiNBOW_Hello-World
-// rainbow-pad colour #b2011d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Stan :: RAiNBOW_Hello-World
-// rainbow-pad colour #b2011d :: padded to 100
-// rainbow-pad padding comment: byte balancing for the rainbow bar
-// rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
-// rainbow-pad equal byte share keeps the language bar an even rainbow
-// rainbow-pad one segment per Linguist coloured language
-// rainbow-pad Stan :: RAiNBOW_Hello-World
-// rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Stan :: RAiNBOW_Hello-World
+# rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Stan :: RAiNBOW_Hello-World
+# rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Stan :: RAiNBOW_Hello-World
+# rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Stan :: RAiNBOW_Hello-World
+# rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+# rainbow-pad equal byte share keeps the language bar an even rainbow
+# rainbow-pad one segment per Linguist coloured language
+# rainbow-pad Stan :: RAiNBOW_Hello-World
+# rainbow-pad colour #b2011d :: padded to 100
+# rainbow-pad padding comme
