@@ -1,5 +1,9 @@
 * -text linguist-vendored
 /hello/core/** -linguist-vendored
+# Linguist's include_in_language_stats? only keeps types programming|markup by
+# default; 124 of our core languages are type data|prose (Markdown, JSON,
+# SQL, CSV, TOML, AsciiDoc ...), so force them detectable/stats-eligible.
+/hello/core/** linguist-detectable
 /hello/full/** linguist-vendored
 README.md linguist-documentation
 run.sh linguist-documentation

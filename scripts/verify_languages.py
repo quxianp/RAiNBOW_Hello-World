@@ -7,7 +7,8 @@ Checks
   3. the counted shares add up to exactly 100 %
   4. hello/full holds at least 2400 files, total files >= 3000
   5. .gitattributes exposes exactly hello/core/ to Linguist
-  6. every core extension is claimed by Linguist
+  6. every core file is recognisable by Linguist (extension, filename or
+     the modeline alias we emit on line 1)
   7. a simulated language bar covers the whole colour wheel
   8. optional cross-check with `github-linguist --breakdown` when installed
 
@@ -19,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import statistics
 import subprocess
@@ -127,19 +129,28 @@ def main() -> int:
     check(".gitattributes marks README as documentation", "README.md linguist-documentation" in ga)
     check(".gitattributes default is vendored", ga.splitlines()[0].startswith("* ") and "linguist-vendored" in ga.splitlines()[0])
 
-    # ---- 6. extension recognised by Linguist ----------------------------
+    # ---- 6. recognisable by Linguist ------------------------------------
+    # A core file is found by Linguist if any of the three strategies that run
+    # before the ambiguous-extension classifier can resolve it: modeline
+    # (line 1, highest priority), filename, extension.
     by_ext = Counter()
     by_name = set()
+    aliases = set()
     for e in linguist:
         for x in e.get("extensions") or []:
             by_ext[x] += 1
         for f in e.get("filenames") or []:
             by_name.add(f)
+        aliases.add(re.sub(r"\s", "-", e["name"].lower()))
+        for a in e.get("aliases") or []:
+            if isinstance(a, str):
+                aliases.add(a.lower())
     unknown = [
         r["path"] for r in langs
         if by_ext.get(r["extension"], 0) == 0
         and not r.get("filename")
         and Path(r["path"]).name not in by_name
+        and r.get("modeline_alias") not in aliases
     ]
     check(
         "every core file is recognisable by Linguist",

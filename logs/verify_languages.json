@@ -3,12 +3,12 @@
     {
       "name": "core languages within 600-800",
       "ok": true,
-      "detail": "689 core languages"
+      "detail": "694 core languages"
     },
     {
       "name": "core == every Linguist coloured language that can be detected",
       "ok": true,
-      "detail": "linguist coloured=694 core=689 deferred=5 (no extension and no filename -> moved to hello/full)"
+      "detail": "linguist coloured=694 core=694 deferred=0 (no extension and no filename -> moved to hello/full)"
     },
     {
       "name": "every core file exists",
@@ -18,7 +18,7 @@
     {
       "name": "core share window 0.05%-0.5%",
       "ok": true,
-      "detail": "min 0.1451% max 0.1454% ideal 0.1451%"
+      "detail": "min 0.1441% max 0.1444% ideal 0.1441%"
     },
     {
       "name": "shares sum to 100%",
@@ -28,22 +28,22 @@
     {
       "name": "share spread is tight",
       "ok": true,
-      "detail": "stdev 0.000016 pp"
+      "detail": "stdev 0.000025 pp"
     },
     {
       "name": "counted bytes non-trivial",
       "ok": true,
-      "detail": "1411098 bytes counted"
+      "detail": "1421349 bytes counted"
     },
     {
       "name": "full layer >= 2400 files",
       "ok": true,
-      "detail": "6637 files"
+      "detail": "6632 files"
     },
     {
       "name": "total language files >= 3000",
       "ok": true,
-      "detail": "689 core + 6637 full = 7326"
+      "detail": "694 core + 6632 full = 7326"
     },
     {
       "name": ".gitattributes un-vendors hello/core",
@@ -98,14 +98,14 @@
   ],
   "passed": 19,
   "total": 19,
-  "core_languages": 689,
-  "core_files": 689,
-  "full_files": 6637,
+  "core_languages": 694,
+  "core_files": 694,
+  "full_files": 6632,
   "total_language_files": 7326,
   "merged_languages": 7325,
-  "counted_bytes": 1411098,
-  "share_min_pct": 0.145135,
-  "share_max_pct": 0.145419,
+  "counted_bytes": 1421349,
+  "share_min_pct": 0.144088,
+  "share_max_pct": 0.14444,
   "share_sum_pct": 100.0,
   "buckets": {
     "red-orange": 80,
@@ -113,15 +113,15 @@
     "amber": 49,
     "yellow": 27,
     "yellow-green": 26,
-    "green": 23,
-    "spring-green": 34,
+    "green": 25,
+    "spring-green": 35,
     "green-cyan": 30,
     "cyan": 29,
     "cyan-blue": 59,
-    "azure": 95,
+    "azure": 96,
     "blue": 57,
     "violet": 28,
-    "purple": 32,
+    "purple": 33,
     "magenta": 12,
     "pink": 17,
     "rose": 20,
