@@ -200,9 +200,23 @@ def main() -> int:
     ap.add_argument("--target-bytes", type=int, default=DEFAULT_TARGET)
     ap.add_argument("--report-only", action="store_true")
     ap.add_argument("--report", action="store_true", default=True)
+    ap.add_argument(
+        "--shard",
+        default="",
+        help="i/n: balance only this slice (CI batch mode; the shared "
+        "report files are left alone)",
+    )
     args = ap.parse_args()
+    sharded = bool(args.shard)
 
     rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
+    if sharded and "/" in args.shard:
+        idx_s, n_s = args.shard.split("/", 1)
+        idx, n_shards = int(idx_s), int(n_s)
+        langs = rainbow["languages"]
+        start = (len(langs) * idx) // n_shards
+        end = (len(langs) * (idx + 1)) // n_shards
+        rainbow = {**rainbow, "languages": langs[start:end]}
     rows = natural_sizes(rainbow)
     if not rows:
         print("! no core files found; run scripts/generate_all_hello.py first")
@@ -289,7 +303,6 @@ def main() -> int:
         lines.append(f"  [{i:>4}-{min(i + 127, len(bar) - 1):>4}] {len(bar[i:i + 128])} segments")
 
     report = "\n".join(lines) + "\n"
-    (LOGS / "balance_report.txt").write_text(report, encoding="utf-8")
     summary = {
         "core_languages": n,
         "target_bytes_each": target,
@@ -305,9 +318,13 @@ def main() -> int:
         ],
         "sum_pct": round(sum(shares), 6),
     }
-    (LOGS / "balance_summary.json").write_text(
-        json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    if not sharded:
+        # shard mode leaves the shared reports alone: they describe the
+        # whole bar, not one CI batch
+        (LOGS / "balance_report.txt").write_text(report, encoding="utf-8")
+        (LOGS / "balance_summary.json").write_text(
+            json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
     print(f"core languages : {n}")
     print(f"target bytes   : {target} (natural mean {natural_mean:.1f})")
     print(f"total counted  : {total} bytes")
@@ -316,7 +333,8 @@ def main() -> int:
           f"ideal {summary['ideal_share_pct']}%")
     print(f"sum of shares  : {summary['sum_pct']}%")
     print(f"outside window : {len(summary['outside_window'])}")
-    print("wrote logs/balance_report.txt, logs/balance_summary.json")
+    if not sharded:
+        print("wrote logs/balance_report.txt, logs/balance_summary.json")
     return 0
 
 

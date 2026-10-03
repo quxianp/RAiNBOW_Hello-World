@@ -957,10 +957,30 @@ def choose_full_extension(rec: dict) -> str:
     return f".{rec['slug'].replace('-', '_')}"
 
 
+def shard_slice(items: list, shard: str) -> list:
+    """`--shard i/n`: deterministic slice so CI batches are stable."""
+    if not shard or "/" not in shard:
+        return items
+    idx_s, n_s = shard.split("/", 1)
+    idx, n = int(idx_s), int(n_s)
+    if n <= 1:
+        return items
+    start = (len(items) * idx) // n
+    end = (len(items) * (idx + 1)) // n
+    return items[start:end]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--clean", action="store_true", help="wipe hello/ first")
+    ap.add_argument(
+        "--shard",
+        default="",
+        help="i/n: regenerate only this slice (CI batch mode; merges the "
+        "manifest and skips the prune so other batches are untouched)",
+    )
     args = ap.parse_args()
+    sharded = bool(args.shard)
 
     rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
     merged = json.loads((DATA / "merged_langs.json").read_text(encoding="utf-8"))
@@ -981,7 +1001,7 @@ def main() -> int:
     taken_full: set = set()
 
     # ---- core layer -----------------------------------------------------
-    for rec in rainbow["languages"]:
+    for rec in shard_slice(rainbow["languages"], args.shard):
         name = rec["name"]
         ext = rec["extension"] or ""
         d = safe_dir(core_dir, rec["slug"], taken_core)
@@ -1021,9 +1041,8 @@ def main() -> int:
         "No curated template for this language yet: the closest equivalent "
         "Hello World is used, see the linked interpreter/rosetta entries."
     )
-    for rec in merged:
-        if rec["name"].lower() in core_names:
-            continue
+    full_pool = [r for r in merged if r["name"].lower() not in core_names]
+    for rec in shard_slice(full_pool, args.shard):
         ext = ""
         ext = choose_full_extension(rec)
         if not ext.startswith("."):
@@ -1058,18 +1077,34 @@ def main() -> int:
     # ---- prune anything the manifest does not reference ------------------
     # Stale `-1` twins from an older buggy run, orphaned files after a rename,
     # empty dirs: all of it goes, so disk state == manifest state.
-    keep = {m["path"] for m in manifest}
-    for layer in (core_dir, full_dir):
-        for p in sorted(layer.rglob("*"), reverse=True):
-            rel = p.relative_to(ROOT).as_posix()
-            if p.is_file():
-                if rel not in keep:
-                    p.unlink()
-            elif p.is_dir():
-                try:
-                    p.rmdir()  # only succeeds when empty
-                except OSError:
-                    pass
+    # Skipped in shard mode: the manifest only knows this batch's entries and
+    # would delete every other batch's files.
+    if not sharded:
+        keep = {m["path"] for m in manifest}
+        for layer in (core_dir, full_dir):
+            for p in sorted(layer.rglob("*"), reverse=True):
+                rel = p.relative_to(ROOT).as_posix()
+                if p.is_file():
+                    if rel not in keep:
+                        p.unlink()
+                elif p.is_dir():
+                    try:
+                        p.rmdir()  # only succeeds when empty
+                    except OSError:
+                        pass
+
+    # ---- write the manifest (shard mode merges, full mode rewrites) ------
+    if sharded and (HELLO_DIR / "manifest.json").exists():
+        old = json.loads((HELLO_DIR / "manifest.json").read_text(encoding="utf-8"))
+        by_name = {m["language"].lower(): m for m in old.get("files", [])}
+        order = [m["language"].lower() for m in old.get("files", [])]
+        for m in manifest:
+            key = m["language"].lower()
+            if key not in by_name:
+                order.append(key)
+            by_name[key] = m
+        files = [by_name[k] for k in order]
+        manifest = files
 
     core_n = sum(1 for m in manifest if m["layer"] == "core")
     full_n = sum(1 for m in manifest if m["layer"] == "full")
