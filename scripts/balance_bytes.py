@@ -61,10 +61,30 @@ MIN_SHARE = 0.05
 MAX_SHARE = 0.5
 
 
+LINE_TOKENS = ("<!--", "/*", "(*", "//", "--", ";", "#", '"', "!", "%")
+BLOCK_CLOSE = {"<!--": "-->", "/*": "*/", "(*": "*)"}
+
+
+def style_from_content(text: str, ext: str, fname: str | None) -> tuple:
+    """Detect the comment style from the file's own line-1 modeline.
+
+    The generator pins every core file with a modeline in that language's
+    comment dialect, so the pad must follow line 1 instead of re-guessing
+    from the extension (whose table cannot be right for all 694 languages).
+    """
+    first = text.splitlines()[0] if text else ""
+    for tok in LINE_TOKENS:
+        if first.startswith(tok):
+            if tok in BLOCK_CLOSE:
+                return (None, tok, BLOCK_CLOSE[tok])
+            return (tok, None, None)
+    return comment_style_for(ext, fname)
+
+
 def pad_lines(ext: str, name: str, colour: str | None, needed: int,
-             fname: str | None = None) -> list[str]:
+             fname: str | None = None, style: tuple | None = None) -> list[str]:
     """Build comment lines whose total encoded length is exactly `needed`."""
-    line, bs, be = comment_style_for(ext, fname)
+    line, bs, be = style if style is not None else comment_style_for(ext, fname)
     filler_bits = [
         "equal byte share keeps the language bar an even rainbow",
         "one segment per Linguist coloured language",
@@ -75,43 +95,53 @@ def pad_lines(ext: str, name: str, colour: str | None, needed: int,
     ]
     out: list[str] = []
     i = 0
+
+    def blen(s: str) -> int:
+        # byte length: file size is counted in bytes, `len()` is characters
+        return len(s.encode("utf-8"))
+
     # each iteration consumes as much as it can of the remaining budget
     while needed > 0:
         if line:
             prefix = f"{line} {MARKER} "
             tail = filler_bits[i % len(filler_bits)]
             i += 1
-            room = needed - len(prefix) - 1  # -1 for the newline
+            room = needed - blen(prefix) - 1  # -1 for the newline
             if room < 0:
                 # cannot fit even a short comment: use a bare marker line
-                if needed >= len(f"{line} {MARKER}\n"):
-                    out.append(f"{line} {MARKER}\n")
-                    needed -= len(f"{line} {MARKER}\n")
+                bare = f"{line} {MARKER}"
+                if needed >= blen(bare) + 1:
+                    out.append(bare + "\n")
+                    needed -= blen(bare) + 1
                     continue
                 out.append(" " * (needed - 1) + "\n")
                 needed = 0
                 break
             if room < 8:
-                out.append(f"{line} {MARKER}" + " " * (needed - len(f"{line} {MARKER}") - 1) + "\n")
+                marker_line = f"{line} {MARKER}"
+                out.append(marker_line + " " * (needed - blen(marker_line) - 1) + "\n")
                 needed = 0
                 break
             out.append(prefix + tail[:room] + "\n")
-            needed -= len(out[-1])
+            needed -= blen(out[-1])
         elif bs:
             # block comments: keep every pad line self-contained
+            # `f"{prefix}{filler} {be}\n"` -> prefix + room + space + be + nl
             prefix = f"{bs} {MARKER} "
-            room = needed - len(prefix) - len(be) - 1
+            room = needed - blen(prefix) - blen(be) - 2
             if room < 0:
-                if needed >= 2:
-                    out.append(bs + be + "\n")
-                    needed -= len(bs + be) + 1
-                    continue
-                out.append(" " * (needed - 1) + "\n")
+                # too small for filler: exact-length pad that still carries
+                # the marker (so stripped_natural() recognises it as our pad)
+                marked = f"{bs} {MARKER} {be}"
+                if needed >= blen(marked) + 1:
+                    out.append(marked + " " * (needed - blen(marked) - 1) + "\n")
+                else:
+                    out.append(" " * (needed - 1) + "\n")
                 needed = 0
                 break
             out.append(prefix + filler_bits[i % len(filler_bits)][:room] + f" {be}\n")
             i += 1
-            needed -= len(out[-1])
+            needed -= blen(out[-1])
         else:
             # no comment syntax at all: whitespace padding keeps the file legal
             out.append("\n")
@@ -120,8 +150,27 @@ def pad_lines(ext: str, name: str, colour: str | None, needed: int,
 
 
 def build_pad(ext: str, name: str, colour: str | None, needed: int,
-              fname: str | None = None) -> str:
-    return "".join(pad_lines(ext, name, colour, needed, fname))
+              fname: str | None = None, style: tuple | None = None) -> str:
+    return "".join(pad_lines(ext, name, colour, needed, fname, style=style))
+
+
+def stripped_natural(path: Path) -> int:
+    """Size of the file without the pad lines this script appends.
+
+    Measuring the padded file would make `target` ratchet upwards on every
+    run (2048 -> 2049 -> 2050 ...), because an already-balanced file looks
+    like a "natural" file that is too big.
+    """
+    text = path.read_bytes().decode("utf-8", "replace")
+    lines = text.splitlines(keepends=True)
+    keep_end = len(lines)
+    while keep_end > 0:
+        ln = lines[keep_end - 1]
+        if MARKER in ln or ln.strip() == "":
+            keep_end -= 1
+        else:
+            break
+    return len("".join(lines[:keep_end]).encode("utf-8"))
 
 
 def natural_sizes(rainbow: dict) -> list[dict]:
@@ -130,7 +179,7 @@ def natural_sizes(rainbow: dict) -> list[dict]:
         path = ROOT / rec["path"]
         if not path.exists():
             continue
-        size = path.stat().st_size
+        size = stripped_natural(path)
         rows.append(
             {
                 "language": rec["name"],
@@ -161,13 +210,11 @@ def main() -> int:
 
     n = len(rows)
     natural_mean = statistics.mean(r["natural"] for r in rows)
-    target = max(args.target_bytes, int(natural_mean) + 1)
-    if not args.report_only:
-        # A language must be able to reach the target; padding can only grow.
-        smallest = min(r["natural"] for r in rows)
-        if smallest > target:
-            print(f"! target {target} below smallest natural file {smallest}")
-            target = smallest
+    # Never ratchet: the target is a constant unless a *stripped* natural file
+    # is genuinely bigger than it (then every file pads up to that size).
+    target = max(args.target_bytes, max(r["natural"] for r in rows))
+    if target != args.target_bytes:
+        print(f"! largest natural file forces target {target}")
 
     total = 0
     lines = []
@@ -188,7 +235,9 @@ def main() -> int:
             if need != 0:
                 if need > 0:
                     text = path.read_text(encoding="utf-8")
-                    pad = build_pad(r["ext"], r["language"], r["colour"], need, r.get("fname"))
+                    style = style_from_content(text, r["ext"], r.get("fname"))
+                    pad = build_pad(r["ext"], r["language"], r["colour"], need,
+                                    r.get("fname"), style=style)
                     text = text + pad
                 else:
                     # shrink: drop existing padding lines, else fall back to a
@@ -272,14 +321,18 @@ def main() -> int:
 
 
 def shrink(text: str, ext: str, need: int) -> str:
-    """Remove `need` bytes from the padding this script previously appended."""
-    if need < 0:
-        # need is negative here; drop that many bytes from the tail
-        keep = len(text) + need
-        if keep < 0:
-            keep = 0
-        return text[:keep]
-    return text
+    """Remove `-need` bytes from the padding this script previously appended."""
+    if need >= 0:
+        return text
+    keep = len(text) + need  # need is negative
+    if keep <= 0:
+        return ""
+    cut = text[:keep]
+    if not cut.endswith("\n"):
+        # keep a trailing newline: the write guard would re-add one and a
+        # 1-byte shrink would cancel out to a no-op
+        cut = text[:keep - 1] + "\n" if keep >= 2 else "\n"
+    return cut
 
 
 if __name__ == "__main__":
