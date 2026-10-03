@@ -36,4 +36,4 @@ Markdown - Hello World! :: RAiNBOW_Hello-World
 <!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
 <!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
 <!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
-<!-- rainbow-pad one segment per Linguis --
+<!-- rainbow-pad one segment per Lingui -->

@@ -36,4 +36,4 @@ val _ = print "Hello World!\n"
 (* rainbow-pad equal byte share keeps the language bar an even rainbow *)
 (* rainbow-pad one segment per Linguist coloured language *)
 (* rainbow-pad Standard ML :: RAiNBOW_Hello-World *)
-(* rainbow-pad co *
+(* rainbow-pad c *)
