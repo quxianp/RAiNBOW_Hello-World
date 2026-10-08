@@ -152,26 +152,37 @@ jobs:
 
       # The release tarball nests the binary inside a versioned directory, so it
       # is unpacked whole and then located, rather than assuming a flat layout.
-      # A broken CDN must not block the rest of the job, hence
-      # continue-on-error: the local bar, the README refresh and the push still
-      # happen, and the summary reports the GIF/MP4 as missing.
+      # The archive is kept under its published name so checksums.txt can be
+      # verified against it; an earlier version renamed it to /tmp/vhs.tgz and
+      # the `sha256sum -c` therefore aborted the step under `set -e` before the
+      # binary was ever installed. continue-on-error keeps a CDN outage from
+      # blocking the local bar, the README refresh and the push.
       - name: install VHS
         continue-on-error: true
         run: |
           set -euo pipefail
-          mkdir -p /tmp/vhsdir
-          curl -fsSL --retry 3 -o /tmp/vhs.tgz \
-            "https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}/vhs_${VHS_VERSION}_Linux_x86_64.tar.gz"
+          TARBALL="vhs_${VHS_VERSION}_Linux_x86_64.tar.gz"
+          BASE="https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}"
 
-          # Verify the download against the published checksums when reachable.
-          if curl -fsSL --retry 2 -o /tmp/checksums.txt \
-            "https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}/checksums.txt"; then
-            ( cd /tmp && grep "vhs_${VHS_VERSION}_Linux_x86_64.tar.gz" checksums.txt | sha256sum -c - )
+          mkdir -p /tmp/vhsdir
+          curl -fsSL --retry 3 -o "/tmp/${TARBALL}" "${BASE}/${TARBALL}"
+
+          if curl -fsSL --retry 2 -o /tmp/checksums.txt "${BASE}/checksums.txt"; then
+            EXPECTED="$(awk -v f="$TARBALL" '$2 == f {print $1}' /tmp/checksums.txt)"
+            ACTUAL="$(sha256sum "/tmp/${TARBALL}" | awk '{print $1}')"
+            if [ -z "$EXPECTED" ]; then
+              echo "no published checksum for ${TARBALL}; continuing unverified"
+            elif [ "$EXPECTED" = "$ACTUAL" ]; then
+              echo "sha256 verified for ${TARBALL}"
+            else
+              echo "checksum mismatch for ${TARBALL}" >&2
+              exit 1
+            fi
           else
-            echo "checksums.txt unavailable; skipping checksum verification"
+            echo "checksums.txt unavailable; continuing unverified"
           fi
 
-          tar -xzf /tmp/vhs.tgz -C /tmp/vhsdir
+          tar -xzf "/tmp/${TARBALL}" -C /tmp/vhsdir
           VHS_BIN="$(find /tmp/vhsdir -type f -name vhs | head -n 1)"
           if [ -z "$VHS_BIN" ]; then
             echo "no vhs binary inside the archive:" >&2
@@ -180,6 +191,7 @@ jobs:
           fi
           sudo install -m 0755 "$VHS_BIN" /usr/local/bin/vhs
           vhs --version
+          echo "VHS $(vhs --version) installed at /usr/local/bin/vhs"
 
       - name: install Playwright chromium
         continue-on-error: true
@@ -271,6 +283,28 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           exit 1
+
+      # Runs *after* the push on purpose: whatever assets did get produced are
+      # already published, and anything missing still turns the run red instead
+      # of passing quietly. Without this the non-fatal recording steps let a
+      # completely empty assets/ directory look like a successful run.
+      - name: assert the demo assets exist
+        run: |
+          set -uo pipefail
+          missing=0
+          for f in assets/hello-world.gif assets/hello-world.mp4 \
+                   assets/rainbow-bar-local.png; do
+            if [ -s "$f" ]; then
+              echo "OK   $f ($(du -h "$f" | cut -f1))"
+            else
+              echo "MISS $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::demo assets missing; see logs/record_demo.log in the artifact"
+            exit 1
+          fi
 
       - name: upload assets
         if: always()

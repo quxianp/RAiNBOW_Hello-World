@@ -60,3 +60,45 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
 - Fallback: `scripts/rainbow.py` renders the ASCII art and 24-bit colour
   natively; `beep()` degrades to `printf '\a'`.
 - Status: ACCEPTED FALLBACK (CI installs the real tools for the recording).
+
+## E10 CI run 37818363260 -- `install VHS` failed
+- Symptom: `tar: vhs: Not found in archive`, exit code 2, whole assets job died
+  and every later step was skipped.
+- Diagnosis: the v0.12.1 release tarball nests the binary inside a versioned
+  directory, so `tar -xzf ... -C /usr/local/bin vhs` can never match it.
+- Fix: unpack the whole archive to a temp dir and locate the binary with `find`,
+  which works for flat and nested layouts; verify sha256 against the published
+  `checksums.txt`; mark the step `continue-on-error` so a CDN outage cannot
+  block the local bar, the README refresh and the push.
+- Status: RESOLVED (pending confirmation in run 37820167736).
+
+## E11 CI run 37818363260 -- 81290-line manifest churn
+- Symptom: `chore(rainbow): regenerate batch 0/24` rewrote all of
+  `hello/manifest.json` (162580 changed lines) for no semantic change.
+- Diagnosis: line endings. `Path.write_text` applies platform newline
+  translation; `.gitattributes` sets `* -text`, so git does no normalisation,
+  and the Windows-authored blob stored 81290 CRLF while the Linux runner wrote
+  LF. Proven: content identical under `json.dumps(sort_keys=True)`, but
+  `raw.count(b"\r\n")` = 81290 locally and 0 on origin. No data lost.
+- Fix: all 12 generators now write with `newline="\n"`; 20 committed artifacts
+  normalised to LF; `.gitattributes` re-enables `text eol=lf` for
+  json/yml/md/txt/sh/tape.
+- Status: RESOLVED.
+
+## E12 CI run 37819076073 -- `TypeError: read_text() got an unexpected keyword argument 'newline'`
+- Symptom: the acceptance job died before printing any check.
+- Diagnosis: the E11 fix replaced every `encoding="utf-8")` occurrence, which
+  also hit 21 `read_text()` calls. `Path.read_text` only accepts `newline` from
+  Python 3.13; the workflow pins 3.12. Passed locally on 3.13, failed on CI.
+- Fix: removed `newline=` from all `read_text()` calls; kept it on
+  `write_text()` (supported since 3.10, and the point of the fix).
+- Verification: 19/19 checks pass under a real Python 3.12.7
+  (`D:\Microsoft VS Code\data\python\python.exe`); all 24 scripts compile there.
+- Status: RESOLVED.
+
+## E13 PowerShell mangles multi-line `git commit -m`
+- Symptom: `error: pathspec 'to' did not match any file(s) known to git`.
+- Diagnosis: PowerShell splits a multi-line double-quoted argument on the
+  embedded quotes/newlines before git ever sees it.
+- Fix: write the message to a file and use `git commit -F <file>`.
+- Status: RESOLVED.

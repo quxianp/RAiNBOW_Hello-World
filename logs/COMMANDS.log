@@ -47,3 +47,28 @@ Key commands and their real outcomes this session. Full detail in logs/ERRORS.lo
     git rev-list --left-right --count origin/main...main  -> 0  8   (8 unpushed)
     git ls-files | measure                                -> 7374 tracked files
     git status --short                                    -> ?? .github/
+
+## Live language-bar audit (authoritative, not simulated)
+    GET https://api.github.com/repos/quxianp/RAiNBOW_Hello-World/languages
+        -> GitHub reports 631 languages
+        -> 1417216 counted bytes
+        -> every entry is an exact multiple of 2048 (0 exceptions), proving
+           hello/full/, scripts/, config/, data/ and README are all excluded
+           and only the byte-balanced core files are counted
+        -> min share 0.144509 % (1C Enterprise)
+        -> max share 1.011561 % (HTML, 7 HTML dialect files)
+        -> average segment width at 1200 px = 1.90 px
+        -> 66 configured names absent from the response (Linguist name
+           canonicalisation, e.g. Vim script/Vim Script, KoLmafia ASH/
+           KoLMafia ASH, plus HTML+ERB and friends which are not counted)
+    Conclusion: the bar is live, fine-grained and rainbow.
+
+## CI runs
+    37818363260  36f92f23  cancelled  verify=success, assets=failure (install VHS: tar)
+    37819076073  332cf6c7  failure    acceptance=failure (read_text newline on 3.12)
+    37820167736  b3a2c026  running    acceptance=success, batches green (no drift)
+
+## Python 3.12 parity check (the version actions/setup-python pins)
+    "D:\Microsoft VS Code\data\python\python.exe" --version   -> 3.12.7
+    compile() over all 24 scripts                            -> OK
+    scripts/verify_languages.py                              -> 19/19 checks passed

@@ -27,15 +27,22 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_OUT = ROOT / "assets" / "rainbow-bar-github.png"
 
-# Ordered most-specific first. Each is tried in turn.
+# Ordered most-specific first. Each is tried in turn and the result is size
+# checked, because a bare `.Progress` also matches small progress indicators
+# elsewhere on the page (a 141-byte capture of one of those was the first
+# version of this script's output).
 BAR_SELECTORS = [
-    "div.repository-lang-stats-graph",
     "#repository-lang-stats .Progress",
+    "div.repository-lang-stats-graph",
+    "[data-testid='language-bar']",
     "div.Layout-sidebar .Progress",
     ".Progress[role='progressbar']",
     "svg[aria-label='Repository languages bar']",
-    ".Progress",
 ]
+
+# A real 600-segment bar rasterises to tens of kilobytes. Anything smaller is a
+# degenerate element, not the language bar.
+MIN_BYTES = 6000
 
 LOG = logging.getLogger("screenshot_github")
 
@@ -46,6 +53,19 @@ def configure_logging(verbose: bool) -> None:
         format="%(levelname)s %(message)s",
         stream=sys.stdout,
     )
+
+
+def usable(path: Path) -> bool:
+    """A capture is only accepted if it looks like a real bar, not a stub."""
+    return path.is_file() and path.stat().st_size >= MIN_BYTES
+
+
+def discard(path: Path) -> None:
+    """Never leave a degenerate image behind for the README to link to."""
+    try:
+        path.unlink()
+    except OSError:
+        pass
 
 
 def clip_from_heading(page, out: Path) -> bool:
@@ -63,9 +83,13 @@ def clip_from_heading(page, out: Path) -> bool:
             "height": box["height"] + 120,
         }
         page.screenshot(path=str(out), clip=clip)
-        return out.is_file() and out.stat().st_size > 0
+        if usable(out):
+            return True
+        discard(out)
+        return False
     except Exception as exc:  # noqa: BLE001 - any failure is a fallback trigger
         LOG.debug("heading clip failed: %s", exc)
+        discard(out)
         return False
 
 
@@ -89,8 +113,20 @@ def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool
                 )
                 LOG.info("opening %s", url)
                 page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
-                # The sidebar is rendered client-side; give it a moment.
-                page.wait_for_timeout(4000)
+
+                # GitHub computes and injects the language breakdown client
+                # side, and to a logged-out client it can take several seconds.
+                # Wait for the sidebar to actually fill with language entries
+                # rather than sleeping a fixed amount.
+                try:
+                    page.wait_for_function(
+                        "() => document.querySelectorAll('.Layout-sidebar a').length > 50",
+                        timeout=timeout * 1000,
+                    )
+                    LOG.info("language sidebar populated")
+                except Exception as exc:  # noqa: BLE001
+                    LOG.warning("sidebar did not populate in time: %s", exc)
+                page.wait_for_timeout(2000)
 
                 for selector in BAR_SELECTORS:
                     try:
@@ -103,13 +139,22 @@ def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool
                         element.scroll_into_view_if_needed(timeout=5000)
                         page.wait_for_timeout(500)
                         element.screenshot(path=str(out))
-                        if out.is_file() and out.stat().st_size > 0:
-                            LOG.info("captured language bar via %s", selector)
+                        if usable(out):
+                            LOG.info(
+                                "captured language bar via %s (%d bytes)",
+                                selector, out.stat().st_size,
+                            )
                             return True
+                        LOG.info(
+                            "selector %s produced only %d bytes; rejecting",
+                            selector, out.stat().st_size if out.is_file() else 0,
+                        )
+                        discard(out)
                     except Exception as exc:  # noqa: BLE001
                         LOG.debug("selector %s failed: %s", selector, exc)
+                        discard(out)
 
-                LOG.info("no bar selector matched; trying heading clip")
+                LOG.info("no bar selector produced a usable capture; trying heading clip")
                 if clip_from_heading(page, out):
                     LOG.info("captured language bar via heading clip")
                     return True

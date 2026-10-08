@@ -109,6 +109,30 @@ distribute across the wheel like this:
 
 Hue span measured end to end: **0.0° → 359.6°**, no gaps.
 
+### 5. Measured, not predicted
+
+The numbers GitHub itself reports for this repository:
+
+| Measured from `GET /repos/quxianp/RAiNBOW_Hello-World/languages` | Value |
+|---|---|
+| Languages on the bar | **631** |
+| Counted bytes | 1 417 216 |
+| Entries that are not an exact multiple of 2048 | **0** |
+| Smallest share | 0.144509 % (`1C Enterprise`) |
+| Largest share | 1.011561 % (`HTML` — 7 HTML dialect files) |
+| Average segment width at 1200 px | **1.90 px** |
+
+That 631 is GitHub's canonical form of the 694 configured core languages: some
+names are folded by Linguist (`Vim script` → `Vim Script`, `KoLmafia ASH` →
+`KoLMafia ASH`) and a handful of dialects are not counted at all
+(`HTML+ERB`, `HTML+PHP`, `Julia REPL`, `Python console`, …). Both 631 and 694
+sit inside the 600–800 target.
+
+The "0 exceptions" row is the load-bearing one: if a single counted byte were
+not a multiple of 2048, then something outside `hello/core/` was leaking into
+the bar. Nothing is — `hello/full/`, `scripts/`, `config/`, `data/` and this
+README are all correctly excluded.
+
 ---
 
 ## Where the 7 325 languages came from
