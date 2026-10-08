@@ -139,19 +139,46 @@ jobs:
           set -uo pipefail
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends \
-            ffmpeg figlet toilet fonts-dejavu-core || true
+            ffmpeg figlet toilet fonts-dejavu-core ttyd || true
+          # VHS drives a headless Chrome; GitHub runners ship one, but make the
+          # dependency explicit and visible in the log.
+          command -v google-chrome || command -v chromium || \
+            echo "note: no chrome binary found, VHS may not be able to record"
 
       - name: python dependencies
         run: |
           python -m pip install --quiet --upgrade pip
           python -m pip install --quiet pyyaml requests beautifulsoup4 pillow matplotlib
 
+      # The release tarball nests the binary inside a versioned directory, so it
+      # is unpacked whole and then located, rather than assuming a flat layout.
+      # A broken CDN must not block the rest of the job, hence
+      # continue-on-error: the local bar, the README refresh and the push still
+      # happen, and the summary reports the GIF/MP4 as missing.
       - name: install VHS
+        continue-on-error: true
         run: |
           set -euo pipefail
-          curl -fsSL -o /tmp/vhs.tgz \
+          mkdir -p /tmp/vhsdir
+          curl -fsSL --retry 3 -o /tmp/vhs.tgz \
             "https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}/vhs_${VHS_VERSION}_Linux_x86_64.tar.gz"
-          tar -xzf /tmp/vhs.tgz -C /usr/local/bin vhs
+
+          # Verify the download against the published checksums when reachable.
+          if curl -fsSL --retry 2 -o /tmp/checksums.txt \
+            "https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}/checksums.txt"; then
+            ( cd /tmp && grep "vhs_${VHS_VERSION}_Linux_x86_64.tar.gz" checksums.txt | sha256sum -c - )
+          else
+            echo "checksums.txt unavailable; skipping checksum verification"
+          fi
+
+          tar -xzf /tmp/vhs.tgz -C /tmp/vhsdir
+          VHS_BIN="$(find /tmp/vhsdir -type f -name vhs | head -n 1)"
+          if [ -z "$VHS_BIN" ]; then
+            echo "no vhs binary inside the archive:" >&2
+            find /tmp/vhsdir -maxdepth 2 >&2
+            exit 1
+          fi
+          sudo install -m 0755 "$VHS_BIN" /usr/local/bin/vhs
           vhs --version
 
       - name: install Playwright chromium
