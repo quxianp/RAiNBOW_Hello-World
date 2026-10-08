@@ -22,7 +22,6 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
-import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -101,29 +100,23 @@ def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool
         LOG.warning("playwright is not installed; skipping the GitHub bar capture")
         return False
 
-    # GitHub edge-caches the anonymous repository page, so a plain request for
-    # the repo URL can return a page rendered from before the latest push --
-    # observed as a bar claiming "HTML 27.6 %" hours after the API reported HTML
-    # at 1.01 %. A cache-busting query parameter plus explicit no-cache request
-    # headers forces a fresh render.
-    bust = f"?__rainbow={int(time.time())}"
-    url = f"https://github.com/{repo}{bust}"
+    # Do NOT cache-bust this request. An earlier revision appended a query
+    # parameter and sent Cache-Control: no-cache through a custom context; GitHub
+    # then served an unstyled document (raw "Navigation Menu" markup, 303 KB
+    # screenshot of a page with no CSS) and every selector missed. The rendered
+    # page may lag the newest push by a few minutes because of the edge cache,
+    # which is cosmetic and self-heals on the next run; a blank page is not.
+    url = f"https://github.com/{repo}"
     out.parent.mkdir(parents=True, exist_ok=True)
 
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(args=["--no-sandbox"])
             try:
-                context = browser.new_context(
+                page = browser.new_page(
                     viewport={"width": width, "height": height},
                     device_scale_factor=2,
-                    extra_http_headers={
-                        "Cache-Control": "no-cache, no-store, must-revalidate",
-                        "Pragma": "no-cache",
-                    },
-                    bypass_csp=True,
                 )
-                page = context.new_page()
                 LOG.info("opening %s", url)
                 page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
 
@@ -172,10 +165,13 @@ def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool
                     LOG.info("captured language bar via heading clip")
                     return True
 
-                # Keep evidence even if the crop failed.
-                full = out.with_name("rainbow-bar-github-fullpage.png")
-                page.screenshot(path=str(full), full_page=False)
-                LOG.warning("bar not isolated; saved full page to %s", full.name)
+                # Diagnostic only, and deliberately written outside assets/ so a
+                # failed capture can never commit a 300 KB screenshot of the
+                # wrong thing into the repository.
+                diag = ROOT / ".tmp" / "rainbow-bar-github-fullpage.png"
+                diag.parent.mkdir(parents=True, exist_ok=True)
+                page.screenshot(path=str(diag), full_page=False)
+                LOG.warning("bar not isolated; saved full page to %s", diag)
                 return False
             finally:
                 browser.close()
