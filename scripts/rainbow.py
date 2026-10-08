@@ -84,7 +84,7 @@ def load_bar():
     path = CONFIG / "rainbow_langs.json"
     if not path.exists():
         return []
-    data = json.loads(path.read_text(encoding="utf-8", newline="\n"))
+    data = json.loads(path.read_text(encoding="utf-8"))
     return data.get("languages", [])
 
 

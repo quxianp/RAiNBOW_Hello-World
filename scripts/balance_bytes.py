@@ -209,7 +209,7 @@ def main() -> int:
     args = ap.parse_args()
     sharded = bool(args.shard)
 
-    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8", newline="\n"))
+    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
     if sharded and "/" in args.shard:
         idx_s, n_s = args.shard.split("/", 1)
         idx, n_shards = int(idx_s), int(n_s)
@@ -248,7 +248,7 @@ def main() -> int:
             need = target - cur
             if need != 0:
                 if need > 0:
-                    text = path.read_text(encoding="utf-8", newline="\n")
+                    text = path.read_text(encoding="utf-8")
                     style = style_from_content(text, r["ext"], r.get("fname"))
                     pad = build_pad(r["ext"], r["language"], r["colour"], need,
                                     r.get("fname"), style=style)
@@ -257,7 +257,7 @@ def main() -> int:
                     # shrink: drop existing padding lines, else fall back to a
                     # regenerated minimal file is not possible, so trim the
                     # reference/pad lines that this script owns.
-                    text = shrink(path.read_text(encoding="utf-8", newline="\n"), r["ext"], need)
+                    text = shrink(path.read_text(encoding="utf-8"), r["ext"], need)
                 if not text.endswith("\n"):
                     text += "\n"
                 path.write_text(text, encoding="utf-8", newline="\n")

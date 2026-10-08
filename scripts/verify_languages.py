@@ -61,9 +61,9 @@ def main() -> int:
     ap.add_argument("--json", action="store_true", help="machine readable output")
     args = ap.parse_args()
 
-    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8", newline="\n"))
+    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
     langs = rainbow["languages"]
-    linguist = json.loads((DATA / "linguist.json").read_text(encoding="utf-8", newline="\n"))
+    linguist = json.loads((DATA / "linguist.json").read_text(encoding="utf-8"))
 
     # ---- 1. core count --------------------------------------------------
     n = len(langs)
@@ -123,7 +123,7 @@ def main() -> int:
     )
 
     # ---- 5. .gitattributes ---------------------------------------------
-    ga = (ROOT / ".gitattributes").read_text(encoding="utf-8", newline="\n")
+    ga = (ROOT / ".gitattributes").read_text(encoding="utf-8")
     check(".gitattributes un-vendors hello/core", "/hello/core/** -linguist-vendored" in ga)
     check(".gitattributes vendors hello/full", "/hello/full/** linguist-vendored" in ga)
     check(".gitattributes marks README as documentation", "README.md linguist-documentation" in ga)
@@ -203,7 +203,7 @@ def main() -> int:
     manifest = HELLO / "manifest.json"
     check("hello/manifest.json exists", manifest.exists())
     merged = DATA / "merged_langs.json"
-    mcount = len(json.loads(merged.read_text(encoding="utf-8", newline="\n"))) if merged.exists() else 0
+    mcount = len(json.loads(merged.read_text(encoding="utf-8"))) if merged.exists() else 0
     check("merged inventory >= 3000 languages", mcount >= MIN_TOTAL, f"{mcount} languages")
 
     passed = sum(1 for _, ok, _ in results if ok)

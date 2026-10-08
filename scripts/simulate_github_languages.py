@@ -109,11 +109,11 @@ def git_attributes(paths: list[Path]) -> dict:
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-    linguist = json.loads((DATA / "linguist.json").read_text(encoding="utf-8", newline="\n"))
+    linguist = json.loads((DATA / "linguist.json").read_text(encoding="utf-8"))
     by_name = {e["name"]: e for e in linguist}
     alias_index = build_alias_index(linguist)
 
-    manifest = json.loads((HELLO / "manifest.json").read_text(encoding="utf-8", newline="\n"))
+    manifest = json.loads((HELLO / "manifest.json").read_text(encoding="utf-8"))
     core_files = [
         f for f in manifest["files"]
         if f["path"].replace("\\", "/").startswith("hello/core/")

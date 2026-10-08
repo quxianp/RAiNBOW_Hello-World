@@ -31,7 +31,7 @@ ASSETS.mkdir(parents=True, exist_ok=True)
 
 
 def load():
-    data = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8", newline="\n"))
+    data = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
     return data.get("languages", [])
 
 

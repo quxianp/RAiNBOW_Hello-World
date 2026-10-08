@@ -10,7 +10,7 @@ fails = []
 
 wf_path = ROOT / ".github" / "workflows" / "rainbow.yml"
 try:
-    wf = yaml.safe_load(wf_path.read_text(encoding="utf-8", newline="\n"))
+    wf = yaml.safe_load(wf_path.read_text(encoding="utf-8"))
     print("YAML parses OK")
 except Exception as exc:
     print(f"YAML PARSE ERROR: {exc}")
@@ -72,14 +72,14 @@ if full < 2400:
 if core + full < 3000:
     fails.append(f"total language files too small: {core + full}")
 
-readme = (ROOT / "README.md").read_text(encoding="utf-8", newline="\n")
+readme = (ROOT / "README.md").read_text(encoding="utf-8")
 for needle in ("assets/rainbow-bar-github.png", "assets/hello-world.gif",
                "assets/hello-world.mp4", "RAINBOW_ASSETS_START",
                "RAINBOW_ASSETS_END", "config/all-langs.json"):
     if needle not in readme:
         fails.append(f"README missing reference: {needle}")
 
-balance = json.loads((ROOT / "logs" / "balance_summary.json").read_text(encoding="utf-8", newline="\n"))
+balance = json.loads((ROOT / "logs" / "balance_summary.json").read_text(encoding="utf-8"))
 print(f"balance: {balance['core_languages']} langs, "
       f"{balance['total_counted_bytes']} B, sum {balance['sum_pct']}%")
 if abs(balance["sum_pct"] - 100.0) > 1e-6:

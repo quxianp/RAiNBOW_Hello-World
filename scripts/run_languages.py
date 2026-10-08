@@ -102,7 +102,7 @@ SUBPROC_ENV = {
 def load_manifest() -> list:
     if not MANIFEST.exists():
         return []
-    return json.loads(MANIFEST.read_text(encoding="utf-8", newline="\n")).get("files", [])
+    return json.loads(MANIFEST.read_text(encoding="utf-8")).get("files", [])
 
 
 def plan() -> list:

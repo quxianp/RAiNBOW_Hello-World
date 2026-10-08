@@ -225,7 +225,7 @@ def load(path: Path, default=None):
     if not path.exists():
         return default
     try:
-        return json.loads(path.read_text(encoding="utf-8", newline="\n"))
+        return json.loads(path.read_text(encoding="utf-8"))
     except Exception as exc:
         print(f"  ! cannot parse {path.name}: {exc}", file=sys.stderr)
         return default

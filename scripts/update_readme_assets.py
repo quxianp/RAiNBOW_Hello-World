@@ -61,7 +61,7 @@ def main() -> int:
         print(f"error: {README} not found", file=sys.stderr)
         return 1
 
-    text = README.read_text(encoding="utf-8", newline="\n")
+    text = README.read_text(encoding="utf-8")
     match = PATTERN.search(text)
     if not match:
         print(f"error: markers {START} / {END} not found in {README}", file=sys.stderr)
