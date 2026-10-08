@@ -1,0 +1,279 @@
+name: rainbow
+
+# The demo assets below are published by this workflow, so it must be allowed to
+# push. Pushes whose message carries [skip ci] are ignored by GitHub itself,
+# which is what stops the bot from re-triggering itself forever.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # daily, off the hour so the shared runner pool is not hammered at :00
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: rainbow-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PYTHONUNBUFFERED: "1"
+  VHS_VERSION: "0.12.1"
+
+jobs:
+  # ---------------------------------------------------------------- fast gate
+  verify:
+    name: acceptance checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install python deps
+        run: python -m pip install --quiet pyyaml requests beautifulsoup4
+
+      - name: verify the 694-language rainbow bar
+        run: python scripts/verify_languages.py
+
+      - name: simulate GitHub language statistics
+        run: python scripts/simulate_github_languages.py
+
+      - name: upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-evidence
+          path: |
+            logs/verify_languages.json
+            logs/balance_summary.json
+            logs/balance_report.txt
+          if-no-files-found: ignore
+          retention-days: 14
+
+  # ------------------------------------------------- regenerate, 24 shards
+  batches:
+    name: batch ${{ matrix.shard }}/24
+    needs: verify
+    if: github.event_name != 'pull_request' && !contains(github.event.head_commit.message, '[skip ci]')
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install python deps
+        run: python -m pip install --quiet pyyaml requests beautifulsoup4
+
+      - name: sync with main
+        run: git pull --rebase origin "${GITHUB_REF_NAME}"
+
+      - name: regenerate this batch
+        run: |
+          python scripts/generate_all_hello.py --shard "${SHARD}/24"
+          python scripts/balance_bytes.py --shard "${SHARD}/24"
+        env:
+          SHARD: ${{ matrix.shard }}
+
+      - name: commit and push when the batch drifted
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          git config user.name  "rainbow-bot"
+          git config user.email "rainbow-bot@users.noreply.github.com"
+          git add -A hello/
+          if git diff --cached --quiet; then
+            echo "batch ${SHARD}/24 is up to date"
+            exit 0
+          fi
+          git commit -m "chore(rainbow): regenerate batch ${SHARD}/24 [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            sleep $((attempt * 5))
+          done
+          echo "push failed after retries" >&2
+          exit 1
+
+  # ------------------------------------- record, render, publish the artefacts
+  assets:
+    name: demo assets
+    needs: verify
+    # Manual and scheduled runs always publish. A push only publishes when the
+    # commit did not ask to be skipped, so the bot cannot loop.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
+      (github.event_name == 'push' &&
+       !contains(github.event.head_commit.message, '[skip ci]'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: apt dependencies
+        run: |
+          set -uo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            ffmpeg figlet toilet fonts-dejavu-core || true
+
+      - name: python dependencies
+        run: |
+          python -m pip install --quiet --upgrade pip
+          python -m pip install --quiet pyyaml requests beautifulsoup4 pillow matplotlib
+
+      - name: install VHS
+        run: |
+          set -euo pipefail
+          curl -fsSL -o /tmp/vhs.tgz \
+            "https://github.com/charmbracelet/vhs/releases/download/v${VHS_VERSION}/vhs_${VHS_VERSION}_Linux_x86_64.tar.gz"
+          tar -xzf /tmp/vhs.tgz -C /usr/local/bin vhs
+          vhs --version
+
+      - name: install Playwright chromium
+        continue-on-error: true
+        run: |
+          python -m pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+
+      - name: run the show
+        run: bash run.sh --jobs 8 2>&1 | tee logs/ci_run.log
+
+      - name: record unavailable languages
+        if: always()
+        run: |
+          set -uo pipefail
+          mkdir -p logs
+          if [ -f logs/output/results.tsv ]; then
+            awk -F'\t' '$2 != "ok" {print $1"\t"$2"\t"$3}' logs/output/results.tsv \
+              > logs/skipped_languages.txt || true
+            echo "unavailable: $(wc -l < logs/skipped_languages.txt) languages"
+          else
+            echo "no results.tsv; run_languages.py produced nothing" \
+              > logs/skipped_languages.txt
+          fi
+
+      - name: render the local rainbow bar
+        continue-on-error: true
+        run: python scripts/generate_rainbow_bar.py
+
+      - name: record the terminal demo
+        continue-on-error: true
+        run: bash scripts/record_demo.sh
+
+      - name: screenshot the GitHub language bar
+        continue-on-error: true
+        run: python scripts/screenshot_github.py
+
+      - name: refresh the README asset block
+        run: python scripts/update_readme_assets.py
+
+      - name: re-verify after regeneration
+        run: python scripts/verify_languages.py
+
+      - name: commit and push the assets
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          set -uo pipefail
+          git config user.name  "rainbow-bot"
+          git config user.email "rainbow-bot@users.noreply.github.com"
+          git add -A assets README.md demo.tape config data logs scripts
+
+          if git diff --cached --quiet; then
+            echo "assets already up to date; nothing to publish"
+            exit 0
+          fi
+
+          git commit -m "chore(assets): refresh rainbow demo assets [skip ci]"
+
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "published assets with GITHUB_TOKEN"
+              exit 0
+            fi
+            echo "push attempt ${attempt} failed; rebasing and retrying"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            sleep $((attempt * 5))
+          done
+
+          # Branch protection or a token without write scope: retry with a PAT.
+          if [ -n "${GH_PAT}" ]; then
+            echo "falling back to secrets.GH_PAT"
+            git remote set-url origin \
+              "https://x-access-token:${GH_PAT}@github.com/${GITHUB_REPOSITORY}.git"
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+          fi
+
+          echo "::error::assets could not be pushed; see the artifact below"
+          {
+            echo "### Assets could not be pushed automatically"
+            echo
+            echo 'Download the `rainbow-assets` artifact, then run:'
+            echo
+            echo '```bash'
+            echo "git checkout main && git pull --rebase origin main"
+            echo "unzip rainbow-assets.zip -d ."
+            echo "git add assets README.md demo.tape"
+            echo 'git commit -m "chore(assets): refresh rainbow demo assets [skip ci]"'
+            echo "git push origin main"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+
+      - name: upload assets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rainbow-assets
+          path: |
+            assets/
+            demo.tape
+            logs/run.log
+            logs/ci_run.log
+            logs/skipped_languages.txt
+            logs/output/results.tsv
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: summarise
+        if: always()
+        run: |
+          {
+            echo "### \U0001f308 RAiNBOW_Hello-World"
+            echo
+            echo "| asset | size |"
+            echo "|---|---|"
+            for f in assets/hello-world.gif assets/hello-world.mp4 \
+                     assets/rainbow-bar-github.png assets/rainbow-bar-local.png; do
+              if [ -f "$f" ]; then
+                echo "| \`$f\` | $(du -h "$f" | cut -f1) |"
+              else
+                echo "| \`$f\` | _missing_ |"
+              fi
+            done
+          } >> "$GITHUB_STEP_SUMMARY"

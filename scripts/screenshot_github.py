@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+"""Screenshot the real GitHub language bar of this repository.
+
+    python scripts/screenshot_github.py
+    python scripts/screenshot_github.py --repo quxianp/RAiNBOW_Hello-World
+
+Writes ``assets/rainbow-bar-github.png``.
+
+GitHub ships no public API that returns the rendered bar, and the DOM around it
+changes without notice, so this tries a list of selectors and finally falls back
+to clipping by the "Languages" heading. GitHub also serves a different page to
+logged-out clients, so the script waits for the bar and, failing that, keeps a
+full-page screenshot instead.
+
+This is deliberately non-fatal: the acceptance criteria treat
+``rainbow-bar-local.png`` as an acceptable substitute, so a Playwright failure
+must never fail a build. Exits 0 either way and logs what happened.
+"""
+
+from __future__ import annotations
+
+import argparse
+import logging
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_OUT = ROOT / "assets" / "rainbow-bar-github.png"
+
+# Ordered most-specific first. Each is tried in turn.
+BAR_SELECTORS = [
+    "div.repository-lang-stats-graph",
+    "#repository-lang-stats .Progress",
+    "div.Layout-sidebar .Progress",
+    ".Progress[role='progressbar']",
+    "svg[aria-label='Repository languages bar']",
+    ".Progress",
+]
+
+LOG = logging.getLogger("screenshot_github")
+
+
+def configure_logging(verbose: bool) -> None:
+    logging.basicConfig(
+        level=logging.DEBUG if verbose else logging.INFO,
+        format="%(levelname)s %(message)s",
+        stream=sys.stdout,
+    )
+
+
+def clip_from_heading(page, out: Path) -> bool:
+    """Last-resort crop: find the 'Languages' heading and clip below it."""
+    try:
+        heading = page.get_by_text("Languages", exact=True).first
+        box = heading.bounding_box()
+        if not box:
+            return False
+        clip = {
+            "x": max(box["x"] - 8, 0),
+            "y": max(box["y"] - 8, 0),
+            "width": box["width"] + 16,
+            # The bar plus the legend underneath it.
+            "height": box["height"] + 120,
+        }
+        page.screenshot(path=str(out), clip=clip)
+        return out.is_file() and out.stat().st_size > 0
+    except Exception as exc:  # noqa: BLE001 - any failure is a fallback trigger
+        LOG.debug("heading clip failed: %s", exc)
+        return False
+
+
+def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool:
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        LOG.warning("playwright is not installed; skipping the GitHub bar capture")
+        return False
+
+    url = f"https://github.com/{repo}"
+    out.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(args=["--no-sandbox"])
+            try:
+                page = browser.new_page(
+                    viewport={"width": width, "height": height},
+                    device_scale_factor=2,
+                )
+                LOG.info("opening %s", url)
+                page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
+                # The sidebar is rendered client-side; give it a moment.
+                page.wait_for_timeout(4000)
+
+                for selector in BAR_SELECTORS:
+                    try:
+                        element = page.query_selector(selector)
+                    except Exception:  # noqa: BLE001
+                        element = None
+                    if element is None:
+                        continue
+                    try:
+                        element.scroll_into_view_if_needed(timeout=5000)
+                        page.wait_for_timeout(500)
+                        element.screenshot(path=str(out))
+                        if out.is_file() and out.stat().st_size > 0:
+                            LOG.info("captured language bar via %s", selector)
+                            return True
+                    except Exception as exc:  # noqa: BLE001
+                        LOG.debug("selector %s failed: %s", selector, exc)
+
+                LOG.info("no bar selector matched; trying heading clip")
+                if clip_from_heading(page, out):
+                    LOG.info("captured language bar via heading clip")
+                    return True
+
+                # Keep evidence even if the crop failed.
+                full = out.with_name("rainbow-bar-github-fullpage.png")
+                page.screenshot(path=str(full), full_page=False)
+                LOG.warning("bar not isolated; saved full page to %s", full.name)
+                return False
+            finally:
+                browser.close()
+    except Exception as exc:  # noqa: BLE001
+        LOG.warning("playwright capture failed: %s", exc)
+        return False
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--repo", default="quxianp/RAiNBOW_Hello-World")
+    parser.add_argument("--out", default=str(DEFAULT_OUT))
+    parser.add_argument("--timeout", type=int, default=60, help="seconds")
+    parser.add_argument("--width", type=int, default=1440)
+    parser.add_argument("--height", type=int, default=1200)
+    parser.add_argument("-v", "--verbose", action="store_true")
+    args = parser.parse_args()
+
+    configure_logging(args.verbose)
+    out = Path(args.out)
+
+    ok = capture(args.repo, out, args.timeout, args.width, args.height)
+    if ok:
+        LOG.info("wrote %s (%d bytes)", out, out.stat().st_size)
+    else:
+        LOG.warning(
+            "no GitHub bar capture; the local render "
+            "(assets/rainbow-bar-local.png) remains the reference"
+        )
+    # Always succeed: a missing browser must not fail the build.
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
