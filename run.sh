@@ -55,7 +55,7 @@ done
 ESC=$'\033'
 C_RESET="$ESC[0m"; C_DIM="$ESC[2m"; C_BOLD="$ESC[1m"
 
-rgb() { printf '%s38;2;%d;%d;%dm' "$ESC" "$1" "$2" "$3"; }
+rgb() { printf '%s[38;2;%d;%d;%dm' "$ESC" "$1" "$2" "$3"; }
 
 # --------------------------------------------------------------------------
 logf "=== RAiNBOW_Hello-World run.sh start ==="
@@ -143,18 +143,24 @@ core_names() {
 }
 
 roll_call() {
-  local shown=0
+  local total=0 shown=0 name
   printf '  %sBooting %s core languages%s\n' "$C_DIM" "$CORE_COUNT" "$C_RESET"
   while IFS= read -r name; do
     [ -z "$name" ] && continue
-    shown=$((shown + 1))
-    if [ "$QUIET" = "1" ]; then continue; fi
-    if [ "$shown" -le "$MAX_SHOWN" ]; then
+    total=$((total + 1))
+    [ "$QUIET" = "1" ] && continue
+    if [ "$shown" -lt "$MAX_SHOWN" ]; then
+      shown=$((shown + 1))
       printf '    %s+%s %s\n' "$(rgb 120 220 120)" "$C_RESET" "$name"
     fi
   done < <(core_names)
-  printf '    %s... +%d more core languages%s\n' "$C_DIM" \
-    "$((CORE_COUNT - shown > 0 ? CORE_COUNT - shown : 0))" "$C_RESET"
+  # `total` counts every name in the manifest, `shown` only the ones printed,
+  # so "+N more" reflects what was actually withheld.
+  local more=$((total - shown))
+  [ "$more" -lt 0 ] && more=0
+  if [ "$more" -gt 0 ]; then
+    printf '    %s... +%d more core languages%s\n' "$C_DIM" "$more" "$C_RESET"
+  fi
   printf '    %s+%s full-layer languages present in hello/full (%s files)\n' \
     "$(rgb 120 220 120)" "$C_RESET" "$FULL_COUNT"
   printf '\n'
@@ -271,7 +277,9 @@ final_rainbow_hello() {
   printf '\n'
 }
 
-if [ "$QUIET" = "1" ] || [ ! -t 1 ]; then
+# Emit the true-colour greeting even when redirected: run.log, CI logs and the
+# recorded demo all want to see the rainbow. NO_COLOR opts out.
+if [ -n "${NO_COLOR:-}" ]; then
   printf 'Hello World!\n'
 else
   final_rainbow_hello

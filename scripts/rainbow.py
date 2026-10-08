@@ -180,7 +180,13 @@ def main() -> int:
 
     langs = load_bar()
     width = args.width or min(shutil.get_terminal_size((100, 24)).columns, 160)
-    plain = args.plain or not is_tty()
+    # Colour survives redirection on purpose: logs/run.log, CI logs and the
+    # piped demo all need the true-colour bar. Opt out with --plain or
+    # RAINBOW_PLAIN=1. Only cursor tricks stay gated on a real terminal.
+    plain = args.plain or os.environ.get("RAINBOW_PLAIN", "0").strip().lower() in (
+        "1", "true", "yes",
+    )
+    tty = is_tty()
     both = not (args.bar or args.hello)
 
     if plain:
@@ -189,7 +195,7 @@ def main() -> int:
         print("Hello World!")
         return 0
 
-    if args.sweep and not args.no_animation and both:
+    if args.sweep and not args.no_animation and both and tty:
         sys.stdout.write(HIDE)
         try:
             for i in range(args.sweep):

@@ -1,0 +1,62 @@
+# ERRORS — G-RAINBOW-HELLO
+
+Format: what broke -> diagnosis -> fix/fallback -> status.
+
+## E1 `git` not recognised
+- Symptom: `git : The term 'git' is not recognized`.
+- Diagnosis: git exists at `D:\Git\cmd\git.exe` (2.55.0.windows.4), just not on PATH.
+- Fix: invoke by absolute path, or prepend `D:\Git\cmd;D:\Git\bin` to PATH.
+- Status: RESOLVED.
+
+## E2 `fatal: detected dubious ownership in repository`
+- Symptom: git refused to operate on `E:/rainbow_hello_world`.
+- Diagnosis: repo was written by a different SID; current user is
+  `CHUBOTONG...\31975`.
+- Fix: `git config --global --add safe.directory E:/rainbow_hello_world`
+  (plus `*`).
+- Status: RESOLVED.
+
+## E3 Python not on PATH
+- Symptom: `python --version` produced nothing; `pip --version` empty.
+- Diagnosis: only the WindowsApps Store alias is on PATH.
+- Fix: real CPython 3.13.12 at `C:\hclaw\python\python.exe`; installed
+  `matplotlib` 3.11.2 there (PyYAML, requests, bs4, Pillow already present).
+- Status: RESOLVED.
+
+## E4 `matplotlib` missing for generate_rainbow_bar.py
+- Fix: `pip install matplotlib`.
+- Status: RESOLVED.
+
+## E5 `ripgrep` failed inside the Grep tool
+- Workaround: PowerShell `Select-String`.
+- Status: WORKAROUND.
+
+## E6 Malformed ANSI escape sequences in run.sh  (product bug)
+- Symptom: `run.sh` "rainbow" greeting had zero real colour.
+- Diagnosis: `rgb()` printed `ESC 38;2;R;G;Bm` with no `[`. Verified by regex:
+  every occurrence of ESC was not followed by `[`.
+- Fix: `'%s[38;2;%d;%d;%dm'`.
+- Verification: `malformed escapes: 0`, final greeting `rgb_seqs=12 distinct=12`.
+- Status: RESOLVED.
+
+## E7 Colour suppressed whenever stdout was redirected
+- Symptom: piped `run.sh` produced 70 ANSI sequences and no bar; `rainbow.py
+  --bar` printed only three plain lines.
+- Diagnosis: `plain = args.plain or not is_tty()`.
+- Fix: D3 — `plain` now only honours `--plain`/`RAINBOW_PLAIN`; animation stays
+  TTY-gated.
+- Verification: 1590 true-colour sequences, 9 block-glyph bar rows.
+- Status: RESOLVED.
+
+## E8 `... +0 more core languages`  (product bug)
+- Symptom: roll call listed 50 of 694 languages then claimed nothing was hidden.
+- Diagnosis: a single counter was incremented for every name but compared
+  against `MAX_SHOWN`, so the "more" arithmetic used the total.
+- Fix: split into `total` (every manifest name) and `shown` (printed count).
+- Verification: `... +644 more core languages` (694 - 50).
+- Status: RESOLVED.
+
+## E9 figlet / toilet / lolcat / ffmpeg absent
+- Fallback: `scripts/rainbow.py` renders the ASCII art and 24-bit colour
+  natively; `beep()` degrades to `printf '\a'`.
+- Status: ACCEPTED FALLBACK (CI installs the real tools for the recording).

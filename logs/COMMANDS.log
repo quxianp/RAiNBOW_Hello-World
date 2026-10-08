@@ -1,0 +1,49 @@
+# COMMANDS — G-RAINBOW-HELLO
+
+Key commands and their real outcomes this session. Full detail in logs/ERRORS.log.
+
+## Environment discovery
+    where.exe git                     -> not found
+    Get-ChildItem D:\ -Filter git.exe -> D:\Git\cmd\git.exe, D:\Git\bin\bash.exe
+    D:\Git\cmd\git.exe --version      -> git version 2.55.0.windows.4
+    D:\Git\bin\bash.exe --version     -> GNU bash 5.3.15
+    C:\hclaw\python\python.exe        -> Python 3.13.12
+    wsl.exe --list --verbose          -> no distributions installed
+    where.exe gh / docker / node      -> all MISSING
+    Invoke-WebRequest api.github.com  -> 200 (network OK)
+    Test-NetConnection 127.0.0.1 10818-> True (proxy alive)
+
+## Dependency install
+    pip install matplotlib            -> matplotlib 3.11.2 installed
+    module probe                      -> yaml OK, requests OK, bs4 OK, PIL OK,
+                                        matplotlib MISSING->installed, github MISSING,
+                                        playwright MISSING
+
+## Acceptance gates
+    python scripts/verify_languages.py
+        -> 19/19 checks passed, exit 0
+           694 core languages; 694 Linguist-coloured detectable; 0 missing;
+           share min 0.1441% max 0.1441%; sum 100.000000%; stdev 0.000000 pp;
+           1421312 bytes counted; 6632 full files; 7326 total language files;
+           0 unrecognisable by Linguist; hue span 0.0-359.6;
+           merged inventory 7325 languages; [SKIP] github-linguist (optional)
+
+    python scripts/balance_bytes.py
+        -> core 694, target 2048 B each, total 1421312 B,
+           share 0.144092% each, sum 100.0%, outside window 0, exit 0
+        -> `git status --short hello/core` afterwards = 0 files (idempotent)
+
+    bash run.sh --jobs 8
+        -> first run : exit 0, 70 ANSI sequences, 5421 bytes
+        -> after D3  : exit 0, 1632 ANSI sequences, 44437 bytes,
+                       "... +644 more core languages"
+        -> after E6  : exit 0, malformed escapes (ESC not followed by [) = 0,
+                       final greeting rgb_seqs=12 distinct=12,
+                       1590 true-colour sequences, 9 block-glyph bar rows
+        evidence     : logs/run_evidence.txt, logs/run.log
+
+## Git
+    git config --global --add safe.directory E:/rainbow_hello_world
+    git rev-list --left-right --count origin/main...main  -> 0  8   (8 unpushed)
+    git ls-files | measure                                -> 7374 tracked files
+    git status --short                                    -> ?? .github/
