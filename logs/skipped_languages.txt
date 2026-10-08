@@ -1,0 +1,25 @@
+Brainfuck	simulated	no bf on PATH
+Crystal	simulated	no crystal on PATH
+D	simulated	no ldc2 on PATH
+Dart	simulated	no dart on PATH
+Elixir	simulated	no elixir on PATH
+Elm	simulated	no elm on PATH
+Erlang	simulated	no escript on PATH
+Fortran	error	/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start': (.text+0x1b): undefined reference to `main' collect2: error: ld returned 1 exit status
+Gleam	simulated	no gleam on PATH
+Groovy	simulated	no groovy on PATH
+LOLCODE	simulated	no lci on PATH
+Lua	simulated	no lua on PATH
+Nim	simulated	no nim on PATH
+Nushell	simulated	no nu on PATH
+OCaml	simulated	no ocaml on PATH
+Objective-C	error	/home/runner/work/RAiNBOW_Hello-World/RAiNBOW_Hello-World/hello/core/objective-c/hello.m:1:3: error: invalid preprocessing directive 1 | # -*- mode: objective-c -*- | ^ /home/runner/work/RAiNBOW_Hello
+Pascal	simulated	no fpc on PATH
+PureScript	simulated	no purs on PATH
+R	simulated	no Rscript on PATH
+Racket	simulated	no racket on PATH
+Raku	simulated	no raku on PATH
+Scheme	simulated	no guile on PATH
+Standard ML	simulated	no sml on PATH
+Zig	simulated	no zig on PATH
+fish	simulated	no fish on PATH
