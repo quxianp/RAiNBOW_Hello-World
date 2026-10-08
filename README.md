@@ -156,10 +156,13 @@ unique records.
 | GitHub topic `esoteric-language` | 47 | more esolangs |
 | GitHub collection `programming-languages` | 36 | curated set |
 | IEEE Spectrum Top Languages | 7 | industry-representative set |
-| Built-in fallback groups (21) | ~1 890 | ancient, assembly dialects, binary data formats, blockchain, quantum, HDL, golf, DSL/query, templates, education, Chinese-language listings |
+| Built-in fallback groups (21 of them) | 1 725 | ancient, assembly dialects, binary data formats, blockchain, quantum, HDL, golf, DSL/query, templates, education, Chinese-language listings |
+| Rosetta Code | 0 | fetched, but every entry was already covered by another source |
 
 The built-in fallback groups matter: they guarantee that famous families are
-never missing just because a scrape failed.
+never missing just because a scrape failed. Rosetta Code is listed because it was
+attempted, not because it added anything — after de-duplication it contributed
+no name the other sources had not already produced.
 
 - Full merged inventory: [`config/all-langs.json`](config/all-langs.json)
 - Core list (the ones on the bar): [`config/core-langs.txt`](config/core-langs.txt)
