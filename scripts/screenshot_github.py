@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import logging
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -100,17 +101,29 @@ def capture(repo: str, out: Path, timeout: int, width: int, height: int) -> bool
         LOG.warning("playwright is not installed; skipping the GitHub bar capture")
         return False
 
-    url = f"https://github.com/{repo}"
+    # GitHub edge-caches the anonymous repository page, so a plain request for
+    # the repo URL can return a page rendered from before the latest push --
+    # observed as a bar claiming "HTML 27.6 %" hours after the API reported HTML
+    # at 1.01 %. A cache-busting query parameter plus explicit no-cache request
+    # headers forces a fresh render.
+    bust = f"?__rainbow={int(time.time())}"
+    url = f"https://github.com/{repo}{bust}"
     out.parent.mkdir(parents=True, exist_ok=True)
 
     try:
         with sync_playwright() as pw:
             browser = pw.chromium.launch(args=["--no-sandbox"])
             try:
-                page = browser.new_page(
+                context = browser.new_context(
                     viewport={"width": width, "height": height},
                     device_scale_factor=2,
+                    extra_http_headers={
+                        "Cache-Control": "no-cache, no-store, must-revalidate",
+                        "Pragma": "no-cache",
+                    },
+                    bypass_csp=True,
                 )
+                page = context.new_page()
                 LOG.info("opening %s", url)
                 page.goto(url, wait_until="domcontentloaded", timeout=timeout * 1000)
 
