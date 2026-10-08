@@ -66,7 +66,7 @@ def load(path: Path, default=None):
     if not path.exists():
         return default
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8", newline="\n"))
     except Exception as exc:
         print(f"! cannot read {path}: {exc}", file=sys.stderr)
         return default
@@ -370,7 +370,7 @@ def main() -> int:
     for r in records[-20:]:
         lines.append(f"  {r['color']}  hue={r['hue']:>6.2f}  {r['name']}")
     report = "\n".join(lines) + "\n"
-    (LOGS / "rainbow_selection.txt").write_text(report, encoding="utf-8")
+    (LOGS / "rainbow_selection.txt").write_text(report, encoding="utf-8", newline="\n")
     print(report)
     print(f"wrote config/rainbow_langs.json ({n} core languages)")
     if n < MIN_CORE:

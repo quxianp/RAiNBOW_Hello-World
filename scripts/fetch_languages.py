@@ -118,7 +118,7 @@ class Log:
     def __init__(self, path: Path):
         self.path = path
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.fh = open(path, "a", encoding="utf-8")
+        self.fh = open(path, "a", encoding="utf-8", newline="\n")
 
     def __call__(self, msg: str) -> None:
         line = f"[{time.strftime('%H:%M:%S')}] {msg}"

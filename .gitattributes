@@ -17,3 +17,17 @@ logs/** linguist-documentation
 assets/** linguist-documentation
 .github/** linguist-documentation
 *.min.js linguist-generated
+
+# The global `* -text` above means git performs no line-ending normalisation
+# at all, so a CRLF artifact written on Windows stays CRLF in the repository and
+# a Linux run rewrites it wholesale. That churned hello/manifest.json by 81290
+# lines in CI run 37818363260. These last rules re-enable normalisation for the
+# file types the generators emit, so the byte-identical content is stable
+# regardless of which platform produced it.
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.sh text eol=lf
+*.tape text eol=lf

@@ -31,7 +31,7 @@ ASSETS.mkdir(parents=True, exist_ok=True)
 
 
 def load():
-    data = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
+    data = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8", newline="\n"))
     return data.get("languages", [])
 
 
@@ -105,7 +105,7 @@ def render_svg(langs, path: Path, width=2400, height=160) -> None:
         + f'\n  <rect x="0" y="{height - 40}" width="{width}" height="40" fill="#0d1117"/>\n'
         f'</svg>\n'
     )
-    path.write_text(svg, encoding="utf-8")
+    path.write_text(svg, encoding="utf-8", newline="\n")
     print(f"wrote {path.relative_to(ROOT)} ({path.stat().st_size} B)")
 
 

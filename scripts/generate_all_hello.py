@@ -982,8 +982,8 @@ def main() -> int:
     args = ap.parse_args()
     sharded = bool(args.shard)
 
-    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8"))
-    merged = json.loads((DATA / "merged_langs.json").read_text(encoding="utf-8"))
+    rainbow = json.loads((CONFIG / "rainbow_langs.json").read_text(encoding="utf-8", newline="\n"))
+    merged = json.loads((DATA / "merged_langs.json").read_text(encoding="utf-8", newline="\n"))
 
     core_dir = HELLO_DIR / "core"
     full_dir = HELLO_DIR / "full"
@@ -1095,7 +1095,7 @@ def main() -> int:
 
     # ---- write the manifest (shard mode merges, full mode rewrites) ------
     if sharded and (HELLO_DIR / "manifest.json").exists():
-        old = json.loads((HELLO_DIR / "manifest.json").read_text(encoding="utf-8"))
+        old = json.loads((HELLO_DIR / "manifest.json").read_text(encoding="utf-8", newline="\n"))
         by_name = {m["language"].lower(): m for m in old.get("files", [])}
         order = [m["language"].lower() for m in old.get("files", [])]
         for m in manifest:

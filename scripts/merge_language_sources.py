@@ -225,7 +225,7 @@ def load(path: Path, default=None):
     if not path.exists():
         return default
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(path.read_text(encoding="utf-8", newline="\n"))
     except Exception as exc:
         print(f"  ! cannot parse {path.name}: {exc}", file=sys.stderr)
         return default
@@ -238,7 +238,7 @@ def main() -> int:
     args = ap.parse_args()
 
     log_path = LOGS / "merge_language_sources.log"
-    log_fh = open(log_path, "a", encoding="utf-8")
+    log_fh = open(log_path, "a", encoding="utf-8", newline="\n")
 
     def log(msg: str) -> None:
         line = f"[{time.strftime('%H:%M:%S')}] {msg}"

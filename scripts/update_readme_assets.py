@@ -61,7 +61,7 @@ def main() -> int:
         print(f"error: {README} not found", file=sys.stderr)
         return 1
 
-    text = README.read_text(encoding="utf-8")
+    text = README.read_text(encoding="utf-8", newline="\n")
     match = PATTERN.search(text)
     if not match:
         print(f"error: markers {START} / {END} not found in {README}", file=sys.stderr)
@@ -77,7 +77,7 @@ def main() -> int:
         return 1
 
     updated = text[: match.start()] + desired + text[match.end() :]
-    README.write_text(updated, encoding="utf-8")
+    README.write_text(updated, encoding="utf-8", newline="\n")
     print(f"updated asset block in {README}")
     return 0
 
