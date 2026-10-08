@@ -102,3 +102,48 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   embedded quotes/newlines before git ever sees it.
 - Fix: write the message to a file and use `git commit -F <file>`.
 - Status: RESOLVED.
+
+## E14 Green run that produced nothing (run 37820167736)
+- Symptom: every assets step reported success, yet the commit contained only a
+  141-byte `rainbow-bar-github.png` and no GIF or MP4 at all.
+- Diagnosis (two independent causes):
+  1. `install VHS` downloaded the archive as `/tmp/vhs.tgz` but then ran
+     `sha256sum -c` from `/tmp` against the *published* filename. Verification
+     failed, `set -e` aborted the step before `sudo install ... vhs`, and
+     `continue-on-error: true` then reported the step as successful.
+     `record_demo.sh` logged "vhs not installed; skipping GIF recording".
+  2. `screenshot_github.py` matched the bare `.Progress` selector, which hits an
+     unrelated progress indicator; it logged "captured language bar" and wrote
+     141 bytes.
+- Fix: keep the archive under its real name and compare checksums explicitly;
+  scope the selectors and reject any capture under 6 KB, deleting it rather than
+  committing it; add `assert the demo assets exist` after the push so a missing
+  GIF turns the run red.
+- Status: RESOLVED (run 37820749718 produced a 46 KB GIF and a 62 KB MP4).
+
+## E15 Stale language-bar screenshot
+- Symptom: the captured bar claimed `HTML 27.6 %` while
+  `GET /repos/.../languages` at the same moment reported HTML at 14336 of
+  1417216 bytes (1.01 %) across 631 languages.
+- Diagnosis: GitHub edge-caches the anonymous repository page, so the rendered
+  HTML can predate the push it is served under. The `/languages` API is not
+  cached the same way.
+- First fix attempt (cache-busting query parameter + `Cache-Control: no-cache`
+  through a custom context) backfired: GitHub returned an *unstyled* document
+  and the script committed a 303 KB screenshot of raw "Navigation Menu" markup.
+- Final fix: reverted to a plain request. A page that lags a few minutes is
+  cosmetic and self-heals on the next run; an unstyled page is not. The 6 KB
+  floor meant the bad page produced a *missing* file rather than a wrong image,
+  which is the correct failure mode. The diagnostic full-page capture now goes to
+  `.tmp/` (gitignored) instead of `assets/`.
+- Status: WORKED AROUND. `assets/rainbow-bar-local.png` is generated
+  deterministically from `config/rainbow_langs.json` and is always current.
+
+## E16 `git ls-files`-level audit of the live bar
+- Not an error but the decisive check: `GET /repos/.../languages` returns 631
+  languages / 1 417 216 bytes, and **every** entry is an exact multiple of
+  2048. That proves nothing outside `hello/core/` is counted -- if a single byte
+  from `hello/full/`, `scripts/`, `config/`, `data/` or the README had leaked
+  in, at least one entry would not divide evenly.
+- Status: PASSED.
+

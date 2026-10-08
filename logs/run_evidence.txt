@@ -1,5 +1,5 @@
-01:34:16 === RAiNBOW_Hello-World run.sh start ===
-01:34:16 deps: figlet=fallback-python toilet=fallback-python lolcat=fallback-python/rainbow.py runner=run_languages.py(jobs=8)
+02:17:40 === RAiNBOW_Hello-World run.sh start ===
+02:17:40 deps: figlet=fallback-python toilet=fallback-python lolcat=fallback-python/rainbow.py runner=run_languages.py(jobs=8)
 [1mRAiNBOW_Hello-World[0m
 
   [2mBooting 694 core languages[0m

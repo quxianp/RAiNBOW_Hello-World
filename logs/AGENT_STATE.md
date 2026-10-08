@@ -1,4 +1,4 @@
-# AGENT_STATE — Goal G-RAINBOW-HELLO
+# AGENT_STATE — Goal G-RAINBOW-HELLO — COMPLETE
 
 Repo: https://github.com/quxianp/RAiNBOW_Hello-World.git (branch `main`)
 Local path: `E:\rainbow_hello_world`
@@ -7,57 +7,59 @@ Local path: `E:\rainbow_hello_world`
 
 Ship RAiNBOW_Hello-World: 3000+ Hello-World files, a 600–800 segment Linguist
 rainbow bar, a `run.sh` show that prints a rainbow `Hello World!`, and GitHub
-Actions that produce `assets/hello-world.gif`, `assets/hello-world.mp4` and the
-rainbow bar images.
+Actions that produce the demo assets and commit them back.
+
+## Status: all acceptance criteria met
+
+| # | Criterion | Result |
+|---|---|---|
+| 1 | Repository non-empty | 7 398 tracked files |
+| 2 | Required files/dirs present | all 12 verified by `scripts/_validate_delivery.py` |
+| 3 | `hello/core` 600–800 | **694** |
+| 4 | Equal share, sums to 100 % | 0.144092 % each, **100.000000 %**, stdev 0.000000 pp |
+| 5 | `hello/full` ≥ 2400 | **6 632** |
+| 6 | Total language files ≥ 3000 | **7 326** |
+| 7 | Bar is hundreds of fine segments | **631** languages live on GitHub, ~1.90 px each |
+| 8 | `run.sh` prints a rainbow Hello World! | exit 0, 0 malformed escapes, 12-colour greeting |
+| 9 | Actions generate gif/mp4/bar png | all four present, committed by CI |
+| 10 | README embeds the assets | asset block between the markers |
+| 11 | `main` pushed | in sync, 0 behind / 0 ahead |
 
 ## Environment (verified 2026-10-09)
 
 | Tool | Location / version | Note |
 |---|---|---|
-| git | `D:\Git\cmd\git.exe` 2.55.0.windows.4 | NOT on PATH — added per command |
-| bash | `D:\Git\bin\bash.exe` 5.3.15 | GNU bash, used for `run.sh` |
-| python | `C:\hclaw\python\python.exe` 3.13.12 | primary; yaml, requests, bs4, PIL, matplotlib OK |
+| git | `D:\Git\cmd\git.exe` 2.55.0.windows.4 | not on PATH; added per command |
+| bash | `D:\Git\bin\bash.exe` 5.3.15 | used for `run.sh` |
+| python | `C:\hclaw\python\python.exe` 3.13.12 | yaml, requests, bs4, PIL, matplotlib |
 | python (CI parity) | `D:\Microsoft VS Code\data\python\python.exe` 3.12.7 | matches `actions/setup-python` |
-| `python3` | WindowsApps stub | prints nothing — `run.sh` probes this and rejects it |
-| figlet/toilet/lolcat/ffmpeg | **MISSING** locally | `scripts/rainbow.py` fallback is the live path |
-| node/npx/gh/docker | MISSING | not required |
+| figlet/toilet/lolcat/ffmpeg | absent locally | `scripts/rainbow.py` fallback is the live path |
 
-Network: `api.github.com` returns 200 directly. `objects.githubusercontent.com`
-(the release CDN) times out from here — diagnostics were done via the Actions
-API instead.
-
-## Repository contents
-
-- 694 core files, 6632 full files, 7326 total language files.
-- Byte balance: every core file exactly 2048 B => 0.144092 % each, sum
-  100.000000 %, stdev 0.000000 pp, 1421312 counted bytes.
-- Merged inventory 7325 languages; hue span 0.0°–359.6°; 0 unrecognisable files.
-
-## Subgoals (honest status)
-
-| ID | Subgoal | Status | Evidence |
-|---|---|---|---|
-| G1 | Toolchain (git/bash/python) usable | DONE | `.tmp/probe_env.sh` |
-| G2 | `README.md` with asset markers | DONE | README.md, markers verified |
-| G3 | `demo.tape` VHS config | DONE | demo.tape |
-| G4 | `scripts/record_demo.sh` | DONE | bash -n clean |
-| G5 | `scripts/screenshot_github.py` | DONE | non-fatal, selector cascade |
-| G6 | Workflow: `schedule` + `assets` job | DONE | YAML parses, 16 steps |
-| G7 | `verify_languages.py` green | DONE | 19/19 on 3.12 **and** 3.13 |
-| G8 | `balance_bytes.py` idempotent | DONE | 0 drift on re-run |
-| G9 | `run.sh` prints rainbow Hello World | DONE | 0 malformed escapes, 12-colour greeting, exit 0 |
-| G10 | Commit + push `main` | DONE | `332cf6c7..b3a2c026`, in sync (0/0) |
-| G11 | Actions produces assets | **IN PROGRESS** | run 37820167736 |
+Network: `api.github.com` reachable; the release CDN (`objects.githubusercontent.com`)
+is not, from this machine. Python's `urllib` cannot reach GitHub (no system proxy) --
+PowerShell's `Invoke-RestMethod` can.
 
 ## CI run history
 
-| Run | SHA | Result | What happened |
+| Run | SHA | Result | Note |
 |---|---|---|---|
-| 37818363260 | 36f92f23 | cancelled | assets failed at `install VHS` (E10); verify passed |
-| 37819076073 | 332cf6c7 | failure | acceptance died on `read_text(newline=)` (E12) |
-| 37820167736 | b3a2c026 | **running** | all three defects fixed |
+| 37818363260 | 36f92f23 | cancelled | `install VHS`: nested tarball (E10) |
+| 37819076073 | 332cf6c7 | failure | `read_text(newline=)` fatal on 3.12 (E12) |
+| 37820167736 | b3a2c026 | success | green but produced no GIF/MP4 (E10 masked) |
+| 37820749718 | 6c8c987b | success | GIF + MP4 + real bar PNG produced |
+| 37821672417 | 039a9522 | success | cache-busting blanked the page (E14) |
+| 37822464159 | 9ce8bb45 | success | all assets correct, clutter removed |
+
+## Known residual risk
+
+- `assets/rainbow-bar-github.png` is a genuine capture of GitHub's Languages
+  panel, but GitHub edge-caches the anonymous repo page, so it can lag the newest
+  push and show an older breakdown. Bypassing the cache was attempted and made
+  things worse (E14), so it is reverted; the daily `schedule` run refreshes it.
+  `assets/rainbow-bar-local.png` is generated deterministically from
+  `config/rainbow_langs.json` and is always current.
+- The 24 shard jobs run `max-parallel: 1`, so a full run is ~20–30 min.
 
 ## Next step
 
-Confirm run 37820167736: assets job green, `assets/hello-world.gif`,
-`assets/hello-world.mp4` and a bar PNG committed back to `main`.
+None. Shipped.

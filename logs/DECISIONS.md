@@ -64,3 +64,33 @@ rewrite + `[skip ci]` commit) plus a `schedule` trigger.
 Prevents the asset job from committing and thereby re-triggering itself.
 Guards both on `github.event.head_commit.message` and on the actor, because a
 scheduled run has no head commit and must still publish.
+
+## D9. Fail loudly *after* publishing, not before
+`record_demo.sh` and `screenshot_github.py` are `continue-on-error` so a missing
+CDN or browser cannot block the local bar, the README refresh and the push.
+That is required, but it also let run 37820167736 report success while producing
+nothing. Fixed by adding `assert the demo assets exist` **after** the push step:
+partial delivery still ships, and the run still turns red. Ordering matters --
+putting the assertion before the push would have thrown away good assets.
+
+## D10. Reject degenerate captures rather than committing them
+A language-bar capture under 6 KB cannot be a 631-segment bar. `usable()` throws
+it away and the selector cascade continues, so the failure mode is "file missing"
+(broken image link, obvious) instead of "141-byte image committed and displayed
+as if it were the bar" (silently wrong). The same reasoning puts the diagnostic
+full-page screenshot in `.tmp/` instead of `assets/`.
+
+## D11. Do not force a cache bypass on the GitHub page
+GitHub edge-caches the anonymous repository page, so a screenshot can lag the
+newest push. The obvious fix -- cache-busting parameter plus `Cache-Control:
+no-cache` -- made GitHub serve an unstyled document and produced a 303 KB
+screenshot of nothing. Chosen: accept the lag. A stale-but-correct image is a
+cosmetic issue that the daily `schedule` run repairs; an unstyled page is a
+capability regression. The locally generated bar is the authoritative image and
+is always in sync.
+
+## D12. Verify against the interpreter CI actually uses
+A change that passed locally on Python 3.13.12 killed CI on 3.12.15, because
+`Path.read_text` only gained `newline` in 3.13. Now every script is both
+compiled and (where dependencies allow) executed under a real 3.12.7 before
+pushing. Cheap insurance against the single most likely CI-only failure.
