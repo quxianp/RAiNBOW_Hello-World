@@ -41,7 +41,10 @@ LIB = if defined?(GitHub::Linguist)
 root = ARGV[0] || File.expand_path("..", __dir__)
 Dir.chdir(root)
 
-repo = LIB::Repository.new(root)
+# Repository.new(repo_root, commit_sha, api_endpoint = nil) -- the commit is
+# mandatory in this version; "HEAD" resolves the checked-out tree, which is what
+# the working copy is.
+repo = LIB::Repository.new(root, ARGV[1] || "HEAD")
 
 langs = if repo.respond_to?(:rb_languages)
           repo.rb_languages
