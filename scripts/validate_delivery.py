@@ -1,12 +1,22 @@
 """Validate the workflow YAML and cross-check the repo against acceptance rules."""
 import json
+import os
 import pathlib
+import shutil
+import subprocess
 import sys
 
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 fails = []
+
+# git is not on PATH on the authoring machine, so look in the usual places too.
+GIT = shutil.which("git") or next(
+    (p for p in (r"D:\Git\cmd\git.exe", r"C:\Program Files\Git\cmd\git.exe")
+     if os.path.exists(p)),
+    "git",
+)
 
 wf_path = ROOT / ".github" / "workflows" / "rainbow.yml"
 try:
@@ -34,9 +44,10 @@ steps = assets.get("steps", [])
 names = " | ".join(str(s.get("name", s.get("uses", ""))) for s in steps)
 print("assets steps:", names)
 for needle in ("run the show", "record the terminal demo",
-               "screenshot the GitHub language bar",
+               "screenshot the live GitHub language bar",
+               "render the GitHub language bar from the API",
                "refresh the README asset block", "commit and push the assets",
-               "upload assets"):
+               "assert the demo assets exist", "upload assets"):
     if needle not in names:
         fails.append(f"assets job missing step: {needle}")
 
@@ -86,6 +97,55 @@ if abs(balance["sum_pct"] - 100.0) > 1e-6:
     fails.append(f"shares do not sum to 100: {balance['sum_pct']}")
 if balance["outside_window"]:
     fails.append(f"shares outside window: {balance['outside_window']}")
+
+# ------------------------------------------------- executable bits in git
+# This is not cosmetic. run.sh was committed with mode 100644, so every VHS
+# recording of the README demo ended on:
+#     bash: ./run.sh: Permission denied
+# and the published GIF showed that failure instead of the show.
+EXECUTABLES = ["run.sh", "install_deps.sh", "scripts/record_demo.sh"]
+try:
+    listed = subprocess.run(
+        [GIT, "-C", str(ROOT), "ls-files", "-s", "--", *EXECUTABLES],
+        capture_output=True, text=True, timeout=60,
+    ).stdout
+except Exception as exc:  # noqa: BLE001
+    print(f"could not query git index ({exc}); skipping the exec-bit check")
+    listed = ""
+
+modes = {}
+for line in listed.splitlines():
+    parts = line.split(None, 3)
+    if len(parts) == 4:
+        modes[parts[3].strip()] = parts[0]
+
+for script in EXECUTABLES:
+    mode = modes.get(script)
+    if mode is None:
+        fails.append(f"exec-bit check: {script} is not tracked")
+    elif not mode.startswith("100755"):
+        fails.append(
+            f"{script} is committed with mode {mode}, not 100755 -- "
+            f"run `git update-index --chmod=+x {script}` or `./{script}` "
+            f"fails with Permission denied on Linux/CI"
+        )
+    else:
+        print(f"exec bit ok: {script} ({mode})")
+
+# ---------------------------------------------------------------- demo tape
+tape = ROOT / "demo.tape"
+if tape.is_file():
+    typed = [ln.strip() for ln in tape.read_text(encoding="utf-8").splitlines()
+             if ln.strip().startswith("Type")]
+    if not any("run.sh" in ln for ln in typed):
+        fails.append("demo.tape never types a run.sh command")
+    if any(ln.lstrip("Type ").startswith("./run.sh") for ln in typed):
+        fails.append(
+            "demo.tape types './run.sh' directly; type 'bash run.sh' so the "
+            "recording cannot break on a lost executable bit"
+        )
+else:
+    fails.append("demo.tape is missing")
 
 print()
 if fails:

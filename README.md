@@ -29,20 +29,26 @@ on your machine.
 
 ## 🎬 The show
 
-![rainbow bar](assets/rainbow-bar-local.png)
+![GitHub language bar, 631 languages, rendered from the GitHub API](assets/rainbow-bar-github.png)
 
-![GitHub's own language bar](assets/rainbow-bar-github.png)
+![rainbow bar, hue-ordered](assets/rainbow-bar-local.png)
 
 ![demo](assets/hello-world.gif)
 
 [⬇↓ Download the MP4](assets/hello-world.mp4)
 
-> **Top image** — rendered deterministically from `config/rainbow_langs.json`, the
-> same 694 colours Linguist assigns, so it is always current.
+> **First image** — drawn from `GET /repos/.../languages`, the exact breakdown
+> GitHub uses. 631 languages, each 0.14–1.01 %, with C, C++, C#, Java, Go, Rust,
+> Python, TypeScript and the rest named explicitly with their real shares.
 >
-> **Second image** — a live Playwright screenshot of GitHub's own Languages panel.
-> GitHub edge-caches the anonymous repository page, so this one can lag the newest
-> push; it is refreshed by the daily workflow.
+> **Why that image exists:** GitHub's own legend can only name a handful of
+> languages and collapses the remaining 600+ into a single grey **Other** row, so
+> C and C++ never appear by name on the site no matter how the repository is
+> built. The bar itself does contain them — it is 631 hair-thin segments — but
+> the legend will not say so.
+>
+> **Second image** — the same 694 Linguist colours ordered by hue, generated
+> deterministically from `config/rainbow_langs.json`, so it is always current.
 >
 > **GIF and MP4** — `run.sh` recorded with VHS in GitHub Actions.
 
@@ -139,6 +145,40 @@ The "0 exceptions" row is the load-bearing one: if a single counted byte were
 not a multiple of 2048, then something outside `hello/core/` was leaking into
 the bar. Nothing is — `hello/full/`, `scripts/`, `config/`, `data/` and this
 README are all correctly excluded.
+
+### 6. Why you cannot see C and C++ named on the site
+
+Two separate things are going on, and it is worth being precise about them.
+
+**GitHub's legend cannot name them.** With 631 languages, the Languages panel
+shows the largest handful and folds the rest into one grey **Other** row. That is
+a property of the UI, not of this repository: no arrangement of files can make
+GitHub print "C 0.1445 %" in a repo this polyglot, because C is nowhere near the
+top of a 631-way split. The *bar* still contains all 631 segments — they are just
+hair-thin. That is why the first image above is rendered from the API: it names
+the languages explicitly.
+
+**64 files are genuinely misclassified.** This one is our bug, and it is being
+worked on rather than explained away. GitHub attributes 692 of our 694 core
+files — the byte total matches to within two files — but reports only 631 names.
+Cross-referencing shows exactly 64 files landing in buckets they do not belong
+to:
+
+| Bucket | Files GitHub attributes | Files we have | Absorbed |
+|---|---|---|---|
+| HTML | 7 | 1 | +6 |
+| INI | 6 | 1 | +5 |
+| Python | 6 | 1 | +5 |
+| Shell | 5 | 1 | +4 |
+| JavaScript | 4 | 1 | +3 |
+| C, Java, TypeScript, Assembly, Lex, Yacc, LigoLANG, OpenAPI v2/v3 | 3 each | 1 each | +2 each |
+| ~25 others (CSS, Ruby, Go-side DSLs, Roff, TeX, XML, …) | 2 each | 1 each | +1 each |
+
+The casualties are real languages — `fish`, `bibtex`, `tsx`, `bison`, `opencl`,
+`jison`, `numpy`, `rbs`, `ecmarkup`, `html+erb` and 55 more — each of which
+Linguist *does* colour. A `linguist-audit` job runs in CI using GitHub's own
+`github-linguist` gem to report the classification of every core file, so the
+set can be fixed rather than guessed at; see `logs/linguist_audit.json`.
 
 ---
 

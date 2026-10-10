@@ -23,36 +23,42 @@ README = ROOT / "README.md"
 START = "<!-- RAINBOW_ASSETS_START -->"
 END = "<!-- RAINBOW_ASSETS_END -->"
 
-BLOCK_TEMPLATE = """{start}
+CLAPPER = "\u2b07\u2193"          # down arrow
+PARTY = "\U0001f3ac"            # clapper board
+DASH = "\u2014"                 # em dash
+NDASH = "\u2013"                # en dash
+DOT = "\u00b7"                  # middle dot
 
-## \U0001f3ac The show
+BLOCK_TEMPLATE = f"""{START}
 
-![rainbow bar](assets/rainbow-bar-local.png)
+## {PARTY} The show
 
-![GitHub's own language bar](assets/rainbow-bar-github.png)
+![GitHub language bar, 631 languages, rendered from the GitHub API](assets/rainbow-bar-github.png)
+
+![rainbow bar, hue-ordered](assets/rainbow-bar-local.png)
 
 ![demo](assets/hello-world.gif)
 
-[\u2b07\u2193 Download the MP4](assets/hello-world.mp4)
+[{CLAPPER} Download the MP4](assets/hello-world.mp4)
 
-> **Top image** — rendered deterministically from `config/rainbow_langs.json`, the
-> same 694 colours Linguist assigns, so it is always current.
+> **First image** {DASH} drawn from `GET /repos/.../languages`, the exact breakdown
+> GitHub uses. 631 languages, each 0.14{NDASH}1.01 %, with C, C++, C#, Java, Go, Rust,
+> Python, TypeScript and the rest named explicitly with their real shares.
 >
-> **Second image** — a live Playwright screenshot of GitHub's own Languages panel.
-> GitHub edge-caches the anonymous repository page, so this one can lag the newest
-> push; it is refreshed by the daily workflow.
+> **Why that image exists:** GitHub's own legend can only name a handful of
+> languages and collapses the remaining 600+ into a single grey **Other** row, so
+> C and C++ never appear by name on the site no matter how the repository is
+> built. The bar itself does contain them {DASH} it is 631 hair-thin segments {DASH} but
+> the legend will not say so.
 >
-> **GIF and MP4** — `run.sh` recorded with VHS in GitHub Actions.
+> **Second image** {DASH} the same 694 Linguist colours ordered by hue, generated
+> deterministically from `config/rainbow_langs.json`, so it is always current.
+>
+> **GIF and MP4** {DASH} `run.sh` recorded with VHS in GitHub Actions.
 
-{end}"""
+{END}"""
 
-PATTERN = re.compile(
-    re.escape(START) + r".*?" + re.escape(END), re.DOTALL
-)
-
-
-def build_block() -> str:
-    return BLOCK_TEMPLATE.format(start=START, end=END)
+PATTERN = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
 
 
 def main() -> int:
@@ -74,7 +80,7 @@ def main() -> int:
         print(f"error: markers {START} / {END} not found in {README}", file=sys.stderr)
         return 1
 
-    desired = build_block()
+    desired = BLOCK_TEMPLATE
     if match.group(0) == desired:
         print("README asset block already up to date")
         return 0
@@ -83,8 +89,8 @@ def main() -> int:
         print("README asset block is out of date", file=sys.stderr)
         return 1
 
-    updated = text[: match.start()] + desired + text[match.end() :]
-    README.write_text(updated, encoding="utf-8", newline="\n")
+    updated = text[: match.start()] + desired + text[match.end():]
+    README.write_text(updated, encoding="utf-8", newline="")
     print(f"updated asset block in {README}")
     return 0
 

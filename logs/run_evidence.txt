@@ -1,5 +1,5 @@
-02:17:40 === RAiNBOW_Hello-World run.sh start ===
-02:17:40 deps: figlet=fallback-python toilet=fallback-python lolcat=fallback-python/rainbow.py runner=run_languages.py(jobs=8)
+02:02:38 === RAiNBOW_Hello-World run.sh start ===
+02:02:38 deps: figlet=fallback-python toilet=fallback-python lolcat=fallback-python/rainbow.py runner=run_languages.py(jobs=12)
 [1mRAiNBOW_Hello-World[0m
 
   [2mBooting 694 core languages[0m
@@ -15,48 +15,10 @@
     [38;2;120;220;120m+[0m JSON with Comments
     [38;2;120;220;120m+[0m Slim
     [38;2;120;220;120m+[0m Talon
-    [38;2;120;220;120m+[0m Wren
-    [38;2;120;220;120m+[0m SQF
-    [38;2;120;220;120m+[0m Adblock Filter List
-    [38;2;120;220;120m+[0m Squirrel
-    [38;2;120;220;120m+[0m Nearley
-    [38;2;120;220;120m+[0m SubRip Text
-    [38;2;120;220;120m+[0m C
-    [38;2;120;220;120m+[0m Idris
-    [38;2;120;220;120m+[0m Pan
-    [38;2;120;220;120m+[0m Promela
-    [38;2;120;220;120m+[0m Cap'n Proto
-    [38;2;120;220;120m+[0m Red
-    [38;2;120;220;120m+[0m Asymptote
-    [38;2;120;220;120m+[0m BASIC
-    [38;2;120;220;120m+[0m Grammatical Framework
-    [38;2;120;220;120m+[0m Witcher Script
-    [38;2;120;220;120m+[0m JASS
-    [38;2;120;220;120m+[0m CMake
-    [38;2;120;220;120m+[0m Hack
-    [38;2;120;220;120m+[0m MiniYAML
-    [38;2;120;220;120m+[0m SmPL
-    [38;2;120;220;120m+[0m Mercury
-    [38;2;120;220;120m+[0m Lasso
-    [38;2;120;220;120m+[0m Wikitext
-    [38;2;120;220;120m+[0m Ren'Py
-    [38;2;120;220;120m+[0m Daslang
-    [38;2;120;220;120m+[0m KDL
-    [38;2;120;220;120m+[0m PLSQL
-    [38;2;120;220;120m+[0m OpenCL
-    [38;2;120;220;120m+[0m NPM Config
-    [38;2;120;220;120m+[0m Cairo
-    [38;2;120;220;120m+[0m Cairo Zero
-    [38;2;120;220;120m+[0m Clojure
-    [38;2;120;220;120m+[0m JCL
-    [38;2;120;220;120m+[0m REXX
-    [38;2;120;220;120m+[0m Flix
-    [38;2;120;220;120m+[0m Gerber Image
-    [38;2;120;220;120m+[0m Adobe Font Metrics
-    [2m... +644 more core languages[0m
+    [2m... +682 more core languages[0m
     [38;2;120;220;120m+[0m full-layer languages present in hello/full (6632 files)
 
-  [2mExecuting 49 languages in parallel (jobs=8)[0m
+  [2mExecuting 49 languages in parallel (jobs=12)[0m
   [2m9 spoke, 49 silent / unavailable[0m
 
 [1m  Hello World![0m
@@ -74,36 +36,16 @@
       //   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
       //   colour     : not assigned by Linguist
       //   layer      : full (byte-balanced rainbow bar)
-      //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-      //   reference  : see https://esolangs.org/ and https://rosettacode.org/
     [38;2;255;180;60mhello/full/3d-brainfuck/hello.3d_brainfuck[0m
       // 3D Brainfuck - Hello World! :: RAiNBOW_Hello-World
       //   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
       //   colour     : not assigned by Linguist
       //   layer      : full (byte-balanced rainbow bar)
-      //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-      //   reference  : see https://esolangs.org/ and https://rosettacode.org/
     [38;2;255;180;60mhello/full/absurd-brainfuck/hello.absurd_brainfuck[0m
       // Absurd Brainfuck - Hello World! :: RAiNBOW_Hello-World
       //   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
       //   colour     : not assigned by Linguist
       //   layer      : full (byte-balanced rainbow bar)
-      //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-      //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-    [38;2;255;180;60mhello/full/advanced-brainfuck/hello.advanced_brainfuck[0m
-      // Advanced Brainfuck - Hello World! :: RAiNBOW_Hello-World
-      //   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
-      //   colour     : not assigned by Linguist
-      //   layer      : full (byte-balanced rainbow bar)
-      //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-      //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-    [38;2;255;180;60mhello/full/backtracking-intercal/hello.backtracking_intercal[0m
-      // Backtracking INTERCAL - Hello World! :: RAiNBOW_Hello-World
-      //   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
-      //   colour     : not assigned by Linguist
-      //   layer      : full (byte-balanced rainbow bar)
-      //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
-      //   reference  : see https://esolangs.org/ and https://rosettacode.org/
     [2minterpreters: https://esolangs.org/  https://rosettacode.org/[0m
 
 [1m  RAiNBOW_Hello-World language bar [0m[2m(694 languages, 0.1441% each)[0m
@@ -114,6 +56,15 @@
 [38;2;58;162;181m  AL                          [0m[0m[2m #3aa2b5 hue 189[0m
 [38;2;173;178;203m  VHDL                        [0m[0m[2m #adb2cb hue 230[0m
 
+
+[1m  Hello World![0m
+[38;2;0;0;0m█[0m               [38;2;153;0;0m█[0m                     [38;2;255;179;179m█[0m                  [38;2;255;244;243m█[0m                                                        [38;2;239;122;8m█[0m               [38;2;244;170;65m█[0m                                        [38;2;70;57;11m█[0m                              [38;2;85;94;37m█[0m      [38;2;156;193;52m█[0m
+[38;2;34;34;34m█[0m               [38;2;245;0;0m█[0m                     [38;2;217;14;9m█[0m                  [38;2;179;73;54m█[0m                                                        [38;2;157;82;0m█[0m               [38;2;241;164;43m█[0m                                        [38;2;243;202;10m█[0m                              [38;2;156;193;52m█[0m      [38;2;170;206;96m█[0m
+[38;2;128;0;0m█[0m               [38;2;135;135;135m█[0m  [38;2;255;43;43m█[0m   [38;2;211;211;211m█[0m   [38;2;203;56;55m█[0m   [38;2;217;14;9m█[0m      [38;2;236;86;76m█[0m                  [38;2;244;77;39m█[0m                  [38;2;255;80;0m█[0m   [38;2;170;103;70m█[0m   [38;2;249;119;50m█[0m                             [38;2;247;237;224m█[0m               [38;2;255;199;102m█[0m  [38;2;211;142;13m█[0m   [38;2;157;116;36m█[0m   [38;2;234;215;172m█[0m          [38;2;246;185;0m█[0m       [38;2;199;169;56m█[0m   [38;2;243;202;10m█[0m      [38;2;241;224;90m█[0m                              [38;2;170;206;96m█[0m      [38;2;61;97;23m█[0m
+[38;2;222;0;0m█[0m   [38;2;255;0;0m█[0m   [38;2;218;52;52m█[0m   [38;2;255;43;43m█[0m   [38;2;211;211;211m█[0m  [38;2;237;46;45m█[0m               [38;2;221;17;0m█[0m  [38;2;255;88;71m█[0m                  [38;2;245;131;95m█[0m                  [38;2;255;90;3m█[0m           [38;2;255;113;0m█[0m                         [38;2;219;144;30m█[0m       [38;2;255;160;0m█[0m       [38;2;157;116;36m█[0m  [38;2;228;204;152m█[0m           [38;2;246;185;0m█[0m      [38;2;255;213;57m█[0m   [38;2;240;201;19m█[0m           [38;2;219;202;0m█[0m  [38;2;254;254;0m█[0m                      [38;2;170;206;96m█[0m   [38;2;141;198;63m█[0m       [38;2;78;153;6m█[0m  [38;2;133;234;45m█[0m
+[38;2;255;3;3m█[0m               [38;2;219;88;85m█[0m  [38;2;212;74;69m█[0m   [38;2;119;59;55m█[0m   [38;2;244;67;54m█[0m   [38;2;255;88;71m█[0m      [38;2;106;70;63m█[0m                  [38;2;196;167;156m█[0m                  [38;2;255;104;0m█[0m               [38;2;214;119;17m█[0m                     [38;2;110;76;19m█[0m       [38;2;223;165;53m█[0m       [38;2;255;243;215m█[0m  [38;2;240;192;64m█[0m               [38;2;240;201;19m█[0m  [38;2;236;226;169m█[0m                  [38;2;176;183;126m█[0m                  [38;2;204;226;170m█[0m           [38;2;133;234;45m█[0m   [38;2;133;234;45m█[0m  [38;2;92;230;0m█[0m
+[38;2;252;87;87m█[0m               [38;2;119;59;55m█[0m  [38;2;218;41;28m█[0m              [38;2;244;77;39m█[0m                  [38;2;114;75;59m█[0m                  [38;2;235;129;49m█[0m           [38;2;255;218;179m█[0m                         [38;2;167;134;73m█[0m   [38;2;204;167;96m█[0m       [38;2;236;222;190m█[0m   [38;2;240;192;64m█[0m  [38;2;204;153;0m█[0m           [38;2;254;223;91m█[0m      [38;2;229;213;89m█[0m                  [38;2;85;94;37m█[0m                  [38;2;40;67;10m█[0m           [38;2;133;234;45m█[0m
+[38;2;255;74;72m█[0m               [38;2;255;88;71m█[0m  [38;2;196;69;54m█[0m   [38;2;255;99;71m█[0m   [38;2;244;77;39m█[0m   [38;2;255;76;31m█[0m      [38;2;251;133;93m█[0m   [38;2;156;66;33m█[0m   [38;2;114;75;59m█[0m          [38;2;222;165;132m█[0m   [38;2;218;91;11m█[0m   [38;2;235;129;49m█[0m          [38;2;246;135;18m█[0m   [38;2;219;178;132m█[0m   [38;2;242;165;66m█[0m                             [38;2;236;222;190m█[0m               [38;2;253;199;0m█[0m  [38;2;255;239;175m█[0m   [38;2;229;205;69m█[0m   [38;2;229;213;89m█[0m          [38;2;220;226;0m█[0m                  [38;2;160;170;135m█[0m   [38;2;110;139;61m█[0m   [38;2;40;67;10m█[0m              [38;2;66;120;25m█[0m   [38;2;137;224;81m█[0m       [38;2;61;129;55m█[0m  [38;2;196;255;194m█[0m
 
 [38;2;255;120;60mH[0m[38;2;248;130;75me[0m[38;2;240;140;90ml[0m[38;2;233;150;105ml[0m[38;2;225;160;120mo[0m[38;2;218;170;135m [0m[38;2;210;180;150mW[0m[38;2;203;190;165mo[0m[38;2;195;200;180mr[0m[38;2;188;210;195ml[0m[38;2;180;220;210md[0m[38;2;173;230;225m![0m
 [2m  694 languages on the bar  .  7326 files in the repo[0m

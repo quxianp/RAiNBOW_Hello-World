@@ -112,6 +112,41 @@ jobs:
           echo "push failed after retries" >&2
           exit 1
 
+  # ------------------------------------- classify with GitHub's own engine
+  # 64 core files are absorbed into HTML/INI/Python/Shell/JS/C/Java instead of
+  # keeping their own language. Only Linguist can say what it thinks of each
+  # file, and this job is non-blocking so it never gates a release.
+  linguist-audit:
+    name: linguist audit
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: install ruby and build deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            ruby-full ruby-dev build-essential \
+            zlib1g-dev libicu-dev libonig-dev
+
+      - name: install github-linguist
+        run: gem install github-linguist --no-document
+
+      - name: classify every hello/core file
+        run: ruby scripts/linguist_audit.rb
+
+      - name: upload the audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linguist-audit
+          path: logs/linguist_audit.json
+          if-no-files-found: ignore
+          retention-days: 14
+
   # ------------------------------------- record, render, publish the artefacts
   assets:
     name: demo assets
@@ -220,13 +255,23 @@ jobs:
         continue-on-error: true
         run: python scripts/generate_rainbow_bar.py
 
+      # Rendered from GET /repos/.../languages, i.e. the very breakdown GitHub
+      # uses, so it cannot show a stale cached page and it names C, C++, Java,
+      # Go, Rust and the rest explicitly -- GitHub's own legend collapses 631
+      # languages into a single "Other" row and never names most of them.
+      - name: render the GitHub language bar from the API
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/render_github_bar.py
+
       - name: record the terminal demo
         continue-on-error: true
         run: bash scripts/record_demo.sh
 
-      - name: screenshot the GitHub language bar
+      - name: screenshot the live GitHub language bar
         continue-on-error: true
-        run: python scripts/screenshot_github.py
+        run: python scripts/screenshot_github.py --out assets/rainbow-bar-live.png
 
       - name: refresh the README asset block
         run: python scripts/update_readme_assets.py
@@ -293,7 +338,7 @@ jobs:
           set -uo pipefail
           missing=0
           for f in assets/hello-world.gif assets/hello-world.mp4 \
-                   assets/rainbow-bar-local.png; do
+                   assets/rainbow-bar-local.png assets/rainbow-bar-github.png; do
             if [ -s "$f" ]; then
               echo "OK   $f ($(du -h "$f" | cut -f1))"
             else

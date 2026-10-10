@@ -248,22 +248,28 @@ log "beep attempted"
 # --------------------------------------------------------------------------
 # 7. easter egg: esoteric languages
 # --------------------------------------------------------------------------
-eggs=$(find hello/full -type f 2>/dev/null | grep -Ei 'brainfuck|whitespace|malbolge|intercal|lolcode|befunge|piet|forth|smalltalk|chef' | head -5)
+eggs=$(find hello/full -type f 2>/dev/null | grep -Ei 'brainfuck|whitespace|malbolge|intercal|lolcode|befunge|piet|forth|smalltalk|chef' | head -3)
 if [ -n "$eggs" ]; then
   printf '\n  %sEaster egg: esoteric corner of hello/full/%s\n' "$C_DIM" "$C_RESET"
   printf '%s\n' "$eggs" | while IFS= read -r f; do
     printf '    %s%s%s\n' "$(rgb 255 180 60)" "$f" "$C_RESET"
-    sed -n '1,6p' "$f" 2>/dev/null | sed 's/^/      /'
+    sed -n '1,4p' "$f" 2>/dev/null | sed 's/^/      /'
   done
   printf '    %sinterpreters: https://esolangs.org/  https://rosettacode.org/%s\n' \
     "$C_DIM" "$C_RESET"
 fi
 
 # --------------------------------------------------------------------------
-# 8. the rainbow language bar + final rainbow Hello World!
+# 8. the finale: language bar, then the big rainbow art, then the greeting.
+#    The money shot goes last so it is what a recording still shows when the
+#    show has scrolled -- an earlier layout put the art mid-show, where the
+#    easter egg pushed it off screen.
 # --------------------------------------------------------------------------
 printf '\n'
 "$PY" scripts/rainbow.py --bar --width 108 2>/dev/null || true
+
+printf '\n'
+"$PY" scripts/rainbow.py --hello --width 108 2>/dev/null || printf '%s\n' "$ART"
 
 printf '\n'
 final_rainbow_hello() {
