@@ -134,10 +134,22 @@ jobs:
 
       - name: install github-linguist
         run: |
-          # `gem install` without sudo dies with Gem::FilePermissionError on the
-          # runner image, because the default gem home is root-owned. Verified
-          # failing in run 38074239612.
-          sudo gem install github-linguist --no-document
+          set -euo pipefail
+          # Installing with `sudo gem install` succeeds but drops the gem into
+          # root's GEM_PATH, where the runner user cannot `require` it:
+          #   cannot load such file -- github-linguist (LoadError)
+          # seen in runs 38074239612 and 38075001749. Install into a
+          # user-owned GEM_HOME and export it to the following steps.
+          export GEM_HOME="$HOME/gems"
+          export GEM_PATH="$GEM_HOME"
+          mkdir -p "$GEM_HOME"
+          gem install github-linguist --no-document
+          echo "GEM_HOME=${GEM_HOME}" >> "$GITHUB_ENV"
+          echo "GEM_PATH=${GEM_PATH}" >> "$GITHUB_ENV"
+          echo "${GEM_HOME}/bin" >> "$GITHUB_PATH"
+
+      - name: verify the linguist gem loads
+        run: |
           ruby -e 'require "github-linguist"; puts "linguist loaded"'
           github-linguist --version
 
