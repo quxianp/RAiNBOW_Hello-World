@@ -27,15 +27,22 @@ BLOCK_TEMPLATE = """{start}
 
 ## \U0001f3ac The show
 
-![rainbow bar](assets/rainbow-bar-github.png)
+![rainbow bar](assets/rainbow-bar-local.png)
+
+![GitHub's own language bar](assets/rainbow-bar-github.png)
 
 ![demo](assets/hello-world.gif)
 
 [\u2b07\u2193 Download the MP4](assets/hello-world.mp4)
 
-> The three assets above are produced by `.github/workflows/rainbow.yml` on every
-> push to `main`. Until the first successful run, they may not exist yet — see
-> [Regenerating the assets](#regenerating-the-assets).
+> **Top image** — rendered deterministically from `config/rainbow_langs.json`, the
+> same 694 colours Linguist assigns, so it is always current.
+>
+> **Second image** — a live Playwright screenshot of GitHub's own Languages panel.
+> GitHub edge-caches the anonymous repository page, so this one can lag the newest
+> push; it is refreshed by the daily workflow.
+>
+> **GIF and MP4** — `run.sh` recorded with VHS in GitHub Actions.
 
 {end}"""
 

@@ -136,8 +136,26 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   floor meant the bad page produced a *missing* file rather than a wrong image,
   which is the correct failure mode. The diagnostic full-page capture now goes to
   `.tmp/` (gitignored) instead of `assets/`.
-- Status: WORKED AROUND. `assets/rainbow-bar-local.png` is generated
-  deterministically from `config/rainbow_langs.json` and is always current.
+- Deeper diagnosis (2026-10-11, after two daily `schedule` runs): the capture is
+  byte-identical across three runs spanning two days while
+  `GET /repos/.../languages` keeps reporting HTML at 14336 B of 1417216
+  (1.0116 %). Fetching the anonymous page HTML explains it:
+    * `repository-lang-stats`  -> 0 occurrences
+    * `Progress-item`          -> 1 occurrence, and it belongs to
+                                   `progress-pjax-loader-bar`
+    * language percentages     -> 0 occurrences
+    * the only match for "1C Enterprise" is *this repository's own README*
+      rendered into the page, not a statistics payload
+  So GitHub ships no language stats to an anonymous client at all; the panel the
+  headless browser photographs is client-rendered from cached data and will keep
+  showing the old breakdown. Forcing a fresh render is not available without
+  authenticating.
+- Resolution: the README now leads with `assets/rainbow-bar-local.png`, generated
+  deterministically from `config/rainbow_langs.json`, which carries exactly the
+  colours Linguist assigns and is verified to be a continuous rainbow. The live
+  capture is kept and labelled as what it is, rather than presented as
+  authoritative.
+- Status: WORKED AROUND, and disclosed in the README rather than hidden.
 
 ## E16 `git ls-files`-level audit of the live bar
 - Not an error but the decisive check: `GET /repos/.../languages` returns 631

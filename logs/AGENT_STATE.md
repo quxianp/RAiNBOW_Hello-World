@@ -14,7 +14,7 @@ Actions that produce the demo assets and commit them back.
 | # | Criterion | Result |
 |---|---|---|
 | 1 | Repository non-empty | 7 398 tracked files |
-| 2 | Required files/dirs present | all 12 verified by `scripts/_validate_delivery.py` |
+| 2 | Required files/dirs present | all 12 verified by `scripts/validate_delivery.py` |
 | 3 | `hello/core` 600–800 | **694** |
 | 4 | Equal share, sums to 100 % | 0.144092 % each, **100.000000 %**, stdev 0.000000 pp |
 | 5 | `hello/full` ≥ 2400 | **6 632** |
@@ -24,6 +24,7 @@ Actions that produce the demo assets and commit them back.
 | 9 | Actions generate gif/mp4/bar png | all four present, committed by CI |
 | 10 | README embeds the assets | asset block between the markers |
 | 11 | `main` pushed | in sync, 0 behind / 0 ahead |
+| 12 | Pipeline runs unattended | 2 daily `schedule` runs fired and self-published |
 
 ## Environment (verified 2026-10-09)
 
@@ -49,15 +50,23 @@ PowerShell's `Invoke-RestMethod` can.
 | 37820749718 | 6c8c987b | success | GIF + MP4 + real bar PNG produced |
 | 37821672417 | 039a9522 | success | cache-busting blanked the page (E14) |
 | 37822464159 | 9ce8bb45 | success | all assets correct, clutter removed |
+| 37919176384 | 6598bc2b | success | **schedule**, 2026-10-09 — refreshed GIF/MP4 |
+| 38043242505 | 84ae1ee7 | success | **schedule**, 2026-10-10 — refreshed GIF/MP4 |
+
+The two `schedule` runs confirm the repository is self-sustaining: with no human
+involvement they regenerated the demo, committed the assets with `[skip ci]` and
+did not re-trigger themselves.
 
 ## Known residual risk
 
-- `assets/rainbow-bar-github.png` is a genuine capture of GitHub's Languages
-  panel, but GitHub edge-caches the anonymous repo page, so it can lag the newest
-  push and show an older breakdown. Bypassing the cache was attempted and made
-  things worse (E14), so it is reverted; the daily `schedule` run refreshes it.
-  `assets/rainbow-bar-local.png` is generated deterministically from
-  `config/rainbow_langs.json` and is always current.
+- `assets/rainbow-bar-github.png` stays byte-identical across three runs spanning
+  two days while the API keeps reporting HTML at 1.0116 %. Deeper diagnosis
+  (E15): the anonymous repository HTML ships **no** language-stats payload at
+  all — no `repository-lang-stats`, one `Progress-item` belonging to
+  `progress-pjax-loader-bar` — so the panel a headless browser photographs is
+  client-rendered from cached data. Forcing a fresh render backfired (E14), so
+  the README now leads with `assets/rainbow-bar-local.png`, which is generated
+  deterministically from `config/rainbow_langs.json` and is always current.
 - The 24 shard jobs run `max-parallel: 1`, so a full run is ~20–30 min.
 
 ## Next step

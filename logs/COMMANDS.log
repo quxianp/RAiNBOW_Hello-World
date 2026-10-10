@@ -66,9 +66,34 @@ Key commands and their real outcomes this session. Full detail in logs/ERRORS.lo
 ## CI runs
     37818363260  36f92f23  cancelled  verify=success, assets=failure (install VHS: tar)
     37819076073  332cf6c7  failure    acceptance=failure (read_text newline on 3.12)
-    37820167736  b3a2c026  running    acceptance=success, batches green (no drift)
+    37820167736  b3a2c026  success    green but produced no GIF/MP4
+    37820749718  6c8c987b  success    gif 46 kB + mp4 62 kB + bar 18 kB
+    37821672417  039a9522  success    cache-busting blanked the page
+    37822464159  9ce8bb45  success    all assets correct, fullpage clutter removed
+    37919176384  6598bc2b  success    schedule, 2026-10-09, self-published assets
+    38043242505  84ae1ee7  success    schedule, 2026-10-10, self-published assets
+
+## Why the GitHub bar screenshot never changes (2026-10-11)
+    GET https://github.com/quxianp/RAiNBOW_Hello-World   (anonymous, via PowerShell)
+        html length                 : 361887
+        repository-lang-stats       : 0 occurrences
+        Progress-item               : 1 occurrence -> "progress-pjax-loader-bar"
+        language percentages        : 0 occurrences
+        "1C Enterprise"             : present, but it is this repo's own README
+        "27.6"                      : present in the README text
+    => GitHub ships no language statistics to an anonymous client; the panel a
+       headless browser photographs is client-rendered from cached data, so it
+       cannot be forced fresh without authenticating. The README now leads with
+       the deterministic local render instead.
 
 ## Python 3.12 parity check (the version actions/setup-python pins)
     "D:\Microsoft VS Code\data\python\python.exe" --version   -> 3.12.7
-    compile() over all 24 scripts                            -> OK
-    scripts/verify_languages.py                              -> 19/19 checks passed
+    compile() over all scripts                                 -> OK
+    scripts/verify_languages.py                                -> 19/19 checks passed
+
+## Housekeeping
+    git rm --cached logs/{gen,m,s,sel}.txt
+        -> four scratch files holding mojibake tracebacks from failed commands;
+           .gitignore already listed them as transient, but they had been
+           committed before those rules existed
+    git mv scripts/_validate_delivery.py scripts/validate_delivery.py

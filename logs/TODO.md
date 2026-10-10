@@ -13,6 +13,18 @@
 - [x] G9 `bash run.sh` exit 0, 0 malformed escapes, 12-colour greeting
 - [x] G10 push `main` — in sync with origin
 - [x] G11 CI run 37822464159: gif + mp4 + local bar + GitHub bar all committed
+- [x] G12 unattended operation confirmed: 2 daily `schedule` runs self-published
+- [x] G13 housekeeping: dropped 4 tracked junk logs, renamed the validator
+
+## Housekeeping completed 2026-10-11
+
+- [x] `logs/{gen,m,s,sel}.txt` untracked and deleted — they held mojibake
+      tracebacks from failed commands and were already listed in `.gitignore`
+      as transient output, but had been committed before those rules existed
+- [x] `scripts/_validate_delivery.py` -> `scripts/validate_delivery.py`
+- [x] README asset block reordered so the deterministic local bar leads and the
+      live capture is labelled as what it is (see E15)
+- [x] ledgers updated with the scheduled-run evidence and the page-HTML diagnosis
 
 ## Bugs found and fixed this session
 
