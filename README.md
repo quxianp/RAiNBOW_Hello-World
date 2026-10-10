@@ -148,37 +148,42 @@ README are all correctly excluded.
 
 ### 6. Why you cannot see C and C++ named on the site
 
-Two separate things are going on, and it is worth being precise about them.
-
 **GitHub's legend cannot name them.** With 631 languages, the Languages panel
 shows the largest handful and folds the rest into one grey **Other** row. That is
 a property of the UI, not of this repository: no arrangement of files can make
 GitHub print "C 0.1445 %" in a repo this polyglot, because C is nowhere near the
-top of a 631-way split. The *bar* still contains all 631 segments — they are just
-hair-thin. That is why the first image above is rendered from the API: it names
-the languages explicitly.
+top of a 631-way split. The *bar* still contains all 631 segments - they are
+just hair-thin. That is why the first image above is rendered from the API: it
+names the languages explicitly.
 
-**64 files are genuinely misclassified.** This one is our bug, and it is being
-worked on rather than explained away. GitHub attributes 692 of our 694 core
-files — the byte total matches to within two files — but reports only 631 names.
-Cross-referencing shows exactly 64 files landing in buckets they do not belong
-to:
+**If the panel you are looking at says "HTML 27.6 %", it is a stale cached
+render.** Screenshots of this page showed `HTML 27.6 %`, `INI 0.9 %`,
+`Python 0.9 %`, `Shell 0.7 %`, `JavaScript 0.6 %`, `Assembly 0.4 %`,
+`Other 68.9 %` - a breakdown that does not match this repository. The
+`linguist-audit` CI job settles the question by running GitHub's own
+`github-linguist` gem (9.7.0) against the checkout, and it agrees with the REST
+API to the byte:
 
-| Bucket | Files GitHub attributes | Files we have | Absorbed |
+| Source | Languages | Counted bytes | HTML |
 |---|---|---|---|
-| HTML | 7 | 1 | +6 |
-| INI | 6 | 1 | +5 |
-| Python | 6 | 1 | +5 |
-| Shell | 5 | 1 | +4 |
-| JavaScript | 4 | 1 | +3 |
-| C, Java, TypeScript, Assembly, Lex, Yacc, LigoLANG, OpenAPI v2/v3 | 3 each | 1 each | +2 each |
-| ~25 others (CSS, Ruby, Go-side DSLs, Roff, TeX, XML, …) | 2 each | 1 each | +1 each |
+| `github-linguist` 9.7.0 (the engine GitHub runs) | 631 | 1 417 216 | 14 336 B = 1.0116 % |
+| `GET /repos/.../languages` | 631 | 1 417 216 | 14 336 B = 1.0116 % |
+| The cached panel in those screenshots | 6 named + Other | unknown | 27.6 % |
 
-The casualties are real languages — `fish`, `bibtex`, `tsx`, `bison`, `opencl`,
-`jison`, `numpy`, `rbs`, `ecmarkup`, `html+erb` and 55 more — each of which
-Linguist *does* colour. A `linguist-audit` job runs in CI using GitHub's own
-`github-linguist` gem to report the classification of every core file, so the
-set can be fixed rather than guessed at; see `logs/linguist_audit.json`.
+The full report is committed at `logs/linguist_audit.json`. Hard-reload the page
+and the panel agrees.
+
+**Why 631 segments from 694 files.** All 694 core files are counted - the byte
+total matches to within two files - but some names fold together. The clearest
+case is the HTML family: `HTML`, `HTML+ECR`, `HTML+EEX`, `HTML+ERB`, `HTML+PHP`,
+`HTML+Razor` and `Ecmarkup` are seven files that Linguist reports as a single
+`HTML` segment of exactly 7 x 2048 B, so those six dialects do not get their own
+colour stripe. A few names are canonicalised rather than dropped
+(`Vim script` -> `Vim Script`, `KoLmafia ASH` -> `KoLMafia ASH`). Recovering the
+extra stripes means getting Linguist to honour our per-file modelines for dialect
+extensions; the audit job is in place to measure that when Linguist can report
+per-file classification.
+
 
 ---
 

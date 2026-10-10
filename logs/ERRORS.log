@@ -165,3 +165,43 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   in, at least one entry would not divide evenly.
 - Status: PASSED.
 
+## E17 "64 core files are misclassified" — investigated, claim was WRONG
+- Symptom: the bar showed `HTML 27.6 %`, `INI 0.9 %`, `Assembly 0.4 %` ... while
+  the API reported HTML at 1.0116 %. Subtracting our per-language file counts
+  from the API's implied counts appeared to show exactly 64 files absorbed into
+  HTML(+6), INI(+5), Python(+5), Shell(+4), JavaScript(+3), C/Java/TS(+2) ...
+- First conclusion (WRONG): that our modelines were failing and 64 languages had
+  lost their own segment. An earlier revision of this file and of README
+  section 6 asserted exactly that, and it was published for several commits.
+- Root cause of the wrong conclusion: byte arithmetic shows *which* buckets grew,
+  never *why*. It cannot distinguish "Linguist misclassified the file" from
+  "Linguist merged two configured names into one segment".
+- Decisive test: run GitHub's own engine. `github-linguist` 9.7.0 reports
+  **631 languages, 1 417 216 counted bytes, HTML 14 336 B = 1.0116 %** --
+  byte-identical to `GET /repos/.../languages`. There is no discrepancy between
+  Linguist and GitHub at all; the "HTML 27.6 %" panel is a stale cached render of
+  the site, exactly as concluded in E15.
+- The real explanation for 694 files -> 631 names: name folding, not
+  misclassification. `HTML`, `HTML+ECR`, `HTML+EEX`, `HTML+ERB`, `HTML+PHP`,
+  `HTML+Razor` and `Ecmarkup` are seven files reported as one `HTML` segment of
+  exactly 7 x 2048 B; plus a few canonicalisations (`Vim script` -> `Vim Script`).
+- Fix: README section 6 rewritten with the authoritative table and the folding
+  explanation. The misclassification claim was removed.
+- Cost: seven CI cycles getting the gem to run. What actually made it work:
+  install into a user-owned `GEM_HOME` (sudo lands it in root's GEM_PATH where
+  the runner cannot `require` it); `require "linguist"` rather than
+  `"github-linguist"`; and shelling out to the `github-linguist` CLI instead of
+  the library API, whose `Linguist::Repository` / `Source::Rugged` setup chain
+  failed four separate times.
+- Lesson recorded: do not publish a root-cause claim derived from byte
+  arithmetic alone. Verify with the same engine the remote uses.
+- Status: RESOLVED, and the erroneous claim retracted.
+
+## E17b Per-file Linguist classification is not reachable via the CLI
+- `github-linguist hello/core` fails with
+  `Rugged::RepositoryError: could not find repository at 'hello/core'` -- the
+  argument is treated as a repository root, not a path to analyse.
+- Consequence: the audit records the aggregate breakdown only. README says so
+  explicitly rather than implying per-file data exists.
+- Status: ACCEPTED LIMITATION.
+
