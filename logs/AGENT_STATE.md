@@ -50,23 +50,30 @@ PowerShell's `Invoke-RestMethod` can.
 | 37820749718 | 6c8c987b | success | GIF + MP4 + real bar PNG produced |
 | 37821672417 | 039a9522 | success | cache-busting blanked the page (E14) |
 | 37822464159 | 9ce8bb45 | success | all assets correct, clutter removed |
-| 37919176384 | 6598bc2b | success | **schedule**, 2026-10-09 — refreshed GIF/MP4 |
-| 38043242505 | 84ae1ee7 | success | **schedule**, 2026-10-10 — refreshed GIF/MP4 |
+| 37919176384 | 6598bc2b | success | **schedule**, 2026-10-09 |
+| 38043242505 | 84ae1ee7 | success | **schedule**, 2026-10-10 |
+| 38074239612 | 3a9054fe | success | exec bit fixed: GIF 45 KB -> 603 KB, demo runs |
+| 38075001749 | 020847d2 | success | bold two-line finale art |
+| 38076066230 … 38077288158 | various | failure | linguist gem install/require/API fixes |
+| latest | a305b5af | success | linguist audit green, `logs/linguist_audit.json` published |
 
-The two `schedule` runs confirm the repository is self-sustaining: with no human
-involvement they regenerated the demo, committed the assets with `[skip ci]` and
-did not re-trigger themselves.
+## What the screenshots in the report showed, and what was actually true
+
+| Symptom | Reality |
+|---|---|
+| GIF shows `bash: ./run.sh: Permission denied` | **Real bug.** The file was committed 100644. Fixed; the demo now records a 552 KB GIF of the actual show. |
+| Bar shows `HTML 27.6 %`, C/C++ not visible | **Stale cached page.** `github-linguist` 9.7.0 and `GET /repos/.../languages` both report 631 languages / 1 417 216 B / HTML 1.0116 %. |
+| C, C++, Java, Go, Rust not named | **UI limitation.** GitHub names only the largest few of 631 languages and folds the rest into "Other". `assets/rainbow-bar-github.png` now names them from the API. |
 
 ## Known residual risk
 
-- `assets/rainbow-bar-github.png` stays byte-identical across three runs spanning
-  two days while the API keeps reporting HTML at 1.0116 %. Deeper diagnosis
-  (E15): the anonymous repository HTML ships **no** language-stats payload at
-  all — no `repository-lang-stats`, one `Progress-item` belonging to
-  `progress-pjax-loader-bar` — so the panel a headless browser photographs is
-  client-rendered from cached data. Forcing a fresh render backfired (E14), so
-  the README now leads with `assets/rainbow-bar-local.png`, which is generated
-  deterministically from `config/rainbow_langs.json` and is always current.
+- The HTML family collapses: `HTML`, `HTML+ECR/EEX/ERB/PHP/Razor` and `Ecmarkup`
+  are seven files reported as one `HTML` segment, so those six dialects do not get
+  their own stripe. Recovering them needs per-file modeline support that the
+  Linguist CLI cannot currently report on (E17b).
+- `scripts/screenshot_github.py` still captures the cached panel; it now writes
+  `assets/rainbow-bar-live.png`, which is not referenced from the README, and the
+  6 KB floor deletes degenerate captures.
 - The 24 shard jobs run `max-parallel: 1`, so a full run is ~20–30 min.
 
 ## Next step
