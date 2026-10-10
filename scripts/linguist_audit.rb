@@ -34,6 +34,16 @@ if status.exitstatus != 0
   exit 1
 end
 
+core_mentions = stdout.lines.count { |l| l.include?("hello/core/") }
+puts "raw stdout lines            : #{stdout.lines.count}"
+puts "lines mentioning hello/core : #{core_mentions}"
+if core_mentions.zero?
+  puts "WARNING: the CLI never mentioned hello/core; first lines it did print:"
+  stdout.lines.first(5).each { |l| puts "  #{l.rstrip}" }
+  puts "stderr head:"
+  stderr.lines.first(5).each { |l| puts "  #{l.rstrip}" }
+end
+
 buckets = Hash.new { |h, k| h = [] }
 unparsed = []
 
