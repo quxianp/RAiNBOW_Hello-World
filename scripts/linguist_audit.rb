@@ -18,10 +18,13 @@ require "json"
 require "fileutils"
 
 begin
+  # The gem is named `github-linguist`, but in recent releases the entry point
+  # is lib/linguist.rb: requiring the gem name raises
+  #   cannot load such file -- github-linguist (LoadError)
+  # even though `gem list` shows it installed. Try both.
   require "github-linguist"
 rescue LoadError
-  warn "github-linguist gem is not installed: gem install github-linguist --no-document"
-  exit 2
+  require "linguist"
 end
 
 root = ARGV[0] || File.expand_path("..", __dir__)

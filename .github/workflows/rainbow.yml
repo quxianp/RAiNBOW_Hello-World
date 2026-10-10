@@ -150,11 +150,33 @@ jobs:
 
       - name: verify the linguist gem loads
         run: |
-          ruby -e 'require "github-linguist"; puts "linguist loaded"'
+          ruby -e 'begin; require "github-linguist"; rescue LoadError; require "linguist"; end; puts "linguist loaded"'
           github-linguist --version
 
       - name: classify every hello/core file
         run: ruby scripts/linguist_audit.rb
+
+      - name: publish the audit
+        run: |
+          set -uo pipefail
+          git config user.name  "rainbow-bot"
+          git config user.email "rainbow-bot@users.noreply.github.com"
+          git add -f logs/linguist_audit.json
+          if git diff --cached --quiet; then
+            echo "audit unchanged"
+            exit 0
+          fi
+          git commit -m "chore(audit): refresh Linguist classification report [skip ci]"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "published audit"
+              exit 0
+            fi
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            sleep $((attempt * 5))
+          done
+          echo "could not publish the audit; the artifact upload still has it" >&2
+          exit 1
 
       - name: upload the audit
         if: always()
