@@ -38,12 +38,12 @@
     {
       "name": "full layer >= 2400 files",
       "ok": true,
-      "detail": "6632 files"
+      "detail": "6629 files"
     },
     {
       "name": "total language files >= 3000",
       "ok": true,
-      "detail": "694 core + 6632 full = 7326"
+      "detail": "694 core + 6629 full = 7323"
     },
     {
       "name": ".gitattributes un-vendors hello/core",
@@ -100,8 +100,8 @@
   "total": 19,
   "core_languages": 694,
   "core_files": 694,
-  "full_files": 6632,
-  "total_language_files": 7326,
+  "full_files": 6629,
+  "total_language_files": 7323,
   "merged_languages": 7325,
   "counted_bytes": 1421312,
   "share_min_pct": 0.144092,
