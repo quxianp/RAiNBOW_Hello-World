@@ -89,35 +89,52 @@ def load_bar():
 
 
 # --------------------------------------------------------------------------
-# 5x7 block-letter font -- enough for "Hello World!"
+# 5x7 block-letter font.
+#
+# Uppercase only, and every glyph fills all seven rows. The previous revision
+# used lowercase glyphs whose bitmap rows were inconsistent -- 'e' and 'o' began
+# with two empty rows, 'd' was ".##.#"/"#..##" and 'W' was really an 'M' shape --
+# so the rendered word read as scattered confetti instead of "Hello World!".
+# Splitting it across two lines also keeps it inside a 1200x800 VHS frame
+# instead of wrapping off the right edge.
 # --------------------------------------------------------------------------
 FONT = {
     "H": ["#...#", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
-    "e": [".....", ".....", "####.", "#...#", "####.", "#...", "####."],
-    "l": ["#....", "#....", "#....", "#....", "#....", "#....", "###.."],
-    "o": [".....", ".....", "###..", "#..#.", "#...#", "#..#.", "###.."],
+    "E": ["#####", "#....", "#....", "####.", "#....", "#....", "#####"],
+    "L": ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
+    "O": [".###.", "#...#", "#...#", "#...#", "#...#", "#...#", ".###."],
     "W": ["#...#", "#...#", "#...#", "#.#.#", "#.#.#", "##.##", "#...#"],
-    "r": [".....", ".....", "#.##.", "##..#", "#....", "#....", "#...."],
-    "d": ["...#.", "...#.", "...#.", ".##.#", "#..##", "#..#.", ".##.#"],
-    "!": ["#", "#", "#", "#", "#", ".", "#"],
-    " ": ["....."] * 7,
+    "R": ["####.", "#...#", "#...#", "####.", "#.#.#", "#..#.", "#...#"],
+    "D": ["####.", "#...#", "#...#", "#...#", "#...#", "#...#", "####."],
+    "!": ["..#..", "..#..", "..#..", "..#..", "..#..", ".....", "..#.."],
+    " ": [".....", ".....", ".....", ".....", ".....", ".....", "....."],
 }
 
-TEXT = "Hello World!"
+TEXT_LINES = ["HELLO", "WORLD!"]
 
 
 def ascii_art(scale: int = 2):
-    letters = [FONT.get(c, FONT[" "]) for c in TEXT]
-    height = max(len(g) for g in letters)
+    """Two lines of filled block letters, each pixel `scale` wide and tall."""
     rows = []
-    for y in range(height):
-        line = ""
-        for g in letters:
-            glyph = g[y] if y < len(g) else "....."
-            line += ("  " if scale == 1 else "   ").join(
-                "\u2588" if ch == "#" else " " for ch in glyph
-            ) + "  "
-        rows.append(line.rstrip())
+    for line_no, text in enumerate(TEXT_LINES):
+        letters = [FONT.get(c, FONT[" "]) for c in text]
+        height = max(len(g) for g in letters)
+        line_rows = []
+        for y in range(height):
+            out = ""
+            for g in letters:
+                glyph = g[y] if y < len(g) else "....."
+                out += "".join(
+                    ("\u2588" if ch == "#" else " ") * scale for ch in glyph
+                )
+                out += " " * scale
+            line_rows.append(out.rstrip())
+        # stretch vertically too, so the letters are as tall as they are wide
+        for row in line_rows:
+            for _ in range(scale):
+                rows.append(row)
+        if line_no != len(TEXT_LINES) - 1:
+            rows.append("")
     return rows
 
 

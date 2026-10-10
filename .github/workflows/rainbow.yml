@@ -133,7 +133,13 @@ jobs:
             zlib1g-dev libicu-dev libonig-dev
 
       - name: install github-linguist
-        run: gem install github-linguist --no-document
+        run: |
+          # `gem install` without sudo dies with Gem::FilePermissionError on the
+          # runner image, because the default gem home is root-owned. Verified
+          # failing in run 38074239612.
+          sudo gem install github-linguist --no-document
+          ruby -e 'require "github-linguist"; puts "linguist loaded"'
+          github-linguist --version
 
       - name: classify every hello/core file
         run: ruby scripts/linguist_audit.rb
