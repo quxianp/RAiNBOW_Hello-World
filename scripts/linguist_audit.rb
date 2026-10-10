@@ -27,12 +27,29 @@ require "open3"
 root = ARGV[0] || File.expand_path("..", __dir__)
 Dir.chdir(root)
 
-stdout, stderr, status = Open3.capture3("github-linguist")
+aggregate, agg_err, agg_status = Open3.capture3("github-linguist")
+if agg_status.exitstatus != 0
+  warn "github-linguist (aggregate) exited #{agg_status.exitstatus}"
+  warn agg_err.lines.first(15).join
+  exit 1
+end
+
+# With no arguments the CLI prints the aggregate breakdown
+# ("1.01%   14336      HTML"). Given a path it prints one line per file, which
+# is what we actually want.
+stdout, stderr, status = Open3.capture3("github-linguist", "hello/core")
 if status.exitstatus != 0
-  warn "github-linguist exited #{status.exitstatus}"
+  warn "github-linguist (per-file) exited #{status.exitstatus}"
   warn stderr.lines.first(15).join
   exit 1
 end
+
+breakdown = aggregate.lines.map do |l|
+  m = l.match(/\A\s*([\d.]+)\s*%\s+(\d+)\s+(\S.*?)\s*\z/)
+  next unless m
+
+  { "language" => m[3].strip, "bytes" => m[2].to_i, "percent" => m[1].to_f }
+end.compact
 
 core_mentions = stdout.lines.count { |l| l.include?("hello/core/") }
 puts "raw stdout lines            : #{stdout.lines.count}"
@@ -79,8 +96,11 @@ File.write(File.join(root, "logs", "linguist_raw.txt"), stdout)
 payload = {
   "generated_by" => "scripts/linguist_audit.rb",
   "source" => "github-linguist CLI",
+  "aggregate_language_count" => breakdown.length,
+  "aggregate_counted_bytes" => breakdown.sum { |b| b["bytes"] },
   "core_languages_detected" => buckets.size,
   "core_files_detected" => buckets.values.map(&:size).sum,
+  "breakdown" => breakdown,
   "buckets" => buckets.sort.to_h.transform_values { |v| v.sort }
 }
 
@@ -88,6 +108,8 @@ FileUtils.mkdir_p("logs")
 File.write(File.join(root, "logs", "linguist_audit.json"),
            JSON.pretty_generate(payload))
 
+puts "aggregate languages        : #{payload['aggregate_language_count']}"
+puts "aggregate counted bytes    : #{payload['aggregate_counted_bytes']}"
 puts "languages detected in core : #{payload['core_languages_detected']}"
 puts "files detected in core     : #{payload['core_files_detected']}"
 
