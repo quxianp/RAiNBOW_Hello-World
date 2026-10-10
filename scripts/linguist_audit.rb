@@ -35,13 +35,36 @@ if status.exitstatus != 0
 end
 
 buckets = Hash.new { |h, k| h = [] }
-stdout.each_line do |line|
-  # "path:Language (share %)"
-  m = line.match(/\A(hello\/core\/[^:]+):(.+?)\s*\(\s*[\d.]+\s*%\s*\)\s*\z/)
-  next unless m
+unparsed = []
 
-  buckets[m[2].strip] << m[1]
+stdout.each_line do |line|
+  l = line.rstrip
+  next if l.strip.empty?
+
+  path = nil
+  lang = nil
+
+  # Layout A: "path:Language (12.34 %)"
+  if (m = l.match(%r{\A(.+?):([^()]+?)\s*\(\s*[\d.]+\s*%\s*\)\s*\z}))
+    path = m[1].strip
+    lang = m[2].strip
+  # Layout B: "12.34 %  Language<pad>path"
+  elsif (m = l.match(/\A\s*([\d.]+)\s*%\s+(\S.*?)\s{2,}(\S.*)\s*\z/))
+    lang = m[2].strip
+    path = m[3].strip
+  end
+
+  if path && lang && path.start_with?("hello/core/")
+    buckets[lang] << path
+  elsif l.include?("hello/core/")
+    unparsed << l
+  end
 end
+
+# Always keep the raw output: it is the ground truth for parsing and costs
+# little, and it is what makes a future format change diagnosable.
+FileUtils.mkdir_p("logs")
+File.write(File.join(root, "logs", "linguist_raw.txt"), stdout)
 
 payload = {
   "generated_by" => "scripts/linguist_audit.rb",
@@ -57,6 +80,13 @@ File.write(File.join(root, "logs", "linguist_audit.json"),
 
 puts "languages detected in core : #{payload['core_languages_detected']}"
 puts "files detected in core     : #{payload['core_files_detected']}"
+
+unless unparsed.empty?
+  puts
+  puts "WARNING: #{unparsed.length} core lines did not match a known layout; first 5:"
+  unparsed.first(5).each { |l| puts "  #{l}" }
+  puts "raw output kept in logs/linguist_raw.txt"
+end
 
 multi = payload["buckets"].reject { |_, v| v.size == 1 }
 unless multi.empty?
