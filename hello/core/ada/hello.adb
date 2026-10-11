@@ -1,5 +1,4 @@
 -- -*- mode: ada -*-
---   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- Ada - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #02f88c
 --   hue        : 153.7 deg
@@ -7,8 +6,11 @@
 --   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 --   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
--- Hello World!
--- Hello World!
+with Ada.Text_IO;
+procedure Hello_World is
+begin
+   Ada.Text_IO.Put_Line ("Hello World!");
+end Hello_World;
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Ada :: RAiNBOW_Hello-World
@@ -37,4 +39,4 @@
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Ada :: RAiNBOW_Hello-World
 -- rainbow-pad colour #02f88c :: padded to 100
-         
+-- rainbow-pad padding 

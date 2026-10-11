@@ -1,5 +1,4 @@
 ! -*- mode: fortran-free-form -*-
-!   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ! Fortran Free Form - Hello World! :: RAiNBOW_Hello-World
 !   colour     : #4d41b1
 !   hue        : 246.4 deg
@@ -7,8 +6,9 @@
 !   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 !   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-! Hello World!
-! Hello World!
+program hello
+  print *, "Hello World!"
+end program hello
 ! rainbow-pad equal byte share keeps the language bar an even rainbow
 ! rainbow-pad one segment per Linguist coloured language
 ! rainbow-pad Fortran Free Form :: RAiNBOW_Hello-World
@@ -35,4 +35,6 @@
 ! rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 ! rainbow-pad equal byte share keeps the language bar an even rainbow
 ! rainbow-pad one segment per Linguist coloured language
-! rainbow-pad Fortran Free Form :: RAiNBOW_Hello-W
+! rainbow-pad Fortran Free Form :: RAiNBOW_Hello-World
+! rainbow-pad colour #4d41b1 :: padded to 100
+          

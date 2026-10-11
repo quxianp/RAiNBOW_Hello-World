@@ -1,5 +1,4 @@
 -- -*- mode: pascal -*-
---   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- Pascal - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #e3f171
 --   hue        : 66.6 deg
@@ -7,8 +6,10 @@
 --   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 --   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
--- Hello World!
--- Hello World!
+program HelloWorld;
+begin
+  writeln('Hello World!');
+end.
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Pascal :: RAiNBOW_Hello-World
@@ -36,4 +37,5 @@
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Pascal :: RAiNBOW_Hello-World
--- rainbow-pad colour #e3f171 :: pad
+-- rainbow-pad colour #e3f171 :: padded to 100
+-- rainbow-pad padding comment: byte balancing for th

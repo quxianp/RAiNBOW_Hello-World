@@ -37,8 +37,11 @@ MANIFEST = ROOT / "hello" / "manifest.json"
 # names the language that a heuristic would have wrongly supplied.
 MUST_NOT_INHERIT = {
     "JASS": "shell via .j",
-    "Jasmin": "shell via .j",
     "Objective-J": "shell via .j",
+    # NOTE: Jasmin is deliberately absent. It used to be listed here because it
+    # inherited `echo` from a `.j` extension. It now has its own genuine Java
+    # assembly template, so the inheritance no longer applies and asserting
+    # "must not have a template" would fail on correct code.
     "HiveQL": "kdb+/q via .q",
     "KCL": "kdb+/k via .k",
     "KFramework": "kdb+/k via .k",
@@ -65,6 +68,12 @@ MUST_NOT_INHERIT = {
 MUST_INHERIT = [
     "Bash Shell", "C++ AMP", "Idris 2", "Ruby MRI", "Brainfuck extended",
     "C preprocessor", "Lean 4", "C#", "Python", "Elm HTML",
+    # Languages that gained their own template instead of inheriting one.
+    "Jasmin", "Ada", "COBOL", "ALGOL", "ABAP", "Prolog", "ANTLR", "AMPL",
+    "Dylan", "Eiffel", "Mercury", "Pike", "Oz", "Puppet", "Gherkin",
+    "Fortran", "Fortran Free Form", "Pascal", "AutoHotkey", "AppleScript",
+    "AutoIt", "Hack", "Hy", "ActionScript", "AngelScript", "Futhark", "GAP",
+    "Scala", "Solidity", "VHDL", "Verilog", "Vala", "GraphQL", "ANTLR",
 ]
 
 

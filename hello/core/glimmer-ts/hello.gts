@@ -1,5 +1,4 @@
 # -*- mode: glimmer-ts -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Glimmer TS - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3178c6
 #   hue        : 211.4 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+import { h } from 'glimmer';
+
+<h1>Hello World!</h1>
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Glimmer TS :: RAiNBOW_Hello-World
@@ -36,4 +36,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Glimmer TS :: RAiNBOW_Hello-World
-# rainbow-pad colour #3178c6 :: padded to 10
+# rainbow-pad colour #3178c6 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar

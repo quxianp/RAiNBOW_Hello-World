@@ -1,5 +1,4 @@
 <!-- -*- mode: xml -*- -->
-  note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 <!--
 XML - Hello World! :: RAiNBOW_Hello-World
   colour     : #0060ac
@@ -9,8 +8,8 @@ XML - Hello World! :: RAiNBOW_Hello-World
   reference  : see https://esolangs.org/ and https://rosettacode.org/
 -->
 
-<!-- Hello World!-->
-<!-- Hello World!-->
+<?xml version="1.0" encoding="UTF-8"?>
+<hello>Hello World!</hello>
 <!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
 <!-- rainbow-pad one segment per Linguist coloured language -->
 <!-- rainbow-pad XML :: RAiNBOW_Hello-World -->
@@ -36,4 +35,5 @@ XML - Hello World! :: RAiNBOW_Hello-World
 <!-- rainbow-pad padding comment: byte balancing for the rainbow bar -->
 <!-- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World -->
 <!-- rainbow-pad equal byte share keeps the language bar an even rainbow -->
-  
+<!-- rainbow-pad one segment per Linguist coloured language -->
+
