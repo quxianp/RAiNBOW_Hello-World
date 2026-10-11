@@ -304,6 +304,12 @@ jobs:
         continue-on-error: true
         run: python scripts/generate_rainbow_bar.py
 
+      # Counts on the banner are read from the repository, so regenerate it
+      # whenever the language counts move.
+      - name: render the hero banner
+        continue-on-error: true
+        run: python scripts/generate_hero_banner.py
+
       # Rendered from GET /repos/.../languages, i.e. the very breakdown GitHub
       # uses, so it cannot show a stale cached page and it names C, C++, Java,
       # Go, Rust and the rest explicitly -- GitHub's own legend collapses 631
