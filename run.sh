@@ -33,6 +33,8 @@ REVEAL_FRAMES=30
 ROLL_DELAY=0.07
 DIVIDER_FRAMES=14
 SHOW_WIDTH=108
+SPINNER_FRAMES=1
+HOLD_SECONDS=6
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -40,7 +42,8 @@ while [ $# -gt 0 ]; do
     --jobs|-j) shift; JOBS="${1:-8}" ;;
     --max) shift; MAX_SHOWN="${1:-50}" ;;
     --motion) shift; BRAND_FRAMES="${1:-18}" ;;
-    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0; DIVIDER_FRAMES=0 ;;
+    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0
+           DIVIDER_FRAMES=0; SPINNER_FRAMES=0; HOLD_SECONDS=0 ;;
     --help|-h)
       sed -n '2,20p' "$0"; exit 0 ;;
     *) ;;
@@ -193,8 +196,24 @@ if [ "$PLANNED" -gt 0 ]; then
   printf '  %sExecuting %s languages in parallel (jobs=%s)%s\n' \
     "$C_DIM" "$PLANNED" "$JOBS" "$C_RESET"
 
+  # The execution window is the longest silent stretch of the show, so give it
+  # an animated progress bar. spinner.py stops on SIGTERM, so its duration does
+  # not have to be known in advance.
+  SPIN_PID=""
+  if [ "$SPINNER_FRAMES" -gt 0 ] && [ -t 1 ]; then
+    "$PY" scripts/spinner.py --label "executing core languages" \
+      --seconds 120 --width "$((SHOW_WIDTH - 30))" &
+    SPIN_PID=$!
+  fi
+
   "$PY" scripts/run_languages.py --run 1 --jobs "$JOBS" \
     > "$OUT_DIR/results.tsv" 2>>"$RUN_LOG" || true
+
+  if [ -n "$SPIN_PID" ]; then
+    kill "$SPIN_PID" 2>/dev/null || true
+    wait "$SPIN_PID" 2>/dev/null || true
+    printf '\n'
+  fi
 
   OK_COUNT=$(grep -c $'\tok\t' "$OUT_DIR/results.tsv" 2>/dev/null || echo 0)
   printf '  %s%s spoke, %s silent / unavailable%s\n' \
@@ -307,3 +326,12 @@ fi
 
 log "=== run.sh done ==="
 exit 0
+
+# --------------------------------------------------------------------------
+# 9. a short animated hold, so a recording never ends on a frozen frame while
+#    the tape is still waiting for its sleep to expire.
+# --------------------------------------------------------------------------
+if [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; then
+  "$PY" scripts/rainbow.py --sweep "$((HOLD_SECONDS * 4))" --sweep-only \
+    --width "$SHOW_WIDTH" 2>/dev/null || true
+fi
