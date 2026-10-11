@@ -1,4 +1,4 @@
-name: rainbow
+﻿name: rainbow
 
 # The demo assets below are published by this workflow, so it must be allowed to
 # push. Pushes whose message carries [skip ci] are ignored by GitHub itself,
@@ -94,8 +94,8 @@ jobs:
         env:
           SHARD: ${{ matrix.shard }}
         run: |
-          git config user.name  "rainbow-bot"
-          git config user.email "rainbow-bot@users.noreply.github.com"
+          git config user.name  "quxianp"
+          git config user.email "quxianp@users.noreply.github.com"
           git add -A hello/
           if git diff --cached --quiet; then
             echo "batch ${SHARD}/24 is up to date"
@@ -156,17 +156,23 @@ jobs:
       - name: classify every hello/core file
         run: ruby scripts/linguist_audit.rb
 
+      # A/B the modelines: same checkout, same byte totals, modeline lines
+      # removed. Answers whether pinning each file with `-*- mode: X -*-` gains
+      # or loses language segments.
+      - name: modeline A/B test
+        run: ruby scripts/modeline_ab_test.rb
+
       - name: publish the audit
         run: |
           set -uo pipefail
-          git config user.name  "rainbow-bot"
-          git config user.email "rainbow-bot@users.noreply.github.com"
-          git add -f logs/linguist_audit.json
+          git config user.name  "quxianp"
+          git config user.email "quxianp@users.noreply.github.com"
+          git add -f logs/linguist_audit.json logs/modeline_ab.json logs/linguist_raw.txt
           if git diff --cached --quiet; then
             echo "audit unchanged"
             exit 0
           fi
-          git commit -m "chore(audit): refresh Linguist classification report [skip ci]"
+          git commit -m "chore(audit): refresh Linguist classification reports [skip ci]"
           for attempt in 1 2 3; do
             if git push origin "HEAD:${GITHUB_REF_NAME}"; then
               echo "published audit"
@@ -183,7 +189,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linguist-audit
-          path: logs/linguist_audit.json
+          path: |
+            logs/linguist_audit.json
+            logs/modeline_ab.json
+            logs/linguist_raw.txt
           if-no-files-found: ignore
           retention-days: 14
 
@@ -324,8 +333,8 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           set -uo pipefail
-          git config user.name  "rainbow-bot"
-          git config user.email "rainbow-bot@users.noreply.github.com"
+          git config user.name  "quxianp"
+          git config user.email "quxianp@users.noreply.github.com"
           git add -A assets README.md demo.tape config data logs scripts
 
           if git diff --cached --quiet; then
