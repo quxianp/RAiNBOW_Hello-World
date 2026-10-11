@@ -30,15 +30,15 @@ Type "clear"
 Enter
 Sleep 1
 
-# The show is animated throughout: 18 intro frames, a rainbow divider, the roll
-# call streaming in one name at a time with a travelling hue wave, a progress bar
-# across the whole language-execution window, the bar filling in one language per
-# frame, the block letters wiping in left to right, and an 8 s hue-sweep hold so
-# the tail is never a frozen frame while this sleep runs out.
+# The show is animated throughout: 24-frame intro sweep, 24-frame divider, the
+# roll call streaming in at 0.12 s per name, a progress bar across the whole
+# language-execution window, a 70-frame bar fill, a 50-frame art reveal and a
+# 10 s hue-sweep hold. 34 s is sized to that run: longer and the tail freezes
+# after the show ends, shorter and the finale is cut off mid-reveal.
 # --max 12 keeps the roll call short so the finale stays on screen.
 Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 42
+Sleep 34
 
 # Hold on the final rainbow Hello World! for a beat.
 Sleep 5
