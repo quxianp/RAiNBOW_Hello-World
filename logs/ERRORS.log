@@ -296,3 +296,43 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   attributed to the account too.
 - Status: RESOLVED.
 
+## E23 Eight dead table-of-contents links
+- Symptom: the README contents strip listed eight sections; six of the links
+  jumped nowhere. The anchors were hand-written with percent-encoded emoji, but
+  only one heading on the page actually contained an emoji, so GitHub slugs
+  matched nothing. Nothing flagged it: a dead anchor renders no broken image and
+  fails no build, it simply scrolls nowhere.
+- Two of the six were wrong a second way. The "languages came from" link said
+  7326 while its heading says 7 325. Both numbers are correct and mean different
+  things -- 7 326 files on disk, 7 325 distinct languages after
+  de-duplication, because one file covers two languages. The heading was right
+  and the link was wrong.
+- Fix: anchors derived from the actual headings, and every section given the
+  emoji its contents entry already promised. `scripts/check_readme_links.py`
+  added, and wired into `validate_delivery.py` so this cannot return.
+- Also: the checker itself first reported eight failures, six of which were its
+  own bug. `same_anchor()` reduced only the link side, so encoded emoji
+  survived there while the heading side had already been stripped, and a leading
+  U+FE0F variation selector is decoration rather than a word. Both sides now go
+  through one identical reduction.
+- Status: RESOLVED.
+
+## E24 The audit printed precision it did not have
+- Symptom: the CI Linguist audit printed `HTML 14336 B  1.0100 %` while the GitHub
+  API and the README both report 1.0116 %. Two apparently authoritative sources
+  disagreeing about the repository's headline number.
+- Cause: not a disagreement. Linguist prints two decimals (`1.01 %`); the script
+  parsed that to a Float and reprinted it at four decimals via `%6.4f`, turning
+  a rounded value into what reads like a measurement. The true figure is
+  14336/1417216 = 1.011561 %.
+- Why it matters beyond cosmetics: an audit whose output disagrees with the thing
+  it audits, for a reason invisible in the output itself, teaches readers to
+  discount it. The stored JSON was always correct -- only the console line lied.
+- Fix: `percent_raw` preserves Linguist's own string, and the top-8 table prints
+  the reported value alongside the exact one recomputed from bytes, so the
+  rounding is shown rather than implied.
+- Related: E17, the earlier "64 misclassified files" claim, was also an inference
+  from arithmetic presented as a measurement. Same failure mode -- trusting a
+  derived number over the tool that produced it.
+- Status: RESOLVED.
+
