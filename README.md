@@ -267,7 +267,7 @@ reading before quoting "6 632 more languages" as if it were comparable to the 69
 formats and prose, gathered for breadth rather than because any of it is
 detectable on a colour bar.
 
-Coverage is uneven, and the README should not imply otherwise: **35.2 %** of core
+Coverage is uneven, and the README should not imply otherwise: **43.4 %** of core
 files have a curated Hello World template and **7.1 %** have a runner, so `run.sh`
 genuinely executes a small minority. The rest are byte-balanced stubs whose job
 is to be detected and coloured, not to compile.
@@ -285,9 +285,12 @@ name or on the file extension, which produced confidently wrong files — JASS a
 Objective-J inherited a shell `echo` from a shared `.j` extension, `Go Module`
 inherited an entire Go program although a `go.mod` contains module
 declarations. All 156 fuzzy matches were audited: 81 were genuine dialects, 34
-were wrong. Inheritance is now an explicit 96-entry allowlist, and anything
-absent from it admits ignorance rather than guessing.
-`scripts/check_templates.py` enforces it.
+were wrong. Inheritance is now an explicit allowlist, and anything absent from it
+admits ignorance rather than guessing. `scripts/check_templates.py` enforces it.
+
+Where a language has no output primitive at all, the template is what the
+language genuinely offers — Propeller Spin's `printf`, JASS's `InitTrig` trigger
+— rather than a borrowed `echo`. That distinction is the entire point.
 
 The numbers GitHub itself reports for this repository:
 
