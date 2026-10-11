@@ -1,0 +1,15 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Linguist — report a missing or wrong language colour
+    url: https://github.com/github/linguist/issues/new?title=language+detection%3A+
+    about: >-
+      A language that should be detected, is detected as the wrong one, or has
+      been merged into another language is almost always a Linguist bug, not
+      one here. This project deliberately mirrors Linguist rather than
+      second-guessing it.
+  - name: esolangs.org
+    url: https://esolangs.org/
+    about: The reference catalogue for the esoteric half of hello/full/.
+  - name: Rosetta Code
+    url: https://rosettacode.org/wiki/Category:Programming_Languages
+    about: Cross-check for a Hello World in a language you cannot find here.
