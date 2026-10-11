@@ -1,0 +1,22 @@
+# Code owners
+#
+# The point is triage routing, not ownership in the review-approval sense:
+# these paths change what the language bar looks like, so a change to them is
+# a change to the repository's entire premise and is worth a second look.
+
+# The bar itself. A change here can alter every share on the page.
+*                      @quxianp
+
+# Generation pipeline. These scripts decide what ends up in hello/core/.
+/scripts/              @quxianp
+/config/               @quxianp
+/.gitattributes        @quxianp
+
+# CI definition and the demo recording.
+/.github/workflows/    @quxianp
+/demo.tape             @quxianp
+/run.sh                @quxianp
+
+# Documentation and the generated README blocks.
+/README.md             @quxianp
+/docs/                 @quxianp
