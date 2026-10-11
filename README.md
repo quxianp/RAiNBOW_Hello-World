@@ -521,6 +521,7 @@ Deeper reading, if you want it:
 |---|---|
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the bar is controlled by byte count, and why 2048 |
 | [docs/WHY-631-NOT-694.md](docs/WHY-631-NOT-694.md) | Why 694 files produce only 631 segments |
+| [docs/FAQ.md](docs/FAQ.md) | Why the bar looks grey, where COBOL went, which number is right |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Adding a language, and what CI will silently revert |
 | [SECURITY.md](SECURITY.md) | What in this repository is inert data rather than code |
 | [CHANGELOG.md](CHANGELOG.md) | Every defect found, and what it was doing wrong |
