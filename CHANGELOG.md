@@ -7,6 +7,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `scripts/audit_repo.py` — repository health report. Re-derives the equal-size
+  invariant from disk rather than trusting the manifest, and checks that every
+  asset the README embeds exists and is non-degenerate.
+- `scripts/check_readme_links.py` — catches broken image paths and dead TOC
+  anchors. External links are counted but not fetched, to keep the gate offline.
+- `scripts/check_docs_links.py` — the same, for every markdown file, resolving
+  relative links against the document that contains them.
+- `scripts/language_report.py` — inventory by Linguist type, plus template and
+  runner coverage.
+- `scripts/generate_hero_banner.py` and `assets/hero-banner.png` — the README
+  banner, with counts read live from the repository.
+- `scripts/update_readme_showcase.py` — a 58-language table generated from
+  `data/linguist.json` and `hello/manifest.json`.
+- `docs/ARCHITECTURE.md`, `docs/WHY-631-NOT-694.md`, `docs/FAQ.md`,
+  `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `.editorconfig`,
+  issue and pull-request templates.
+
+### Fixed
+- Eight dead table-of-contents links. Anchors were hand-written with
+  percent-encoded emoji, but only one heading contained an emoji; two were also
+  wrong in substance, conflating 7 326 files with 7 325 distinct languages.
+- The Linguist audit printed `1.0100 %` where the API reports `1.0116 %`. It was
+  reprinting Linguist's rounded two-decimal value at four decimals. An audit that
+  disagrees with the thing it audits trains people to ignore it.
+- `update_readme_assets.py` shipped with an invalid f-string placeholder and died
+  on every invocation. `validate_delivery.py` now *runs* the generators instead
+  of grepping them, so that class of bug cannot ship again.
+
 ## [2.0.0] - 2026-10-11
 
 ### Added
