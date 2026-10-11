@@ -212,6 +212,7 @@ GENERATORS = [
     ["scripts/check_readme_links.py"],
     # Same failure mode, wider blast radius: broken references in docs/ are
     # never revisited once written.
+    ["scripts/check_templates.py"],
     ["scripts/check_docs_links.py"],
     # Re-derives the equal-size invariant from disk. Equal size is equal share,
     # which is the only reason the hue ordering is visible at all -- and the
