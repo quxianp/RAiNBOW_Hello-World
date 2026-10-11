@@ -177,6 +177,77 @@ def sweep(frame: int, frames: int, width: int):
     return ["".join(rows) + RESET]
 
 
+def draw_fill(langs, width: int, frames: int, plain: bool):
+    """The bar filling in, one language at a time, with a bright leading edge."""
+    n = len(langs) or 1
+    per = max(1, width // n)
+    if plain or frames <= 0:
+        for row in render_bar(width, langs, True):
+            print(row)
+        return
+
+    sys.stdout.write(HIDE)
+    try:
+        for f in range(frames + 1):
+            head = int(round(n * f / frames))
+            sys.stdout.write(CLEAR)
+            sys.stdout.write(
+                BOLD + "  RAiNBOW_Hello-World language bar " + RESET + DIM
+                + f"({head}/{n} languages on the bar \u00b7 "
+                + f"{100.0 / n:.4f}% each)" + RESET + "\n"
+            )
+            row = ""
+            for i, rec in enumerate(langs):
+                r, g, b = rec.get("rgb") or hex_to_rgb(rec.get("color", "888888"))
+                block = "\u2588" * per
+                if i < head:
+                    # the newest segment flashes white so the edge is obvious
+                    if f < frames and i == head - 1:
+                        row += "\033[48;2;255;255;255m" + block + RESET
+                    else:
+                        row += truecolor(r, g, b, block)
+                else:
+                    row += "\033[38;2;40;46;54m" + block  # not yet placed
+            sys.stdout.write(row + RESET + "\n")
+            sys.stdout.flush()
+            time.sleep(0.05)
+    finally:
+        sys.stdout.write(SHOW + CLEAR)
+        sys.stdout.flush()
+
+
+def draw_reveal(rows, langs, frames: int, plain: bool):
+    """Reveal the block-letter art left to right, one column per few frames."""
+    n = len(langs) or 1
+    widest = max((len(r) for r in rows), default=1) or 1
+
+    def paint(cut: int) -> str:
+        out = []
+        for y, line in enumerate(rows):
+            cells = []
+            for i, ch in enumerate(line[:cut]):
+                if ch == " ":
+                    cells.append(" ")
+                    continue
+                rec = langs[(i + y * 7) % n]
+                r, g, b = rec.get("rgb") or hex_to_rgb(rec.get("color", "888888"))
+                cells.append(truecolor(r, g, b, ch))
+            out.append("".join(cells).rstrip())
+        return "\n".join(out)
+
+    if plain or frames <= 0:
+        print(paint(widest))
+        return
+
+    for f in range(frames + 1):
+        cut = int(round(widest * f / frames))
+        sys.stdout.write(CLEAR)
+        sys.stdout.write(BOLD + "  Hello World!" + RESET + "\n")
+        sys.stdout.write(paint(cut) + "\n")
+        sys.stdout.flush()
+        time.sleep(0.07)
+
+
 def is_tty() -> bool:
     if os.environ.get("RAINBOW_PLAIN"):
         return False
@@ -188,6 +259,10 @@ def main() -> int:
     ap.add_argument("--bar", action="store_true")
     ap.add_argument("--hello", action="store_true")
     ap.add_argument("--sweep", type=int, default=12)
+    ap.add_argument("--fill-frames", type=int, default=0,
+                    help="animate the bar filling in over N frames (--bar)")
+    ap.add_argument("--reveal-frames", type=int, default=0,
+                    help="reveal the art over N frames (--hello)")
     ap.add_argument("--width", type=int, default=0)
     ap.add_argument("--plain", action="store_true")
     ap.add_argument("--no-animation", action="store_true")
@@ -210,6 +285,16 @@ def main() -> int:
         print(f"rainbow languages in the bar: {len(langs)}")
         print(f"target share per language  : {100.0 / max(1, len(langs)):.4f} %")
         print("Hello World!")
+        return 0
+
+    # ---- animated modes -------------------------------------------------
+    # run.sh calls this script with --bar and --hello, which sets both=False and
+    # therefore skipped every animation the recorded demo relied on: the GIF was
+    # a still terminal. These two modes restore real motion.
+    animate = not args.no_animation and tty
+
+    if args.fill_frames and args.bar and animate:
+        draw_fill(langs, width, args.fill_frames, plain)
         return 0
 
     if args.sweep and not args.no_animation and both and tty:
@@ -239,6 +324,9 @@ def main() -> int:
     if both or args.hello:
         print(BOLD + "  Hello World!" + RESET)
         rows = ascii_art(args.scale)
+        if args.reveal_frames and animate:
+            draw_reveal(rows, langs, args.reveal_frames, plain)
+            return 0
         n = len(langs) or 1
         for y, line in enumerate(rows):
             out = []
