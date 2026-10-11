@@ -33,12 +33,14 @@ Sleep 1
 # The show is animated throughout: 24-frame intro sweep, 24-frame divider, the
 # roll call streaming in at 0.12 s per name, a progress bar across the whole
 # language-execution window, a 70-frame bar fill, a 50-frame art reveal and a
-# 10 s hue-sweep hold. 34 s is sized to that run: longer and the tail freezes
-# after the show ends, shorter and the finale is cut off mid-reveal.
+# 10 s hue-sweep hold. Frame-by-frame measurement put the end of real motion at
+# ~77 % of the runtime, so 32 s keeps the tail near 4 s rather than 8 s -- but
+# not shorter, because the execution window's length varies with how fast the CI
+# runners are and a tighter sleep would cut off the art reveal.
 # --max 12 keeps the roll call short so the finale stays on screen.
 Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 34
+Sleep 32
 
 # Hold on the final rainbow Hello World! for a beat.
 Sleep 5
