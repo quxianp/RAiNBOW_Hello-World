@@ -21,14 +21,10 @@
 
 **Contents**
 
-[🎬 The show](#-the-show) ·
-[🌈 How the rainbow is engineered](#how-the-rainbow-is-engineered) ·
-[🗂️ Where the 7 325 languages came from](#where-the-7-325-languages-came-from) ·
-[▶️ Running it](#running-it) ·
-[✅ Acceptance checks](#acceptance-checks) ·
-[🧱 Layout](#layout) ·
-[📎 Dependencies and fallbacks](#dependencies-and-fallbacks) ·
-[🎓 Acknowledgements](#acknowledgements)
+| | | | |
+|:--|:--|:--|:--|
+| 🎬 [**The show**](#-the-show) | 🌈 [**Engineering the rainbow**](#-how-the-rainbow-is-engineered) | 🗂️ [**Where 7 325 came from**](#-where-the-7-325-languages-came-from) | ▶️ [**Running it**](#-running-it) |
+| ✅ [**Acceptance checks**](#-acceptance-checks) | 🧱 [**Layout**](#-layout) | 📎 [**Dependencies**](#-dependencies-and-fallbacks) | 🎓 [**Acknowledgements**](#-acknowledgements) |
 
 </div>
 
