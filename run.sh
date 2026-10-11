@@ -25,16 +25,18 @@ QUIET=0
 JOBS=8
 MAX_SHOWN=50
 # Motion budget for the recorded demo. These only take effect on a real
-# terminal; pipes and CI logs get the static render.
-BRAND_FRAMES=18
+# terminal; pipes and CI logs get the static render. Sized so the animated
+# phases cover most of the show's runtime: at the previous, much shorter values
+# the recording measured 70 % frozen frames.
+BRAND_FRAMES=24
 BRAND_DELAY=0.055
-BAR_FRAMES=44
-REVEAL_FRAMES=30
-ROLL_DELAY=0.07
-DIVIDER_FRAMES=14
+BAR_FRAMES=70
+REVEAL_FRAMES=50
+ROLL_DELAY=0.12
+DIVIDER_FRAMES=24
 SHOW_WIDTH=108
 SPINNER_FRAMES=1
-HOLD_SECONDS=6
+HOLD_SECONDS=10
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -332,6 +334,7 @@ exit 0
 #    the tape is still waiting for its sleep to expire.
 # --------------------------------------------------------------------------
 if [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; then
-  "$PY" scripts/rainbow.py --sweep "$((HOLD_SECONDS * 4))" --sweep-only \
+  # the sweep advances ~22 frames/second, so ask for a second's worth per second
+  "$PY" scripts/rainbow.py --sweep "$((HOLD_SECONDS * 22))" --sweep-only \
     --width "$SHOW_WIDTH" 2>/dev/null || true
 fi
