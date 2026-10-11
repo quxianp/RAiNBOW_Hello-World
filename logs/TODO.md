@@ -26,6 +26,9 @@
       live capture is labelled as what it is (see E15)
 - [x] ledgers updated with the scheduled-run evidence and the page-HTML diagnosis
 
+- [x] G13 demo actually animates (was a still terminal, then 70 % static)
+- [x] G14 commits authored by quxianp, locally and from CI
+
 ## Bugs found and fixed this session
 
 - [x] `rgb()` emitted `ESC 38;2;R;G;Bm` with no `[` — the greeting was never coloured
@@ -39,6 +42,12 @@
 - [x] `newline=` leaked onto `read_text()`, fatal on Python 3.12 (E12)
 - [x] PowerShell splits multi-line `git commit -m` (E13)
 - [x] cache-busting blanked the GitHub page (E14) — reverted
+- [x] `run.sh` used `--bar`/`--hello`, which disabled every animated code path
+      in rainbow.py, so the recording could not move (E20)
+- [x] the intro computed a hue then discarded it and painted pure white (E20)
+- [x] roll call, execution window and the tail of the tape were all frozen (E20)
+- [x] 6.9 MB GIF re-encoded to 15 fps / 128 colours (E20)
+- [x] validate_delivery now guards every animation wiring (E21)
 
 ## Optional future work (not blocking)
 

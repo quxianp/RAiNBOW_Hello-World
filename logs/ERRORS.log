@@ -232,6 +232,40 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
 - Status: RESOLVED as "not a bug", with evidence. README section 6 now states the
   ceiling and shows the A/B table instead of promising a fix.
 
+## E20 The recorded demo was a still terminal
+- Symptom, in layers:
+  1. `bash: ./run.sh: Permission denied` -- the file was committed 100644, so
+     every published GIF recorded the failure instead of the show.
+  2. Once that was fixed the GIF ran, but frame-by-frame measurement showed 41
+     of 50 sampled segments changing fewer than 20 pixels: still mostly static.
+- Causes found, each fixed separately:
+  - `run.sh` called `scripts/rainbow.py` with `--bar`/`--hello`, which sets
+    `both=False` and therefore skipped every animated code path. Nothing *could*
+    move.
+  - The intro computed a hue per character and then discarded it
+    (`printf '%s' "$(rgb 255 255 255)"`), so the "animated" opening was eight
+    identical all-white frames.
+  - The roll call printed all 12 names instantly.
+  - The language-execution window printed nothing at all.
+  - The show finishes in ~9 s but the tape slept 45 s, so the tail was frozen.
+- Fixes: `--fill-frames`/`--reveal-frames` renderers; `scripts/brand_frames.py`;
+  `scripts/roll_call.py`; `scripts/spinner.py` wrapped around the execution
+  subprocess via SIGTERM; a hue-sweep hold; and a tape retimed to the show.
+- Measured after the first round: GIF 534 KB -> 2.05 MB, but still ~70 % static,
+  because the animated phases totalled only ~5 s. Lengthened them and shrank the
+  tape rather than piling on more effects.
+- Status: RESOLVED.
+
+## E21 Guarding the animation against regression
+- `validate_delivery.py` fails the build if run.sh stops passing
+  `--fill-frames`/`--reveal-frames`, stops calling brand_frames.py, loses
+  draw_fill/draw_reveal, or reintroduces a hard-coded `rgb 255 255 255` or a
+  discarded per-frame hue.
+- The check strips comments before scanning: the comment explaining the
+  white-banner bug quotes the very expression it replaced, and tripped the check
+  on its first run.
+- Status: RESOLVED.
+
 ## E19 Committing as the wrong identity
 - Symptom: every commit, local and from CI, was authored by `RAiNBOW Bot
   <rainbow@example.com>` / `rainbow-bot <rainbow-bot@users.noreply.github.com>`.

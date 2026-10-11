@@ -91,6 +91,22 @@ Key commands and their real outcomes this session. Full detail in logs/ERRORS.lo
     compile() over all scripts                                 -> OK
     scripts/verify_languages.py                                -> 19/19 checks passed
 
+## Demo motion, measured rather than guessed
+    .tmp/motion.py   samples assets/hello-world.gif every N frames, downsizes to
+                     120x80 greyscale and counts changed pixels between samples
+    measurements:
+        GIF  45 KB (Permission denied, 1112 frames)
+        GIF 534 KB (show runs, 0 malformed escapes, 12-colour greeting)
+             -> 41 of 50 segments static
+        GIF 2.05 MB (bar fill + art reveal)
+             -> 39 of 44 segments static
+        GIF 6.87 MB (+ roll call wave, divider, spinner, hold)
+             -> 31 of 44 segments static
+    Conclusion each round: the animated phases were too short relative to the
+    tape, so the fix was to lengthen them and shorten the sleep, not to add more
+    effects. Final round: 24-frame intro, 24-frame divider, 0.12 s/name roll
+    call, 70-frame bar fill, 50-frame reveal, 10 s sweep hold, 34 s tape.
+
 ## Housekeeping
     git rm --cached logs/{gen,m,s,sel}.txt
         -> four scratch files holding mojibake tracebacks from failed commands;
