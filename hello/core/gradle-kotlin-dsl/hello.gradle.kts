@@ -1,5 +1,4 @@
 # -*- mode: gradle-kotlin-dsl -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Gradle Kotlin DSL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #02303a
 #   hue        : 190.7 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+tasks.register("hello") {
+    doLast { println("Hello World!") }
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Gradle Kotlin DSL :: RAiNBOW_Hello-World
@@ -35,4 +35,6 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Gradle Kotlin DSL :: RAiNBOW_Hello-W
+# rainbow-pad Gradle Kotlin DSL :: RAiNBOW_Hello-World
+# rainbow-pad colour #02303a :: padded to 100
+ 

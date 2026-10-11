@@ -1,5 +1,4 @@
 # -*- mode: literate-coffeescript -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Literate CoffeeScript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #244776
 #   hue        : 214.4 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+```coffeescript
+console.log "Hello World!"
+```
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
@@ -35,4 +35,5 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Literate Cof
+# rainbow-pad Literate CoffeeScript :: RAiNBOW_Hello-World
+# rainbow-pad colour #244776 :: padded 

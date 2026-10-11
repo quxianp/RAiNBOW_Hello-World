@@ -1,5 +1,4 @@
 -- -*- mode: literate-haskell -*-
---   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 -- Literate Haskell - Hello World! :: RAiNBOW_Hello-World
 --   colour     : #5e5086
 --   hue        : 255.6 deg
@@ -7,8 +6,9 @@
 --   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 --   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
--- Hello World!
--- Hello World!
+\begin{code}
+main = putStrLn "Hello World!"
+\end{code}
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
 -- rainbow-pad Literate Haskell :: RAiNBOW_Hello-World
@@ -35,4 +35,5 @@
 -- rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 -- rainbow-pad equal byte share keeps the language bar an even rainbow
 -- rainbow-pad one segment per Linguist coloured language
--- rainbow-pad      
+-- rainbow-pad Literate Haskell :: RAiNBOW_Hello-World
+-- rainbow-pad colour #5e5086 ::

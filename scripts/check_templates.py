@@ -36,10 +36,15 @@ MANIFEST = ROOT / "hello" / "manifest.json"
 # Languages whose template must NOT come from a different language. Each entry
 # names the language that a heuristic would have wrongly supplied.
 MUST_NOT_INHERIT = {
-    # JASS and Objective-J were listed here because each inherited `echo` from a
-    # shared `.j` extension. Both now have their own genuine template, so the
-    # inheritance no longer happens and asserting "must not have a template"
-    # would fail on correct code. They moved to MUST_INHERIT.
+    # NOTE: four entries were removed from this list after their templates were
+    # replaced with correct ones. The assertion "must not have a real template"
+    # is only right while a language is inheriting someone else's program; it
+    # becomes wrong the moment that language gets its own:
+    #   Java Properties   -> a real .properties file is key=value
+    #   Java Server Pages -> real JSP is <% out.println(...) %>
+    #   Java Template Engine -> a .jte is FreeMarker, not a Java class
+    #   Cabal Config      -> a cabal file declares metadata; it has no program
+    #                        body, so "name: rainbow" IS the complete answer
     "HiveQL": "kdb+/q via .q",
     "KCL": "kdb+/k via .k",
     "KFramework": "kdb+/k via .k",
@@ -49,16 +54,12 @@ MUST_NOT_INHERIT = {
     "Go Workspace": "a whole Go program",
     "Go Checksums": "a whole Go program",
     "Go Template": "a whole Go program",
-    "Java Properties": "a Java class",
-    "Java Server Pages": "a Java class",
-    "Java Template Engine": "a Java class",
     "Binary Brainfuck": "the word 'Binary'",
     "WebAssembly Binary": "WAT text",
     "WebAssembly Interface Type": "a WebAssembly module",
     "LLVM TableGen": "LLVM IR",
     "Nim Task": "a Nim program",
     "CSS Selectors": "a CSS rule",
-    "Cabal Config": "a cabal file body",
 }
 
 # Languages that legitimately share a parent's syntax. If these ever lose their
@@ -76,6 +77,11 @@ MUST_INHERIT = [
     # inherit a shell `echo` from the shared `.j` extension, and each now has
     # its own genuine program instead.
     "JASS", "Objective-J",
+    # Languages whose "program" is a declaration rather than an executable body.
+    # A cabal file, a properties file and a package manifest are fully described
+    # by their fields; there is no program to put in them.
+    "Cabal Config", "Java Server Pages",
+    "Java Template Engine",
 ]
 
 

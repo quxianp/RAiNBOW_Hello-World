@@ -1,5 +1,4 @@
 # -*- mode: java-template-engine -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Java Template Engine - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2a6277
 #   hue        : 196.4 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+<#-- Hello World! -->
+<h1>Hello World!</h1>
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Java Template Engine :: RAiNBOW_Hello-World
@@ -35,4 +34,6 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Java Template Engi
+# rainbow-pad Java Template Engine :: RAiNBOW_Hello-World
+# rainbow-pad colour #2a6277 :: padded to 100
+   

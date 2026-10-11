@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 503,
+ "with_curated_template": 544,
  "runnable_command_count": 51,
  "files": [
   {
@@ -472,7 +472,7 @@
    "hue": 0.0,
    "modeline": "kdl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PLSQL",
@@ -916,7 +916,7 @@
    "hue": 12.63,
    "modeline": "lobster",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PostCSS",
@@ -1360,7 +1360,7 @@
    "hue": 28.09,
    "modeline": "golo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BlitzMax",
@@ -2212,7 +2212,7 @@
    "hue": 53.14,
    "modeline": "dotenv",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JavaScript",
@@ -2236,7 +2236,7 @@
    "hue": 53.25,
    "modeline": "javascript+erb",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "World of Warcraft Addon Data",
@@ -2548,7 +2548,7 @@
    "hue": 76.45,
    "modeline": "kakounescript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BBCode",
@@ -2956,7 +2956,7 @@
    "hue": 105.0,
    "modeline": "ncl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gosu",
@@ -3220,7 +3220,7 @@
    "hue": 120.0,
    "modeline": "kolmafia-ash",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LLVM",
@@ -3436,7 +3436,7 @@
    "hue": 146.25,
    "modeline": "csv",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TSV",
@@ -3640,7 +3640,7 @@
    "hue": 162.0,
    "modeline": "snakemake",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Visual Basic 6.0",
@@ -3712,7 +3712,7 @@
    "hue": 166.33,
    "modeline": "livescript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "YASnippet",
@@ -3760,7 +3760,7 @@
    "hue": 171.09,
    "modeline": "salt",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BQN",
@@ -3964,7 +3964,7 @@
    "hue": 181.01,
    "modeline": "wdl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "mdsvex",
@@ -4180,7 +4180,7 @@
    "hue": 190.53,
    "modeline": "bitbake",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gradle",
@@ -4204,7 +4204,7 @@
    "hue": 190.71,
    "modeline": "gradle-kotlin-dsl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "J",
@@ -4516,7 +4516,7 @@
    "hue": 196.34,
    "modeline": "minizinc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Properties",
@@ -4528,7 +4528,7 @@
    "hue": 196.36,
    "modeline": "java-properties",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Server Pages",
@@ -4540,7 +4540,7 @@
    "hue": 196.36,
    "modeline": "java-server-pages",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Template Engine",
@@ -4552,7 +4552,7 @@
    "hue": 196.36,
    "modeline": "java-template-engine",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BIRD2",
@@ -4600,7 +4600,7 @@
    "hue": 197.31,
    "modeline": "literate-agda",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Marko",
@@ -5632,7 +5632,7 @@
    "hue": 214.39,
    "modeline": "literate-coffeescript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Fantom",
@@ -5956,7 +5956,7 @@
    "hue": 221.63,
    "modeline": "nasal",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ImHex Pattern Language",
@@ -6076,7 +6076,7 @@
    "hue": 225.88,
    "modeline": "nwscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KiCad Layout",
@@ -6460,7 +6460,7 @@
    "hue": 240.0,
    "modeline": "igor-pro",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Raku",
@@ -6532,7 +6532,7 @@
    "hue": 241.2,
    "modeline": "nemerle",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Grace",
@@ -6796,7 +6796,7 @@
    "hue": 255.56,
    "modeline": "literate-haskell",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "P4",
@@ -6904,7 +6904,7 @@
    "hue": 264.49,
    "modeline": "cabal-config",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "1C Enterprise",
@@ -7120,7 +7120,7 @@
    "hue": 274.82,
    "modeline": "gentoo-ebuild",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gentoo Eclass",
@@ -7156,7 +7156,7 @@
    "hue": 276.0,
    "modeline": "shen",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Dhall",
@@ -7312,7 +7312,7 @@
    "hue": 283.06,
    "modeline": "lambdapi",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Emacs Lisp",
@@ -7384,7 +7384,7 @@
    "hue": 295.28,
    "modeline": "aspectj",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TextMate Properties",
@@ -7660,7 +7660,7 @@
    "hue": 322.4,
    "modeline": "moonbit",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Antlers",
@@ -8116,7 +8116,7 @@
    "hue": 353.78,
    "modeline": "modelica",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Scilab",
@@ -8320,7 +8320,7 @@
    "hue": 359.44,
    "modeline": "wollok",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ReScript",
@@ -14613,7 +14613,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bazel Skylark",
@@ -46623,7 +46623,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Maybe Later",
@@ -51826,7 +51826,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NTCM",
@@ -58261,7 +58261,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Proprietary",
@@ -59933,7 +59933,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Quirk",
@@ -64113,7 +64113,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SCOOP",
@@ -77170,7 +77170,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Waffles",

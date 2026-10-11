@@ -1,5 +1,4 @@
 # -*- mode: snakemake -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Snakemake - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #419179
 #   hue        : 162.0 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+rule hello:
+    output: "out.txt"
+    shell: "echo Hello World! > out.txt"
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Snakemake :: RAiNBOW_Hello-World
@@ -37,4 +37,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Snakemake :: RAiNBOW_Hello-World
 # rainbow-pad colour #419179 :: padded to 100
-     
+# rainbow-pad padding comment: byte balancing for
