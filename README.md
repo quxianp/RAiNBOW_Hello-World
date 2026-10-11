@@ -253,6 +253,29 @@ not there.
 
 ### 6. Measured, not predicted
 
+What the two layers actually contain, by Linguist type. Regenerate with
+`python scripts/language_report.py --markdown`:
+
+| Type | Core (`hello/core/`) | Share | Full (`hello/full/`) | Share |
+|---|---:|---:|---:|---:|
+| programming | 503 | 72.5 % | 60 | 0.9 % |
+| data | 113 | 16.3 % | 71 | 1.1 % |
+| markup | 67 | 9.7 % | 4 | 0.1 % |
+| prose | 11 | 1.6 % | 7 | 0.1 % |
+| **total** | **694** | **100.0 %** | **6 632** | **100.0 %** |
+
+The contrast between those two columns is the design working, and it is worth
+reading before quoting "6 632 more languages" as if it were comparable to the 694.
+`hello/core/` is 72.5 % programming languages — that is what goes on the bar.
+`hello/full/` is **99.0 % not**: it is the vendored long tail of esolangs, data
+formats and prose, gathered for breadth rather than because any of it is
+detectable on a colour bar.
+
+Coverage is equally uneven, and the README should not imply otherwise: **26.1 %**
+of core files have a curated Hello World template and **7.1 %** have a runner, so
+`run.sh` genuinely executes a small minority. The rest are byte-balanced stubs
+whose job is to be detected and coloured, not to compile.
+
 The numbers GitHub itself reports for this repository:
 
 | Measured from `GET /repos/quxianp/RAiNBOW_Hello-World/languages` | Value |
