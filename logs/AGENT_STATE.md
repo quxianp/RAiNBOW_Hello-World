@@ -55,15 +55,33 @@ PowerShell's `Invoke-RestMethod` can.
 | 38074239612 | 3a9054fe | success | exec bit fixed: GIF 45 KB -> 603 KB, demo runs |
 | 38075001749 | 020847d2 | success | bold two-line finale art |
 | 38076066230 … 38077288158 | various | failure | linguist gem install/require/API fixes |
-| latest | a305b5af | success | linguist audit green, `logs/linguist_audit.json` published |
+| latest | a29f9fb5 | success | full 631-language bar image published (917 KB) |
+
+## The rendered bar image
+
+`assets/rainbow-bar-github.png` is drawn by `scripts/render_github_bar.py` from
+`GET /repos/.../languages`:
+
+- the 631-segment strip in GitHub's own descending-byte order
+- **every one of the 631 languages listed by name**, with its Linguist colour
+  swatch and its real share, in the same order, so legend position *i*
+  corresponds to bar segment *i*
+- 10 columns x 64 rows, 2557x1358; the figure width auto-grows until the
+  longest actual name fits its column, so long names such as
+  "Mathematical Programming System" never collide with the share beside them
+- one language (`Checksums`) has no Linguist colour and renders grey; the script
+  logs that rather than hiding it
 
 ## What the screenshots in the report showed, and what was actually true
 
+| What the screenshots in the report showed, and what was actually true
+
 | Symptom | Reality |
 |---|---|
-| GIF shows `bash: ./run.sh: Permission denied` | **Real bug.** The file was committed 100644. Fixed; the demo now records a 552 KB GIF of the actual show. |
+| GIF shows `bash: ./run.sh: Permission denied` | **Real bug.** The file was committed 100644. Fixed; the demo now records a 534 KB GIF of the actual show. |
 | Bar shows `HTML 27.6 %`, C/C++ not visible | **Stale cached page.** `github-linguist` 9.7.0 and `GET /repos/.../languages` both report 631 languages / 1 417 216 B / HTML 1.0116 %. |
-| C, C++, Java, Go, Rust not named | **UI limitation.** GitHub names only the largest few of 631 languages and folds the rest into "Other". `assets/rainbow-bar-github.png` now names them from the API. |
+| C, C++, Java, Go, Rust not named | **UI limitation.** GitHub names only the largest few of 631 languages and folds the rest into "Other". `assets/rainbow-bar-github.png` lists **all 631 by name**, with colour and share. |
+| The image only showed ~31 languages | **Fair criticism.** The renderer used a hand-picked "featured" list. Replaced with a full legend of every language in the breakdown. |
 
 ## Known residual risk
 
