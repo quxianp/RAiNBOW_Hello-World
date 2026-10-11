@@ -267,7 +267,7 @@ reading before quoting "6 632 more languages" as if it were comparable to the 69
 formats and prose, gathered for breadth rather than because any of it is
 detectable on a colour bar.
 
-Coverage is uneven, and the README should not imply otherwise: **48.3 %** of core
+Coverage is uneven, and the README should not imply otherwise: **49.3 %** of core
 files have a curated Hello World template and **7.1 %** have a runner, so `run.sh`
 genuinely executes a small minority. The rest are byte-balanced stubs whose job
 is to be detected and coloured, not to compile.
