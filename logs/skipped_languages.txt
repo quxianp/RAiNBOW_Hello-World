@@ -5,7 +5,7 @@ Dart	simulated	no dart on PATH
 Elixir	simulated	no elixir on PATH
 Elm	simulated	no elm on PATH
 Erlang	simulated	no escript on PATH
-Fortran	error	/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start': (.text+0x1b): undefined reference to `main' collect2: error: ld returned 1 exit status
+Fortran	error	/home/runner/work/RAiNBOW_Hello-World/RAiNBOW_Hello-World/hello/core/fortran/hello.f:9:2: 9 | program hello | 1 Error: Non-numeric character in statement label at (1) /home/runner/work/RAiNBOW_Hello-W
 Gleam	simulated	no gleam on PATH
 Groovy	simulated	no groovy on PATH
 LOLCODE	simulated	no lci on PATH
