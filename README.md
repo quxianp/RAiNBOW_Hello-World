@@ -29,7 +29,7 @@ on your machine.
 
 ## 🎬 The show
 
-![GitHub language bar, 631 languages, rendered from the GitHub API](assets/rainbow-bar-github.png)
+![all 631 languages, drawn from the GitHub API](assets/rainbow-bar-github.png)
 
 ![rainbow bar, hue-ordered](assets/rainbow-bar-local.png)
 
@@ -38,8 +38,10 @@ on your machine.
 [⬇↓ Download the MP4](assets/hello-world.mp4)
 
 > **First image** — drawn from `GET /repos/.../languages`, the exact breakdown
-> GitHub uses. 631 languages, each 0.14–1.01 %, with C, C++, C#, Java, Go, Rust,
-> Python, TypeScript and the rest named explicitly with their real shares.
+> GitHub uses. The bar, plus **all 631 languages listed by name** with their
+> colour and their real share — C, C++, C#, Java, Go, Rust, Python, TypeScript,
+> Fortran, Assembly, Zig down to `xBase` and `Zil`. Nothing is hidden behind an
+> "Other" bucket.
 >
 > **Why that image exists:** GitHub's own legend can only name a handful of
 > languages and collapses the remaining 600+ into a single grey **Other** row, so
