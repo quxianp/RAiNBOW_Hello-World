@@ -1,0 +1,17 @@
+{
+  "generated_by": "scripts/modeline_ab_test.rb",
+  "with_modelines": {
+    "languages": 631,
+    "bytes": 1417216
+  },
+  "without_modelines": {
+    "languages": 631,
+    "bytes": 1417216
+  },
+  "only_with_modelines": [
+
+  ],
+  "only_without_modelines": [
+
+  ]
+}

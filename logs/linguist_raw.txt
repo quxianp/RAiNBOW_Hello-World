@@ -1,0 +1,631 @@
+1.01%   14336      HTML
+0.87%   12288      Python
+0.87%   12288      INI
+0.72%   10240      Shell
+0.58%   8192       JavaScript
+0.43%   6144       OpenAPI Specification v3
+0.43%   6144       OpenAPI Specification v2
+0.43%   6144       Lex
+0.43%   6144       Java
+0.43%   6144       TypeScript
+0.43%   6144       LigoLANG
+0.43%   6144       C
+0.43%   6144       Yacc
+0.43%   6144       Assembly
+0.29%   4096       XML
+0.29%   4096       Roff
+0.29%   4096       Ruby
+0.29%   4096       Julia
+0.29%   4096       JSON
+0.29%   4096       Isabelle
+0.29%   4096       HCL
+0.29%   4096       Haskell
+0.29%   4096       Groovy
+0.29%   4096       Gradle
+0.29%   4096       Fortran
+0.29%   4096       Elvish
+0.29%   4096       Prolog
+0.29%   4096       CSS
+0.29%   4096       ColdFusion
+0.29%   4096       CoffeeScript
+0.29%   4096       Cairo
+0.29%   4096       Bluespec
+0.29%   4096       TeX
+0.29%   4096       Agda
+0.14%   2048       Zmodel
+0.14%   2048       Zimpl
+0.14%   2048       ZIL
+0.14%   2048       Zig
+0.14%   2048       Zephir
+0.14%   2048       ZenScript
+0.14%   2048       ZAP
+0.14%   2048       Yul
+0.14%   2048       YASnippet
+0.14%   2048       YARA
+0.14%   2048       YAML
+0.14%   2048       Xtend
+0.14%   2048       XSLT
+0.14%   2048       XQuery
+0.14%   2048       Xonsh
+0.14%   2048       Xojo
+0.14%   2048       Xmake
+0.14%   2048       XC
+0.14%   2048       xBase
+0.14%   2048       X10
+0.14%   2048       Wren
+0.14%   2048       World of Warcraft Addon Data
+0.14%   2048       Wollok
+0.14%   2048       Wolfram Language
+0.14%   2048       Witcher Script
+0.14%   2048       wisp
+0.14%   2048       Windows Registry Entries
+0.14%   2048       Wikitext
+0.14%   2048       Whiley
+0.14%   2048       WGSL
+0.14%   2048       WebAssembly
+0.14%   2048       WebAssembly Interface Type
+0.14%   2048       Web Ontology Language
+0.14%   2048       WDL
+0.14%   2048       Vyper
+0.14%   2048       Vue
+0.14%   2048       Volt
+0.14%   2048       Visual Basic .NET
+0.14%   2048       Visual Basic 6.0
+0.14%   2048       Vim Snippet
+0.14%   2048       Vim script
+0.14%   2048       Vim Help File
+0.14%   2048       VHDL
+0.14%   2048       Vespa Schema Definition
+0.14%   2048       Verse
+0.14%   2048       Verilog
+0.14%   2048       Vento
+0.14%   2048       Velocity Template Language
+0.14%   2048       VCL
+0.14%   2048       vCard
+0.14%   2048       VBScript
+0.14%   2048       VBA
+0.14%   2048       Valve Data Format
+0.14%   2048       Vala
+0.14%   2048       V
+0.14%   2048       UrWeb
+0.14%   2048       Untyped Plutus Core
+0.14%   2048       UnrealScript
+0.14%   2048       Uno
+0.14%   2048       Unity3D Asset
+0.14%   2048       ucode
+0.14%   2048       Typst
+0.14%   2048       TypeSpec
+0.14%   2048       TXL
+0.14%   2048       Twig
+0.14%   2048       Turing
+0.14%   2048       TSV
+0.14%   2048       TSQL
+0.14%   2048       Tree-sitter Query
+0.14%   2048       Tor Config
+0.14%   2048       TOML
+0.14%   2048       Tolk
+0.14%   2048       Toit
+0.14%   2048       TMDL
+0.14%   2048       TLA
+0.14%   2048       TL-Verilog
+0.14%   2048       TI Program
+0.14%   2048       Thrift
+0.14%   2048       TextMate Properties
+0.14%   2048       Textile
+0.14%   2048       TextGrid
+0.14%   2048       Terra
+0.14%   2048       templ
+0.14%   2048       Teal
+0.14%   2048       Tcl
+0.14%   2048       Talon
+0.14%   2048       Tact
+0.14%   2048       SystemVerilog
+0.14%   2048       Swift
+0.14%   2048       Sweave
+0.14%   2048       Sway
+0.14%   2048       SVG
+0.14%   2048       Svelte
+0.14%   2048       Survex data
+0.14%   2048       SurrealQL
+0.14%   2048       SuperCollider
+0.14%   2048       SugarSS
+0.14%   2048       SubRip Text
+0.14%   2048       Stylus
+0.14%   2048       StringTemplate
+0.14%   2048       STL
+0.14%   2048       Stata
+0.14%   2048       Starlark
+0.14%   2048       Standard ML
+0.14%   2048       Stan
+0.14%   2048       SRecode Template
+0.14%   2048       Squirrel
+0.14%   2048       SQLPL
+0.14%   2048       SQL
+0.14%   2048       SQF
+0.14%   2048       SpiceDB Schema
+0.14%   2048       SPARQL
+0.14%   2048       SourcePawn
+0.14%   2048       Solidity
+0.14%   2048       SmPL
+0.14%   2048       Smithy
+0.14%   2048       Smarty
+0.14%   2048       Smalltalk
+0.14%   2048       Slint
+0.14%   2048       Slim
+0.14%   2048       Slice
+0.14%   2048       Slash
+0.14%   2048       Slang
+0.14%   2048       SIP
+0.14%   2048       Singularity
+0.14%   2048       Checksums
+0.14%   2048       Shen
+0.14%   2048       ShellCheck Config
+0.14%   2048       ShaderLab
+0.14%   2048       Self
+0.14%   2048       sed
+0.14%   2048       SCSS
+0.14%   2048       Scilab
+0.14%   2048       Scheme
+0.14%   2048       Scenic
+0.14%   2048       Scaml
+0.14%   2048       Scala
+0.14%   2048       Sass
+0.14%   2048       SAS
+0.14%   2048       Salt
+0.14%   2048       Sail
+0.14%   2048       Rust
+0.14%   2048       RUNOFF
+0.14%   2048       RPGLE
+0.14%   2048       RouterOS Script
+0.14%   2048       Rouge
+0.14%   2048       ROS Interface
+0.14%   2048       RON
+0.14%   2048       Rocq Prover
+0.14%   2048       Roc
+0.14%   2048       RobotFramework
+0.14%   2048       RMarkdown
+0.14%   2048       Riot
+0.14%   2048       Ring
+0.14%   2048       Rhai
+0.14%   2048       Rez
+0.14%   2048       REXX
+0.14%   2048       reStructuredText
+0.14%   2048       ReScript
+0.14%   2048       Ren'Py
+0.14%   2048       Regular Expression
+0.14%   2048       Redscript
+0.14%   2048       Red
+0.14%   2048       Record Jar
+0.14%   2048       Rebol
+0.14%   2048       Reason
+0.14%   2048       RDoc
+0.14%   2048       RAScript
+0.14%   2048       Rascal
+0.14%   2048       RAML
+0.14%   2048       Raku
+0.14%   2048       Ragel
+0.14%   2048       Racket
+0.14%   2048       R
+0.14%   2048       Quint
+0.14%   2048       QuickBASIC
+0.14%   2048       Quartus Simulation IP
+0.14%   2048       QuakeC
+0.14%   2048       Quake
+0.14%   2048       Qt Script
+0.14%   2048       QML
+0.14%   2048       q
+0.14%   2048       Q#
+0.14%   2048       Pyret
+0.14%   2048       PureScript
+0.14%   2048       PureBasic
+0.14%   2048       Puppet
+0.14%   2048       Pug
+0.14%   2048       Propeller Spin
+0.14%   2048       Promela
+0.14%   2048       Procfile
+0.14%   2048       Processing
+0.14%   2048       Pro*C
+0.14%   2048       Prisma
+0.14%   2048       Praat
+0.14%   2048       PowerShell
+0.14%   2048       PowerBuilder
+0.14%   2048       Power Query
+0.14%   2048       POV-Ray SDL
+0.14%   2048       PostScript
+0.14%   2048       Portugol
+0.14%   2048       Polar
+0.14%   2048       PogoScript
+0.14%   2048       PLSQL
+0.14%   2048       PLpgSQL
+0.14%   2048       PlantUML
+0.14%   2048       Pkl
+0.14%   2048       pkg-config
+0.14%   2048       Pip Requirements
+0.14%   2048       Pike
+0.14%   2048       PigLatin
+0.14%   2048       PicoLisp
+0.14%   2048       PHP
+0.14%   2048       Perl
+0.14%   2048       Pep8
+0.14%   2048       PEG.js
+0.14%   2048       PDDL
+0.14%   2048       Pawn
+0.14%   2048       Pascal
+0.14%   2048       Parrot
+0.14%   2048       Papyrus
+0.14%   2048       Pan
+0.14%   2048       Pact
+0.14%   2048       P4
+0.14%   2048       Oz
+0.14%   2048       Oxygene
+0.14%   2048       OverPy
+0.14%   2048       OverpassQL
+0.14%   2048       Org
+0.14%   2048       Option List
+0.14%   2048       OpenSCAD
+0.14%   2048       OpenQASM
+0.14%   2048       OpenEdge ABL
+0.14%   2048       Open Policy Agent
+0.14%   2048       Opal
+0.14%   2048       ooc
+0.14%   2048       OMNeT++ NED
+0.14%   2048       OMNeT++ MSG
+0.14%   2048       Omgrofl
+0.14%   2048       Odin
+0.14%   2048       OCaml
+0.14%   2048       ObjectScript
+0.14%   2048       Objective-J
+0.14%   2048       Objective-C
+0.14%   2048       Objective-C++
+0.14%   2048       NWScript
+0.14%   2048       Nushell
+0.14%   2048       Nunjucks
+0.14%   2048       Nu
+0.14%   2048       Noir
+0.14%   2048       NMODL
+0.14%   2048       Nix
+0.14%   2048       Nit
+0.14%   2048       Nim
+0.14%   2048       Nickel
+0.14%   2048       Nginx
+0.14%   2048       Nextflow
+0.14%   2048       NewLisp
+0.14%   2048       NetLogo
+0.14%   2048       NetLinx
+0.14%   2048       NetLinx+ERB
+0.14%   2048       nesC
+0.14%   2048       Nemerle
+0.14%   2048       Nearley
+0.14%   2048       NCL
+0.14%   2048       Nasal
+0.14%   2048       Mustache
+0.14%   2048       mupad
+0.14%   2048       MTML
+0.14%   2048       MQL5
+0.14%   2048       MQL4
+0.14%   2048       Move
+0.14%   2048       Motoko
+0.14%   2048       MoonScript
+0.14%   2048       MoonBit
+0.14%   2048       Monkey C
+0.14%   2048       Mojo
+0.14%   2048       Modula-3
+0.14%   2048       Modula-2
+0.14%   2048       Modelica
+0.14%   2048       MLIR
+0.14%   2048       mIRC Script
+0.14%   2048       Mirah
+0.14%   2048       Mint
+0.14%   2048       MiniZinc
+0.14%   2048       MiniYAML
+0.14%   2048       MiniScript
+0.14%   2048       MeTTa
+0.14%   2048       Metal
+0.14%   2048       Meson
+0.14%   2048       Mermaid
+0.14%   2048       Mercury
+0.14%   2048       MDX
+0.14%   2048       mdsvex
+0.14%   2048       mcfunction
+0.14%   2048       MAXScript
+0.14%   2048       Max
+0.14%   2048       MATLAB
+0.14%   2048       Mathematical Programming System
+0.14%   2048       Mask
+0.14%   2048       Marko
+0.14%   2048       Markdown
+0.14%   2048       Mako
+0.14%   2048       Makefile
+0.14%   2048       Macaulay2
+0.14%   2048       M3U
+0.14%   2048       Luau
+0.14%   2048       Lua
+0.14%   2048       LSL
+0.14%   2048       LookML
+0.14%   2048       LOLCODE
+0.14%   2048       Logtalk
+0.14%   2048       Lobster
+0.14%   2048       LLVM
+0.14%   2048       LiveScript
+0.14%   2048       LiveCode Script
+0.14%   2048       Liquidsoap
+0.14%   2048       Liquid
+0.14%   2048       LilyPond
+0.14%   2048       LFE
+0.14%   2048       Less
+0.14%   2048       Leo
+0.14%   2048       Latte
+0.14%   2048       Lasso
+0.14%   2048       Lark
+0.14%   2048       Langium
+0.14%   2048       Lambdapi
+0.14%   2048       LabVIEW
+0.14%   2048       kvlang
+0.14%   2048       KRL
+0.14%   2048       Kotlin
+0.14%   2048       KoLmafia ASH
+0.14%   2048       Koka
+0.14%   2048       KiCad Schematic
+0.14%   2048       KiCad Legacy Layout
+0.14%   2048       KiCad Layout
+0.14%   2048       KFramework
+0.14%   2048       KerboScript
+0.14%   2048       KDL
+0.14%   2048       KCL
+0.14%   2048       KakouneScript
+0.14%   2048       Kaitai Struct
+0.14%   2048       Just
+0.14%   2048       Jupyter Notebook
+0.14%   2048       Jsonnet
+0.14%   2048       JSONLD
+0.14%   2048       JSONiq
+0.14%   2048       JSON5
+0.14%   2048       jq
+0.14%   2048       Jolie
+0.14%   2048       Jinja
+0.14%   2048       JetBrains MPS
+0.14%   2048       Jest Snapshot
+0.14%   2048       JCL
+0.14%   2048       Java Properties
+0.14%   2048       JASS
+0.14%   2048       Jasmin
+0.14%   2048       JAR Manifest
+0.14%   2048       Janet
+0.14%   2048       Jai
+0.14%   2048       Jac
+0.14%   2048       J
+0.14%   2048       ISPC
+0.14%   2048       Ioke
+0.14%   2048       Io
+0.14%   2048       Inno Setup
+0.14%   2048       ImHex Pattern Language
+0.14%   2048       Imba
+0.14%   2048       ImageJ Macro
+0.14%   2048       IL Assembly
+0.14%   2048       IGOR Pro
+0.14%   2048       Ignore List
+0.14%   2048       Idris
+0.14%   2048       IDL
+0.14%   2048       iCalendar
+0.14%   2048       Hy
+0.14%   2048       HXML
+0.14%   2048       Hurl
+0.14%   2048       HTTP
+0.14%   2048       Hosts File
+0.14%   2048       hoon
+0.14%   2048       HolyC
+0.14%   2048       HOCON
+0.14%   2048       HLSL
+0.14%   2048       HiveQL
+0.14%   2048       HIP
+0.14%   2048       Haxe
+0.14%   2048       Hare
+0.14%   2048       Harbour
+0.14%   2048       HAProxy
+0.14%   2048       Handlebars
+0.14%   2048       Haml
+0.14%   2048       Hack
+0.14%   2048       GtkRC
+0.14%   2048       GSC
+0.14%   2048       Graphviz (DOT)
+0.14%   2048       GraphQL
+0.14%   2048       Grammatical Framework
+0.14%   2048       Grace
+0.14%   2048       Gosu
+0.14%   2048       Golo
+0.14%   2048       Godot Resource
+0.14%   2048       Go
+0.14%   2048       Go Workspace
+0.14%   2048       Go Template
+0.14%   2048       Go Module
+0.14%   2048       Go Checksums
+0.14%   2048       Gnuplot
+0.14%   2048       Gno
+0.14%   2048       Glyph
+0.14%   2048       GLSL
+0.14%   2048       Gleam
+0.14%   2048       Git Revision List
+0.14%   2048       Git Commit
+0.14%   2048       Git Attributes
+0.14%   2048       Gherkin
+0.14%   2048       Gerber Image
+0.14%   2048       Genshi
+0.14%   2048       Genie
+0.14%   2048       Genero per
+0.14%   2048       Genero 4gl
+0.14%   2048       Gemini
+0.14%   2048       Gemfile.lock
+0.14%   2048       GEDCOM
+0.14%   2048       GDShader
+0.14%   2048       GDScript
+0.14%   2048       GCC Machine Description
+0.14%   2048       GAP
+0.14%   2048       GAMS
+0.14%   2048       GAML
+0.14%   2048       Game Maker Language
+0.14%   2048       G-code
+0.14%   2048       Futhark
+0.14%   2048       Frege
+0.14%   2048       FreeMarker
+0.14%   2048       FreeBASIC
+0.14%   2048       FPP
+0.14%   2048       Forth
+0.14%   2048       FLUX
+0.14%   2048       Fluent
+0.14%   2048       Flix
+0.14%   2048       FlatBuffers
+0.14%   2048       FIRRTL
+0.14%   2048       Filebench WML
+0.14%   2048       FIGlet Font
+0.14%   2048       Fennel
+0.14%   2048       Faust
+0.14%   2048       Fantom
+0.14%   2048       Fancy
+0.14%   2048       Factor
+0.14%   2048       F*
+0.14%   2048       F#
+0.14%   2048       Euphoria
+0.14%   2048       Erlang
+0.14%   2048       EQ
+0.14%   2048       EmberScript
+0.14%   2048       Emacs Lisp
+0.14%   2048       Elm
+0.14%   2048       Elixir
+0.14%   2048       EJS
+0.14%   2048       Eiffel
+0.14%   2048       EdgeQL
+0.14%   2048       Edge
+0.14%   2048       ECL
+0.14%   2048       eC
+0.14%   2048       Earthly
+0.14%   2048       E
+0.14%   2048       Dylan
+0.14%   2048       Dune
+0.14%   2048       Dotenv
+0.14%   2048       Dogescript
+0.14%   2048       Dockerfile
+0.14%   2048       DM
+0.14%   2048       DirectX 3D File
+0.14%   2048       Dhall
+0.14%   2048       DenizenScript
+0.14%   2048       Debian Package Control File
+0.14%   2048       DataWeave
+0.14%   2048       Daslang
+0.14%   2048       Dart
+0.14%   2048       Darcs Patch
+0.14%   2048       Dafny
+0.14%   2048       D2
+0.14%   2048       D
+0.14%   2048       Cython
+0.14%   2048       Cypher
+0.14%   2048       CWeb
+0.14%   2048       Curry
+0.14%   2048       CUE
+0.14%   2048       Cuda
+0.14%   2048       CSV
+0.14%   2048       Csound
+0.14%   2048       Csound Score
+0.14%   2048       Csound Document
+0.14%   2048       CSON
+0.14%   2048       Crystal
+0.14%   2048       crontab
+0.14%   2048       CQL
+0.14%   2048       Cooklang
+0.14%   2048       Component Pascal
+0.14%   2048       Common Workflow Language
+0.14%   2048       Common Lisp
+0.14%   2048       COLLADA
+0.14%   2048       CodeQL
+0.14%   2048       CMake
+0.14%   2048       Clue
+0.14%   2048       Cloud Firestore Security Rules
+0.14%   2048       Closure Templates
+0.14%   2048       Clojure
+0.14%   2048       CLIPS
+0.14%   2048       Click
+0.14%   2048       Clean
+0.14%   2048       Classic ASP
+0.14%   2048       Clarity
+0.14%   2048       Clarion
+0.14%   2048       Cirru
+0.14%   2048       Circom
+0.14%   2048       ChucK
+0.14%   2048       Chapel
+0.14%   2048       Ceylon
+0.14%   2048       Carbon
+0.14%   2048       Cap'n Proto
+0.14%   2048       CAP CDS
+0.14%   2048       Cangjie
+0.14%   2048       Cadence
+0.14%   2048       Caddyfile
+0.14%   2048       Cabal Config
+0.14%   2048       C3
+0.14%   2048       C++
+0.14%   2048       C#
+0.14%   2048       BuildStream
+0.14%   2048       Bru
+0.14%   2048       Browserslist
+0.14%   2048       Brightscript
+0.14%   2048       BrighterScript
+0.14%   2048       Brainfuck
+0.14%   2048       BQN
+0.14%   2048       Boogie
+0.14%   2048       Boo
+0.14%   2048       Blueprint
+0.14%   2048       BlitzMax
+0.14%   2048       BlitzBasic
+0.14%   2048       Blade
+0.14%   2048       BitBake
+0.14%   2048       BIRD2
+0.14%   2048       Bikeshed
+0.14%   2048       Bicep
+0.14%   2048       Berry
+0.14%   2048       Beef
+0.14%   2048       BBCode
+0.14%   2048       Batchfile
+0.14%   2048       BASIC
+0.14%   2048       BAML
+0.14%   2048       Ballerina
+0.14%   2048       B4X
+0.14%   2048       B
+0.14%   2048       B (Formal Method)
+0.14%   2048       Awk
+0.14%   2048       Avro IDL
+0.14%   2048       AutoIt
+0.14%   2048       AutoHotkey
+0.14%   2048       Augeas
+0.14%   2048       ATS
+0.14%   2048       Asymptote
+0.14%   2048       Astro
+0.14%   2048       AspectJ
+0.14%   2048       ASP.NET
+0.14%   2048       AsciiDoc
+0.14%   2048       Arc
+0.14%   2048       AppleScript
+0.14%   2048       APL
+0.14%   2048       API Blueprint
+0.14%   2048       Apex
+0.14%   2048       ApacheConf
+0.14%   2048       ANTLR
+0.14%   2048       Antlers
+0.14%   2048       Ant Build System
+0.14%   2048       Answer Set Programming
+0.14%   2048       AngelScript
+0.14%   2048       AMPL
+0.14%   2048       Altium Designer
+0.14%   2048       Alloy
+0.14%   2048       ALGOL
+0.14%   2048       Aleo
+0.14%   2048       AL
+0.14%   2048       Aiken
+0.14%   2048       AIDL
+0.14%   2048       AGS Script
+0.14%   2048       Adobe Font Metrics
+0.14%   2048       Adblock Filter List
+0.14%   2048       Ada
+0.14%   2048       ActionScript
+0.14%   2048       ABAP
+0.14%   2048       ABAP CDS
+0.14%   2048       4D
+0.14%   2048       2-Dimensional Array
+0.14%   2048       1C Enterprise
