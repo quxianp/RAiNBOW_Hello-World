@@ -44,7 +44,17 @@ breakdown = aggregate.lines.map do |l|
   m = l.match(/\A\s*([\d.]+)\s*%\s+(\d+)\s+(\S.*?)\s*\z/)
   next unless m
 
-  { "language" => m[3].strip, "bytes" => m[2].to_i, "percent" => m[1].to_f }
+  {
+    "language" => m[3].strip,
+    "bytes" => m[2].to_i,
+    # Kept exactly as Linguist printed it. Parsing to Float and reprinting at
+    # four decimals manufactured precision the source does not have: Linguist
+    # prints "1.01" for HTML, and reformatting that produced "1.0100", which
+    # reads as a measured 1.0100 rather than a rounded 1.01. The exact value is
+    # 14336/1417216 = 1.011561 %.
+    "percent" => m[1].to_f,
+    "percent_raw" => m[1],
+  }
 end.compact
 
 if breakdown.empty?
@@ -73,6 +83,10 @@ puts "counted bytes                : #{payload['aggregate_counted_bytes']}"
 puts "largest share                : #{payload['largest_share_percent']}%"
 puts "smallest share               : #{payload['smallest_share_percent']}%"
 puts "top 8:"
-breakdown.first(8).each { |b| puts format("  %-30s %8d B  %6.4f %%", b["language"], b["bytes"], b["percent"]) }
+breakdown.first(8).each do |b|
+  puts format("  %-30s %8d B  %5s %% (%0.6f %% exact)",
+              b["language"], b["bytes"], b["percent_raw"],
+              100.0 * b["bytes"] / payload["aggregate_counted_bytes"])
+end
 
 exit 0
