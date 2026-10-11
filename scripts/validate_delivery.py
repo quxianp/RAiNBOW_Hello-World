@@ -198,6 +198,35 @@ try:
 except Exception as exc:  # noqa: BLE001
     print(f"animation checks skipped ({exc})")
 
+# ------------------------------------------------- generators must actually run
+# Grepping the source for the right strings is not enough: a shipped
+# `{end}`-instead-of-`{END}` typo made update_readme_assets.py die with a
+# NameError on every invocation while the README still looked perfectly fine,
+# because the previous text was simply never replaced.
+GENERATORS = [
+    ["scripts/update_readme_assets.py", "--check"],
+    ["scripts/update_readme_showcase.py", "--check"],
+]
+for cmd in GENERATORS:
+    try:
+        proc = subprocess.run([sys.executable] + cmd, cwd=str(ROOT),
+                              capture_output=True, text=True, timeout=180)
+    except Exception as exc:  # noqa: BLE001
+        fails.append(f"{cmd[0]} could not be run ({exc})")
+        continue
+    if proc.returncode != 0:
+        tail = (proc.stderr or proc.stdout or "").strip().splitlines()[-1:]
+        fails.append(f"{' '.join(cmd)} exited {proc.returncode}: {tail[0] if tail else ''}")
+    else:
+        print(f"generator ok: {' '.join(cmd)}")
+
+# Every script must at least compile.
+for py in sorted((ROOT / "scripts").glob("*.py")):
+    try:
+        compile(py.read_text(encoding="utf-8"), str(py), "exec")
+    except Exception as exc:  # noqa: BLE001
+        fails.append(f"{py.name} does not compile: {str(exc)[:90]}")
+
 print()
 if fails:
     print(f"FAILED ({len(fails)}):")
