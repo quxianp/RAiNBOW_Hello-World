@@ -327,14 +327,18 @@ else
 fi
 
 log "=== run.sh done ==="
-exit 0
 
 # --------------------------------------------------------------------------
 # 9. a short animated hold, so a recording never ends on a frozen frame while
 #    the tape is still waiting for its sleep to expire.
+#    Must come BEFORE the exit below -- a first attempt appended this after
+#    `exit 0`, where it was unreachable, which left the back half of the
+#    recording completely static.
 # --------------------------------------------------------------------------
 if [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; then
   # the sweep advances ~22 frames/second, so ask for a second's worth per second
   "$PY" scripts/rainbow.py --sweep "$((HOLD_SECONDS * 22))" --sweep-only \
     --width "$SHOW_WIDTH" 2>/dev/null || true
 fi
+
+exit 0

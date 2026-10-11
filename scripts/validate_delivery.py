@@ -181,6 +181,20 @@ try:
             fails.append(f"scripts/rainbow.py is missing {needle}")
     if not (ROOT / "scripts" / "brand_frames.py").is_file():
         fails.append("scripts/brand_frames.py is missing")
+    if not (ROOT / "scripts" / "spinner.py").is_file():
+        fails.append("scripts/spinner.py is missing")
+
+    # Unreachable code: the animated hold was once appended after `exit 0`, so
+    # it never ran and the back half of every recording was frozen.
+    body = "\n".join(ln for ln in show.splitlines() if not ln.lstrip().startswith("#"))
+    exit_at = body.find("\nexit 0")
+    if exit_at == -1:
+        fails.append("run.sh has no `exit 0`; the show would fall through")
+    elif "HOLD_SECONDS" in body and body.find("HOLD_SECONDS") > exit_at:
+        fails.append(
+            "run.sh reaches `exit 0` before the HOLD_SECONDS block, so the "
+            "animated hold is unreachable and the recording ends frozen"
+        )
 except Exception as exc:  # noqa: BLE001
     print(f"animation checks skipped ({exc})")
 
