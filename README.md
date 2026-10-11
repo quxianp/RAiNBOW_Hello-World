@@ -509,10 +509,21 @@ hello/manifest.json    per-language file, extension, colour, interpreter, runnab
 scripts/               fetch, merge, select, generate, balance, verify, render, record
 assets/                rainbow-bar-local.{png,svg}, rainbow-wheel.png, demo gif/mp4
 logs/                  every run, balance report and agent ledger
+docs/                  ARCHITECTURE.md, WHY-631-NOT-694.md
 run.sh                 the show
 install_deps.sh        optional dependencies, all optional
 demo.tape              VHS recording configuration
 ```
+
+Deeper reading, if you want it:
+
+| Document | What it answers |
+|---|---|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the bar is controlled by byte count, and why 2048 |
+| [docs/WHY-631-NOT-694.md](docs/WHY-631-NOT-694.md) | Why 694 files produce only 631 segments |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Adding a language, and what CI will silently revert |
+| [SECURITY.md](SECURITY.md) | What in this repository is inert data rather than code |
+| [CHANGELOG.md](CHANGELOG.md) | Every defect found, and what it was doing wrong |
 
 ---
 
