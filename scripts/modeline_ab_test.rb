@@ -58,7 +58,7 @@ Dir.glob("hello/core/**/*").each do |path|
   raw = File.binread(path)
   next unless raw.include?("-*-")
 
-  kept = raw.lines.reject { |l| l.include?(LINE_RE) }.join
+  kept = raw.lines.reject { |l| l.match?(LINE_RE) }.join
   next if kept.bytesize == raw.bytesize
 
   # Pad back to the exact original size so byte shares cannot move.
