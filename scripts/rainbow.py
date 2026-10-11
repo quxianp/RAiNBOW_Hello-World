@@ -263,6 +263,8 @@ def main() -> int:
                     help="animate the bar filling in over N frames (--bar)")
     ap.add_argument("--reveal-frames", type=int, default=0,
                     help="reveal the art over N frames (--hello)")
+    ap.add_argument("--sweep-only", action="store_true",
+                    help="run just the hue sweep, then stop (section divider)")
     ap.add_argument("--width", type=int, default=0)
     ap.add_argument("--plain", action="store_true")
     ap.add_argument("--no-animation", action="store_true")
@@ -309,6 +311,11 @@ def main() -> int:
         finally:
             sys.stdout.write(SHOW + CLEAR)
             sys.stdout.flush()
+
+    # A bare hue sweep, used by run.sh as a divider between sections so the
+    # recording keeps moving instead of holding on a static prompt.
+    if args.sweep_only:
+        return 0
 
     if both or args.bar:
         print(BOLD + "  RAiNBOW_Hello-World language bar "
