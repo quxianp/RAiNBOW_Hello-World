@@ -30,13 +30,15 @@ Type "clear"
 Enter
 Sleep 1
 
-# The show: rainbow intro sweep, roll call, parallel execution, easter egg, the
-# language bar filling in one language per frame, the block letters wiping in
-# left to right, and the true-colour greeting.
+# The show is animated throughout: 18 intro frames, a rainbow divider, the roll
+# call streaming in one name at a time with a travelling hue wave, a progress bar
+# across the whole language-execution window, the bar filling in one language per
+# frame, the block letters wiping in left to right, and an 8 s hue-sweep hold so
+# the tail is never a frozen frame while this sleep runs out.
 # --max 12 keeps the roll call short so the finale stays on screen.
 Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 45
+Sleep 42
 
 # Hold on the final rainbow Hello World! for a beat.
 Sleep 5
