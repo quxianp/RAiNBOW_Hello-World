@@ -43,9 +43,9 @@ Set FontSize 20
 Set Width 1200
 Set Height 800
 Set PlaybackSpeed 1.0
-Type "./run.sh --jobs 8"
+Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 25
+Sleep 34
 TAPE
 fi
 
@@ -59,6 +59,26 @@ if have vhs; then
   fi
 else
   log "vhs not installed; skipping GIF recording"
+fi
+
+# ---------------------------------------------------------------- GIF tuning
+# A 34 s animated recording at 30 fps lands near 7 MB, which is a lot to embed
+# in a README. Re-encode at 15 fps with a 128-colour palette: half the frames,
+# far smaller, and the motion is untouched because it is motion, not detail,
+# that makes the demo readable.
+if [ -s "$GIF" ] && have ffmpeg; then
+  log "optimising GIF (15 fps, 128 colours)"
+  if ffmpeg -y -loglevel error -i "$GIF" \
+       -vf "fps=15,scale=1000:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=sierra2_4a" \
+       -loop 0 "${GIF}.opt" >>logs/record_demo.log 2>&1 \
+     && [ -s "${GIF}.opt" ]; then
+    before=$(wc -c <"$GIF" | tr -d ' ')
+    mv -f "${GIF}.opt" "$GIF"
+    log "gif optimised: ${before} -> $(wc -c <"$GIF" | tr -d ' ') bytes"
+  else
+    log "gif optimisation failed; keeping the original"
+    rm -f "${GIF}.opt"
+  fi
 fi
 
 # ---------------------------------------------------------------- MP4 (ffmpeg)
