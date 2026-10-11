@@ -203,5 +203,42 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   argument is treated as a repository root, not a path to analyse.
 - Consequence: the audit records the aggregate breakdown only. README says so
   explicitly rather than implying per-file data exists.
+- Worked around for the one question that mattered with an A/B experiment
+  (E18), which does not need per-file output.
 - Status: ACCEPTED LIMITATION.
+
+## E18 "631 segments from 694 files" — MEASURED, and it is a ceiling
+- Open question carried over from E17: why does Linguist report 631 language
+  names when the repository contains exactly the 694 coloured-and-detectable
+  Linguist languages?
+- Hypothesis: our per-file `-*- mode: X -*-` modelines resolve to the wrong
+  language and *create* folds. `.html` is claimed by both `HTML` and `Ecmarkup`,
+  and `.erb` / `.ecr` / `.phtml` / `.cshtml` are all HTML-adjacent, so a
+  modeline saying `html` where the file is `hello.erb` would fold HTML+ERB into
+  HTML. Linguist's `Strategy::Modeline` does outrank extension detection, so the
+  hypothesis was plausible.
+- Test (`scripts/modeline_ab_test.rb`): run `github-linguist` as committed, then
+  strip the modeline line from all 686 files that carry one and pad the gap with
+  spaces, so byte totals and every share stay identical and detection is the
+  only variable.
+- Result: A = 631 languages / 1 417 216 B; B = 631 / 1 417 216; languages only in
+  A = 0, only in B = 0. **Modelines are neutral.**
+- Conclusion: the 63-name reduction is Linguist folding dialects into canonical
+  names (HTML, HTML+ECR, HTML+EEX, HTML+ERB, HTML+PHP, HTML+Razor and Ecmarkup
+  are seven files reported as one `HTML` segment of exactly 7 x 2048 B). Since the
+  file set already IS Linguist's coloured set, and folding is independent of
+  annotations, **631 is the ceiling for this bar**.
+- Modelines kept: they are harmless and make each file self-describing.
+- Status: RESOLVED as "not a bug", with evidence. README section 6 now states the
+  ceiling and shows the A/B table instead of promising a fix.
+
+## E19 Committing as the wrong identity
+- Symptom: every commit, local and from CI, was authored by `RAiNBOW Bot
+  <rainbow@example.com>` / `rainbow-bot <rainbow-bot@users.noreply.github.com>`.
+- Fix: repository and global git identity set to
+  `quxianp <quxianp@users.noreply.github.com>` (the account behind the remote
+  and the credential store), and all three `git config user.*` blocks in
+  `.github/workflows/rainbow.yml` updated to match, so bot-published commits are
+  attributed to the account too.
+- Status: RESOLVED.
 

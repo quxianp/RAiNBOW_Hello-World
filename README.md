@@ -175,16 +175,36 @@ API to the byte:
 The full report is committed at `logs/linguist_audit.json`. Hard-reload the page
 and the panel agrees.
 
-**Why 631 segments from 694 files.** All 694 core files are counted - the byte
-total matches to within two files - but some names fold together. The clearest
-case is the HTML family: `HTML`, `HTML+ECR`, `HTML+EEX`, `HTML+ERB`, `HTML+PHP`,
-`HTML+Razor` and `Ecmarkup` are seven files that Linguist reports as a single
-`HTML` segment of exactly 7 x 2048 B, so those six dialects do not get their own
-colour stripe. A few names are canonicalised rather than dropped
-(`Vim script` -> `Vim Script`, `KoLmafia ASH` -> `KoLMafia ASH`). Recovering the
-extra stripes means getting Linguist to honour our per-file modelines for dialect
-extensions; the audit job is in place to measure that when Linguist can report
-per-file classification.
+**Why 631 segments from 694 files - and why that is the ceiling.** All 694 core
+files are counted (the byte total matches to within two files), but Linguist
+folds some names together. The clearest case is the HTML family: `HTML`,
+`HTML+ECR`, `HTML+EEX`, `HTML+ERB`, `HTML+PHP`, `HTML+Razor` and `Ecmarkup` are
+seven files reported as a single `HTML` segment of exactly 7 x 2048 B, so those
+six dialects get no stripe of their own. `.html` is claimed by both `HTML` and
+`Ecmarkup` in `languages.yml`, which is exactly the kind of ambiguity that makes
+Linguist collapse them.
+
+The obvious suspect was our per-file `-*- mode: X -*-` modelines, so that was
+measured rather than assumed. `scripts/modeline_ab_test.rb` runs Linguist on the
+checkout as committed, then strips the modeline line from all 686 files that have
+one and pads the gap with spaces, so the byte totals - and therefore every share
+- are identical and detection is the only variable:
+
+| Run | Languages | Counted bytes |
+|---|---|---|
+| A - as committed | 631 | 1 417 216 |
+| B - modelines removed | 631 | 1 417 216 |
+| Languages only in A / only in B | 0 / 0 | - |
+
+**Modelines are neutral.** They neither cause the fold nor recover anything, so
+they are kept only because they make each file self-describing. Since the
+repository already contains exactly the 694 coloured-and-detectable Linguist
+languages, and folding removes 63 names no matter how the files are annotated,
+**631 is the ceiling for this bar** - not something that can be engineered higher
+without dropping languages GitHub merges anyway.
+
+Reports: [`logs/linguist_audit.json`](logs/linguist_audit.json) and
+[`logs/modeline_ab.json`](logs/modeline_ab.json).
 
 
 ---
