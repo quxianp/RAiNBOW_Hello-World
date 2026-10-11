@@ -24,12 +24,20 @@ RUN_LOG="logs/run.log"
 QUIET=0
 JOBS=8
 MAX_SHOWN=50
+# Motion budget for the recorded demo. These only take effect on a real
+# terminal; pipes and CI logs get the static render.
+BRAND_FRAMES=18
+BRAND_DELAY=0.055
+BAR_FRAMES=44
+REVEAL_FRAMES=30
 
 while [ $# -gt 0 ]; do
   case "$1" in
     --quiet|-q) QUIET=1 ;;
     --jobs|-j) shift; JOBS="${1:-8}" ;;
     --max) shift; MAX_SHOWN="${1:-50}" ;;
+    --motion) shift; BRAND_FRAMES="${1:-18}" ;;
+    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0 ;;
     --help|-h)
       sed -n '2,20p' "$0"; exit 0 ;;
     *) ;;
@@ -96,32 +104,23 @@ banner_line() {
   printf '%s' "$(rgb 255 105 180)RAiNBOW$HUE "" ; "
 }
 
-# Animated hue sweep of the word RAiNBOW
+# Animated hue sweep of the word RAiNBOW.
+#
+# The maths used to live here and was wrong: `h` was computed per character and
+# then thrown away in favour of `rgb 255 255 255`, so every frame rendered the
+# banner pure white. It now lives in scripts/brand_frames.py, which collapses to
+# a single static line when stdout is not a terminal.
 animated_brand() {
   if [ "$QUIET" = "1" ] || [ ! -t 1 ]; then
     printf '%sRAiNBOW_Hello-World%s\n' "$C_BOLD" "$C_RESET"
     return
   fi
-  local msg="RAiNBOW_Hello-World"
-  local n=${#msg}
-  local frame
-  for frame in 0 1 2 3 4 5 6 7; do
-    printf '%s' "$CLEAR"
-    printf '  %s' "$C_BOLD"
-    local i
-    for (( i = 0; i < n; i++ )); do
-      local ch="${msg:$i:1}"
-      local h
-      h=$(( ( (frame * 24 + i * 8) % 360 ) ))
-      printf '%s' "$(rgb 255 255 255)"
-      printf '%s' "$ch"
-    done
-    printf '%s\n' "$C_RESET"
-    printf '  %s%06d+ languages on the bar  .  %s byte-balanced rainbow%s\n' \
-      "$C_DIM" "$CORE_COUNT" "$C_RESET" "$C_RESET"
-    sleep 0.08
-  done
-  printf '%s' "$CLEAR"
+  "$PY" scripts/brand_frames.py \
+    --frames "$BRAND_FRAMES" \
+    --delay "$BRAND_DELAY" \
+    --subtitle "$(printf '%s%06d+ languages on the bar  .  %s byte-balanced rainbow' \
+                     "$C_DIM" "$CORE_COUNT" "$C_RESET")" 2>/dev/null \
+    || printf '%sRAiNBOW_Hello-World%s\n' "$C_BOLD" "$C_RESET"
 }
 
 # --------------------------------------------------------------------------
@@ -266,10 +265,12 @@ fi
 #    easter egg pushed it off screen.
 # --------------------------------------------------------------------------
 printf '\n'
-"$PY" scripts/rainbow.py --bar --width 108 2>/dev/null || true
+"$PY" scripts/rainbow.py --bar --fill-frames "$BAR_FRAMES" --width 108 2>/dev/null \
+  || "$PY" scripts/rainbow.py --bar --width 108 2>/dev/null || true
 
 printf '\n'
-"$PY" scripts/rainbow.py --hello --width 108 2>/dev/null || printf '%s\n' "$ART"
+"$PY" scripts/rainbow.py --hello --reveal-frames "$REVEAL_FRAMES" --width 108 2>/dev/null \
+  || "$PY" scripts/rainbow.py --hello --width 108 2>/dev/null || printf '%s\n' "$ART"
 
 printf '\n'
 final_rainbow_hello() {
