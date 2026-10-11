@@ -210,6 +210,9 @@ GENERATORS = [
     # were hand-written. Nothing caught it: no broken image, no build failure,
     # the page just scrolled nowhere when a reader clicked.
     ["scripts/check_readme_links.py"],
+    # Same failure mode, wider blast radius: broken references in docs/ are
+    # never revisited once written.
+    ["scripts/check_docs_links.py"],
     # Re-derives the equal-size invariant from disk. Equal size is equal share,
     # which is the only reason the hue ordering is visible at all -- and the
     # manifest cannot be the thing that checks it, because a broken generator
