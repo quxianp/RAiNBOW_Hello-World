@@ -143,6 +143,14 @@ The padding is idempotent — re-running the balancer produces a zero-byte diff.
 
 ### 4. Hue-ordered colour wheel
 
+<div align="center">
+
+![The colour wheel: 694 core languages ordered by hue](assets/rainbow-wheel.png)
+
+*694 core languages, ordered by the hue of their Linguist colour — one wedge each.*
+
+</div>
+
 Core languages are sorted by the HSL hue of their Linguist colour, so the bar
 reads as a continuous sweep instead of a random confetti. The 694 segments
 distribute across the wheel like this:
