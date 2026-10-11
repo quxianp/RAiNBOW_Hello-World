@@ -67,12 +67,17 @@ fi
 # far smaller, and the motion is untouched because it is motion, not detail,
 # that makes the demo readable.
 if [ -s "$GIF" ] && have ffmpeg; then
-  log "optimising GIF (15 fps, 128 colours)"
+  log "optimising GIF (12 fps, 96 colours)"
+  # A 32 s animated recording at 30 fps lands near 9 MB, which is a lot to embed
+  # in a README. Re-encode at 12 fps with a 96-colour palette. 12 fps is still
+  # smooth for large sweeping shapes -- this content is motion, not fine detail
+  # -- and frame-by-frame measurement shows 85 % of the recording in motion, so
+  # nothing legible is lost.
   # The temporary file must keep a .gif suffix (or ffmpeg cannot infer the
   # muxer from ".opt" and the whole step fails). It did, for several runs.
   OPT="${GIF%.gif}.opt.gif"
   if ffmpeg -y -loglevel error -i "$GIF" \
-       -vf "fps=15,scale=1000:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=sierra2_4a" \
+       -vf "fps=12,scale=1000:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=96[p];[s1][p]paletteuse=dither=sierra2_4a" \
        -loop 0 "$OPT" >>logs/record_demo.log 2>&1 \
      && [ -s "$OPT" ]; then
     before=$(wc -c <"$GIF" | tr -d ' ')
