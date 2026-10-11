@@ -62,30 +62,43 @@ on your machine.
 
 ## 🎬 The show
 
-![all 631 languages, drawn from the GitHub API](assets/rainbow-bar-github.png)
+<div align="center">
 
-![rainbow bar, hue-ordered](assets/rainbow-bar-local.png)
+<table>
+<tr>
+<td width="50%" valign="top">
 
-![demo](assets/hello-world.gif)
+<img src="assets/rainbow-bar-github.png" alt="The GitHub language bar: all 631 languages, each named with its real share">
 
-[⬇↓ Download the MP4](assets/hello-world.mp4)
+<br><sub><b>All 631 languages.</b><br>Drawn from <code>GET /repos/&#8230;/languages</code>—the breakdown GitHub itself serves.</sub>
 
-> **First image** — drawn from `GET /repos/.../languages`, the exact breakdown
-> GitHub uses. The bar, plus **all 631 languages listed by name** with their
-> colour and their real share — C, C++, C#, Java, Go, Rust, Python, TypeScript,
-> Fortran, Assembly, Zig down to `xBase` and `Zil`. Nothing is hidden behind an
-> "Other" bucket.
->
-> **Why that image exists:** GitHub's own legend can only name a handful of
-> languages and collapses the remaining 600+ into a single grey **Other** row, so
-> C and C++ never appear by name on the site no matter how the repository is
-> built. The bar itself does contain them — it is 631 hair-thin segments — but
-> the legend will not say so.
->
-> **Second image** — the same 694 Linguist colours ordered by hue, generated
-> deterministically from `config/rainbow_langs.json`, so it is always current.
->
-> **GIF and MP4** — `run.sh` recorded with VHS in GitHub Actions.
+</td>
+<td width="50%" valign="top">
+
+<img src="assets/rainbow-bar-local.png" alt="The hue sweep: 694 Linguist colours ordered by hue">
+
+<br><sub><b>The hue sweep.</b><br>694 Linguist colours, ordered by hue.</sub>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<div align="center">
+
+<img src="assets/hello-world.gif" width="820" alt="run.sh: the animated show, ending on a true-colour Hello World!">
+
+<br><sub>⬇↓ <a href="assets/hello-world.mp4">Download the MP4</a> — <code>run.sh</code> recorded with VHS in GitHub Actions.</sub>
+
+</div>
+
+> **Why the bar is drawn rather than screenshotted.** GitHub's own legend can
+> only name the largest handful of languages and collapses the remaining 600+
+> into a single grey <b>Other</b> row, so C and C++ never appear by name on the
+> site no matter how this repository is built. The bar itself does contain them
+> — 631 hair-thin segments — but the legend will not say so, which is why both
+> images above are generated from the JSON GitHub itself serves.
 
 <!-- RAINBOW_ASSETS_END -->
 

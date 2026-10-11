@@ -69,7 +69,7 @@ BLOCK_TEMPLATE = f"""{START}
 > {DASH} 631 hair-thin segments {DASH} but the legend will not say so, which is why both
 > images above are generated from the JSON GitHub itself serves.
 
-{end}"""
+{END}"""
 
 PATTERN = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
 
