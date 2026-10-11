@@ -22,13 +22,13 @@
 **Contents**
 
 [🎬 The show](#-the-show) ·
-[🌈 How the rainbow is engineered](#-how-the-rainbow-is-engineered) ·
-[🗂️ Where the languages came from](#%EF%B8%8F-where-the-7326-languages-came-from) ·
-[▶️ Running it](#%EF%B8%8F-running-it) ·
-[✅ Acceptance checks](#-acceptance-checks) ·
-[🧱 Layout](#-layout) ·
-[📎 Dependencies](#-dependencies-and-fallbacks) ·
-[🎓 Acknowledgements](#-acknowledgements)
+[🌈 How the rainbow is engineered](#how-the-rainbow-is-engineered) ·
+[🗂️ Where the 7 325 languages came from](#where-the-7-325-languages-came-from) ·
+[▶️ Running it](#running-it) ·
+[✅ Acceptance checks](#acceptance-checks) ·
+[🧱 Layout](#layout) ·
+[📎 Dependencies and fallbacks](#dependencies-and-fallbacks) ·
+[🎓 Acknowledgements](#acknowledgements)
 
 </div>
 
