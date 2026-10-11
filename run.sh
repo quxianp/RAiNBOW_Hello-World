@@ -30,6 +30,9 @@ BRAND_FRAMES=18
 BRAND_DELAY=0.055
 BAR_FRAMES=44
 REVEAL_FRAMES=30
+ROLL_DELAY=0.07
+DIVIDER_FRAMES=14
+SHOW_WIDTH=108
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -37,7 +40,7 @@ while [ $# -gt 0 ]; do
     --jobs|-j) shift; JOBS="${1:-8}" ;;
     --max) shift; MAX_SHOWN="${1:-50}" ;;
     --motion) shift; BRAND_FRAMES="${1:-18}" ;;
-    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0 ;;
+    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0; DIVIDER_FRAMES=0 ;;
     --help|-h)
       sed -n '2,20p' "$0"; exit 0 ;;
     *) ;;
@@ -141,30 +144,36 @@ core_names() {
   fi
 }
 
+# A few frames of moving rainbow between sections, so the recording never sits
+# on a static prompt for long.
+divider() {
+  [ "$DIVIDER_FRAMES" -le 0 ] && return 0
+  [ -t 1 ] || return 0
+  "$PY" scripts/rainbow.py --sweep "$DIVIDER_FRAMES" --sweep-only \
+    --width "$SHOW_WIDTH" 2>/dev/null || true
+}
+
 roll_call() {
-  local total=0 shown=0 name
   printf '  %sBooting %s core languages%s\n' "$C_DIM" "$CORE_COUNT" "$C_RESET"
-  while IFS= read -r name; do
-    [ -z "$name" ] && continue
-    total=$((total + 1))
-    [ "$QUIET" = "1" ] && continue
-    if [ "$shown" -lt "$MAX_SHOWN" ]; then
-      shown=$((shown + 1))
-      printf '    %s+%s %s\n' "$(rgb 120 220 120)" "$C_RESET" "$name"
-    fi
-  done < <(core_names)
-  # `total` counts every name in the manifest, `shown` only the ones printed,
-  # so "+N more" reflects what was actually withheld.
-  local more=$((total - shown))
-  [ "$more" -lt 0 ] && more=0
-  if [ "$more" -gt 0 ]; then
-    printf '    %s... +%d more core languages%s\n' "$C_DIM" "$more" "$C_RESET"
+  if [ "$QUIET" = "1" ]; then
+    core_names | head -n "$MAX_SHOWN" | while IFS= read -r name; do
+      [ -n "$name" ] && printf '    %s+%s %s\n' "$(rgb 120 220 120)" "$C_RESET" "$name"
+    done
+    printf '    %s... +%d more core languages%s\n' \
+      "$C_DIM" "$((CORE_COUNT - MAX_SHOWN > 0 ? CORE_COUNT - MAX_SHOWN : 0))" "$C_RESET"
+  else
+    # scripts/roll_call.py emits the names one at a time with a travelling hue
+    # wave; it degrades to a plain listing when stdout is not a terminal.
+    "$PY" scripts/roll_call.py --max "$MAX_SHOWN" --delay "$ROLL_DELAY" \
+      --total "$CORE_COUNT" 2>/dev/null \
+      || core_names | head -n "$MAX_SHOWN"
   fi
   printf '    %s+%s full-layer languages present in hello/full (%s files)\n' \
     "$(rgb 120 220 120)" "$C_RESET" "$FULL_COUNT"
   printf '\n'
 }
 
+divider
 roll_call
 
 # --------------------------------------------------------------------------
@@ -265,12 +274,13 @@ fi
 #    easter egg pushed it off screen.
 # --------------------------------------------------------------------------
 printf '\n'
-"$PY" scripts/rainbow.py --bar --fill-frames "$BAR_FRAMES" --width 108 2>/dev/null \
-  || "$PY" scripts/rainbow.py --bar --width 108 2>/dev/null || true
+divider
+"$PY" scripts/rainbow.py --bar --fill-frames "$BAR_FRAMES" --width "$SHOW_WIDTH" 2>/dev/null \
+  || "$PY" scripts/rainbow.py --bar --width "$SHOW_WIDTH" 2>/dev/null || true
 
 printf '\n'
-"$PY" scripts/rainbow.py --hello --reveal-frames "$REVEAL_FRAMES" --width 108 2>/dev/null \
-  || "$PY" scripts/rainbow.py --hello --width 108 2>/dev/null || printf '%s\n' "$ART"
+"$PY" scripts/rainbow.py --hello --reveal-frames "$REVEAL_FRAMES" --width "$SHOW_WIDTH" 2>/dev/null \
+  || "$PY" scripts/rainbow.py --hello --width "$SHOW_WIDTH" 2>/dev/null || printf '%s\n' "$ART"
 
 printf '\n'
 final_rainbow_hello() {
