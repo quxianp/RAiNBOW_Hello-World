@@ -336,3 +336,31 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   derived number over the tool that produced it.
 - Status: RESOLVED.
 
+## E25 The template matcher invented languages
+- Symptom: a JASS file containing `echo 'Hello World!'`, an Objective-J file with
+  the same, and a `Go Module` file containing an entire Go program. All of them
+  valid in *some* language, none of them valid in the language they were named
+  after.
+- Cause: `program_for()` fell back to matching the first word of the language
+  name, then the file extension. `.j` matched a shell template, `.q` matched
+  kdb+/q, `.k` matched kdb+/k, `.r` matched R, `.v` matched V-lang, and the word
+  "Binary" matched "Binary Brainfuck".
+- Why nothing caught it: every file was still valid syntax, byte balance was
+  unaffected (padding absorbs any length), and all 19 acceptance checks passed.
+  The pipeline verified the *bytes*, never the *language*.
+- Scale: 156 languages matched via the heuristics. All 156 were audited by hand:
+  81 were genuine dialects that legitimately share a parent's syntax (Bash Shell
+  <- bash, C++ AMP <- c++, Idris 2 <- idris), 34 were wrong, 41 were judgement
+  calls resolved in favour of correctness.
+- Fix: inheritance is now an explicit 96-entry allowlist (`INHERIT`) mapping each
+  child to the template it legitimately shares. Heuristics deleted. Curated
+  coverage rose 279 -> 374 with zero false positives.
+- Second defect in the same area: the manifest recorded `real_template` as
+  `name.lower() in HELLO`, an exact test, while the generator applied four fuzzy
+  strategies. The manifest therefore under-reported coverage (279) while
+  overstating correctness. Both call sites now call `program_for()`.
+- Regression guard: `scripts/check_templates.py`, wired into `validate_delivery.py`.
+  Its first version matched the comment documenting the heuristic rather than the
+  code, so it failed on its own documentation; it now strips comments first.
+- Status: RESOLVED.
+
