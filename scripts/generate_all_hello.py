@@ -776,21 +776,148 @@ def banner(ext: str, name: str, color: str | None, hue: float | None) -> str:
     return ""
 
 
+# ---------------------------------------------------------------------------
+# Verified dialect inheritance: child -> the template it legitimately shares.
+#
+# Every entry is a documented dialect, variant or edition of a language we
+# have a real template for. This replaces the old first-word and extension-stem
+# heuristics, which invented false matches (JASS <- shell, Go Module <- a full
+# Go program, Binary Brainfuck <- the word 'Binary').
+#
+# A language absent from this table does not get someone else's program; it
+# keeps the honest 'no curated template' note.
+# ---------------------------------------------------------------------------
+INHERIT: dict[str, str] = {
+    "agda 2": "agda",
+    "agda views": "agda",
+    "apl j": "apl",
+    "arduino micropython": "arduino",
+    "avro idl": "avro",
+    "bash shell": "bash",
+    "bazel skylark": "bazel",
+    "bibtex style": "bibtex",
+    "bluespec bh": "bluespec",
+    "brainfuck 2.0": "brainfuck",
+    "brainfuck extended": "brainfuck",
+    "brainfuck variants": "brainfuck",
+    "brainfuck--": "brainfuck",
+    "c alternative tokens": "c",
+    "c calculus": "c",
+    "c data types": "c",
+    "c flat": "c",
+    "c flat --": "c",
+    "c preprocessor": "c",
+    "c shell": "c",
+    "c string handling": "c",
+    "c to hdl": "c",
+    "c++ amp": "c++",
+    "c--": "c",
+    "cairo zero": "cairo",
+    "chisel verified": "chisel",
+    "clojure edn": "clojure",
+    "coff object": "coff",
+    "csh tcsh": "csh",
+    "cue sheet": "cue",
+    "deadfish pda": "deadfish",
+    "deadfish tm": "deadfish",
+    "ecmarkup": "html",
+    "elm html": "elm",
+    "elvish transcript": "elvish",
+    "erlang elixir": "erlang",
+    "erlang processes": "erlang",
+    "fish code": "fish",
+    "graphql federation": "graphql",
+    "groovy server pages": "groovy",
+    "haskell curry": "haskell",
+    "idris 2": "idris",
+    "idris cadence": "idris",
+    "idris views": "idris",
+    "ignore list": "gitignore",
+    "java groovy": "java",
+    "java join java": "java",
+    "java processing": "java",
+    "java technology": "java",
+    "java threads": "java",
+    "javascript learning": "javascript",
+    "javascript osa": "javascript",
+    "javascript promises": "javascript",
+    "javascript templating": "javascript",
+    "jsoniq": "jq",
+    "julia quantum": "julia",
+    "julia shell": "julia",
+    "lean 4": "lean",
+    "lisp arc": "lisp",
+    "lisp clojure": "lisp",
+    "m4sugar": "m4",
+    "malbolge reborn": "malbolge",
+    "malbolge unshackled": "malbolge",
+    "moon girl": "moon",
+    "motorola 68k assembly": "asm",
+    "ook!": "ook",
+    "open policy agent": "rego",
+    "perl 5": "perl",
+    "perl raku": "perl",
+    "python but annoying": "python",
+    "python but bad": "python",
+    "python but worst": "python",
+    "python server pages": "python",
+    "python tutor": "python",
+    "r + s": "r",
+    "r books": "r",
+    "r language": "r",
+    "ruby central": "ruby",
+    "ruby mri": "ruby",
+    "ruby on rails": "ruby",
+    "rust contract": "rust",
+    "scheme guile": "scheme",
+    "self hosted": "self",
+    "sh ksh": "sh",
+    "shell builtin": "shell",
+    "shell script": "shell",
+    "shell shoveling": "shell",
+    "tcl tea": "tcl",
+    "tcsh shell": "tcsh",
+    "text editing": "text",
+    "text encoding initiative": "text",
+    "text processing utility": "text",
+    "vhdl ams": "vhdl",
+    "webassembly text format": "webassembly",
+    "yaml 1.2": "yaml",
+    "zsh plugins": "zsh",
+}
+
+
 def program_for(name: str, ext: str) -> tuple[str, bool]:
-    """Return (program text, is_known_real_program)."""
+    """Return (program text, is_known_real_program).
+
+    Two separate questions, deliberately not conflated:
+
+    * *Does a correct Hello World exist for this language?* Only the HELLO
+      table can answer that. A key has to be there.
+    * *Which language's program is the closest relative?* INHERIT answers that,
+      and only for parent/child pairs a human has checked -- see below.
+    """
     key = name.lower().strip()
     if key in HELLO:
         return HELLO[key], True
-    # try progressively looser keys
     simple = re.sub(r"\s+", " ", key)
     if simple in HELLO:
         return HELLO[simple], True
-    first = key.split(" ")[0]
-    if first in HELLO:
-        return HELLO[first], True
-    stem = ext.lstrip(".").lower()
-    if stem and stem in HELLO:
-        return HELLO[stem], True
+
+    # Deliberately NOT a heuristic. The previous code fell back to
+    # `key.split(" ")[0]` and to the extension stem, which produced confident
+    # nonsense: JASS and Objective-J inherited `echo 'Hello World!'` from a
+    # shell template because both use `.j`; Go Module inherited a whole Go
+    # program although a go.mod contains module declarations; Binary
+    # Brainfuck inherited the word "Binary". 34 of the 156 languages that
+    # matched were wrong in exactly this way, and the file looked plausible
+    # enough that nobody would have caught it by eye.
+    #
+    # Inheritance is now an explicit allowlist, so it is auditable: every entry
+    # below is a documented dialect or variant of the language it names.
+    inherited = INHERIT.get(key)
+    if inherited and inherited in HELLO:
+        return HELLO[inherited], True
     return "", False
 
 
@@ -1031,7 +1158,14 @@ def main() -> int:
                 "hue": rec.get("hue"),
                 "modeline": rec.get("modeline_alias"),
                 "runner": RUNNERS.get(name.lower()),
-                "real_template": name.lower() in HELLO,
+                # Use the same lookup build_file() uses. Testing `name in HELLO`
+                # here understated coverage by 156 files: program_for() also
+                # matches on normalised whitespace, first word and extension
+                # stem, so a file could be generated from a real template while
+                # the manifest claimed it was a placeholder -- which is exactly
+                # what the README's "26.1 % have a curated template" figure was
+                # reporting.
+                "real_template": program_for(name, ext)[1],
             }
         )
 
@@ -1070,7 +1204,9 @@ def main() -> int:
                 "color": f"#{rec['color']}" if rec.get("color") else None,
                 "hue": None,
                 "runner": RUNNERS.get(rec["name"].lower()),
-                "real_template": rec["name"].lower() in HELLO,
+                # Same fix as the core layer: ask program_for(), which is what
+                # actually decided the file's contents.
+                "real_template": program_for(rec["name"], ext)[1],
             }
         )
 

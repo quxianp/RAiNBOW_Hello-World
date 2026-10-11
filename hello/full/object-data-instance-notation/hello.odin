@@ -1,11 +1,9 @@
 # Object Data Instance Notation - Hello World! :: RAiNBOW_Hello-World
+#   note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
 #   colour     : not assigned by Linguist
 #   layer      : full (byte-balanced rainbow bar)
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-package main
-import "core:fmt"
-main :: proc() {
-	fmt.println("Hello World!")
-}
+# Hello World!
+# Hello World!

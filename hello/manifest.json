@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 279,
+ "with_curated_template": 374,
  "runnable_command_count": 51,
  "files": [
   {
@@ -16,7 +16,7 @@
    "hue": 0.0,
    "modeline": "ignore-list",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "YARA",
@@ -532,7 +532,7 @@
    "hue": 0.66,
    "modeline": "cairo-zero",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Clojure",
@@ -1300,7 +1300,7 @@
    "hue": 25.81,
    "modeline": "ecmarkup",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FPP",
@@ -3196,7 +3196,7 @@
    "hue": 120.0,
    "modeline": "elvish-transcript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OMNeT++ MSG",
@@ -3424,7 +3424,7 @@
    "hue": 145.14,
    "modeline": "jsoniq",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CSV",
@@ -4504,7 +4504,7 @@
    "hue": 196.27,
    "modeline": "groovy-server-pages",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MiniZinc",
@@ -4576,7 +4576,7 @@
    "hue": 197.14,
    "modeline": "open-policy-agent",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Agda",
@@ -5212,7 +5212,7 @@
    "hue": 207.18,
    "modeline": "motorola-68k-assembly",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GEDCOM",
@@ -5824,7 +5824,7 @@
    "hue": 217.14,
    "modeline": "bluespec-bh",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Apollo Guidance Computer",
@@ -6040,7 +6040,7 @@
    "hue": 224.94,
    "modeline": "avro-idl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ring",
@@ -10081,7 +10081,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Agda Views",
@@ -10092,7 +10092,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Agda-Coq",
@@ -12237,7 +12237,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "APOL",
@@ -12567,7 +12567,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Arepo",
@@ -14503,7 +14503,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Basic Binaries",
@@ -14624,7 +14624,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BBC Micro",
@@ -15427,7 +15427,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bidiroop",
@@ -17385,7 +17385,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "brainfuck 4 humans",
@@ -17407,7 +17407,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Brainfuck+",
@@ -17462,7 +17462,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "brainfuck2",
@@ -18705,7 +18705,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C Calculus",
@@ -18716,7 +18716,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C data types",
@@ -18727,7 +18727,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C Flat",
@@ -18738,7 +18738,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C flat --",
@@ -18749,7 +18749,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C preprocessor",
@@ -18760,7 +18760,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C Sharp",
@@ -18782,7 +18782,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C string handling",
@@ -18793,7 +18793,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C to HDL",
@@ -18804,7 +18804,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C++ AMP",
@@ -18815,7 +18815,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C+++",
@@ -18848,7 +18848,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C-- compiler",
@@ -20487,7 +20487,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CHM",
@@ -21191,7 +21191,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ClojureScript",
@@ -21675,7 +21675,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cogc",
@@ -23578,7 +23578,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CSL",
@@ -23743,7 +23743,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cufrab",
@@ -24931,7 +24931,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Deadfish TM",
@@ -24942,7 +24942,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Deadfish++",
@@ -28396,7 +28396,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Elog",
@@ -29122,7 +29122,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Erlang Processes",
@@ -29133,7 +29133,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ero",
@@ -31179,7 +31179,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Fishing",
@@ -35249,7 +35249,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Graphwalk",
@@ -36338,7 +36338,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HASSL",
@@ -38296,7 +38296,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Idris Cadence",
@@ -38307,7 +38307,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Idris Views",
@@ -38318,7 +38318,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "IDTM",
@@ -40694,7 +40694,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Join Java",
@@ -40705,7 +40705,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Processing",
@@ -40716,7 +40716,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java technology",
@@ -40727,7 +40727,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java Threads",
@@ -40738,7 +40738,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Java2K",
@@ -40793,7 +40793,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JavaScript OSA",
@@ -40804,7 +40804,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JavaScript Promises",
@@ -40815,7 +40815,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JavaScript Style Sheets",
@@ -40837,7 +40837,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JavaSPL",
@@ -41486,7 +41486,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Julia Shell",
@@ -41497,7 +41497,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jumble",
@@ -43389,7 +43389,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Learn",
@@ -44324,7 +44324,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lisp Clojure",
@@ -44335,7 +44335,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lisparser",
@@ -45435,7 +45435,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ma",
@@ -45842,7 +45842,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Malbolge Unshackled",
@@ -45853,7 +45853,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Malfunge",
@@ -48988,7 +48988,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "mop",
@@ -53278,7 +53278,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ook!+",
@@ -55291,7 +55291,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Perl Raku",
@@ -55302,7 +55302,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Perligata",
@@ -59119,7 +59119,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Python But Bad",
@@ -59130,7 +59130,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Python but WORST",
@@ -59141,7 +59141,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Python Server Pages",
@@ -59152,7 +59152,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Python Tutor",
@@ -59163,7 +59163,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PythonAnywhere",
@@ -60142,7 +60142,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "R Books",
@@ -60153,7 +60153,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "R language",
@@ -60164,7 +60164,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "R++",
@@ -63046,7 +63046,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ruby MRI",
@@ -63057,7 +63057,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ruby on Rails",
@@ -63068,7 +63068,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RubyCocoa",
@@ -63288,7 +63288,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RWLR",
@@ -64003,7 +64003,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Schmuu",
@@ -64586,7 +64586,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Self-driving car",
@@ -65290,7 +65290,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Shading",
@@ -65389,7 +65389,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Shell script",
@@ -65400,7 +65400,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Shell shoveling",
@@ -65411,7 +65411,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "shellcheck",
@@ -71318,7 +71318,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Tcsh",
@@ -71340,7 +71340,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TDM-GCC",
@@ -72011,7 +72011,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Text Encoding Initiative",
@@ -72022,7 +72022,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Text Processing Utility",
@@ -72033,7 +72033,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "text/template",
@@ -76389,7 +76389,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "VHDL-AMS",
@@ -77709,7 +77709,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "WebDNA",
@@ -79612,7 +79612,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Yanbing",
@@ -80437,7 +80437,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Zstandard binary",
