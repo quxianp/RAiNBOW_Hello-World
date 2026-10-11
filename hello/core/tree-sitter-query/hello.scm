@@ -1,5 +1,4 @@
 ; -*- mode: tree-sitter-query -*-
-;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; Tree-sitter Query - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #8ea64c
 ;   hue        : 76.0 deg
@@ -8,7 +7,7 @@
 ;   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 ; Hello World!
-; Hello World!
+(_ (identifier) @name)
 ; rainbow-pad equal byte share keeps the language bar an even rainbow
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Tree-sitter Query :: RAiNBOW_Hello-World
@@ -35,4 +34,6 @@
 ; rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 ; rainbow-pad equal byte share keeps the language bar an even rainbow
 ; rainbow-pad one segment per Linguist coloured language
-; rainbow-pad Tree-sitter Query :: RAiNBOW_Hello-Wo
+; rainbow-pad Tree-sitter Query :: RAiNBOW_Hello-World
+; rainbow-pad colour #8ea64c :: padded to 100
+; rainbow-pad padding comment: 

@@ -1,5 +1,4 @@
 # -*- mode: netlinx -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # NetLinx - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0aa0ff
 #   hue        : 203.3 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+#NetLinx
+program Main
+begin
+    NetLinx("Hello World!");
+end_program
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad NetLinx :: RAiNBOW_Hello-World
@@ -37,4 +39,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad NetLinx :: RAiNBOW_Hello-World
 # rainbow-pad colour #0aa0ff :: padded to 100
-# rainbow-pad      
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+   

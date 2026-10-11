@@ -1,5 +1,4 @@
 # -*- mode: unified-parallel-c -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Unified Parallel C - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #4e3617
 #   hue        : 33.8 deg
@@ -7,8 +6,13 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+#include <stdio.h>
+#include <upc.h>
+
+int main(void) {
+    printf("Hello World!\n");
+    return 0;
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Unified Parallel C :: RAiNBOW_Hello-World
@@ -35,4 +39,5 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Unified Parallel C :: RAiNBOW_H
+# rainbow-pad Unified Parallel C :: RAiNBOW_Hello-World
+        

@@ -1,5 +1,4 @@
 # -*- mode: qml -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # QML - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #44a51c
 #   hue        : 102.5 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+import QtQuick 2.0
+
+Item {
+    property string greeting: "Hello World!"
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad QML :: RAiNBOW_Hello-World
@@ -37,4 +39,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad QML :: RAiNBOW_Hello-World
 # rainbow-pad colour #44a51c :: padded to 100
-# rainbow-pad padding comment: byte balancing f
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://gith

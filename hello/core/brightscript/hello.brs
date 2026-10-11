@@ -1,5 +1,4 @@
 # -*- mode: brightscript -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Brightscript - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #662d91
 #   hue        : 274.2 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+sub Main()
+    print "Hello World!"
+end sub
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Brightscript :: RAiNBOW_Hello-World
@@ -36,4 +36,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Brightscript :: RAiNBOW_Hello-World
-# rainbow-pad colour #662d91 :
+# rainbow-pad colour #662d91 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainb

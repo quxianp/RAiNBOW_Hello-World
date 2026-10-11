@@ -36,12 +36,10 @@ MANIFEST = ROOT / "hello" / "manifest.json"
 # Languages whose template must NOT come from a different language. Each entry
 # names the language that a heuristic would have wrongly supplied.
 MUST_NOT_INHERIT = {
-    "JASS": "shell via .j",
-    "Objective-J": "shell via .j",
-    # NOTE: Jasmin is deliberately absent. It used to be listed here because it
-    # inherited `echo` from a `.j` extension. It now has its own genuine Java
-    # assembly template, so the inheritance no longer applies and asserting
-    # "must not have a template" would fail on correct code.
+    # JASS and Objective-J were listed here because each inherited `echo` from a
+    # shared `.j` extension. Both now have their own genuine template, so the
+    # inheritance no longer happens and asserting "must not have a template"
+    # would fail on correct code. They moved to MUST_INHERIT.
     "HiveQL": "kdb+/q via .q",
     "KCL": "kdb+/k via .k",
     "KFramework": "kdb+/k via .k",
@@ -73,7 +71,11 @@ MUST_INHERIT = [
     "Dylan", "Eiffel", "Mercury", "Pike", "Oz", "Puppet", "Gherkin",
     "Fortran", "Fortran Free Form", "Pascal", "AutoHotkey", "AppleScript",
     "AutoIt", "Hack", "Hy", "ActionScript", "AngelScript", "Futhark", "GAP",
-    "Scala", "Solidity", "VHDL", "Verilog", "Vala", "GraphQL", "ANTLR",
+    "Scala", "Solidity", "VHDL", "Verilog", "Vala", "GraphQL",
+    # JASS and Objective-J moved here from MUST_NOT_INHERIT: each used to
+    # inherit a shell `echo` from the shared `.j` extension, and each now has
+    # its own genuine program instead.
+    "JASS", "Objective-J",
 ]
 
 

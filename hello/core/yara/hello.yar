@@ -1,5 +1,4 @@
 # -*- mode: yara -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # YARA - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #220000
 #   hue        : 0.0 deg
@@ -7,8 +6,15 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+rule HelloWorld
+{
+    meta:
+        description = "Hello World!"
+    strings:
+        $a = "Hello World!"
+    condition:
+        $a
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad YARA :: RAiNBOW_Hello-World
@@ -37,4 +43,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad YARA :: RAiNBOW_Hello-World
 # rainbow-pad colour #220000 :: padded to 100
-# rainbow-pad padding comment: byte balanc
+# rainbow-pad padding comme

@@ -1,5 +1,4 @@
 # -*- mode: sourcepawn -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # SourcePawn - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #f69e1d
 #   hue        : 35.7 deg
@@ -7,8 +6,12 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+#include <sourcemod>
+
+public void main()
+{
+    PrintToServer("Hello World!");
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad SourcePawn :: RAiNBOW_Hello-World
@@ -37,3 +40,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad SourcePawn :: RAiNBOW_Hello-World
 # rainbow-pad colour #f69e1d :: padded to 100
+# rainbow-pad padding comment: byte ba

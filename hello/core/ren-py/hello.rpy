@@ -1,5 +1,4 @@
 # -*- mode: ren'py -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ren'Py - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff7f7f
 #   hue        : 0.0 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+define start = Scene()
+
+start:
+    "Hello World!"
+    return
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Ren'Py :: RAiNBOW_Hello-World
@@ -37,4 +39,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Ren'Py :: RAiNBOW_Hello-World
 # rainbow-pad colour #ff7f7f :: padded to 100
-# rainbow-pad padding commen
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad       

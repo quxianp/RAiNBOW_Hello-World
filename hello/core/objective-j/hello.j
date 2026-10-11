@@ -1,5 +1,4 @@
 # -*- mode: objective-j -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Objective-J - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff0c5a
 #   hue        : 340.7 deg
@@ -7,8 +6,14 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+#import <Foundation/Foundation.h>
+
+int main(int argc, const char *argv[]) {
+    @autoreleasepool {
+        NSLog(@"Hello World!");
+    }
+    return 0;
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Objective-J :: RAiNBOW_Hello-World
@@ -36,4 +41,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Objective-J :: RAiNBOW_Hello-World
-# rainbow-pad colour #ff0c5a :: padde
+   
