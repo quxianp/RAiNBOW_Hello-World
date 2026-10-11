@@ -267,10 +267,26 @@ reading before quoting "6 632 more languages" as if it were comparable to the 69
 formats and prose, gathered for breadth rather than because any of it is
 detectable on a colour bar.
 
-Coverage is equally uneven, and the README should not imply otherwise: **26.1 %**
-of core files have a curated Hello World template and **7.1 %** have a runner, so
-`run.sh` genuinely executes a small minority. The rest are byte-balanced stubs
-whose job is to be detected and coloured, not to compile.
+Coverage is uneven, and the README should not imply otherwise: **27.5 %** of core
+files have a curated Hello World template and **7.1 %** have a runner, so `run.sh`
+genuinely executes a small minority. The rest are byte-balanced stubs whose job
+is to be detected and coloured, not to compile.
+
+A file with no curated template says so, in its own header:
+
+```
+#   note       : No curated template for this language yet: the closest
+#                equivalent Hello World is used, see the linked
+#                interpreter/rosetta entries.
+```
+
+That is deliberate. An earlier version matched templates on the first word of the
+name or on the file extension, which produced confidently wrong files — JASS and
+Objective-J inherited a shell `echo` from a shared `.j` extension, `Go Module`
+inherited an entire Go program although a `go.mod` contains module
+declarations. All 156 fuzzy matches were audited: 81 were genuine dialects, 34
+were wrong. Inheritance is now an explicit allowlist, and anything absent from it
+admits ignorance rather than guessing. `scripts/check_templates.py` enforces it.
 
 The numbers GitHub itself reports for this repository:
 
