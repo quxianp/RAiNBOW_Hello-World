@@ -11,6 +11,10 @@
 # executable bit (see scripts/validate_delivery.py, which fails the build if it
 # ever regresses), but invoking bash explicitly makes the recording immune to
 # the whole class of problem.
+#
+# The show is animated, so the tape has to wait for real motion rather than for a
+# prompt: 18 intro frames, then a 44-frame bar fill, then a 30-frame art reveal,
+# plus the roll call and the parallel execution in between.
 
 Output assets/hello-world.gif
 
@@ -26,12 +30,13 @@ Type "clear"
 Enter
 Sleep 1
 
-# The show: hue-sweep intro, roll call, parallel execution, colour bar, and
-# the finale -- the per-character true-colour ASCII art plus the greeting.
+# The show: rainbow intro sweep, roll call, parallel execution, easter egg, the
+# language bar filling in one language per frame, the block letters wiping in
+# left to right, and the true-colour greeting.
 # --max 12 keeps the roll call short so the finale stays on screen.
 Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 40
+Sleep 45
 
 # Hold on the final rainbow Hello World! for a beat.
-Sleep 4
+Sleep 5

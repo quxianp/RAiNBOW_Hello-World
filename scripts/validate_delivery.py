@@ -2,6 +2,7 @@
 import json
 import os
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
@@ -146,6 +147,42 @@ if tape.is_file():
         )
 else:
     fails.append("demo.tape is missing")
+
+# --------------------------------------------------- the show must animate
+# A recorded demo that is a still terminal defeats the point of recording it, and
+# that is exactly what happened: run.sh asked for --bar/--hello, which switched
+# off every animated path in scripts/rainbow.py, and the intro discarded the hue
+# it had just computed. Guard both.
+try:
+    show = (ROOT / "run.sh").read_text(encoding="utf-8")
+    rainbow = (ROOT / "scripts" / "rainbow.py").read_text(encoding="utf-8")
+
+    for needle in ("--fill-frames", "--reveal-frames"):
+        if needle not in show:
+            fails.append(f"run.sh never passes {needle}; the finale would be static")
+    if "brand_frames.py" not in show:
+        fails.append("run.sh does not use scripts/brand_frames.py for the intro")
+    # Strip comments first: the explanatory comment in animated_brand() quotes
+    # the very expression it replaced, which would otherwise trip this check.
+    code = "\n".join(
+        ln for ln in show.splitlines() if not ln.lstrip().startswith("#")
+    )
+    if "rgb 255 255 255" in code:
+        fails.append(
+            "run.sh still paints a hard-coded white; the intro renders no colour"
+        )
+    if re.search(r"h=\$\(\s*\(\s*\(\s*frame", code):
+        fails.append(
+            "run.sh still computes a per-frame hue and discards it; "
+            "the intro renders pure white"
+        )
+    for needle in ("def draw_fill", "def draw_reveal"):
+        if needle not in rainbow:
+            fails.append(f"scripts/rainbow.py is missing {needle}")
+    if not (ROOT / "scripts" / "brand_frames.py").is_file():
+        fails.append("scripts/brand_frames.py is missing")
+except Exception as exc:  # noqa: BLE001
+    print(f"animation checks skipped ({exc})")
 
 print()
 if fails:
