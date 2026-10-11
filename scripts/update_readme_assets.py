@@ -26,51 +26,62 @@ END = "<!-- RAINBOW_ASSETS_END -->"
 CLAPPER = "\u2b07\u2193"          # down arrow
 PARTY = "\U0001f3ac"            # clapper board
 DASH = "\u2014"                 # em dash
-NDASH = "\u2013"                # en dash
-DOT = "\u00b7"                  # middle dot
 
 BLOCK_TEMPLATE = f"""{START}
 
 ## {PARTY} The show
 
-![all 631 languages, drawn from the GitHub API](assets/rainbow-bar-github.png)
+<div align="center">
 
-![rainbow bar, hue-ordered](assets/rainbow-bar-local.png)
+<table>
+<tr>
+<td width="50%" valign="top">
 
-![demo](assets/hello-world.gif)
+<img src="assets/rainbow-bar-github.png" alt="The GitHub language bar: all 631 languages, each named with its real share">
 
-[{CLAPPER} Download the MP4](assets/hello-world.mp4)
+<br><sub><b>All 631 languages.</b><br>Drawn from <code>GET /repos/&#8230;/languages</code>{DASH}the breakdown GitHub itself serves.</sub>
 
-> **First image** {DASH} drawn from `GET /repos/.../languages`, the exact breakdown
-> GitHub uses. The bar, plus **all 631 languages listed by name** with their
-> colour and their real share {DASH} C, C++, C#, Java, Go, Rust, Python, TypeScript,
-> Fortran, Assembly, Zig down to `xBase` and `Zil`. Nothing is hidden behind an
-> "Other" bucket.
->
-> **Why that image exists:** GitHub's own legend can only name a handful of
-> languages and collapses the remaining 600+ into a single grey **Other** row, so
-> C and C++ never appear by name on the site no matter how the repository is
-> built. The bar itself does contain them {DASH} it is 631 hair-thin segments {DASH} but
-> the legend will not say so.
->
-> **Second image** {DASH} the same 694 Linguist colours ordered by hue, generated
-> deterministically from `config/rainbow_langs.json`, so it is always current.
->
-> **GIF and MP4** {DASH} `run.sh` recorded with VHS in GitHub Actions.
+</td>
+<td width="50%" valign="top">
 
-{END}"""
+<img src="assets/rainbow-bar-local.png" alt="The hue sweep: 694 Linguist colours ordered by hue">
+
+<br><sub><b>The hue sweep.</b><br>694 Linguist colours, ordered by hue.</sub>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+<div align="center">
+
+<img src="assets/hello-world.gif" width="820" alt="run.sh: the animated show, ending on a true-colour Hello World!">
+
+<br><sub>{CLAPPER} <a href="assets/hello-world.mp4">Download the MP4</a> {DASH} <code>run.sh</code> recorded with VHS in GitHub Actions.</sub>
+
+</div>
+
+> **Why the bar is drawn rather than screenshotted.** GitHub's own legend can
+> only name the largest handful of languages and collapses the remaining 600+
+> into a single grey <b>Other</b> row, so C and C++ never appear by name on the
+> site no matter how this repository is built. The bar itself does contain them
+> {DASH} 631 hair-thin segments {DASH} but the legend will not say so, which is why both
+> images above are generated from the JSON GitHub itself serves.
+
+{end}"""
 
 PATTERN = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument(
         "--check",
         action="store_true",
         help="exit 1 instead of writing when the block needs changing",
     )
-    args = parser.parse_args()
+    args = ap.parse_args()
 
     if not README.is_file():
         print(f"error: {README} not found", file=sys.stderr)
@@ -91,8 +102,9 @@ def main() -> int:
         print("README asset block is out of date", file=sys.stderr)
         return 1
 
-    updated = text[: match.start()] + desired + text[match.end():]
-    README.write_text(updated, encoding="utf-8", newline="")
+    README.write_text(
+        text[: match.start()] + desired + text[match.end():],
+        encoding="utf-8", newline="")
     print(f"updated asset block in {README}")
     return 0
 
