@@ -104,7 +104,7 @@ on your machine.
 
 ---
 
-## How the rainbow is engineered
+## 🌈 How the rainbow is engineered
 
 ### 1. Two layers, because Linguist is the ceiling
 
@@ -359,7 +359,7 @@ Reports: [`logs/linguist_audit.json`](logs/linguist_audit.json) and
 
 ---
 
-## Where the 7 325 languages came from
+## 🗂️ Where the 7 325 languages came from
 
 Languages were harvested from several independent sources and merged on a
 lowercased name key. Counts below are **raw mentions** (how often a name was
@@ -394,7 +394,7 @@ no name the other sources had not already produced.
 
 ---
 
-## Running it
+## ▶️ Running it
 
 ### Locally
 
@@ -465,7 +465,7 @@ one slice, which is how the matrix job splits the work.
 
 ---
 
-## Acceptance checks
+## ✅ Acceptance checks
 
 `scripts/verify_languages.py` is the gate. Current state — **19/19 pass**:
 
@@ -496,7 +496,7 @@ hold the machine-readable results.
 
 ---
 
-## Layout
+## 🧱 Layout
 
 ```
 .gitattributes          Linguist steering -- this is what makes the bar a rainbow
@@ -528,7 +528,7 @@ Deeper reading, if you want it:
 
 ---
 
-## Dependencies and fallbacks
+## 📎 Dependencies and fallbacks
 
 | Wants | Uses | If missing |
 |---|---|---|
@@ -546,7 +546,7 @@ with a true-colour **Hello World!** no matter what is installed.
 
 ---
 
-## Acknowledgements
+## 🎓 Acknowledgements
 
 - **[GitHub Linguist](https://github.com/github/linguist)** — the language
   definitions and colours everything here is built on.
