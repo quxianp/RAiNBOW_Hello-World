@@ -7,9 +7,8 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 package Hello;
-(* synthesize *)
-module mkHello;
-endmodule
+// Hello World!
+endpackage
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Bluespec BH :: RAiNBOW_Hello-World
@@ -38,4 +37,5 @@ endmodule
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Bluespec BH :: RAiNBOW_Hello-World
 # rainbow-pad colour #12223c :: padded to 100
-# rainbow-pad padding comment: byte balancing for th
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+  

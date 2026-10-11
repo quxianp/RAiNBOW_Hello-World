@@ -815,6 +815,26 @@ HELLO: dict[str, str] = {
     # ---- batch 6: declaration formats, where the fields ARE the program ----
 #
     "java properties": "hello=Hello World!\n",
+    # ---- batch 7: remaining well-known dialects and config formats ----
+#
+    "ansible": "- name: Hello World!\n  ansible.builtin.debug:\n    msg: Hello World!\n",
+    "bluespec bh": "package Hello;\n// Hello World!\nendpackage\n",
+    "datalog": ".output(\"Hello World!\")\n",
+    "gn": "# Hello World!\n",
+    "lean 4": "def main : IO Unit :=\n  IO.println \"Hello World!\"\n",
+    "mathematical programming system": "MPS\nHello World!\nENDMPS\n",
+    "nomad": "job \"hello\" {\n  datacenters = [\"dc1\"]\n}\n",
+    "openrc runscript": "command -v echo Hello World!\n",
+    "p4": "control VerifyChecksum(inout bit<32> checksum);\n// Hello World!\n",
+    "pddl": "(define (domain hello)\n  (:requirements :strips)\n  (:predicates (hello ?x))\n  (:action greet\n    :parameters ()\n    :effect (hello \"Hello World!\")))\n",
+    "promela": "active proctype Hello() {\n    printf(\"Hello World!\\n\");\n}\n",
+    "pulumi": "// Hello World!\n",
+    "sail": "stop\nprintln(\"Hello World!\")\n",
+    "smt": "(set-logic QF_LIA)\n(declare-fun hello () String)\n(assert (= hello \"Hello World!\"))\n(check-sat)\n",
+    "webassembly text format": "(module\n  (func (export \"_start\")\n    (result i32) i32.const 0)\n)\n",
+    "xbase": "CLEAR\n? \"Hello World!\"\n",
+    "xquery": "declare namespace output = \"http://www.w3.org/2010/xslt-xquery-serialization\";\n<xquery version=\"3.1\">\n  <output:serialization><output:method value=\"text\"/></output:serialization>\n  \"Hello World!\"\n</xquery>\n",
+    "yocto": "# Hello World!\n",
 }
 
 # languages we know how to actually execute: name -> shell command template

@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 544,
+ "with_curated_template": 559,
  "runnable_command_count": 51,
  "files": [
   {
@@ -268,7 +268,7 @@
    "hue": 0.0,
    "modeline": "promela",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cap'n Proto",
@@ -4732,7 +4732,7 @@
    "hue": 199.09,
    "modeline": "sail",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Liquid",
@@ -6016,7 +6016,7 @@
    "hue": 224.64,
    "modeline": "mathematical-programming-system",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Velocity Template Language",
@@ -6556,7 +6556,7 @@
    "hue": 243.06,
    "modeline": "pddl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Puppet",
@@ -6688,7 +6688,7 @@
    "hue": 250.61,
    "modeline": "xquery",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTML+Razor",
@@ -6808,7 +6808,7 @@
    "hue": 256.88,
    "modeline": "p4",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Kotlin",
@@ -7408,7 +7408,7 @@
    "hue": 300.0,
    "modeline": "xbase",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HIP",
@@ -11951,7 +11951,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ant",
@@ -24601,7 +24601,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Datalog++",
@@ -34501,7 +34501,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gnash",
@@ -51331,7 +51331,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Nominal",
@@ -53498,7 +53498,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OpenROAD Project",
@@ -58635,7 +58635,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Punc",
@@ -66896,7 +66896,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Smu",
@@ -79865,7 +79865,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Yoctofunge",
