@@ -50,7 +50,7 @@ violet, magenta and back to red.
 | Merged inventory | **7 325** unique language records |
 | Byte share per core language | **0.144092 %** (exactly equal for all 694) |
 | Share sum | **100.000000 %** |
-| Segments GitHub renders | **631** (Linguist folds some dialect names together — see [why](#6-why-you-cannot-see-c-and-c-named-on-the-site)) |
+| Segments GitHub renders | **631** (Linguist folds some dialect names together — see [why](#7-why-you-cannot-see-c-and-c-named-on-the-site)) |
 
 Everything heavy — compiling, running, recording, screenshotting and committing
 the demo assets back into this repository — happens in **GitHub Actions**, not
@@ -165,7 +165,80 @@ distribute across the wheel like this:
 
 Hue span measured end to end: **0.0° → 359.6°**, no gaps.
 
-### 5. Measured, not predicted
+### 5. Hall of fame
+
+Sixty of the languages you would look for first, with the colour Linguist
+assigns them, the type it classifies them as, and the exact file sitting in
+`hello/core/`. Regenerated from the repository by
+`scripts/update_readme_showcase.py`, so a row cannot describe something that is
+not there.
+
+<!-- SHOWCASE_START -->
+| Language | Linguist colour | Type | File in `hello/core/` | Share |
+|---|---|---|---|---|
+| C | `#555555` | programming | `hello.c` | 0.144092 % |
+| C++ | `#f34b7d` | programming | `hello.cpp` | 0.144092 % |
+| C# | `#7355dd` | programming | `hello.cs` | 0.144092 % |
+| Java | `#b07219` | programming | `hello.java` | 0.144092 % |
+| Go | `#00ADD8` | programming | `hello.go` | 0.144092 % |
+| Rust | `#dea584` | programming | `hello.rs` | 0.144092 % |
+| Python | `#3572A5` | programming | `hello.py` | 0.144092 % |
+| JavaScript | `#f1e05a` | programming | `hello.js` | 0.144092 % |
+| TypeScript | `#3178c6` | programming | `hello.ts` | 0.144092 % |
+| Swift | `#F05138` | programming | `hello.swift` | 0.144092 % |
+| Kotlin | `#A97BFF` | programming | `hello.kt` | 0.144092 % |
+| Objective-C | `#438eff` | programming | `hello.m` | 0.144092 % |
+| Scala | `#c22d40` | programming | `hello.scala` | 0.144092 % |
+| Haskell | `#5e5086` | programming | `hello.hs` | 0.144092 % |
+| OCaml | `#ef7a08` | programming | `hello.ml` | 0.144092 % |
+| Elm | `#60B5CC` | programming | `hello.elm` | 0.144092 % |
+| Erlang | `#B83998` | programming | `hello.erl` | 0.144092 % |
+| Elixir | `#8847B9` | programming | `hello.ex` | 0.144092 % |
+| Clojure | `#db5855` | programming | `hello.clj` | 0.144092 % |
+| F# | `#b845fc` | programming | `hello.fs` | 0.144092 % |
+| Zig | `#ec915c` | programming | `hello.zig` | 0.144092 % |
+| Nim | `#ffc200` | programming | `hello.nim` | 0.144092 % |
+| Crystal | `#000100` | programming | `hello.cr` | 0.144092 % |
+| Julia | `#a270ba` | programming | `hello.jl` | 0.144092 % |
+| R | `#198CE7` | programming | `hello.r` | 0.144092 % |
+| MATLAB | `#e16737` | programming | `hello.matlab` | 0.144092 % |
+| Fortran | `#4d41b1` | programming | `hello.f` | 0.144092 % |
+| Pascal | `#E3F171` | programming | `hello.pas` | 0.144092 % |
+| Ada | `#02f88c` | programming | `hello.adb` | 0.144092 % |
+| Prolog | `#74283c` | programming | `hello.pl` | 0.144092 % |
+| Scheme | `#1e4aec` | programming | `hello.scm` | 0.144092 % |
+| Common Lisp | `#3fb68b` | programming | `hello.lisp` | 0.144092 % |
+| Smalltalk | `#596706` | programming | `hello.st` | 0.144092 % |
+| Forth | `#341708` | programming | `hello.fth` | 0.144092 % |
+| APL | `#5A8164` | programming | `hello.apl` | 0.144092 % |
+| Tcl | `#e4cc98` | programming | `hello.tcl` | 0.144092 % |
+| Shell | `#89e051` | programming | `hello.sh` | 0.144092 % |
+| PowerShell | `#012456` | programming | `hello.ps1` | 0.144092 % |
+| Ruby | `#701516` | programming | `hello.rb` | 0.144092 % |
+| PHP | `#4F5D95` | programming | `hello.php` | 0.144092 % |
+| Perl | `#0298c3` | programming | `hello.pl` | 0.144092 % |
+| Lua | `#000080` | programming | `hello.lua` | 0.144092 % |
+| Raku | `#0000fb` | programming | `hello.6pl` | 0.144092 % |
+| Dart | `#00B4AB` | programming | `hello.dart` | 0.144092 % |
+| Groovy | `#4298b8` | programming | `hello.groovy` | 0.144092 % |
+| SQL | `#e38c00` | data | `hello.sql` | 0.144092 % |
+| HTML | `#e34c26` | markup | `hello.html` | 0.144092 % |
+| CSS | `#663399` | markup | `hello.css` | 0.144092 % |
+| WebAssembly | `#04133b` | programming | `hello.wast` | 0.144092 % |
+| VHDL | `#adb2cb` | programming | `hello.vhdl` | 0.144092 % |
+| Verilog | `#b2b7f8` | programming | `hello.v` | 0.144092 % |
+| SystemVerilog | `#DAE1C2` | programming | `hello.sv` | 0.144092 % |
+| Solidity | `#AA6746` | programming | `hello.sol` | 0.144092 % |
+| Isabelle | `#FEFE00` | programming | `hello.thy` | 0.144092 % |
+| Agda | `#315665` | programming | `hello.agda` | 0.144092 % |
+| Idris | `#b30000` | programming | `hello.idr` | 0.144092 % |
+| Brainfuck | `#2F2530` | programming | `hello.b` | 0.144092 % |
+| LOLCODE | `#cc9900` | programming | `hello.lol` | 0.144092 % |
+<!-- SHOWCASE_END -->
+
+---
+
+### 6. Measured, not predicted
 
 The numbers GitHub itself reports for this repository:
 
@@ -189,7 +262,7 @@ not a multiple of 2048, then something outside `hello/core/` was leaking into
 the bar. Nothing is — `hello/full/`, `scripts/`, `config/`, `data/` and this
 README are all correctly excluded.
 
-### 6. Why you cannot see C and C++ named on the site
+### 7. Why you cannot see C and C++ named on the site
 
 **GitHub's legend cannot name them.** With 631 languages, the Languages panel
 shows the largest handful and folds the rest into one grey **Other** row. That is
