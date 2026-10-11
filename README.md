@@ -1,6 +1,38 @@
+<div align="center">
+
+![RAiNBOW_Hello-World hero banner](assets/hero-banner.png)
+
 # RAiNBOW_Hello-World
 
-> **Hello World, in 3000+ languages — and a GitHub language bar that is a rainbow.**
+**Hello World, in 7 326 files — and a GitHub language bar that is a rainbow.**
+
+[![languages](https://img.shields.io/badge/languages-694-ff69b4?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
+[![bar segments](https://img.shields.io/badge/bar-631%20segments-blueviolet?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
+[![byte share](https://img.shields.io/badge/share-0.144092%25%20each-success?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
+[![sum](https://img.shields.io/badge/sum-100.000000%25-brightgreen?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
+[![rainbow](https://img.shields.io/badge/-%F0%9F%8C%88%20rainbow-ff69b4%2Cffb700%2C7CFC00%2C00d26a%2C00b7eb%2C0075f5%2C7b2cbf%2Ce600c9%2Cff2d95-informational?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
+[![checks](https://img.shields.io/badge/acceptance-19%2F19%20passing-brightgreen?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World/actions)
+
+</div>
+
+---
+
+<div align="center">
+
+**Contents**
+
+[🎬 The show](#-the-show) ·
+[🌈 How the rainbow is engineered](#-how-the-rainbow-is-engineered) ·
+[🗂️ Where the languages came from](#%EF%B8%8F-where-the-7326-languages-came-from) ·
+[▶️ Running it](#%EF%B8%8F-running-it) ·
+[✅ Acceptance checks](#-acceptance-checks) ·
+[🧱 Layout](#-layout) ·
+[📎 Dependencies](#-dependencies-and-fallbacks) ·
+[🎓 Acknowledgements](#-acknowledgements)
+
+</div>
+
+---
 
 GitHub colours every repository by the byte share of each language it detects.
 This repository is built around one idea: put **every single language GitHub
@@ -18,6 +50,7 @@ violet, magenta and back to red.
 | Merged inventory | **7 325** unique language records |
 | Byte share per core language | **0.144092 %** (exactly equal for all 694) |
 | Share sum | **100.000000 %** |
+| Segments GitHub renders | **631** (Linguist folds some dialect names together — see [why](#6-why-you-cannot-see-c-and-c-named-on-the-site)) |
 
 Everything heavy — compiling, running, recording, screenshotting and committing
 the demo assets back into this repository — happens in **GitHub Actions**, not
