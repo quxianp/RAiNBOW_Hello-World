@@ -254,7 +254,27 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
 - Measured after the first round: GIF 534 KB -> 2.05 MB, but still ~70 % static,
   because the animated phases totalled only ~5 s. Lengthened them and shrank the
   tape rather than piling on more effects.
+- The decisive round needed a *positional* view, not a count. `timeline.py`
+  reported motion from 2 % to 50 % of the runtime and then nothing at all for the
+  back half: the HOLD_SECONDS block had been appended **after `exit 0`**, so it
+  was unreachable and had never run. Moving it before the exit took the end of
+  motion from 50 % to 77 %, after which the tape could be sized from a
+  measurement instead of a guess. `validate_delivery.py` now fails the build if
+  run.sh ever reaches `exit 0` before the hold block again.
+- Final: 85 % of the recording in motion (from 18 %), GIF 4.8 MB, MP4 1.2 MB.
 - Status: RESOLVED.
+
+## E22 The GIF optimiser failed silently for several runs
+- Symptom: the GIF kept coming out at 6-9 MB and `record_demo.sh` logged only
+  "gif optimisation failed; keeping the original".
+- Cause: the temporary file was written to `assets/hello-world.gif.opt`, and
+  ffmpeg infers the output format from the extension -- `.opt` is not a
+  container it recognises, so the step died. Non-fatal by design, so it looked
+  like a size choice rather than a bug.
+- Fix: the temp file keeps a `.gif` suffix, and the failure branch now prints the
+  tail of `logs/record_demo.log` so the next occurrence is diagnosable from the
+  job log without downloading an artifact.
+- Status: RESOLVED (7.76 MB -> 4.15 MB on the first run after the fix).
 
 ## E21 Guarding the animation against regression
 - `validate_delivery.py` fails the build if run.sh stops passing

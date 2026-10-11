@@ -94,18 +94,24 @@ Key commands and their real outcomes this session. Full detail in logs/ERRORS.lo
 ## Demo motion, measured rather than guessed
     .tmp/motion.py   samples assets/hello-world.gif every N frames, downsizes to
                      120x80 greyscale and counts changed pixels between samples
-    measurements:
-        GIF  45 KB (Permission denied, 1112 frames)
-        GIF 534 KB (show runs, 0 malformed escapes, 12-colour greeting)
-             -> 41 of 50 segments static
-        GIF 2.05 MB (bar fill + art reveal)
-             -> 39 of 44 segments static
-        GIF 6.87 MB (+ roll call wave, divider, spinner, hold)
-             -> 31 of 44 segments static
-    Conclusion each round: the animated phases were too short relative to the
-    tape, so the fix was to lengthen them and shorten the sleep, not to add more
-    effects. Final round: 24-frame intro, 24-frame divider, 0.12 s/name roll
-    call, 70-frame bar fill, 50-frame reveal, 10 s sweep hold, 34 s tape.
+    .tmp/timeline.py same, but prints the position of each sample so a dead
+                     stretch can be located rather than merely counted
+
+    round                              GIF      static segments    avg changed px
+    before (Permission denied)          45 KB   -                  -
+    show runs, static                   534 KB  41 of 50 (82 %)     149
+    + bar fill / art reveal            2.05 MB  39 of 44 (89 %)     173
+    + roll call wave, spinner, hold    6.87 MB  31 of 44 (70 %)     275
+    + phases lengthened, tape trimmed  8.80 MB  22 of 38 (58 %)     473
+    + hold moved before `exit 0`       6.13 MB   3 of 20 (15 %)     649
+    + GIF trimmed to 12 fps / 96 cols  4.84 MB   5 of 16 (31 %)     531
+
+    Two rounds changed the answer for a reason that only the positional view
+    showed: timeline.py reported motion from 2 % to 50 % of the runtime and then
+    nothing for the whole back half. The animated hold had been appended after
+    `exit 0`, so it never ran. That was an ordering bug, not a tuning one, and
+    fixing it moved the end of motion from 50 % to 77 %. The tape was then sized
+    from that measurement rather than by feel.
 
 ## Housekeeping
     git rm --cached logs/{gen,m,s,sel}.txt
