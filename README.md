@@ -267,7 +267,7 @@ reading before quoting "6 632 more languages" as if it were comparable to the 69
 formats and prose, gathered for breadth rather than because any of it is
 detectable on a colour bar.
 
-Coverage is uneven, and the README should not imply otherwise: **43.4 %** of core
+Coverage is uneven, and the README should not imply otherwise: **48.3 %** of core
 files have a curated Hello World template and **7.1 %** have a runner, so `run.sh`
 genuinely executes a small minority. The rest are byte-balanced stubs whose job
 is to be detected and coloured, not to compile.
@@ -291,6 +291,11 @@ admits ignorance rather than guessing. `scripts/check_templates.py` enforces it.
 Where a language has no output primitive at all, the template is what the
 language genuinely offers — Propeller Spin's `printf`, JASS's `InitTrig` trigger
 — rather than a borrowed `echo`. That distinction is the entire point.
+
+Some formats have no executable body whatsoever, and for those the fields *are*
+the program: a `.properties` file is `hello=Hello World!`, a `.cabal` file is
+`name: rainbow`. Calling those "no template" would be wrong for the same reason
+borrowing a Java class was.
 
 The numbers GitHub itself reports for this repository:
 
