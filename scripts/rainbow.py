@@ -295,6 +295,39 @@ def main() -> int:
     # a still terminal. These two modes restore real motion.
     animate = not args.no_animation and tty
 
+    # --sweep-only means "draw the sweep and nothing else". It must NOT depend on
+    # `both`, which is only true when --bar and --hello were both passed, and it
+    # must not be gated behind a later early-return that skips the drawing.
+    #
+    # Both mistakes were live at once: run.sh calls
+    #   rainbow.py --sweep N --sweep-only --width W
+    # which sets both=False, so the sweep was skipped, and the --sweep-only branch
+    # then returned 0 before drawing anything. The command exited 0 having
+    # printed zero bytes, so the "animated hold" at the end of the show produced
+    # no output whatsoever. Measured motion coverage found it: the final 8.7 s of
+    # a 37.4 s recording was completely frozen.
+    if args.sweep_only and args.sweep and animate:
+        sys.stdout.write(HIDE)
+        try:
+            for i in range(args.sweep):
+                sys.stdout.write(CLEAR)
+                for row in sweep(i, args.sweep, width):
+                    sys.stdout.write(row + "\n")
+                sys.stdout.flush()
+                time.sleep(0.045)
+        finally:
+            sys.stdout.write(SHOW + CLEAR)
+            sys.stdout.flush()
+        return 0
+
+    if args.sweep_only and args.sweep and not animate:
+        # No TTY (or --no-animation): emit a single static sweep so the phase
+        # still contributes visible content instead of vanishing silently.
+        for row in sweep(0, args.sweep, width):
+            sys.stdout.write(row + "\n")
+        sys.stdout.flush()
+        return 0
+
     if args.fill_frames and args.bar and animate:
         draw_fill(langs, width, args.fill_frames, plain)
         return 0
@@ -314,9 +347,6 @@ def main() -> int:
 
     # A bare hue sweep, used by run.sh as a divider between sections so the
     # recording keeps moving instead of holding on a static prompt.
-    if args.sweep_only:
-        return 0
-
     if both or args.bar:
         print(BOLD + "  RAiNBOW_Hello-World language bar "
               + RESET + DIM
