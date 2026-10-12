@@ -94,3 +94,65 @@ A change that passed locally on Python 3.13.12 killed CI on 3.12.15, because
 `Path.read_text` only gained `newline` in 3.13. Now every script is both
 compiled and (where dependencies allow) executed under a real 3.12.7 before
 pushing. Cheap insurance against the single most likely CI-only failure.
+
+## D13. Name templates explicitly; never infer them
+The generator originally decided "does this language have a Hello World?" by
+matching the first word of the name, then the file extension. Both guesses
+produce confident nonsense: JASS and Objective-J inherited a shell `echo` from a
+shared `.j`, and `Go Module` inherited an entire Go program though a `go.mod`
+contains module declarations. 34 of 156 matches were wrong, and every one was
+valid in *some* language, which is what made them hard to see.
+
+Chosen: an explicit `INHERIT` allowlist naming each child and the template it
+legitimately shares. More to maintain, and that is the point -- a wrong entry is
+now reviewable by reading rather than discovered by inspecting output.
+
+## D14. An honest placeholder beats a plausible wrong program
+Where a correct Hello World is not known, the file says so in its own header.
+The alternative -- shipping something plausible -- was tried and is what produced
+E25.
+
+The boundary is not "can I write something". A `.properties` file is
+`hello=Hello World!`, a `.cabal` file is `name: rainbow`, a JASS file has an
+`InitTrig` trigger because JASS has no console output at all. Those are answers.
+Rez is not: its `.r` extension is shared with R, and the correct program depends
+on which language is meant, so it keeps the placeholder.
+
+## D15. Measure the recording; do not watch it
+The closing hold printed zero bytes for several releases and nothing failed,
+because it exited 0 and `run.sh` guarded it with `|| true`. The last 8.7 s of a
+37.4 s recording was a frozen still.
+
+`scripts/measure_motion.py` reports the fraction of the frame changing between
+consecutive frames. Watching a terminal recording does not distinguish "a
+deliberate hold" from "a phase that never ran"; the number does, immediately.
+It is now part of the delivery gate and of the test suite.
+
+The previous fix to the same phase -- moving the hold before `exit 0` -- was
+correct and insufficient. Making code reachable is not the same as making it run.
+
+## D16. Write files in Python, never through PowerShell
+Editing one number in README.md with `Set-Content -Encoding UTF8` destroyed every
+emoji in the file: PowerShell round-trips text through the console's active code
+page on the way in. Two headings lost their emoji entirely, which silently broke
+three table-of-contents anchors.
+
+Chosen: every file write goes through Python or the edit tool. Where a generated
+figure must be updated, a script owns it (`update_readme_coverage.py`), so the
+edit never involves a console and cannot be made by hand.
+
+## D17. Tests that run nothing are the failure mode
+Several checks here once passed while asserting nothing: a link checker whose
+anchor comparison reduced only one side, a template guard that matched its own
+explanatory comment, a suite that only ever ran by hand.
+
+A check is only worth having if it can fail. The tests added this week execute
+the real commands and assert on the bytes that come back, and `check_templates.py`
+was run against deliberately corrupted input to prove it fires.
+
+## D18. Keep the repository's own tooling off its own bar
+`scripts/**` is marked `linguist-vendored`. The rainbow is the point; the
+scripts are how it is built. Fourteen thousand lines of Python competing with the
+694 language files for space would be the wrong trade, and `CODEOWNERS` routes
+the paths that can change the bar to a second look.
+
