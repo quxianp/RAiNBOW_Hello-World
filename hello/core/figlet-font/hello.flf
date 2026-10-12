@@ -1,5 +1,4 @@
 # -*- mode: figlet-font -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # FIGlet Font - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffddbb
 #   hue        : 30.0 deg
@@ -8,7 +7,7 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 # Hello World!
-# Hello World!
+flf2a$ 6 5 20 15 3
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad FIGlet Font :: RAiNBOW_Hello-World
@@ -36,4 +35,6 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad FIGlet Font :: RAiNBOW_Hello-World
-# rainbow-pad colour #ffddbb :: padded
+# rainbow-pad colour #ffddbb :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+           

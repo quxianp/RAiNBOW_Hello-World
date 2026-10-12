@@ -52,10 +52,6 @@ MUST_NOT_INHERIT = {
     # Rocq Prover was listed here because it inherited a V-lang program from
     # the shared `.v` extension. It now has its own genuine Coq-family
     # template, so the assertion no longer applies -- see MUST_INHERIT.
-    "Go Module": "a whole Go program",
-    "Go Workspace": "a whole Go program",
-    "Go Checksums": "a whole Go program",
-    "Go Template": "a whole Go program",
     "Binary Brainfuck": "the word 'Binary'",
     "WebAssembly Binary": "WAT text",
     "WebAssembly Interface Type": "a WebAssembly module",
@@ -83,9 +79,16 @@ MUST_INHERIT = [
     # A cabal file, a properties file and a package manifest are fully described
     # by their fields; there is no program to put in them.
     "Cabal Config", "Java Server Pages",
+    # The Go family, same reason and same history: each inherited a whole Go
+    # program while its real format is `module x` / `go 1.21`, a module
+    # list, a hash line, or `{{ }}`.
+    "Go Module", "Go Workspace", "Go Checksums", "Go Template",
     "Java Template Engine",
     # Rocq Prover: inherited a V-lang program via `.v` until it gained its own.
     "Rocq Prover",
+    # Declaration formats that stopped being wrong programs and became right
+    # files: a go.sum is hashes, a go template is {{ }}.
+    "Go Checksums", "Go Template", "Go Module", "Go Workspace",
 ]
 
 

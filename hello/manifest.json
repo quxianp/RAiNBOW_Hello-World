@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 869,
+ "with_curated_template": 927,
  "runnable_command_count": 51,
  "files": [
   {
@@ -184,7 +184,7 @@
    "hue": 0.0,
    "modeline": "adblock-filter-list",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Squirrel",
@@ -592,7 +592,7 @@
    "hue": 3.14,
    "modeline": "gerber-image",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Adobe Font Metrics",
@@ -604,7 +604,7 @@
    "hue": 3.6,
    "modeline": "adobe-font-metrics",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jinja",
@@ -1012,7 +1012,7 @@
    "hue": 15.98,
    "modeline": "cooklang",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TOML",
@@ -1252,7 +1252,7 @@
    "hue": 23.19,
    "modeline": "jupyter-notebook",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GSC",
@@ -1420,7 +1420,7 @@
    "hue": 30.0,
    "modeline": "figlet-font",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HXML",
@@ -1432,7 +1432,7 @@
    "hue": 30.79,
    "modeline": "hxml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Rez",
@@ -1576,7 +1576,7 @@
    "hue": 35.2,
    "modeline": "bru",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JAR Manifest",
@@ -1660,7 +1660,7 @@
    "hue": 36.67,
    "modeline": "collada",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SQL",
@@ -1732,7 +1732,7 @@
    "hue": 37.65,
    "modeline": "cloud-firestore-security-rules",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GAML",
@@ -1972,7 +1972,7 @@
    "hue": 44.35,
    "modeline": "altium-designer",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LOLCODE",
@@ -2356,7 +2356,7 @@
    "hue": 62.53,
    "modeline": "genero-per",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Twig",
@@ -2596,7 +2596,7 @@
    "hue": 79.64,
    "modeline": "directx-3d-file",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HLSL",
@@ -2716,7 +2716,7 @@
    "hue": 90.29,
    "modeline": "gtkrc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ChucK",
@@ -2764,7 +2764,7 @@
    "hue": 90.82,
    "modeline": "darcs-patch",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OASv2-json",
@@ -2920,7 +2920,7 @@
    "hue": 101.8,
    "modeline": "2-dimensional-array",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "QML",
@@ -3052,7 +3052,7 @@
    "hue": 119.31,
    "modeline": "jest-snapshot",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Starlark",
@@ -3124,7 +3124,7 @@
    "hue": 120.0,
    "modeline": "easybuild",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Regular Expression",
@@ -3784,7 +3784,7 @@
    "hue": 172.31,
    "modeline": "edge",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HOCON",
@@ -4252,7 +4252,7 @@
    "hue": 191.94,
    "modeline": "go-checksums",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Go Module",
@@ -4264,7 +4264,7 @@
    "hue": 191.94,
    "modeline": "go-module",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Go Template",
@@ -4276,7 +4276,7 @@
    "hue": 191.94,
    "modeline": "go-template",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Go Workspace",
@@ -4288,7 +4288,7 @@
    "hue": 191.94,
    "modeline": "go-workspace",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BrighterScript",
@@ -4564,7 +4564,7 @@
    "hue": 196.96,
    "modeline": "bird2",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Open Policy Agent",
@@ -4624,7 +4624,7 @@
    "hue": 197.55,
    "modeline": "cylc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DataWeave",
@@ -5284,7 +5284,7 @@
    "hue": 207.46,
    "modeline": "godot-resource",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "WGSL",
@@ -6088,7 +6088,7 @@
    "hue": 226.94,
    "modeline": "kicad-layout",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KiCad Legacy Layout",
@@ -6100,7 +6100,7 @@
    "hue": 226.94,
    "modeline": "kicad-legacy-layout",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KiCad Schematic",
@@ -6112,7 +6112,7 @@
    "hue": 226.94,
    "modeline": "kicad-schematic",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Web Ontology Language",
@@ -6160,7 +6160,7 @@
    "hue": 228.0,
    "modeline": "html+php",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PHP",
@@ -6268,7 +6268,7 @@
    "hue": 231.03,
    "modeline": "bikeshed",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "wisp",
@@ -6328,7 +6328,7 @@
    "hue": 233.85,
    "modeline": "stl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PicoLisp",
@@ -6700,7 +6700,7 @@
    "hue": 252.32,
    "modeline": "html+razor",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Simple File Verification",
@@ -6952,7 +6952,7 @@
    "hue": 267.27,
    "modeline": "html+ecr",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Terraform Template",
@@ -7300,7 +7300,7 @@
    "hue": 281.54,
    "modeline": "html+eex",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lambdapi",
@@ -7768,7 +7768,7 @@
    "hue": 333.41,
    "modeline": "ecere-projects",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "EJS",
@@ -8272,7 +8272,7 @@
    "hue": 359.34,
    "modeline": "html+erb",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RBS",
@@ -9938,7 +9938,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Advanced Brainfuck",
@@ -18881,7 +18881,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C-Shop",
@@ -19893,7 +19893,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CFLAGS",
@@ -20685,7 +20685,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cilk",
@@ -22676,7 +22676,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "context-sensitive parsing",
@@ -23226,7 +23226,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cpy",
@@ -24040,7 +24040,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "D.B",
@@ -26405,7 +26405,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Do while true",
@@ -27054,7 +27054,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Drools",
@@ -27164,7 +27164,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DTrace",
@@ -27516,7 +27516,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "e-Puck",
@@ -27549,7 +27549,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Earfuck",
@@ -27890,7 +27890,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "edn",
@@ -29078,7 +29078,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "equations",
@@ -32114,7 +32114,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "formerly DATABUS",
@@ -34468,7 +34468,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Glypho",
@@ -40947,7 +40947,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jenl",
@@ -45193,7 +45193,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Luafuck",
@@ -52442,7 +52442,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OBJ2",
@@ -52464,7 +52464,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Object",
@@ -58415,7 +58415,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PSL",

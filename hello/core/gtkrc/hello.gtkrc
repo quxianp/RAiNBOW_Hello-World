@@ -1,5 +1,4 @@
 # -*- mode: gtkrc -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # GtkRC - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #7fe719
 #   hue        : 90.3 deg
@@ -8,7 +7,9 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 # Hello World!
-# Hello World!
+style "default" {
+  font_name = "Sans 10"
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad GtkRC :: RAiNBOW_Hello-World
@@ -37,4 +38,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad GtkRC :: RAiNBOW_Hello-World
 # rainbow-pad colour #7fe719 :: padded to 100
-# rainbow-pad padding comment: byt
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github
