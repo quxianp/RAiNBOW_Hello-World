@@ -393,3 +393,26 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   asserts on the bytes they return.
 - Status: RESOLVED.
 
+## E29 Placeholders did not admit they were placeholders
+- Symptom: every file in `hello/` that has no curated Hello World nonetheless
+  opens with `Hello World!`. Opening `hello/core/rez/hello.r` gives no way to
+  tell it from a working program -- it is a comment saying Hello World, padded
+  to 2048 bytes, looking exactly like the thing it was imitating.
+- Cause: `build_file()` receives its header note through a `note` parameter that
+  core files were already using for a different note. For `hello/core` that
+  argument held "Pinned with a Linguist modeline so it keeps its own segment on
+  the bar", so the placeholder's own admission was overwritten rather than added.
+- Why nothing caught it: byte balance passed, all 19 acceptance checks passed,
+  the file was valid in its language, and the manifest's `real_template` flag was
+  correct -- the flag said false while the file's own text said nothing. Two
+  sources agreed with each other and neither said what the file was.
+- Scale: all 6 262 placeholders. The failure was invisible for as long as the
+  templates were sparse; it only became visible once most languages had real
+  programs and the few that did not stood out.
+- Fix: the admission is written unconditionally rather than passed in, so the two
+  notes cannot collide again.
+- Regression guard: `tests/test_bar_invariants.py` asserts that no placeholder
+  is silent, and separately that core template coverage stays above 95 % so a
+  matcher regression is caught before it can quietly reduce the number.
+- Status: RESOLVED.
+
