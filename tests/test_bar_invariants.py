@@ -92,3 +92,47 @@ def test_each_core_language_occupies_its_own_directory():
         f"{len(_core_files())} core files share only {len(dirs)} directories; "
         "a directory holds more than one language"
     )
+
+
+def test_every_placeholder_admits_that_it_is_one():
+    """A file with no curated program must say so in its own header.
+
+    This is the entire purpose of a placeholder, and it was silently broken for
+    the whole repository. `build_file()` received its note through a parameter
+    that core files were already using for the modeline caption, so a core
+    placeholder printed "Pinned with a Linguist modeline..." and never said it
+    had no program -- a reader opening hello/core/rez/hello.r had no way to tell
+    it from a working one.
+
+    Checked against the head of the file only, since the padding comment
+    legitimately fills the rest.
+    """
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    silent = []
+    for f in man["files"]:
+        if f.get("real_template"):
+            continue
+        body = (ROOT / f["path"]).read_text(encoding="utf-8", errors="replace")
+        head = "\n".join(body.splitlines()[:14])
+        if "admission" not in head or "No curated Hello World" not in head:
+            silent.append(f["language"])
+    assert not silent, (
+        f"{len(silent)} placeholder file(s) do not admit they are placeholders, "
+        f"so a reader cannot tell them from working programs: {silent[:5]}"
+    )
+
+
+def test_placeholders_are_a_small_and_shrinking_share_of_core():
+    """Guards against the template work regressing.
+
+    Core coverage reached 99.7 %; if this ever falls far below that, something
+    has quietly broken the matcher rather than genuinely run out of languages.
+    """
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    core = [f for f in man["files"] if f["layer"] == "core"]
+    have = sum(1 for f in core if f.get("real_template"))
+    pct = 100.0 * have / len(core)
+    assert pct >= 95.0, (
+        f"only {pct:.1f} % of core files have a curated template "
+        f"({have}/{len(core)}); the matcher has probably regressed"
+    )

@@ -1756,13 +1756,22 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
             head_lines.append(f"  reference: {FALLBACK_INTERPRETER}")
 
     if not known and not prog:
-        extra = note
+        # The `note` argument is overloaded. For core files it holds the
+        # modeline caption ("Pinned with a Linguist modeline..."), and for full
+        # files it holds the "no curated template" admission. Using it here
+        # meant a core placeholder printed the modeline caption twice and never
+        # admitted what it was, which is the one thing a placeholder exists to
+        # do. Always write the admission, whatever `note` holds.
+        admission = (
+            "No curated Hello World for this language yet: the closest "
+            "equivalent is used. See the linked interpreter/rosetta entries."
+        )
         if c is not None:
-            head_lines.insert(1, f"{c}  note       : {extra}")
+            head_lines.append(f"{c}  admission  : {admission}")
         elif bs:
-            head_lines.insert(1, f"  note       : {extra}")
+            head_lines.append(f"  admission  : {admission}")
         else:
-            head_lines.insert(1, f"  note: {extra}")
+            head_lines.append(f"  admission: {admission}")
         prog, _ = default_program(name, ext, "Hello World!", fname,
                                   style=(line, bs, be))
 
