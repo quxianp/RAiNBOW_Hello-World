@@ -206,6 +206,7 @@ except Exception as exc:  # noqa: BLE001
 GENERATORS = [
     ["scripts/update_readme_assets.py", "--check"],
     ["scripts/update_readme_showcase.py", "--check"],
+    ["scripts/render_ascii_bar.py"],
     # Eight TOC links pointed at headings that do not exist because the anchors
     # were hand-written. Nothing caught it: no broken image, no build failure,
     # the page just scrolled nowhere when a reader clicked.
