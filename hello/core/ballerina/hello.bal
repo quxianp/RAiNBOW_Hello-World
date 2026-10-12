@@ -1,5 +1,4 @@
 # -*- mode: ballerina -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Ballerina - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ff5000
 #   hue        : 18.8 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+import ballerina/io;
+
+public function main() {
+    io:println("Hello World!");
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Ballerina :: RAiNBOW_Hello-World
@@ -37,4 +39,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Ballerina :: RAiNBOW_Hello-World
 # rainbow-pad colour #ff5000 :: padded to 100
-      
+# rainbow-pad padding comment: byte balancin

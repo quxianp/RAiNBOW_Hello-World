@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 763,
+ "with_curated_template": 792,
  "runnable_command_count": 51,
  "files": [
   {
@@ -64,7 +64,7 @@
    "hue": 0.0,
    "modeline": "csound-document",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Csound Score",
@@ -700,7 +700,7 @@
    "hue": 5.0,
    "modeline": "emberscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Reason",
@@ -724,7 +724,7 @@
    "hue": 5.54,
    "modeline": "reasonligo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Blade",
@@ -772,7 +772,7 @@
    "hue": 8.28,
    "modeline": "b",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SAS",
@@ -976,7 +976,7 @@
    "hue": 15.19,
    "modeline": "genie",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jasmin",
@@ -1096,7 +1096,7 @@
    "hue": 18.82,
    "modeline": "ballerina",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LFE",
@@ -1264,7 +1264,7 @@
    "hue": 24.47,
    "modeline": "gsc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gemini",
@@ -1756,7 +1756,7 @@
    "hue": 38.94,
    "modeline": "eq",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MDX",
@@ -2332,7 +2332,7 @@
    "hue": 60.78,
    "modeline": "e",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HiveQL",
@@ -2656,7 +2656,7 @@
    "hue": 85.61,
    "modeline": "game-maker-language",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KRL",
@@ -3148,7 +3148,7 @@
    "hue": 120.0,
    "modeline": "clips",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Yacc",
@@ -3688,7 +3688,7 @@
    "hue": 163.04,
    "modeline": "dm",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "M3U",
@@ -4420,7 +4420,7 @@
    "hue": 194.56,
    "modeline": "apex",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Windows Registry Entries",
@@ -5668,7 +5668,7 @@
    "hue": 214.61,
    "modeline": "ligolang",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BuildStream",
@@ -5968,7 +5968,7 @@
    "hue": 222.29,
    "modeline": "imhex-pattern-language",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Racket",
@@ -6304,7 +6304,7 @@
    "hue": 232.0,
    "modeline": "click",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Toit",
@@ -6604,7 +6604,7 @@
    "hue": 245.45,
    "modeline": "codeql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Fortran",
@@ -6664,7 +6664,7 @@
    "hue": 249.73,
    "modeline": "numpy",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "VBA",
@@ -6916,7 +6916,7 @@
    "hue": 264.84,
    "modeline": "1c-enterprise",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TypeSpec",
@@ -7756,7 +7756,7 @@
    "hue": 333.41,
    "modeline": "ec",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ecere Projects",
@@ -7912,7 +7912,7 @@
    "hue": 345.5,
    "modeline": "praat",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TextGrid",
@@ -7948,7 +7948,7 @@
    "hue": 347.73,
    "modeline": "common-workflow-language",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Pact",
@@ -39143,7 +39143,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Informal",
@@ -39242,7 +39242,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "InkML",
@@ -47338,7 +47338,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Microscript",
@@ -60846,7 +60846,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Rebeca",
@@ -62870,7 +62870,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RPL",
@@ -66577,7 +66577,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SMALL",
@@ -66643,7 +66643,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Smalltalk-85",

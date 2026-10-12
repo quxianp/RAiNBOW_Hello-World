@@ -1,5 +1,4 @@
 ; -*- mode: csound-document -*-
-;   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 ; Csound Document - Hello World! :: RAiNBOW_Hello-World
 ;   colour     : #1a1a1a
 ;   hue        : 0.0 deg
@@ -7,8 +6,12 @@
 ;   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 ;   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-; Hello World!
-; Hello World!
+<CsoundDocument>
+<CsOptions>
+</CsOptions>
+<CsScore>
+</CsScore>
+</CsoundDocument>
 ; rainbow-pad equal byte share keeps the language bar an even rainbow
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Csound Document :: RAiNBOW_Hello-World
@@ -36,4 +39,5 @@
 ; rainbow-pad equal byte share keeps the language bar an even rainbow
 ; rainbow-pad one segment per Linguist coloured language
 ; rainbow-pad Csound Document :: RAiNBOW_Hello-World
-           
+; rainbow-pad colour #1a1a1a :: padded to 100
+   
