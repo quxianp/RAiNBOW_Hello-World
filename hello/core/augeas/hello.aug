@@ -1,5 +1,4 @@
 # -*- mode: augeas -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Augeas - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9cc134
 #   hue        : 75.7 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+module Hello =
+  autoload xfm
+
+  let greeting = "Hello World!"
+  let _ = xfm "transform Hello greeting set greeting"
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Augeas :: RAiNBOW_Hello-World
@@ -37,4 +39,4 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Augeas :: RAiNBOW_Hello-World
 # rainbow-pad colour #9cc134 :: padded to 100
-# rainbow-pad padding comme
+# rainbow-pad padding comment

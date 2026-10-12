@@ -45,16 +45,19 @@ MUST_NOT_INHERIT = {
     #   Java Template Engine -> a .jte is FreeMarker, not a Java class
     #   Cabal Config      -> a cabal file declares metadata; it has no program
     #                        body, so "name: rainbow" IS the complete answer
-    "HiveQL": "kdb+/q via .q",
-    "KCL": "kdb+/k via .k",
-    "KFramework": "kdb+/k via .k",
     "Rez": "R via .r",
+    # NOTE: Rez stays here deliberately even though it now has a template. Its
+    # extension is `.r`, which is shared with R, and the right program depends
+    # entirely on which language the repository means -- `cat("Hello World!")`
+    # is an R script, not a Rez resource script. Resolving that ambiguity
+    # requires knowing what Rez is used for here, not guessing.
     # Rocq Prover was listed here because it inherited a V-lang program from
     # the shared `.v` extension. It now has its own genuine Coq-family
     # template, so the assertion no longer applies -- see MUST_INHERIT.
     "Binary Brainfuck": "the word 'Binary'",
     "WebAssembly Binary": "WAT text",
-    "WebAssembly Interface Type": "a WebAssembly module",
+    # KFramework and WebAssembly Interface Type moved to MUST_INHERIT once each
+    # gained its own template; see there.
     "Nim Task": "a Nim program",
     "CSS Selectors": "a CSS rule",
 }
@@ -88,6 +91,13 @@ MUST_INHERIT = [
     # LLVM TableGen: inherited LLVM IR via a shared family name; TableGen is a
     # record-definition language and now has its own template.
     "LLVM TableGen",
+    # KFramework inherited kdb+/k from a shared `.k`; WebAssembly Interface
+    # Type inherited a whole WebAssembly module from `webassembly`. Each is
+    # a distinct language with its own now.
+    "KFramework", "WebAssembly Interface Type",
+    # HiveQL inherited kdb+/q from a shared `.q`; it is Hive's own query
+    # language and now carries a SQL comment, which is what HiveQL uses.
+    "HiveQL",
 ]
 
 

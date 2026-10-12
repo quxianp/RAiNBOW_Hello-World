@@ -1,5 +1,4 @@
 # -*- mode: quartus-simulation-ip -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Quartus Simulation IP - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #58c42e
 #   hue        : 103.2 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hello World! -->
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Quartus Simulation IP :: RAiNBOW_Hello-World
@@ -35,4 +34,5 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Quartus Simu
+# rainbow-pad Quartus Simulation IP :: RAiNBOW_Hello-World
+# rainbow-pad colour #58c

@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1028,
+ "with_curated_template": 1064,
  "runnable_command_count": 51,
  "files": [
   {
@@ -2344,7 +2344,7 @@
    "hue": 61.59,
    "modeline": "hiveql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Genero per",
@@ -2524,7 +2524,7 @@
    "hue": 75.74,
    "modeline": "augeas",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Tree-sitter Query",
@@ -2776,7 +2776,7 @@
    "hue": 92.06,
    "modeline": "oasv2-json",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OASv2-yaml",
@@ -2788,7 +2788,7 @@
    "hue": 92.06,
    "modeline": "oasv2-yaml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OASv3-json",
@@ -2800,7 +2800,7 @@
    "hue": 92.06,
    "modeline": "oasv3-json",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OASv3-yaml",
@@ -2812,7 +2812,7 @@
    "hue": 92.06,
    "modeline": "oasv3-yaml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OpenAPI Specification v2",
@@ -2944,7 +2944,7 @@
    "hue": 103.2,
    "modeline": "quartus-simulation-ip",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NCL",
@@ -3172,7 +3172,7 @@
    "hue": 120.0,
    "modeline": "srecode-template",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Elvish",
@@ -3412,7 +3412,7 @@
    "hue": 143.9,
    "modeline": "vespa-schema-definition",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JSONiq",
@@ -3544,7 +3544,7 @@
    "hue": 154.29,
    "modeline": "jetbrains-mps",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cadence",
@@ -4036,7 +4036,7 @@
    "hue": 184.35,
    "modeline": "kcl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ZenScript",
@@ -4816,7 +4816,7 @@
    "hue": 201.82,
    "modeline": "kframework",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Luau",
@@ -6640,7 +6640,7 @@
    "hue": 247.15,
    "modeline": "webassembly-interface-type",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MeTTa",
@@ -13150,7 +13150,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ASM.js",
@@ -15075,7 +15075,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bengali",
@@ -18980,7 +18980,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C99",
@@ -19497,7 +19497,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cascading",
@@ -25899,7 +25899,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Digital micromirror device",
@@ -27175,7 +27175,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "dual tape",
@@ -33764,7 +33764,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GDevelop",
@@ -44060,7 +44060,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Linefuck6",
@@ -44962,7 +44962,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Loop preventing brainfuck",
@@ -45380,7 +45380,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "M-code",
@@ -47382,7 +47382,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Microsoft Phoenix",
@@ -47844,7 +47844,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Minifuck",
@@ -48713,7 +48713,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Modulous",
@@ -49868,7 +49868,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MyHDL",
@@ -52486,7 +52486,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Object disoriented",
@@ -54136,7 +54136,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Oxcart",
@@ -60802,7 +60802,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Realm",
@@ -62859,7 +62859,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RPG",
@@ -63530,7 +63530,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Sakana",
@@ -65433,7 +65433,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Shelta",
@@ -78787,7 +78787,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "X macro",
@@ -79348,7 +79348,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "XQJ",
@@ -79392,7 +79392,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "XSB",
