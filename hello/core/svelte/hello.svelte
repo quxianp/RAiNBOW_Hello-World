@@ -1,5 +1,4 @@
 // -*- mode: svelte -*-
-//   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 // Svelte - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #ff3e00
 //   hue        : 14.6 deg
@@ -7,8 +6,7 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-// Hello World!
-// Hello World!
+<h1>Hello World!</h1>
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Svelte :: RAiNBOW_Hello-World
@@ -36,4 +34,6 @@
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad Svelte :: RAiNBOW_Hello-World
-// rainbow-pad colour #ff3e00 :: pad
+// rainbow-pad colour #ff3e00 :: padded to 100
+// rainbow-pad padding comment: byte balancing for the rainbow bar
+// rainbow-pad        

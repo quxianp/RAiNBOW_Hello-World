@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 559,
+ "with_curated_template": 638,
  "runnable_command_count": 51,
  "files": [
   {
@@ -88,7 +88,7 @@
    "hue": 0.0,
    "modeline": "volt",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Carbon",
@@ -208,7 +208,7 @@
    "hue": 0.0,
    "modeline": "nearley",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SubRip Text",
@@ -400,7 +400,7 @@
    "hue": 0.0,
    "modeline": "smpl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Mercury",
@@ -556,7 +556,7 @@
    "hue": 1.44,
    "modeline": "jcl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "REXX",
@@ -964,7 +964,7 @@
    "hue": 14.59,
    "modeline": "svelte",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Genie",
@@ -1072,7 +1072,7 @@
    "hue": 17.45,
    "modeline": "mustache",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "IDL",
@@ -1156,7 +1156,7 @@
    "hue": 20.19,
    "modeline": "dune",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Forth",
@@ -1180,7 +1180,7 @@
    "hue": 20.71,
    "modeline": "astro",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Mask",
@@ -1372,7 +1372,7 @@
    "hue": 29.27,
    "modeline": "blitzmax",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OCaml",
@@ -1468,7 +1468,7 @@
    "hue": 31.34,
    "modeline": "ragel",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Pawn",
@@ -1528,7 +1528,7 @@
    "hue": 33.75,
    "modeline": "latte",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Unified Parallel C",
@@ -1552,7 +1552,7 @@
    "hue": 33.91,
    "modeline": "opal",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GAMS",
@@ -1564,7 +1564,7 @@
    "hue": 34.29,
    "modeline": "gams",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bru",
@@ -1636,7 +1636,7 @@
    "hue": 36.19,
    "modeline": "clarion",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Motoko",
@@ -1708,7 +1708,7 @@
    "hue": 37.06,
    "modeline": "rocq-prover",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Assembly",
@@ -1912,7 +1912,7 @@
    "hue": 42.0,
    "modeline": "fennel",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Whiley",
@@ -1924,7 +1924,7 @@
    "hue": 42.58,
    "modeline": "whiley",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Textile",
@@ -1996,7 +1996,7 @@
    "hue": 45.0,
    "modeline": "fluent",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Filebench WML",
@@ -2272,7 +2272,7 @@
    "hue": 55.34,
    "modeline": "jflex",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lex",
@@ -2284,7 +2284,7 @@
    "hue": 55.34,
    "modeline": "lex",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Rascal",
@@ -2860,7 +2860,7 @@
    "hue": 96.0,
    "modeline": "openedge-abl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LilyPond",
@@ -2872,7 +2872,7 @@
    "hue": 96.0,
    "modeline": "lilypond",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Option List",
@@ -3004,7 +3004,7 @@
    "hue": 116.83,
    "modeline": "rpgle",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CameLIGO",
@@ -3016,7 +3016,7 @@
    "hue": 117.24,
    "modeline": "cameligo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Leo",
@@ -3316,7 +3316,7 @@
    "hue": 136.71,
    "modeline": "berry",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AIDL",
@@ -3496,7 +3496,7 @@
    "hue": 153.28,
    "modeline": "vue",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ada",
@@ -3532,7 +3532,7 @@
    "hue": 154.29,
    "modeline": "sway",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JetBrains MPS",
@@ -3616,7 +3616,7 @@
    "hue": 160.94,
    "modeline": "blitzbasic",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Xmake",
@@ -3892,7 +3892,7 @@
    "hue": 180.0,
    "modeline": "quickbasic",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MAXScript",
@@ -4000,7 +4000,7 @@
    "hue": 183.51,
    "modeline": "teal",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Slang",
@@ -4024,7 +4024,7 @@
    "hue": 184.23,
    "modeline": "earthly",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KCL",
@@ -4060,7 +4060,7 @@
    "hue": 186.35,
    "modeline": "b4x",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Zephir",
@@ -4336,7 +4336,7 @@
    "hue": 192.31,
    "modeline": "jison",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jison Lex",
@@ -4348,7 +4348,7 @@
    "hue": 192.31,
    "modeline": "jison-lex",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Elm",
@@ -4384,7 +4384,7 @@
    "hue": 194.1,
    "modeline": "cypher",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AngelScript",
@@ -4636,7 +4636,7 @@
    "hue": 197.56,
    "modeline": "dataweave",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Self",
@@ -4756,7 +4756,7 @@
    "hue": 200.0,
    "modeline": "alpine-abuild",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Eiffel",
@@ -5020,7 +5020,7 @@
    "hue": 205.0,
    "modeline": "peg.js",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Stata",
@@ -5056,7 +5056,7 @@
    "hue": 205.5,
    "modeline": "gdshader",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Tolk",
@@ -5080,7 +5080,7 @@
    "hue": 205.63,
    "modeline": "edgeql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FLUX",
@@ -5320,7 +5320,7 @@
    "hue": 208.83,
    "modeline": "rascript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LiveCode Script",
@@ -5332,7 +5332,7 @@
    "hue": 209.02,
    "modeline": "livecode-script",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "B (Formal Method)",
@@ -5464,7 +5464,7 @@
    "hue": 211.41,
    "modeline": "tsx",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TypeScript",
@@ -5488,7 +5488,7 @@
    "hue": 211.43,
    "modeline": "shaderlab",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Unity3D Asset",
@@ -5560,7 +5560,7 @@
    "hue": 213.03,
    "modeline": "freemarker",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ISPC",
@@ -5572,7 +5572,7 @@
    "hue": 213.18,
    "modeline": "ispc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Modula-2",
@@ -5584,7 +5584,7 @@
    "hue": 213.19,
    "modeline": "modula-2",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Logtalk",
@@ -5608,7 +5608,7 @@
    "hue": 214.39,
    "modeline": "coffeescript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CSON",
@@ -5692,7 +5692,7 @@
    "hue": 215.29,
    "modeline": "powershell",
    "runner": "pwsh -NoProfile -File \"{file}\"",
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Slint",
@@ -5800,7 +5800,7 @@
    "hue": 216.9,
    "modeline": "harbour",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bluespec",
@@ -5884,7 +5884,7 @@
    "hue": 219.55,
    "modeline": "purebasic",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CUE",
@@ -6184,7 +6184,7 @@
    "hue": 228.29,
    "modeline": "x10",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "mIRC Script",
@@ -6232,7 +6232,7 @@
    "hue": 230.0,
    "modeline": "modula-3",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "VHDL",
@@ -6508,7 +6508,7 @@
    "hue": 240.0,
    "modeline": "cirru",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Objective-C++",
@@ -6592,7 +6592,7 @@
    "hue": 245.0,
    "modeline": "miniscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CodeQL",
@@ -6748,7 +6748,7 @@
    "hue": 253.33,
    "modeline": "classic-asp",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "IL Assembly",
@@ -6880,7 +6880,7 @@
    "hue": 264.3,
    "modeline": "quint",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OpenQASM",
@@ -6940,7 +6940,7 @@
    "hue": 266.92,
    "modeline": "genero-4gl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTML+ECR",
@@ -7108,7 +7108,7 @@
    "hue": 274.82,
    "modeline": "asp.net",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gentoo Ebuild",
@@ -7132,7 +7132,7 @@
    "hue": 274.82,
    "modeline": "gentoo-eclass",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "nanorc",
@@ -7144,7 +7144,7 @@
    "hue": 275.06,
    "modeline": "nanorc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Shen",
@@ -7204,7 +7204,7 @@
    "hue": 277.19,
    "modeline": "tla",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "F#",
@@ -7480,7 +7480,7 @@
    "hue": 307.15,
    "modeline": "coldfusion-cfc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jolie",
@@ -7528,7 +7528,7 @@
    "hue": 312.97,
    "modeline": "boogie",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Awk",
@@ -7648,7 +7648,7 @@
    "hue": 322.35,
    "modeline": "surrealql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MoonBit",
@@ -7804,7 +7804,7 @@
    "hue": 339.35,
    "modeline": "moonscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Objective-J",
@@ -7936,7 +7936,7 @@
    "hue": 346.88,
    "modeline": "genshi",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Common Workflow Language",
@@ -8332,7 +8332,7 @@
    "hue": 359.62,
    "modeline": "rescript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": ".NET IL",
@@ -18320,7 +18320,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Buildbox",
@@ -19464,7 +19464,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Carp",
@@ -28594,7 +28594,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "EmojiLang",
@@ -32697,7 +32697,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FreeMat",
@@ -35381,7 +35381,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gretl",
@@ -39946,7 +39946,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "IOTA-C0",
@@ -41420,7 +41420,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JSONseq",
@@ -47140,7 +47140,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Metasim",
@@ -52354,7 +52354,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Oberon Star",
@@ -72462,7 +72462,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TI-BASIC 83",
@@ -78083,7 +78083,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "WhyML",

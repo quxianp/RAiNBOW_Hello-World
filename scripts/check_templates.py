@@ -49,7 +49,9 @@ MUST_NOT_INHERIT = {
     "KCL": "kdb+/k via .k",
     "KFramework": "kdb+/k via .k",
     "Rez": "R via .r",
-    "Rocq Prover": "V-lang via .v",
+    # Rocq Prover was listed here because it inherited a V-lang program from
+    # the shared `.v` extension. It now has its own genuine Coq-family
+    # template, so the assertion no longer applies -- see MUST_INHERIT.
     "Go Module": "a whole Go program",
     "Go Workspace": "a whole Go program",
     "Go Checksums": "a whole Go program",
@@ -82,6 +84,8 @@ MUST_INHERIT = [
     # by their fields; there is no program to put in them.
     "Cabal Config", "Java Server Pages",
     "Java Template Engine",
+    # Rocq Prover: inherited a V-lang program via `.v` until it gained its own.
+    "Rocq Prover",
 ]
 
 

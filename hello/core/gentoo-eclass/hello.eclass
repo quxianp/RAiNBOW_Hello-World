@@ -1,5 +1,4 @@
 # -*- mode: gentoo-eclass -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Gentoo Eclass - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #9400ff
 #   hue        : 274.8 deg
@@ -8,7 +7,6 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 # Hello World!
-# Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Gentoo Eclass :: RAiNBOW_Hello-World
@@ -36,4 +34,6 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Gentoo Eclass :: RAiNBOW_Hello-World
-# rainbow-pad colour #9
+# rainbow-pad colour #9400ff :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad  
