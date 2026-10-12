@@ -26,9 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     examples name flags that exist
 - `scripts/audit_repo.py`, `check_readme_links.py`, `check_docs_links.py`,
   `check_templates.py`, `language_report.py`, `render_ascii_bar.py`,
-  `spectral_sweep.py`, `measure_motion.py`, `update_readme_coverage.py`.
-- **370+ curated Hello World programs**, taking core-layer coverage from 26.1 %
-  to **87.2 %** -- 605 of 694 files now carry real code rather than a placeholder.
+  `spectral_sweep.py`, `measure_motion.py`, `update_readme_coverage.py`,
+  `spotcheck_templates.py`.
+- **~870 curated Hello World programs**, taking core-layer coverage from
+  26.1 % to **99.7 %** -- 692 of 694 files now carry real code rather than a
+  placeholder. The two that do not are ambiguous by extension (Rez shares
+  `.r` with R) and are left honest on purpose.
 - A spectral sweep in `run.sh` in which every column is coloured with the real
   Linguist colour of one of the 694 core languages, read from the same config
   that orders the bar -- so a missing language would show as a gap in it.
@@ -57,6 +60,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   PowerShell's `Set-Content` corrupted every emoji and silently broke three
   table-of-contents anchors. `update_readme_coverage.py` now owns that figure so
   the edit never goes through a console.
+- **Placeholders did not admit they were placeholders.** `build_file()` takes its
+  note through a parameter core files were already using for the modeline
+  caption, so all 6 262 placeholder files opened with "Pinned with a Linguist
+  modeline" and never said they had no program.
+- **`HELLO["coff"] = ""` counted as a template.** COFF was marked as having a
+  curated program and generated as a banner followed by nothing -- while the
+  manifest agreed with the generator, the file was the right size, and all 19
+  acceptance checks passed. `program_for()` now requires a non-blank value.
 - Eight dead TOC links; the Linguist audit printing `1.0100 %` where the API
   reports `1.0116 %`; a template guard that matched its own explanatory comment.
 
