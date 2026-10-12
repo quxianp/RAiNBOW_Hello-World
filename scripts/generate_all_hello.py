@@ -1360,6 +1360,30 @@ HELLO: dict[str, str] = {
     "x font directory index": "2\nhello\n",
     "xproc": "<?xml version=\"1.0\"?>\n<p:declare xmlns:p=\"http://www.w3.org/XML/XProc\">\n</p:declare>\n",
     "xs": "(#:mod (import \"stdlib.io\") :#main)\n\n(func (main) (displayln \"Hello World!\"))\n",
+    # ---- batch 16 ----
+#
+    "8086 assembly": "mov ah, 09h\nmov dx, offset msg\nint 21h\nmsg db \"Hello World!$\"\n",
+    "atom": "<?xml version=\"1.0\"?>\n<feed><title>Hello World!</title></feed>\n",
+    "env": "GREETING=\"Hello World!\"\n",
+    "gml": "/// Hello World!\nglobal.g_start = \"Hello World!\"\n",
+    "insomnia": "{\n  \"_type\": \"export\",\n  \"__export_format\": 4,\n  \"__export_source\": \"Hello World!\"\n}\n",
+    "kml": "<?xml version=\"1.0\"?>\n<kml><Document><name>Hello World!</name></Document></kml>\n",
+    "kustomize": "apiVersion: kustomize.config.k8s.io/v1beta1\nkind: Kustomization\n",
+    "mysql": "SELECT 'Hello World!';\n",
+    "n3": "<hello> \"Hello World!\" .\n",
+    "owl": "<?xml version=\"1.0\"?>\n<owl:Class rdf:about=\"#HelloWorld\"/>\n",
+    "quine": "Hello World!\n",
+    "rest": "GET /hello\nAccept: Hello World!\n",
+    "risc-v assembly": "  .text\n  .globl _start\n",
+    "sitemap": "<?xml version=\"1.0\"?>\n<urlset><url><loc>https://example.com/</loc></url></urlset>\n",
+    "sld": "hello: Hello World!\n",
+    "soap": "<?xml version=\"1.0\"?>\n<Envelope/>\n",
+    "sparc assembly": "  .text\n  .global _start\n",
+    "ssh": "-----BEGIN OPENSSH PRIVATE KEY-----\nHello World!\n",
+    "stack": "\"Hello World!\"\n",
+    "taxi": "\"Hello World!\"\n",
+    "ttcn-3": "module hello {}\n",
+    "zone": "$ORIGIN .\n$TTL 86400\nhello IN TXT \"Hello World!\"\n",
 }
 
 # languages we know how to actually execute: name -> shell command template
