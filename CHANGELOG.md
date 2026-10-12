@@ -8,33 +8,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- `scripts/audit_repo.py` — repository health report. Re-derives the equal-size
-  invariant from disk rather than trusting the manifest, and checks that every
-  asset the README embeds exists and is non-degenerate.
-- `scripts/check_readme_links.py` — catches broken image paths and dead TOC
-  anchors. External links are counted but not fetched, to keep the gate offline.
-- `scripts/check_docs_links.py` — the same, for every markdown file, resolving
-  relative links against the document that contains them.
-- `scripts/language_report.py` — inventory by Linguist type, plus template and
-  runner coverage.
-- `scripts/generate_hero_banner.py` and `assets/hero-banner.png` — the README
-  banner, with counts read live from the repository.
-- `scripts/update_readme_showcase.py` — a 58-language table generated from
-  `data/linguist.json` and `hello/manifest.json`.
+- **A test suite**: `scripts/run_tests.py` plus 41 tests, run in CI on every
+  push. Standard library only -- adding a test framework to the acceptance job's
+  dependency set would give one more thing that can turn the gate red for reasons
+  unrelated to the repository.
+  - `test_bar_invariants.py` -- the equal-size property, checked against the
+    filesystem rather than the manifest, because a broken generator and a
+    manifest that agrees with it would pass any manifest-only check
+  - `test_encoding.py` -- no CRLF in generated files, no mojibake in any
+    markdown file, and the contents strip matching its headings
+  - `test_linguist_detectability.py` -- every core language coloured, no two
+    sharing a Linguist name, every file carrying a modeline, and the language
+    files excluded from line-ending normalisation via `git check-attr`
+  - `test_demo_acts.py` -- every demo phase actually produces output
+  - `test_readme_claims.py` -- the README's numbers match the repository
+  - `test_script_hygiene.py` -- scripts compile, are documented, and their usage
+    examples name flags that exist
+- `scripts/audit_repo.py`, `check_readme_links.py`, `check_docs_links.py`,
+  `check_templates.py`, `language_report.py`, `render_ascii_bar.py`,
+  `spectral_sweep.py`, `measure_motion.py`, `update_readme_coverage.py`.
+- **370+ curated Hello World programs**, taking core-layer coverage from 26.1 %
+  to **87.2 %** -- 605 of 694 files now carry real code rather than a placeholder.
+- A spectral sweep in `run.sh` in which every column is coloured with the real
+  Linguist colour of one of the 694 core languages, read from the same config
+  that orders the bar -- so a missing language would show as a gap in it.
+- `assets/ascii-bar.txt`: the bar as terminal art, for readers in a clone rather
+  than a browser.
+- Repository About panel, 20 topics, discussions, labels, CODEOWNERS,
+  `scripts/configure_repo.ps1`, milestone and release v2.0.0.
 - `docs/ARCHITECTURE.md`, `docs/WHY-631-NOT-694.md`, `docs/FAQ.md`,
   `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `.editorconfig`,
   issue and pull-request templates.
 
 ### Fixed
-- Eight dead table-of-contents links. Anchors were hand-written with
-  percent-encoded emoji, but only one heading contained an emoji; two were also
-  wrong in substance, conflating 7 326 files with 7 325 distinct languages.
-- The Linguist audit printed `1.0100 %` where the API reports `1.0116 %`. It was
-  reprinting Linguist's rounded two-decimal value at four decimals. An audit that
-  disagrees with the thing it audits trains people to ignore it.
-- `update_readme_assets.py` shipped with an invalid f-string placeholder and died
-  on every invocation. `validate_delivery.py` now *runs* the generators instead
-  of grepping them, so that class of bug cannot ship again.
+- **The animated hold drew nothing at all.** `rainbow.py --sweep-only` returned
+  before rendering, and the `--sweep` branch required flags `run.sh` never
+  passes. The command exited 0 having written zero bytes, so the last 8.7 s of a
+  37.4 s recording was a frozen still and nothing failed. Found by measuring
+  frame-to-frame motion rather than by watching.
+- **The generator invented languages.** Matching templates on the first word of
+  a name or its extension gave JASS and Objective-J a shell `echo`, and
+  `Go Module` an entire Go program. 34 of 156 matches were wrong; inheritance is
+  now an explicit 96-entry allowlist, and `check_templates.py` enforces it.
+- **CRLF in seven generated JSON files**, including a `hello/manifest.json` with
+  all 81 290 lines CRLF, because `write_text` was called without `newline="\n"`
+  and `* -text` means nothing normalises them on the way in.
+- **A README destroyed by a code-page round trip.** Editing one number with
+  PowerShell's `Set-Content` corrupted every emoji and silently broke three
+  table-of-contents anchors. `update_readme_coverage.py` now owns that figure so
+  the edit never goes through a console.
+- Eight dead TOC links; the Linguist audit printing `1.0100 %` where the API
+  reports `1.0116 %`; a template guard that matched its own explanatory comment.
 
 ## [2.0.0] - 2026-10-11
 
