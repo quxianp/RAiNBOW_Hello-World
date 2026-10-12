@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 792,
+ "with_curated_template": 869,
  "runnable_command_count": 51,
  "files": [
   {
@@ -328,7 +328,7 @@
    "hue": 0.0,
    "modeline": "grammatical-framework",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Witcher Script",
@@ -340,7 +340,7 @@
    "hue": 0.0,
    "modeline": "witcher-script",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JASS",
@@ -652,7 +652,7 @@
    "hue": 3.78,
    "modeline": "pyret",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PostScript",
@@ -820,7 +820,7 @@
    "hue": 11.11,
    "modeline": "pep8",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Git Attributes",
@@ -1120,7 +1120,7 @@
    "hue": 19.44,
    "modeline": "yul",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Pro*C",
@@ -1132,7 +1132,7 @@
    "hue": 19.52,
    "modeline": "pro*c",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Solidity",
@@ -1216,7 +1216,7 @@
    "hue": 22.03,
    "modeline": "jac",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Zig",
@@ -1240,7 +1240,7 @@
    "hue": 22.9,
    "modeline": "faust",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jupyter Notebook",
@@ -1288,7 +1288,7 @@
    "hue": 25.71,
    "modeline": "gcc-machine-description",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ecmarkup",
@@ -1348,7 +1348,7 @@
    "hue": 27.43,
    "modeline": "monkey-c",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Golo",
@@ -1456,7 +1456,7 @@
    "hue": 31.07,
    "modeline": "zimpl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ragel",
@@ -1480,7 +1480,7 @@
    "hue": 31.72,
    "modeline": "pawn",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Handlebars",
@@ -1516,7 +1516,7 @@
    "hue": 33.44,
    "modeline": "rhai",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Latte",
@@ -1744,7 +1744,7 @@
    "hue": 38.04,
    "modeline": "gaml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "EQ",
@@ -1852,7 +1852,7 @@
    "hue": 40.91,
    "modeline": "glyph",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Tcl",
@@ -2008,7 +2008,7 @@
    "hue": 45.12,
    "modeline": "filebench-wml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Q#",
@@ -2080,7 +2080,7 @@
    "hue": 47.19,
    "modeline": "scenic",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Browserslist",
@@ -2104,7 +2104,7 @@
    "hue": 47.41,
    "modeline": "mirah",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HolyC",
@@ -2296,7 +2296,7 @@
    "hue": 56.84,
    "modeline": "rascal",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Isabelle",
@@ -2464,7 +2464,7 @@
    "hue": 72.88,
    "modeline": "answer-set-programming",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SystemVerilog",
@@ -2488,7 +2488,7 @@
    "hue": 74.06,
    "modeline": "component-pascal",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Batchfile",
@@ -2584,7 +2584,7 @@
    "hue": 78.48,
    "modeline": "xc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DirectX 3D File",
@@ -2680,7 +2680,7 @@
    "hue": 89.03,
    "modeline": "xojo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TeX",
@@ -2908,7 +2908,7 @@
    "hue": 97.66,
    "modeline": "overpy",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "2-Dimensional Array",
@@ -3292,7 +3292,7 @@
    "hue": 129.02,
    "modeline": "nit",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "APL",
@@ -3328,7 +3328,7 @@
    "hue": 138.03,
    "modeline": "aidl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Qt Script",
@@ -3340,7 +3340,7 @@
    "hue": 141.2,
    "modeline": "qt-script",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Vim Help File",
@@ -3400,7 +3400,7 @@
    "hue": 143.45,
    "modeline": "mint",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Vespa Schema Definition",
@@ -3484,7 +3484,7 @@
    "hue": 153.26,
    "modeline": "lsl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Vue",
@@ -3556,7 +3556,7 @@
    "hue": 154.9,
    "modeline": "cadence",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "hoon",
@@ -3568,7 +3568,7 @@
    "hue": 158.31,
    "modeline": "hoon",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Common Lisp",
@@ -3748,7 +3748,7 @@
    "hue": 170.48,
    "modeline": "sip",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Salt",
@@ -4048,7 +4048,7 @@
    "hue": 186.03,
    "modeline": "zenscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "B4X",
@@ -4072,7 +4072,7 @@
    "hue": 186.38,
    "modeline": "zephir",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "templ",
@@ -4096,7 +4096,7 @@
    "hue": 186.96,
    "modeline": "typst",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Untyped Plutus Core",
@@ -4132,7 +4132,7 @@
    "hue": 187.71,
    "modeline": "ioke",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ucode",
@@ -4300,7 +4300,7 @@
    "hue": 192.0,
    "modeline": "brighterscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "VCL",
@@ -4312,7 +4312,7 @@
    "hue": 192.16,
    "modeline": "vcl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Frege",
@@ -4792,7 +4792,7 @@
    "hue": 200.28,
    "modeline": "cql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TXL",
@@ -4804,7 +4804,7 @@
    "hue": 200.98,
    "modeline": "txl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KFramework",
@@ -4960,7 +4960,7 @@
    "hue": 204.26,
    "modeline": "tact",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTTP",
@@ -5092,7 +5092,7 @@
    "hue": 205.71,
    "modeline": "flux",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AutoHotkey",
@@ -5344,7 +5344,7 @@
    "hue": 209.49,
    "modeline": "b-(formal-method)",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ArkTS",
@@ -5536,7 +5536,7 @@
    "hue": 212.57,
    "modeline": "ags-script",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Blueprint",
@@ -5776,7 +5776,7 @@
    "hue": 216.67,
    "modeline": "slice",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ANTLR",
@@ -5836,7 +5836,7 @@
    "hue": 217.61,
    "modeline": "apollo-guidance-computer",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Verse",
@@ -5848,7 +5848,7 @@
    "hue": 218.08,
    "modeline": "verse",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Markdown",
@@ -6220,7 +6220,7 @@
    "hue": 228.92,
    "modeline": "eclipse",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Modula-3",
@@ -6256,7 +6256,7 @@
    "hue": 230.0,
    "modeline": "imagej-macro",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bikeshed",
@@ -6316,7 +6316,7 @@
    "hue": 232.63,
    "modeline": "toit",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "STL",
@@ -6496,7 +6496,7 @@
    "hue": 240.0,
    "modeline": "urweb",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cirru",
@@ -6760,7 +6760,7 @@
    "hue": 253.49,
    "modeline": "il-assembly",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Procfile",
@@ -6856,7 +6856,7 @@
    "hue": 261.89,
    "modeline": "aiken",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Noir",
@@ -7048,7 +7048,7 @@
    "hue": 270.74,
    "modeline": "baml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Move",
@@ -7240,7 +7240,7 @@
    "hue": 280.0,
    "modeline": "g-code",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LookML",
@@ -7492,7 +7492,7 @@
    "hue": 307.95,
    "modeline": "jolie",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Gleam",
@@ -7600,7 +7600,7 @@
    "hue": 317.5,
    "modeline": "ecl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GraphQL",
@@ -7624,7 +7624,7 @@
    "hue": 320.0,
    "modeline": "liquidsoap",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Rouge",
@@ -7636,7 +7636,7 @@
    "hue": 320.0,
    "modeline": "rouge",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SurrealQL",
@@ -7696,7 +7696,7 @@
    "hue": 328.22,
    "modeline": "hurl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Vento",
@@ -7972,7 +7972,7 @@
    "hue": 348.65,
    "modeline": "piglatin",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ABAP",
@@ -7996,7 +7996,7 @@
    "hue": 349.29,
    "modeline": "tl-verilog",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FlatBuffers",
@@ -8092,7 +8092,7 @@
    "hue": 352.62,
    "modeline": "turing",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NetLogo",
@@ -8140,7 +8140,7 @@
    "hue": 355.16,
    "modeline": "mcfunction",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "EditorConfig",
@@ -18243,7 +18243,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Buck2",
@@ -31025,7 +31025,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FiM++",
@@ -44269,7 +44269,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LinuxDoc",
@@ -44797,7 +44797,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Logstack",
@@ -48383,7 +48383,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ML",
@@ -52926,7 +52926,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OIOXML",
@@ -53322,7 +53322,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Opal assembler",
@@ -54510,7 +54510,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Papadopoulos Script",
@@ -55071,7 +55071,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PDL",
@@ -56710,7 +56710,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Poetic",
@@ -59372,7 +59372,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Qoibl",
@@ -60604,7 +60604,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RCEM",
@@ -80129,7 +80129,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Zen",

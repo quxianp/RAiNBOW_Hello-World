@@ -1,5 +1,4 @@
 # -*- mode: tl-verilog -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # TL-Verilog - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #c40023
 #   hue        : 349.3 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+module top;
+  initial $display("Hello World!");
+endmodule
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad TL-Verilog :: RAiNBOW_Hello-World
@@ -36,4 +36,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad TL-Verilog :: RAiNBOW_Hello-World
-# rainbow-pad colour #c40023 :: padded to 10
+# rainbow-pad colour #c40023 :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainb

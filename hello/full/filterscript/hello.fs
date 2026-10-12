@@ -1,5 +1,4 @@
 (*
-  note       : No curated template for this language yet: the closest equivalent Hello World is used, see the linked interpreter/rosetta entries.
 Filterscript - Hello World! :: RAiNBOW_Hello-World
   colour     : not assigned by Linguist
   layer      : full (byte-balanced rainbow bar)
@@ -7,5 +6,4 @@ Filterscript - Hello World! :: RAiNBOW_Hello-World
   reference  : see https://esolangs.org/ and https://rosettacode.org/
 *)
 
-(* Hello World!*)
-(* Hello World!*)
+echo Hello World!;

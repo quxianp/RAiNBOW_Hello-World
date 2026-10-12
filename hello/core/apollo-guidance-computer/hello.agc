@@ -1,5 +1,4 @@
 # -*- mode: apollo-guidance-computer -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Apollo Guidance Computer - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #0b3d91
 #   hue        : 217.6 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+         ORG 4000
+         CCAF  Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Apollo Guidance Computer :: RAiNBOW_Hello-World
@@ -35,4 +34,5 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-        
+# rainbow-pad Apollo Guidance Computer :: RAiNBOW_Hello-World
+# rainbow-pad      
