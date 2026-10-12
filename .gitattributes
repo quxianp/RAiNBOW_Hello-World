@@ -31,3 +31,19 @@ assets/** linguist-documentation
 *.txt text eol=lf
 *.sh text eol=lf
 *.tape text eol=lf
+*.rb text eol=lf
+*.ps1 text eol=lf
+*.py text eol=lf diff=python
+
+# The language files are byte-padded to exactly 2048 bytes, so normalising their
+# line endings would change their share of the language bar. This rule must come
+# AFTER the per-extension rules above, because git applies the last matching
+# pattern: with `*.py text eol=lf` listed after this, hello/core/python/hello.py
+# resolved to `eol: lf` and would have been silently rewritten on a Windows
+# checkout, undoing the exact property the whole repository depends on.
+hello/** -text
+
+# Mark our own tooling as vendored so its Python does not compete with the
+# language files for space on the bar. The rainbow is the point; the scripts are
+# how it is built.
+scripts/** linguist-vendored

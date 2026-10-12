@@ -99,3 +99,61 @@ def test_core_is_not_vendored():
     assert any("-linguist-vendored" in l for l in lines), (
         f"hello/core is never un-vendored, so nothing reaches the bar: {lines}"
     )
+
+
+def test_core_files_must_not_be_line_ending_normalised():
+    """`text` must be unset for the language files, whatever eol says.
+
+    The core files are byte-padded to exactly 2048 bytes. Normalising their line
+    endings changes their length, which changes their share, which changes the
+    bar -- the entire property of the repository.
+
+    This needs `git check-attr text`, not a read of .gitattributes: rule order
+    matters and only git resolves it. A `*.py text eol=lf` rule listed after
+    `hello/** -text` made `hello/core/python/hello.py` report `eol: lf` while
+    `text: unset` still protected it, which is subtle enough that the assertion
+    has to be on the attribute git actually applies.
+    """
+    import subprocess
+
+    sample = next((ROOT / "hello" / "core").rglob("*"))
+    while sample.is_dir():
+        sample = next(sample.rglob("*"))
+    rel = sample.relative_to(ROOT).as_posix()
+
+    try:
+        out = subprocess.run(
+            ["git", "check-attr", "text", "--", rel],
+            capture_output=True, text=True, timeout=60, cwd=str(ROOT))
+    except FileNotFoundError:
+        return  # git not on PATH; the byte-size tests still cover the property
+
+    if out.returncode != 0 or not out.stdout.strip():
+        return
+
+    line = out.stdout.strip().splitlines()[-1]
+    assert ": unset" in line, (
+        f"{rel} is not marked -text ({line}); line-ending normalisation would "
+        "change its size and therefore its share of the language bar"
+    )
+
+
+def test_scripts_do_not_compete_for_space_on_the_bar():
+    """The tooling is vendored so the 694 language files own the bar."""
+    import subprocess
+
+    script = ROOT / "scripts" / "rainbow.py"
+    if not script.is_file():
+        return
+    try:
+        out = subprocess.run(
+            ["git", "check-attr", "linguist-vendored", "--", "scripts/rainbow.py"],
+            capture_output=True, text=True, timeout=60, cwd=str(ROOT))
+    except FileNotFoundError:
+        return
+    if out.returncode != 0 or not out.stdout.strip():
+        return
+    assert "set" in out.stdout.splitlines()[-1], (
+        "scripts/ is not linguist-vendored, so this repository's own tooling "
+        "takes space on the bar it exists to make colourful"
+    )
