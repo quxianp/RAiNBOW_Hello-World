@@ -1,10 +1,10 @@
-<div align="center">
+﻿<div align="center">
 
 ![RAiNBOW_Hello-World hero banner](assets/hero-banner.png)
 
 # RAiNBOW_Hello-World
 
-**Hello World, in 7 326 files — and a GitHub language bar that is a rainbow.**
+**Hello World, in 7 326 files 鈥?and a GitHub language bar that is a rainbow.**
 
 [![languages](https://img.shields.io/badge/languages-694-ff69b4?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
 [![bar segments](https://img.shields.io/badge/bar-631%20segments-blueviolet?style=for-the-badge&labelColor=0d1117)](https://github.com/quxianp/RAiNBOW_Hello-World)
@@ -23,8 +23,8 @@
 
 | | | | |
 |:--|:--|:--|:--|
-| 🎬 [**The show**](#-the-show) | 🌈 [**Engineering the rainbow**](#-how-the-rainbow-is-engineered) | 🗂️ [**Where 7 325 came from**](#-where-the-7-325-languages-came-from) | ▶️ [**Running it**](#-running-it) |
-| ✅ [**Acceptance checks**](#-acceptance-checks) | 🧱 [**Layout**](#-layout) | 📎 [**Dependencies**](#-dependencies-and-fallbacks) | 🎓 [**Acknowledgements**](#-acknowledgements) |
+| 馃幀 [**The show**](#-the-show) | 馃寛 [**Engineering the rainbow**](#-how-the-rainbow-is-engineered) | 馃梻锔?[**Where 7 325 came from**](#-where-the-7-325-languages-came-from) | 鈻讹笍 [**Running it**](#-running-it) |
+| 鉁?[**Acceptance checks**](#-acceptance-checks) | 馃П [**Layout**](#-layout) | 馃搸 [**Dependencies**](#-dependencies-and-fallbacks) | 馃帗 [**Acknowledgements**](#-acknowledgements) |
 
 </div>
 
@@ -34,29 +34,29 @@ GitHub colours every repository by the byte share of each language it detects.
 This repository is built around one idea: put **every single language GitHub
 Linguist knows how to colour** into the bar, give each of them an *identical*
 slice of the pie, and order them by hue. The result is the densest, most
-continuous language bar on GitHub — hundreds of hair-thin segments sweeping
+continuous language bar on GitHub 鈥?hundreds of hair-thin segments sweeping
 through red, orange, amber, yellow, chartreuse, green, cyan, azure, blue,
 violet, magenta and back to red.
 
 | | |
 |---|---|
-| Core layer (`hello/core/`) | **694** languages — every Linguist-coloured language that can be detected |
-| Full layer (`hello/full/`) | **6 632** files — the long tail of every language we could find |
+| Core layer (`hello/core/`) | **694** languages 鈥?every Linguist-coloured language that can be detected |
+| Full layer (`hello/full/`) | **6 632** files 鈥?the long tail of every language we could find |
 | Total language files | **7 326** |
 | Merged inventory | **7 325** unique language records |
 | Byte share per core language | **0.144092 %** (exactly equal for all 694) |
 | Share sum | **100.000000 %** |
-| Segments GitHub renders | **631** (Linguist folds some dialect names together — see [why](#7-why-you-cannot-see-c-and-c-named-on-the-site)) |
+| Segments GitHub renders | **631** (Linguist folds some dialect names together 鈥?see [why](#7-why-you-cannot-see-c-and-c-named-on-the-site)) |
 
-Everything heavy — compiling, running, recording, screenshotting and committing
-the demo assets back into this repository — happens in **GitHub Actions**, not
+Everything heavy 鈥?compiling, running, recording, screenshotting and committing
+the demo assets back into this repository 鈥?happens in **GitHub Actions**, not
 on your machine.
 
 ---
 
 <!-- RAINBOW_ASSETS_START -->
 
-## 🎬 The show
+## 馃幀 The show
 
 <div align="center">
 
@@ -66,7 +66,7 @@ on your machine.
 
 <img src="assets/rainbow-bar-github.png" alt="The GitHub language bar: all 631 languages, each named with its real share">
 
-<br><sub><b>All 631 languages.</b><br>Drawn from <code>GET /repos/&#8230;/languages</code>—the breakdown GitHub itself serves.</sub>
+<br><sub><b>All 631 languages.</b><br>Drawn from <code>GET /repos/&#8230;/languages</code>鈥攖he breakdown GitHub itself serves.</sub>
 
 </td>
 <td width="50%" valign="top">
@@ -85,7 +85,7 @@ on your machine.
 
 <img src="assets/hello-world.gif" width="820" alt="run.sh: the animated show, ending on a true-colour Hello World!">
 
-<br><sub>⬇↓ <a href="assets/hello-world.mp4">Download the MP4</a> — <code>run.sh</code> recorded with VHS in GitHub Actions.</sub>
+<br><sub>猬団啌 <a href="assets/hello-world.mp4">Download the MP4</a> 鈥?<code>run.sh</code> recorded with VHS in GitHub Actions.</sub>
 
 </div>
 
@@ -93,14 +93,14 @@ on your machine.
 > only name the largest handful of languages and collapses the remaining 600+
 > into a single grey <b>Other</b> row, so C and C++ never appear by name on the
 > site no matter how this repository is built. The bar itself does contain them
-> — 631 hair-thin segments — but the legend will not say so, which is why both
+> 鈥?631 hair-thin segments 鈥?but the legend will not say so, which is why both
 > images above are generated from the JSON GitHub itself serves.
 
 <!-- RAINBOW_ASSETS_END -->
 
 ---
 
-## 🌈 How the rainbow is engineered
+## 馃寛 How the rainbow is engineered
 
 ### 1. Two layers, because Linguist is the ceiling
 
@@ -113,7 +113,7 @@ the bar, so the repository uses two layers:
 | Core | `hello/core/` | 694 | no | **yes** |
 | Full | `hello/full/` | 6 632 | yes | no |
 
-`hello/full/` is fully real — every file is committed, readable and valid — it is
+`hello/full/` is fully real 鈥?every file is committed, readable and valid 鈥?it is
 simply marked `linguist-vendored` so it does not dilute the bar.
 
 ### 2. `.gitattributes` steers Linguist
@@ -130,12 +130,12 @@ scripts/** linguist-documentation
 The `linguist-detectable` line matters more than it looks. Linguist only counts
 `programming` and `markup` types in the statistics by default, and **124 of the
 694 core languages are `data` or `prose`** (Markdown, JSON, SQL, CSV, TOML,
-AsciiDoc, …). Without that attribute two thirds of them would silently vanish
-from the bar. Everything outside `hello/core/` — the scripts, configs, data
-dumps and logs that drive the whole thing — is documentation, so it never
+AsciiDoc, 鈥?. Without that attribute two thirds of them would silently vanish
+from the bar. Everything outside `hello/core/` 鈥?the scripts, configs, data
+dumps and logs that drive the whole thing 鈥?is documentation, so it never
 competes for a single byte of the bar.
 
-### 3. Equal byte shares → equal, visible segments
+### 3. Equal byte shares 鈫?equal, visible segments
 
 Linguist draws each language's width from its share of the *counted* bytes. If
 files kept their natural sizes, a 40 KB template would dwarf a 200 B Brainfuck
@@ -143,12 +143,12 @@ snippet and the rainbow would collapse into a few fat blobs.
 
 So `scripts/balance_bytes.py` pads **every** core file to exactly **2048 bytes**
 using that language's own comment syntax (`//`, `#`, `--`, `%`, `;`, `(* *)`,
-`<!-- -->`, …), or trailing whitespace where no comment exists. With 694 files
-that is 694 × 2048 = **1 421 312 bytes**, so every language gets precisely
-`100 / 694 = 0.144092 %`. The result is inside the 0.05 %–0.5 % visibility
+`<!-- -->`, 鈥?, or trailing whitespace where no comment exists. With 694 files
+that is 694 脳 2048 = **1 421 312 bytes**, so every language gets precisely
+`100 / 694 = 0.144092 %`. The result is inside the 0.05 %鈥?.5 % visibility
 window, the standard deviation is **0.000000 pp**, and the sum is exactly 100 %.
 
-The padding is idempotent — re-running the balancer produces a zero-byte diff.
+The padding is idempotent 鈥?re-running the balancer produces a zero-byte diff.
 
 ### 4. Hue-ordered colour wheel
 
@@ -156,7 +156,7 @@ The padding is idempotent — re-running the balancer produces a zero-byte diff.
 
 ![The colour wheel: 694 core languages ordered by hue](assets/rainbow-wheel.png)
 
-*694 core languages, ordered by the hue of their Linguist colour — one wedge each.*
+*694 core languages, ordered by the hue of their Linguist colour 鈥?one wedge each.*
 
 </div>
 
@@ -172,7 +172,7 @@ distribute across the wheel like this:
 | yellow | 27 | | yellow-green | 26 | | pink | 17 | | rose | 20 |
 | green | 25 | | | | | | | | red | 36 |
 
-Hue span measured end to end: **0.0° → 359.6°**, no gaps.
+Hue span measured end to end: **0.0掳 鈫?359.6掳**, no gaps.
 
 ### 5. Hall of fame
 
@@ -254,7 +254,7 @@ browser to see the rainbow:
 cat assets/ascii-bar.txt
 ```
 
-One character per language, ordered by the hue of its Linguist colour — 694
+One character per language, ordered by the hue of its Linguist colour 鈥?694
 languages in eight rows. Generated by `scripts/render_ascii_bar.py` from the same
 `config/rainbow_langs.json` that orders the bar itself, so the two cannot
 disagree.
@@ -276,12 +276,12 @@ What the two layers actually contain, by Linguist type. Regenerate with
 
 The contrast between those two columns is the design working, and it is worth
 reading before quoting "6 632 more languages" as if it were comparable to the 694.
-`hello/core/` is 72.5 % programming languages — that is what goes on the bar.
+`hello/core/` is 72.5 % programming languages 鈥?that is what goes on the bar.
 `hello/full/` is **99.0 % not**: it is the vendored long tail of esolangs, data
 formats and prose, gathered for breadth rather than because any of it is
 detectable on a colour bar.
 
-Coverage is uneven, and the README should not imply otherwise: **72.6 %** of core
+Coverage is uneven, and the README should not imply otherwise: **81.8 %** of core
 files have a curated Hello World template and **7.1 %** have a runner, so `run.sh`
 genuinely executes a small minority. The rest are byte-balanced stubs whose job
 is to be detected and coloured, not to compile.
@@ -295,7 +295,7 @@ A file with no curated template says so, in its own header:
 ```
 
 That is deliberate. An earlier version matched templates on the first word of the
-name or on the file extension, which produced confidently wrong files — JASS and
+name or on the file extension, which produced confidently wrong files 鈥?JASS and
 Objective-J inherited a shell `echo` from a shared `.j` extension, `Go Module`
 inherited an entire Go program although a `go.mod` contains module
 declarations. All 156 fuzzy matches were audited: 81 were genuine dialects, 34
@@ -303,8 +303,8 @@ were wrong. Inheritance is now an explicit allowlist, and anything absent from i
 admits ignorance rather than guessing. `scripts/check_templates.py` enforces it.
 
 Where a language has no output primitive at all, the template is what the
-language genuinely offers — Propeller Spin's `printf`, JASS's `InitTrig` trigger
-— rather than a borrowed `echo`. That distinction is the entire point.
+language genuinely offers 鈥?Propeller Spin's `printf`, JASS's `InitTrig` trigger
+鈥?rather than a borrowed `echo`. That distinction is the entire point.
 
 Some formats have no executable body whatsoever, and for those the fields *are*
 the program: a `.properties` file is `hello=Hello World!`, a `.cabal` file is
@@ -319,18 +319,17 @@ The numbers GitHub itself reports for this repository:
 | Counted bytes | 1 417 216 |
 | Entries that are not an exact multiple of 2048 | **0** |
 | Smallest share | 0.144509 % (`1C Enterprise`) |
-| Largest share | 1.011561 % (`HTML` — 7 HTML dialect files) |
+| Largest share | 1.011561 % (`HTML` 鈥?7 HTML dialect files) |
 | Average segment width at 1200 px | **1.90 px** |
 
 That 631 is GitHub's canonical form of the 694 configured core languages: some
-names are folded by Linguist (`Vim script` → `Vim Script`, `KoLmafia ASH` →
-`KoLMafia ASH`) and a handful of dialects are not counted at all
-(`HTML+ERB`, `HTML+PHP`, `Julia REPL`, `Python console`, …). Both 631 and 694
-sit inside the 600–800 target.
+names are folded by Linguist (`Vim script` 鈫?`Vim Script`, `KoLmafia ASH` 鈫?`KoLMafia ASH`) and a handful of dialects are not counted at all
+(`HTML+ERB`, `HTML+PHP`, `Julia REPL`, `Python console`, 鈥?. Both 631 and 694
+sit inside the 600鈥?00 target.
 
 The "0 exceptions" row is the load-bearing one: if a single counted byte were
 not a multiple of 2048, then something outside `hello/core/` was leaking into
-the bar. Nothing is — `hello/full/`, `scripts/`, `config/`, `data/` and this
+the bar. Nothing is 鈥?`hello/full/`, `scripts/`, `config/`, `data/` and this
 README are all correctly excluded.
 
 ### 7. Why you cannot see C and C++ named on the site
@@ -394,7 +393,7 @@ Reports: [`logs/linguist_audit.json`](logs/linguist_audit.json) and
 
 ---
 
-## 🗂️ Where the 7 325 languages came from
+## 馃梻锔?Where the 7 325 languages came from
 
 Languages were harvested from several independent sources and merged on a
 lowercased name key. Counts below are **raw mentions** (how often a name was
@@ -420,7 +419,7 @@ unique records.
 
 The built-in fallback groups matter: they guarantee that famous families are
 never missing just because a scrape failed. Rosetta Code is listed because it was
-attempted, not because it added anything — after de-duplication it contributed
+attempted, not because it added anything 鈥?after de-duplication it contributed
 no name the other sources had not already produced.
 
 - Full merged inventory: [`config/all-langs.json`](config/all-langs.json)
@@ -429,7 +428,7 @@ no name the other sources had not already produced.
 
 ---
 
-## ▶️ Running it
+## 鈻讹笍 Running it
 
 ### Locally
 
@@ -449,12 +448,12 @@ NO_COLOR=1 ./run.sh     # plain text, no SGR escapes
 
 1. detects `figlet` / `toilet` / `lolcat`, falling back to `scripts/rainbow.py`;
 2. sweeps the word `RAiNBOW_Hello-World` through the hue wheel;
-3. rolls the 694 core languages past (`✓` marks, then `+644 more`);
+3. rolls the 694 core languages past (`鉁揱 marks, then `+644 more`);
 4. executes every language it can actually run, in parallel
    (`scripts/run_languages.py`, TSV results in `logs/output/results.tsv`);
 5. renders **Hello World!** as ASCII art coloured character-by-character with 24-bit
    true colour;
-6. beeps — `afplay` / `aplay` / `paplay` if present, otherwise `printf '\a'`;
+6. beeps 鈥?`afplay` / `aplay` / `paplay` if present, otherwise `printf '\a'`;
 7. shows an easter egg of esoteric languages from `hello/full/`;
 8. draws the 694-segment bar and prints the final true-colour **Hello World!**.
 
@@ -468,12 +467,12 @@ Everything is compiled, executed and recorded in the cloud:
 |---|---|
 | `verify` | runs `verify_languages.py` (19 acceptance checks) and the Linguist simulation |
 | `batches` | 24-way matrix; regenerates and rebalances its shard of `hello/core/`, commits only on drift |
-| `assets` | runs `run.sh`, records it with VHS → GIF, transcodes MP4 with ffmpeg, renders the local bar, screenshots the real bar with Playwright, rewrites the asset block in this README, and commits back |
+| `assets` | runs `run.sh`, records it with VHS 鈫?GIF, transcodes MP4 with ffmpeg, renders the local bar, screenshots the real bar with Playwright, rewrites the asset block in this README, and commits back |
 
 Trigger it by hand:
 
 ```bash
-gh workflow run rainbow.yml            # or: Actions ▸ rainbow ▸ Run workflow
+gh workflow run rainbow.yml            # or: Actions 鈻?rainbow 鈻?Run workflow
 ```
 
 The bot's own commits carry `[skip ci]` so publishing assets can never trigger
@@ -500,38 +499,38 @@ one slice, which is how the matrix job splits the work.
 
 ---
 
-## ✅ Acceptance checks
+## 鉁?Acceptance checks
 
-`scripts/verify_languages.py` is the gate. Current state — **19/19 pass**:
+`scripts/verify_languages.py` is the gate. Current state 鈥?**19/19 pass**:
 
 | Check | Result |
 |---|---|
-| Core languages within 600–800 | 694 |
+| Core languages within 600鈥?00 | 694 |
 | Core == every detectable Linguist-coloured language | 694 / 694, 0 deferred |
 | Every core file exists | 0 missing |
-| Core share inside 0.05 %–0.5 % | min 0.1441 %, max 0.1441 % |
+| Core share inside 0.05 %鈥?.5 % | min 0.1441 %, max 0.1441 % |
 | Shares sum to 100 % | 100.000000 % |
 | Share spread tight | stdev 0.000000 pp |
 | Counted bytes non-trivial | 1 421 312 B |
-| Full layer ≥ 2 400 files | 6 632 |
-| Total language files ≥ 3 000 | 7 326 |
+| Full layer 鈮?2 400 files | 6 632 |
+| Total language files 鈮?3 000 | 7 326 |
 | `.gitattributes` un-vendors `hello/core` | ok |
 | `.gitattributes` vendors `hello/full` | ok |
 | `.gitattributes` marks README as documentation | ok |
 | `.gitattributes` default is vendored | ok |
 | Every core file recognisable by Linguist | 0 unrecognisable |
 | Colour wheel fully covered | no missing buckets |
-| Hues span the wheel | 0.0° → 359.6° |
+| Hues span the wheel | 0.0掳 鈫?359.6掳 |
 | Languages ordered by hue | ok |
 | `hello/manifest.json` exists | ok |
-| Merged inventory ≥ 3 000 | 7 325 |
+| Merged inventory 鈮?3 000 | 7 325 |
 
 `logs/verify_languages.json`, `logs/balance_report.txt` and `logs/balance_summary.json`
 hold the machine-readable results.
 
 ---
 
-## 🧱 Layout
+## 馃П Layout
 
 ```
 .gitattributes          Linguist steering -- this is what makes the bar a rainbow
@@ -563,7 +562,7 @@ Deeper reading, if you want it:
 
 ---
 
-## 📎 Dependencies and fallbacks
+## 馃搸 Dependencies and fallbacks
 
 | Wants | Uses | If missing |
 |---|---|---|
@@ -571,7 +570,7 @@ Deeper reading, if you want it:
 | `lolcat` | colour pipeline | `scripts/rainbow.py` 24-bit SGR |
 | GNU `parallel` | parallel execution | `scripts/run_languages.py` thread pool |
 | `github-linguist` | authoritative stats | pure-Python simulator |
-| `ffmpeg` | GIF → MP4 | GIF only, MP4 skipped |
+| `ffmpeg` | GIF 鈫?MP4 | GIF only, MP4 skipped |
 | `vhs` | terminal recording | skipped, GIF/MP4 not refreshed |
 | Playwright | bar screenshot | skipped, local PNG used instead |
 | `afplay`/`aplay`/`paplay` | sound | `printf '\a'` |
@@ -581,25 +580,23 @@ with a true-colour **Hello World!** no matter what is installed.
 
 ---
 
-## 🎓 Acknowledgements
+## 馃帗 Acknowledgements
 
-- **[GitHub Linguist](https://github.com/github/linguist)** — the language
+- **[GitHub Linguist](https://github.com/github/linguist)** 鈥?the language
   definitions and colours everything here is built on.
-- **[lolcat](https://github.com/jaseg/lolcat)** — the inspiration for the
+- **[lolcat](https://github.com/jaseg/lolcat)** 鈥?the inspiration for the
   terminal rainbow.
 - **[figlet](https://www.figlet.org/)** and
-  **[toilet](https://github.com/potato-42/toilet)** — ASCII art.
-- **[chrisnager/pride](https://github.com/chrisnager/pride)** — for showing that
+  **[toilet](https://github.com/potato-42/toilet)** 鈥?ASCII art.
+- **[chrisnager/pride](https://github.com/chrisnager/pride)** 鈥?for showing that
   language bars can be art.
-- **[VHS](https://github.com/charmbracelet/vhs)** — terminal recording.
-- **[Playwright](https://playwright.dev/)** — the real language-bar screenshot.
-- **[esolangs.org](https://esolangs.org/)** — the esoteric language catalogue.
-- **[Rosetta Code](https://rosettacode.org/wiki/Category:Programming_Languages)** —
-  multi-language task corpus.
-- **[Wikipedia](https://en.wikipedia.org/wiki/List_of_programming_languages)** —
-  the broad inventory.
+- **[VHS](https://github.com/charmbracelet/vhs)** 鈥?terminal recording.
+- **[Playwright](https://playwright.dev/)** 鈥?the real language-bar screenshot.
+- **[esolangs.org](https://esolangs.org/)** 鈥?the esoteric language catalogue.
+- **[Rosetta Code](https://rosettacode.org/wiki/Category:Programming_Languages)** 鈥?  multi-language task corpus.
+- **[Wikipedia](https://en.wikipedia.org/wiki/List_of_programming_languages)** 鈥?  the broad inventory.
 - Everyone who files a Linguist PR adding a colour to a language.
 
 ## License
 
-[MIT](LICENSE) © RAiNBOW Bot
+[MIT](LICENSE) 漏 RAiNBOW Bot
