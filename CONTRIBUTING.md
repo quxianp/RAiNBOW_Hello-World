@@ -28,15 +28,55 @@ python -m pip install pyyaml requests beautifulsoup4 pillow matplotlib
 ## Before you push
 
 ```bash
-python scripts/verify_languages.py     # 19 acceptance checks
-python scripts/validate_delivery.py    # workflow, layout, generators, exec bits
-python scripts/balance_bytes.py        # must be idempotent: zero drift
-bash run.sh                            # must exit 0
+python scripts/run_tests.py             # unit tests for the load-bearing invariants
+python scripts/verify_languages.py      # 19 acceptance checks
+python scripts/validate_delivery.py     # workflow, layout, generators, exec bits
+python scripts/balance_bytes.py         # must be idempotent: zero drift
+bash run.sh                             # must exit 0
 ```
 
-`validate_delivery.py` is the one that catches most mistakes: it runs the README
-generators, compiles every script, and fails if `run.sh` stops passing the
-animation flags.
+All five run in CI on every push, so a local pass is a promise about the same
+five things.
+
+`validate_delivery.py` catches the most: it *executes* the README generators,
+the link checkers, the template guard and the repository audit rather than
+grepping for expected strings, and fails if `run.sh` stops passing the animation
+flags.
+
+## Adding a Hello World template
+
+Most languages still have a placeholder. A placeholder is honest — it says so in
+the file's own header — but a real program is better, and the bar is long.
+
+Templates live in the `HELLO` dict in `scripts/generate_all_hello.py`, keyed by
+lowercased language name.
+
+Three rules, all learned the hard way:
+
+1. **Write it for that language.** The first matcher inherited templates on the
+   first word of the name or the file extension, which gave JASS a shell `echo`
+   and `Go Module` an entire Go program. 34 of its 156 matches were wrong, and
+   every one looked plausible enough to ship.
+2. **Dialect inheritance goes in `INHERIT`,** the explicit allowlist below
+   `HELLO`. Nothing infers it. If a language has no output primitive, give it
+   what the language actually has — Spin `printf`, a JASS trigger function —
+   rather than borrowing an `echo`.
+3. **Declaration formats have no program body, and that is fine.** A
+   `.properties` file is `hello=Hello World!`, a `.cabal` file is `name: rainbow`.
+   Those are correct answers, not gaps.
+
+Then:
+
+```bash
+python scripts/generate_all_hello.py
+python scripts/balance_bytes.py
+python scripts/check_templates.py        # must stay clean
+python scripts/audit_repo.py
+```
+
+`check_templates.py` enforces the rules: the manifest's `real_template` flag must
+agree with `program_for()`, known-bad inherits must stay honest, and no heuristic
+may have crept back into the matcher.
 
 ## Adding a language
 
@@ -65,9 +105,19 @@ runs VHS and then transcodes with ffmpeg.
 ```bash
 vhs demo.tape                          # assets/hello-world.gif
 bash scripts/record_demo.sh            # gif + mp4, with GIF optimisation
+python scripts/measure_motion.py       # is it actually moving?
 python scripts/generate_hero_banner.py # banner, counts read from the repo
 python scripts/render_github_bar.py    # the 631-language bar image
+python scripts/render_ascii_bar.py     # assets/ascii-bar.txt, no browser needed
 ```
+
+**Measure the recording, do not watch it.** A phase that prints nothing and exits
+0 is invisible to every other check in this repository: the closing hold was
+exactly that for several releases, and the last 8.7 s of the published GIF was a
+frozen frame that nobody could tell apart from a deliberate pause.
+`measure_motion.py` reports the fraction of the frame changing between
+consecutive frames, and flags a recording as monotonous when most transitions
+are frozen.
 
 `run.sh` has motion settings (`--motion`, `--fast`) so you can iterate on one
 phase without re-rendering everything.
