@@ -1,11 +1,11 @@
 # -*- mode: rez -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Rez - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #ffdab3
 #   hue        : 30.8 deg
 #   layer      : core (byte-balanced rainbow bar)
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
+#   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
 # Hello World!
 # Hello World!
@@ -36,5 +36,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Rez :: RAiNBOW_Hello-World
-# rainbow-pad colour #ffdab3 :: padded to 100
-# rainbow-pad padding comment: byte balancing fo
+# rainbow-pad colour #ffdab3 :: padded to 10

@@ -594,7 +594,6 @@ HELLO: dict[str, str] = {
     "gas": '.section .data\nmsg: .ascii "Hello World!"\n',
     "asm": 'section .data\n  msg db "Hello World!", 10\n',
     "linker script": 'ENTRY(_start)\n',
-    "coff": '',
     "llvm ir": 'define i32 @main() {\n  ret i32 0\n}\n',
     # ---- 中文编程语言 ----------------------------------------------------
     "仓颉": 'main(): Int64 {\n    println("Hello World!")\n    return 0\n}\n',
@@ -1547,7 +1546,6 @@ INHERIT: dict[str, str] = {
     "cairo zero": "cairo",
     "chisel verified": "chisel",
     "clojure edn": "clojure",
-    "coff object": "coff",
     "csh tcsh": "csh",
     "cue sheet": "cue",
     "deadfish pda": "deadfish",
@@ -1628,12 +1626,16 @@ def program_for(name: str, ext: str) -> tuple[str, bool]:
       table can answer that. A key has to be there.
     * *Which language's program is the closest relative?* INHERIT answers that,
       and only for parent/child pairs a human has checked -- see below.
+
+    An empty string is not a program. `HELLO["coff"] = ""` used to satisfy the
+    "key is present" test and mark COFF as having a real template, producing a
+    file that was a banner followed by nothing.
     """
     key = name.lower().strip()
-    if key in HELLO:
+    if key in HELLO and HELLO[key].strip():
         return HELLO[key], True
     simple = re.sub(r"\s+", " ", key)
-    if simple in HELLO:
+    if simple in HELLO and HELLO[simple].strip():
         return HELLO[simple], True
 
     # Deliberately NOT a heuristic. The previous code fell back to
@@ -1648,7 +1650,7 @@ def program_for(name: str, ext: str) -> tuple[str, bool]:
     # Inheritance is now an explicit allowlist, so it is auditable: every entry
     # below is a documented dialect or variant of the language it names.
     inherited = INHERIT.get(key)
-    if inherited and inherited in HELLO:
+    if inherited and inherited in HELLO and HELLO[inherited].strip():
         return HELLO[inherited], True
     return "", False
 

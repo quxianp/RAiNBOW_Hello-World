@@ -136,3 +136,46 @@ def test_scripts_write_json_with_explicit_newlines():
     assert not bad, (
         f"write_text calls emitting JSON without newline= at: {bad}"
     )
+
+
+def test_no_curated_template_is_empty():
+    """A key in HELLO is not the same as a program in HELLO.
+
+    `HELLO["coff"] = ""` satisfied the "is this language known?" test, so COFF
+    was marked as having a curated template and generated as a banner followed
+    by nothing -- a file claiming to be a Hello World program and containing
+    none. `program_for()` now requires the value to be non-blank, and this
+    asserts it directly so an empty entry cannot be reintroduced.
+    """
+    import importlib.util
+
+    gen = ROOT / "scripts" / "generate_all_hello.py"
+    spec = importlib.util.spec_from_file_location("gen_hello", gen)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["gen_hello"] = mod
+    spec.loader.exec_module(mod)
+
+    # Whitespace is the legitimate exception: its program is spaces and tabs,
+    # so it strips to nothing while being completely correct. Excluding it by
+    # name, with the reason, rather than by "strip() and hope" -- otherwise the
+    # next language with an invisible program would be added to the exclusion
+    # list by whoever got there first.
+    INVISIBLE = {"whitespace"}
+    empty = [k for k, v in mod.HELLO.items()
+             if not v.strip() and k not in INVISIBLE]
+    assert not empty, (
+        f"HELLO has {len(empty)} empty entries, which mark a language as having "
+        f"a curated template while generating nothing: {empty[:5]}"
+    )
+
+    # And the manifest must not claim one either.
+    import json
+    man = json.loads(
+        (ROOT / "hello" / "manifest.json").read_text(encoding="utf-8"))
+    bad = [f["language"] for f in man["files"]
+           if f.get("real_template")
+           and f["language"].lower() not in INVISIBLE
+           and not mod.program_for(
+               f["language"], f.get("extension") or "")[0].strip()]
+    assert not bad, f"languages claiming a template that is blank: {bad}"
+
