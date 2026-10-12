@@ -364,3 +364,32 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   code, so it failed on its own documentation; it now strips comments first.
 - Status: RESOLVED.
 
+## E28 The animated hold drew nothing at all
+- Symptom: the closing "animated hold" in run.sh produced zero bytes. The final
+  8.7 s of a 37.4 s recording was a frozen still, and 40 % of the runtime was
+  dead time. The complaint that reached me was only "the video is monotonous".
+- Cause: three conditions had to line up and all three were wrong. The `--sweep`
+  branch was guarded on `both`, which is only true when `--bar` and `--hello` are
+  both passed; run.sh passes neither. The `--sweep-only` branch returned 0
+  immediately, before drawing. And the two were ordered so that even fixing one
+  would not have restored the output.
+- Why nothing caught it: the command exited 0. run.sh additionally guards it with
+  `|| true`, so even the possibility of noticing an error was discarded. A phase
+  that prints nothing and succeeds is invisible to every gate in the pipeline --
+  byte balance is unaffected, the 19 acceptance checks do not look at it, and the
+  recording is not inspected for motion.
+- Fix: `--sweep-only` now draws its own sweep, both with and without a TTY; the
+  no-TTY case emits one static frame so the phase degrades instead of vanishing,
+  which is the case CI would have hit.
+- Found by: `scripts/measure_motion.py`, which reports the fraction of the frame
+  changing between consecutive frames. Eyeballing a 37-second terminal recording
+  does not distinguish "a deliberate hold" from "a phase that never ran"; the
+  number does, immediately.
+- Lesson: the previous frozen-tail bug in this same phase was fixed by moving the
+  hold before `exit 0`. That was correct and insufficient -- the code was
+  unreachable, and once reachable it turned out to be empty. A fix that makes
+  code run is not a fix until you have seen it run.
+- Regression guard: `tests/test_demo_acts.py` executes the real commands and
+  asserts on the bytes they return.
+- Status: RESOLVED.
+
