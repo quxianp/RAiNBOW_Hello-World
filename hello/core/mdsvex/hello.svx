@@ -1,5 +1,4 @@
 # -*- mode: mdsvex -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # mdsvex - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5f9ea0
 #   hue        : 181.8 deg
@@ -8,7 +7,6 @@
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
 # Hello World!
-# Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad mdsvex :: RAiNBOW_Hello-World
@@ -37,4 +35,6 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad mdsvex :: RAiNBOW_Hello-World
 # rainbow-pad colour #5f9ea0 :: padded to 100
-# rainbow-pad padding comm
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
+   

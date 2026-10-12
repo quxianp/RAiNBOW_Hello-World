@@ -1,5 +1,4 @@
 # -*- mode: rmarkdown -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # RMarkdown - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #198ce7
 #   hue        : 206.5 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+---
+title: "Hello World!"
+---
+
+Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad RMarkdown :: RAiNBOW_Hello-World
@@ -37,4 +39,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad RMarkdown :: RAiNBOW_Hello-World
 # rainbow-pad colour #198ce7 :: padded to 100
-     
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad 

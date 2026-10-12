@@ -1,5 +1,4 @@
 # -*- mode: gedcom -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # GEDCOM - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #003058
 #   hue        : 207.3 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+0 HEAD
+1 NOTE Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad GEDCOM :: RAiNBOW_Hello-World
@@ -37,4 +36,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad GEDCOM :: RAiNBOW_Hello-World
 # rainbow-pad colour #003058 :: padded to 100
-# rainbow-pad padding comm
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://github.com/quxianp/RAiNBOW_Hel

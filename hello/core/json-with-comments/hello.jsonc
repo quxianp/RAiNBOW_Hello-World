@@ -1,5 +1,4 @@
 // -*- mode: json-with-comments -*-
-//   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 // JSON with Comments - Hello World! :: RAiNBOW_Hello-World
 //   colour     : #292929
 //   hue        : 0.0 deg
@@ -7,8 +6,10 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-// Hello World!
-// Hello World!
+{
+  // Hello World!
+  "greeting": "Hello World!"
+}
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
 // rainbow-pad JSON with Comments :: RAiNBOW_Hello-World
@@ -35,4 +36,5 @@
 // rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 // rainbow-pad equal byte share keeps the language bar an even rainbow
 // rainbow-pad one segment per Linguist coloured language
-          
+// rainbow-pad JSON with Comments :: RAiNBOW_Hello-World
+// rainbow-pad colour #2

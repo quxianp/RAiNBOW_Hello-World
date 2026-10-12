@@ -1,5 +1,4 @@
 # -*- mode: stringtemplate -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # StringTemplate - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #3fb34f
 #   hue        : 128.3 deg
@@ -7,8 +6,7 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+hello(name) ::= "Hello World!"
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad StringTemplate :: RAiNBOW_Hello-World
@@ -36,4 +34,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad StringTemplate :: RAiNBOW_Hello-World
-# rainbow-pad   
+# rainbow-pad colour #3fb34f :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rain

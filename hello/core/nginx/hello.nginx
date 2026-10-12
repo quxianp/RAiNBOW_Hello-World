@@ -1,5 +1,4 @@
 # -*- mode: nginx -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Nginx - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #009639
 #   hue        : 142.8 deg
@@ -7,8 +6,11 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+server {
+  location / {
+    return 200 "Hello World!";
+  }
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Nginx :: RAiNBOW_Hello-World
@@ -37,4 +39,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Nginx :: RAiNBOW_Hello-World
 # rainbow-pad colour #009639 :: padded to 100
-# rainbow-pad padding comment: by
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://git

@@ -1,5 +1,4 @@
 # -*- mode: graphviz-(dot) -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Graphviz (DOT) - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #2596be
 #   hue        : 195.7 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+digraph G {
+  Hello [label="Hello World!"];
+}
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Graphviz (DOT) :: RAiNBOW_Hello-World
@@ -36,4 +36,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Graphviz (DOT) :: RAiNBOW_Hello-World
-# rainbow-pad   
+# rainbow-pad colour #2596be :: padded to 100
+# rainbow-pad padding comment: byte balanci
