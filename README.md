@@ -554,6 +554,7 @@ Deeper reading, if you want it:
 
 | Document | What it answers |
 |---|---|
+| [docs/README.md](docs/README.md) | Index of every document in this repository |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the bar is controlled by byte count, and why 2048 |
 | [docs/WHY-631-NOT-694.md](docs/WHY-631-NOT-694.md) | Why 694 files produce only 631 segments |
 | [docs/FAQ.md](docs/FAQ.md) | Why the bar looks grey, where COBOL went, which number is right |
