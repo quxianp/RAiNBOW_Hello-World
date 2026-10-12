@@ -334,10 +334,12 @@ def main() -> int:
         "languages": records,
     }
     (CONFIG / "rainbow_langs.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
+        json.dumps(payload, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8", newline="\n",
     )
     (CONFIG / "core-langs.txt").write_text(
-        "\n".join(r["name"] for r in records) + "\n", encoding="utf-8"
+        "\n".join(r["name"] for r in records) + "\n",
+        encoding="utf-8", newline="\n",
     )
 
     buckets = Counter(r["hue_bucket"] for r in records)

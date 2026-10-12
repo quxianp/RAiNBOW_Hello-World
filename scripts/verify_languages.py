@@ -230,7 +230,8 @@ def main() -> int:
         "failed": failed,
     }
     (LOGS / "verify_languages.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8", newline="\n",
     )
     if args.json:
         print(json.dumps(payload, ensure_ascii=False, indent=2))

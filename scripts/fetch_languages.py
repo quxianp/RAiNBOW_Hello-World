@@ -210,9 +210,14 @@ def http_get(url: str, timeout: int = 60, retries: int = 3, throttle: float = 0.
 
 def save_json(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    # newline="\n" keeps the output byte-identical across platforms. Every other
+    # generated JSON in this repository does the same: `* -text` in
+    # .gitattributes means nothing normalises line endings on the way in, so a
+    # Windows run would otherwise commit CRLF and rewrite the whole file.
     path.write_text(
         json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=False) + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     log(f"wrote {path.relative_to(ROOT)} ({path.stat().st_size} bytes)")
 

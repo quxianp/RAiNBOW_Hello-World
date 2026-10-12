@@ -409,7 +409,8 @@ def main() -> int:
         "core_percent_target": (100.0 / len(core)) if core else 0.0,
     }
     (DATA / "merged_langs.json").write_text(
-        json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
+        json.dumps(out, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8", newline="\n",
     )
     (CONFIG / "all-langs.json").write_text(
         json.dumps(
@@ -437,12 +438,15 @@ def main() -> int:
         )
         + "\n",
         encoding="utf-8",
+        newline="\n",
     )
     (CONFIG / "core-langs.txt").write_text(
-        "\n".join(r["name"] for r in core) + "\n", encoding="utf-8"
+        "\n".join(r["name"] for r in core) + "\n",
+        encoding="utf-8", newline="\n",
     )
     (DATA / "merge_stats.json").write_text(
-        json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8", newline="\n",
     )
     log(f"wrote data/merged_langs.json ({len(out)} entries)")
     log(f"wrote config/all-langs.json, config/core-langs.txt ({len(core)} lines)")

@@ -323,7 +323,8 @@ def main() -> int:
         # whole bar, not one CI batch
         (LOGS / "balance_report.txt").write_text(report, encoding="utf-8", newline="\n")
         (LOGS / "balance_summary.json").write_text(
-            json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8", newline="\n",
         )
     print(f"core languages : {n}")
     print(f"target bytes   : {target} (natural mean {natural_mean:.1f})")

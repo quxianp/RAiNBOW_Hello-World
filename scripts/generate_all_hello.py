@@ -1544,8 +1544,15 @@ def main() -> int:
         "runnable_command_count": sum(1 for m in manifest if m["runner"]),
         "files": manifest,
     }
+    # newline="\n" is required, not cosmetic. Without it, Windows text mode
+    # converts every \n to \r\n, and because .gitattributes sets `* -text`
+    # (needed so the byte-padded core files keep their exact size) nothing
+    # normalises it on the way in. The committed manifest was 81 290 CRLF
+    # lines -- all 81 290 of them -- and churning the line endings rewrote the
+    # entire file on every cross-platform run.
     (HELLO_DIR / "manifest.json").write_text(
-        json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
+        json.dumps(payload, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8", newline="\n",
     )
     print(f"core files : {core_n}")
     print(f"full files : {full_n}")
