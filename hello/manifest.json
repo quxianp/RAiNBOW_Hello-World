@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 746,
+ "with_curated_template": 763,
  "runnable_command_count": 51,
  "files": [
   {
@@ -2200,7 +2200,7 @@
    "hue": 52.28,
    "modeline": "denizenscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Dotenv",
@@ -3676,7 +3676,7 @@
    "hue": 162.97,
    "modeline": "gno",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DM",
@@ -3772,7 +3772,7 @@
    "hue": 172.17,
    "modeline": "bqn",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Edge",
@@ -4324,7 +4324,7 @@
    "hue": 192.28,
    "modeline": "frege",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Jison",
@@ -4696,7 +4696,7 @@
    "hue": 198.29,
    "modeline": "bicep",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Processing",
@@ -4948,7 +4948,7 @@
    "hue": 204.21,
    "modeline": "fancy",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Tact",
@@ -6376,7 +6376,7 @@
    "hue": 237.02,
    "modeline": "clue",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FreeBASIC",
@@ -6736,7 +6736,7 @@
    "hue": 253.24,
    "modeline": "omgrofl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Classic ASP",
@@ -21202,7 +21202,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CLooP",
@@ -23985,7 +23985,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cytoscape",
@@ -35711,7 +35711,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GuLang",
@@ -37581,7 +37581,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Huit",
@@ -48966,7 +48966,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MOOD",
@@ -62584,7 +62584,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Roco",
@@ -67017,7 +67017,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SNOBOL4",
@@ -68029,7 +68029,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SPREADSHEET",
@@ -68997,7 +68997,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "sTBF",

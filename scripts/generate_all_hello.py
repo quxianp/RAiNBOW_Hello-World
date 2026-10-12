@@ -1030,6 +1030,25 @@ HELLO: dict[str, str] = {
     "xml property list": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n  <key>greeting</key>\n  <string>Hello World!</string>\n</dict>\n</plist>\n",
     "yaml 1.2": "greeting: Hello World!\n",
     "zmodel": "\"Hello World!\";\n",
+    # ---- batch 10 ----
+#
+    "bicep": "// Hello World!\nresource hello = {\n  name: 'hello'\n  location: 'westus'\n}\n",
+    "bqn": "•Show \"Hello World!\"\n",
+    "clojurescript": "(js/console.log \"Hello World!\")\n",
+    "clue": "(println \"Hello World!\")\n",
+    "cycript": "console.log(\"Hello World!\");\n",
+    "denizenscript": "say Hello World!;\n",
+    "fancy": "puts \"Hello World!\"\n",
+    "frege": "module Main where\n\nmain :: IO ()\nmain = putStrLn \"Hello World!\"\n",
+    "gno": "package main\n\nfunc main() {\n\tprintln(\"Hello World!\")\n}\n",
+    "guile": "(display \"Hello World!\")\n(newline)\n",
+    "hugs": "main = putStrLn \"Hello World!\"\n",
+    "moocode": "print \"Hello World!\"\n",
+    "omgrofl": "Hello World!\n",
+    "rockstar": "OMG!\nHello World!\n",
+    "snobol": "OUTPUT = Hello World!\n",
+    "spoon": "Hello World!\n",
+    "stax": "Hello World!\n",
 }
 
 # languages we know how to actually execute: name -> shell command template
