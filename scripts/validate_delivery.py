@@ -214,6 +214,7 @@ GENERATORS = [
     # Same failure mode, wider blast radius: broken references in docs/ are
     # never revisited once written.
     ["scripts/check_templates.py"],
+    ["scripts/spotcheck_templates.py"],
     ["scripts/update_readme_coverage.py", "--check"],
     ["scripts/check_docs_links.py"],
     # Re-derives the equal-size invariant from disk. Equal size is equal share,
