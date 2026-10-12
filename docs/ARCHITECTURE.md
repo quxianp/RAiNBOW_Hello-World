@@ -102,4 +102,13 @@ render, which reads `GET /repos/.../languages`.
   named.
 - **GitHub's language panel is edge-cached.** It can show a stale breakdown. The
   API is authoritative; see `logs/ERRORS.log`.
-- **Only 7.1 % of core files can actually run.** The rest are detection stubs.
+- **Only 7.1 % of core files can actually run.** A curated program is not the
+  same as a runnable one: most are correct for their language but need an
+  interpreter this repository does not install.
+- **Templates are keyed on language name, never inferred.** Inheritance is an
+  explicit allowlist (`INHERIT`) because the first matcher, which fell back to
+  first-word and extension matching, gave JASS a shell `echo` and `Go Module` an
+  entire Go program. See `logs/ERRORS.log` E25.
+- **One core language has no template and is meant not to.** Rez shares its `.r`
+  extension with R, and the right program depends on which language is meant, so
+  it carries the honest placeholder. See E29.
