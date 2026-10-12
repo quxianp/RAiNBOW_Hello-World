@@ -1,5 +1,4 @@
 # -*- mode: web-ontology-language -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Web Ontology Language - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #5b70bd
 #   hue        : 227.1 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+<?xml version="1.0"?>
+<owl:Class rdf:about="#HelloWorld"/>
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Web Ontology Language :: RAiNBOW_Hello-World
@@ -35,4 +34,5 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Web Ontology
+# rainbow-pad Web Ontology Language :: RAiNBOW_Hello-World
+# rainbow-pad colour #5b70b

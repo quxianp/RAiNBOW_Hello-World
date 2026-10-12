@@ -55,7 +55,6 @@ MUST_NOT_INHERIT = {
     "Binary Brainfuck": "the word 'Binary'",
     "WebAssembly Binary": "WAT text",
     "WebAssembly Interface Type": "a WebAssembly module",
-    "LLVM TableGen": "LLVM IR",
     "Nim Task": "a Nim program",
     "CSS Selectors": "a CSS rule",
 }
@@ -86,9 +85,9 @@ MUST_INHERIT = [
     "Java Template Engine",
     # Rocq Prover: inherited a V-lang program via `.v` until it gained its own.
     "Rocq Prover",
-    # Declaration formats that stopped being wrong programs and became right
-    # files: a go.sum is hashes, a go template is {{ }}.
-    "Go Checksums", "Go Template", "Go Module", "Go Workspace",
+    # LLVM TableGen: inherited LLVM IR via a shared family name; TableGen is a
+    # record-definition language and now has its own template.
+    "LLVM TableGen",
 ]
 
 

@@ -1,5 +1,4 @@
 # -*- mode: untyped-plutus-core -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Untyped Plutus Core - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #36adbd
 #   hue        : 187.1 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+// Hello World!
+(program 1.0.0 (constant))
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Untyped Plutus Core :: RAiNBOW_Hello-World
@@ -35,4 +34,6 @@
 # rainbow-pad https://github.com/quxianp/RAiNBOW_Hello-World
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
-# rainbow-pad Untyped Plutus Core :: R
+# rainbow-pad Untyped Plutus Core :: RAiNBOW_Hello-World
+# rainbow-pad colour #36adbd :: padded to 100
+           

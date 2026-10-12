@@ -1,5 +1,4 @@
 # -*- mode: overpassql -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # OverpassQL - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #cce2aa
 #   hue        : 83.6 deg
@@ -7,8 +6,8 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+[out:json];
+// Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad OverpassQL :: RAiNBOW_Hello-World
@@ -37,3 +36,5 @@
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad OverpassQL :: RAiNBOW_Hello-World
 # rainbow-pad colour #cce2aa :: padded to 100
+# rainbow-pad padding comment: byte balancing for the rainbow bar
+# rainbow-pad https://gi

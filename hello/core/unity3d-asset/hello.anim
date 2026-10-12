@@ -1,5 +1,4 @@
 # -*- mode: unity3d-asset -*-
-#   note       : Pinned with a Linguist modeline so it keeps its own segment on the bar.
 # Unity3D Asset - Hello World! :: RAiNBOW_Hello-World
 #   colour     : #222c37
 #   hue        : 211.4 deg
@@ -7,8 +6,9 @@
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Hello World!
-# Hello World!
+%YAML 1.1
+--- !u!114 &1
+m_Name: Hello World!
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Unity3D Asset :: RAiNBOW_Hello-World
@@ -36,4 +36,5 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad Unity3D Asset :: RAiNBOW_Hello-World
-# rainbow-pad colour #2
+# rainbow-pad colour #222c37 :: padded to 100
+# rainbow-pad padding comment: byte balancing for t

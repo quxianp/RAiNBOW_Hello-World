@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 927,
+ "with_curated_template": 1028,
  "runnable_command_count": 51,
  "files": [
   {
@@ -148,7 +148,7 @@
    "hue": 0.0,
    "modeline": "talon",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Wren",
@@ -256,7 +256,7 @@
    "hue": 0.0,
    "modeline": "pan",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Promela",
@@ -424,7 +424,7 @@
    "hue": 0.0,
    "modeline": "lasso",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Wikitext",
@@ -628,7 +628,7 @@
    "hue": 3.75,
    "modeline": "kaitai-struct",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "iCalendar",
@@ -676,7 +676,7 @@
    "hue": 4.11,
    "modeline": "redscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Wolfram Language",
@@ -1036,7 +1036,7 @@
    "hue": 16.5,
    "modeline": "max",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MATLAB",
@@ -1312,7 +1312,7 @@
    "hue": 26.51,
    "modeline": "fpp",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Zmodel",
@@ -1396,7 +1396,7 @@
    "hue": 30.0,
    "modeline": "runoff",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Survex data",
@@ -1408,7 +1408,7 @@
    "hue": 30.0,
    "modeline": "survex-data",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "FIGlet Font",
@@ -1780,7 +1780,7 @@
    "hue": 39.09,
    "modeline": "power-query",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Oz",
@@ -1900,7 +1900,7 @@
    "hue": 41.74,
    "modeline": "roff-manpage",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Fennel",
@@ -2044,7 +2044,7 @@
    "hue": 45.73,
    "modeline": "portugol",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Pip Requirements",
@@ -2116,7 +2116,7 @@
    "hue": 48.0,
    "modeline": "holyc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cython",
@@ -2140,7 +2140,7 @@
    "hue": 49.41,
    "modeline": "tmdl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Parrot",
@@ -2188,7 +2188,7 @@
    "hue": 52.26,
    "modeline": "labview",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DenizenScript",
@@ -2248,7 +2248,7 @@
    "hue": 53.8,
    "modeline": "world-of-warcraft-addon-data",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Dafny",
@@ -2404,7 +2404,7 @@
    "hue": 67.37,
    "modeline": "ooc",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Nu",
@@ -2572,7 +2572,7 @@
    "hue": 77.14,
    "modeline": "ti-program",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "XC",
@@ -2620,7 +2620,7 @@
    "hue": 82.31,
    "modeline": "llvm-tablegen",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "OverpassQL",
@@ -2632,7 +2632,7 @@
    "hue": 83.57,
    "modeline": "overpassql",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Chapel",
@@ -2668,7 +2668,7 @@
    "hue": 88.42,
    "modeline": "krl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Xojo",
@@ -3028,7 +3028,7 @@
    "hue": 118.03,
    "modeline": "leo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "fish",
@@ -3136,7 +3136,7 @@
    "hue": 120.0,
    "modeline": "regular-expression",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CLIPS",
@@ -3208,7 +3208,7 @@
    "hue": 120.0,
    "modeline": "omnet++-msg",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "KoLmafia ASH",
@@ -3376,7 +3376,7 @@
    "hue": 142.39,
    "modeline": "vim-snippet",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Nginx",
@@ -3520,7 +3520,7 @@
    "hue": 153.69,
    "modeline": "singularity",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Sway",
@@ -3724,7 +3724,7 @@
    "hue": 166.61,
    "modeline": "yasnippet",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "API Blueprint",
@@ -3808,7 +3808,7 @@
    "hue": 174.61,
    "modeline": "zap",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RobotFramework",
@@ -3832,7 +3832,7 @@
    "hue": 176.88,
    "modeline": "langium",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Dart",
@@ -3856,7 +3856,7 @@
    "hue": 177.39,
    "modeline": "imba",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Closure Templates",
@@ -3904,7 +3904,7 @@
    "hue": 180.0,
    "modeline": "maxscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Hosts File",
@@ -3952,7 +3952,7 @@
    "hue": 180.0,
    "modeline": "macaulay2",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "WDL",
@@ -4084,7 +4084,7 @@
    "hue": 186.55,
    "modeline": "templ",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Typst",
@@ -4108,7 +4108,7 @@
    "hue": 187.11,
    "modeline": "untyped-plutus-core",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Propeller Spin",
@@ -4120,7 +4120,7 @@
    "hue": 187.5,
    "modeline": "propeller-spin",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Ioke",
@@ -4144,7 +4144,7 @@
    "hue": 187.92,
    "modeline": "ucode",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MLIR",
@@ -4156,7 +4156,7 @@
    "hue": 189.12,
    "modeline": "mlir",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AL",
@@ -4168,7 +4168,7 @@
    "hue": 189.27,
    "modeline": "al",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BitBake",
@@ -4408,7 +4408,7 @@
    "hue": 194.48,
    "modeline": "omnet++-ned",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Apex",
@@ -4660,7 +4660,7 @@
    "hue": 197.85,
    "modeline": "kvlang",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CAP CDS",
@@ -4672,7 +4672,7 @@
    "hue": 198.09,
    "modeline": "cap-cds",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Koka",
@@ -4720,7 +4720,7 @@
    "hue": 198.69,
    "modeline": "mtml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Sail",
@@ -4864,7 +4864,7 @@
    "hue": 202.97,
    "modeline": "kerboscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NetLinx",
@@ -4912,7 +4912,7 @@
    "hue": 203.67,
    "modeline": "record-jar",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lark",
@@ -4936,7 +4936,7 @@
    "hue": 203.79,
    "modeline": "mql4",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Fancy",
@@ -4984,7 +4984,7 @@
    "hue": 204.76,
    "modeline": "mupad",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "pkg-config",
@@ -5068,7 +5068,7 @@
    "hue": 205.58,
    "modeline": "tolk",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "EdgeQL",
@@ -5260,7 +5260,7 @@
    "hue": 207.32,
    "modeline": "python-traceback",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GDScript",
@@ -5356,7 +5356,7 @@
    "hue": 209.88,
    "modeline": "arkts",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BibTeX",
@@ -5392,7 +5392,7 @@
    "hue": 210.28,
    "modeline": "nmodl",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Slash",
@@ -5428,7 +5428,7 @@
    "hue": 211.09,
    "modeline": "4d",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "V",
@@ -5500,7 +5500,7 @@
    "hue": 211.43,
    "modeline": "unity3d-asset",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Mako",
@@ -5512,7 +5512,7 @@
    "hue": 212.0,
    "modeline": "mako",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AutoIt",
@@ -5740,7 +5740,7 @@
    "hue": 216.0,
    "modeline": "mql5",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Objective-C",
@@ -5872,7 +5872,7 @@
    "hue": 219.55,
    "modeline": "ros-interface",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PureBasic",
@@ -6064,7 +6064,7 @@
    "hue": 225.79,
    "modeline": "aleo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NWScript",
@@ -6124,7 +6124,7 @@
    "hue": 227.14,
    "modeline": "web-ontology-language",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Scheme",
@@ -6148,7 +6148,7 @@
    "hue": 227.78,
    "modeline": "netlinx+erb",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTML+PHP",
@@ -6196,7 +6196,7 @@
    "hue": 228.36,
    "modeline": "mirc-script",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "D2",
@@ -6292,7 +6292,7 @@
    "hue": 231.82,
    "modeline": "oxygene",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Click",
@@ -6352,7 +6352,7 @@
    "hue": 235.56,
    "modeline": "objectscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Verilog",
@@ -6412,7 +6412,7 @@
    "hue": 240.0,
    "modeline": "terra",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CWeb",
@@ -6652,7 +6652,7 @@
    "hue": 248.35,
    "modeline": "metta",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NumPy",
@@ -6832,7 +6832,7 @@
    "hue": 261.43,
    "modeline": "polar",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Roc",
@@ -6868,7 +6868,7 @@
    "hue": 262.86,
    "modeline": "noir",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Quint",
@@ -6964,7 +6964,7 @@
    "hue": 268.26,
    "modeline": "terraform-template",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Vala",
@@ -7252,7 +7252,7 @@
    "hue": 280.47,
    "modeline": "lookml",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Julia",
@@ -7372,7 +7372,7 @@
    "hue": 295.18,
    "modeline": "zil",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AspectJ",
@@ -7456,7 +7456,7 @@
    "hue": 300.94,
    "modeline": "powerbuilder",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ColdFusion",
@@ -7552,7 +7552,7 @@
    "hue": 313.97,
    "modeline": "spicedb-schema",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Erlang",
@@ -7684,7 +7684,7 @@
    "hue": 327.78,
    "modeline": "pogoscript",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Hurl",
@@ -7708,7 +7708,7 @@
    "hue": 329.88,
    "modeline": "vento",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Sass",
@@ -7924,7 +7924,7 @@
    "hue": 345.5,
    "modeline": "textgrid",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Genshi",
@@ -8104,7 +8104,7 @@
    "hue": 353.08,
    "modeline": "netlogo",
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Modelica",
@@ -19068,7 +19068,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "CALC",
@@ -20124,7 +20124,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Charles Goldfarb",
@@ -22852,7 +22852,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cool Cell",
@@ -23897,7 +23897,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cvlemar",
@@ -37856,7 +37856,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HyTime",
@@ -43950,7 +43950,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LIMITED",
@@ -48845,7 +48845,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Monkey in Go",
@@ -49483,7 +49483,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MuFuck",
@@ -50154,7 +50154,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NASM64",
@@ -51133,7 +51133,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NLTK",
@@ -53564,7 +53564,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Operation",
@@ -54697,7 +54697,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Parrot intermediate representation",
@@ -54719,7 +54719,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Parser",
@@ -55775,7 +55775,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Pico",
@@ -58569,7 +58569,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Publishing",
@@ -58734,7 +58734,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PureBrainz",
@@ -61022,7 +61022,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "REDGREEN",
@@ -61044,7 +61044,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Refactoring",
@@ -61495,7 +61495,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Renjin",
@@ -62254,7 +62254,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "RifL",
@@ -67952,7 +67952,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Splinter",
@@ -68788,7 +68788,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Starfish",
@@ -71362,7 +71362,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Teaches",
@@ -74046,7 +74046,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TTCN-3",
@@ -74574,7 +74574,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Type qualifier",
@@ -78160,7 +78160,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Win32 Threads",
@@ -78996,7 +78996,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Xdime",
