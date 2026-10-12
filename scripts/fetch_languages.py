@@ -115,20 +115,41 @@ UA = (
 # logging
 # --------------------------------------------------------------------------
 class Log:
+    """Opens its file on first write, not at construction.
+
+    Constructing this at module level used to open the log immediately, which
+    meant `--help` failed with PermissionError on any checkout where the file is
+    not writable -- the log is created at import time, long before argparse gets
+    a chance to handle `--help`. A user asking for help should never need write
+    access to a log file.
+    """
+
     def __init__(self, path: Path):
         self.path = path
-        self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.fh = open(path, "a", encoding="utf-8", newline="\n")
+        self.fh = None
+
+    def _ensure(self):
+        if self.fh is None:
+            try:
+                self.path.parent.mkdir(parents=True, exist_ok=True)
+                self.fh = open(self.path, "a", encoding="utf-8", newline="\n")
+            except OSError:
+                # A log that cannot be written is not worth failing the run for;
+                # stdout still carries everything.
+                self.fh = False
 
     def __call__(self, msg: str) -> None:
         line = f"[{time.strftime('%H:%M:%S')}] {msg}"
         print(line, flush=True)
-        self.fh.write(line + "\n")
-        self.fh.flush()
+        self._ensure()
+        if self.fh:
+            self.fh.write(line + "\n")
+            self.fh.flush()
 
     def close(self) -> None:
         try:
-            self.fh.close()
+            if self.fh:
+                self.fh.close()
         except Exception:
             pass
 
