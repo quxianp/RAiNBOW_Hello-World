@@ -262,6 +262,29 @@ else
 fi
 
 # --------------------------------------------------------------------------
+# 5b. spectral sweep -- the bar, one language per column, in hue order
+#
+# Every column is coloured with the real Linguist colour of one of the 694 core
+# languages, read from config/rainbow_langs.json. That is the point: the sweep
+# is the repository's own data rather than a decorative gradient. If a language
+# were missing from the bar, this would have a gap in it.
+#
+# --motion off skips it, matching how the other animated phases are gated.
+# --------------------------------------------------------------------------
+if [ "${MOTION:-1}" != "0" ] && [ -t 1 ]; then
+  sweep_mode=block
+  if [ "$FAST" = "1" ]; then
+    sweep_mode=text
+  fi
+  printf '\n'
+  "$PY" scripts/spectral_sweep.py \
+      --mode "$sweep_mode" \
+      --width "$SHOW_WIDTH" \
+      --cycles 2 \
+    2>/dev/null || true
+fi
+
+# --------------------------------------------------------------------------
 # 6. optional sound
 # --------------------------------------------------------------------------
 beep() {
