@@ -62,22 +62,32 @@ else
 fi
 
 # ---------------------------------------------------------------- GIF tuning
-# A 34 s animated recording at 30 fps lands near 7 MB, which is a lot to embed
-# in a README. Re-encode at 15 fps with a 128-colour palette: half the frames,
-# far smaller, and the motion is untouched because it is motion, not detail,
-# that makes the demo readable.
+# This step is a size optimisation, and the first version of it destroyed the
+# recording.
+#
+# `scale=1000:-1` shrunk the 1200 px capture, and `palettegen=max_colors=96`
+# quantised a full-hue spectrum down to 96 colours. Consecutive frames of a
+# smooth gradient then quantised to *the same* 96 colours, so ffmpeg's frame
+# differencing emitted them as identical: 310 of 370 transitions measured frozen
+# on a GIF whose unoptimised source was 6.2 MB and visibly animating.
+#
+# The content here is a rainbow -- its entire subject is a wide range of hues --
+# so a small global palette is the wrong tool for it. Two changes:
+#
+#   no downscaling: the capture is already sized for the README, and shrinking
+#                   it loses no bytes that matter at 2.3 MB
+#   256 colours:    the GIF maximum, which is what a full-spectrum image needs
+#                   before quantisation starts flattening it
+#
+# fps stays at 12: that is a genuine size saving and does not flatten anything,
+# because it drops frames rather than recolouring the ones it keeps.
 if [ -s "$GIF" ] && have ffmpeg; then
-  log "optimising GIF (12 fps, 96 colours)"
-  # A 32 s animated recording at 30 fps lands near 9 MB, which is a lot to embed
-  # in a README. Re-encode at 12 fps with a 96-colour palette. 12 fps is still
-  # smooth for large sweeping shapes -- this content is motion, not fine detail
-  # -- and frame-by-frame measurement shows 85 % of the recording in motion, so
-  # nothing legible is lost.
+  log "optimising GIF (12 fps, 256 colours)"
   # The temporary file must keep a .gif suffix (or ffmpeg cannot infer the
   # muxer from ".opt" and the whole step fails). It did, for several runs.
   OPT="${GIF%.gif}.opt.gif"
   if ffmpeg -y -loglevel error -i "$GIF" \
-       -vf "fps=12,scale=1000:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=96[p];[s1][p]paletteuse=dither=sierra2_4a" \
+       -vf "fps=12,split[s0][s1];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=sierra2_4a" \
        -loop 0 "$OPT" >>logs/record_demo.log 2>&1 \
      && [ -s "$OPT" ]; then
     before=$(wc -c <"$GIF" | tr -d ' ')
