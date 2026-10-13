@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- **A test suite**: `scripts/run_tests.py` plus 41 tests, run in CI on every
+- **A test suite**: `scripts/run_tests.py` plus 59 tests, run in CI on every
   push. Standard library only -- adding a test framework to the acceptance job's
   dependency set would give one more thing that can turn the gate red for reasons
   unrelated to the repository.
@@ -24,11 +24,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `test_readme_claims.py` -- the README's numbers match the repository
   - `test_script_hygiene.py` -- scripts compile, are documented, and their usage
     examples name flags that exist
+  - `test_gitignore_safety.py` -- no manifest path is excluded by `.gitignore`,
+    asked with `check-ignore --no-index` because the plain form skips tracked
+    files and therefore reports a clean bill of health on a broken repository
+  - `test_clean_checkout.py` -- makes a real clone and asserts the tree is
+    clean, plus a cheap scan for a BOM or CRLF in any tracked text file
+  - `test_shell_variables.py` -- every variable `run.sh` reads is assigned
+    somewhere in the same file, comment-stripped and quote-aware
+  - `test_demo_assets.py` -- the committed GIF is animated, and the gate's own
+    thresholds have not been quietly widened
 - `scripts/audit_repo.py`, `check_readme_links.py`, `check_docs_links.py`,
   `check_templates.py`, `language_report.py`, `render_ascii_bar.py`,
   `spectral_sweep.py`, `measure_motion.py`, `update_readme_coverage.py`,
-  `spotcheck_templates.py`.
-- **~870 curated Hello World programs**, taking core-layer coverage from
+  `spotcheck_templates.py`, `update_docs_index.py`, `check_demo_motion.py`.
+- **A gate that refuses to publish a demo which does not move.**
+  `scripts/check_demo_motion.py` runs after the recording and before the
+  assets are committed, so a static take never reaches `main`. The published
+  GIF once spent 22 of its 33 seconds frozen while every step of the build
+  reported success -- it recorded, it optimised, it produced a plausible
+  multi-megabyte GIF, and the run log ended with `run.sh done`.
+- An animated cold open in `demo.tape`, so the recording begins with the hue
+  sweep rather than a blank screen and a blinking cursor.
+- **1 084 curated Hello World programs**, taking core-layer coverage from
   26.1 % to **99.7 %** -- 692 of 694 files now carry real code rather than a
   placeholder. The two that do not are ambiguous by extension (Rez shares
   `.r` with R) and are left honest on purpose.
@@ -44,6 +61,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   issue and pull-request templates.
 
 ### Fixed
+- **The show was crashing on every recorded run.** `run.sh` read `$FAST`,
+  which nothing assigned, and runs under `set -u`. The line sits behind
+  `[ -t 1 ]`, so every local invocation -- all of which pipe stdout -- took
+  the other branch and passed. Only the recorder, which gives `run.sh` a real
+  pty, ever ran it. The published GIF contained
+  `run.sh: line 279: FAST: unbound variable` in plain sight, above a still
+  image occupying two thirds of the recording. Found by reading a frame
+  rather than a statistic about it; `measure_motion.py` could report that
+  22 seconds were frozen but not that the frozen thing was a crash report.
+- **Four language files existed in no clone.** `.gitignore` matched `*.bundle`
+  and `*.obj`, which are also language extensions, so
+  `hello/full/bundle/hello.bundle` and two `.obj` files were present on the
+  generating machine and absent from every checkout. Five checks agreed they
+  were there and all five read the working tree.
+- **One stray byte broke 23 of 24 CI shards.** `scripts/publish_release.ps1`
+  carried a UTF-8 BOM and a single CRLF while `.gitattributes` marks `*.ps1`
+  as LF text, so every checkout rewrote it and the batch job's
+  `git pull --rebase` refused to run on a dirty tree.
+- **The closing hold spun for ten seconds drawing one frame.** It is guarded
+  on `[ -t 1 ]`, false whenever stdout is a pipe, and `rainbow.py` separately
+  decided whether to animate from `sys.stdout.isatty()`. Either one alone
+  reduced the finale to a still image; `--force-hold` and `--force-animation`
+  make both explicit.
+- **The GIF encoder was blamed for a crash.** Two commits changed palette and
+  resolution looking for a flat gradient, while the thing being flattened was
+  an error message. The encoder is now chosen by measurement: seven settings
+  re-encoded from one source, best motion per megabyte wins.
 - **The animated hold drew nothing at all.** `rainbow.py --sweep-only` returned
   before rendering, and the `--sweep` branch required flags `run.sh` never
   passes. The command exited 0 having written zero bytes, so the last 8.7 s of a
