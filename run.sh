@@ -36,6 +36,9 @@ ROLL_DELAY=0.12
 DIVIDER_FRAMES=24
 SHOW_WIDTH=108
 SPINNER_FRAMES=1
+# How long the closing hold keeps animating after the finale. The demo tape
+# sleeps for this plus the length of the show, so the two must agree or the
+# recording either truncates the hold or freezes on the last frame.
 HOLD_SECONDS=10
 
 while [ $# -gt 0 ]; do
@@ -358,7 +361,13 @@ log "=== run.sh done ==="
 #    `exit 0`, where it was unreachable, which left the back half of the
 #    recording completely static.
 # --------------------------------------------------------------------------
-if [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; then
+# `--force-hold` exists because `[ -t 1 ]` is false whenever stdout is a pipe,
+# which is exactly how the show is driven when its output is captured -- so the
+# closing hold silently skipped itself and the recording froze for the last
+# third of its runtime. The flag lets the tape ask for the hold explicitly, and
+# the default still honours a genuine TTY.
+FORCE_HOLD="${FORCE_HOLD:-0}"
+if [ "${FORCE_HOLD:-0}" = "1" ] || { [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; }; then
   # the sweep advances ~22 frames/second, so ask for a second's worth per second
   #
   # Loop it. A single sweep finishes in HOLD_SECONDS and then the terminal sits

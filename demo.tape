@@ -45,9 +45,20 @@ Sleep 1
 # on slower runners this is the number to revisit -- and the measurement, not
 # the guess, is what should decide it.
 # --max 12 keeps the roll call short so the finale stays on screen.
-Type "bash run.sh --max 12 --jobs 12"
+# FORCE_HOLD=1 because the show's closing hold is guarded on `[ -t 1 ]`, which
+# is false whenever stdout is a pipe -- and the recording drives run.sh exactly
+# that way. Without the flag the hold skipped itself and the last nine seconds
+# of every take were a still frame, even though every phase reported working.
+# The show takes roughly 16 s before the closing hold, and the hold itself is
+# HOLD_SECONDS (10 s by default, looping until spent), so the tape needs ~28 s to
+# let the finale finish rather than cutting it off mid-sweep.
+#
+# This is measured, not guessed: `bash run.sh --motion 4 --max 3 --jobs 3` with
+# FORCE_HOLD=1 runs 26.5 s here, and scripts/measure_motion.py is what showed the
+# previous 18 s was truncating the hold and freezing the last third of the take.
+Type "FORCE_HOLD=1 bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 18
+Sleep 28
 
 # Hold on the final rainbow Hello World! for a beat.
 Sleep 4
