@@ -446,3 +446,40 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   and confirming it passes.
 - Status: RESOLVED.
 
+
+## E31 The show was crashing on every recorded run
+- Symptom: the published GIF's final 22 seconds were a still frame. Three commits
+  were spent trying to explain that as an animation-pacing problem before anyone
+  looked at a frame of the video instead of a statistic about it.
+- Cause: `run.sh` line 279 read `$FAST`, which nothing ever assigned. The script
+  runs under `set -u`, so the line terminated it. The published GIF contains, in
+  plain sight at t=16s:
+      run.sh: line 279: FAST: unbound variable
+- Why nothing local caught it, which is the whole lesson: the line sits behind
+  `[ -t 1 ]`. Every local invocation pipes stdout, so every local run took the
+  other branch and every local run succeeded. Only the recorder -- which gives
+  run.sh a real pty -- ever executed it. `bash -n` parses the file and cannot see
+  an unbound name. The script exited with an error rather than hanging, so no
+  timeout fired either.
+- Consequence: every phase after line 279 never ran. The "finale" visible in the
+  recording was the art reveal from an earlier phase, held, which is why it
+  measured as 94 distinct colours and a plausible-looking still image.
+- Fix: assign `FAST`; make `--fast` set it, so the mode is real instead of dead.
+  `banner_line()` read an identically undefined `$HUE` and had no callers, so it
+  is deleted rather than fixed.
+- Regression guard: `tests/test_shell_variables.py`. Every `$NAME` and `${NAME...}`
+  run.sh mentions, comment-stripped with a quote-aware scanner and `read`/loop
+  targets accounted for, must be assigned somewhere in the same file. Run against
+  the previous run.sh it reports `['FAST', 'HUE']`; against the fixed one,
+  nothing.
+- Two mistakes worth recording alongside the bug:
+  - I blamed `palettegen=max_colors=96` for flattening the gradient, and changed
+    the encoder twice, before checking whether the source was animated at all.
+    The encoder was innocent. The comfortable move was the wrong one: a codec
+    setting is a number you can change, and the crash was a bug you had to find.
+  - `measure_motion.py` reported "frozen" for 22 seconds and could not say why.
+    Coverage tells you that nothing changed; only a picture tells you that
+    something changed into an error message. The tool was not wrong, it was
+    asked a question it does not answer, and I kept asking it that question
+    three times.
+- Status: RESOLVED.
