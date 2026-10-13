@@ -416,3 +416,33 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   matcher regression is caught before it can quietly reduce the number.
 - Status: RESOLVED.
 
+## E30 Four language files existed in no clone
+- Symptom: CI failed on a fresh checkout with
+  `FileNotFoundError: hello/full/bundle/hello.bundle`, raised by a test that had
+  never failed locally. The file was present on the machine that generated it
+  and absent from git.
+- Cause: `.gitignore` carried patterns that collide with language extensions.
+  `*.bundle` (added for Ruby gems) matched `hello/full/bundle/hello.bundle`;
+  `*.obj` matched `hello/full/obj/hello.obj` and
+  `hello/full/wavefront-object/hello.obj`. Three files, one commit, invisible.
+- Why nothing caught it, which is the interesting part: `generate_all_hello.py`
+  writes the file, `hello/manifest.json` lists it, `audit_repo.py` finds it on
+  disk, and all 19 acceptance checks pass. Five independent checks agree, and
+  every one of them reads the working tree rather than the repository. A file
+  can satisfy all of them and be in no clone anywhere.
+- Scale: four files, once the fix was tested. `Gemfile.lock`, added while fixing
+  the first, matched `hello/core/gemfile-lock/Gemfile.lock` -- and a
+  `!hello/...` negation cannot undo it, because gitignore cannot re-include a
+  file whose parent directory was excluded by an earlier rule.
+- Fix: no bare extension patterns for anything a language could use; Ruby bundle
+  files are matched by anchored paths instead.
+- Regression guard: `tests/test_gitignore_safety.py`. The assertion that matters
+  is `check-ignore --no-index`, which asks whether a file would be skipped if it
+  were deleted and regenerated -- exactly what happens to the next contributor
+  who adds a language with a colliding extension. Plain `check-ignore` and
+  `git ls-files` both ignore tracked files, so they report a clean bill of
+  health on a repository that is quietly wrong.
+- Verified by re-adding `*.obj` and confirming the suite fails, then removing it
+  and confirming it passes.
+- Status: RESOLVED.
+
