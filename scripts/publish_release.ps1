@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Create the v2.0.0 GitHub release and its milestone.
 .DESCRIPTION

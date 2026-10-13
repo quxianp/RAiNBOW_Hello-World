@@ -1,4 +1,4 @@
-﻿name: rainbow
+name: rainbow
 
 # The demo assets below are published by this workflow, so it must be allowed to
 # push. Pushes whose message carries [skip ci] are ignored by GitHub itself,
