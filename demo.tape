@@ -31,28 +31,14 @@ Set Theme '{"background":"#0d1117","foreground":"#ffffff","accent":"#58a6ff"}'
 # to read and slow enough to follow.
 Set TypingSpeed 0.05
 
-# A cold open: the hue sweep runs before anything else, so the video begins with
-# colour and movement rather than a blank screen and a blinking cursor.
-#
-# The three flags are all load-bearing. `--force-animation` overrides
-# rainbow.py's isatty() check, which otherwise emits a single static frame when
-# stdout is not a terminal -- and a recorder's stdout is not a terminal, which is
-# how the earlier attempt at this produced ten seconds of one frame repeated (see
-# logs/ERRORS.log, E31).
-Type "bash scripts/rainbow.py --sweep 26 --sweep-only --force-animation"
+# No cold open. One was tried: a hue sweep typed and run before the show, on the
+# theory that a video should begin with colour rather than a blinking cursor. A
+# contact sheet of the resulting take (scripts/inspect_frames.py) showed it cost
+# about four seconds of typing -- VHS types at 50 ms a character and the command
+# is 68 characters -- to buy a little over one second of visible sweep, and the
+# first frame was still blank. The cursor is the better opening.
+Type "clear"
 Enter
-Sleep 2
-
-# The show. `--max 12` keeps the roll call short so the finale stays on screen.
-#
-# FORCE_HOLD=1 because the closing hold is guarded on `[ -t 1 ]`, false whenever
-# stdout is a pipe -- and a recorder drives run.sh exactly that way.
-#
-# The sleep is the show's ~16 s plus its 10 s closing hold, which loops until
-# spent. An earlier tape slept 18 s, which truncated the hold and froze the last
-# nine seconds of the take; before that it slept 32 s on the belief that motion
-# lasted 77 % of the runtime, which it did not. Both numbers came from reasoning
-# about a program. The one that worked came from timing it.
 Type "FORCE_HOLD=1 bash run.sh --max 12 --jobs 12"
 Enter
 Sleep 28

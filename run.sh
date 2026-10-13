@@ -401,6 +401,26 @@ if [ "${FORCE_HOLD:-0}" = "1" ] || { [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; }; t
     "$PY" scripts/rainbow.py --sweep 40 --sweep-only --force-animation \
       --sweep-offset "$offset" --width "$SHOW_WIDTH" 2>/dev/null || break
   done
+
+  # Each sweep clears the screen as it runs and restores the cursor on the way
+  # out, so what is left when the loop ends is an empty prompt. A recording that
+  # ends on a blank frame is a worse advertisement than one that ends on the
+  # greeting, so the greeting is drawn again -- the last thing on screen is
+  # "Hello World!", in colour, which is the entire point of the repository.
+  #
+  # Caught with scripts/inspect_frames.py, not with measure_motion.py. The
+  # measurement said the take was animated; only the picture showed that the
+  # animation finished three seconds before the film did.
+  printf '\n'
+  if [ -n "${NO_COLOR:-}" ]; then
+    printf 'Hello World!\n'
+  else
+    final_rainbow_hello
+    printf '%s  %s languages on the bar  .  %s files in the repo%s\n' \
+      "$C_DIM" "$CORE_COUNT" "$TOTAL_COUNT" "$C_RESET"
+    printf '%s  https://github.com/quxianp/RAiNBOW_Hello-World%s\n' \
+      "$C_DIM" "$C_RESET"
+  fi
 fi
 
 exit 0
