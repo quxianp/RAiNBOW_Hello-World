@@ -24,6 +24,12 @@ RUN_LOG="logs/run.log"
 QUIET=0
 JOBS=8
 MAX_SHOWN=50
+# --fast is a real mode: it removes the animation and the hold. It was referenced
+# at the spectral sweep but never assigned, so under `set -u` the show died at
+# that line the moment stdout was a terminal -- which is exactly what a recorder
+# provides, and exactly what no local test does. The published GIF was a crash
+# report with a still frame behind it for 22 of its 33 seconds.
+FAST=0
 # Motion budget for the recorded demo. These only take effect on a real
 # terminal; pipes and CI logs get the static render. Sized so the animated
 # phases cover most of the show's runtime: at the previous, much shorter values
@@ -47,7 +53,7 @@ while [ $# -gt 0 ]; do
     --jobs|-j) shift; JOBS="${1:-8}" ;;
     --max) shift; MAX_SHOWN="${1:-50}" ;;
     --motion) shift; BRAND_FRAMES="${1:-18}" ;;
-    --fast) QUIET=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0
+    --fast) QUIET=1; FAST=1; BRAND_FRAMES=0; BAR_FRAMES=0; REVEAL_FRAMES=0
            DIVIDER_FRAMES=0; SPINNER_FRAMES=0; HOLD_SECONDS=0 ;;
     --help|-h)
       sed -n '2,20p' "$0"; exit 0 ;;
@@ -110,10 +116,11 @@ log "core files=$CORE_COUNT full files=$FULL_COUNT"
 # --------------------------------------------------------------------------
 say() { printf '%s' "$1"; }
 
-banner_line() {
-  printf '%s' "$C_BOLD"
-  printf '%s' "$(rgb 255 105 180)RAiNBOW$HUE "" ; "
-}
+# `banner_line()` used to live here and printed a travelling-hue RAiNBOW banner.
+# It read `$HUE`, which nothing ever assigned, so under `set -u` calling it would
+# have killed the show -- the same mistake as `$FAST`, one function away. It had
+# no callers, so it is gone rather than fixed: dead code that can only crash is
+# worse than no code. See logs/ERRORS.log, E31.
 
 # Animated hue sweep of the word RAiNBOW.
 #
