@@ -98,6 +98,54 @@ on your machine.
 
 <!-- RAINBOW_ASSETS_END -->
 
+<details>
+<summary><b>How the recording is checked, and why there is a gate for it</b></summary>
+
+A GIF that does not animate is not a slow build, a bad encoder, or a sleep that
+is slightly too long. It is usually a broken program that has told you so
+plainly, in the middle of the frame, where nobody is looking.
+
+That is not hypothetical here. This GIF once spent 22 of its 33 seconds on a
+still image, and every signal the build had said the demo was fine: the
+recording succeeded, the optimiser succeeded, the file was a plausible four
+megabytes, and the run log ended with `run.sh done`. It was frozen because
+`run.sh` had died at line 279 with
+
+```
+run.sh: line 279: FAST: unbound variable
+```
+
+written across the middle of the screen.
+
+So there are three tools, and the order in which you should reach for them is the
+order below:
+
+| | |
+|---|---|
+| `python scripts/check_demo_motion.py` | **Is anything moving?** Frame-to-frame coverage, with a ceiling and a floor. Fails the build, before the assets are committed, so a static take never reaches `main`. |
+| `python scripts/measure_motion.py` | **Where does it stop?** Coverage by time bucket and the longest frozen runs. |
+| `python scripts/inspect_frames.py` | **What is actually on screen?** A contact sheet of frames across the runtime. |
+
+The third is the one that found the bug. Coverage can report that 22 seconds were
+frozen; it cannot report *why*, and a crash message and a badly-tuned sleep look
+identical from the outside. One frame at `t=16s` showed the error text and ended
+three commits of guessing.
+
+The gate's thresholds are calibrated against every failure this has actually had:
+
+| | mean coverage | frozen |
+|---|---|---|
+| recorded today | 5.8 % | 35 % |
+| the crash | 1.79 % | 84 % |
+| a hold that skipped itself | 1.93 % | 88 % |
+
+`tests/test_demo_assets.py` asserts the *committed* recording is animated too,
+so a GIF restored from a backup or copied from another branch is caught locally
+as well. It also asserts the gate's own thresholds have not been quietly widened,
+because that is the one-number edit someone under pressure would make.
+
+</details>
+
 ---
 
 ## 🌈 How the rainbow is engineered
