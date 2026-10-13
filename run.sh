@@ -368,20 +368,31 @@ log "=== run.sh done ==="
 # the default still honours a genuine TTY.
 FORCE_HOLD="${FORCE_HOLD:-0}"
 if [ "${FORCE_HOLD:-0}" = "1" ] || { [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; }; then
-  # the sweep advances ~22 frames/second, so ask for a second's worth per second
+  # The closing hold, which is what keeps the recording moving to its last frame.
   #
-  # Loop it. A single sweep finishes in HOLD_SECONDS and then the terminal sits
-  # still for whatever the tape sleeps for after the show exits -- which is how
-  # a recording ends up 72 % frozen even though every phase "worked". Repeating
-  # the sweep means the finale is alive until run.sh actually returns.
-  frames_per_second=22
-  sweep_frames=$((HOLD_SECONDS * frames_per_second))
-  sweep_frames=$((sweep_frames / 8))   # one sweep is 8 s of footage
-  [ "$sweep_frames" -lt 8 ] && sweep_frames=8
-  done_until=$((SECONDS + HOLD_SECONDS))
-  while [ "$SECONDS" -lt "$done_until" ]; do
-    "$PY" scripts/rainbow.py --sweep "$sweep_frames" --sweep-only \
-      --width "$SHOW_WIDTH" 2>/dev/null || break
+  # Two bugs lived here and both presented identically: the recording ended in a
+  # long still frame while every phase reported working.
+  #
+  #   1. the guard was `[ -t 1 ]`, false whenever stdout is a pipe -- which is how
+  #      the show is driven whenever its output is captured, so the hold skipped
+  #      itself.
+  #   2. rainbow.py decided whether to animate from `sys.stdout.isatty()`, so when
+  #      the hold ran from a pipe it emitted a single static sweep and returned
+  #      immediately. The shell loop then spun for the full HOLD_SECONDS emitting
+  #      that identical frame -- ten seconds of busy-waiting that measured as
+  #      94 distinct colours and 310 of 370 frozen transitions.
+  #
+  # `--force-animation` overrides the isatty() check, so the sweep really animates
+  # wherever it runs, and `--sweep-offset` rotates the phase each cycle so no two
+  # passes look the same. 40 frames at 0.045 s is ~1.8 s per cycle, which leaves
+  # the recorder something different to sample in every frame it takes.
+  deadline=$((SECONDS + HOLD_SECONDS))
+  cycle=0
+  while [ "$SECONDS" -lt "$deadline" ]; do
+    cycle=$((cycle + 1))
+    offset=$(awk -v n="$cycle" 'BEGIN { printf "%.3f", (n * 0.37) % 1.0 }')
+    "$PY" scripts/rainbow.py --sweep 40 --sweep-only --force-animation \
+      --sweep-offset "$offset" --width "$SHOW_WIDTH" 2>/dev/null || break
   done
 fi
 

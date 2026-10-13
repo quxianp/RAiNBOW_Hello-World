@@ -13,6 +13,8 @@ Options:
   --width N             force the art width (default: terminal width)
   --plain               disable colour (for non-tty output)
   --no-animation        skip frames entirely
+  --force-animation     animate even when stdout is not a terminal
+  --sweep-offset F      phase offset for the sweep, 0.0-1.0
 """
 
 from __future__ import annotations
@@ -166,10 +168,10 @@ def render_colour_labels(langs, limit: int = 4):
     return out
 
 
-def sweep(frame: int, frames: int, width: int):
+def sweep(frame: int, frames: int, width: int, offset: float = 0.0):
     rows = []
     cols = max(24, width)
-    phase = frame / max(1, frames)
+    phase = (frame / max(1, frames) + offset) % 1.0
     for x in range(cols):
         h = (x / cols + phase) % 1.0
         r, g, b = hsl_to_rgb(h, 0.95, 0.55)
@@ -268,6 +270,10 @@ def main() -> int:
     ap.add_argument("--width", type=int, default=0)
     ap.add_argument("--plain", action="store_true")
     ap.add_argument("--no-animation", action="store_true")
+    ap.add_argument("--force-animation", action="store_true",
+                    help="animate even when stdout is not a terminal")
+    ap.add_argument("--sweep-offset", type=float, default=0.0,
+                    help="phase offset for the sweep, 0.0-1.0")
     ap.add_argument("--scale", type=int, default=2)
     ap.add_argument("--mode", choices=["blocks", "braille", "ascii"], default="blocks")
     args = ap.parse_args()
@@ -293,7 +299,7 @@ def main() -> int:
     # run.sh calls this script with --bar and --hello, which sets both=False and
     # therefore skipped every animation the recorded demo relied on: the GIF was
     # a still terminal. These two modes restore real motion.
-    animate = not args.no_animation and tty
+    animate = not args.no_animation and (tty or args.force_animation)
 
     # --sweep-only means "draw the sweep and nothing else". It must NOT depend on
     # `both`, which is only true when --bar and --hello were both passed, and it
@@ -311,7 +317,7 @@ def main() -> int:
         try:
             for i in range(args.sweep):
                 sys.stdout.write(CLEAR)
-                for row in sweep(i, args.sweep, width):
+                for row in sweep(i, args.sweep, width, args.sweep_offset):
                     sys.stdout.write(row + "\n")
                 sys.stdout.flush()
                 time.sleep(0.045)
@@ -323,7 +329,7 @@ def main() -> int:
     if args.sweep_only and args.sweep and not animate:
         # No TTY (or --no-animation): emit a single static sweep so the phase
         # still contributes visible content instead of vanishing silently.
-        for row in sweep(0, args.sweep, width):
+        for row in sweep(0, args.sweep, width, args.sweep_offset):
             sys.stdout.write(row + "\n")
         sys.stdout.flush()
         return 0
@@ -337,7 +343,7 @@ def main() -> int:
         try:
             for i in range(args.sweep):
                 sys.stdout.write(CLEAR)
-                for row in sweep(i, args.sweep, width):
+                for row in sweep(i, args.sweep, width, args.sweep_offset):
                     sys.stdout.write(row + "\n")
                 sys.stdout.flush()
                 time.sleep(0.045)
