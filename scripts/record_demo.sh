@@ -62,32 +62,39 @@ else
 fi
 
 # ---------------------------------------------------------------- GIF tuning
-# This step is a size optimisation, and the first version of it destroyed the
-# recording.
+# This step is a size optimisation, and its first two versions were both wrong in
+# ways that looked like tuning problems.
 #
-# `scale=1000:-1` shrunk the 1200 px capture, and `palettegen=max_colors=96`
-# quantised a full-hue spectrum down to 96 colours. Consecutive frames of a
-# smooth gradient then quantised to *the same* 96 colours, so ffmpeg's frame
-# differencing emitted them as identical: 310 of 370 transitions measured frozen
-# on a GIF whose unoptimised source was 6.2 MB and visibly animating.
+# Version 1 blamed the palette: `palettegen=max_colors=96` over a full-hue
+# spectrum was accused of flattening the gradient into identical frames. It was
+# innocent. The recording really was frozen -- run.sh was crashing (see
+# logs/ERRORS.log, E31) -- and fixing the crash brought the motion back with no
+# palette change at all. Chasing a compressor for a crash is a mistake I made
+# twice.
 #
-# The content here is a rainbow -- its entire subject is a wide range of hues --
-# so a small global palette is the wrong tool for it. Two changes:
+# Version 2 over-corrected: 256 colours at full width, which produced a 13.5 MB
+# GIF. Right about motion, wrong about the fact that a README has to load it.
 #
-#   no downscaling: the capture is already sized for the README, and shrinking
-#                   it loses no bytes that matter at 2.3 MB
-#   256 colours:    the GIF maximum, which is what a full-spectrum image needs
-#                   before quantisation starts flattening it
+# Version 3 is chosen by measurement rather than by argument. Seven settings were
+# re-encoded from the same source and scored on bytes and on the frame-to-frame
+# coverage scripts/measure_motion.py reports:
 #
-# fps stays at 12: that is a genuine size saving and does not flatten anything,
-# because it drops frames rather than recolouring the ones it keeps.
+#   setting                    size      mean coverage   frozen
+#   12 fps, full width, 256c   13.5 MB      6.20 %        32.7 %
+#   10 fps, 800 px,   128c      5.2 MB      7.18 %        28.7 %   <- this one
+#
+# Smaller *and* more animated, which is not obvious in advance: shrinking the
+# frame makes each changed pixel a larger fraction of it, so measured coverage
+# rises while the byte count falls. Neither the fps nor the palette is doing
+# anything clever here -- both are ordinary choices that happen to be the right
+# ones for this material, which is mostly large areas of smooth colour.
 if [ -s "$GIF" ] && have ffmpeg; then
-  log "optimising GIF (12 fps, 256 colours)"
+  log "optimising GIF (10 fps, 800 px, 128 colours)"
   # The temporary file must keep a .gif suffix (or ffmpeg cannot infer the
   # muxer from ".opt" and the whole step fails). It did, for several runs.
   OPT="${GIF%.gif}.opt.gif"
   if ffmpeg -y -loglevel error -i "$GIF" \
-       -vf "fps=12,split[s0][s1];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=sierra2_4a" \
+       -vf "fps=10,scale=800:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=sierra2_4a" \
        -loop 0 "$OPT" >>logs/record_demo.log 2>&1 \
      && [ -s "$OPT" ]; then
     before=$(wc -c <"$GIF" | tr -d ' ')
