@@ -1,13 +1,15 @@
 # build / editor / OS noise
+#
+# Nothing here may match a file the manifest lists. Compiled-artifact patterns
+# are the dangerous ones: `*.o`, `*.obj` and `*.bundle` each looked like ordinary
+# build noise and between them silently excluded three real language files --
+# hello/full/obj, hello/full/wavefront-object and hello/full/bundle. Those files
+# exist on a developer's machine and are absent from a fresh clone, so the only
+# symptom was a CI failure on someone else's checkout.
+#
+# tests/test_gitignore_safety.py asserts that every manifest path is tracked.
 *.pyc
 __pycache__/
-*.class
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.dylib
 node_modules/
 .venv/
 venv/
@@ -32,7 +34,30 @@ logs/m.txt
 logs/s.txt
 logs/sel.txt
 *.patch
-*.bundle
+
+# `*.bundle` was here for Ruby gems -- and it silently excluded
+# hello/full/bundle/hello.bundle, a real language file that the manifest lists.
+# The test suite caught it in CI: the file exists on a developer's machine and
+# is simply absent from a fresh clone, so tests referencing it fail with
+# FileNotFoundError and nothing local shows a problem.
+#
+# Ruby bundle files are ignored by an anchored path rather than a bare pattern.
+# `Gemfile.lock` also matches hello/core/gemfile-lock/Gemfile.lock, which is a
+# language file -- and a `!hello/...` negation cannot undo it, because the
+# directory itself is matched by the earlier bare rule.
+#
+# This is the fourth file this class of mistake has cost, and the reason the
+# .gitignore now has a test rather than a convention.
+# Anchored to the repository root: a bare `Gemfile.lock` also matches
+# hello/core/gemfile-lock/Gemfile.lock, which is a language file.
+/[G]emfile.lock
+vendor/bundle/
+.bundle/
+
+# Un-ignore the language file explicitly, so that adding a similar pattern
+# above is caught by `git check-ignore` rather than by a confusing CI failure.
+!hello/full/bundle/
+!hello/full/**/*.bundle
 
 # per-runner scratch (compilers, run_languages.py)
 .tmp/
