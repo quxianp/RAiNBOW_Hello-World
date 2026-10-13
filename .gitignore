@@ -65,3 +65,10 @@ vendor/bundle/
 # run.sh artifacts (regenerated on every show)
 logs/output/
 logs/runners.txt
+
+# Written by the demo-motion gate on every recording run. It changes on
+# every run by design, and the assets job does git add -A logs, so tracking
+# it would commit a new diff every time for a measurement that belongs in
+# the run summary and the artifact.
+logs/demo_motion.json
+

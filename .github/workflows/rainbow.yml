@@ -334,6 +334,31 @@ jobs:
         continue-on-error: true
         run: bash scripts/record_demo.sh
 
+      # A recording gate, not a report. It runs after the recording and before
+      # the assets are committed, so a static take is never published.
+      #
+      # The published GIF once spent 22 of its 33 seconds frozen while every step
+      # of this job reported success -- it recorded, it optimised, it produced a
+      # plausible multi-megabyte GIF, and the run log ended with `run.sh done`.
+      # Nothing here asked whether the result was a video. It exits 0 when there
+      # is no GIF to judge, so a VHS CDN outage still does not block the pipeline.
+      - name: refuse a demo that does not move
+        run: |
+          set -uo pipefail
+          python scripts/check_demo_motion.py --report logs/demo_motion.json
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json, pathlib
+          p = pathlib.Path("logs/demo_motion.json")
+          if p.exists():
+              d = json.loads(p.read_text(encoding="utf-8"))
+              print("### demo recording\n")
+              print(f"- frames: {d['frames']} over {d['seconds']}s")
+              print(f"- size: {d['bytes']:,} bytes")
+              print(f"- mean motion coverage: {d['mean_coverage_pct']} %")
+              print(f"- frozen transitions: {d['frozen_pct']} %")
+              print(f"- gate: {'pass' if d['pass'] else 'FAIL'}")
+          PY
+
       - name: screenshot the live GitHub language bar
         continue-on-error: true
         run: python scripts/screenshot_github.py --out assets/rainbow-bar-live.png
