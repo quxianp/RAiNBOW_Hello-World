@@ -30,17 +30,24 @@ Type "clear"
 Enter
 Sleep 1
 
-# The show is animated throughout: 24-frame intro sweep, 24-frame divider, the
-# roll call streaming in at 0.12 s per name, a progress bar across the whole
-# language-execution window, a 70-frame bar fill, a 50-frame art reveal and a
-# 10 s hue-sweep hold. Frame-by-frame measurement put the end of real motion at
-# ~77 % of the runtime, so 32 s keeps the tail near 4 s rather than 8 s -- but
-# not shorter, because the execution window's length varies with how fast the CI
-# runners are and a tighter sleep would cut off the art reveal.
+# The show is animated throughout: 24-frame intro sweep, the roll call
+# streaming in, a progress bar across the language-execution window, a bar fill,
+# an art reveal, the spectral sweep and the hue-sweep hold.
+#
+# The sleep below used to be tuned against a comment claiming motion lasted
+# ~77 % of the runtime. It does not: run.sh finishes in about 9 s on a warm
+# runner, so a 32 s sleep left 25 s -- 72 % of the recording -- as a still frame
+# on the final screen. Measured with scripts/measure_motion.py, which reported
+# 367 of 418 transitions frozen.
+#
+# 18 s keeps real margin over the observed ~10 s and still leaves a held final
+# frame, which is what a viewer wants at the end. If the execution window grows
+# on slower runners this is the number to revisit -- and the measurement, not
+# the guess, is what should decide it.
 # --max 12 keeps the roll call short so the finale stays on screen.
 Type "bash run.sh --max 12 --jobs 12"
 Enter
-Sleep 32
+Sleep 18
 
 # Hold on the final rainbow Hello World! for a beat.
-Sleep 5
+Sleep 4

@@ -360,8 +360,20 @@ log "=== run.sh done ==="
 # --------------------------------------------------------------------------
 if [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; then
   # the sweep advances ~22 frames/second, so ask for a second's worth per second
-  "$PY" scripts/rainbow.py --sweep "$((HOLD_SECONDS * 22))" --sweep-only \
-    --width "$SHOW_WIDTH" 2>/dev/null || true
+  #
+  # Loop it. A single sweep finishes in HOLD_SECONDS and then the terminal sits
+  # still for whatever the tape sleeps for after the show exits -- which is how
+  # a recording ends up 72 % frozen even though every phase "worked". Repeating
+  # the sweep means the finale is alive until run.sh actually returns.
+  frames_per_second=22
+  sweep_frames=$((HOLD_SECONDS * frames_per_second))
+  sweep_frames=$((sweep_frames / 8))   # one sweep is 8 s of footage
+  [ "$sweep_frames" -lt 8 ] && sweep_frames=8
+  done_until=$((SECONDS + HOLD_SECONDS))
+  while [ "$SECONDS" -lt "$done_until" ]; do
+    "$PY" scripts/rainbow.py --sweep "$sweep_frames" --sweep-only \
+      --width "$SHOW_WIDTH" 2>/dev/null || break
+  done
 fi
 
 exit 0
