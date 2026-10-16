@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.nato_phonetic_alphabet]
 
-// Hello World!
-// Hello World!
+# How "Hello World!" is spelled by voice.
+
+alfa bravo charlie delta echo foxtrot golf hotel india
+juliett kilo lima mike november oscar papa quebec romeo
+sierra tango uniform victor whiskey x-ray yankee zulu
+
+hotel echo lima lima oscar whiskey oscar romeo lima delta

@@ -3,7 +3,6 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.hex_dump]
 
-// Hello World!
-// Hello World!
+# Hex dump of "Hello World!"
+00000000  48 65 6c 6c 6f 20 57 6f  72 6c 64 21  |Hello World!|

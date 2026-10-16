@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.hollerith_code]
 
-// Hello World!
-// Hello World!
+# Hollerith (IBM punched-card) codes. Digits 0-9 are 0-9,
+# A-I are 1-9, J-R are 0-9, S-Z are 1-9.
+# Columns for "Hello World!", one digit per character:
+
+85 22 5 5 5 5 9 2 4 2 12

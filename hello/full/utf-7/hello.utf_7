@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.utf_7]
 
-// Hello World!
-// Hello World!
+# UTF-7 of "Hello World!". Only the run of ASCII letters
+# needs encoding; the space and the exclamation are literal.
++ZeVnLIqe- World!

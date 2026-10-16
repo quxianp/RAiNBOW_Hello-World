@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.unicode_code_point]
 
-// Hello World!
-// Hello World!
+# Code points of "Hello World!" as U+ notation.
+U+0048 U+0065 U+006C U+006C U+006F U+0020
+U+0057 U+006F U+0072 U+006C U+0064 U+0021
