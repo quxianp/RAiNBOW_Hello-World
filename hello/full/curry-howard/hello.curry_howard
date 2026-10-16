@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.curry_howard]
 
-// Hello World!
-// Hello World!
+-- The Curry-Howard correspondence as a comment: a proof of
+-- `\"Hello World!\" = \"Hello World!\"` is a term.
+hello : String
+hello = "Hello World!"

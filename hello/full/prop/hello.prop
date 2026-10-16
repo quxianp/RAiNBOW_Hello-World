@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=logic_constraint source=builtin:logic_constraint ext=.prop]
 
-// Hello World!
-// Hello World!
+# PROP is a component composition language: a program is a graph.
+component Hello
+  output "Hello World!"
+end

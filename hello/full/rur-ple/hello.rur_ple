@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : an index entry rather than a language; no program exists to write [kind=unknown groups=- source=wikipedia ext=.rur_ple]
 
-// Hello World!
-// Hello World!
+procedure greet
+  write("Hello World!")
+end

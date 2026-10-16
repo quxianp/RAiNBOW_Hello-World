@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1291,
+ "with_curated_template": 1300,
  "runnable_command_count": 51,
  "files": [
   {
@@ -22599,7 +22599,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Constraint satisfaction",
@@ -23853,7 +23853,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Cursive",
@@ -29386,7 +29386,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Espro",
@@ -34611,7 +34611,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GnuCOBOL",
@@ -42960,7 +42960,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LambdaPython",
@@ -57436,7 +57436,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PPM",
@@ -58228,7 +58228,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Propaganda",
@@ -63255,7 +63255,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Russell",
@@ -76774,7 +76774,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "VisualAge",
