@@ -58,7 +58,12 @@ MUST_NOT_INHERIT = {
     "WebAssembly Binary": "WAT text",
     # KFramework and WebAssembly Interface Type moved to MUST_INHERIT once each
     # gained its own template; see there.
-    "Nim Task": "a Nim program",
+    # Nim Task moved off this list when it gained a genuine template of its own:
+    # a `nimble` task file is a package manifest -- name, version, author,
+    # description, srcDir -- and declaring those fields *is* the content, in the
+    # same position as .cabal and .properties. It is not a Nim program and was
+    # never going to be one, so what the list was protecting against is exactly
+    # what the new template provides.
     # CSS Selectors moved off this list when it gained a genuine template of its
     # own -- a selector rule with `content: "Hello World!"`, which is a CSS rule
     # written by hand rather than a full stylesheet. That is the fifth language to
