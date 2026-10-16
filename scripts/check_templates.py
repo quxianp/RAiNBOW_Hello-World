@@ -59,7 +59,12 @@ MUST_NOT_INHERIT = {
     # KFramework and WebAssembly Interface Type moved to MUST_INHERIT once each
     # gained its own template; see there.
     "Nim Task": "a Nim program",
-    "CSS Selectors": "a CSS rule",
+    # CSS Selectors moved off this list when it gained a genuine template of its
+    # own -- a selector rule with `content: "Hello World!"`, which is a CSS rule
+    # written by hand rather than a full stylesheet. That is the fifth language to
+    # leave this list for the same reason and the note above explains it: the
+    # assertion is only correct while a language is borrowing someone else's
+    # program.
 }
 
 # Languages that legitimately share a parent's syntax. If these ever lose their
