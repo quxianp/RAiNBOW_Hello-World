@@ -334,13 +334,31 @@ files have a curated Hello World template and **7.1 %** have a runner, so `run.s
 genuinely executes a small minority. The rest are byte-balanced stubs whose job
 is to be detected and coloured, not to compile.
 
-A file with no curated template says so, in its own header:
+A file with no curated template says so, in its own header — and says *which kind
+of nothing it has*, because "no program" means five different things here:
 
 ```
-#   note       : No curated template for this language yet: the closest
-#                equivalent Hello World is used, see the linked
-#                interpreter/rosetta entries.
+//   admission  : esoteric language; no canonical Hello World is written down
+//                for it [kind=esolang source=esolangs ext=.mang]
 ```
+
+| kind | files | what the file holds instead |
+|---|---:|---|
+| `program` | 432 | a real program. This is the entire remaining backlog. |
+| `esolang` | 3 280 | an admission that no canonical program exists |
+| `unknown` | 2 099 | an admission that the entry is an index, not a language |
+| `document` | 47 | a real document whose content is the greeting |
+| `binary` | 9 | the format's magic number, and where the greeting would go |
+
+The `unknown` row is worth reading twice. **1 747 of those files came from a
+Wikipedia scrape and are article titles** — `Aidan Gomez`, `CAP theorem`,
+`University Courses`, `AI data centers`. They are counted as languages by the
+language bar and they cannot have a Hello World, because they are not languages.
+
+So the backlog was never 6 200 files. It was 432.
+`scripts/classify_placeholders.py` computes that table, and
+`tests/test_placeholder_kinds.py` asserts that each of the ~5 800 files says the
+thing that is true about it.
 
 That is deliberate. An earlier version matched templates on the first word of the
 name or on the file extension, which produced confidently wrong files — JASS and
