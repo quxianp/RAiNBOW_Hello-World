@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=logic_constraint source=builtin:logic_constraint ext=.nusmv]
 
-// Hello World!
-// Hello World!
+// NuSMV is a model checker. It has no output statement; what it
+// has is an invariant that must hold, and the greeting is the name.
+MODULE main
+VAR
+  greeting : boolean;
+INIT
+  greeting := TRUE;
+INVARSPEC
+  name = Hello World!
