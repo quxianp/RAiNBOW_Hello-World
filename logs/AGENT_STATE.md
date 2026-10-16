@@ -1,6 +1,6 @@
 # Agent state
 
-Last updated: 2026-10-13
+Last updated: 2026-10-17
 
 ## Current state
 
@@ -13,28 +13,58 @@ Last updated: 2026-10-13
 | Total | 7 326 files, 7 326 unique languages |
 | Byte share | 0.144092 % each, summing to exactly 100.000000 % |
 | Segments GitHub renders | 631 (Linguist folds dialects) |
-| Curated templates | 1 084; 692 of 694 core files (99.7 %) |
-| Tests | 56, run by `scripts/run_tests.py`, all in CI |
+| Programs | 1 663, of which 1 568 are curated templates and 95 inherit |
+| Core coverage | 692/694 (99.7 %) |
+| Full coverage | 891/6 632 (13.4 %) |
+| Remaining backlog | **336** files, all `kind=program` |
+| Tests | 72, run by `scripts/run_tests.py`, all in CI |
 | Acceptance | 19/19 |
 | Demo | 4.9 MB GIF, 29.5 s, 8.10 % mean motion, 28.9 % frozen |
 
-The last figure is the one worth watching. It was 1.79 % with 84 % of
-transitions frozen while every step of the build reported success — see
-`logs/ERRORS.log`, E31. `scripts/check_demo_motion.py` now fails the build
-before such a file can be committed.
+Run `python scripts/coverage_figure.py` for those numbers. Do not type them: the
+last forty times they were typed they were wrong, because they were written before
+the batch had been applied (logs/ERRORS.log, E32).
+
+The backlog is 336, not 6 200. The other 5 409 program-less files are 3 279
+esoteric languages with no canonical program, 2 098 Wikipedia article titles that
+are not languages at all, 47 documents and 9 binary formats. See
+`docs/HOW-FILES-GET-THEIR-CONTENT.md`.
 
 ## Commands that matter
 
 ```bash
-python scripts/run_tests.py            # 56 tests
-python scripts/verify_languages.py     # 19 acceptance checks
-python scripts/validate_delivery.py    # repo gate
-python scripts/check_templates.py      # template correctness
-python scripts/check_demo_motion.py    # is the recording actually moving?
-python scripts/audit_repo.py           # health report
-bash run.sh                            # the show
-bash scripts/record_demo.sh            # record + tune + transcode
+python scripts/coverage_figure.py       # every number above, measured
+python scripts/run_tests.py             # 72 tests
+python scripts/verify_languages.py      # 19 acceptance checks
+python scripts/validate_delivery.py     # workflow, layout, generators, exec bits
+python scripts/check_templates.py       # template correctness
+python scripts/classify_placeholders.py # the five kinds, and --check
+python scripts/language_table.py        # data/LANGUAGES.md, and --check
+python scripts/check_demo_motion.py     # is the recording moving?
+python scripts/inspect_frames.py        # what is on screen? (contact sheet)
+python scripts/verify_encodings.py      # do the hex dumps decode back?
+python scripts/hue_uniformity.py        # is the bar actually a rainbow?
+python scripts/audit_repo.py            # health report
+bash run.sh                             # the show
+bash scripts/record_demo.sh             # record + tune + transcode
 ```
+
+## Adding programs
+
+Batches go through one tool, because editing a 1 500-entry dictionary by hand is
+how `HELLO["coff"] = ""` came to count as a template:
+
+```bash
+python scripts/add_templates.py --from .tmp/batch.json --dry-run
+python scripts/add_templates.py --from .tmp/batch.json
+python scripts/add_templates.py --from .tmp/batch.json --replace   # corrections
+```
+
+The tool regenerates, rebalances, runs the template guard and runs the tests. It
+also refuses languages that are not in the manifest, blank programs, and programs
+that never say "Hello World" — and it is right to refuse. Roughly one entry in
+five is rejected, usually because the file is a good answer to a slightly
+different question.
 
 ## Toolchain
 
@@ -44,56 +74,50 @@ Not on PATH; invoke by absolute path:
 - bash `D:\Git\bin\bash.exe`
 - python 3.13 `C:\hclaw\python\python.exe`
 - python 3.12 (matches CI) `D:\DevEnv\python\python.exe`
-- ffmpeg (local experiments only; CI installs its own) `D:\JianyingPro\11.2.0.14339\ffmpeg.exe`
+- ffmpeg (local experiments only) `D:\JianyingPro\11.2.0.14339\ffmpeg.exe`
 
 ## Environment hazards
 
 - **PowerShell will corrupt UTF-8.** `Set-Content` / `Out-File` round-trip text
   through the console code page and destroy emoji and non-Latin characters.
-  This corrupted README.md once already. Write files with Python or the edit
-  tool, never with `Set-Content`. It also appends a BOM and CRLF endings, which
-  `tests/test_clean_checkout.py` will now reject for any tracked text file.
+  Write files with Python or the edit tool. `Add-Content` also appends CRLF,
+  which `tests/test_clean_checkout.py` rejects for tracked text files.
 - **PowerShell pipelines append `\r` to the last line.** `"a`nb" | git ...`
   sends `b\r`, so `git check-ignore --stdin` appears to ignore nothing when the
   interesting path is last. Put a sentinel line after it.
-- **PowerShell `>` writes UTF-16 with a BOM.** Use `git cat-file -p` through
-  Python's `subprocess` when you need to inspect committed bytes.
 - **A pipeline hides an exit code.** `cmd | Select-Object -First 1` makes
-  `$LASTEXITCODE` the pipeline's, not the command's. Write to a file, or check
-  inside a single command.
-- **`git push` needs the proxy at 127.0.0.1:10818.** If the proxy is down,
-  every push fails; the work is safe locally and can be pushed later. Retry —
-  the VPN drops for a few seconds at a time and often recovers on attempt two.
-- **CI commits to `main`.** The assets and batch jobs push regenerated files, so
-  `git pull --rebase` before every push or the push is rejected as non-fast-
-  forward.
+  `$LASTEXITCODE` the pipeline's, not the command's.
+- **`git push` needs the proxy at 127.0.0.1:10818.** When the VPN is down every
+  push fails. `.tmp/push_retry.py` retries in the background and rebases first,
+  because the CI jobs commit regenerated assets to `main`.
+- **The network here drops for minutes at a time.** Work locally and let the
+  pusher catch up; do not stall on a push.
 - The repo is owned by a different SID; `git config --global safe.directory` was
   required.
 - `scripts/__pycache__` is owned by another SID; compile with `compile()` rather
   than `py_compile`.
 
-## Things that have gone wrong here, in order of cost
+## The three most expensive defects, and what they have in common
 
-1. **A crash that four statistics could not see.** `run.sh` read an undefined
-   `$FAST` behind a `[ -t 1 ]` guard, so only the recorder ever ran it, and the
-   published GIF was a crash report with a still frame behind it. Reading the
-   pixels found it in one step; measuring them had already cost three commits.
-   Guarded now by `tests/test_shell_variables.py`.
-2. **A file that existed in no clone.** `.gitignore` matched `*.bundle` and
-   `*.obj`, which are also language extensions. Five checks agreed the file was
-   present and all five read the working tree. Guarded by
-   `tests/test_gitignore_safety.py`.
-3. **One stray byte breaking 23 of 24 shards.** A BOM plus one CRLF in a `.ps1`
-   file that `.gitattributes` marks as LF text, so every checkout rewrote it and
-   `git pull --rebase` refused. Guarded by `tests/test_clean_checkout.py`, which
-   makes a real clone.
+1. **A crash behind a TTY guard** (E31). Every local invocation pipes stdout, so
+   every local run took the other branch. Only the recorder ran the line.
+2. **Four language files in no clone** (E30). `.gitignore` matched `*.bundle` and
+   `*.obj`. Five checks agreed the files were present and all five read the
+   working tree.
+3. **One stray byte breaking 23 of 24 shards** (E30). A BOM plus one CRLF in a
+   file `.gitattributes` marks as LF text, so every checkout rewrote it.
 
-All three shared a shape: every local check was green, and the failure only
-existed in a place local checks do not look. A fresh clone, a real terminal, and
+And the lesson is not a list of causes. It is that **a check which reads the
+working tree cannot tell you what is committed, and a test that pipes its output
+cannot tell you what a TTY-only branch does.** A fresh clone, a real terminal and
 an actual frame of the output are all things worth going and looking at.
+
+There is now a guard for each: `tests/test_gitignore_safety.py`,
+`tests/test_clean_checkout.py`, `tests/test_shell_variables.py`,
+`scripts/check_demo_motion.py`.
 
 ## Ledgers
 
-- `logs/ERRORS.log` — every defect found, E1–E31
+- `logs/ERRORS.log` — every defect found, E1–E32
 - `logs/DECISIONS.md` — decisions and their reasoning
 - `logs/AGENT_STATE.md` — this file
