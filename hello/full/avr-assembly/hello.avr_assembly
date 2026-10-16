@@ -3,7 +3,26 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; Atmel AVR (ATmega), avr-as
+        .include "m328Pdef.inc"
+
+        .org 0x0000
+        rjmp reset
+
+reset:
+        ldi r24, lo8(msg)
+        ldi r25, hi8(msg)
+        ldi r18, 12
+next:   lpm r22, X+
+        call putc
+        dec r18
+        brne next
+        rjmp .
+
+putc:
+        out 0x04, r22         /* UDR0 */
+        sbiw r24, 1
+        reti
+
+msg:    .ascii "Hello World!\n"

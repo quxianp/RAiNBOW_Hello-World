@@ -3,7 +3,22 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; Texas Instruments MSP430X
+        .cdecls main, exit
+        .text
+        .global main
+main:   mov     #msg, r1
+        mov     #12, r2
+loop:   mov.b   @r1+, r3
+        beq     done
+        call    putc
+        sub     #1, r2
+        jnz     loop
+done:   br      #done
+
+putc:   mov.b   r3, &U0TXBUF
+        ret
+
+        .section .rodata
+msg:    .ascii "Hello World!\n"

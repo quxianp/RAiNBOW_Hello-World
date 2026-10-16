@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; PDP-11, one of the machines that had this before 1978
+        .text
+        .globl _start
+_start: mov     $6, -(sp)       /* char */
+        mov     msg, -(sp)      /* &string */
+        mov     $1, -(sp)       /* stdout */
+        jsr     printf, .        /* the classic example */
+        mov     $0, -(sp)
+        mov     $0, -(sp)       /* exit status */
+        mov     $0, -(sp)       /* exit */
+        jsr     exit, .
+
+        .data
+msg:    <Hello World!\n\0>

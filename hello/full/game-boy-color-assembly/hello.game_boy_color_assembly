@@ -3,7 +3,21 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; Game Boy Color (LR35902), assembled with rgbds
+        SECTION "Entry", ROM0[$100]
+        nop
+        jp start
+
+start:  ldh  a, [$FF40]
+        or   %11100000       /* LCD on, BG on, OBJ on */
+        ldh  [$FF40], a
+
+        ld   hl, msg
+loop:   ld   a, [hl+]
+        and  $7F
+        ret  z
+        ld   [$C000], a
+        jr   loop
+
+msg:    db  "Hello World!", 0

@@ -3,7 +3,21 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        * Atari 8-bit, 6502
+
+        .segment "CODE"
+start:  ldy #0
+loop:   lda msg,y
+        beq done
+        jsr putc
+        iny
+        bne loop
+done:   rts
+
+putc:   sta $E00C            /* WSYNC */
+        sta $D01A            /* color register */
+        rts
+
+        .segment "RODATA"
+msg:    .byte "HELLO WORLD!", $9B, 0

@@ -3,7 +3,23 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        org 0000h
+
+        mov  r0,#msg
+loop:   mov  a,@r0
+        jz   done
+        acall putc
+        inc  r0
+        sjmp loop
+
+done:   sjmp done
+
+putc:   mov  r2,a
+        mov  r1,#02h
+        mov  r3,#0FFh
+        acall 0183h           /* monitor-style serial write */
+        ret
+
+msg:    db  'Hello World!',13,10,0
+        end

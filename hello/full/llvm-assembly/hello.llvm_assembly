@@ -3,7 +3,16 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; LLVM IR, as printed by `clang -S -emit-llvm`
+        @.str = private unnamed_addr constant [13 x i8] c"Hello World!\0A\00", align 1
+
+        define i32 @main() {
+        entry:
+          %msg = alloca [13 x i8], align 1
+          call void @llvm.memcpy.p0.p0.i64(i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str, i32 0, i32 0), i8* %msg, i64 13, i1 false)
+          %len = alloca i32, align 4
+          store i32 13, i32* %len, align 4
+          %call = call i32 @fwrite(i8* %msg, i64 1, i64 13, %struct._IO_FILE* @stdout)
+          ret i32 0
+        }

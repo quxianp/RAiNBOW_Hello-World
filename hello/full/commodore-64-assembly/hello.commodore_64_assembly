@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        * Commodore 64, 6502 with KERNAL
+
+        *= $0801
+        .word $FFFC          /* BASIC warm-start vector */
+
+start:  lda #$93             /* PETSCII, no quotes */
+        jsr $FFD2
+        ldx #0
+loop:   lda msg,x
+        beq done
+        jsr $FFD2
+        inx
+        bne loop
+done:   rts
+
+msg:    .byte "HELLO WORLD!", 13, 0
