@@ -108,13 +108,24 @@ def test_every_placeholder_admits_that_it_is_one():
     legitimately fills the rest.
     """
     man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    # The marker used to be the literal sentence "No curated Hello World",
+    # because every placeholder printed the same one. Each now says which of the
+    # five kinds it is, so the test looks for the specific texts instead --
+    # a stronger check, since boilerplate would now fail it.
+    admissions = ("No curated Hello World",
+                  "esoteric language",
+                  "programming language",
+                  "not a programming language",
+                  "a binary format",
+                  "an index entry",
+                  "not in data/placeholder_classes.json")
     silent = []
     for f in man["files"]:
         if f.get("real_template"):
             continue
         body = (ROOT / f["path"]).read_text(encoding="utf-8", errors="replace")
         head = "\n".join(body.splitlines()[:14])
-        if "admission" not in head or "No curated Hello World" not in head:
+        if "admission" not in head or not any(a in head for a in admissions):
             silent.append(f["language"])
     assert not silent, (
         f"{len(silent)} placeholder file(s) do not admit they are placeholders, "

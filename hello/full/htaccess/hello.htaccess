@@ -3,7 +3,7 @@ REM   colour     : not assigned by Linguist
 REM   layer      : full (byte-balanced rainbow bar)
 REM   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 REM   reference  : see https://esolangs.org/ and https://rosettacode.org/
-REM   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
+REM   admission  : an index entry rather than a language; no program exists to write [kind=unknown groups=- source=awesome_fp ext=.htaccess]
 
 REM Hello World!
 REM Hello World!

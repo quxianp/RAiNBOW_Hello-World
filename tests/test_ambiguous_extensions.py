@@ -54,7 +54,10 @@ def test_rez_file_says_it_has_no_template():
         "test_rez_has_no_template_and_that_is_deliberate"
     )
     body = (ROOT / entry["path"]).read_text(encoding="utf-8", errors="replace")
-    assert "admission" in body and "No curated Hello World" in body, (
+    # Rez is classified `program`, so its admission says a program belongs here
+    # and has not been written -- which is the truthful sentence, and a stronger
+    # one than the generic "no curated template" it replaced.
+    assert "admission" in body and "programming language" in body, (
         "the Rez placeholder does not say it is a placeholder; a reader "
         "opening the file should not think it is a working program"
     )

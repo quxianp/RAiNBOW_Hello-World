@@ -5,7 +5,7 @@
 #   layer      : core (byte-balanced rainbow bar)
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
-#   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
+#   admission  : not a programming language; the document itself is the answer [kind=document groups=- source=linguist ext=.yaml]
 
 # Hello World!
 # Hello World!
@@ -36,4 +36,4 @@
 # rainbow-pad equal byte share keeps the language bar an even rainbow
 # rainbow-pad one segment per Linguist coloured language
 # rainbow-pad MiniYAML :: RAiNBOW_Hello-World
-          
+# rainbow-pad      

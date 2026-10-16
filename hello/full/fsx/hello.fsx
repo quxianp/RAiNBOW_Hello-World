@@ -5,7 +5,7 @@ Fsx - Hello World! :: RAiNBOW_Hello-World
   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
   reference  : see https://esolangs.org/ and https://rosettacode.org/
 *)
-  admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
+  admission  : esoteric language; no canonical Hello World is written down for it [kind=esolang groups=- source=esolangs ext=.fsx]
 
 (* Hello World!*)
 (* Hello World!*)

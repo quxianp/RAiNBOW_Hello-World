@@ -5,7 +5,7 @@ SOL - Hello World! :: RAiNBOW_Hello-World
   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
   reference  : see https://esolangs.org/ and https://rosettacode.org/
 */
-  admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
+  admission  : an index entry rather than a language; no program exists to write [kind=unknown groups=- source=wikipedia ext=.sol]
 
 /* Hello World!*/
 /* Hello World!*/

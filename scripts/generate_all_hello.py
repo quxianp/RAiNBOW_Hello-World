@@ -27,6 +27,10 @@ except Exception:
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
+# Which placeholder files have a program and why the others do not. Written by
+# scripts/classify_placeholders.py; read here so every program-less file can say
+# specifically what it is instead of printing the same sentence as 6 241 others.
+CLASSES_PATH = DATA / "placeholder_classes.json"
 CONFIG = ROOT / "config"
 HELLO_DIR = ROOT / "hello"
 LOGS = ROOT / "logs"
@@ -1934,6 +1938,61 @@ def normalise(text: str) -> str:
     return text.replace("\r\n", "\n")
 
 
+# --------------------------------------------------------------------------
+# Why a file has no program, said in one line, specific to the language.
+#
+# `scripts/classify_placeholders.py` sorts the 6 242 program-less files into five
+# groups that need five different answers. Saying so is the whole point of a
+# placeholder: a file that admits what it is can be acted on, and a file that
+# says the same thing as 6 241 others cannot.
+#
+# The wording is deliberately different per group. "No program yet" is true for
+# a programming language and false for a binary format, and a reader deserves to
+# be told which they are looking at.
+# --------------------------------------------------------------------------
+ADMISSION_KIND_TEXT = {
+    "esolang": "esoteric language; no canonical Hello World is written down for it",
+    "program": "programming language; a program belongs here and has not been written yet",
+    "document": "not a programming language; the document itself is the answer",
+    "binary": "a binary format; there is no text to print",
+    "unknown": "an index entry rather than a language; no program exists to write",
+}
+
+
+def _classification_index() -> dict:
+    """language lowercased -> classification record, loaded once per run."""
+    global _CLASSES_CACHE
+    if _CLASSES_CACHE is None:
+        try:
+            data = json.loads(CLASSES_PATH.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _CLASSES_CACHE = {}
+        else:
+            _CLASSES_CACHE = {
+                (rec.get("language") or "").lower(): rec
+                for rec in data.get("files", [])
+            }
+    return _CLASSES_CACHE
+
+
+_CLASSES_CACHE = None
+
+
+def admission_for(name: str, ext: str) -> str:
+    """One line, saying why this language has no program here."""
+    rec = _classification_index().get((name or "").lower())
+    if rec is None:
+        return ("no curated Hello World for this language yet; it is not in "
+                "data/placeholder_classes.json either")
+    kind = rec.get("kind", "unknown")
+    text = ADMISSION_KIND_TEXT.get(kind, "no curated program recorded")
+    groups = ", ".join(rec.get("groups") or []) or "-"
+    sources = ", ".join(rec.get("source") or []) or "-"
+    return (f"{text} [kind={kind} groups={groups} source={sources} "
+            f"ext={ext or '-'}]")
+
+
+
 def build_file(name: str, ext: str, colour: str | None, hue: float | None,
                note: str, layer: str, path_rel: str,
                fname: str | None = None,
@@ -1995,10 +2054,7 @@ def build_file(name: str, ext: str, colour: str | None, hue: float | None,
         # meant a core placeholder printed the modeline caption twice and never
         # admitted what it was, which is the one thing a placeholder exists to
         # do. Always write the admission, whatever `note` holds.
-        admission = (
-            "No curated Hello World for this language yet: the closest "
-            "equivalent is used. See the linked interpreter/rosetta entries."
-        )
+        admission = admission_for(name, ext)
         if c is not None:
             head_lines.append(f"{c}  admission  : {admission}")
         elif bs:
