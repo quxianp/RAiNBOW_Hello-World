@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1449,
+ "with_curated_template": 1459,
  "runnable_command_count": 51,
  "files": [
   {
@@ -16461,7 +16461,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BMP binary",
@@ -18177,7 +18177,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BTree",
@@ -19706,7 +19706,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "cbrain",
@@ -41409,7 +41409,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JSONPath",
@@ -47052,7 +47052,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Messenger",
@@ -54950,7 +54950,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "pbrain",
@@ -55412,7 +55412,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "pgmpiet",
@@ -56622,7 +56622,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PNPM",
@@ -57447,7 +57447,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PPML",
@@ -79293,7 +79293,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "XPath 2.0",

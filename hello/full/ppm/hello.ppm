@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.ppm]
 
-// Hello World!
-// Hello World!
+# A real binary PPM (P6). Same header grammar as PGM, plus three samples
+# per pixel: "Hello World!" rides in the comment where PGM put it.
+0000  50 36 0A 23 20 48 65 6C 6C 6F 20 57 6F 72 6C 64 |P6.# Hello World|
+0010  21 0A 31 20 31 0A 32 35 35 0A 48 65 6C          |!.1 1.255.Hel|

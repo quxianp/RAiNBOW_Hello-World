@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.cbor]
 
-// Hello World!
-// Hello World!
+# CBOR of {"greeting": "Hello World!"}.
+# Major type 5 (a map) of one pair is 0xA1; major type 3 (text) of length
+# 12 is 0x6C, because 12 is below the 24 that needs an extra byte.
+0000  A1 68 67 72 65 65 74 69 6E 67 6C 48 65 6C 6C 6F |.hgreetinglHello|
+0010  20 57 6F 72 6C 64 21                            | World!|
