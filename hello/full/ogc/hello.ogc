@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.ogc]
 
-// Hello World!
-// Hello World!
+# OGC is a family of geospatial standards. Its service documents are XML,
+# and the greeting rides in the abstract element, which is free text.
+<?xml version="1.0" encoding="UTF-8"?>
+<Service xmlns="http://www.opengis.net/ows">
+  <Abstract>Hello World!</Abstract>
+</Service>

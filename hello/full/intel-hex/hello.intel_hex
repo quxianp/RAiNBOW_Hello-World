@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.intel_hex]
 
-// Hello World!
-// Hello World!
+# Intel HEX: one data record holding "Hello World!".
+#
+#   :  LL AAAA TT DD... CC
+#   |  |  |    |       |__ checksum: two's complement of the byte sum
+#   |  |  |    |__________ 12 data bytes, 0x48 0x65 ... 
+#   |  |  |_______________ record type 00, data
+#   |  |__________________ load offset 0x0000
+#   |_____________________ byte count 0x0C
+#
+:0C00000048656C6C6F20576F726C6421B7

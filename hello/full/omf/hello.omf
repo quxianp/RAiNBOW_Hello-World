@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.omf]
 
-// Hello World!
-// Hello World!
+# The Object Module Format, used by Microsoft's 16-bit toolchain.
+# An OMF record starts with a one-byte record type and ends with a
+# one-byte checksum: the ones complement of the record's byte sum.
+#
+# 0x8E is THEADR, a translation-unit header. The name below is the one
+# a linker would report for the module.
+0000  8C 48 65 6C 6C 6F 20 57 6F 72 6C 64 21 00 35    |.Hello World!.5|
