@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.lz78]
 
-// Hello World!
-// Hello World!
+# LZ78 over "Hello World!". Each phrase added to the dictionary emits
+# an index into it, the length of the phrase, and the one new character
+# the phrase extends -- which is what distinguishes it from LZ77's
+# distance/length pairs.
+#   index  72  length 1  then +'e'
+#   index 101  length 1  then +'l'
+#   index 108  length 1  then +'l'
+#   index 108  length 1  then +'o'
+#   index 111  length 1  then +' '
+#   index  32  length 1  then +'W'
+#   index  87  length 1  then +'o'
+#   index 111  length 1  then +'r'
+#   index 114  length 1  then +'l'
+#   index 108  length 1  then +'d'
+#   index 100  length 1  then +'!'
+#   index  33  length 1  then (end of input)

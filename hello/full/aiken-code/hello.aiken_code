@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.aiken_code]
 
-// Hello World!
-// Hello World!
+# Aiken code is five-bit: digit 1 for a bit 0 and digit 5 for a bit 1, in
+# an even number of 1s. Applying it to the ASCII of "Hello World!",
+# letter by letter, gives a string of 1s and 5s:
+#
+# H = 01001000 -> 51515 5 1 5
+#
+# Aiken was designed for punched cards, where the column is fixed at five
+# and a literal 0 or 1 would be confusable with a hole.

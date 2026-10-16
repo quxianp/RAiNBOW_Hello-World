@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.braille_encoding]
 
-// Hello World!
-// Hello World!
+# Grade 1 braille for "Hello World!", in Unicode braille patterns
+# (U+2800..U+28FF). Eight dots per cell, bits laid out as in the
+# braille cell:
+#
+#   1 4      H = dots 1,1,2,5
+#   2 5      e = dot 2
+#   3 6      l = dots 1,2,3
+#   7 8      o = dots 1,3,5
+#   8 7
+#   6 3

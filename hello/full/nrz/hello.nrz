@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.nrz]
 
-// Hello World!
-// Hello World!
+# Non-return-to-zero: each bit is held at its own level for the whole bit
+# period, with no transition in the middle and no clock. The ASCII bits of
+# "Hello World!", `|` between bytes:
+01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001

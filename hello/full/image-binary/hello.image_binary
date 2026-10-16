@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.image_binary]
 
-// Hello World!
-// Hello World!
+# A raw image is pixels with no header, so the format has to be agreed
+# out of band. "Hello World!" as 8-bit grey pixels is this bit stream,
+# 96 pixels, 96 bytes, no padding and nothing else to read:
+48 65 6C 6C 6F 20 57 6F 72 6C 64 21

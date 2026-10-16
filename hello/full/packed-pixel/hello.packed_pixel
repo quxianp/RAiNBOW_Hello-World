@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.packed_pixel]
 
-// Hello World!
-// Hello World!
+# A packed-pixel format has no row padding: pixels follow one another
+# regardless of byte boundaries, which is why a width that is not a
+# multiple of the pixel size is legal. The 8-bit grey pixels of
+# "Hello World!" as ASCII values, packed with no padding:
+01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001

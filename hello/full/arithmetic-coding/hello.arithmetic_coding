@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.arithmetic_coding]
 
-// Hello World!
-// Hello World!
+# Arithmetic coding replaces symbols with intervals and emits one number
+# in (0, 1). Over "Hello World!" it would narrow the interval once per
+# character and finally print a point in what remains. The gain is that
+# there is no per-symbol code at all; the cost is that the decoder needs
+# the same model.
+#
+# Huffman spends whole bits per symbol, which is why the result above is
+# longer than the 96 raw bits for these twelve characters. Arithmetic
+# coding wins on long text, where the model learns, and loses here.

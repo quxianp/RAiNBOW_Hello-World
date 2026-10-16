@@ -3,7 +3,19 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.huffman_coding]
 
-// Hello World!
-// Hello World!
+# A Huffman code built for the ASCII of "Hello World!" alone. The code
+# is only optimal for this one string, which is the whole limitation of
+# single-table Huffman coding and the reason real formats store the table.
+#   ' '   x1  -> 1110
+#   '!'   x1  -> 100
+#   'H'   x1  -> 1100
+#   'W'   x1  -> 1111
+#   'd'   x1  -> 001
+#   'e'   x1  -> 1101
+#   'r'   x1  -> 000
+#   'o'   x2  -> 101
+#   'l'   x3  -> 01
+#
+# encoded (37 bits, 96 raw):
+# 1100110101011011110111110100001001100

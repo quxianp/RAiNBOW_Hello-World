@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.miller_code]
 
-// Hello World!
-// Hello World!
+# Miller code puts a transition at the *end* of a bit rather than the
+# middle, and none at all in the middle of a repeated bit. It needs no
+# polarity, which Manchester does. Below are the bit pairs Miller would
+# emit for the ASCII of "Hello World!", where a dash is a steady level:
+#
+# H = 01001000 -> 01 -1 01 -1 00 1- 00 1-
+# e = 01100101 -> 01 -1 01 1- 00 1- 01
+#
+# The encoding needs a clock and a start bit; without one a decoder
+# cannot tell a run of identical bits from a longer one.
