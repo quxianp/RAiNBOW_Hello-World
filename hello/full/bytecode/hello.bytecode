@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.bytecode]
 
-// Hello World!
-// Hello World!
+# Bytecode is machine code for a virtual machine. There is no
+# single format under this name; this file carries the payload
+# a loader would interpret to produce "Hello World!".
+48 65 6C 6C 6F 20 57 6F 72 6C 64 21

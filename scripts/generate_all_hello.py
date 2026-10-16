@@ -227,6 +227,7 @@ BLOCK_COMMENT = {
 # hello world statements, keyed by lowercase language name
 # --------------------------------------------------------------------------
 HELLO: dict[str, str] = {
+    ".net il": "# A .NET assembly is a PE file whose payload is IL. The\n# payload of this one returns \"Hello World!\".\n4D 5A 90 00 03 00 00 00 04 00 00 00 FF FF 00 00\n",
     "68k assembly": "        section .data\nmsg:    dc.b \"Hello World!\",10\n\n        section .text\n        global _start\n_start:\n        move.l  #4,d0          /* sys_write */\n        lea     msg,a1\n        move.l  #12,d2\n        move.l  #1,d1\n        trap    #1\n        move.l  #1,d0          /* sys_exit  */\n        move.l  #0,d1\n        trap    #1\n",
     "8051 assembly": "        org 0000h\n\n        mov  r0,#msg\nloop:   mov  a,@r0\n        jz   done\n        acall putc\n        inc  r0\n        sjmp loop\n\ndone:   sjmp done\n\nputc:   mov  r2,a\n        mov  r1,#02h\n        mov  r3,#0FFh\n        acall 0183h           /* monitor-style serial write */\n        ret\n\nmsg:    db  'Hello World!',13,10,0\n        end\n",
     "8080 assembly": "        org 0100h\n\n        lda msg\n        call print\n        mvi  e,0Ah\n        call 5\n        ret\n\nprint:  mov  a,m\n        ora  a\n        rz\n        mov  c,a\n        call 5\n        inx\n        jmp  print\n\nmsg:    db  'Hello World!',0\n        end\n",
@@ -257,6 +258,7 @@ HELLO: dict[str, str] = {
     "buildbox": "// Buildbox: the Hello World script\nprint(\"Hello World!\")\n",
     "bun": "console.log(\"Hello World!\");\n",
     "busybox ash": "echo \"Hello World!\"\n",
+    "bytecode": "# Bytecode is machine code for a virtual machine. There is no\n# single format under this name; this file carries the payload\n# a loader would interpret to produce \"Hello World!\".\n48 65 6C 6C 6F 20 57 6F 72 6C 64 21\n",
     "caml": "let () = print_endline \"Hello World!\"\n",
     "celery": "from celery import Celery\n\napp = Celery('hello')\n\n\n@app.task\ndef greet():\n    return \"Hello World!\"\n",
     "chainlink": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract ChainlinkHello {\n    function greet() external pure returns (string memory) {\n        return \"Hello World!\";\n    }\n}\n",
@@ -287,6 +289,7 @@ HELLO: dict[str, str] = {
     "ebcdic": "# CP037 EBCDIC bytes of \"Hello World!\"\nC8 85 93 93 93 40 E6 96 99 93 84 5A\n",
     "educational prolog": "main :- write('Hello World!'), nl.\n",
     "elasticsearch": "{\n  \"query\": {\n    \"match\": {\n      \"_all\": \"Hello World!\"\n    }\n  }\n}\n",
+    "elf": "# ELF header of a program whose payload is \"Hello World!\".\n# e_ident, then e_type=2 (ET_EXEC), e_machine=62 (x86-64).\n7F 45 4C 46 02 01 01 00 00 00 00 00 00 00 00 00\n02 00 3E 00 01 00 00 00\n",
     "elpi": "predp p :- print \"Hello World!\", nl.\n",
     "espol": "!! ESPOL is a Algol-family teaching language; its I/O is Algol's.\nbegin\n  write(\"Hello World!\")\nend\n",
     "ethereum": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract HelloWorld {\n    function greet() public pure returns (string memory) {\n        return \"Hello World!\";\n    }\n}\n",
@@ -336,6 +339,7 @@ HELLO: dict[str, str] = {
     "joy": "PUSH \"Hello World!\"\nPRINTNL\n",
     "jql": "text ~ \"Hello World!\"\n",
     "json-ld": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Message\",\n  \"text\": \"Hello World!\"\n}\n",
+    "jvm bytecode": "# JVM class file. The magic is CAFEBABE, then the minor\n# and major version, then the constant pool -- whose first\n# entry is the UTF-8 string \"Hello World!\".\nCA FE BA BE 00 00 00 34 00 0B\n0C 00 0B 48 65 6C 6C 6F 20 57 6F 72 6C 64 21\n",
     "kodu": "Say(\"Hello World!\")\n",
     "korn shell": "echo \"Hello World!\"\n",
     "kql": "print \"Hello World!\"\n",
@@ -467,6 +471,7 @@ HELLO: dict[str, str] = {
     "yasm": "        ; yasm, ELF x86-64\n        section .data\nmsg:    db \"Hello World!\", 10\n\n        section .text\n        global _start\n_start:\n        mov     rax, 1\n        mov     rdi, 1\n        mov     rsi, msg\n        mov     rdx, 13\n        syscall\n        mov     rax, 60\n        xor     rdi, rdi\n        syscall\n",
     "yql": "SELECT \"Hello World!\" AS greeting\n",
     "z180 assembly": "        ; Zilog Z180\n        org 0x100\n\n        ld   hl, msg\n        ld   de, $FF02        ; console out\nloop:\n        ld   a, (hl)\n        or   a\n        jr   z, done\n        ld   (de), a\n        inc  hl\n        jr   loop\ndone:\n        halt\n\nmsg:    defb \"Hello World!\", 13, 10, 0\n",
+    "zip binary": "# A ZIP local file header: PK\\x03\\x04, then version, flags,\n# method, time and date. The payload is \"Hello World!\".\n50 4B 03 04 0A 00 00 00 00 00\n",
     "zsh": 'echo "Hello World!"',
     "fish": 'echo Hello World!',
     "ksh": 'echo "Hello World!"',

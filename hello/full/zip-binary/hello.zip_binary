@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.zip_binary]
 
-// Hello World!
-// Hello World!
+# A ZIP local file header: PK\x03\x04, then version, flags,
+# method, time and date. The payload is "Hello World!".
+50 4B 03 04 0A 00 00 00 00 00
