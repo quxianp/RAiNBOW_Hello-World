@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.wasm_text_format]
 
-// Hello World!
-// Hello World!
+;; WebAssembly text format, the source a .wasm is assembled from.
+;; A module is types, then imports, then functions, then exports, then
+;; code; the order is fixed by the binary format underneath it.
+(module
+  (func $greet (export "greet") (result i32)
+    ;; the greeting as a data segment address
+    i32.const 0)
+  (data (i32.const 0) "Hello World!"))

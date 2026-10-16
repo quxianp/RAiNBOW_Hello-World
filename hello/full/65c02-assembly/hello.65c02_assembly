@@ -3,7 +3,16 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.65c02_assembly]
 
-// Hello World!
-// Hello World!
+        .segment "CODE"
+        .proc start
+        lda msg
+        sta $0400            ; VIC-II screen memory
+        inx
+        lda msg,x
+        bne start
+        rts
+        .endproc
+
+        .segment "RODATA"
+msg:    .byte "HELLO WORLD!", 0

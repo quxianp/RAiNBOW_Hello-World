@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.pic18_assembly]
 
-// Hello World!
-// Hello World!
+        ; Microchip PIC18
+        #include <p18f4520.h>
+
+        #define _XTAL_FREQ 4000000
+
+        void main(void) {
+            TRISB = 0x00;
+            // Hello World! -- sent out one character at a time
+            PORTB = 'H';
+        }

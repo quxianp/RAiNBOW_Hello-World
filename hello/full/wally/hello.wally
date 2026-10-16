@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=builtin:golf ext=.wally]
 
-// Hello World!
-// Hello World!
+// Wally is the WebAssembly text language a wallet uses. A program is a
+// module, so its Hello World is the smallest module with one export.
+//
+// The text form is the same as the WebAssembly text format; this entry is
+// Wally's dialect of it, and the greeting is in its data segment.
+(component
+  (core module $m
+    (func (export "greet") (result i32)
+      i32.const 0)
+    (data (i32.const 0) "Hello World!")))

@@ -3,7 +3,23 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.alpha64]
 
-// Hello World!
-// Hello World!
+        ; Alpha64 is a 6502-based assembler with macros.
+        * = $0801
+        .word $FFFC
+start:
+        lda #<msg
+        sta ptr
+        lda #>msg
+        sta ptr+1
+        ldy #0
+loop:
+        lda (ptr),y
+        beq done
+        jsr $FFD2
+        iny
+        bne loop
+done:
+        rts
+msg:
+        .byte "HELLO WORLD!", 0

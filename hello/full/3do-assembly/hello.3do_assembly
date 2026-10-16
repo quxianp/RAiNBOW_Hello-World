@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.3do_assembly]
 
-// Hello World!
-// Hello World!
+        ; 3DO ARM60 (60x)
+        .section .text
+        .global _start
+_start:
+        mov     a0, #1         ; write
+        adr     a1, msg
+        mov     a2, #12
+        mov     a3, #0         ; fd 0
+        bl      Print
+        mov     a0, #0
+        bl      Exit
+
+        .section .data
+msg:    .ascii "Hello World!"

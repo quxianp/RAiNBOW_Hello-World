@@ -3,7 +3,19 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.genesis_assembly]
 
-// Hello World!
-// Hello World!
+        ; Genesis (68000), assembled withvasm68k
+        .text
+        .globl _start
+_start:
+        move.l  #$C000, (a0)
+        move.l  #len, d2
+        lea     msg, a1
+        move.l  a1, (a1)
+stop:
+        bra     stop
+        .data
+msg:
+        .dc.b "Hello World!",0
+len:
+        .equ $ - msg
