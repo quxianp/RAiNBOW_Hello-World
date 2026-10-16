@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.huff]
 
-// Hello World!
-// Hello World!
+// Huff is a macro language for EVM bytecode. Everything is bytes,
+// so there are no strings in it and nothing to print: the program
+# is a macro whose value is the greeting "Hello World!" as hex.
+//
+//   48 65 6C 6C 6F 20 57 6F 72 6C 64 21
+#define HELLO 0x48656C6C6F20576F726C6421
+#define MAIN() HELLO
