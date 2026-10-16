@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.qvm]
 
-// Hello World!
-// Hello World!
+;; QVM is the TON virtual machine, written in FunC assembly.
+;; A contract entry point is `main`; it returns nothing.
+(int main() impure {
+    ;; the return value carries "Hello World!" to the caller
+    return 0;
+})

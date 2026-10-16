@@ -9,14 +9,14 @@ repository but four, and only one of them is unfinished work.
 
 | section | files |
 |---|---:|
-| Carrying a program | 1,894 |
+| Carrying a program | 1,895 |
 | Esoteric languages with no canonical Hello World | 3,279 |
 | Documents and data formats, where the content is the answer | 46 |
 | Binary formats: a magic number and where the greeting would go | 9 |
-| Index entries that are not languages | 2,098 |
+| Index entries that are not languages | 2,097 |
 | **total** | **7,326** |
 
-## Carrying a program (1,894)
+## Carrying a program (1,895)
 
 | language | extension | file |
 |---|---|---|
@@ -1799,6 +1799,7 @@ repository but four, and only one of them is unfinished work.
 | Ant Build System | `.xml` | `hello/core/ant-build-system/ant.xml` |
 | XML | `.xml` | `hello/core/xml/hello.xml` |
 | Xojo | `.xojo_code` | `hello/core/xojo/hello.xojo_code` |
+| XOTcl | `.xotcl` | `hello/full/xotcl/hello.xotcl` |
 | XPath | `.xpath` | `hello/full/xpath/hello.xpath` |
 | XPath 2.0 | `.xpath_2_0` | `hello/full/xpath-2-0/hello.xpath_2_0` |
 | XProc | `.xpl` | `hello/full/xproc/hello.xpl` |
@@ -5264,7 +5265,7 @@ repository but four, and only one of them is unfinished work.
 | WebAssembly Binary | `.webassembly_binary` | `hello/full/webassembly-binary/hello.webassembly_binary` |
 | Zstandard binary | `.zstandard_binary` | `hello/full/zstandard-binary/hello.zstandard_binary` |
 
-## Index entries that are not languages (2,098)
+## Index entries that are not languages (2,097)
 
 | language | extension | file |
 |---|---|---|
@@ -7337,7 +7338,6 @@ repository but four, and only one of them is unfinished work.
 | XML log | `.xml_log` | `hello/full/xml-log/hello.xml_log` |
 | XMTC | `.xmtc` | `hello/full/xmtc/hello.xmtc` |
 | Xod | `.xod` | `hello/full/xod/hello.xod` |
-| XOTcl | `.xotcl` | `hello/full/xotcl/hello.xotcl` |
 | XPath 3 | `.xpath_3` | `hello/full/xpath-3/hello.xpath_3` |
 | XPL | `.xpl` | `hello/full/xpl/hello.xpl` |
 | XPL0 | `.xpl0` | `hello/full/xpl0/hello.xpl0` |

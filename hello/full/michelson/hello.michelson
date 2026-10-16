@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.michelson]
 
-// Hello World!
-// Hello World!
+;; Michelson is the smart-contract language of Stellar's XDR.
+;; The XDR comments are the language's own comment syntax.
+@compiler >= 0.24.0
+contract HelloWorld {
+    entrypoint greet() {
+        ;; Hello World!
+    }
+    init() {
+    }
+}

@@ -1,35 +1,35 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5722,
+  "without_program": 5701,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 290,
-    "unknown": 2098
+    "program": 270,
+    "unknown": 2097
   },
   "reasons": {
     "source:esolangs": 3153,
-    "unclassified": 2098,
+    "unclassified": 2097,
     "group:esoteric": 126,
     "group:chinese": 59,
-    "group:education": 50,
-    "group:golf": 29,
-    "group:dsl_query": 25,
-    "group:quantum": 22,
+    "group:education": 47,
+    "group:golf": 28,
+    "group:dsl_query": 22,
     "group:markup_data": 19,
-    "group:ancient": 17,
+    "group:quantum": 19,
     "group:academic": 17,
-    "group:logic_constraint": 14,
-    "group:misc": 14,
+    "group:ancient": 13,
+    "group:misc": 13,
     "group:template": 12,
     "group:assembly_dialects": 12,
+    "group:logic_constraint": 11,
     "group:data_science": 10,
     "group:binary_data": 9,
-    "group:blockchain": 9,
     "group:functional": 9,
-    "group:concurrency": 8,
+    "group:blockchain": 8,
+    "group:concurrency": 7,
     "group:build_config": 4,
     "group:shell_os": 4,
     "type:data": 1,
@@ -37168,32 +37168,6 @@
       ]
     },
     {
-      "language": "Ada Ravenscar",
-      "path": "hello/full/ada-ravenscar/hello.ada_ravenscar",
-      "extension": ".ada_ravenscar",
-      "kind": "program",
-      "reason": "group:concurrency",
-      "groups": [
-        "concurrency"
-      ],
-      "source": [
-        "builtin:concurrency"
-      ]
-    },
-    {
-      "language": "AdaCore",
-      "path": "hello/full/adacore/hello.adacore",
-      "extension": ".adacore",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
       "language": "Agda-Coq",
       "path": "hello/full/agda-coq/hello.agda_coq",
       "extension": ".agda_coq",
@@ -37357,22 +37331,6 @@
       ]
     },
     {
-      "language": "ArnoldC",
-      "path": "hello/full/arnoldc/hello.arnoldc",
-      "extension": ".arnoldc",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf",
-        "esoteric"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf",
-        "builtin:esoteric"
-      ]
-    },
-    {
       "language": "ASF+SDF",
       "path": "hello/full/asf+sdf/hello.asf+sdf",
       "extension": ".asf+sdf",
@@ -37473,33 +37431,6 @@
         "education"
       ],
       "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "Blazegraph",
-      "path": "hello/full/blazegraph/hello.blazegraph",
-      "extension": ".blazegraph",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "Blockly",
-      "path": "hello/full/blockly/hello.blockly",
-      "extension": ".blockly",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "wikipedia",
         "builtin:education"
       ]
     },
@@ -37648,19 +37579,6 @@
       "source": [
         "esolangs",
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "Chuffed",
-      "path": "hello/full/chuffed/hello.chuffed",
-      "extension": ".chuffed",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
       ]
     },
     {
@@ -37861,32 +37779,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "Drill",
-      "path": "hello/full/drill/hello.drill",
-      "extension": ".drill",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "DrRacket",
-      "path": "hello/full/drracket/hello.drracket",
-      "extension": ".drracket",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -38184,19 +38076,6 @@
       ]
     },
     {
-      "language": "FSAT",
-      "path": "hello/full/fsat/hello.fsat",
-      "extension": ".fsat",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
-      ]
-    },
-    {
       "language": "FSML",
       "path": "hello/full/fsml/hello.fsml",
       "extension": ".fsml",
@@ -38233,19 +38112,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "Gecode",
-      "path": "hello/full/gecode/hello.gecode",
-      "extension": ".gecode",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
       ]
     },
     {
@@ -38368,19 +38234,6 @@
       ]
     },
     {
-      "language": "Impala",
-      "path": "hello/full/impala/hello.impala",
-      "extension": ".impala",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Inferno Assembly",
       "path": "hello/full/inferno-assembly/hello.inferno_assembly",
       "extension": ".inferno_assembly",
@@ -38391,20 +38244,6 @@
       ],
       "source": [
         "builtin:assembly_dialects"
-      ]
-    },
-    {
-      "language": "Inform",
-      "path": "hello/full/inform/hello.inform",
-      "extension": ".inform",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:education"
       ]
     },
     {
@@ -38577,19 +38416,6 @@
       ]
     },
     {
-      "language": "LBASIC",
-      "path": "hello/full/lbasic/hello.lbasic",
-      "extension": ".lbasic",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
       "language": "LinkQL",
       "path": "hello/full/linkql/hello.linkql",
       "extension": ".linkql",
@@ -38698,19 +38524,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "Michelson",
-      "path": "hello/full/michelson/hello.michelson",
-      "extension": ".michelson",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
       ]
     },
     {
@@ -38842,19 +38655,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "MSX BASIC",
-      "path": "hello/full/msx-basic/hello.msx_basic",
-      "extension": ".msx_basic",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
       ]
     },
     {
@@ -39013,21 +38813,6 @@
       ],
       "source": [
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "ORCA",
-      "path": "hello/full/orca/hello.orca",
-      "extension": ".orca",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "wikipedia",
-        "esolangs",
-        "builtin:misc"
       ]
     },
     {
@@ -39412,48 +39197,9 @@
       ]
     },
     {
-      "language": "Quil-R",
-      "path": "hello/full/quil-r/hello.quil_r",
-      "extension": ".quil_r",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Quil-T",
-      "path": "hello/full/quil-t/hello.quil_t",
-      "extension": ".quil_t",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "Quirk",
       "path": "hello/full/quirk/hello.quirk",
       "extension": ".quirk",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "QVM",
-      "path": "hello/full/qvm/hello.qvm",
-      "extension": ".qvm",
       "kind": "program",
       "reason": "group:quantum",
       "groups": [
@@ -39498,19 +39244,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "ReClass",
-      "path": "hello/full/reclass/hello.reclass",
-      "extension": ".reclass",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
       ]
     },
     {
@@ -64082,17 +63815,6 @@
       "language": "Xod",
       "path": "hello/full/xod/hello.xod",
       "extension": ".xod",
-      "kind": "unknown",
-      "reason": "unclassified",
-      "groups": [],
-      "source": [
-        "wikipedia"
-      ]
-    },
-    {
-      "language": "XOTcl",
-      "path": "hello/full/xotcl/hello.xotcl",
-      "extension": ".xotcl",
       "kind": "unknown",
       "reason": "unclassified",
       "groups": [],

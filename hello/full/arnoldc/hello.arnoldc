@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf, esoteric source=esolangs, builtin:golf, builtin:esoteric ext=.arnoldc]
 
-// Hello World!
-// Hello World!
+// ArnoldC is a language in which programs are Schwarzenegger.
+// A TALK TO THE HAND statement prints its operand.
+TALK TO THE HAND "Hello World!"

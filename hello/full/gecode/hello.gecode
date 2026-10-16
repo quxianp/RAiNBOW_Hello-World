@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=logic_constraint source=builtin:logic_constraint ext=.gecode]
 
-// Hello World!
-// Hello World!
+// Gecode is a constraint solver library; MiniZinc is its modelling
+// language, and a MiniZinc program must end in an output statement.
+include "gecode.mzn";
+
+predicate greet() = true;
+
+solve satisfy;
+
+output ["Hello World!\n"];
