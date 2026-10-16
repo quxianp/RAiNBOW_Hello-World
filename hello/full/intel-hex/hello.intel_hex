@@ -4,13 +4,15 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# Intel HEX: one data record holding "Hello World!".
+# Intel HEX, one data record holding "Hello World!".
 #
-#   :  LL AAAA TT DD... CC
-#   |  |  |    |       |__ checksum: two's complement of the byte sum
-#   |  |  |    |__________ 12 data bytes, 0x48 0x65 ... 
-#   |  |  |_______________ record type 00, data
-#   |  |__________________ load offset 0x0000
-#   |_____________________ byte count 0x0C
+#   :  LL AAAA TT <data> CC
+#   |  |  |    |       |__ CC is the two's complement of the
+#   |  |  |    |          byte sum, so it must be computed.
+#   |  |  |    |____________ twelve bytes: 48 65 6C 6C 6F ...
+#   |  |  |_________________ TT = 00, data record
+#   |  |____________________ AAAA = 0000, load offset
+#   |_______________________ LL = 0C, twelve data bytes
 #
+# Sum of LL+AAAA+TT+data is 1097 = 0x449, so CC = 0x100-0x49.
 :0C00000048656C6C6F20576F726C6421B7

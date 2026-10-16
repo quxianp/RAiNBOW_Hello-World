@@ -3,7 +3,15 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.alpha_assembly]
 
-// Hello World!
-// Hello World!
+        ; Alpha assembly: a register machine, and its Hello World
+        ; is the six instructions that syscall the kernel.
+        .text
+        .globl _start
+_start:
+        lda     $60(zero), $0     # syscall number
+        lda     msg, $r0
+        lda     $12, $r1
+        call    trap
+        .data
+msg:    .asciz "Hello World!"
