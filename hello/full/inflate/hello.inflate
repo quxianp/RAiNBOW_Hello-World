@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.inflate]
 
-// Hello World!
-// Hello World!
+# Inflate is the inverse of deflate: it turns the stream below back into
+# "Hello World!". Inflate emits no bytes of its own, so what is shown here
+# is the deflate stream it would consume.
+0000  F3 48 CD C9 C9 57 08 CF 2F CA 49 51 04 00       |.H...W../.IQ..|

@@ -4,6 +4,14 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
-# A ZIP local file header: PK\x03\x04, then version, flags,
-# method, time and date. The payload is "Hello World!".
-50 4B 03 04 0A 00 00 00 00 00
+# A real ZIP archive containing one member, hello.txt, holding
+# "Hello World!", written by zipfile.
+0000  50 4B 03 04 14 00 00 00 08 00 06 1B 51 5D A3 1C |PK..........Q]..|
+0010  29 1C 0E 00 00 00 0C 00 00 00 09 00 00 00 68 65 |).............he|
+0020  6C 6C 6F 2E 74 78 74 F3 48 CD C9 C9 57 08 CF 2F |llo.txt.H...W../|
+0030  CA 49 51 04 00 50 4B 01 02 14 00 14 00 00 00 08 |.IQ..PK.........|
+0040  00 06 1B 51 5D A3 1C 29 1C 0E 00 00 00 0C 00 00 |...Q]..)........|
+0050  00 09 00 00 00 00 00 00 00 00 00 00 00 80 01 00 |................|
+0060  00 00 00 68 65 6C 6C 6F 2E 74 78 74 50 4B 05 06 |...hello.txtPK..|
+0070  00 00 00 00 01 00 01 00 37 00 00 00 35 00 00 00 |........7...5...|
+0080  00 00                                           |..|
