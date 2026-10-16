@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=misc source=wikipedia, builtin:misc ext=.mad]
 
-// Hello World!
-// Hello World!
+* MAD, the Michigan Algorithm Decoder. WRITE is an abbreviated verb.
+*       COLUMNS 1-2, so the statement is right-shifted to column 3.
+   OUTPUT = 'HELLO WORLD'

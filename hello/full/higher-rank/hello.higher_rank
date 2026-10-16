@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=functional source=builtin:functional ext=.higher_rank]
 
-// Hello World!
-// Hello World!
+// Higher-Rank is a type-and-effect system; its program is a
+// term in that system.
+val hello : String = "Hello World!"

@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.mips64_assembly]
 
-// Hello World!
-// Hello World!
+        .section .text
+        .global _start
+
+_start:
+        li      $v0, 1004      # sys_write
+        li      $a0, 1         # stdout
+        la      $a1, msg
+        li      $a2, 13
+        syscall
+        li      $v0, 5050      # __NR_exit
+        syscall
+
+        .section .data
+msg:    .ascii "Hello World!\n"

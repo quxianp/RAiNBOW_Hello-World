@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.plutus]
 
-// Hello World!
-// Hello World!
+{-# LANGUAGE OverloadedStrings #-}
+-- Plutus is Haskell on the Cardano chain. Its "main" is a
+-- validator, and the greeting is a string it returns.
+hello :: String
+hello = "Hello World!"

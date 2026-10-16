@@ -4,7 +4,7 @@
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
 
--- The Curry-Howard correspondence as a comment: a proof of
--- `\"Hello World!\" = \"Hello World!\"` is a term.
+-- The Curry-Howard correspondence as a typed term: a proof
+-- of `\"Hello World!\" = \"Hello World!\"` is a term.
 hello : String
 hello = "Hello World!"

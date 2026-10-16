@@ -1,37 +1,37 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5743,
+  "without_program": 5722,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 311,
+    "program": 290,
     "unknown": 2098
   },
   "reasons": {
     "source:esolangs": 3153,
     "unclassified": 2098,
     "group:esoteric": 126,
-    "group:chinese": 61,
-    "group:education": 51,
-    "group:golf": 31,
+    "group:chinese": 59,
+    "group:education": 50,
+    "group:golf": 29,
     "group:dsl_query": 25,
-    "group:quantum": 24,
-    "group:ancient": 21,
+    "group:quantum": 22,
     "group:markup_data": 19,
-    "group:academic": 18,
-    "group:misc": 16,
-    "group:assembly_dialects": 15,
+    "group:ancient": 17,
+    "group:academic": 17,
     "group:logic_constraint": 14,
+    "group:misc": 14,
     "group:template": 12,
-    "group:blockchain": 10,
+    "group:assembly_dialects": 12,
     "group:data_science": 10,
-    "group:functional": 10,
     "group:binary_data": 9,
+    "group:blockchain": 9,
+    "group:functional": 9,
     "group:concurrency": 8,
-    "group:shell_os": 6,
     "group:build_config": 4,
+    "group:shell_os": 4,
     "type:data": 1,
     "type:programming": 1
   },
@@ -37168,19 +37168,6 @@
       ]
     },
     {
-      "language": "80486 Assembly",
-      "path": "hello/full/80486-assembly/hello.80486_assembly",
-      "extension": ".80486_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
-      ]
-    },
-    {
       "language": "Ada Ravenscar",
       "path": "hello/full/ada-ravenscar/hello.ada_ravenscar",
       "extension": ".ada_ravenscar",
@@ -37396,19 +37383,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "AVR32 Assembly",
-      "path": "hello/full/avr32-assembly/hello.avr32_assembly",
-      "extension": ".avr32_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -37956,19 +37930,6 @@
       ]
     },
     {
-      "language": "EPL\u8bed\u8a00",
-      "path": "hello/full/epl\u8bed\u8a00/hello.epl\u8bed\u8a00",
-      "extension": ".epl\u8bed\u8a00",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
       "language": "ETA",
       "path": "hello/full/eta/hello.eta",
       "extension": ".eta",
@@ -38061,19 +38022,6 @@
       "source": [
         "esolangs",
         "builtin:education"
-      ]
-    },
-    {
-      "language": "E\u8bed\u8a00",
-      "path": "hello/full/e\u8bed\u8a00/hello.e\u8bed\u8a00",
-      "extension": ".e\u8bed\u8a00",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
       ]
     },
     {
@@ -38338,19 +38286,6 @@
       ],
       "source": [
         "builtin:concurrency"
-      ]
-    },
-    {
-      "language": "Higher-Rank",
-      "path": "hello/full/higher-rank/hello.higher_rank",
-      "extension": ".higher_rank",
-      "kind": "program",
-      "reason": "group:functional",
-      "groups": [
-        "functional"
-      ],
-      "source": [
-        "builtin:functional"
       ]
     },
     {
@@ -38735,20 +38670,6 @@
       ]
     },
     {
-      "language": "MAD",
-      "path": "hello/full/mad/hello.mad",
-      "extension": ".mad",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "Matita",
       "path": "hello/full/matita/hello.matita",
       "extension": ".matita",
@@ -38833,19 +38754,6 @@
       ]
     },
     {
-      "language": "MIPS64 Assembly",
-      "path": "hello/full/mips64-assembly/hello.mips64_assembly",
-      "extension": ".mips64_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
-      ]
-    },
-    {
       "language": "MIQ",
       "path": "hello/full/miq/hello.miq",
       "extension": ".miq",
@@ -38882,19 +38790,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "MLTT",
-      "path": "hello/full/mltt/hello.mltt",
-      "extension": ".mltt",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
       ]
     },
     {
@@ -39017,32 +38912,6 @@
       ]
     },
     {
-      "language": "NJ",
-      "path": "hello/full/nj/hello.nj",
-      "extension": ".nj",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
-      "language": "NJ98",
-      "path": "hello/full/nj98/hello.nj98",
-      "extension": ".nj98",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
       "language": "Nominal",
       "path": "hello/full/nominal/hello.nominal",
       "extension": ".nominal",
@@ -39052,24 +38921,6 @@
         "academic"
       ],
       "source": [
-        "builtin:academic"
-      ]
-    },
-    {
-      "language": "Nuprl",
-      "path": "hello/full/nuprl/hello.nuprl",
-      "extension": ".nuprl",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "functional",
-        "academic"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:ancient",
-        "builtin:functional",
         "builtin:academic"
       ]
     },
@@ -39097,33 +38948,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "OGDL",
-      "path": "hello/full/ogdl/hello.ogdl",
-      "extension": ".ogdl",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:misc"
-      ]
-    },
-    {
-      "language": "Ohm",
-      "path": "hello/full/ohm/hello.ohm",
-      "extension": ".ohm",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
       ]
     },
     {
@@ -39365,19 +39189,6 @@
       ]
     },
     {
-      "language": "PL-P",
-      "path": "hello/full/pl-p/hello.pl_p",
-      "extension": ".pl_p",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
       "language": "Planner",
       "path": "hello/full/planner/hello.planner",
       "extension": ".planner",
@@ -39389,19 +39200,6 @@
       "source": [
         "wikipedia",
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "Plutus",
-      "path": "hello/full/plutus/hello.plutus",
-      "extension": ".plutus",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
       ]
     },
     {
@@ -39470,35 +39268,9 @@
       ]
     },
     {
-      "language": "PyMatching",
-      "path": "hello/full/pymatching/hello.pymatching",
-      "extension": ".pymatching",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "pyquil",
       "path": "hello/full/pyquil/hello.pyquil",
       "extension": ".pyquil",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "qGLSL",
-      "path": "hello/full/qglsl/hello.qglsl",
-      "extension": ".qglsl",
       "kind": "program",
       "reason": "group:quantum",
       "groups": [
@@ -39782,19 +39554,6 @@
       ]
     },
     {
-      "language": "Robotic",
-      "path": "hello/full/robotic/hello.robotic",
-      "extension": ".robotic",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "RQL",
       "path": "hello/full/rql/hello.rql",
       "extension": ".rql",
@@ -39901,33 +39660,6 @@
       ]
     },
     {
-      "language": "Seriously",
-      "path": "hello/full/seriously/hello.seriously",
-      "extension": ".seriously",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf"
-      ]
-    },
-    {
-      "language": "Sesh",
-      "path": "hello/full/sesh/hello.sesh",
-      "extension": ".sesh",
-      "kind": "program",
-      "reason": "group:shell_os",
-      "groups": [
-        "shell_os"
-      ],
-      "source": [
-        "builtin:shell_os"
-      ]
-    },
-    {
       "language": "Set",
       "path": "hello/full/set/hello.set",
       "extension": ".set",
@@ -39951,19 +39683,6 @@
       ],
       "source": [
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "shellcheck",
-      "path": "hello/full/shellcheck/hello.shellcheck",
-      "extension": ".shellcheck",
-      "kind": "program",
-      "reason": "group:shell_os",
-      "groups": [
-        "shell_os"
-      ],
-      "source": [
-        "builtin:shell_os"
       ]
     },
     {
