@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+#include <pthread.h>
+#include <stdio.h>
+
+static void *greet(void *unused) {
+    printf("Hello World!\n");
+    return NULL;
+}
+
+int main(void) {
+    pthread_t t;
+    pthread_create(&t, NULL, greet, NULL);
+    pthread_join(t, NULL);
+    return 0;
+}
