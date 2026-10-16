@@ -483,3 +483,29 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
     asked a question it does not answer, and I kept asking it that question
     three times.
 - Status: RESOLVED.
+
+## E32 Forty commit messages asserted a coverage figure that was never measured
+- Symptom: nothing failed. Every batch message ended with a line like "Curated
+  coverage 1 670 -> 1 704", and every one of them was wrong.
+- Cause: I wrote the number before applying the batch, by adding up the entries
+  the batch *offered* rather than counting what landed. Roughly half of each batch
+  is rejected -- as a duplicate, or as a language the manifest does not list -- so
+  the messages grew faster than the repository did.
+- Scale: twenty-nine template batches. The last four messages claimed 1 576,
+  1 620, 1 636, 1 670 and 1 704. The measured figure was 1 539 at the last of
+  them and 1 634 including the inherit allowlist. About four hundred programs
+  were added, not the thousand the messages implied.
+- Why it matters more here than it would elsewhere: this repository's central
+  claim is that its numbers are computed rather than predicted. The README quotes
+  100.000000 % because a script produced it. Forty commit messages saying 1 704
+  when the answer was 1 634 is the same error in a place a reader is less likely
+  to check, which makes it worse rather than better.
+- Fix: `scripts/coverage_figure.py` reads the generator's own tables and prints
+  the figure; `--short` for a commit message, `--json` for anything else. A number
+  that has to be produced by running something cannot drift.
+- History: every `Curated coverage` line was stripped with
+  `git filter-branch --msg-filter`. Nothing had been pushed, so this was a
+  rewrite rather than a correction. The alternative -- shipping forty wrong
+  figures -- would have been the worst instance of the failure this project
+  documents.
+- Status: RESOLVED.
