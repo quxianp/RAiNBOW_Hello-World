@@ -92,24 +92,31 @@ def test_no_markdown_file_contains_mojibake():
     """
     import unicodedata
 
+    # Files whose content is a list of language names legitimately contain CJK:
+    # the repository really does ship 中文C, 中文Python and their relatives. The
+    # rule is about mojibake rather than about non-ASCII, so the exemption is by
+    # file and the Cyrillic/Arabic/Hebrew/Devanagari blocks are still checked
+    # there too. Generating the language index is what made this necessary.
+    CJK_ALLOWED = {"data/LANGUAGES.md"}
+    ALWAYS = ("CYRILLIC", "ARABIC", "HEBREW", "DEVANAGARI")
+    CJK = ("CJK", "HIRAGANA", "KATAKANA", "HANGUL")
+
     bad = []
     for p in sorted(ROOT.rglob("*.md")):
         if any(part in SKIP_DIRS for part in p.parts):
             continue
+        rel = p.relative_to(ROOT).as_posix()
         text = p.read_text(encoding="utf-8", errors="replace")
-        rel = p.relative_to(ROOT)
         if "\ufffd" in text:
             bad.append(f"{rel} contains U+FFFD")
             continue
+        blocks = ALWAYS if rel in CJK_ALLOWED else ALWAYS + CJK
         for i, line in enumerate(text.splitlines(), 1):
             for ch in line:
-                code = ord(ch)
-                if code < 0x250:
+                if ord(ch) < 0x250:
                     continue
                 name = unicodedata.name(ch, "")
-                if any(k in name for k in ("CJK", "HIRAGANA", "KATAKANA",
-                                           "HANGUL", "CYRILLIC", "ARABIC",
-                                           "HEBREW", "DEVANAGARI")):
+                if any(k in name for k in blocks):
                     bad.append(f"{rel}:{i} has {name!r} where ASCII or emoji "
                                f"belongs")
                     break

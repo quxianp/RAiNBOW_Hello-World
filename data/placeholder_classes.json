@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5772,
+  "without_program": 5769,
   "counts": {
     "binary": 9,
     "document": 47,
     "esolang": 3279,
-    "program": 339,
+    "program": 336,
     "unknown": 2098
   },
   "reasons": {
@@ -16,13 +16,13 @@
     "group:chinese": 61,
     "group:education": 55,
     "group:golf": 38,
-    "group:dsl_query": 28,
+    "group:dsl_query": 27,
     "group:quantum": 26,
     "group:ancient": 22,
     "group:academic": 19,
     "group:markup_data": 19,
     "group:misc": 19,
-    "group:assembly_dialects": 18,
+    "group:assembly_dialects": 16,
     "group:logic_constraint": 15,
     "group:blockchain": 12,
     "group:template": 12,
@@ -37317,19 +37317,6 @@
       ]
     },
     {
-      "language": "Alpha Assembly",
-      "path": "hello/full/alpha-assembly/hello.alpha_assembly",
-      "extension": ".alpha_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
-      ]
-    },
-    {
       "language": "Anchor",
       "path": "hello/full/anchor/hello.anchor",
       "extension": ".anchor",
@@ -37700,20 +37687,6 @@
       "source": [
         "builtin:ancient",
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "Cedar",
-      "path": "hello/full/cedar/hello.cedar",
-      "extension": ".cedar",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:dsl_query"
       ]
     },
     {
@@ -40391,19 +40364,6 @@
       ],
       "source": [
         "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "SREC",
-      "path": "hello/full/srec/hello.srec",
-      "extension": ".srec",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
