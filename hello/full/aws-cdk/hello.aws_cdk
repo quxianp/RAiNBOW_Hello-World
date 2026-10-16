@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=build_config source=builtin:build_config ext=.aws_cdk]
 
-// Hello World!
-// Hello World!
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+
+export class HelloStack extends cdk.Stack {
+  constructor(scope: Construct, id: string) {
+    super(scope, id);
+    // Hello World!
+  }
+}

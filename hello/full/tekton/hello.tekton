@@ -3,7 +3,16 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=build_config source=builtin:build_config ext=.tekton]
 
-// Hello World!
-// Hello World!
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: hello
+spec:
+  tasks:
+    - name: greet
+      taskSpec:
+        steps:
+          - name: run
+            image: alpine
+            script: echo "Hello World!"

@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=build_config source=builtin:build_config ext=.buildroot]
 
-// Hello World!
-// Hello World!
+# Buildroot package for Hello World!
+HELLO_VERSION = 1.0
+HELLO_LICENSE = MIT
+define HELLO_INSTALL_TARGET_CMDS
+    $(TARGET_DIR)/usr/bin/hello
+endef

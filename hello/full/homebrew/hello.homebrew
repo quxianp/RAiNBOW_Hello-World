@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=build_config source=builtin:build_config ext=.homebrew]
 
-// Hello World!
-// Hello World!
+class Hello < Formula
+  desc "Hello World!"
+  homepage "https://github.com/quxianp/RAiNBOW_Hello-World"
+  url "https://example.com/hello-1.0.tar.gz"
+  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+
+  def install
+    bin.install "hello"
+  end
+end
