@@ -3,7 +3,6 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.viper]
 
-// Hello World!
-// Hello World!
+// Viper config, HCL syntax. There is no program; there is a setting.
+greeting = "Hello World!"

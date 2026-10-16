@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.univac_1103]
 
-// Hello World!
-// Hello World!
+* UNIVAC 1103 Fortran. The control column is the seventh;
+* columns 1-6 are the statement number.
+      PROGRAM HELLO
+      WRITE(6,10)
+10    FORMAT(1X,'HELLO WORLD')
+      END

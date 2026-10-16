@@ -3,7 +3,6 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=builtin:golf ext=.w]
 
-// Hello World!
-// Hello World!
+# A W program, which is R with a W prefix.
+print("Hello World!")
