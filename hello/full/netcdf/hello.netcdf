@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.netcdf]
 
-// Hello World!
-// Hello World!
+// The CDL text form of a netCDF file. netCDF proper is a binary
+// container; CDL is the human-readable version of the same thing.
+netcdf hello {
+  dimensions:
+    greeting = 1 ;
+  variables:
+    string greeting(greeting) ;
+  data:
+    greeting = "Hello World!" ;
+}

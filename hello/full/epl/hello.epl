@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=esolangs, builtin:chinese ext=.epl]
 
-// Hello World!
-// Hello World!
+// EPL is an event-processing language; a handler reacts to a pattern.
+handle message
+  when m.body matches "Hello World!" -> post reply
