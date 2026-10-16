@@ -105,7 +105,7 @@ def apply_one(name: str, dry_run: bool) -> str:
         tail = [l for l in out if l.strip()][-1:]
         return f"{header} -> FAILED: {tail[0] if tail else ''}"
 
-    sh("add", "-A", "scripts", "hello", "logs")
+    sh("add", "-A", "scripts", "hello", "logs", "data")
     staged = sh("diff", "--cached", "--name-only").stdout.split()
     if not staged:
         return f"{name}: nothing staged, skipping"

@@ -240,6 +240,17 @@ def main() -> int:
     if run("scripts/balance_bytes.py") != 0:
         print("  balancing failed", file=sys.stderr)
         return 1
+
+    # Adding a program invalidates the two generated files, and
+    # tests/test_generated_files.py fails when they are stale. Refreshing them
+    # here is the difference between a batch that commits and one that cannot --
+    # the test is right, and the tool is what made it stale.
+    print("refreshing generated files:")
+    for script in ("scripts/classify_placeholders.py", "scripts/language_table.py"):
+        if run(script) != 0:
+            print(f"  {script} failed", file=sys.stderr)
+            return 1
+
     print("template guard:")
     if run("scripts/check_templates.py") != 0:
         print("  template guard failed", file=sys.stderr)
@@ -250,7 +261,8 @@ def main() -> int:
             print("  tests failed", file=sys.stderr)
             return 1
 
-    print(f"\nadded {added} program(s); stage scripts/generate_all_hello.py and hello/")
+    print(f"\nadded {added} program(s); stage scripts/generate_all_hello.py, "
+          f"hello/, data/ and logs/")
     return 0
 
 
