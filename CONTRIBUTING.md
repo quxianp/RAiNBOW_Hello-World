@@ -45,38 +45,75 @@ flags.
 
 ## Adding a Hello World template
 
-Most languages still have a placeholder. A placeholder is honest — it says so in
-the file's own header — but a real program is better, and the bar is long.
+The backlog is **336 files**, not 5 745. `scripts/classify_placeholders.py` sorts
+every program-less file into one of five kinds, and only the first is unfinished
+work:
+
+| kind | files | what belongs there |
+|---|---:|---|
+| `program` | 336 | a real program. This is the whole backlog. |
+| `esolang` | 3 279 | an admission that no canonical program exists |
+| `unknown` | 2 098 | an admission that the entry is an index, not a language |
+| `document` | 47 | a real document whose content is the greeting |
+| `binary` | 9 | the format's magic number, and where the greeting would go |
+
+Run `python scripts/classify_placeholders.py` to see the current numbers, and
+`python scripts/language_table.py` for a browsable index of all 7 326 files.
+
+### Do not edit the dictionary by hand
 
 Templates live in the `HELLO` dict in `scripts/generate_all_hello.py`, keyed by
-lowercased language name.
+lowercased language name. It has about 1 500 entries and editing it with a text
+editor is how `HELLO["coff"] = ""` came to count as a template while generating a
+file that was a banner followed by nothing.
 
-Three rules, all learned the hard way:
-
-1. **Write it for that language.** The first matcher inherited templates on the
-   first word of the name or the file extension, which gave JASS a shell `echo`
-   and `Go Module` an entire Go program. 34 of its 156 matches were wrong, and
-   every one looked plausible enough to ship.
-2. **Dialect inheritance goes in `INHERIT`,** the explicit allowlist below
-   `HELLO`. Nothing infers it. If a language has no output primitive, give it
-   what the language actually has — Spin `printf`, a JASS trigger function —
-   rather than borrowing an `echo`.
-3. **Declaration formats have no program body, and that is fine.** A
-   `.properties` file is `hello=Hello World!`, a `.cabal` file is `name: rainbow`.
-   Those are correct answers, not gaps.
-
-Then:
+Use the tool instead. A batch is a JSON object of `{language: program}`:
 
 ```bash
-python scripts/generate_all_hello.py
-python scripts/balance_bytes.py
-python scripts/check_templates.py        # must stay clean
-python scripts/audit_repo.py
+python scripts/add_templates.py --from batch.json --dry-run   # validate only
+python scripts/add_templates.py --from batch.json             # add, regenerate, test
+python scripts/add_templates.py --from batch.json --replace   # correct an existing one
 ```
 
-`check_templates.py` enforces the rules: the manifest's `real_template` flag must
-agree with `program_for()`, known-bad inherits must stay honest, and no heuristic
-may have crept back into the matcher.
+It refuses, with a reason, anything that is:
+
+- **not in the manifest** — a program for a language this repository does not ship
+  is a program nobody can check;
+- **blank** — the `coff` defect, by name;
+- **never saying "Hello World"** — unless the extension is a declaration form,
+  where the fields *are* the answer.
+
+Then it regenerates, rebalances the bytes, runs the template guard and runs the
+tests, so a batch that would break an invariant fails on your machine rather than
+in CI.
+
+### Four rules for what goes in
+
+1. **Write it for that language.** The first matcher inherited on the first word
+   of the name or on the extension, which gave JASS a shell `echo` and `Go Module`
+   an entire Go program. 34 of its 156 matches were wrong and every one looked
+   plausible enough to ship.
+2. **Dialect inheritance goes in `INHERIT`,** the explicit allowlist. Nothing
+   infers it. If a language has no output primitive, give it what it actually
+
+   has -- Spin `printf`, a JASS trigger function, a model checker's `INVARSPEC`.
+3. **Declaration formats have no program body, and that is fine.** A `.properties`
+   file is `hello=Hello World!`, a `go.mod` declares a module, a Maven POM has a
+   `<name>`. Those are correct answers, not gaps, and
+   `tests/test_declaration_forms.py` guards them.
+4. **Compute anything you can.** Every archive and hex dump in `hello/full/` was
+   written by the library that defines the format, and
+   `scripts/verify_encodings.py` decodes them all back. A checksum recalled from
+   memory is wrong in one byte and reads as correct.
+
+### The bit people get wrong
+
+The tool rejects a good file. It did three times today, and was right every time:
+a Cedar policy that said `action == "Hello"`, a Hughes comment that explained the
+opcode without writing the hex, a Rigetti comment that described the trick
+without showing it. All three were correct answers to a slightly different
+question, and a file that is a good answer to a different question is not a Hello
+World. Read the rejection rather than working around it.
 
 ## Adding a language
 
