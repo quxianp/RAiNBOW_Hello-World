@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.spir_v]
 
-// Hello World!
-// Hello World!
+; SPIR-V is a binary module. Its header is the magic word
+; 0x07230203, little-endian, followed by version and generator.
+; The Hello World! module below has no entry point.
+; 07230203 00010000 00080001

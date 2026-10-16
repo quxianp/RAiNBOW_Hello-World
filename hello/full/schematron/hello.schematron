@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.schematron]
 
-// Hello World!
-// Hello World!
+<?xml version="1.0"?>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron">
+  <pattern id="greeting">
+    <rule context="greeting">
+      <assert test="text()='Hello World!'">Hello World!</assert>
+    </rule>
+  </pattern>
+</schema>

@@ -3,7 +3,6 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=template source=builtin:template ext=.quill]
 
-// Hello World!
-// Hello World!
+// Quill is a rich-text editor; its model is deltas.
+const delta = new Delta().insert("Hello World!");

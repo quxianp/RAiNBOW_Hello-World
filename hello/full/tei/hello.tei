@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data, dsl_query source=builtin:markup_data, builtin:dsl_query ext=.tei]
 
-// Hello World!
-// Hello World!
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader><fileDesc><titleStmt><title>Hello World!</title></titleStmt></fileDesc></teiHeader>
+  <text><p>Hello World!</p></text>
+</TEI>

@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1416,
+ "with_curated_template": 1449,
  "runnable_command_count": 51,
  "files": [
   {
@@ -11104,7 +11104,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Alpha Assembly",
@@ -12985,7 +12985,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "AsciiDots",
@@ -15416,7 +15416,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BibTeX Style",
@@ -16703,7 +16703,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bootstrapping",
@@ -21972,7 +21972,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Community",
@@ -26339,7 +26339,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "DL",
@@ -26735,7 +26735,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "dotcomma",
@@ -36701,7 +36701,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Herbert A. Simon",
@@ -37493,7 +37493,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTML5",
@@ -37515,7 +37515,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "HTSQL",
@@ -41002,7 +41002,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JIT",
@@ -41519,7 +41519,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "JumpFuck",
@@ -43081,7 +43081,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Larch family",
@@ -46139,7 +46139,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Marketplace",
@@ -53795,7 +53795,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Organic computing",
@@ -56292,7 +56292,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Plan 9 Assembly",
@@ -58184,7 +58184,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PromQL",
@@ -58305,7 +58305,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PROTEL",
@@ -59031,7 +59031,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PyRTL",
@@ -59845,7 +59845,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Quilt",
@@ -61429,7 +61429,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "reMorse",
@@ -63992,7 +63992,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Scheme Guile",
@@ -66225,7 +66225,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Sizeof",
@@ -67875,7 +67875,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Spiral",
@@ -70581,7 +70581,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Symmetric Echo Tag",
@@ -70999,7 +70999,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Take Command",
@@ -71483,7 +71483,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TEI P5",
@@ -71494,7 +71494,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TEIJFOP",
@@ -72044,7 +72044,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "textual",
@@ -72748,7 +72748,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TISolang",
@@ -74398,7 +74398,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Twimp",
@@ -77742,7 +77742,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "WebGPU",
@@ -79282,7 +79282,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "XPath",

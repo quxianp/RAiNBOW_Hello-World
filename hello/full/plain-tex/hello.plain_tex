@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.plain_tex]
 
-// Hello World!
-// Hello World!
+\documentclass{article}
+\begin{document}
+Hello World!
+\end{document}

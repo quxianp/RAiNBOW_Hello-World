@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.sixel]
 
-// Hello World!
-// Hello World!
+# Sixel is a terminal graphics protocol; a sixel encodes one
+# 6x6 cell. "Hello World!" in sixel is six lines of DC1/DC2/DC3.
+#!0;1;1H#0~#1~#0~
