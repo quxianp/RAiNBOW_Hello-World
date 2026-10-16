@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+// CosmWasm contracts are Rust compiled to wasm.
+use cosmwasm_std::{entry_point, Deps, Env, Response, StdResult};
+
+#[entry_point]
+pub fn greet(_deps: Deps, _env: Env) -> StdResult<Response> {
+    Ok(Response::new().add_attribute("greeting", "Hello World!"))
+}
