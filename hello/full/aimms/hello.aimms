@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=data_science source=wikipedia, builtin:data_science ext=.aimms]
 
-// Hello World!
-// Hello World!
+MAINMODEL HelloWorld / DEFINITIONS /;
+  DECLARE TextScalar greeting;
+  SET greeting TO 'Hello World!';
+END DEFINITIONS;
+END HelloWorld;

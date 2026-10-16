@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=data_science source=builtin:data_science ext=.cplex]
 
-// Hello World!
-// Hello World!
+import docplex.mp.model as mdl
+
+m = mdl.Model(name="hello")
+print("Hello World!")

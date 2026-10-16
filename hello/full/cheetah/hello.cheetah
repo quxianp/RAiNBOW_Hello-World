@@ -3,7 +3,6 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=template source=builtin:template ext=.cheetah]
 
-// Hello World!
-// Hello World!
+# Cheetah template
+Hello World!
