@@ -3,7 +3,19 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        .section .text
+        .global _start
+
+_start:
+        li   a0, 1            # stdout
+        la   a1, msg
+        li   a2, 12
+        li   a7, 64           # write
+        ecall
+        li   a0, 0
+        li   a7, 93           # exit
+        ecall
+
+        .section .rodata
+msg:    .ascii "Hello World!"

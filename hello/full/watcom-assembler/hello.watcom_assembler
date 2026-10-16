@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; Open Watcom assembler, 32-bit flat
+        .386
+        .model flat, stdcall
+        .data
+msg     db 'Hello World!', 0
+        .code
+start:  mov     eax, 4d00h       ; WriteConsole
+        mov     ebx, -11          ; stdout handle
+        mov     ecx, offset msg
+        mov     edx, 12
+        call    WriteConsoleA
+        mov     eax, 4c000h       ; ExitProcess
+        xor     ebx, ebx
+        call    ExitProcess

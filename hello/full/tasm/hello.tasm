@@ -3,7 +3,18 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : No curated Hello World for this language yet: the closest equivalent is used. See the linked interpreter/rosetta entries.
 
-// Hello World!
-// Hello World!
+        ; turbo assembler, 16-bit DOS
+        .model small
+        .stack 100h
+        .data
+msg     db 'Hello World!$'
+        .code
+start:  mov ax, @data
+        mov ds, ax
+        mov dx, offset msg
+        mov ah, 9
+        int 21h
+        mov ax, 4C00h
+        int 21h
+        end start
