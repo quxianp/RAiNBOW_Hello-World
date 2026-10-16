@@ -38,10 +38,22 @@ GEN = ROOT / "scripts" / "generate_all_hello.py"
 
 # Formats with no program body: the declaration IS the content. Listed by
 # extension, because that is what the generator has to decide on.
+#
+# Extended when the document-kind bucket was worked through: a Maven POM, a
+# webpack config and a CircleCI file were all being rejected for not containing
+# the string "Hello World", which is the wrong question to ask of a file whose
+# whole purpose is to declare something about a project.
 DECLARATION_FORMS = {
     ".properties", ".cabal", ".mod", ".work", ".sum", ".gohtml", ".dhall",
-    ".json", ".json5", ".yaml", ".yml", ".toml", ".ini", ".cfg", ".conf",
-    ".editorconfig", ".gitattributes", ".gitignore", ".env", ".csv", ".tsv",
+    ".json", ".json5", ".json6", ".yaml", ".yml", ".toml", ".ini", ".cfg",
+    ".conf", ".editorconfig", ".gitattributes", ".gitignore", ".env",
+    ".csv", ".tsv", ".xml", ".plist", ".maven", ".webpack", ".vite",
+    ".babel", ".eslint", ".prettier", ".npm", ".yarn", ".pnpm", ".bundler",
+    ".homebrew", ".helm", ".libtool", ".automake", ".buildroot", ".buck2",
+    ".gitlab_ci", ".gitlab-ci", ".tekton", ".nexus", ".chocolatey",
+    ".terraform_cdk", ".aws_cdk", ".rollup", ".nix", ".dockerfile",
+    ".podfile", ".gemfile", ".cpanfile", ".composer", ".csproj", ".sln",
+    ".gradle", ".bazel", ".buck", ".justfile", ".make", ".mk",
 }
 
 
