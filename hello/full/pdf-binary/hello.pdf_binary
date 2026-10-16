@@ -3,7 +3,43 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.pdf_binary]
 
-// Hello World!
-// Hello World!
+# A real, structurally valid one-page PDF whose content stream draws
+# "Hello World!" with Helvetica. Written by hand so the offsets agree.
+0000  25 50 44 46 2D 31 2E 37 0A 31 20 30 20 6F 62 6A |%PDF-1.7.1 0 obj|
+0010  0A 3C 3C 20 2F 54 79 70 65 20 2F 43 61 74 61 6C |.<< /Type /Catal|
+0020  6F 67 20 2F 50 61 67 65 73 20 32 20 30 20 52 20 |og /Pages 2 0 R |
+0030  3E 3E 0A 65 6E 64 6F 62 6A 0A 32 20 30 20 6F 62 |>>.endobj.2 0 ob|
+0040  6A 0A 3C 3C 20 2F 54 79 70 65 20 2F 50 61 67 65 |j.<< /Type /Page|
+0050  73 20 2F 4B 69 64 73 20 5B 33 20 30 20 52 5D 20 |s /Kids [3 0 R] |
+0060  2F 43 6F 75 6E 74 20 31 20 3E 3E 0A 65 6E 64 6F |/Count 1 >>.endo|
+0070  62 6A 0A 33 20 30 20 6F 62 6A 0A 3C 3C 20 2F 54 |bj.3 0 obj.<< /T|
+0080  79 70 65 20 2F 50 61 67 65 20 2F 50 61 72 65 6E |ype /Page /Paren|
+0090  74 20 32 20 30 20 52 20 2F 4D 65 64 69 61 42 6F |t 2 0 R /MediaBo|
+00A0  78 20 5B 30 20 30 20 32 30 30 20 36 30 5D 20 2F |x [0 0 200 60] /|
+00B0  43 6F 6E 74 65 6E 74 73 20 34 20 30 20 52 20 2F |Contents 4 0 R /|
+00C0  52 65 73 6F 75 72 63 65 73 20 3C 3C 20 2F 46 6F |Resources << /Fo|
+00D0  6E 74 20 3C 3C 20 2F 46 31 20 35 20 30 20 52 20 |nt << /F1 5 0 R |
+00E0  3E 3E 20 3E 3E 20 3E 3E 0A 65 6E 64 6F 62 6A 0A |>> >> >>.endobj.|
+00F0  34 20 30 20 6F 62 6A 0A 3C 3C 20 2F 4C 65 6E 67 |4 0 obj.<< /Leng|
+0100  74 68 20 34 32 20 3E 3E 0A 73 74 72 65 61 6D 0A |th 42 >>.stream.|
+0110  42 54 20 2F 46 31 20 31 38 20 54 66 20 32 30 20 |BT /F1 18 Tf 20 |
+0120  33 30 20 54 64 20 28 48 65 6C 6C 6F 20 57 6F 72 |30 Td (Hello Wor|
+0130  6C 64 21 29 20 54 6A 20 45 54 0A 65 6E 64 73 74 |ld!) Tj ET.endst|
+0140  72 65 61 6D 0A 65 6E 64 6F 62 6A 0A 35 20 30 20 |ream.endobj.5 0 |
+0150  6F 62 6A 0A 3C 3C 20 2F 54 79 70 65 20 2F 46 6F |obj.<< /Type /Fo|
+0160  6E 74 20 2F 53 75 62 74 79 70 65 20 2F 54 79 70 |nt /Subtype /Typ|
+0170  65 31 20 2F 42 61 73 65 46 6F 6E 74 20 2F 48 65 |e1 /BaseFont /He|
+0180  6C 76 65 74 69 63 61 20 3E 3E 0A 65 6E 64 6F 62 |lvetica >>.endob|
+0190  6A 0A 78 72 65 66 0A 30 20 36 0A 30 30 30 30 30 |j.xref.0 6.00000|
+01A0  30 30 30 30 30 20 36 35 35 33 35 20 66 20 0A 30 |00000 65535 f .0|
+01B0  30 30 30 30 30 30 30 30 39 20 30 30 30 30 30 20 |000000009 00000 |
+01C0  6E 20 0A 30 30 30 30 30 30 30 30 35 38 20 30 30 |n .0000000058 00|
+01D0  30 30 30 20 6E 20 0A 30 30 30 30 30 30 30 31 31 |000 n .000000011|
+01E0  35 20 30 30 30 30 30 20 6E 20 0A 30 30 30 30 30 |5 00000 n .00000|
+01F0  30 30 32 34 30 20 30 30 30 30 30 20 6E 20 0A 30 |00240 00000 n .0|
+0200  30 30 30 30 30 30 33 33 32 20 30 30 30 30 30 20 |000000332 00000 |
+0210  6E 20 0A 74 72 61 69 6C 65 72 0A 3C 3C 20 2F 53 |n .trailer.<< /S|
+0220  69 7A 65 20 36 20 2F 52 6F 6F 74 20 31 20 30 20 |ize 6 /Root 1 0 |
+0230  52 20 3E 3E 0A 73 74 61 72 74 78 72 65 66 0A 34 |R >>.startxref.4|
+0240  30 32 0A 25 25 45 4F 46 0A                      |02.%%EOF.|

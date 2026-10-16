@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.xz_binary]
 
-// Hello World!
-// Hello World!
+# A real .xz stream of "Hello World!", written by lzma.compress.
+# It begins FD 37 7A 58 5A 00.
+0000  FD 37 7A 58 5A 00 00 04 E6 D6 B4 46 02 00 21 01 |.7zXZ......F..!.|
+0010  16 00 00 00 74 2F E5 A3 01 00 0B 48 65 6C 6C 6F |....t/.....Hello|
+0020  20 57 6F 72 6C 64 21 00 E2 6F EA C9 45 52 04 75 | World!..o..ER.u|
+0030  00 01 24 0C A6 18 D8 D8 1F B6 F3 7D 01 00 00 00 |..$........}....|
+0040  00 04 59 5A                                     |..YZ|

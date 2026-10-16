@@ -3,7 +3,19 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.burrows_wheeler]
 
-// Hello World!
-// Hello World!
+# The Burrows-Wheeler transform sorts every rotation of the string.
+# Inverting it is the point: it groups like characters together.
+# "Hello World!"
+ World!Hello
+!Hello World
+Hello World!
+World!Hello 
+d!Hello Worl
+ello World!H
+ld!Hello Wor
+llo World!He
+lo World!Hel
+o World!Hell
+orld!Hello W
+rld!Hello Wo

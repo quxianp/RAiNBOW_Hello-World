@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.bzip2_binary]
 
-// Hello World!
-// Hello World!
+# A real bzip2 stream of "Hello World!", written by bz2.compress.
+# It begins BZh, then the block size digit 9.
+0000  42 5A 68 39 31 41 59 26 53 59 6B 1A 7C AE 00 00 |BZh91AY&SYk.|...|
+0010  01 17 80 60 00 00 40 00 80 06 04 90 00 20 00 22 |...`..@...... ."|
+0020  06 9A 3D 42 0C 98 8E 69 73 05 01 E2 EE 48 A7 0A |..=B...is....H..|
+0030  12 0D 63 4F 95 C0                               |..cO..|

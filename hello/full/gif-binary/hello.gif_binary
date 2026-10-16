@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.gif_binary]
 
-// Hello World!
-// Hello World!
+# A real 1x1 GIF89a whose comment extension carries "Hello World!".
+# 21 FE is the comment extension introducer; 3B is the trailer.
+0000  47 49 46 38 39 61 01 00 01 00 F0 00 00 00 00 00 |GIF89a..........|
+0010  FF FF FF 21 FE 0C 00 48 65 6C 6C 6F 20 57 6F 72 |...!...Hello Wor|
+0020  6C 64 21 00 3B                                  |ld!.;|

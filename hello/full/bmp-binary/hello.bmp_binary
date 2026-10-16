@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.bmp_binary]
 
-// Hello World!
-// Hello World!
+# A real uncompressed 24-bit BMP whose pixel data is "Hello World!".
+# The pixel array is padded to a 4-byte boundary, hence the trailing 00.
+0000  42 4D 46 00 00 00 00 00 00 00 42 00 00 00 28 00 |BMF.......B...(.|
+0010  00 00 01 00 00 00 01 00 00 00 00 00 18 00 00 00 |................|
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|
+0030  00 00 00 00 00 00 48 65 6C 6C 6F 20 57 6F 72 6C |......Hello Worl|
+0040  64 21                                           |d!|

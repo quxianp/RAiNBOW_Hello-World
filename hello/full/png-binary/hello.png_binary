@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.png_binary]
 
-// Hello World!
-// Hello World!
+# A real 1x1 PNG whose tEXt chunk carries "Hello World!", written
+# with zlib for the IDAT. Every chunk is length, tag, data, CRC32.
+0000  89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 |.PNG........IHDR|
+0010  00 00 00 01 00 00 00 01 08 00 00 00 00 3A 7E 9B |.............:~.|
+0020  55 00 00 00 14 74 45 58 74 43 6F 6D 6D 65 6E 74 |U....tEXtComment|
+0030  00 48 65 6C 6C 6F 20 57 6F 72 6C 64 21 AC 9E B5 |.Hello World!...|
+0040  1E 00 00 00 0A 49 44 41 54 78 9C 63 60 00 00 00 |.....IDATx.c`...|
+0050  02 00 01 48 AF A4 71 00 00 00 00 49 45 4E 44 AE |...H..q....IEND.|
+0060  42 60 82                                        |B`.|

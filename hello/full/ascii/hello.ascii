@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.ascii]
 
-// Hello World!
-// Hello World!
+# ASCII is not really a binary format: it is the one every other
+# encoding on the previous page is measured against. "Hello World!"
+# is 12 bytes, all below 0x80, all printable.
+0000  48 65 6C 6C 6F 20 57 6F 72 6C 64 21             |Hello World!|

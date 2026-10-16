@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1323,
+ "with_curated_template": 1341,
  "runnable_command_count": 51,
  "files": [
   {
@@ -12952,7 +12952,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "ASCII Code",
@@ -12974,7 +12974,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Asciidoctor",
@@ -14448,7 +14448,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Base62",
@@ -14459,7 +14459,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Base64",
@@ -14481,7 +14481,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Base95",
@@ -14492,7 +14492,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Bash Shell",
@@ -16472,7 +16472,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "BnF data",
@@ -18496,7 +18496,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Business",
@@ -18694,7 +18694,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "C alternative tokens",
@@ -25151,7 +25151,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Defold",
@@ -34314,7 +34314,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "GIFt",
@@ -35766,7 +35766,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Haberman",
@@ -45347,7 +45347,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "LZX",
@@ -55049,7 +55049,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PDF downloads",
@@ -56600,7 +56600,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PNID",
@@ -66984,7 +66984,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SNES Assembly",
@@ -71164,7 +71164,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "TardiSHA",
@@ -79524,7 +79524,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Y-sharp",

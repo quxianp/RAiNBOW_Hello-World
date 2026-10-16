@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.ascii85]
 
-// Hello World!
-// Hello World!
+# Ascii85 of "Hello World!", as produced by base64.a85encode.
+# Unlike base85 it is line-oriented and uses no group separator.
+87cURD]i,"Ebo80
