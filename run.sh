@@ -393,13 +393,22 @@ if [ "${FORCE_HOLD:-0}" = "1" ] || { [ "$HOLD_SECONDS" -gt 0 ] && [ -t 1 ]; }; t
   # wherever it runs, and `--sweep-offset` rotates the phase each cycle so no two
   # passes look the same. 40 frames at 0.045 s is ~1.8 s per cycle, which leaves
   # the recorder something different to sample in every frame it takes.
+  # Start a new sweep only if it will finish inside the deadline. One sweep is 40
+  # frames at 0.045 s plus interpreter start-up, so the loop can otherwise
+  # overshoot by a full sweep -- which is what happened: the greeting drawn
+  # afterwards landed after the recorder had stopped, and the take still ended on
+  # an empty screen. A deadline that is checked before the work, not after it,
+  # is the whole difference.
+  sweep_frames=40
+  sweep_seconds=$((sweep_frames * 45 / 1000 + 1))
   deadline=$((SECONDS + HOLD_SECONDS))
   cycle=0
-  while [ "$SECONDS" -lt "$deadline" ]; do
+  while [ $((SECONDS + sweep_seconds)) -lt "$deadline" ]; do
     cycle=$((cycle + 1))
     offset=$(awk -v n="$cycle" 'BEGIN { printf "%.3f", (n * 0.37) % 1.0 }')
-    "$PY" scripts/rainbow.py --sweep 40 --sweep-only --force-animation \
-      --sweep-offset "$offset" --width "$SHOW_WIDTH" 2>/dev/null || break
+    "$PY" scripts/rainbow.py --sweep "$sweep_frames" --sweep-only \
+      --force-animation --sweep-offset "$offset" --width "$SHOW_WIDTH" \
+      2>/dev/null || break
   done
 
   # Each sweep clears the screen as it runs and restores the cursor on the way
