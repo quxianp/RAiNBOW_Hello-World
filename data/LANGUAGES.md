@@ -9,14 +9,14 @@ repository but four, and only one of them is unfinished work.
 
 | section | files |
 |---|---:|
-| Carrying a program | 1,893 |
+| Carrying a program | 1,894 |
 | Esoteric languages with no canonical Hello World | 3,279 |
-| Documents and data formats, where the content is the answer | 47 |
+| Documents and data formats, where the content is the answer | 46 |
 | Binary formats: a magic number and where the greeting would go | 9 |
 | Index entries that are not languages | 2,098 |
 | **total** | **7,326** |
 
-## Carrying a program (1,893)
+## Carrying a program (1,894)
 
 | language | extension | file |
 |---|---|---|
@@ -689,6 +689,7 @@ repository but four, and only one of them is unfinished work.
 | HBVM | `.hbvm` | `hello/full/hbvm/hello.hbvm` |
 | HolyC | `.hc` | `hello/core/holyc/hello.hc` |
 | HCL | `.hcl` | `hello/core/hcl/hello.hcl` |
+| HCL2 | `.hcl2` | `hello/full/hcl2/hello.hcl2` |
 | Helpfile | `.helpfile` | `hello/full/helpfile/hello.helpfile` |
 | Hex dump | `.hex_dump` | `hello/full/hex-dump/hello.hex_dump` |
 | Hexadecimal | `.hexadecimal` | `hello/full/hexadecimal/hello.hexadecimal` |
@@ -5198,7 +5199,7 @@ repository but four, and only one of them is unfinished work.
 | Zyzzogeton | `.zyzzogeton` | `hello/full/zyzzogeton/hello.zyzzogeton` |
 | ZZZ | `.zzz` | `hello/full/zzz/hello.zzz` |
 
-## Documents and data formats, where the content is the answer (47)
+## Documents and data formats, where the content is the answer (46)
 
 | language | extension | file |
 |---|---|---|
@@ -5217,7 +5218,6 @@ repository but four, and only one of them is unfinished work.
 | GIF | `.gif` | `hello/full/gif/hello.gif` |
 | Go Modules | `.go_modules` | `hello/full/go-modules/hello.go_modules` |
 | Gretl | `.gretl` | `hello/full/gretl/hello.gretl` |
-| HCL2 | `.hcl2` | `hello/full/hcl2/hello.hcl2` |
 | HEIF | `.heif` | `hello/full/heif/hello.heif` |
 | Helm | `.helm` | `hello/full/helm/hello.helm` |
 | HLJS | `.hljs` | `hello/full/hljs/hello.hljs` |

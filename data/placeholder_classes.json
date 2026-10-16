@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5745,
+  "without_program": 5743,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 313,
+    "program": 311,
     "unknown": 2098
   },
   "reasons": {
@@ -17,7 +17,7 @@
     "group:education": 51,
     "group:golf": 31,
     "group:dsl_query": 25,
-    "group:quantum": 25,
+    "group:quantum": 24,
     "group:ancient": 21,
     "group:markup_data": 19,
     "group:academic": 18,
@@ -25,7 +25,7 @@
     "group:assembly_dialects": 15,
     "group:logic_constraint": 14,
     "group:template": 12,
-    "group:blockchain": 11,
+    "group:blockchain": 10,
     "group:data_science": 10,
     "group:functional": 10,
     "group:binary_data": 9,
@@ -38380,19 +38380,6 @@
       ]
     },
     {
-      "language": "Huff",
-      "path": "hello/full/huff/hello.huff",
-      "extension": ".huff",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
-      ]
-    },
-    {
       "language": "IBM 5100",
       "path": "hello/full/ibm-5100/hello.ibm_5100",
       "extension": ".ibm_5100",
@@ -39779,19 +39766,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "Rigetti",
-      "path": "hello/full/rigetti/hello.rigetti",
-      "extension": ".rigetti",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
       ]
     },
     {
