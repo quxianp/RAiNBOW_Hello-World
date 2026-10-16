@@ -10,6 +10,8 @@
     CODE_OF_CONDUCT.md       expectations for participants
     SECURITY.md              what in this repository is inert data
     docs/ARCHITECTURE.md     how the bar is controlled by byte count
+    docs/HOW-FILES-GET-THEIR-CONTENT.md  the five kinds of hello/ file, and how
+                                         to add a program to one
     docs/WHY-631-NOT-694.md  why 694 files produce 631 segments
     docs/FAQ.md              the questions that actually get asked
     logs/ERRORS.log          the defect ledger, E1-E29
