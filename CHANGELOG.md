@@ -5,6 +5,69 @@ All notable changes to RAiNBOW_Hello-World are recorded here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-10-17
+
+The day the demo stopped lying. The GIF had been frozen for 22 of its 33 seconds
+for several commits, and every signal the build had said it was fine: the
+recording succeeded, the encoder succeeded, the file was a plausible four
+megabytes, the run log ended with `run.sh done`.
+
+It was frozen because `run.sh` was crashing at line 279. `measure_motion.py`
+reported "367 of 418 transitions frozen" and could not say why -- coverage tells
+you that nothing changed, and only a picture tells you that something changed
+into an error message. Three commits were spent shortening a sleep before anyone
+extracted a frame and read it.
+
+### Added
+- **A gate that refuses to publish a demo which does not move.**
+  `scripts/check_demo_motion.py` runs after the recording and before the assets
+  are committed, so a static take never reaches `main`. Two independent checks:
+  frozen transitions at or below 50 % (the same boundary `measure_motion.py`
+  already calls "monotonous") and mean coverage at or above 3 % to catch drift.
+  A missing GIF exits 0, so a VHS CDN outage still cannot block the pipeline.
+- **`scripts/inspect_frames.py`** -- a contact sheet of frames across the
+  runtime. This is the tool that found the crash: nine tiles in one image showed
+  the error text mid-frame, a blank screen at 14.9 s, and a blank final screen,
+  none of which any statistic had objected to.
+- **`scripts/classify_placeholders.py`** and `data/placeholder_classes.json`,
+  which sort every program-less file into one of five kinds that need five
+  different answers, and every file now says which one it is.
+- **`scripts/add_templates.py`**, which adds a batch of programs safely and
+  refuses a blank one, a duplicate, a language this repository does not ship, and
+  anything that never says "Hello World" -- unless its extension is a declaration
+  form, where the fields are the answer.
+- **`scripts/verify_encodings.py`**, which decodes about seventy encoding files
+  back to the greeting rather than trusting them.
+- **`scripts/coverage_figure.py`**, because the coverage number was typed forty
+  times and was wrong forty times.
+- **`scripts/language_table.py`** and `data/LANGUAGES.md`: all 7 326 files,
+  grouped by what they contain rather than by directory.
+- **`scripts/hue_uniformity.py`**: the rainbow claim, measured. 655 chromatic
+  core languages, ideal hue gap 0.55 deg, mean 0.55 deg, largest 9.93 deg.
+- **`docs/DEMO.md`**, `docs/ENCODINGS.md`, `docs/HOW-FILES-GET-THEIR-CONTENT.md`.
+- 19 tests, 72 in the suite, all standard library.
+
+### Fixed
+- **The show was crashing on every recorded run**, for the reason above.
+  `$FAST` was read and never assigned, behind a `[ -t 1 ]` guard that no local
+  invocation ever reached. Guarded now by `tests/test_shell_variables.py`, which
+  answers the whole class statically.
+- **Four language files existed in no clone.** `.gitignore` matched `*.bundle`
+  and `*.obj`, which are also language extensions. Five checks agreed the files
+  were present and all five read the working tree.
+- **One stray byte broke 23 of 24 CI shards.** A BOM plus one CRLF in a `.ps1`
+  file that `.gitattributes` marks as LF text, so every checkout rewrote it and
+  `git pull --rebase` refused to run.
+- **The closing hold spun for ten seconds drawing one frame**, guarded twice: on
+  `[ -t 1 ]` in the shell and on `sys.stdout.isatty()` in Python.
+- **6 035 placeholders said nothing specific.** Each now names its kind, its
+  Linguist groups and where the entry came from.
+- **The recording ended on a blank screen**, because the hold's deadline was
+  tested after the work rather than before it.
+- The GIF encoder is chosen by measurement: seven settings re-encoded from one
+  source, and the winner is both 62 % smaller and more animated than the
+  alternative.
+
 ## [Unreleased]
 
 ### Added
