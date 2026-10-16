@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf, esoteric source=builtin:golf, builtin:esoteric ext=.neim]
 
-// Hello World!
-// Hello World!
+# Neim: `«...»` is a string literal and the program ends by
+# printing what is on the stack.
+«Hello World!»

@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.cbmc]
 
-// Hello World!
-// Hello World!
+// CBMC checks C by bounded model checking. The harness is the point:
+// a main that asserts the greeting is reachable.
+#include <assert.h>
+#include <string.h>
+
+int main(void) {
+    const char greeting[] = "Hello World!";
+    assert(strlen(greeting) == 12);
+    return 0;
+}

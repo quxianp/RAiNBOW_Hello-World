@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.inline_assembly]
 
-// Hello World!
-// Hello World!
+// Inline assembly is written inside a host language, and it has
+// whatever facilities the host has. In C it is an
+// __asm__ block rather than a program of its own.
+#include <stdio.h>
+
+int main(void) {
+    const char msg[] = "Hello World!\n";
+    __asm__ volatile (
+        "movl $1, %%eax\n\t"
+        "movl $1, %%ebx\n\t"
+        "movl %0, %%ecx\n\t"
+        "movl $12, %%edx\n\t"
+        "int $0x80"
+        :: "r"(msg) : "eax", "ebx", "ecx", "edx");
+    return 0;
+}

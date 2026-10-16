@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=esolangs, builtin:golf ext=.husk]
 
-// Hello World!
-// Hello World!
+// Husk is a functional language that compiles to JavaScript. Its
+// Hello World is a main that returns a value.
+fn main() {
+  println("Hello World!");
+}

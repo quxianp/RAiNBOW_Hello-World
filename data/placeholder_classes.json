@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5769,
+  "without_program": 5745,
   "counts": {
     "binary": 9,
-    "document": 47,
+    "document": 46,
     "esolang": 3279,
-    "program": 336,
+    "program": 313,
     "unknown": 2098
   },
   "reasons": {
@@ -14,24 +14,24 @@
     "unclassified": 2098,
     "group:esoteric": 126,
     "group:chinese": 61,
-    "group:education": 55,
-    "group:golf": 38,
-    "group:dsl_query": 27,
-    "group:quantum": 26,
-    "group:ancient": 22,
-    "group:academic": 19,
+    "group:education": 51,
+    "group:golf": 31,
+    "group:dsl_query": 25,
+    "group:quantum": 25,
+    "group:ancient": 21,
     "group:markup_data": 19,
-    "group:misc": 19,
-    "group:assembly_dialects": 16,
-    "group:logic_constraint": 15,
-    "group:blockchain": 12,
+    "group:academic": 18,
+    "group:misc": 16,
+    "group:assembly_dialects": 15,
+    "group:logic_constraint": 14,
     "group:template": 12,
+    "group:blockchain": 11,
     "group:data_science": 10,
     "group:functional": 10,
     "group:binary_data": 9,
-    "group:concurrency": 9,
+    "group:concurrency": 8,
     "group:shell_os": 6,
-    "group:build_config": 5,
+    "group:build_config": 4,
     "type:data": 1,
     "type:programming": 1
   },
@@ -349,19 +349,6 @@
       ],
       "source": [
         "builtin:data_science"
-      ]
-    },
-    {
-      "language": "HCL2",
-      "path": "hello/full/hcl2/hello.hcl2",
-      "extension": ".hcl2",
-      "kind": "document",
-      "reason": "group:build_config",
-      "groups": [
-        "build_config"
-      ],
-      "source": [
-        "builtin:build_config"
       ]
     },
     {
@@ -37490,20 +37477,6 @@
       ]
     },
     {
-      "language": "BETA",
-      "path": "hello/full/beta/hello.beta",
-      "extension": ".beta",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "bf",
       "path": "hello/full/bf/hello.bf",
       "extension": ".bf",
@@ -37662,19 +37635,6 @@
       ]
     },
     {
-      "language": "CBMC",
-      "path": "hello/full/cbmc/hello.cbmc",
-      "extension": ".cbmc",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
       "language": "CCS",
       "path": "hello/full/ccs/hello.ccs",
       "extension": ".ccs",
@@ -37700,19 +37660,6 @@
       ],
       "source": [
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "Chameleon",
-      "path": "hello/full/chameleon/hello.chameleon",
-      "extension": ".chameleon",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
       ]
     },
     {
@@ -37888,19 +37835,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "Cursive",
-      "path": "hello/full/cursive/hello.cursive",
-      "extension": ".cursive",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {
@@ -38381,32 +38315,6 @@
       ]
     },
     {
-      "language": "Golfy",
-      "path": "hello/full/golfy/hello.golfy",
-      "extension": ".golfy",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
-      "language": "Grain",
-      "path": "hello/full/grain/hello.grain",
-      "extension": ".grain",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "Hafnium",
       "path": "hello/full/hafnium/hello.hafnium",
       "extension": ".hafnium",
@@ -38446,22 +38354,6 @@
       ]
     },
     {
-      "language": "HOL",
-      "path": "hello/full/hol/hello.hol",
-      "extension": ".hol",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "academic"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:ancient",
-        "builtin:academic"
-      ]
-    },
-    {
       "language": "Hoplite",
       "path": "hello/full/hoplite/hello.hoplite",
       "extension": ".hoplite",
@@ -38488,19 +38380,6 @@
       ]
     },
     {
-      "language": "HPX",
-      "path": "hello/full/hpx/hello.hpx",
-      "extension": ".hpx",
-      "kind": "program",
-      "reason": "group:concurrency",
-      "groups": [
-        "concurrency"
-      ],
-      "source": [
-        "builtin:concurrency"
-      ]
-    },
-    {
       "language": "Huff",
       "path": "hello/full/huff/hello.huff",
       "extension": ".huff",
@@ -38511,20 +38390,6 @@
       ],
       "source": [
         "builtin:blockchain"
-      ]
-    },
-    {
-      "language": "Husk",
-      "path": "hello/full/husk/hello.husk",
-      "extension": ".husk",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf"
       ]
     },
     {
@@ -38618,19 +38483,6 @@
       "source": [
         "wikipedia",
         "builtin:education"
-      ]
-    },
-    {
-      "language": "Inline Assembly",
-      "path": "hello/full/inline-assembly/hello.inline_assembly",
-      "extension": ".inline_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38751,19 +38603,6 @@
       ]
     },
     {
-      "language": "Kitten",
-      "path": "hello/full/kitten/hello.kitten",
-      "extension": ".kitten",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Koala",
       "path": "hello/full/koala/hello.koala",
       "extension": ".koala",
@@ -38855,19 +38694,6 @@
       ]
     },
     {
-      "language": "Little Art",
-      "path": "hello/full/little-art/hello.little_art",
-      "extension": ".little_art",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "LLVM Bitcode",
       "path": "hello/full/llvm-bitcode/hello.llvm_bitcode",
       "extension": ".llvm_bitcode",
@@ -38936,19 +38762,6 @@
       ]
     },
     {
-      "language": "MathGolf",
-      "path": "hello/full/mathgolf/hello.mathgolf",
-      "extension": ".mathgolf",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Matita",
       "path": "hello/full/matita/hello.matita",
       "extension": ".matita",
@@ -38964,19 +38777,6 @@
         "builtin:ancient",
         "builtin:functional",
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "Maude",
-      "path": "hello/full/maude/hello.maude",
-      "extension": ".maude",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
       ]
     },
     {
@@ -39179,21 +38979,6 @@
       "language": "Naasan",
       "path": "hello/full/naasan/hello.naasan",
       "extension": ".naasan",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf",
-        "esoteric"
-      ],
-      "source": [
-        "builtin:golf",
-        "builtin:esoteric"
-      ]
-    },
-    {
-      "language": "Neim",
-      "path": "hello/full/neim/hello.neim",
-      "extension": ".neim",
       "kind": "program",
       "reason": "group:golf",
       "groups": [
@@ -39997,19 +39782,6 @@
       ]
     },
     {
-      "language": "Repast",
-      "path": "hello/full/repast/hello.repast",
-      "extension": ".repast",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Rigetti",
       "path": "hello/full/rigetti/hello.rigetti",
       "extension": ".rigetti",
@@ -40065,19 +39837,6 @@
       "language": "Run 2007",
       "path": "hello/full/run-2007/hello.run_2007",
       "extension": ".run_2007",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
-      "language": "S",
-      "path": "hello/full/s/hello.s",
-      "extension": ".s",
       "kind": "program",
       "reason": "group:misc",
       "groups": [
@@ -40380,19 +40139,6 @@
       ]
     },
     {
-      "language": "Substrate",
-      "path": "hello/full/substrate/hello.substrate",
-      "extension": ".substrate",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
-      ]
-    },
-    {
       "language": "Surface code",
       "path": "hello/full/surface-code/hello.surface_code",
       "extension": ".surface_code",
@@ -40442,20 +40188,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "TADS",
-      "path": "hello/full/tads/hello.tads",
-      "extension": ".tads",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:education"
       ]
     },
     {
@@ -40552,19 +40284,6 @@
       ]
     },
     {
-      "language": "Thunno",
-      "path": "hello/full/thunno/hello.thunno",
-      "extension": ".thunno",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "TIFF",
       "path": "hello/full/tiff/hello.tiff",
       "extension": ".tiff",
@@ -40634,19 +40353,6 @@
       ]
     },
     {
-      "language": "Turtle-Stitch",
-      "path": "hello/full/turtle-stitch/hello.turtle_stitch",
-      "extension": ".turtle_stitch",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Two",
       "path": "hello/full/two/hello.two",
       "extension": ".two",
@@ -40670,19 +40376,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "Tyrs",
-      "path": "hello/full/tyrs/hello.tyrs",
-      "extension": ".tyrs",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
       ]
     },
     {
@@ -40761,20 +40454,6 @@
         "golf"
       ],
       "source": [
-        "builtin:golf"
-      ]
-    },
-    {
-      "language": "Vitsy",
-      "path": "hello/full/vitsy/hello.vitsy",
-      "extension": ".vitsy",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
         "builtin:golf"
       ]
     },
