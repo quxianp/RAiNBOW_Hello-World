@@ -14,9 +14,9 @@ discovered by someone watching the README.
 
 Thresholds, and why these numbers:
 
-    current measurement   mean 7.18 %   frozen 28.7 %   33.2 s
-    the crash             mean 1.79 %   frozen 84 %     33.0 s
-    a dead closing hold   mean 1.93 %   frozen 88 %     34.9 s
+    current measurement   mean  5.85 %   frozen 28.9 %   29.2 s
+    the crash             mean  1.79 %   frozen 84 %     33.0 s
+    a dead closing hold   mean  1.93 %   frozen 88 %     34.9 s
 
 `--max-frozen` is the same 50 % boundary scripts/measure_motion.py itself calls
 "monotonous", so the gate does not invent a stricter standard than the tool
@@ -43,7 +43,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEFAULT_GIF = ROOT / "assets" / "hello-world.gif"
 
 MAX_FROZEN_PCT = 50.0
-MIN_MEAN_PCT = 3.0
+MIN_MEAN_PCT = 4.0
+
+# The floor was 3.0 % when the gate was written, against a healthy recording
+# that measured 8.10 % and a broken one at 1.79 %. It is 4.0 % now, and the two
+# numbers below are why that is not a rounding of the previous value: the healthy
+# take has since been recorded twice more, at 7.18 % and 5.85 %, and the worst
+# of those is still 45 % above the new floor. The failures it has to keep out are
+# at 1.79 % and 1.93 %, so the gap either side is over 2x in both directions.
 
 
 def _load_measure_motion():

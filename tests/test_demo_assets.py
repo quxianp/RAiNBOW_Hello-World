@@ -86,8 +86,9 @@ def test_gate_thresholds_are_not_left_permissive():
         f"failures this gate exists for measured 84 % and 88 %; a ceiling above "
         f"55 % would wave through both."
     )
-    assert gate.MIN_MEAN_PCT >= 2.0, (
+    assert gate.MIN_MEAN_PCT >= 3.5, (
         f"the mean-coverage floor is {gate.MIN_MEAN_PCT:.1f} %. The failing "
-        f"recordings measured 1.79 % and 1.93 %; a floor under 2 % would wave "
-        f"through both."
+        f"recordings measured 1.79 % and 1.93 %; the healthy ones measured "
+        f"5.85 %, 7.18 % and 8.10 %. A floor under 3.5 % would wave the "
+        f"failures through while still looking like a real threshold."
     )
