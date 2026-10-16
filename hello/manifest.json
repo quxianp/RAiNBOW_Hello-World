@@ -3,7 +3,7 @@
  "core_languages": 694,
  "full_languages": 6632,
  "total_files": 7326,
- "with_curated_template": 1202,
+ "with_curated_template": 1223,
  "runnable_command_count": 51,
  "files": [
   {
@@ -38208,7 +38208,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "IDA",
@@ -40452,7 +40452,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "J++",
@@ -45215,7 +45215,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Lucene",
@@ -48185,7 +48185,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MISC-x86",
@@ -48438,7 +48438,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "MLTT",
@@ -48647,7 +48647,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "modifying",
@@ -48680,7 +48680,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Modula Modula-2",
@@ -50792,7 +50792,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "NewSQL",
@@ -52365,7 +52365,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Oberon-07",
@@ -52376,7 +52376,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Oberon-2",
@@ -52387,7 +52387,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Obfuck",
@@ -52552,7 +52552,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Object-based",
@@ -55962,7 +55962,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "pin",
@@ -56226,7 +56226,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "PL/SQL",
@@ -64465,7 +64465,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Seedance",
@@ -66038,7 +66038,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "SIMULA 67",
@@ -66049,7 +66049,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Simulation",
@@ -66654,7 +66654,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Smart Pascal",
@@ -66863,7 +66863,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "Smolder",
@@ -68744,7 +68744,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "StaPLe",
@@ -70768,7 +70768,7 @@
    "color": null,
    "hue": null,
    "runner": null,
-   "real_template": false
+   "real_template": true
   },
   {
    "language": "T F",
