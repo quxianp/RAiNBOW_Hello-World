@@ -68,14 +68,42 @@ def normalise_key(k: str) -> str:
     return k.strip().lower()
 
 
-def validate(batch: dict, manifest: dict, have: set[str]) -> tuple[list, list, list]:
+def src_text() -> str:
+    return GEN.read_text(encoding="utf-8")
+
+
+def templates_value(src: str, key: str) -> str:
+    """The literal currently in HELLO for `key`, or '' if there is none.
+
+    Used by --replace to tell a genuine change from a no-op, so re-running a
+    batch does not produce an empty commit.
+    """
+    start = src.index("HELLO: dict[str, str] = {")
+    end = src.index("\n}\n", start)
+    m = re.search(r'^\s{4}"' + re.escape(key) + r'"\s*:\s*',
+                  src[start:end], re.M)
+    if not m:
+        return ""
+    rest = src[start + m.end():end]
+    try:
+        return json.loads(rest.split("\n", 1)[0].rstrip().rstrip(","))
+    except ValueError:
+        return ""
+
+
+def validate(batch: dict, manifest: dict, have: set[str],
+             replace: bool = False) -> tuple[list, list, list]:
     """Return (accepted, duplicates, rejected)."""
     accepted, dupes, rejected = [], [], []
     for lang, program in sorted(batch.items()):
         key = normalise_key(lang)
         if key in have:
-            dupes.append((lang, "already has a template"))
-            continue
+            if not replace:
+                dupes.append((lang, "already has a template"))
+                continue
+            if templates_value(src_text(), key) == program:
+                dupes.append((lang, "identical to what is already there"))
+                continue
         if lang not in manifest:
             rejected.append((lang, "not a language this repository ships"))
             continue
@@ -91,7 +119,7 @@ def validate(batch: dict, manifest: dict, have: set[str]) -> tuple[list, list, l
     return accepted, dupes, rejected
 
 
-def splice(entries: list[tuple[str, str]]) -> str:
+def splice(entries: list[tuple[str, str]], replace: bool = False) -> str:
     src = GEN.read_text(encoding="utf-8")
     start = src.index("HELLO: dict[str, str] = {")
     end = src.index("\n}\n", start)
@@ -111,6 +139,11 @@ def splice(entries: list[tuple[str, str]]) -> str:
         inserted = False
         for i, line in enumerate(lines):
             m = re.match(r'\s{4}"((?:[^"\\]|\\.)*)"\s*:', line)
+            if m and m.group(1) == key and replace:
+                lines[i] = new_line
+                inserted = True
+                added += 1
+                break
             if m and m.group(1) > key:
                 lines.insert(i, new_line)
                 inserted = True
@@ -144,6 +177,8 @@ def main() -> int:
                     help="JSON object of {language: program}")
     ap.add_argument("--dry-run", action="store_true",
                     help="validate and report, change nothing")
+    ap.add_argument("--replace", action="store_true",
+                    help="overwrite an existing template when the text differs")
     ap.add_argument("--skip-tests", action="store_true")
     args = ap.parse_args()
 
@@ -154,7 +189,8 @@ def main() -> int:
 
     manifest = load_manifest()
     have = existing_keys()
-    accepted, dupes, rejected = validate(batch, manifest, have)
+    accepted, dupes, rejected = validate(batch, manifest, have,
+                                         replace=args.replace)
 
     print(f"batch offers {len(batch)}")
     print(f"  accepted   : {len(accepted)}")
@@ -180,7 +216,7 @@ def main() -> int:
             print(f"    {key}")
         return 0
 
-    new_src, added = splice(accepted)
+    new_src, added = splice(accepted, replace=args.replace)
     GEN.write_text(new_src, encoding="utf-8", newline="\n")
     print(f"\nspliced {added} into HELLO")
 
