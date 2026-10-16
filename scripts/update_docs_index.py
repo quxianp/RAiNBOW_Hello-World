@@ -48,6 +48,21 @@ DOCS = [
      "The single most asked question, with the measurements that settle it. "
      "Linguist merges dialects into parents; the 7 HTML-family files become one "
      "`HTML` segment of 7 x 2048 bytes, which is why it reads 1.0116 %."),
+    ("HOW-FILES-GET-THEIR-CONTENT.md", "How a file in hello/ gets its content",
+     "The five kinds of file in `hello/` and why each needs different content "
+     "\u2014 a program, an esoteric admission, an index admission, a document, a "
+     "binary header \u2014 plus how to add one, and what \"real\" means here."),
+    ("DEMO.md", "The demo",
+     "How `assets/hello-world.gif` is recorded, why a gate refuses to publish a "
+     "static take, and the three tools to reach for when a recording looks "
+     "wrong."),
+    ("ENCODINGS.md", "The files that are not programs",
+     "The seventy files holding encodings of the greeting rather than a program: "
+     "checksummed records, real archives, image formats, and why each is not a "
+     "`print`."),
+    ("../data/LANGUAGES.md", "Language index",
+     "All 7 326 files, grouped by what they contain rather than by directory. "
+     "Generated; `scripts/language_table.py --check` fails if it is stale."),
     ("FAQ.md", "Frequently asked questions",
      "Why the bar looks grey, why COBOL is missing, which of 694 and 631 is "
      "right, and whether all the files actually run."),
@@ -62,7 +77,7 @@ DOCS = [
     ("../CODE_OF_CONDUCT.md", "Code of conduct",
      "Contributor Covenant 2.1."),
     ("../logs/ERRORS.log", "Defect ledger",
-     "Twenty-nine defects, each with the symptom, the cause, and why nothing "
+     "Thirty-two defects, each with the symptom, the cause, and why nothing "
      "caught it. The most useful document here."),
     ("../logs/DECISIONS.md", "Decisions",
      "Choices made and the reasoning behind them, including the ones that were "
