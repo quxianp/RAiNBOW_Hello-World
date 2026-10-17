@@ -5,6 +5,82 @@ All notable changes to RAiNBOW_Hello-World are recorded here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-10-17
+
+The day the repository started checking its own claims. Everything below was
+found by a tool that was added to find it, and four of the findings were real
+defects in files that every other check passed.
+
+The largest of those is `hello/manifest.json`. It is the most load-bearing file
+here -- the generator writes it, the bar renderer colours from it, the coverage
+figure counts it -- and nothing checked it. Four of the 7,326 entries carried a
+`runner` field whose entire command was `echo "Hello World!"`: a field asserting
+that a language could be run, in a manifest, for four languages that were never
+executed. See `logs/ERRORS.log` E34.
+
+### Added
+- **`scripts/check_manifest.py`** -- asserts the manifest describes the
+  repository that is on disk: every path exists, its layer matches its directory,
+  its extension is the one on disk, its modeline is a name `languages.yml`
+  defines, its runner mentions the file it runs, and **its hue is the hue of the
+  colour beside it, recomputed**. That last one matters because the bar is drawn
+  from those two fields and nothing else, so a mismatch is a wrong pixel
+  everywhere at once and visible in no way.
+- **`scripts/build_object_formats.py`** -- builds COFF, DWARF, WCS, SHP, TIFF,
+  SHPFFIL and FlatGeobuf from their specifications' own field widths. A header
+  is a dozen fields in a specified order and transcribing one produces a file
+  that is wrong in exactly one byte and looks identical to a correct one. Two of
+  the seven have somewhere to put the greeting -- TIFF's ImageDescription and a
+  FITS COMMENT card -- and five do not, and say so.
+- **Six structure checkers in `scripts/verify_encodings.py`**, one per object
+  format, reading the fields by name. The FITS one requires `=` in column 9 of
+  every card; moving it one column left changes no byte count and no hex token
+  and is caught by nothing else in the suite.
+- **`scripts/extension_collisions.py`** -- 117 extensions are claimed by more than one
+  language. Linguist gives both R and Rez the extension `.r`, so the manifest
+  has two files claiming it and GitHub counts both as R. The tool measures how
+  much is at stake and refuses to say which language wins, because that is
+  Linguist's answer and not this repository's.
+- **`scripts/check_doc_figures.py`** -- resolves every figure quoted in the
+  prose against the tool that measures it. It found four checkable figures in
+  the documentation, all four correct; the stale ones live in commit messages,
+  which is exactly why it can only be a regression guard.
+- **`Makefile`**, and `scripts/make_help.py`, because there were 45 scripts and no index.
+- **`docs/MANIFEST.md`**, and 17 family guides under `docs/languages/`,
+  each covering a family where the obvious template is wrong in a way that passes
+  every automated check.
+- **`SECURITY.md`**, **`CODE_OF_CONDUCT.md`**, **`.github/dependabot.yml`**.
+
+### Fixed
+- **The demo ends on the greeting.** `--force-hold` was checked *after* the
+  sweep rather than before it, so the hold could fire past the deadline and the
+  recording finished on an empty screen.
+- **A comment that names a magic number is not the magic number.** The
+  FlatGeobuf file's preamble says "the magic is 0A 0D 0D 0A", and the verifier
+  read the explanation as the magic: it reported version 10, which is 0x0A. A
+  dump line is now identified by its ASCII gutter.
+- **Re-applying an unchanged batch is a no-op, not a failure.** `add_templates.py`
+  exited 1 on a batch whose content was already present, which reads as "the fix
+  did not work" to anything reading the exit code.
+- **A round floor for six formats with four different minimum lengths** skipped
+  every small object file it had been written for.
+
+### Changed
+- **1,814 programs** across 7,326 files (694 of 694 core, 99.7 %),
+  from 1,070 when this began. Every one added by a batch that had to pass the
+  template guard, which is what rejected a Rez template that could not be
+  honest.
+- **The suite is 103 tests** in 19 files, standard library only.
+
+### Defects recorded
+- `logs/ERRORS.log` now runs to E34. The four newest share a shape worth naming:
+  **a claim that costs nothing to check and that nobody checked** -- a file in
+  no clone (E30), a variable read under `set -u` behind a guard no local run
+  reached (E31), a figure typed instead of measured (E32, E33), and a runner that
+  never ran anything (E34).
+
+[330 commits]
+
 ## [2.1.0] - 2026-10-17
 
 The day the demo stopped lying. The GIF had been frozen for 22 of its 33 seconds
