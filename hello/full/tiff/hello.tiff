@@ -3,7 +3,26 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf, markup_data source=builtin:golf, builtin:markup_data ext=.tiff]
 
-// Hello World!
-// Hello World!
+// TIFF: an image format with a real field for human-readable text.
+// Tag 270, ImageDescription, type 2, ASCII, thirteen bytes plus
+// the NUL that terminates an ASCII count.
+//
+// This is the one of these six whose greeting a reader will
+// actually display: `Hello World!` in thirteen bytes, which is
+// what `identify` prints and what a browser's image panel shows.
+// Little endian, magic 42, one IFD entry, and the next-IFD
+// pointer is zero because there is no second one.
+//
+// tiff: 39 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 49 49 2A 00 08 00 00 00 01 00 0E 01 02 00 0D 00 |II*.............|   <- 0000
+// 00 00 1A 00 00 00 00 00 00 00 48 65 6C 6C 6F 20 |..........Hello |   <- 0010
+// 57 6F 72 6C 64 21 00                            |World!.|   <- 0020

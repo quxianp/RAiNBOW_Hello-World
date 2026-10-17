@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5624,
+  "without_program": 5618,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 193,
+    "program": 187,
     "unknown": 2097
   },
   "reasons": {
@@ -15,16 +15,16 @@
     "group:esoteric": 126,
     "group:chinese": 58,
     "group:education": 27,
-    "group:golf": 21,
+    "group:golf": 20,
     "group:markup_data": 19,
     "group:template": 12,
-    "group:assembly_dialects": 12,
-    "group:dsl_query": 11,
     "group:academic": 10,
     "group:data_science": 10,
+    "group:assembly_dialects": 10,
     "group:quantum": 10,
     "group:binary_data": 9,
     "group:misc": 9,
+    "group:dsl_query": 8,
     "group:functional": 8,
     "group:ancient": 7,
     "group:logic_constraint": 7,
@@ -37464,19 +37464,6 @@
       ]
     },
     {
-      "language": "COFF",
-      "path": "hello/full/coff/hello.coff",
-      "extension": ".coff",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
-      ]
-    },
-    {
       "language": "Coro",
       "path": "hello/full/coro/hello.coro",
       "extension": ".coro",
@@ -37539,19 +37526,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "DWARF",
-      "path": "hello/full/dwarf/hello.dwarf",
-      "extension": ".dwarf",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38673,32 +38647,6 @@
       ]
     },
     {
-      "language": "SHP",
-      "path": "hello/full/shp/hello.shp",
-      "extension": ".shp",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "SHPFFIL",
-      "path": "hello/full/shpffil/hello.shpffil",
-      "extension": ".shpffil",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "SMC11",
       "path": "hello/full/smc11/hello.smc11",
       "extension": ".smc11",
@@ -38833,21 +38781,6 @@
       ]
     },
     {
-      "language": "TIFF",
-      "path": "hello/full/tiff/hello.tiff",
-      "extension": ".tiff",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf",
-        "markup_data"
-      ],
-      "source": [
-        "builtin:golf",
-        "builtin:markup_data"
-      ]
-    },
-    {
       "language": "TRAC",
       "path": "hello/full/trac/hello.trac",
       "extension": ".trac",
@@ -38924,19 +38857,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "WCS",
-      "path": "hello/full/wcs/hello.wcs",
-      "extension": ".wcs",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {

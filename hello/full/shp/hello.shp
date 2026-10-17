@@ -3,7 +3,34 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.shp]
 
-// Hello World!
-// Hello World!
+// SHP: an ESRI shapefile. The header is one hundred bytes and
+// mixes byte orders: the file code and the file length are big
+// endian, everything after them is little endian.
+//
+// There is no greeting in this file, because there is nowhere in
+// the format to put one. The five unused header bytes are
+// specified as zero, the bounding box holds four doubles, and the
+// Null Shape record that follows is four bytes of shape type. A
+// `Hello World!` in any of them would be a file no reader accepts,
+// so this one is a correct header with nothing to say.
+//
+// File code 9994, version 1000, shape type 0, and the length in
+// 16-bit words that the format -- not the byte count.
+//
+// shp: 108 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 00 00 27 0A 00 00 00 00 00 00 00 00 36 00 00 00 |..'.........6...|   <- 0000
+// 00 00 00 00 00 00 00 00 00 E8 03 00 00 00 00 00 |................|   <- 0010
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0020
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0030
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0040
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0050
+// 00 00 00 00 00 00 00 00 00 00 00 00             |............|   <- 0060

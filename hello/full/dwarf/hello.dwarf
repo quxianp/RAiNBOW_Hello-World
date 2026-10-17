@@ -3,7 +3,24 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.dwarf]
 
-// Hello World!
-// Hello World!
+// DWARF: the debugging information format, and this is a complete
+// `.debug_info` unit -- unit_length, version 4, the abbreviation
+// offset it compiles against, an eight-byte address size, and one
+// DIE whose DW_AT_producer is a DW_FORM_string.
+//
+// The producer string is the greeting `Hello World!`, and
+// unit_length is the count of everything after itself, which is how
+// a reader knows whether to believe the rest.
+//
+// dwarf: 24 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 14 00 00 00 04 00 00 00 00 00 08 48 65 6C 6C 6F |...........Hello|   <- 0000
+// 20 57 6F 72 6C 64 21 00                         | World!.|   <- 0010

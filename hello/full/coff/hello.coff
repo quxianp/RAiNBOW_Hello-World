@@ -3,7 +3,26 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.coff]
 
-// Hello World!
-// Hello World!
+// COFF: the Common Object File Format, twenty bytes of file
+// header and forty of section header before any data.
+//
+// Machine i386, one section, no optional header -- that last one is
+// what makes this an object rather than an image. The greeting
+// `Hello World!` is the section's raw data, and SizeOfRawData and
+// PointerToRawData are both thirteen and sixty for it.
+//
+// coff: 72 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 4C 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 |L...............|   <- 0000
+// 00 00 02 01 2E 74 65 78 74 00 00 00 0C 00 00 00 |.....text.......|   <- 0010
+// 00 00 00 00 0C 00 00 00 3C 00 00 00 00 00 00 00 |........<.......|   <- 0020
+// 00 00 00 00 00 00 00 00 20 00 50 60 48 65 6C 6C |........ .P`Hell|   <- 0030
+// 6F 20 57 6F 72 6C 64 21                         |o World!|   <- 0040

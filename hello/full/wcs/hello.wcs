@@ -3,7 +3,62 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.wcs]
 
-// Hello World!
-// Hello World!
+// WCS: a World Coordinate System is not a file format of its own.
+// It is a set of FITS header keywords -- CTYPE1, CTYPE2, CRVAL1 --
+// and a `.wcs` file is a FITS header carrying them.
+//
+// Eight cards, eighty bytes each. Every card puts '=' in column 9
+// and its value right-justified so it ends in column 30, and the
+// header ends with END. COMMENT is the one card kind with no '=' at
+// all, which is why `Hello World!` goes in one of those.
+//
+// wcs: 640 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 53 49 4D 50 4C 45 20 20 3D 20 20 20 20 20 20 20 |SIMPLE  =       |   <- 0000
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 54 20 20 |             T  |   <- 0010
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0020
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0030
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0040
+// 42 49 54 50 49 58 20 20 3D 20 20 20 20 20 20 20 |BITPIX  =       |   <- 0050
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 38 20 20 |             8  |   <- 0060
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0070
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0080
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0090
+// 4E 41 58 49 53 20 20 20 3D 20 20 20 20 20 20 20 |NAXIS   =       |   <- 00A0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 32 20 20 |             2  |   <- 00B0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 00C0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 00D0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 00E0
+// 57 43 53 41 58 45 53 20 3D 20 20 20 20 20 20 20 |WCSAXES =       |   <- 00F0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 32 20 20 |             2  |   <- 0100
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0110
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0120
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0130
+// 43 54 59 50 45 31 20 20 3D 20 27 52 41 2D 2D 2D |CTYPE1  = 'RA---|   <- 0140
+// 54 41 4E 27 20 20 20 20 20 20 20 20 20 20 20 20 |TAN'            |   <- 0150
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0160
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0170
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0180
+// 43 54 59 50 45 32 20 20 3D 20 27 44 45 43 2D 2D |CTYPE2  = 'DEC--|   <- 0190
+// 54 41 4E 27 20 20 20 20 20 20 20 20 20 20 20 20 |TAN'            |   <- 01A0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 01B0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 01C0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 01D0
+// 43 4F 4D 4D 45 4E 54 20 20 20 48 65 6C 6C 6F 20 |COMMENT   Hello |   <- 01E0
+// 57 6F 72 6C 64 21 20 20 20 20 20 20 20 20 20 20 |World!          |   <- 01F0
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0200
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0210
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0220
+// 45 4E 44 20 20 20 20 20 20 20 20 20 20 20 20 20 |END             |   <- 0230
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0240
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0250
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0260
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0270
