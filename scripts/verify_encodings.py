@@ -399,17 +399,18 @@ def check_dbf(buf: bytes) -> tuple[bool, str]:
 
 
 OBJECT_FORMATS = {
-    "coff": ("coff", check_coff),
-    "obj": ("coff", check_coff),
-    "dwarf": ("dwarf", check_dwarf),
-    "wcs": ("fits", check_fits),
-    "fit": ("fits", check_fits),
-    "fits": ("fits", check_fits),
-    "shp": ("shapefile", check_shapefile),
-    "tiff": ("tiff", check_tiff),
-    "tif": ("tiff", check_tiff),
-    "shpffil": ("dbf", check_dbf),
-    "dbf": ("dbf", check_dbf),
+    # tag: (kind, checker, the shortest buffer that could be a real file)
+    "coff": ("coff", check_coff, 60),
+    "obj": ("coff", check_coff, 60),
+    "dwarf": ("dwarf", check_dwarf, 11),
+    "wcs": ("fits", check_fits, 80),
+    "fit": ("fits", check_fits, 80),
+    "fits": ("fits", check_fits, 80),
+    "shp": ("shapefile", check_shapefile, 100),
+    "tiff": ("tiff", check_tiff, 8),
+    "tif": ("tiff", check_tiff, 8),
+    "shpffil": ("dbf", check_dbf, 33),
+    "dbf": ("dbf", check_dbf, 33),
 }
 
 
@@ -429,14 +430,16 @@ def check_encoding(path: pathlib.Path) -> tuple[str, bool, str]:
         return "s-record", ok, why
 
     if tag in OBJECT_FORMATS:
-        kind, check = OBJECT_FORMATS[tag]
+        kind, check, minimum = OBJECT_FORMATS[tag]
         buf = payload_bytes(text)
-        # A file that is still a text placeholder -- which is what every one of
-        # these was until it got real bytes -- has no payload to parse, and a
-        # checker handed an empty buffer would raise rather than report. So the
-        # object checker only runs when there is something for it to read, and
-        # the generic checks below still apply either way.
-        if len(buf) >= 80:
+        # Route on the format's own minimum length rather than a round number.
+        # A single floor for all six was wrong in both directions: at 80 bytes
+        # it skipped every small file it was written for -- a 73-byte COFF
+        # object, a 29-byte DWARF unit, a 76-byte dBASE header -- and at a
+        # smaller one it would have handed an empty buffer to a struct.unpack
+        # and raised. A text placeholder has no payload at all, so it is below
+        # every minimum and lands in the generic branch, which is right.
+        if len(buf) >= minimum:
             ok, why = check(buf)
             return kind, ok, why
 

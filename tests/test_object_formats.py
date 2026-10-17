@@ -246,7 +246,8 @@ def test_check_encoding_dispatches_on_the_suffix_not_the_language():
         if ext not in V.OBJECT_FORMATS:
             continue
         text = f.read_text(encoding="utf-8", errors="replace")
-        if len(V.payload_bytes(text)) < 80:
+        minimum = V.OBJECT_FORMATS[ext][2]
+        if len(V.payload_bytes(text)) < minimum:
             continue
         kind, ok, why = V.check_encoding(f)
         assert kind == V.OBJECT_FORMATS[ext][0], (
@@ -257,3 +258,20 @@ def test_check_encoding_dispatches_on_the_suffix_not_the_language():
     # assertion above is vacuous, which is exactly the state that hid E30, so
     # it is stated rather than left implicit.
     print(f"    (object-format files with real bytes: {routed})")
+
+
+def test_the_route_floor_is_each_format_s_own_minimum():
+    """A shared floor was wrong in both directions, so the floor is data now.
+
+    At 80 bytes it skipped every small file it had been written for; at a
+    smaller number it would hand an empty buffer to `struct.unpack_from` and
+    raise. Each entry therefore carries the length below which a buffer cannot
+    be a real file of that format, which is also the length its own checker
+    bounds-checks against.
+    """
+    for tag, (kind, check, minimum) in V.OBJECT_FORMATS.items():
+        assert isinstance(minimum, int) and minimum > 0, tag
+        ok, why = check(bytes(minimum - 1))
+        assert not ok, f"{tag} accepted a {minimum - 1}-byte buffer: {why}"
+        assert str(minimum - 1) in why or "short" in why or "need" in why, (
+            f"{tag} rejected a short buffer without saying how short: {why}")
