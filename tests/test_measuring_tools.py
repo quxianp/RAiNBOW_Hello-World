@@ -258,6 +258,46 @@ def test_doc_figure_scanner_finds_a_planted_claim_and_flags_it(tmp_path=None):
             f"{known['curated']} curated is exact and was reported stale")
 
 
+def test_make_help_documents_every_phony_target():
+    """`make help` is the only documentation a new contributor will find.
+
+    So it has to run everywhere, and it has to be complete. Both were false:
+    the Makefile's `SHELL := /usr/bin/env bash` is not valid make syntax (SHELL
+    must be a path), so every recipe failed on a machine without a findable
+    shell, and the usual grep-and-awk self-documenting idiom needs two programs
+    that are not on PATH here either.
+    """
+    makefile = ROOT / "Makefile"
+    if not makefile.exists():
+        return
+    mod = _module("make_help", ROOT / "scripts" / "make_help.py")
+    text = makefile.read_text(encoding="utf-8")
+
+    documented = {n for n, _ in mod.targets(text)}
+    phony = set(mod.declared_phony(text))
+    assert documented, "no target in the Makefile has a ## comment"
+    # `help` documents itself by printing the list, so it is the one target
+    # allowed to be in .PHONY without a comment of its own.
+    missing = phony - documented - {"help"}
+    assert not missing, f"in .PHONY but undocumented: {sorted(missing)}"
+
+    # A comment on the wrong side of the recipe -- `# not a target` -- must not
+    # be picked up as one, and neither may a recipe line that begins with a
+    # tab and happens to contain a colon.
+    assert "SHELL   := /usr/bin/env bash" not in text, (
+        "SHELL must be a path; make runs it directly, so `env bash` fails "
+        "before the first recipe line is read")
+
+    # Only recipe lines count. The Makefile's own comment *describes* the
+    # grep-and-awk idiom it refused to use, and a test that failed on the word
+    # would be failing on the explanation.
+    recipes = "\n".join(l for l in text.splitlines() if l.startswith("\t"))
+    for tool in ("grep ", "awk ", "sed "):
+        assert tool not in recipes, (
+            f"a recipe uses {tool.strip()}, which is not on PATH on the "
+            f"machine this is built on")
+
+
 def test_extension_collisions_measures_bytes_off_disk():
     """The manifest has no byte field, and this tool must not invent one.
 
