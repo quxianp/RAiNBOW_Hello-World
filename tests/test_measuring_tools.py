@@ -185,6 +185,74 @@ def test_extension_collisions_are_counted_not_guessed():
         f"extension")
 
 
+def test_doc_figures_are_measured_not_typed():
+    """The stale-figure check must resolve against a measurement, not a table.
+
+    Typed figures were the most common defect in this repository's history --
+    not wrong arithmetic, stale arithmetic. A commit message saying "94 tests"
+    when there are 95 is true for exactly as long as nobody adds anything.
+
+    So the assertions here are about provenance: every claimable quantity must
+    come out of the tool that measures it, and a round number must be a
+    deliberate rounding rather than the only value the tool knows.
+    """
+    if not _ready():
+        return
+    mod = _module("check_doc_figures", ROOT / "scripts" / "check_doc_figures.py")
+    known = mod.truth()
+
+    assert known["tests"] > 50, "the test count is a definition, not a run"
+    assert known["files"] == 7326
+    assert known["fps"] == 10, (
+        f"record_demo.sh says fps={known['fps']}; the docs quote 10")
+    assert known["max_colors"] == 128, (
+        f"record_demo.sh encodes {known['max_colors']} colours. It mentions "
+        f"max_colors twice -- 96 as a size to compare against, 128 as the "
+        f"value passed to ffmpeg -- and taking the first reports a real file "
+        f"at the wrong setting")
+
+    # Round numbers must exist as *derivations*, so "about 1 700 curated" can be
+    # checked without the phrase "about" having to be trusted.
+    assert known["curated_hundred"] == round(known["curated"], -2)
+    assert known["curated_hundred"] != known["curated"]
+
+    assert set(mod.UNRESOLVED) <= {"segments", "acceptance"}, (
+        f"claims marked unresolvable grew: {mod.UNRESOLVED}")
+    for claim in mod.UNRESOLVED:
+        assert claim not in known, (
+            f"{claim} is both unresolvable and resolved; pick one")
+
+
+def test_doc_figure_scanner_finds_a_planted_claim_and_flags_it(tmp_path=None):
+    """A report nobody has ever seen fail is not a report.
+
+    The scanner is exercised on a file written to be stale, so the assertion is
+    that it *reports* -- not that the documentation happens to be clean.
+    """
+    if not _ready():
+        return
+    mod = _module("check_doc_figures", ROOT / "scripts" / "check_doc_figures.py")
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        p = pathlib.Path(d) / "probe.md"
+        p.write_text(
+            "The suite has 999 tests.\n"
+            "The repository holds 123 tracked files.\n"
+            "It is roughly 5000 files, and about 1704 curated.\n",
+            encoding="utf-8")
+        rows = mod.scan(p, mod.truth())
+        by_claim = {r["claim"]: r for r in rows}
+        assert by_claim["tests"]["said"] == 999
+        assert by_claim["tests"]["actual"] == mod.truth()["tests"]
+        assert not by_claim["tests"]["exact"]
+        # The line beginning "It is roughly" must be treated as approximate,
+        # and the curated figure on it must be compared rather than skipped.
+        assert by_claim["curated"]["approximate"], (
+            "'roughly' did not mark the claim approximate")
+        assert by_claim["curated"]["exact"], (
+            "1704 curated is exact and was reported stale")
+
+
 def test_extension_collisions_measures_bytes_off_disk():
     """The manifest has no byte field, and this tool must not invent one.
 
