@@ -93,6 +93,19 @@ DOCS = [
      "Sixty entries whose canonical program is one to fifteen characters, in "
      "three shapes -- and Actually, whose whole program is fifteen + "
      "characters."),
+    ("../docs/languages/EDITOR-LANGUAGES.md", "The editor languages",
+     "Half a dozen entries that do not run in a terminal. Emacs Lisp says it "
+     "with `message`, Vim script with `echom`, and the two that are not "
+     "programs at all -- a derived mode and a vimdoc tag line -- have a "
+     "required header rather than an output operation."),
+    ("../docs/languages/APL-FAMILY.md", "APL, J and their descendants",
+     "Six array languages that all read right to left, so a Hello World "
+     "written left to right does nothing at all. APL's output is the quad "
+     "assignment, J's is `echo`, K has none and gets a comment that says so."),
+    ("../docs/languages/STACK-LANGUAGES.md", "Stack and concatenative languages",
+     "Forth, PostScript, Factor: the question is how a value gets from the "
+     "stack to the screen, and the answer is different in each. Why a Forth "
+     "Hello World is longer than a C one, and why that is correct."),
     ("../docs/languages/BASIC-FAMILY.md", "The BASIC family",
      "Ten entries and about six languages. Two require line numbers because the "
      "ANSI standard's control flow is GOTO; and output is not PRINT in half of "
