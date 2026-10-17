@@ -3,7 +3,28 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects, binary_data source=builtin:assembly_dialects, builtin:binary_data ext=.llvm_bitcode]
 
-// Hello World!
-// Hello World!
+// LLVM bitcode, in the wrapper form llvm-as produces by default: the
+// two bytes 0B 17, the bitstream's own BC C0 DE magic at offset two,
+// four offsets, and a version word.
+//
+// The detail that matters is that the four offsets are byte
+// positions *relative to the version word*, so a hand-built wrapper
+// points somewhere useless and still looks plausible. Reading the
+// BC magic at offset four rather than two is right by exactly two
+// bytes and fails on every real file.
+//
+// Hello World! is the bitcode block the offsets point at.
+//
+// llvm_bitcode: 38 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 0B 17 42 43 C0 DE 00 00 0C 00 00 00 0C 00 00 00 |..BC............|   <- 0000
+// 1A 00 00 00 00 00 00 00 00 00 48 65 6C 6C 6F 20 |..........Hello |   <- 0010
+// 57 6F 72 6C 64 21                               |World!|   <- 0020

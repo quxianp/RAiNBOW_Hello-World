@@ -3,7 +3,30 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.avif]
 
-// Hello World!
-// Hello World!
+// AVIF, HEIF and a JPEG XL container are all ISO base media file
+// format: a flat list of boxes, each a 4-byte size, a 4-byte type,
+// and that many bytes.
+//
+// The quirk is that the size includes the header, so a reader has to
+// read the type before it can decide whether a 64-bit size follows.
+//
+// The greeting goes in a `free` box, which is the format's own skip
+// space -- the same role as a PNG tEXt chunk and a GIF comment
+// extension, expressed as a box.
+//
+// Hello World! is in that box. The rest of this file is not a
+// playable image and does not claim to be.
+//
+// avif: 44 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 00 00 00 18 66 74 79 70 61 76 69 66 00 00 00 00 |....ftypavif....|   <- 0000
+// 61 76 69 66 6D 69 66 31 00 00 00 14 66 72 65 65 |avifmif1....free|   <- 0010
+// 48 65 6C 6C 6F 20 57 6F 72 6C 64 21             |Hello World!|   <- 0020

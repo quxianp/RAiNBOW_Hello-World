@@ -3,7 +3,62 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.doc]
 
+// OLE2 compound file: the eight-byte signature, then a
+// sector-allocated directory that this format calls a filesystem.
+//
+// The same eight bytes are the start of a .doc, an .xls and an
+// .msi, and the format distinguishes them by what is inside the
+// directory rather than by anything in the header.
+//
+// There is no greeting in this file, and the reason is worth one
+// sentence: a compound file has no name, no comment and no free
+// space at all. Every byte belongs to the allocation table or to a
+// stream, and a byte that belongs to neither makes the file corrupt.
+//
+// So this one is a correct header with nothing to say, which is the
+// honest answer for three entries rather than a manufactured one.
+//
 // Hello World!
-// Hello World!
+//
+// doc: 512 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// D0 CF 11 E0 A1 B1 1A E1 00 00 00 00 00 00 00 00 |................|   <- 0000
+// 00 00 00 00 00 00 00 00 3E 00 03 00 FE FF 09 00 |........>.......|   <- 0010
+// 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 |................|   <- 0020
+// 01 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 |................|   <- 0030
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0040
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0050
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0060
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0070
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0080
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0090
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00A0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00B0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00C0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00D0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00E0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 00F0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0100
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0110
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0120
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0130
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0140
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0150
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0160
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0170
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0180
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0190
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01A0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01B0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01C0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01D0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01E0
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 01F0

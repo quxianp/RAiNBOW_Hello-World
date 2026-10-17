@@ -3,7 +3,24 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.lz4_binary]
 
-// Hello World!
-// Hello World!
+// LZ4 frame: a four-byte magic, then a frame descriptor of two
+// bytes and an optional header checksum.
+//
+// The descriptor's first byte carries the version in its top
+// nibble, and its bits say what follows -- block independence, and
+// whether a content checksum is present. The reader decides what to
+// expect next from those bits, so they are not decorative.
+//
+// No free text: the rest is compressed. Hello World! is here.
+//
+// lz4_binary: 7 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 04 22 4D 18 60 40 20                            |."M.`@ |   <- 0000

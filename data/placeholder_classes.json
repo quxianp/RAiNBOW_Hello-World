@@ -1,12 +1,11 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5581,
+  "without_program": 5567,
   "counts": {
-    "binary": 4,
-    "document": 45,
+    "document": 36,
     "esolang": 3279,
-    "program": 156,
+    "program": 155,
     "unknown": 2097
   },
   "reasons": {
@@ -16,19 +15,18 @@
     "group:chinese": 49,
     "group:education": 23,
     "group:golf": 19,
-    "group:markup_data": 18,
     "group:template": 12,
     "group:data_science": 10,
+    "group:markup_data": 9,
     "group:academic": 8,
     "group:functional": 8,
     "group:quantum": 8,
     "group:logic_constraint": 7,
-    "group:assembly_dialects": 6,
     "group:ancient": 6,
     "group:misc": 6,
     "group:dsl_query": 5,
+    "group:assembly_dialects": 5,
     "group:concurrency": 5,
-    "group:binary_data": 4,
     "group:build_config": 4,
     "group:shell_os": 3,
     "group:blockchain": 2,
@@ -36,58 +34,6 @@
     "type:programming": 1
   },
   "files": [
-    {
-      "language": "7z binary",
-      "path": "hello/full/7z-binary/hello.7z_binary",
-      "extension": ".7z_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "LZ4 binary",
-      "path": "hello/full/lz4-binary/hello.lz4_binary",
-      "extension": ".lz4_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "RAR binary",
-      "path": "hello/full/rar-binary/hello.rar_binary",
-      "extension": ".rar_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "Zstandard binary",
-      "path": "hello/full/zstandard-binary/hello.zstandard_binary",
-      "extension": ".zstandard_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
     {
       "language": "Ant",
       "path": "hello/full/ant/hello.ant",
@@ -114,19 +60,6 @@
       "source": [
         "wikipedia",
         "builtin:template"
-      ]
-    },
-    {
-      "language": "AVIF",
-      "path": "hello/full/avif/hello.avif",
-      "extension": ".avif",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
       ]
     },
     {
@@ -159,19 +92,6 @@
       "language": "CHM",
       "path": "hello/full/chm/hello.chm",
       "extension": ".chm",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
-      "language": "DOC",
-      "path": "hello/full/doc/hello.doc",
-      "extension": ".doc",
       "kind": "document",
       "reason": "group:markup_data",
       "groups": [
@@ -235,19 +155,6 @@
       ]
     },
     {
-      "language": "GIF",
-      "path": "hello/full/gif/hello.gif",
-      "extension": ".gif",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
       "language": "Go Modules",
       "path": "hello/full/go-modules/hello.go_modules",
       "extension": ".go_modules",
@@ -271,19 +178,6 @@
       ],
       "source": [
         "builtin:data_science"
-      ]
-    },
-    {
-      "language": "HEIF",
-      "path": "hello/full/heif/hello.heif",
-      "extension": ".heif",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
       ]
     },
     {
@@ -316,19 +210,6 @@
       "language": "HTML5",
       "path": "hello/full/html5/hello.html5",
       "extension": ".html5",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
-      "language": "ICO",
-      "path": "hello/full/ico/hello.ico",
-      "extension": ".ico",
       "kind": "document",
       "reason": "group:markup_data",
       "groups": [
@@ -392,32 +273,6 @@
       ]
     },
     {
-      "language": "JXL",
-      "path": "hello/full/jxl/hello.jxl",
-      "extension": ".jxl",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
-      "language": "MSI",
-      "path": "hello/full/msi/hello.msi",
-      "extension": ".msi",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
       "language": "Nivo",
       "path": "hello/full/nivo/hello.nivo",
       "extension": ".nivo",
@@ -467,20 +322,6 @@
       ],
       "source": [
         "builtin:template"
-      ]
-    },
-    {
-      "language": "PNG",
-      "path": "hello/full/png/hello.png",
-      "extension": ".png",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "awesome_fp",
-        "builtin:markup_data"
       ]
     },
     {
@@ -644,19 +485,6 @@
       "language": "WebP",
       "path": "hello/full/webp/hello.webp",
       "extension": ".webp",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
-      ]
-    },
-    {
-      "language": "XLS",
-      "path": "hello/full/xls/hello.xls",
-      "extension": ".xls",
       "kind": "document",
       "reason": "group:markup_data",
       "groups": [
@@ -37736,21 +37564,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "LLVM Bitcode",
-      "path": "hello/full/llvm-bitcode/hello.llvm_bitcode",
-      "extension": ".llvm_bitcode",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects",
-        "binary_data"
-      ],
-      "source": [
-        "builtin:assembly_dialects",
-        "builtin:binary_data"
       ]
     },
     {

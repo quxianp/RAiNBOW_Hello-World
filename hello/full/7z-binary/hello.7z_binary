@@ -3,7 +3,24 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.7z_binary]
 
-// Hello World!
-// Hello World!
+// 7z: a six-byte signature and a start header of version, a CRC,
+// and the offset, size and CRC of the next header -- all little
+// endian.
+//
+// The payload is compressed blocks, so there is nowhere to put a
+// greeting. Hello World! is in this comment, and the checker says
+// exactly that rather than finding one.
+//
+// 7z_binary: 34 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 37 7A BC AF 27 1C 00 00 04 00 00 00 00 00 20 00 |7z..'......... .|   <- 0000
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0010
+// 00 00                                           |..|   <- 0020

@@ -382,6 +382,212 @@ def build_ans() -> bytes:
     return GREETING.ljust(80, b" ") + b"\x0c"
 
 
+# --------------------------------------------------------------------------
+# image containers
+#
+# PNG and GIF are the two worth doing properly, and both have a field the format
+# itself reserves for arbitrary text: a tEXt chunk and a comment extension. That
+# makes the greeting a real part of the file rather than a note about it.
+# --------------------------------------------------------------------------
+
+def _chunk(ctype: bytes, body: bytes) -> bytes:
+    """One PNG chunk: length, type, data, CRC. The CRC covers type and data."""
+    import zlib
+    return (struct.pack(">I", len(body)) + ctype + body
+            + struct.pack(">I", zlib.crc32(ctype + body) & 0xFFFFFFFF))
+
+
+def build_png() -> bytes:
+    """A valid 1x1 PNG with the greeting in a tEXt chunk.
+
+    tEXt is keyword\0text: the keyword is 1-79 printable Latin-1 characters, a
+    NUL, and then the text. That is the format's own answer to "somewhere to
+    put a caption", so the greeting belongs there rather than in a comment above
+    the file. The image data is a real zlib stream, because zlib is in the
+    standard library and a PNG whose IDAT is not deflate is not a PNG.
+    """
+    import zlib
+    ihdr = struct.pack(">IIBBBBB", 1, 1, 8, 2, 0, 0, 0)   # 1x1, 8-bit RGB
+    raw = zlib.compress(b"\x00\x00\x00\x00\x00")        # one scanline, black
+    out = b"\x89PNG\r\n\x1a\n"
+    out += _chunk(b"IHDR", ihdr)
+    out += _chunk(b"tEXt", b"Description\x00" + GREETING)
+    out += _chunk(b"IDAT", raw)
+    out += _chunk(b"IEND", b"")
+    return out
+
+
+def build_gif() -> bytes:
+    """A valid GIF89a with the greeting in a comment extension.
+
+    A comment extension is 0x21 0xFE followed by a sub-block chain: lengths of
+    the data, then the data, then a zero length to end the chain. It exists
+    precisely so a file can carry a caption, which makes it the same idea as a
+    PNG tEXt chunk.
+    """
+    text = GREETING
+    out = bytearray(b"GIF89a")
+    out += struct.pack("<HHBBB", 1, 1, 0xF0, 0, 0)   # 1x1, global colour table
+    out += bytes((0x00, 0x00, 0x00))                   # colour 0: black
+    out += b"\x21\xFE"                               # extension, comment
+    out += bytes((len(text),)) + text + b"\x00"        # the chain
+    out += b"\x2C" + struct.pack("<HHHHB", 0, 0, 1, 1, 0)  # image descriptor
+    out += bytes((0x02,))                              # LZW minimum code size
+    out += b"\x02\x4C\x01\x00"                      # clear, 1, end
+    out += b"\x3B"                                    # trailer
+    return bytes(out)
+
+
+def build_ico() -> bytes:
+    """An ICO: a six-byte directory and one sixteen-byte entry.
+
+    The entry describes the image's extent with two 32-bit fields into this
+    same file, so both have to be right or the reader lands somewhere random.
+    """
+    png = build_png()
+    offset = 6 + 16
+    return (struct.pack("<HHH", 0, 1, 1)
+            + struct.pack("<BBBBHHII", 1, 1, 0, 0, 1, 32, len(png), offset)
+            + png)
+
+
+def _box(btype: bytes, body: bytes) -> bytes:
+    """One ISOBMFF box: a 4-byte size, a 4-byte type, then the body.
+
+    The size includes the header, which is the format's one quirk: the reader
+    has to know the type before it can decide whether a 64-bit size follows.
+    """
+    return struct.pack(">I", len(body) + 8) + btype + body
+
+
+def build_avif() -> bytes:
+    """An ISOBMFF file with the greeting in a `free` box.
+
+    `ftyp` names the brand and the compatible brands; `free` is the format's own
+    skip space, and putting bytes there is legitimate -- that is what it is for.
+    A file whose only payload is a free box is not a playable image and does not
+    claim to be: the comment says so.
+    """
+    out = _box(b"ftyp", b"avif" + struct.pack(">I", 0) + b"avif" + b"mif1")
+    out += _box(b"free", GREETING)
+    return out
+
+
+def build_heif() -> bytes:
+    """As AVIF, with HEIC's brand."""
+    out = _box(b"ftyp", b"heic" + struct.pack(">I", 0) + b"heic" + b"mif1")
+    out += _box(b"free", GREETING)
+    return out
+
+
+def build_jxl() -> bytes:
+    """A JPEG XL container, which is ISOBMFF with a JXL signature box."""
+    out = _box(b"JXL ", b"\x00\x00\x00\x0cJXL \r\n\x87\n")
+    out += _box(b"free", GREETING)
+    return out
+
+
+def build_ole() -> bytes:
+    """An OLE2 compound file header -- and nowhere to put a greeting.
+
+    This is the format behind .doc, .xls and .msi, and it is eight bytes of
+    signature followed by a sector-allocated directory. There is no name, no
+    comment and no free space at all: a compound file is a filesystem image
+    with its own allocation table. So the checker confirms the signature and the
+    file explains the absence, which is the honest answer for three entries
+    rather than a manufactured one.
+    """
+    head = bytearray(512)
+    head[0:8] = b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1"
+    struct.pack_into("<H", head, 24, 0x003E)   # minor version
+    struct.pack_into("<H", head, 26, 3)        # major version
+    struct.pack_into("<H", head, 28, 0xFFFE)    # little endian
+    struct.pack_into("<H", head, 30, 9)        # sector shift: 512 bytes
+    struct.pack_into("<I", head, 44, 1)        # number of FAT sectors
+    struct.pack_into("<I", head, 48, 1)        # first directory sector
+    struct.pack_into("<I", head, 56, 0x1000)   # mini stream cutoff
+    return bytes(head)
+
+
+def build_7z() -> bytes:
+    """A 7z start header. The signature is six bytes and the header is six more.
+
+    Everything after the magic is a version, a CRC of the next-header record, and
+    that record's offset, size and CRC -- all of them little endian and all of
+    them relative to the start of the file.
+    """
+    out = bytearray(b"\x37\x7a\xbc\xaf\x27\x1c")
+    out += struct.pack("<HH", 0, 4)      # format version 0.4
+    out += struct.pack("<I", 0)          # start header CRC
+    out += struct.pack("<Q", 32)         # next header offset
+    out += struct.pack("<Q", 0)          # next header size
+    out += struct.pack("<I", 0)          # next header CRC
+    return bytes(out.ljust(32, b"\x00"))
+
+
+def build_rar() -> tuple:
+    """A RAR marker block: the marker, then a CRC, a type byte and flags.
+
+    RAR4 and RAR5 have different marker blocks; this is RAR4's, and its type
+    byte is 0x73 for a main archive header.
+    """
+    out = bytearray(b"Rar!\x1a\x07\x00")
+    out += struct.pack("<H", 0x90CF)   # header CRC
+    out += bytes((0x73,))              # MAIN_HEAD
+    out += struct.pack("<H", 0x0000)   # flags
+    out += struct.pack("<H", 15)       # header size, including the reserved
+    out += struct.pack("<H", 0)        # reserved: two bytes, specified as zero
+    return bytes(out)
+
+
+def build_lz4() -> bytes:
+    """An LZ4 frame: the magic and the frame descriptor.
+
+    The descriptor's version byte carries the version in its top nibble, and a
+    bit in it says whether a content checksum follows. Both matter, because the
+    reader uses them to decide what to expect next.
+    """
+    magic = b"\x04\x22\x4d\x18"
+    flg = 0b01100000            # version 01, block independence, no checksum
+    bd = 0b01000000             # 64 KB maximum block size
+    # The optional header checksum follows the descriptor, and is the XOR of
+    # the descriptor's two bytes -- one byte, computed rather than remembered.
+    hc = flg ^ bd
+    return magic + bytes((flg, bd, hc))
+
+
+def build_zstd() -> bytes:
+    """A Zstandard frame: the magic and the frame header descriptor.
+
+    One byte carries the descriptor, the next two are the window size, and the
+    frame content size follows if the single-segment flag is set.
+    """
+    magic = b"\x28\xb5\x2f\xfd"
+    fhd = 0b10100000            # frame content size flag 1, no checksum, no dict
+    return magic + bytes((fhd,)) + GREETING
+
+
+def build_llvm_bitcode() -> bytes:
+    """A bitcode wrapper: 0x0b 0x17, the BC magic, four offsets, a version.
+
+    The four offsets are byte positions *relative to the version word*, which is
+    the detail that makes a hand-built wrapper point somewhere useless and still
+    look plausible.
+    """
+    out = bytearray(b"\x0b\x17")
+    out += b"BC\xc0\xde"
+    out += struct.pack("<IIII", 0, 0, 0, 0)   # offsets, patched below
+    version_pos = len(out)
+    out += struct.pack("<I", 0)               # bitcode version
+    out += GREETING
+    # offset of the bitcode block, relative to the version word
+    relative = len(GREETING)
+    out[8:12] = struct.pack("<I", relative)
+    out[12:16] = struct.pack("<I", relative)
+    out[16:20] = struct.pack("<I", version_pos + 4)
+    return bytes(out)
+
+
 BUILDERS = {
     "coff": ("COFF", build_coff),
     "dwarf": ("DWARF", build_dwarf),
@@ -397,6 +603,21 @@ BUILDERS = {
     "dex": ("Dalvik Bytecode", build_dex),
     "wasm_binary": ("WebAssembly Binary", build_wasm),
     "ans": ("ANS", build_ans),
+    # image containers, compound files and archives
+    "png": ("PNG", build_png),
+    "gif": ("GIF", build_gif),
+    "ico": ("ICO", build_ico),
+    "avif": ("AVIF", build_avif),
+    "heif": ("HEIF", build_heif),
+    "jxl": ("JXL", build_jxl),
+    "doc": ("DOC", build_ole),
+    "xls": ("XLS", build_ole),
+    "msi": ("MSI", build_ole),
+    "7z_binary": ("7z binary", build_7z),
+    "rar_binary": ("RAR binary", build_rar),
+    "lz4_binary": ("LZ4 binary", build_lz4),
+    "zstandard_binary": ("Zstandard binary", build_zstd),
+    "llvm_bitcode": ("LLVM Bitcode", build_llvm_bitcode),
 }
 
 
@@ -485,6 +706,167 @@ def preamble(key: str, buf: bytes) -> str:
             "// whole of its free-text budget, so `Hello World!` gets the ten\n"
             "// characters that fit. The date in bytes 2-4 is there because the\n"
             "// format requires it, and the header ends with a 0x0D.\n"
+            "//\n"
+        ),
+        "png": (
+            "// PNG: eight signature bytes, then length-prefixed typed chunks,\n"
+            "// each ending in a CRC over its type and data.\n"
+            "//\n"
+            "// There is a chunk for exactly this. tEXt is keyword NUL text --\n"
+            "// the keyword is 1-79 printable Latin-1 characters -- and it exists\n"
+            "// so a file can carry a caption. That is where the greeting goes,\n"
+            "// not in a comment above the file: the format has a field and this\n"
+            "// is what it is for.\n"
+            "//\n"
+            "// The IDAT here is a real zlib stream, because zlib is in the\n"
+            "// standard library and a PNG whose image data is not deflate is\n"
+            "// not a PNG. The CRCs are computed, not transcribed -- every one of\n"
+            "// them is verified by scripts/verify_encodings.py.\n"
+            "//\n"
+        ),
+        "gif": (
+            "// GIF: a six-byte signature, a logical screen descriptor, then a\n"
+            "// chain of blocks, and a 0x3B trailer.\n"
+            "//\n"
+            "// The comment extension -- 0x21 0xFE, then a sub-block chain --\n"
+            "// exists to carry text, and it is the same idea as a PNG tEXt\n"
+            "// chunk. The chain is length-prefixed: a length byte, that many\n"
+            "// bytes, and a zero length to end it. Getting that wrong leaves the\n"
+            "// reader in the middle of the file, which is why the trailer byte\n"
+            "// is checked rather than assumed.\n"
+            "//\n"
+        ),
+        "ico": (
+            "// ICO: a six-byte directory -- reserved, type, count -- and then\n"
+            "// one sixteen-byte entry per image.\n"
+            "//\n"
+            "// The entry describes the image with two 32-bit fields into this\n"
+            "// same file: its size and its offset. Both have to be right, or the\n"
+            "// reader lands somewhere random and reports a corrupt icon. The\n"
+            "// image itself here is the PNG above, which is the usual case since\n"
+            "// Vista and one format covers every size.\n"
+            "//\n"
+            "// There is no name and no comment in the format, so `Hello World!`\n"
+            "// is in this comment rather than in a field the reader would\n"
+            "// discard -- and it is in the embedded PNG too, in a tEXt chunk.\n"
+            "//\n"
+        ),
+        "avif": (
+            "// AVIF, HEIF and a JPEG XL container are all ISO base media file\n"
+            "// format: a flat list of boxes, each a 4-byte size, a 4-byte type,\n"
+            "// and that many bytes.\n"
+            "//\n"
+            "// The quirk is that the size includes the header, so a reader has to\n"
+            "// read the type before it can decide whether a 64-bit size follows.\n"
+            "//\n"
+            "// The greeting goes in a `free` box, which is the format's own skip\n"
+            "// space -- the same role as a PNG tEXt chunk and a GIF comment\n"
+            "// extension, expressed as a box.\n"
+            "//\n"
+            "// Hello World! is in that box. The rest of this file is not a\n"
+            "// playable image and does not claim to be.\n"
+            "//\n"
+        ),
+        "heif": (
+            "// HEIF is ISOBMFF with HEIC's brand, so everything AVIF says about\n"
+            "// boxes applies; only the four brand bytes in ftyp differ. The\n"
+            "// greeting is in the same `free` box, for the same reason.\n"
+            "//\n"
+        ),
+        "jxl": (
+            "// JPEG XL has two container forms. The naked codestream starts with\n"
+            "// FF 0A; the container form is ISOBMFF and starts with a `JXL `\n"
+            "// signature box, which is why this file does not start with ftyp and\n"
+            "// why the checker is told which box it is allowed to see first.\n"
+            "//\n"
+            "// Hello World! is in a `free` box, which is this format's own\n"
+            "// skip space and the same role a PNG tEXt chunk plays.\n"
+            "//\n"
+        ),
+        "doc": (
+            "// OLE2 compound file: the eight-byte signature, then a\n"
+            "// sector-allocated directory that this format calls a filesystem.\n"
+            "//\n"
+            "// The same eight bytes are the start of a .doc, an .xls and an\n"
+            "// .msi, and the format distinguishes them by what is inside the\n"
+            "// directory rather than by anything in the header.\n"
+            "//\n"
+            "// There is no greeting in this file, and the reason is worth one\n"
+            "// sentence: a compound file has no name, no comment and no free\n"
+            "// space at all. Every byte belongs to the allocation table or to a\n"
+            "// stream, and a byte that belongs to neither makes the file corrupt.\n"
+            "//\n"
+            "// So this one is a correct header with nothing to say, which is the\n"
+            "// honest answer for three entries rather than a manufactured one.\n"
+            "//\n"
+            "// Hello World!\n"
+            "//\n"
+        ),
+        "xls": (
+            "// OLE2 compound file -- the same header as a .doc and a .msi. See\n"
+            "// hello.doc for why there is no greeting in it.\n"
+            "//\n"
+            "// Hello World!\n"
+            "//\n"
+        ),
+        "msi": (
+            "// OLE2 compound file -- the same header as a .doc and a .xls. A\n"
+            "// Windows Installer package is a compound file holding several\n"
+            "// streams rather than one. See hello.doc for why there is no\n"
+            "// greeting in it.\n"
+            "//\n"
+            "// Hello World!\n"
+            "//\n"
+        ),
+        "7z_binary": (
+            "// 7z: a six-byte signature and a start header of version, a CRC,\n"
+            "// and the offset, size and CRC of the next header -- all little\n"
+            "// endian.\n"
+            "//\n"
+            "// The payload is compressed blocks, so there is nowhere to put a\n"
+            "// greeting. Hello World! is in this comment, and the checker says\n"
+            "// exactly that rather than finding one.\n"
+            "//\n"
+        ),
+        "rar_binary": (
+            "// RAR: a seven-byte marker, then the marker block's own header -- a\n"
+            "// CRC, a type byte, flags, a header size and two reserved bytes.\n"
+            "//\n"
+            "// No free text, for the same reason as 7z: the rest is compressed.\n"
+            "// Hello World! is here instead.\n"
+            "//\n"
+        ),
+        "lz4_binary": (
+            "// LZ4 frame: a four-byte magic, then a frame descriptor of two\n"
+            "// bytes and an optional header checksum.\n"
+            "//\n"
+            "// The descriptor's first byte carries the version in its top\n"
+            "// nibble, and its bits say what follows -- block independence, and\n"
+            "// whether a content checksum is present. The reader decides what to\n"
+            "// expect next from those bits, so they are not decorative.\n"
+            "//\n"
+            "// No free text: the rest is compressed. Hello World! is here.\n"
+            "//\n"
+        ),
+        "zstandard_binary": (
+            "// Zstandard frame: the four-byte magic 28 B5 2F FD and a frame\n"
+            "// header descriptor whose byte says whether a content size follows.\n"
+            "//\n"
+            "// No free text: the rest is compressed. Hello World! is here.\n"
+            "//\n"
+        ),
+        "llvm_bitcode": (
+            "// LLVM bitcode, in the wrapper form llvm-as produces by default: the\n"
+            "// two bytes 0B 17, the bitstream's own BC C0 DE magic at offset two,\n"
+            "// four offsets, and a version word.\n"
+            "//\n"
+            "// The detail that matters is that the four offsets are byte\n"
+            "// positions *relative to the version word*, so a hand-built wrapper\n"
+            "// points somewhere useless and still looks plausible. Reading the\n"
+            "// BC magic at offset four rather than two is right by exactly two\n"
+            "// bytes and fails on every real file.\n"
+            "//\n"
+            "// Hello World! is the bitcode block the offsets point at.\n"
             "//\n"
         ),
         "dos_exe": (

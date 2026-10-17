@@ -3,7 +3,34 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.ico]
 
-// Hello World!
-// Hello World!
+// ICO: a six-byte directory -- reserved, type, count -- and then
+// one sixteen-byte entry per image.
+//
+// The entry describes the image with two 32-bit fields into this
+// same file: its size and its offset. Both have to be right, or the
+// reader lands somewhere random and reports a corrupt icon. The
+// image itself here is the PNG above, which is the usual case since
+// Vista and one format covers every size.
+//
+// There is no name and no comment in the format, so `Hello World!`
+// is in this comment rather than in a field the reader would
+// discard -- and it is in the embedded PNG too, in a tEXt chunk.
+//
+// ico: 126 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 00 00 01 00 01 00 01 01 00 00 01 00 20 00 68 00 |............ .h.|   <- 0000
+// 00 00 16 00 00 00 89 50 4E 47 0D 0A 1A 0A 00 00 |.......PNG......|   <- 0010
+// 00 0D 49 48 44 52 00 00 00 01 00 00 00 01 08 02 |..IHDR..........|   <- 0020
+// 00 00 00 90 77 53 DE 00 00 00 18 74 45 58 74 44 |....wS.....tEXtD|   <- 0030
+// 65 73 63 72 69 70 74 69 6F 6E 00 48 65 6C 6C 6F |escription.Hello|   <- 0040
+// 20 57 6F 72 6C 64 21 5D CC 10 C2 00 00 00 0B 49 | World!].......I|   <- 0050
+// 44 41 54 78 9C 63 60 00 02 00 00 05 00 01 7A 5E |DATx.c`.......z^|   <- 0060
+// AB 3F 00 00 00 00 49 45 4E 44 AE 42 60 82       |.?....IEND.B`.|   <- 0070

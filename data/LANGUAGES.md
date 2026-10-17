@@ -9,14 +9,14 @@ repository but four, and only one of them is unfinished work.
 
 | section | files |
 |---|---:|
-| Carrying a program | 1,901 |
+| Carrying a program | 1,914 |
 | Esoteric languages with no canonical Hello World | 3,279 |
-| Documents and data formats, where the content is the answer | 45 |
-| Binary formats: a magic number and where the greeting would go | 4 |
+| Documents and data formats, where the content is the answer | 36 |
+| Binary formats: a magic number and where the greeting would go | 0 |
 | Index entries that are not languages | 2,097 |
 | **total** | **7,326** |
 
-## Carrying a program (1,901)
+## Carrying a program (1,914)
 
 | language | extension | file |
 |---|---|---|
@@ -53,6 +53,7 @@ repository but four, and only one of them is unfinished work.
 | 65C02 Assembly | `.65c02_assembly` | `hello/full/65c02-assembly/hello.65c02_assembly` |
 | 68k Assembly | `.68k_assembly` | `hello/full/68k-assembly/hello.68k_assembly` |
 | Raku | `.6pl` | `hello/core/raku/hello.6pl` |
+| 7z binary | `.7z_binary` | `hello/full/7z-binary/hello.7z_binary` |
 | 80486 Assembly | `.80486_assembly` | `hello/full/80486-assembly/hello.80486_assembly` |
 | 8051 Assembly | `.8051_assembly` | `hello/full/8051-assembly/hello.8051_assembly` |
 | 8080 Assembly | `.8080_assembly` | `hello/full/8080-assembly/hello.8080_assembly` |
@@ -163,6 +164,7 @@ repository but four, and only one of them is unfinished work.
 | Augeas | `.aug` | `hello/core/augeas/hello.aug` |
 | Automake | `.automake` | `hello/full/automake/hello.automake` |
 | Avro IDL | `.avdl` | `hello/core/avro-idl/hello.avdl` |
+| AVIF | `.avif` | `hello/full/avif/hello.avif` |
 | AVR32 Assembly | `.avr32_assembly` | `hello/full/avr32-assembly/hello.avr32_assembly` |
 | AVR Assembly | `.avr_assembly` | `hello/full/avr-assembly/hello.avr_assembly` |
 | Avro | `.avro` | `hello/full/avro/hello.avro` |
@@ -462,6 +464,7 @@ repository but four, and only one of them is unfinished work.
 | DLX | `.dlx` | `hello/full/dlx/hello.dlx` |
 | DM | `.dm` | `hello/core/dm/hello.dm` |
 | Stata | `.do` | `hello/core/stata/hello.do` |
+| DOC | `.doc` | `hello/full/doc/hello.doc` |
 | Dockerfile | `.dockerfile` | `hello/core/dockerfile/hello.dockerfile` |
 | DOS executable | `.dos_executable` | `hello/full/dos-executable/hello.dos_executable` |
 | Graphviz (DOT) | `.dot` | `hello/core/graphviz-dot/hello.dot` |
@@ -636,6 +639,7 @@ repository but four, and only one of them is unfinished work.
 | Gephi | `.gephi` | `hello/full/gephi/hello.gephi` |
 | Grammatical Framework | `.gf` | `hello/core/grammatical-framework/hello.gf` |
 | ggplot2 | `.ggplot2` | `hello/full/ggplot2/hello.ggplot2` |
+| GIF | `.gif` | `hello/full/gif/hello.gif` |
 | GIF binary | `.gif_binary` | `hello/full/gif-binary/hello.gif_binary` |
 | Git Config | `.gitconfig` | `hello/core/git-config/hello.gitconfig` |
 | Ignore List | `.gitignore` | `hello/core/ignore-list/hello.gitignore` |
@@ -693,6 +697,7 @@ repository but four, and only one of them is unfinished work.
 | HolyC | `.hc` | `hello/core/holyc/hello.hc` |
 | HCL | `.hcl` | `hello/core/hcl/hello.hcl` |
 | HCL2 | `.hcl2` | `hello/full/hcl2/hello.hcl2` |
+| HEIF | `.heif` | `hello/full/heif/hello.heif` |
 | Helpfile | `.helpfile` | `hello/full/helpfile/hello.helpfile` |
 | Hex dump | `.hex_dump` | `hello/full/hex-dump/hello.hex_dump` |
 | Hexadecimal | `.hexadecimal` | `hello/full/hexadecimal/hello.hexadecimal` |
@@ -737,6 +742,7 @@ repository but four, and only one of them is unfinished work.
 | Slice | `.ice` | `hello/core/slice/hello.ice` |
 | iCE | `.ice` | `hello/full/ice/hello.ice` |
 | Clean | `.icl` | `hello/core/clean/hello.icl` |
+| ICO | `.ico` | `hello/full/ico/hello.ico` |
 | Icon | `.icon` | `hello/full/icon/hello.icon` |
 | iCalendar | `.ics` | `hello/core/icalendar/hello.ics` |
 | Idesign | `.idesign` | `hello/full/idesign/hello.idesign` |
@@ -828,6 +834,7 @@ repository but four, and only one of them is unfinished work.
 | JUMP | `.jump` | `hello/full/jump/hello.jump` |
 | Just | `.just` | `hello/core/just/hello.just` |
 | JVM bytecode | `.jvm_bytecode` | `hello/full/jvm-bytecode/hello.jvm_bytecode` |
+| JXL | `.jxl` | `hello/full/jxl/hello.jxl` |
 | KCL | `.k` | `hello/core/kcl/hello.k` |
 | KFramework | `.k` | `hello/core/kframework/hello.k` |
 | k | `.k` | `hello/full/k/hello.k` |
@@ -927,6 +934,7 @@ repository but four, and only one of them is unfinished work.
 | LabVIEW | `.lvproj` | `hello/core/labview/hello.lvproj` |
 | LilyPond | `.ly` | `hello/core/lilypond/hello.ly` |
 | Lynx | `.lynx` | `hello/full/lynx/hello.lynx` |
+| LZ4 binary | `.lz4_binary` | `hello/full/lz4-binary/hello.lz4_binary` |
 | LZ77 | `.lz77` | `hello/full/lz77/hello.lz77` |
 | LZ78 | `.lz78` | `hello/full/lz78/hello.lz78` |
 | LZW | `.lzw` | `hello/full/lzw/hello.lzw` |
@@ -1053,6 +1061,7 @@ repository but four, and only one of them is unfinished work.
 | MS-DOS | `.ms_dos` | `hello/full/ms-dos/hello.ms_dos` |
 | OMNeT++ MSG | `.msg` | `hello/core/omnet++-msg/hello.msg` |
 | ROS Interface | `.msg` | `hello/core/ros-interface/hello.msg` |
+| MSI | `.msi` | `hello/full/msi/hello.msi` |
 | MSP430 Assembly | `.msp430_assembly` | `hello/full/msp430-assembly/hello.msp430_assembly` |
 | CartoCSS | `.mss` | `hello/full/cartocss/hello.mss` |
 | MSX BASIC | `.msx_basic` | `hello/full/msx-basic/hello.msx_basic` |
@@ -1249,6 +1258,7 @@ repository but four, and only one of them is unfinished work.
 | PLSQL | `.pls` | `hello/core/plsql/hello.pls` |
 | Plutus | `.plutus` | `hello/full/plutus/hello.plutus` |
 | Promela | `.pml` | `hello/core/promela/hello.pml` |
+| PNG | `.png` | `hello/full/png/hello.png` |
 | PNG binary | `.png_binary` | `hello/full/png-binary/hello.png_binary` |
 | PNM | `.pnm` | `hello/full/pnm/hello.pnm` |
 | PNPM | `.pnpm` | `hello/full/pnpm/hello.pnpm` |
@@ -1359,6 +1369,7 @@ repository but four, and only one of them is unfinished work.
 | R Books | `.r_books` | `hello/full/r-books/hello.r_books` |
 | R language | `.r_language` | `hello/full/r-language/hello.r_language` |
 | RAML | `.raml` | `hello/core/raml/hello.raml` |
+| RAR binary | `.rar_binary` | `hello/full/rar-binary/hello.rar_binary` |
 | RAScript | `.rascript` | `hello/core/rascript/hello.rascript` |
 | Raw token data | `.raw` | `hello/full/raw-token-data/hello.raw` |
 | Raw bytes | `.raw_bytes` | `hello/full/raw-bytes/hello.raw_bytes` |
@@ -1801,6 +1812,7 @@ repository but four, and only one of them is unfinished work.
 | X BitMap | `.xbm` | `hello/full/x-bitmap/hello.xbm` |
 | XC | `.xc` | `hello/core/xc/hello.xc` |
 | XCompose | `.xcompose` | `hello/full/xcompose/hello.xcompose` |
+| XLS | `.xls` | `hello/full/xls/hello.xls` |
 | Logos | `.xm` | `hello/full/logos/hello.xm` |
 | Ant Build System | `.xml` | `hello/core/ant-build-system/ant.xml` |
 | XML | `.xml` | `hello/core/xml/hello.xml` |
@@ -1854,6 +1866,7 @@ repository but four, and only one of them is unfinished work.
 | Zone | `.zone` | `hello/full/zone/hello.zone` |
 | ZenScript | `.zs` | `hello/core/zenscript/hello.zs` |
 | ZSH Plugins | `.zsh_plugins` | `hello/full/zsh-plugins/hello.zsh_plugins` |
+| Zstandard binary | `.zstandard_binary` | `hello/full/zstandard-binary/hello.zstandard_binary` |
 | ZX | `.zx` | `hello/full/zx/hello.zx` |
 | 中关村编程语言 | `.中关村编程语言` | `hello/full/中关村编程语言/hello.中关村编程语言` |
 | 中华编程 | `.中华编程` | `hello/full/中华编程/hello.中华编程` |
@@ -5206,40 +5219,32 @@ repository but four, and only one of them is unfinished work.
 | Zyzzogeton | `.zyzzogeton` | `hello/full/zyzzogeton/hello.zyzzogeton` |
 | ZZZ | `.zzz` | `hello/full/zzz/hello.zzz` |
 
-## Documents and data formats, where the content is the answer (45)
+## Documents and data formats, where the content is the answer (36)
 
 | language | extension | file |
 |---|---|---|
 | Ant | `.ant` | `hello/full/ant/hello.ant` |
 | Apache Velocity | `.apache_velocity` | `hello/full/apache-velocity/hello.apache_velocity` |
-| AVIF | `.avif` | `hello/full/avif/hello.avif` |
 | Bayes | `.bayes` | `hello/full/bayes/hello.bayes` |
 | BSAFE | `.bsafe` | `hello/full/bsafe/hello.bsafe` |
 | CHM | `.chm` | `hello/full/chm/hello.chm` |
-| DOC | `.doc` | `hello/full/doc/hello.doc` |
 | Dot | `.dot` | `hello/full/dot/hello.dot` |
 | EViews | `.eviews` | `hello/full/eviews/hello.eviews` |
 | Fresh | `.fresh` | `hello/full/fresh/hello.fresh` |
 | Gerry | `.gerry` | `hello/full/gerry/hello.gerry` |
-| GIF | `.gif` | `hello/full/gif/hello.gif` |
 | Go Modules | `.go_modules` | `hello/full/go-modules/hello.go_modules` |
 | Gretl | `.gretl` | `hello/full/gretl/hello.gretl` |
-| HEIF | `.heif` | `hello/full/heif/hello.heif` |
 | Helm | `.helm` | `hello/full/helm/hello.helm` |
 | HLJS | `.hljs` | `hello/full/hljs/hello.hljs` |
 | HTML5 | `.html5` | `hello/full/html5/hello.html5` |
-| ICO | `.ico` | `hello/full/ico/hello.ico` |
 | IDA | `.ida` | `hello/full/ida/hello.ida` |
 | Jasp | `.jasp` | `hello/full/jasp/hello.jasp` |
 | JMP | `.jmp` | `hello/full/jmp/hello.jmp` |
 | JPEG | `.jpeg` | `hello/full/jpeg/hello.jpeg` |
-| JXL | `.jxl` | `hello/full/jxl/hello.jxl` |
-| MSI | `.msi` | `hello/full/msi/hello.msi` |
 | Nivo | `.nivo` | `hello/full/nivo/hello.nivo` |
 | Opl | `.opl` | `hello/full/opl/hello.opl` |
 | PDF | `.pdf` | `hello/full/pdf/hello.pdf` |
 | Plotly | `.plotly` | `hello/full/plotly/hello.plotly` |
-| PNG | `.png` | `hello/full/png/hello.png` |
 | Polestar | `.polestar` | `hello/full/polestar/hello.polestar` |
 | PPT | `.ppt` | `hello/full/ppt/hello.ppt` |
 | Qwik | `.qwik` | `hello/full/qwik/hello.qwik` |
@@ -5253,17 +5258,12 @@ repository but four, and only one of them is unfinished work.
 | VNG | `.vng` | `hello/full/vng/hello.vng` |
 | VyPR | `.vypr` | `hello/full/vypr/hello.vypr` |
 | WebP | `.webp` | `hello/full/webp/hello.webp` |
-| XLS | `.xls` | `hello/full/xls/hello.xls` |
 | MiniYAML | `.yaml` | `hello/core/miniyaml/hello.yaml` |
 
-## Binary formats: a magic number and where the greeting would go (4)
+## Binary formats: a magic number and where the greeting would go (0)
 
 | language | extension | file |
 |---|---|---|
-| 7z binary | `.7z_binary` | `hello/full/7z-binary/hello.7z_binary` |
-| LZ4 binary | `.lz4_binary` | `hello/full/lz4-binary/hello.lz4_binary` |
-| RAR binary | `.rar_binary` | `hello/full/rar-binary/hello.rar_binary` |
-| Zstandard binary | `.zstandard_binary` | `hello/full/zstandard-binary/hello.zstandard_binary` |
 
 ## Index entries that are not languages (2,097)
 

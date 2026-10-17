@@ -18,6 +18,7 @@ checker that returns True for anything it cannot parse is not that.
 import importlib.util
 import pathlib
 import struct
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -184,8 +185,17 @@ CHECKS = {
 
 
 def test_every_builder_has_a_checker():
-    assert set(BUILDERS) == set(CHECKS), (
-        f"a format is built but not checked: {set(BUILDERS) - set(CHECKS)}")
+    """Every format the module builds must be one the verifier can check.
+
+    Checked against `build_object_formats.BUILDERS`, which is the single
+    definition. The first version compared two hand-maintained tables in this
+    file, and the two drifted the first time a format was added.
+    """
+    real = _builders().BUILDERS
+    missing = [lang for key, (lang, _) in real.items()
+               if key not in V.OBJECT_FORMATS]
+    assert not missing, f"built but not checkable: {missing}"
+    assert len(real) >= 25, f"only {len(real)} formats built"
 
 
 def test_a_correct_buffer_is_accepted_and_the_greeting_is_found():
@@ -391,6 +401,34 @@ def test_check_encoding_dispatches_on_the_suffix_not_the_language():
     print(f"    (object-format files with real bytes: {routed})")
 
 
+def _builders():
+    """The real builders, loaded once.
+
+    The test file used to carry its own copy of every format's constructor, and
+    the moment a format was added to the real module the copy went stale and the
+    suite reported "png has a route floor and a checker but nothing builds it"
+    -- which is the right complaint about the wrong object. The module is the
+    only definition; the tests build with it.
+    """
+    key = "build_object_formats_under_test"
+    if key in sys.modules:
+        return sys.modules[key]
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        key, ROOT / "scripts" / "build_object_formats.py")
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _build(key: str) -> bytes:
+    fn = _builders().BUILDERS[key][1]
+    # `build_rar` returns bytes directly; the tuple case is a builder that has
+    # nothing else to hand back.
+    return fn[0] if isinstance(fn, tuple) else fn()
+
+
 def test_the_route_floor_is_each_format_s_own_minimum():
     """A shared floor was wrong in both directions, so the floor is data now.
 
@@ -400,23 +438,22 @@ def test_the_route_floor_is_each_format_s_own_minimum():
     be a real file of that format, which is also the length its own checker
     bounds-checks against.
 
-    The buffer handed to the checker is a *truncation* of a valid one, not a
+    The buffer handed to the checker is a *truncation* of a real one, not a
     buffer of zeros. Zeros fail on the magic number -- correctly, but for the
     wrong reason -- which is how a test can assert "it rejected it" forever
     without ever testing the length check it is about.
     """
+    real = _builders().BUILDERS
     for tag, (kind, check, minimum) in V.OBJECT_FORMATS.items():
         assert isinstance(minimum, int) and minimum > 0, tag
-        if tag not in BUILDERS:
-            # An alias (`obj` is `coff`, `tif` is `tiff`) -- it shares the
-            # checker's floor, so testing the canonical tag tested it too.
-            assert any(alias in BUILDERS
-                       and V.OBJECT_FORMATS.get(alias, (None,))[1] is check
-                       for alias in V.OBJECT_FORMATS), (
+        if tag not in real:
+            # An alias -- `obj` is `coff`, `tif` is `tiff`. It shares the
+            # checker's floor, so the canonical tag already tested it.
+            assert any(a in real and V.OBJECT_FORMATS[a][1] is check
+                       for a in V.OBJECT_FORMATS), (
                 f"{tag} has a route floor and a checker but nothing builds it")
             continue
-        short = BUILDERS[tag]()[:minimum - 1]
-        ok, why = check(short)
+        ok, why = check(_build(tag)[:minimum - 1])
         assert not ok, f"{tag} accepted a {minimum - 1}-byte file: {why}"
         assert str(minimum - 1) in why or "short" in why or "need" in why \
             or "empty" in why, (

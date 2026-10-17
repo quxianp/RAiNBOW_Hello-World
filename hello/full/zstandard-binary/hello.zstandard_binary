@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.zstandard_binary]
 
-// Hello World!
-// Hello World!
+// Zstandard frame: the four-byte magic 28 B5 2F FD and a frame
+// header descriptor whose byte says whether a content size follows.
+//
+// No free text: the rest is compressed. Hello World! is here.
+//
+// zstandard_binary: 17 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 28 B5 2F FD A0 48 65 6C 6C 6F 20 57 6F 72 6C 64 |(./..Hello World|   <- 0000
+// 21                                              |!|   <- 0010

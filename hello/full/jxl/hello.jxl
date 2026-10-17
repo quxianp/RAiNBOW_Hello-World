@@ -3,7 +3,24 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.jxl]
 
-// Hello World!
-// Hello World!
+// JPEG XL has two container forms. The naked codestream starts with
+// FF 0A; the container form is ISOBMFF and starts with a `JXL `
+// signature box, which is why this file does not start with ftyp and
+// why the checker is told which box it is allowed to see first.
+//
+// Hello World! is in a `free` box, which is this format's own
+// skip space and the same role a PNG tEXt chunk plays.
+//
+// jxl: 40 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 00 00 00 14 4A 58 4C 20 00 00 00 0C 4A 58 4C 20 |....JXL ....JXL |   <- 0000
+// 0D 0A 87 0A 00 00 00 14 66 72 65 65 48 65 6C 6C |........freeHell|   <- 0010
+// 6F 20 57 6F 72 6C 64 21                         |o World!|   <- 0020

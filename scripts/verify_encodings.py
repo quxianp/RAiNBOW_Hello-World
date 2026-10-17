@@ -647,6 +647,229 @@ def check_flatgeobuf(buf: bytes) -> tuple[bool, str]:
                   f"envelope {xmin}..{xmax} x {ymin}..{ymax}")
 
 
+# --------------------------------------------------------------------------
+# containers: image formats and archives
+#
+# Every one of these has a magic number and a length field, and every one of
+# them also has somewhere a greeting can go -- except the archives, which do
+# not. That distinction is the reason the checkers exist: a file that says "no
+# home for the greeting" and a file that put one in an unspecified field look
+# identical in a hex dump.
+# --------------------------------------------------------------------------
+
+def check_png(buf: bytes) -> tuple[bool, str]:
+    """A PNG: the eight-byte signature, then length-prefixed typed chunks.
+
+    Every chunk carries a 4-byte length, a 4-byte type and a 4-byte CRC, and
+    the CRCs are what make a PNG self-checking -- a chunk whose CRC does not
+    verify is corrupt however good it looks. So this walks the chunk list and
+    verifies all of them rather than trusting the structure.
+    """
+    if len(buf) < 8:
+        return False, f"{len(buf)} bytes; a PNG signature is 8"
+    if buf[:8] != b"\x89PNG\r\n\x1a\n":
+        return False, f"signature {buf[:8]!r}; not a PNG"
+    import zlib
+    pos, chunks = 8, []
+    while pos + 8 <= len(buf):
+        (length,) = struct.unpack_from(">I", buf, pos)
+        ctype = buf[pos + 4:pos + 8]
+        end = pos + 12 + length
+        if end > len(buf):
+            return False, (f"chunk {ctype!r} at offset {pos} claims {length} "
+                           f"data bytes, past the end of a {len(buf)}-byte file")
+        body = buf[pos + 8:pos + 8 + length]
+        (crc,) = struct.unpack_from(">I", buf, pos + 8 + length)
+        if zlib.crc32(ctype + body) & 0xFFFFFFFF != crc:
+            return False, f"chunk {ctype.decode('ascii', 'replace')} has a bad CRC"
+        chunks.append(ctype.decode("ascii", "replace"))
+        pos = end
+        if ctype == b"IEND":
+            break
+    if pos != len(buf):
+        return False, f"{len(buf) - pos} byte(s) after IEND"
+    if "IHDR" not in chunks:
+        return False, "no IHDR; the first chunk of a PNG is always the header"
+    return True, f"signature ok, chunks: {', '.join(chunks)}"
+
+
+def check_gif(buf: bytes) -> tuple[bool, str]:
+    """A GIF: a six-byte signature, a logical screen descriptor, then blocks.
+
+    The block structure is what has to be walked: an extension block is 0x21
+    followed by a label byte, a sub-block chain and a zero terminator, and an
+    image block is 0x2C. Getting the chain length wrong leaves the reader
+    somewhere in the middle of the file, which is why the last byte of a
+    one-frame GIF is 0x3B -- the trailer.
+    """
+    if len(buf) < 13:
+        return False, f"{len(buf)} bytes; a GIF header and screen descriptor is 13"
+    if buf[:6] not in (b"GIF87a", b"GIF89a"):
+        return False, f"signature {buf[:6]!r}; a GIF is GIF87a or GIF89a"
+    width, height = struct.unpack_from("<HH", buf, 6)
+    if width == 0 or height == 0:
+        return False, f"logical screen is {width}x{height}"
+    if buf[-1] != 0x3B:
+        return False, f"the trailer byte is 0x{buf[-1]:02X}, not 0x3B"
+    has_comment = b"Hello World!" in buf
+    return True, (f"{buf[:6].decode()}, {width}x{height}, "
+                  + ("a comment extension carries the greeting"
+                     if has_comment else "no comment extension"))
+
+
+def check_ico(buf: bytes) -> tuple[bool, str]:
+    """An ICO: a six-byte directory and sixteen-byte entries.
+
+    `dwBytesInRes` and `dwImageOffset` are byte counts into the same file, so a
+    directory entry whose extent runs past the end is a file every reader
+    rejects.
+    """
+    if len(buf) < 6:
+        return False, f"{len(buf)} bytes; an ICO directory is 6"
+    reserved, kind, count = struct.unpack_from("<HHH", buf, 0)
+    if reserved != 0:
+        return False, f"reserved word is {reserved}, not 0"
+    if kind not in (1, 2):
+        return False, f"type is {kind}; 1 is an icon, 2 is a cursor"
+    if count == 0:
+        return False, "no images in the directory"
+    if 6 + 16 * count > len(buf):
+        return False, (f"the directory claims {count} images, which needs "
+                       f"{6 + 16 * count} bytes, in a {len(buf)}-byte file")
+    for i in range(count):
+        base = 6 + 16 * i
+        size, offset = struct.unpack_from("<II", buf, base + 8)
+        if offset + size > len(buf):
+            return False, (f"image {i} claims {size} bytes at {offset}, past "
+                           f"the end of a {len(buf)}-byte file")
+    return True, f"type {kind}, {count} image(s), all extents inside the file"
+
+
+def check_isobmff(buf: bytes, first_ok: tuple = ("ftyp",)) -> tuple[bool, str]:
+    """An ISO base media file -- AVIF, HEIF, JXL container, and others.
+
+    The structure is a flat list of boxes: a 4-byte size, a 4-byte type, then
+    that many bytes. The type has to come *before* the size is known to include
+    it, which is the one quirk. A `free` box is the format's own answer to "I
+    need somewhere for bytes I do not otherwise need" and is where the greeting
+    belongs -- the same idea as a PNG `tEXt` chunk and a GIF comment extension,
+    in a different box.
+    """
+    if len(buf) < 8:
+        return False, f"{len(buf)} bytes; a box header is 8"
+    pos, boxes = 0, []
+    while pos + 8 <= len(buf):
+        size, = struct.unpack_from(">I", buf, pos)
+        btype = buf[pos + 4:pos + 8]
+        if size == 0:
+            size = len(buf) - pos          # extends to end of file
+        elif size == 1:
+            if pos + 16 > len(buf):
+                return False, "a 64-bit box size runs past the end of the file"
+            size, = struct.unpack_from(">Q", buf, pos + 8)
+        if size < 8:
+            return False, f"box {btype!r} at {pos} claims {size} bytes, less than its header"
+        if pos + size > len(buf):
+            return False, (f"box {btype!r} at {pos} claims {size} bytes, past "
+                           f"the end of a {len(buf)}-byte file")
+        boxes.append(btype.decode("ascii", "replace"))
+        pos += size
+    if pos != len(buf):
+        return False, f"{len(buf) - pos} trailing byte(s)"
+    # A JPEG XL container is ISOBMFF but starts with a signature box rather
+    # than ftyp, so the allowed first box is a parameter and not an assumption.
+    if not boxes or boxes[0] not in first_ok:
+        want = " or ".join(repr(b) for b in first_ok)
+        return False, f"first box is {boxes[0] if boxes else None!r}, not {want}"
+    return True, ("ftyp ok, boxes: " + ", ".join(boxes)
+                  + (" (a free box carries the greeting)"
+                     if b"Hello World!" in buf else ""))
+
+
+def check_ole(buf: bytes) -> tuple[bool, str]:
+    """An OLE2 compound file: the signature and a sector-allocated directory.
+
+    The signature is eight bytes and is the whole of what distinguishes a .doc
+    from a .xls from a .msi -- all three are compound files, and the format has
+    no place to put a name. So this checker says so, which is the honest answer
+    and the reason these three entries carry an admission rather than a payload.
+    """
+    if len(buf) < 512:
+        return False, f"{len(buf)} bytes; a compound file header is one 512-byte sector"
+    sig = buf[:8]
+    if sig != b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1":
+        return False, f"signature {sig.hex(' ')}; OLE2 is d0 cf 11 e0 a1 b1 1a e1"
+    minor, major = struct.unpack_from("<HH", buf, 24)
+    sector = 1 << struct.unpack_from("<H", buf, 30)[0]
+    if major != 3 and major != 4:
+        return False, f"major version {major}; compound files are 3 or 4"
+    if sector not in (512, 4096):
+        return False, f"sector shift gives {sector} bytes; the format allows 512 or 4096"
+    return True, (f"OLE2 signature, version {major}.{minor}, {sector}-byte "
+                  f"sectors -- no field for prose, by design")
+
+
+def check_archive(buf: bytes, magic: bytes, label: str,
+                  minlen: int = 8) -> tuple[bool, str]:
+    """A magic-number archive: 7z, RAR, LZ4, Zstandard.
+
+    None of these has anywhere to put a greeting -- they are streams of
+    compressed blocks -- so the checker confirms the signature and says how many
+    bytes follow, and the file's comment explains the absence rather than
+    inventing a field. That is the same treatment SHP and FlatGeobuf get.
+    """
+    if len(buf) < minlen:
+        return False, f"{len(buf)} bytes; {label} needs at least {minlen}"
+    if buf[:len(magic)] != magic:
+        return False, (f"signature {buf[:len(magic)].hex(' ')}; {label} "
+                       f"starts with {magic.hex(' ')}")
+    return True, f"{label} signature ok, {len(buf)} bytes, no free-text field"
+
+
+def check_7z(buf: bytes) -> tuple[bool, str]:
+    return check_archive(buf, b"\x37\x7a\xbc\xaf\x27\x1c", "7z", 32)
+
+
+def check_rar(buf: bytes) -> tuple[bool, str]:
+    return check_archive(buf, b"Rar!\x1a\x07\x00", "RAR", 16)
+
+
+def check_lz4(buf: bytes) -> tuple[bool, str]:
+    return check_archive(buf, b"\x04\x22\x4d\x18", "LZ4", 7)
+
+
+def check_zstd(buf: bytes) -> tuple[bool, str]:
+    return check_archive(buf, b"\x28\xb5\x2f\xfd", "Zstandard", 8)
+
+
+def check_llvm_bitcode(buf: bytes) -> tuple[bool, str]:
+    """A raw LLVM bitcode file: the BC magic, then a bitstream.
+
+    A *wrapper* file -- what `llvm-as` produces by default -- starts with
+    0x0B 0x17 then the BC magic, and the wrapper carries four 32-bit offsets
+    and a version word. The offsets are relative to the position of that word,
+    which is the detail that makes a hand-built wrapper land in the wrong place.
+    """
+    if len(buf) < 16:
+        return False, f"{len(buf)} bytes; a bitcode wrapper header is at least 16"
+    if buf[:4] == b"BC\xc0\xde":
+        return True, ("raw bitcode: the BC magic and a bitstream with no "
+                      "wrapper header")
+    if buf[:2] != b"\x0b\x17":
+        return False, f"starts with {buf[:4].hex(' ')}; bitcode is 0b 17 then BC c0 de"
+    # At offset *two*, not four: the wrapper is a two-byte magic and then the
+    # bitstream's own four-byte magic. Reading it at four is right by exactly
+    # two bytes and fails on every real file.
+    if buf[2:6] != b"BC\xc0\xde":
+        return False, f"the wrapper does not contain the BC magic: {buf[2:6].hex(' ')}"
+    offsets = struct.unpack_from("<IIII", buf, 8)
+    version, = struct.unpack_from("<I", buf, 24)
+    if not all(0 <= o <= len(buf) for o in offsets):
+        return False, f"a wrapper offset {offsets} is past the end of a {len(buf)}-byte file"
+    return True, (f"wrapper, {version}, offsets {offsets} within {len(buf)} "
+                  f"bytes")
+
+
 OBJECT_FORMATS = {
     # tag: (kind, checker, the shortest buffer that could be a real file)
     "coff": ("coff", check_coff, 60),
@@ -671,6 +894,21 @@ OBJECT_FORMATS = {
     "wasm_binary": ("wasm", check_wasm, 8),
     "dos_exe": ("dos-exe", check_dos_exe, 28),
     "ans": ("ans", check_ans, 1),
+    # image containers, compound files and archives
+    "png": ("png", check_png, 8),
+    "gif": ("gif", check_gif, 13),
+    "ico": ("ico", check_ico, 6),
+    "avif": ("isobmff", check_isobmff, 8),
+    "heif": ("isobmff", check_isobmff, 8),
+    "jxl": ("isobmff", lambda b: check_isobmff(b, ("ftyp", "JXL ")), 8),
+    "doc": ("ole", check_ole, 512),
+    "xls": ("ole", check_ole, 512),
+    "msi": ("ole", check_ole, 512),
+    "7z_binary": ("7z", check_7z, 32),
+    "rar_binary": ("rar", check_rar, 16),
+    "lz4_binary": ("lz4", check_lz4, 7),
+    "zstandard_binary": ("zstd", check_zstd, 8),
+    "llvm_bitcode": ("llvm-bitcode", check_llvm_bitcode, 16),
 }
 
 
@@ -742,7 +980,9 @@ def candidates() -> list[pathlib.Path]:
                 "motorola s-record", "srec", "messagepack", "cbor", "bson",
                 "coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf",
                 "pe format", "macho", "dalvik bytecode", "webassembly binary",
-                "dos executable", "ans",
+                "dos executable", "ans", "png", "gif", "ico", "avif", "heif",
+                "jxl", "doc", "xls", "msi", "7z binary", "rar binary",
+                "lz4 binary", "zstandard binary", "llvm bitcode",
             }
         )
         if interesting:

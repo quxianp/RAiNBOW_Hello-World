@@ -3,7 +3,34 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=awesome_fp, builtin:markup_data ext=.png]
 
-// Hello World!
-// Hello World!
+// PNG: eight signature bytes, then length-prefixed typed chunks,
+// each ending in a CRC over its type and data.
+//
+// There is a chunk for exactly this. tEXt is keyword NUL text --
+// the keyword is 1-79 printable Latin-1 characters -- and it exists
+// so a file can carry a caption. That is where the greeting goes,
+// not in a comment above the file: the format has a field and this
+// is what it is for.
+//
+// The IDAT here is a real zlib stream, because zlib is in the
+// standard library and a PNG whose image data is not deflate is
+// not a PNG. The CRCs are computed, not transcribed -- every one of
+// them is verified by scripts/verify_encodings.py.
+//
+// png: 104 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 |.PNG........IHDR|   <- 0000
+// 00 00 00 01 00 00 00 01 08 02 00 00 00 90 77 53 |..............wS|   <- 0010
+// DE 00 00 00 18 74 45 58 74 44 65 73 63 72 69 70 |.....tEXtDescrip|   <- 0020
+// 74 69 6F 6E 00 48 65 6C 6C 6F 20 57 6F 72 6C 64 |tion.Hello World|   <- 0030
+// 21 5D CC 10 C2 00 00 00 0B 49 44 41 54 78 9C 63 |!].......IDATx.c|   <- 0040
+// 60 00 02 00 00 05 00 01 7A 5E AB 3F 00 00 00 00 |`.......z^.?....|   <- 0050
+// 49 45 4E 44 AE 42 60 82                         |IEND.B`.|   <- 0060

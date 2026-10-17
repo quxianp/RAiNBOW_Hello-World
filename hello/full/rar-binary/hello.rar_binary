@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.rar_binary]
 
-// Hello World!
-// Hello World!
+// RAR: a seven-byte marker, then the marker block's own header -- a
+// CRC, a type byte, flags, a header size and two reserved bytes.
+//
+// No free text, for the same reason as 7z: the rest is compressed.
+// Hello World! is here instead.
+//
+// rar_binary: 16 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 52 61 72 21 1A 07 00 CF 90 73 00 00 0F 00 00 00 |Rar!.....s......|   <- 0000

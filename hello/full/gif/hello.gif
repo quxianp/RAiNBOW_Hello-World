@@ -3,7 +3,26 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.gif]
 
-// Hello World!
-// Hello World!
+// GIF: a six-byte signature, a logical screen descriptor, then a
+// chain of blocks, and a 0x3B trailer.
+//
+// The comment extension -- 0x21 0xFE, then a sub-block chain --
+// exists to carry text, and it is the same idea as a PNG tEXt
+// chunk. The chain is length-prefixed: a length byte, that many
+// bytes, and a zero length to end it. Getting that wrong leaves the
+// reader in the middle of the file, which is why the trailer byte
+// is checked rather than assumed.
+//
+// gif: 48 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 47 49 46 38 39 61 01 00 01 00 F0 00 00 00 00 00 |GIF89a..........|   <- 0000
+// 21 FE 0C 48 65 6C 6C 6F 20 57 6F 72 6C 64 21 00 |!..Hello World!.|   <- 0010
+// 2C 00 00 00 00 01 00 01 00 00 02 02 4C 01 00 3B |,...........L..;|   <- 0020
