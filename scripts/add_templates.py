@@ -111,7 +111,13 @@ def validate(batch: dict, manifest: dict, have: set[str],
         key = normalise_key(lang)
         if key in have:
             if not replace:
-                dupes.append((lang, "already has a template"))
+                # Distinguish "you need --replace" from "this is already true".
+                # Both used to report the same sentence, which meant a re-run of
+                # an unchanged batch looked like a rejection.
+                if templates_value(src_text(), key) == program:
+                    dupes.append((lang, "identical to what is already there"))
+                else:
+                    dupes.append((lang, "already has a template; pass --replace"))
                 continue
             if templates_value(src_text(), key) == program:
                 dupes.append((lang, "identical to what is already there"))
@@ -219,7 +225,23 @@ def main() -> int:
             print(f"    {lang:34} {why}")
 
     if not accepted:
-        print("\nnothing to add")
+        # Re-applying a batch whose content is already there is a no-op, not a
+        # failure. It happens whenever a commit is rejected late -- the content
+        # is spliced, a test fails, the batch is fixed and re-run -- and the
+        # old behaviour made the fixed re-run report "nothing to add" and exit
+        # 1, which reads like the fix did not work.
+        #
+        # The distinction that matters: "nothing to add because it is all
+        # already there" is success; "nothing to add because everything was
+        # rejected" is not, and says so below.
+        identical = [d for d in dupes if d[1] == "identical to what is already there"]
+        if identical and not rejected:
+            print(f"\nnothing to change: {len(identical)} program(s) already "
+                  f"match the generator")
+            print(f"stage scripts/generate_all_hello.py, hello/, data/ and "
+                  f"logs/ if they differ")
+            return 0
+        print("\nnothing to add", file=sys.stderr)
         return 1
 
     if args.dry_run:
