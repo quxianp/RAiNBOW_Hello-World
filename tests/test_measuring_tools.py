@@ -233,24 +233,29 @@ def test_doc_figure_scanner_finds_a_planted_claim_and_flags_it(tmp_path=None):
         return
     mod = _module("check_doc_figures", ROOT / "scripts" / "check_doc_figures.py")
     import tempfile
+    known = mod.truth()
+    # The correct figure is interpolated, not typed. A first version of this
+    # test wrote "about 1704 curated" and then asserted it was exact, which
+    # made the test fail the moment a batch added fourteen programs -- a typed
+    # figure inside the checker for typed figures, and the last one needed.
     with tempfile.TemporaryDirectory() as d:
         p = pathlib.Path(d) / "probe.md"
         p.write_text(
             "The suite has 999 tests.\n"
             "The repository holds 123 tracked files.\n"
-            "It is roughly 5000 files, and about 1704 curated.\n",
+            f"It is roughly 5000 files, and about {known['curated']} curated.\n",
             encoding="utf-8")
-        rows = mod.scan(p, mod.truth())
+        rows = mod.scan(p, known)
         by_claim = {r["claim"]: r for r in rows}
         assert by_claim["tests"]["said"] == 999
-        assert by_claim["tests"]["actual"] == mod.truth()["tests"]
+        assert by_claim["tests"]["actual"] == known["tests"]
         assert not by_claim["tests"]["exact"]
         # The line beginning "It is roughly" must be treated as approximate,
         # and the curated figure on it must be compared rather than skipped.
         assert by_claim["curated"]["approximate"], (
             "'roughly' did not mark the claim approximate")
         assert by_claim["curated"]["exact"], (
-            "1704 curated is exact and was reported stale")
+            f"{known['curated']} curated is exact and was reported stale")
 
 
 def test_extension_collisions_measures_bytes_off_disk():
