@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.evm]
 
+// EVM assembly, in Yul. A contract does not print: it returns data and
+// the transaction's caller reads the return value. The greeting is
+// the comment saying so.
 // Hello World!
-// Hello World!
+object "Hello" {
+    code { }
+}

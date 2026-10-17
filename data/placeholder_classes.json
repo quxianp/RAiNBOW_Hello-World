@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5618,
+  "without_program": 5607,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 187,
+    "program": 176,
     "unknown": 2097
   },
   "reasons": {
@@ -14,24 +14,24 @@
     "unclassified": 2097,
     "group:esoteric": 126,
     "group:chinese": 58,
-    "group:education": 27,
+    "group:education": 26,
     "group:golf": 20,
     "group:markup_data": 19,
     "group:template": 12,
-    "group:academic": 10,
     "group:data_science": 10,
-    "group:assembly_dialects": 10,
     "group:quantum": 10,
     "group:binary_data": 9,
-    "group:misc": 9,
+    "group:academic": 8,
     "group:dsl_query": 8,
     "group:functional": 8,
-    "group:ancient": 7,
+    "group:assembly_dialects": 7,
     "group:logic_constraint": 7,
+    "group:misc": 7,
+    "group:ancient": 6,
     "group:concurrency": 5,
     "group:build_config": 4,
-    "group:blockchain": 4,
     "group:shell_os": 3,
+    "group:blockchain": 2,
     "type:data": 1,
     "type:programming": 1
   },
@@ -37278,19 +37278,6 @@
       ]
     },
     {
-      "language": "Basic.Setoid",
-      "path": "hello/full/basic-setoid/hello.basic_setoid",
-      "extension": ".basic_setoid",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
       "language": "Bee assembler",
       "path": "hello/full/bee-assembler/hello.bee_assembler",
       "extension": ".bee_assembler",
@@ -37369,19 +37356,6 @@
       ]
     },
     {
-      "language": "Botley",
-      "path": "hello/full/botley/hello.botley",
-      "extension": ".botley",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "C-- compiler",
       "path": "hello/full/c-compiler/hello.c_compiler",
       "extension": ".c_compiler",
@@ -37419,21 +37393,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "CCS",
-      "path": "hello/full/ccs/hello.ccs",
-      "extension": ".ccs",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "academic"
-      ],
-      "source": [
-        "builtin:ancient",
-        "builtin:academic"
       ]
     },
     {
@@ -37552,32 +37511,6 @@
       ],
       "source": [
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "EVM",
-      "path": "hello/full/evm/hello.evm",
-      "extension": ".evm",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
-      ]
-    },
-    {
-      "language": "EVM Assembly",
-      "path": "hello/full/evm-assembly/hello.evm_assembly",
-      "extension": ".evm_assembly",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
       ]
     },
     {
@@ -37804,19 +37737,6 @@
       ],
       "source": [
         "builtin:shell_os"
-      ]
-    },
-    {
-      "language": "Inferno Assembly",
-      "path": "hello/full/inferno-assembly/hello.inferno_assembly",
-      "extension": ".inferno_assembly",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38149,19 +38069,6 @@
       ]
     },
     {
-      "language": "Nitra",
-      "path": "hello/full/nitra/hello.nitra",
-      "extension": ".nitra",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "Nominal",
       "path": "hello/full/nominal/hello.nominal",
       "extension": ".nominal",
@@ -38172,19 +38079,6 @@
       ],
       "source": [
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "NVPTX",
-      "path": "hello/full/nvptx/hello.nvptx",
-      "extension": ".nvptx",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38331,32 +38225,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "PR",
-      "path": "hello/full/pr/hello.pr",
-      "extension": ".pr",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
-      "language": "PTX",
-      "path": "hello/full/ptx/hello.ptx",
-      "extension": ".ptx",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38611,19 +38479,6 @@
       "language": "Sepia",
       "path": "hello/full/sepia/hello.sepia",
       "extension": ".sepia",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
-      "language": "Set",
-      "path": "hello/full/set/hello.set",
-      "extension": ".set",
       "kind": "program",
       "reason": "group:academic",
       "groups": [

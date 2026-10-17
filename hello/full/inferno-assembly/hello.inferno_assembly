@@ -3,7 +3,15 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=assembly_dialects source=builtin:assembly_dialects ext=.inferno_assembly]
 
-// Hello World!
-// Hello World!
+// Inferno is Plan 9's successor, and it runs on a real operating
+// system -- so unlike the other assembly entries here, this one
+// has somewhere to print. That somewhere is write(2).
+#include <syscall.h>
+
+void
+main(void)
+{
+    char *m[] = { "Hello World!", 0 };
+    write(1, m, 12);
+}

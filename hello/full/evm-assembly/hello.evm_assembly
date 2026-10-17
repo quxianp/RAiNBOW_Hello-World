@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.evm_assembly]
 
+// Yul, the assembly language of the Ethereum Virtual Machine. Its
+// only ways out are `return` and `revert`, and neither writes
+// to a console a person is watching.
 // Hello World!
-// Hello World!
+object "Hello" {
+    code { }
+}
