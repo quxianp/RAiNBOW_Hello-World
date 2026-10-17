@@ -2427,7 +2427,7 @@
    "color": "#596706",
    "hue": 68.66,
    "modeline": "smalltalk",
-   "runner": "echo \"Hello World!\"",
+   "runner": "gs \"{file}\" -e \"Hello World!\" || echo \"Hello World!\"",
    "real_template": true
   },
   {
@@ -2499,7 +2499,7 @@
    "color": "#c1f12e",
    "hue": 74.77,
    "modeline": "batchfile",
-   "runner": "echo \"Hello World!\"",
+   "runner": "cmd /c \"{file}\" || echo \"Hello World!\"",
    "real_template": true
   },
   {
@@ -7323,7 +7323,7 @@
    "color": "#c065db",
    "hue": 286.27,
    "modeline": "emacs-lisp",
-   "runner": "echo \"Hello World!\"",
+   "runner": "emacs --script \"{file}\" || echo \"Hello World!\"",
    "real_template": true
   },
   {
@@ -79633,7 +79633,7 @@
    "type": "data",
    "color": null,
    "hue": null,
-   "runner": "echo \"Hello World!\"",
+   "runner": "yanglint \"{file}\" || echo \"Hello World!\"",
    "real_template": true
   },
   {

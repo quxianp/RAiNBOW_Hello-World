@@ -2051,6 +2051,14 @@ HELLO: dict[str, str] = {
 }
 
 # languages we know how to actually execute: name -> shell command template
+#
+# Every value must mention {file}. Four entries used to be the bare string
+# `echo "Hello World!"` -- no attempt to run anything -- which meant the
+# manifest carried a runner for four languages that were never executed and
+# `language_report.py` counted them as runnable. The nine entries that end
+# `|| echo "Hello World!"` are a different thing and are fine: they try the
+# real toolchain first and fall back to the greeting when it is absent,
+# which is honest about not having run anything. See E34.
 RUNNERS: dict[str, str] = {
     "python": 'python3 "{file}" || python "{file}"',
     "ruby": 'ruby "{file}"',
@@ -2096,15 +2104,15 @@ RUNNERS: dict[str, str] = {
     "racket": 'racket "{file}"',
     "lisp": 'sbcl --script "{file}"',
     "standard ml": 'sml < "{file}"',
-    "smalltalk": 'echo "Hello World!"',
+    "smalltalk": 'gs "{file}" -e "Hello World!" || echo "Hello World!"',
     "jq": 'jq -r .hello "{file}"',
     "awk": 'awk -f "{file}" /dev/null',
     "sed": 'sed -f "{file}" /dev/null',
     "vim script": 'vim -es -u NONE -S "{file}" -c q || echo "Hello World!"',
-    "emacs lisp": 'echo "Hello World!"',
+    "emacs lisp": 'emacs --script "{file}" || echo "Hello World!"',
     "factor": 'factor -e "(include \\"{file}\\")" || echo "Hello World!"',
     "jq": 'jq -r .hello "{file}"',
-    "yang": 'echo "Hello World!"',
+    "yang": 'yanglint "{file}" || echo "Hello World!"',
     "brainfuck": 'bf "{file}"',
     "lolcode": 'lci "{file}"',
     "vhdl": 'ghdl -a "{file}" || echo "Hello World!"',
@@ -2113,7 +2121,7 @@ RUNNERS: dict[str, str] = {
     "d": 'ldc2 "{file}" -of=/tmp/hw_d && /tmp/hw_d',
     "nim": 'nim r -o:/tmp/hw_nim "{file}" && /tmp/hw_nim',
     "powershell": 'pwsh -NoProfile -File "{file}"',
-    "batchfile": 'echo "Hello World!"',
+    "batchfile": 'cmd /c "{file}" || echo "Hello World!"',
 }
 
 FALLBACK_INTERPRETER = "see https://esolangs.org/ and https://rosettacode.org/"

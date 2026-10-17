@@ -25,6 +25,7 @@ Skipped when the manifest is missing.
 import importlib.util
 import json
 import pathlib
+import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "hello" / "manifest.json"
@@ -256,6 +257,36 @@ def test_doc_figure_scanner_finds_a_planted_claim_and_flags_it(tmp_path=None):
             "'roughly' did not mark the claim approximate")
         assert by_claim["curated"]["exact"], (
             f"{known['curated']} curated is exact and was reported stale")
+
+
+def test_every_runner_mentions_the_file_it_runs():
+    """A runner that does not mention {file} does not run anything.
+
+    Four entries in the generator's RUNNERS table were the bare string
+    `echo "Hello World!"`. Nothing was executed, `language_report.py` counted
+    them among the runnable languages, and the manifest carried a runner for
+    four languages that were never run. It is the same shape as E31 and E30: a
+    claim that is checkable and nobody checked it. See E34.
+    """
+    if not _ready():
+        return
+    spec = importlib.util.spec_from_file_location(
+        "gen_hello", ROOT / "scripts" / "generate_all_hello.py")
+    gen = importlib.util.module_from_spec(spec)
+    sys.modules["gen_hello"] = gen
+    spec.loader.exec_module(gen)
+
+    assert len(gen.RUNNERS) > 40, f"only {len(gen.RUNNERS)} runners"
+    bare = {k: v for k, v in gen.RUNNERS.items() if "{file}" not in v}
+    assert not bare, f"runners that never mention the file: {bare}"
+
+    # And the fallback is a fallback: a command that ends in
+    # `|| echo "Hello World!"` must have something before it.
+    for name, cmd in gen.RUNNERS.items():
+        if '|| echo "Hello World!"' in cmd:
+            attempt = cmd.split("||", 1)[0].strip()
+            assert attempt and "{file}" in attempt, (
+                f"{name}: the fallback is the whole command")
 
 
 def test_make_help_documents_every_phony_target():
