@@ -121,6 +121,18 @@ DOCS = [
      "output operation. Three shapes -- a full document, a man page whose "
      "greeting belongs under .SH NAME, and an M4 macro that prints its own "
      "definition unless you write dnl."),
+    ("../docs/languages/PERL-FAMILY.md", "The Perl family",
+     "Perl, Perl 6 and Raku differ in what a sigil means: in Raku $greeting is "
+     "a container and string interpolation needs a method, so \"$greeting\" "
+     "gives you the container's name. Plus the three entries that are not "
+     "programs -- Pod is a document, PerlTidy is a formatter's configuration, "
+     "and a .pm needs a trailing 1 or it does not load."),
+    ("../docs/languages/WIRE-FORMATS.md", "The wire formats",
+     "Twenty entries that look like text and mostly are not programs. The rule "
+     "that decides them: if the format has a schema, the schema is the program -- "
+     "a .proto file is a schema and writing encoded bytes into one produces a "
+     "file protoc cannot compile. MessagePack, CBOR and BSON have no schema, so "
+     "their answer is the encoding, computed."),
     ("../docs/languages/GIT-FORMATS.md", "The git formats",
      "Six entries that are not languages and never were. Three shapes for six "
      "files: pattern lists (.gitattributes, .gitignore, .gitrevlist), a "
