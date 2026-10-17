@@ -18,6 +18,15 @@ The files are parsed by reading the ASCII hex tokens out of the comment and the
 body -- no per-file format table -- so a file that has been edited by hand is
 caught rather than silently skipped.
 
+Nine of them are object and container formats rather than a payload, and a
+payload check is the wrong shape for those. A COFF file, a DWARF unit, a FITS
+header, an ESRI shapefile, a TIFF directory and a dBASE table are *structures*:
+a magic number, lengths that have to agree with the bytes on disk, and one
+field the format actually reserves for text. So each has its own checker, and
+each checker is written to fail loudly on a header it cannot make sense of
+rather than to wave the file through -- a TIFF with the '=' of a FITS card in
+the wrong column parses perfectly as hex and is rejected as a FITS header.
+
     python scripts/verify_encodings.py
     python scripts/verify_encodings.py --verbose
 """
@@ -32,6 +41,7 @@ import json
 import lzma
 import pathlib
 import re
+import struct
 import zlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -186,6 +196,223 @@ def check_base_n(text: str) -> tuple[bool, str] | None:
     return None
 
 
+def payload_bytes(text: str) -> bytes:
+    """Reassemble the bytes of a hex dump, in order.
+
+    `hex_runs` yields one run per dump line, which is what the stream and
+    base-N checks want. The object formats below want one contiguous buffer
+    instead, so the runs are joined. That is only correct if the dump starts
+    at offset 0 and has no gaps, which every dump in this repository does --
+    `scripts/build_object_formats.py` writes them all sixteen bytes a line
+    and pads the last one, so no run is ever dropped for being short.
+
+    Named `payload_bytes` rather than `payload` because `check_encoding` uses
+    `payload` as a loop variable further down, and a module-level function of
+    that name is shadowed by it -- which is a NameError at best and a silent
+    miss at worst.
+    """
+    return b"".join(hex_runs(text, minimum=4))
+
+
+# --------------------------------------------------------------------------
+# object and container formats
+#
+# The checks above prove that a *payload* is the greeting. These prove that a
+# *file* is well-formed: that the magic numbers are right, that the lengths
+# agree with the bytes on disk, and that the greeting landed in a field the
+# format actually has. A struct unpack that raises is caught by the caller and
+# reported as an exception, which is why each one bounds-checks first.
+# --------------------------------------------------------------------------
+
+def check_coff(buf: bytes) -> tuple[bool, str]:
+    """A COFF file header plus one section header, 60 bytes."""
+    if len(buf) < 60:
+        return False, "too short for a file header and one section header"
+    (machine, nsec, _stamp, symptr, nsym,
+     optsize, chars) = struct.unpack_from("<HHIIIHH", buf, 0)
+    if nsec != 1:
+        return False, f"{nsec} section headers; this checker expects exactly one"
+    if optsize != 0:
+        return False, ("an optional header is present, so this is an object "
+                       "rather than the bare header this checker reads")
+    name = buf[20:28].rstrip(b"\0").decode("ascii", "replace")
+    rawsize, rawptr = struct.unpack_from("<II", buf, 36)
+    if rawsize == 0:
+        return True, f"file header ok ({nsec} section, machine 0x{machine:04X})"
+    if rawptr + rawsize > len(buf):
+        return False, (f"section {name!r} points at {rawsize} bytes at "
+                       f"{rawptr}, past the end of a {len(buf)}-byte file")
+    data = buf[rawptr:rawptr + rawsize]
+    if data == GREETING:
+        return True, f"section {name!r} raw data is the greeting"
+    return True, f"file header ok; section {name!r} holds {rawsize} bytes"
+
+
+def check_dwarf(buf: bytes) -> tuple[bool, str]:
+    """A .debug_info unit whose single attribute is the producer string."""
+    if len(buf) < 11:
+        return False, "too short for a .debug_info unit header"
+    unit_len, version, _abbrev = struct.unpack_from("<IHI", buf, 0)
+    addr_size = buf[10]
+    if version not in (2, 3, 4, 5):
+        return False, f".debug_info version {version} is not one DWARF defines"
+    following = len(buf) - 4
+    if unit_len != following:
+        return False, (f"unit_length says {unit_len} byte(s) follow, and "
+                       f"{following} do")
+    if GREETING in buf:
+        return True, (f"a DIE's DW_FORM_string producer is the greeting "
+                      f"(DWARF {version}, {addr_size}-byte addresses)")
+    return True, f"unit_length consistent (DWARF {version})"
+
+
+def check_fits(buf: bytes) -> tuple[bool, str]:
+    """A FITS header: whole 80-byte cards, ending with END."""
+    if len(buf) < 80:
+        return False, f"{len(buf)} bytes; a FITS card is 80"
+    if len(buf) % 80:
+        return False, (f"{len(buf)} bytes is not a whole number of 80-byte "
+                       f"FITS cards")
+    cards = [buf[i:i + 80].decode("ascii", "replace")
+             for i in range(0, len(buf), 80)]
+    if not cards[-1].startswith("END"):
+        return False, "the header does not end with an END card"
+    for i, card in enumerate(cards):
+        keyword = card[:8].strip()
+        if keyword in ("COMMENT", "HISTORY", "END", ""):
+            continue
+        # Every other card is `KEYWORD = value`, and the '=' is column 9 --
+        # position 8 counting from zero. A card with the '=' anywhere else is a
+        # header that no reader will accept, and one that looks right in a
+        # hex dump.
+        if card[8] != "=":
+            return False, (f"card {i} ({keyword or 'blank'!r}) has '=' in "
+                           f"column {card.index('=') + 1 if '=' in card else 0}, "
+                           f"not column 9")
+    for card in cards:
+        if card[:8].strip() in ("COMMENT", "HISTORY"):
+            if GREETING.decode("ascii") in card:
+                return True, "a COMMENT card carries the greeting"
+    return True, f"{len(cards)} well-formed cards"
+
+
+def check_shapefile(buf: bytes) -> tuple[bool, str]:
+    """An ESRI shapefile header: big-endian file code, mixed-endian lengths.
+
+    The header is 100 bytes and the offsets are not round numbers, which is
+    where a plausible-looking file goes wrong. From the specification:
+
+        0   file code   >i   9994
+        4   unused           5 bytes
+        9   file length >i   in 16-bit words
+        13  unused           12 bytes
+        25  version    <i   1000
+        29  shape type <i
+        33  X/Y bounding box  4 x 8-byte doubles
+        65  Z/M ranges        4 x 8-byte doubles
+        97  end of header     3 bytes
+    """
+    if len(buf) < 100:
+        return False, f"{len(buf)} bytes; a shapefile header is 100"
+    code, = struct.unpack_from(">i", buf, 0)
+    if code != 9994:
+        return False, f"file code {code}; a shapefile's is 9994"
+    flen, = struct.unpack_from(">i", buf, 9)
+    version, shape = struct.unpack_from("<ii", buf, 25)
+    if version != 1000:
+        return False, f"version {version}; a shapefile's is 1000"
+    words = len(buf) // 2
+    if flen != words:
+        return False, (f"the header declares {flen} 16-bit words and the file "
+                       f"is {words}; a shapefile's length is in words")
+    return True, (f"file code 9994, version {version}, shape type {shape}, "
+                  f"{flen} words")
+
+
+def check_tiff(buf: bytes) -> tuple[bool, str]:
+    """A TIFF header plus one IFD, in either byte order."""
+    if len(buf) < 8:
+        return False, "too short for a TIFF header"
+    order = buf[:2]
+    if order == b"II":
+        e = "<"
+    elif order == b"MM":
+        e = ">"
+    else:
+        return False, f"byte-order mark {order!r} is neither II nor MM"
+    magic, = struct.unpack_from(e + "H", buf, 2)
+    if magic != 42:
+        return False, f"magic {magic}; a TIFF's is 42"
+    off, = struct.unpack_from(e + "I", buf, 4)
+    if off + 2 > len(buf):
+        return False, f"IFD offset {off} is past the end of a {len(buf)}-byte file"
+    count, = struct.unpack_from(e + "H", buf, off)
+    end = off + 2 + count * 12 + 4
+    if end > len(buf):
+        return False, f"the IFD claims {count} entries, which needs {end} bytes"
+    for i in range(count):
+        base = off + 2 + i * 12
+        tag, typ, n = struct.unpack_from(e + "HHI", buf, base)
+        if typ != 2 or n == 0:          # 2 is ASCII, the only free-text type
+            continue
+        if n <= 4:                      # short values live in the value field
+            raw = buf[base + 8:base + 8 + n]
+        else:
+            at, = struct.unpack_from(e + "I", buf, base + 8)
+            raw = buf[at:at + n]
+        if raw.rstrip(b"\0") == GREETING:
+            return True, f"tag {tag} is the greeting, as {n} ASCII bytes"
+    return True, f"{count} IFD entries parse, none of them the greeting"
+
+
+DBASE_VERSIONS = {
+    0x03, 0x30, 0x31, 0x32, 0x43, 0x63, 0x7B, 0x83, 0x8B, 0xCB, 0xE5, 0xF5,
+    0xFB,
+}
+
+
+def check_dbf(buf: bytes) -> tuple[bool, str]:
+    """A dBASE III table header, whose field names are 11 bytes of free text."""
+    if len(buf) < 33:
+        return False, "too short for a dBASE header and a terminator"
+    version = buf[0]
+    if version not in DBASE_VERSIONS:
+        return False, f"version byte 0x{version:02X} is not a dBASE version"
+    nrec, hlen, rlen = struct.unpack_from("<IHH", buf, 4)
+    if hlen < 33:
+        return False, f"header length {hlen} cannot hold a field descriptor"
+    if hlen > len(buf):
+        return False, f"header length {hlen} exceeds the {len(buf)}-byte file"
+    names, p = [], 32
+    while p < hlen and buf[p] != 0x0D:
+        if p + 32 > hlen:
+            return False, "a field descriptor runs past the declared header"
+        names.append(buf[p:p + 11].rstrip(b"\0").decode("ascii", "replace"))
+        p += 32
+    if p != hlen and buf[p] != 0x0D:
+        return False, "the header ends without a 0x0D field terminator"
+    for name in names:
+        if "Hello" in name:
+            return True, (f"field name {name!r}; {nrec} record(s), "
+                          f"{rlen} bytes each")
+    return True, f"{len(names)} field descriptor(s) parse"
+
+
+OBJECT_FORMATS = {
+    "coff": ("coff", check_coff),
+    "obj": ("coff", check_coff),
+    "dwarf": ("dwarf", check_dwarf),
+    "wcs": ("fits", check_fits),
+    "fit": ("fits", check_fits),
+    "fits": ("fits", check_fits),
+    "shp": ("shapefile", check_shapefile),
+    "tiff": ("tiff", check_tiff),
+    "tif": ("tiff", check_tiff),
+    "shpffil": ("dbf", check_dbf),
+    "dbf": ("dbf", check_dbf),
+}
+
+
 def check_encoding(path: pathlib.Path) -> tuple[str, bool, str]:
     text = path.read_text(encoding="utf-8", errors="replace")
     # `path.stem` strips only the *last* suffix, so for hello.intel_hex it is
@@ -200,6 +427,18 @@ def check_encoding(path: pathlib.Path) -> tuple[str, bool, str]:
     if "motorola_s_record" in tag or tag == "srec" or "s-record" in tag:
         ok, why = check_srecord(text)
         return "s-record", ok, why
+
+    if tag in OBJECT_FORMATS:
+        kind, check = OBJECT_FORMATS[tag]
+        buf = payload_bytes(text)
+        # A file that is still a text placeholder -- which is what every one of
+        # these was until it got real bytes -- has no payload to parse, and a
+        # checker handed an empty buffer would raise rather than report. So the
+        # object checker only runs when there is something for it to read, and
+        # the generic checks below still apply either way.
+        if len(buf) >= 80:
+            ok, why = check(buf)
+            return kind, ok, why
 
     for check in (check_stream, check_base_n):
         result = check(text)
@@ -232,10 +471,13 @@ def candidates() -> list[pathlib.Path]:
                 "gzip_binary", "bzip2_binary", "xz_binary", "intel_hex",
                 "motorola_s_record", "srec", "snappy_binary", "messagepack",
                 "cbor", "bson", "raw_bytes", "hex_dump", "base16",
+                # the object and container formats with a header to get right
+                *OBJECT_FORMATS,
             }
             or name in {
                 "base58", "base62", "base85", "asci85", "deflate", "intel hex",
                 "motorola s-record", "srec", "messagepack", "cbor", "bson",
+                "coff", "dwarf", "wcs", "shp", "tiff", "shpffil",
             }
         )
         if interesting:
