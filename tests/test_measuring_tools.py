@@ -369,6 +369,75 @@ def test_check_banners_passes_over_the_whole_repository():
     assert not bad, f"{len(bad)} banner problem(s), first: {bad[:3]}"
 
 
+def test_workflow_gate_audit_matches_what_github_actually_ran():
+    """A green pull request is not evidence about twenty-four jobs.
+
+    The first Dependabot pull request in this repository was green and
+    mergeable, and it bumped three actions across three major versions. The
+    job that would have found out is `demo assets`, and it is gated away from
+    pull_request events -- as are all 24 batch shards. That was worked out by
+    reading the API, and it should not have to be worked out again by reading
+    it.
+
+    So the tool has to agree with what GitHub actually did, and the test asserts
+    against the workflow file rather than against the tool's own parser.
+    """
+    workflow = ROOT / ".github" / "workflows" / "rainbow.yml"
+    if not workflow.exists():
+        return
+    mod = _module("audit_workflow_gates", ROOT / "scripts" / "audit_workflow_gates.py")
+    jobs = {name: cond for name, _needs, cond in mod.parse(workflow)}
+
+    # The `on:` block's four event names are indented keys, not jobs. The
+    # first parser reported all four as jobs.
+    for event in ("push", "pull_request", "workflow_dispatch", "schedule"):
+        assert event not in jobs, f"{event} is an `on:` key, not a job"
+
+    assert "verify" in jobs, "the verification job was not found"
+    gated = {n for n, c in jobs.items()
+             if mod.runs_on(c, "pull_request") is False}
+    assert "batches" in gated, "the batch shards do run on a pull request?"
+    assert "assets" in gated, "the demo-assets job does run on a pull request?"
+    assert "verify" not in gated, "the verification job is gated off pull requests"
+
+    # Every gated job must print its condition verbatim, because that string is
+    # the whole value of the table.
+    for name in gated:
+        cond = " ".join(jobs[name].split())
+        assert "github.event_name" in cond, f"{name}: {cond!r}"
+        assert "||" in cond or "!=" in cond, f"{name}: {cond!r}"
+
+
+def test_the_expression_evaluator_distinguishes_false_from_unknown():
+    """A checker that returns False for what it cannot read is the worst kind,
+    because every cell it gets wrong looks right.
+
+    `if: always()` is a status-check function rather than a condition. An
+    earlier version reported it as "does not run on a pull request", which is
+    the opposite of the truth, and the table said so with a straight face.
+    """
+    mod = _module("audit_workflow_gates", ROOT / "scripts" / "audit_workflow_gates.py")
+
+    assert mod.runs_on("always()", "pull_request") is True
+    assert mod.runs_on("", "pull_request") is True
+    assert mod.runs_on("always() && failure()", "pull_request") is None, (
+        "`always() && failure()` depends on how the run went, which this tool "
+        "does not model, so the answer is unknown rather than a guess. GitHub "
+        "would say False for a green run and True for a red one, and a tool "
+        "that picks one is wrong half the time and never says so")
+    assert mod.runs_on("github.event_name != 'pull_request'", "pull_request") is False
+    assert mod.runs_on("github.event_name != 'pull_request'", "push") is True
+    chain = ("github.event_name == 'workflow_dispatch' || "
+             "github.event_name == 'schedule' || "
+             "(github.event_name == 'push' && "
+             "!contains(github.event.head_commit.message, '[skip ci]'))")
+    assert mod.runs_on(chain, "push") is True
+    assert mod.runs_on(chain, "schedule") is True
+    assert mod.runs_on(chain, "pull_request") is False
+    # A form this does not understand must be None, never False.
+    assert mod.runs_on("needs.verify.result == 'success'", "push") is None
+
+
 def test_every_runner_mentions_the_file_it_runs():
     """A runner that does not mention {file} does not run anything.
 
