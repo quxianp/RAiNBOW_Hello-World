@@ -1,50 +1,89 @@
-# Code of Conduct
+# Contributor Covenant Code of Conduct
 
-## Our pledge
+## Our Pledge
 
-We pledge to make participation in this project a harassment-free experience for
-everyone, regardless of age, body size, visible or invisible disability,
-ethnicity, sex characteristics, gender identity and expression, level of
-experience, education, socio-economic status, nationality, personal appearance,
-race, religion, or sexual identity and orientation.
+We as members, contributors, and leaders pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, caste, colour, religion, or sexual
+identity and orientation.
 
-## Our standards
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
 
-Behaviour that helps:
+## Our Standards
 
-- Being patient with people who are learning how Linguist detects languages.
-- Accepting that a language bar is a shared, opinionated artefact and that
-  discussing byte shares is a normal part of the work.
-- Giving and gracefully accepting constructive technical feedback.
-- Focusing on what is best for the project and the people reading it.
+Examples of behaviour that contributes to a positive environment:
 
-Behaviour that is not acceptable:
+* Demonstrating empathy and kindness toward other people
+* Being respectful of differing opinions, viewpoints, and experiences
+* Giving and gracefully accepting constructive feedback
+* Accepting responsibility, apologising to those affected by our mistakes, and
+  learning from the experience
+* Focusing on what is best not just for us as individuals, but for the overall
+  community
 
-- Harassment, insults, or derogatory comments, public or private.
-- Trolling, or deliberately posting misleading "the rainbow is broken"
-  screenshots from a cached page.
-- Sexualised language or imagery, and unwelcome sexual attention.
-- Publishing others' private information without permission.
-- Any other conduct that would reasonably be considered inappropriate in a
-  professional setting.
+Examples of unacceptable behaviour:
+
+* The use of sexualised language or imagery, and sexual attention or advances of
+  any kind
+* Trolling, insulting or derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information, such as a physical or email address,
+  without their explicit permission
+* Other conduct which could reasonably be considered inappropriate in a
+  professional setting
+
+## A note specific to this repository
+
+Almost every pull request here is a disagreement about what a language's Hello
+World should be. That is a technical disagreement and it is welcome; the
+technical standard is in `CONTRIBUTING.md` and it comes down to one question:
+
+> Is this a program that language would accept, or is it a program we wish it
+> would?
+
+Both answers are fine. What is not fine is presenting the second as the first,
+because a repository of 7,326 files that claims to be true about them is worth
+nothing if some fraction is plausible and wrong. Expect to be asked which one
+you meant, and expect the question to be asked in good faith.
+
+## Enforcement Responsibilities
+
+Community leaders are responsible for clarifying and enforcing our standards of
+acceptable behaviour and will take appropriate and fair corrective action in
+response to any behaviour that they deem inappropriate, threatening, offensive,
+or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.
 
 ## Scope
 
-This applies in all project spaces — issues, pull requests, discussions, and
-any generated artefact — and when an individual is officially representing the
-project in public spaces.
+This Code of Conduct applies within all community spaces, and also applies when
+an individual is officially representing the community in public spaces.
 
 ## Enforcement
 
-Report unacceptable behaviour to the maintainer through a private issue or by
-contacting the repository owner directly. All complaints will be reviewed and
-investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be
+reported to the community leaders responsible for enforcement by opening an
+issue in this repository or using the contact address in the repository's About
+panel. All complaints will be reviewed and investigated promptly and fairly.
 
-Maintainers who do not follow or enforce this code in good faith may face
-temporary or permanent repercussions as determined by other members of the
-project's leadership.
+All community leaders are obligated to respect the privacy and security of the
+reporter of any incident.
 
 ## Attribution
 
-Adapted from the [Contributor Covenant](https://www.contributor-covenant.org/),
-version 2.1.
+This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+version 2.1, available at
+<https://www.contributor-covenant.org/version/2/1/code_of_conduct.html>.
+
+Community Impact Guidelines were inspired by
+[Mozilla's code of conduct enforcement ladder][mozilla].
+
+[homepage]: https://www.contributor-covenant.org
+[mozilla]: https://github.com/mozilla/diversity
