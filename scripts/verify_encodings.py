@@ -398,6 +398,35 @@ def check_dbf(buf: bytes) -> tuple[bool, str]:
     return True, f"{len(names)} field descriptor(s) parse"
 
 
+def check_flatgeobuf(buf: bytes) -> tuple[bool, str]:
+    """A FlatGeobuf magic number, version byte, header type and envelope.
+
+    The four bytes of magic are 0A 0D 0D 0A, which is worth writing down
+    because it is also what the file *starts* with in a text editor: the
+    newlines make it look like a two-line file, and the leading bytes make it
+    look like a binary one. Big endian throughout, unlike shapefile.
+    """
+    if len(buf) < 102:
+        return False, (f"{len(buf)} bytes; a FlatGeobuf header needs 4 magic, "
+                       f"1 version, 1 type and 96 of envelope")
+    magic, = struct.unpack_from(">I", buf, 0)
+    if magic != 0x0A0D0D0A:
+        return False, f"magic 0x{magic:08X}; a FlatGeobuf's is 0x0A0D0D0A"
+    version, kind = buf[4], buf[5]
+    if version not in (3, 4):
+        return False, f"version {version}; FlatGeobuf has 3 and 4"
+    if kind not in (1, 2, 3):
+        return False, f"header type {kind}; 1 is a header, 2 an index, 3 optional"
+    xs = struct.unpack_from(">dddd", buf, 6)
+    (xmin, ymin, xmax, ymax) = xs
+    if xmin > xmax or ymin > ymax:
+        return False, (f"envelope is inverted: x {xmin}..{xmax}, "
+                       f"y {ymin}..{ymax}")
+    gtype, = struct.unpack_from(">I", buf, 38)
+    return True, (f"magic ok, version {version}, type {kind}, geometry {gtype}, "
+                  f"envelope {xmin}..{xmax} x {ymin}..{ymax}")
+
+
 OBJECT_FORMATS = {
     # tag: (kind, checker, the shortest buffer that could be a real file)
     "coff": ("coff", check_coff, 60),
@@ -407,6 +436,8 @@ OBJECT_FORMATS = {
     "fit": ("fits", check_fits, 80),
     "fits": ("fits", check_fits, 80),
     "shp": ("shapefile", check_shapefile, 100),
+    "flatgeobuf": ("flatgeobuf", check_flatgeobuf, 102),
+    "fgb": ("flatgeobuf", check_flatgeobuf, 102),
     "tiff": ("tiff", check_tiff, 8),
     "tif": ("tiff", check_tiff, 8),
     "shpffil": ("dbf", check_dbf, 33),
@@ -480,7 +511,7 @@ def candidates() -> list[pathlib.Path]:
             or name in {
                 "base58", "base62", "base85", "asci85", "deflate", "intel hex",
                 "motorola s-record", "srec", "messagepack", "cbor", "bson",
-                "coff", "dwarf", "wcs", "shp", "tiff", "shpffil",
+                "coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf",
             }
         )
         if interesting:

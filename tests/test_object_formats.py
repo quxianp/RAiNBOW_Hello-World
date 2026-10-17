@@ -115,13 +115,22 @@ def dbf() -> bytes:
     return bytes(head) + b" " * (1 + 11)
 
 
+def flatgeobuf() -> bytes:
+    out = struct.pack(">I", 0x0A0D0D0A)                 # the magic number
+    out += bytes((3, 1))                                 # version, header type
+    out += struct.pack(">dddd", -1.0, -1.0, 1.0, 1.0)   # the envelope
+    out += struct.pack(">I", 0)                          # geometry: unknown
+    return out + b"\x00" * 64
+
+
 BUILDERS = {
     "coff": coff, "dwarf": dwarf, "fits": fits, "shapefile": shapefile,
-    "tiff": tiff, "dbf": dbf,
+    "tiff": tiff, "dbf": dbf, "flatgeobuf": flatgeobuf,
 }
 CHECKS = {
     "coff": V.check_coff, "dwarf": V.check_dwarf, "fits": V.check_fits,
     "shapefile": V.check_shapefile, "tiff": V.check_tiff, "dbf": V.check_dbf,
+    "flatgeobuf": V.check_flatgeobuf,
 }
 
 
@@ -163,6 +172,7 @@ def test_a_wrong_magic_number_is_rejected():
         "shapefile": lambda b: struct.pack(">i", 9995) + b[4:],
         "tiff": lambda b: b[:2] + struct.pack("<H", 43) + b[4:],
         "dbf": lambda b: b"\x07" + b[1:],
+        "flatgeobuf": lambda b: struct.pack(">I", 0x0A0D0D0B) + b[4:],
     }
     for name, corrupt in cases.items():
         ok, why = CHECKS[name](corrupt(BUILDERS[name]()))
@@ -225,8 +235,23 @@ def test_the_payload_join_is_not_silent_about_its_assumption():
 
 
 def test_object_formats_are_routed_by_extension():
-    for ext in ("coff", "dwarf", "wcs", "shp", "tiff", "shpffil"):
+    for ext in ("coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf"):
         assert ext in V.OBJECT_FORMATS, f"{ext} has no checker registered"
+
+
+def test_a_flatgeobuf_envelope_that_is_the_wrong_way_round_is_rejected():
+    """A bounding box with min > max passes every magic-number check.
+
+    FlatGeobuf's envelope is four big-endian doubles and nothing else, so a
+    transposed pair is perfectly well-formed bytes in a perfectly well-formed
+    file. Only a checker that reads the numbers as a box rather than as a
+    sequence of eight bytes notices.
+    """
+    buf = bytearray(flatgeobuf())
+    struct.pack_into(">d", buf, 6, 1.0)          # Xmin past Xmax
+    struct.pack_into(">d", buf, 22, -1.0)
+    ok, why = V.check_flatgeobuf(bytes(buf))
+    assert not ok, f"an inverted envelope was accepted: {why}"
 
 
 def test_check_encoding_dispatches_on_the_suffix_not_the_language():
