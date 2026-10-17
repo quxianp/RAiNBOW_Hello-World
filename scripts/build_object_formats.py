@@ -194,6 +194,25 @@ def build_dbf() -> bytes:
     return bytes(head) + b" " * rec_len
 
 
+def build_flatgeobuf() -> bytes:
+    """A FlatGeobuf header, and no greeting anywhere in it.
+
+    FlatGeobuf replaced GeoPackage's JSON sidecar with a header inside the
+    file: magic, version, header type, then a bounding box and a geometry
+    type. There is no field for a name, a description or a comment, and the
+    four magic bytes are 0A 0D 0D 0A -- two newlines -- so a dump of this file
+    opens with what looks like two blank lines.
+
+    The envelope here is the unit square, because a bounding box of 0..0 is
+    valid and useless and an inverted one is a file a reader rejects.
+    """
+    out = struct.pack(">I", 0x0A0D0D0A)
+    out += bytes((3, 1))                                # version 3, header
+    out += struct.pack(">dddd", 0.0, 0.0, 1.0, 1.0)    # envelope
+    out += struct.pack(">I", 0)                        # geometry: unknown
+    return out + b"\x00" * 64
+
+
 BUILDERS = {
     "coff": ("COFF", build_coff),
     "dwarf": ("DWARF", build_dwarf),
@@ -201,6 +220,7 @@ BUILDERS = {
     "shp": ("SHP", build_shapefile),
     "tiff": ("TIFF", build_tiff),
     "shpffil": ("SHPFFIL", build_dbf),
+    "flatgeobuf": ("FlatGeobuf", build_flatgeobuf),
 }
 
 
@@ -289,6 +309,21 @@ def preamble(key: str, buf: bytes) -> str:
             "// whole of its free-text budget, so `Hello World!` gets the ten\n"
             "// characters that fit. The date in bytes 2-4 is there because the\n"
             "// format requires it, and the header ends with a 0x0D.\n"
+            "//\n"
+        ),
+        "flatgeobuf": (
+            "// FlatGeobuf: the format GDAL 3.4 and QGIS 3.30 moved to, which\n"
+            "// replaced GeoPackage's JSON sidecar with a header inside the\n"
+            "// file. Magic, version, header type, then a bounding box.\n"
+            "//\n"
+            "// There is no greeting in this file, and the reason is worth\n"
+            "// seeing once. The magic is 0A 0D 0D 0A -- so the first eight\n"
+            "// bytes of this dump are two newlines with four bytes between\n"
+            "// them, which is why FlatGeobuf looks like a text file that has\n"
+            "// a very short first line. The rest is a geometry type and\n"
+            "// padding: no name, no description, no comment field. A\n"
+            "// `Hello World!` in any of them would be a file no reader\n"
+            "// accepts, so this one is a correct header with nothing to say.\n"
             "//\n"
         ),
     }[key] + common

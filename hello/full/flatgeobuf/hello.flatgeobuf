@@ -3,7 +3,33 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.flatgeobuf]
 
-// Hello World!
-// Hello World!
+// FlatGeobuf: the format GDAL 3.4 and QGIS 3.30 moved to, which
+// replaced GeoPackage's JSON sidecar with a header inside the
+// file. Magic, version, header type, then a bounding box.
+//
+// There is no greeting in this file, and the reason is worth
+// seeing once. The magic is 0A 0D 0D 0A -- so the first eight
+// bytes of this dump are two newlines with four bytes between
+// them, which is why FlatGeobuf looks like a text file that has
+// a very short first line. The rest is a geometry type and
+// padding: no name, no description, no comment field. A
+// `Hello World!` in any of them would be a file no reader
+// accepts, so this one is a correct header with nothing to say.
+//
+// flatgeobuf: 106 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 0A 0D 0D 0A 03 01 00 00 00 00 00 00 00 00 00 00 |................|   <- 0000
+// 00 00 00 00 00 00 3F F0 00 00 00 00 00 00 3F F0 |......?.......?.|   <- 0010
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0020
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0030
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0040
+// 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 |................|   <- 0050
+// 00 00 00 00 00 00 00 00 00 00                   |..........|   <- 0060

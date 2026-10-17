@@ -197,21 +197,37 @@ def check_base_n(text: str) -> tuple[bool, str] | None:
 
 
 def payload_bytes(text: str) -> bytes:
-    """Reassemble the bytes of a hex dump, in order.
+    """Reassemble the bytes of a hex dump, in order, from the dump lines only.
 
-    `hex_runs` yields one run per dump line, which is what the stream and
-    base-N checks want. The object formats below want one contiguous buffer
-    instead, so the runs are joined. That is only correct if the dump starts
-    at offset 0 and has no gaps, which every dump in this repository does --
-    `scripts/build_object_formats.py` writes them all sixteen bytes a line
-    and pads the last one, so no run is ever dropped for being short.
+    Three things have to be true for this to be right, and all three were
+    violated at least once while it was being written.
+
+      1. Only lines with an ASCII gutter count. A file's preamble says things
+         like "the magic is 0A 0D 0D 0A", and those four hex pairs are read as
+         payload if the comment is not excluded -- which produced a FlatGeobuf
+         whose reported version was 10, because 0x0A had leaked out of the
+         sentence that explains the magic number.
+
+      2. There is no offset column. `00000000` has word boundaries either side
+         of its last byte pair, so `\b..\b` matches the "00" at its end and an
+         offset in front would contribute a byte. The dumps put the offset
+         after the gutter, where it cannot be mistaken for data.
+
+      3. The dump is contiguous from offset 0. `hex_runs` drops a run shorter
+         than `minimum`, so build_object_formats.py pads the last line to a
+         full sixteen bytes.
 
     Named `payload_bytes` rather than `payload` because `check_encoding` uses
     `payload` as a loop variable further down, and a module-level function of
     that name is shadowed by it -- which is a NameError at best and a silent
     miss at worst.
     """
-    return b"".join(hex_runs(text, minimum=4))
+    out = []
+    for line in text.splitlines():
+        if "|" not in line:
+            continue
+        out.extend(hex_runs(line, minimum=4))
+    return b"".join(out)
 
 
 # --------------------------------------------------------------------------

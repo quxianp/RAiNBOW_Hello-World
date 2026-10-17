@@ -239,6 +239,31 @@ def test_object_formats_are_routed_by_extension():
         assert ext in V.OBJECT_FORMATS, f"{ext} has no checker registered"
 
 
+def test_a_preamble_that_names_the_magic_number_does_not_become_payload():
+    """The FlatGeobuf bug, kept.
+
+    Its file says "the magic is 0A 0D 0D 0A" in the preamble, and those four
+    hex pairs were read as the first bytes of the file. The reported version
+    was 10 -- 0x0A, leaked out of the sentence that explains 0x0A -- and the
+    checker rejected a file it had built itself.
+
+    A dump line is identified by its ASCII gutter, so a comment that happens
+    to contain hex is excluded no matter what it says.
+    """
+    preamble = ("// FlatGeobuf: magic 0A 0D 0D 0A, version 3.\n"
+                "// The envelope follows in four big-endian doubles.\n")
+    buf = flatgeobuf()
+    body = "\n".join(
+        "// " + " ".join(f"{b:02X}" for b in buf[i:i + 16]).ljust(47)
+        + "  |" + "".join(chr(c) if 32 <= c < 127 else "."
+                          for c in buf[i:i + 16]) + "|   <- %04X" % i
+        for i in range(0, len(buf), 16))
+    got = V.payload_bytes(preamble + body + "\n")
+    assert got == buf, (
+        f"preamble leaked into the payload: got {len(got)} bytes, "
+        f"expected {len(buf)}; first four are {got[:4].hex(' ')}")
+
+
 def test_a_flatgeobuf_envelope_that_is_the_wrong_way_round_is_rejected():
     """A bounding box with min > max passes every magic-number check.
 

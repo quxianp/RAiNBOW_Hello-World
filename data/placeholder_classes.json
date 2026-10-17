@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5593,
+  "without_program": 5592,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 162,
+    "program": 161,
     "unknown": 2097
   },
   "reasons": {
@@ -23,9 +23,9 @@
     "group:quantum": 9,
     "group:academic": 8,
     "group:functional": 8,
-    "group:dsl_query": 7,
     "group:assembly_dialects": 7,
     "group:logic_constraint": 7,
+    "group:dsl_query": 6,
     "group:ancient": 6,
     "group:misc": 6,
     "group:concurrency": 5,
@@ -37577,19 +37577,6 @@
       ],
       "source": [
         "builtin:quantum"
-      ]
-    },
-    {
-      "language": "FlatGeobuf",
-      "path": "hello/full/flatgeobuf/hello.flatgeobuf",
-      "extension": ".flatgeobuf",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {
