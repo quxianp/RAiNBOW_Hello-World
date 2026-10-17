@@ -93,6 +93,11 @@ DOCS = [
      "Sixty entries whose canonical program is one to fifteen characters, in "
      "three shapes -- and Actually, whose whole program is fifteen + "
      "characters."),
+    ("MANIFEST.md", "hello/manifest.json",
+     "The most load-bearing file in the repository and the one with the fewest "
+     "readers: one entry per file, what each field means, and which three are "
+     "allowed to be empty and why -- plus why `extension` is Linguist's and not "
+     "pathlib's."),
     ("../docs/languages/TERMINALS.md", "Terminal output and control languages",
      "Twenty-odd entries that do not print characters -- they move the cursor "
      "and set attributes. Worked out: the SGR codes are additive bit flags, "
