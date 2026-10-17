@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.styled_layer_descriptor]
 
-// Hello World!
-// Hello World!
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0"
+    xmlns="http://www.opengis.net/sld">
+  <NamedLayer>
+    <Name>Hello World!</Name>
+    <UserStyle>
+      <Title>Hello World!</Title>
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>Hello World!</Name>
+          <Title>Hello World!</Title>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>

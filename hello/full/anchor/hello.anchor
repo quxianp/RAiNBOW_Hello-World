@@ -3,7 +3,23 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.anchor]
 
-// Hello World!
-// Hello World!
+use anchor_lang::prelude::*;
+
+declare_id!("11111111111111111111111111111111");
+
+#[program]
+mod hello_world {
+    use super::*;
+
+    pub fn greet(ctx: Context<Greet>) -> Result<()> {
+        msg!("Hello World!");
+        Ok(())
+    }
+}
+
+#[derive(Accounts)]
+pub struct Greet {}
+
+#[error_code]
+pub enum GreetError {}

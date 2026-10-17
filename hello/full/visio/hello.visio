@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=misc source=builtin:misc ext=.visio]
 
-// Hello World!
-// Hello World!
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The document part of a .vsdx package. A Shape's Text element
+     is where the drawing's words live, and there is no console. -->
+<VisioDocument xmlns="http://schemas.microsoft.com/office/visio/2012/main">
+  <Shapes>
+    <Shape ID="1" NameU="Greeting">
+      <Text>Hello World!</Text>
+    </Shape>
+  </Shapes>
+</VisioDocument>

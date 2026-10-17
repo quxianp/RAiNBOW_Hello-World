@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5667,
+  "without_program": 5648,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 236,
+    "program": 217,
     "unknown": 2097
   },
   "reasons": {
@@ -15,21 +15,21 @@
     "group:esoteric": 126,
     "group:chinese": 59,
     "group:education": 30,
-    "group:golf": 25,
+    "group:golf": 23,
     "group:markup_data": 19,
-    "group:dsl_query": 19,
-    "group:quantum": 19,
-    "group:academic": 15,
+    "group:quantum": 16,
+    "group:academic": 14,
+    "group:dsl_query": 13,
     "group:template": 12,
     "group:assembly_dialects": 12,
-    "group:ancient": 12,
-    "group:misc": 11,
     "group:data_science": 10,
+    "group:misc": 10,
     "group:binary_data": 9,
     "group:logic_constraint": 9,
+    "group:ancient": 9,
     "group:functional": 8,
-    "group:concurrency": 7,
-    "group:blockchain": 6,
+    "group:concurrency": 5,
+    "group:blockchain": 5,
     "group:build_config": 4,
     "group:shell_os": 3,
     "type:data": 1,
@@ -37225,19 +37225,6 @@
       ]
     },
     {
-      "language": "Anchor",
-      "path": "hello/full/anchor/hello.anchor",
-      "extension": ".anchor",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
-      ]
-    },
-    {
       "language": "Animoto",
       "path": "hello/full/animoto/hello.animoto",
       "extension": ".animoto",
@@ -37624,20 +37611,6 @@
       ]
     },
     {
-      "language": "Echo",
-      "path": "hello/full/echo/hello.echo",
-      "extension": ".echo",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Eidolon",
       "path": "hello/full/eidolon/hello.eidolon",
       "extension": ".eidolon",
@@ -37772,32 +37745,6 @@
       ]
     },
     {
-      "language": "Fiber",
-      "path": "hello/full/fiber/hello.fiber",
-      "extension": ".fiber",
-      "kind": "program",
-      "reason": "group:concurrency",
-      "groups": [
-        "concurrency"
-      ],
-      "source": [
-        "builtin:concurrency"
-      ]
-    },
-    {
-      "language": "Fig",
-      "path": "hello/full/fig/hello.fig",
-      "extension": ".fig",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "FlatGeobuf",
       "path": "hello/full/flatgeobuf/hello.flatgeobuf",
       "extension": ".flatgeobuf",
@@ -37835,33 +37782,6 @@
       "source": [
         "esolangs",
         "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Formative Fortran",
-      "path": "hello/full/formative-fortran/hello.formative_fortran",
-      "extension": ".formative_fortran",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
-      "language": "Fortress",
-      "path": "hello/full/fortress/hello.fortress",
-      "extension": ".fortress",
-      "kind": "program",
-      "reason": "group:concurrency",
-      "groups": [
-        "concurrency"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:concurrency"
       ]
     },
     {
@@ -37942,19 +37862,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "HoTT",
-      "path": "hello/full/hott/hello.hott",
-      "extension": ".hott",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
       ]
     },
     {
@@ -38231,24 +38138,6 @@
       ],
       "source": [
         "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "Matita",
-      "path": "hello/full/matita/hello.matita",
-      "extension": ".matita",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "functional",
-        "academic"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:ancient",
-        "builtin:functional",
-        "builtin:academic"
       ]
     },
     {
@@ -38661,19 +38550,6 @@
       ]
     },
     {
-      "language": "Presto",
-      "path": "hello/full/presto/hello.presto",
-      "extension": ".presto",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "PTX",
       "path": "hello/full/ptx/hello.ptx",
       "extension": ".ptx",
@@ -38697,32 +38573,6 @@
       ],
       "source": [
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "pyquil",
-      "path": "hello/full/pyquil/hello.pyquil",
-      "extension": ".pyquil",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Qiskit",
-      "path": "hello/full/qiskit/hello.qiskit",
-      "extension": ".qiskit",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
       ]
     },
     {
@@ -38834,19 +38684,6 @@
       "language": "Quil",
       "path": "hello/full/quil/hello.quil",
       "extension": ".quil",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Quirk",
-      "path": "hello/full/quirk/hello.quirk",
-      "extension": ".quirk",
       "kind": "program",
       "reason": "group:quantum",
       "groups": [
@@ -39107,19 +38944,6 @@
       ]
     },
     {
-      "language": "Solr",
-      "path": "hello/full/solr/hello.solr",
-      "extension": ".solr",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Spike",
       "path": "hello/full/spike/hello.spike",
       "extension": ".spike",
@@ -39143,19 +38967,6 @@
       ],
       "source": [
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "Styled Layer Descriptor",
-      "path": "hello/full/styled-layer-descriptor/hello.styled_layer_descriptor",
-      "extension": ".styled_layer_descriptor",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {
@@ -39400,32 +39211,6 @@
       ]
     },
     {
-      "language": "VeriFun",
-      "path": "hello/full/verifun/hello.verifun",
-      "extension": ".verifun",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
-      "language": "Visio",
-      "path": "hello/full/visio/hello.visio",
-      "extension": ".visio",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "Vision",
       "path": "hello/full/vision/hello.vision",
       "extension": ".vision",
@@ -39465,19 +39250,6 @@
       ]
     },
     {
-      "language": "WFS",
-      "path": "hello/full/wfs/hello.wfs",
-      "extension": ".wfs",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Whitespace",
       "path": "hello/full/whitespace/hello.whitespace",
       "extension": ".whitespace",
@@ -39492,32 +39264,6 @@
         "esolangs",
         "builtin:golf",
         "builtin:esoteric"
-      ]
-    },
-    {
-      "language": "WMS",
-      "path": "hello/full/wms/hello.wms",
-      "extension": ".wms",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "WMTS",
-      "path": "hello/full/wmts/hello.wmts",
-      "extension": ".wmts",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {

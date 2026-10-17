@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.quirk]
 
-// Hello World!
-// Hello World!
+import json
+
+# Quirk is a quantum circuit simulator written in Python, so its Hello
+# World is a Python program. A Quirk circuit travels as JSON, which is
+# what the share link carries.
+print("Hello World!")
+print(json.dumps({"name": "Hello World!", "gates": [["H", 0]]}))

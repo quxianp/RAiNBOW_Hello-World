@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=ancient source=builtin:ancient ext=.formative_fortran]
 
-// Hello World!
-// Hello World!
+// Pre-1966 Fortran is fixed form with Hollerith literals, which is
+// exactly where a greeting belongs in a program that cannot
+// read from a terminal.
+      PROGRAM HELLO
+      DATA A/13HHello World!/
+      WRITE (6,20) A
+ 20   FORMAT (1X,A13)
+      STOP
+      END

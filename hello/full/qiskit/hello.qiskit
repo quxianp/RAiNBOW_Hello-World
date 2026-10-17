@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.qiskit]
 
-// Hello World!
-// Hello World!
+from qiskit import QuantumCircuit
+
+# Two qubits, a Hadamard and a controlled-X: the circuit every
+# quantum tutorial opens with, and the one Qiskit's docs greet you with.
+bell = QuantumCircuit(2, 2)
+bell.h(0)
+bell.cx(0, 1)
+print("Hello World!")

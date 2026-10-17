@@ -3,7 +3,20 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=concurrency source=builtin:concurrency ext=.fiber]
 
-// Hello World!
-// Hello World!
+package main
+
+import (
+	"fmt"
+
+	"github.com/gofiber/fiber/v2"
+)
+
+func main() {
+	app := fiber.New()
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello World!")
+	})
+	fmt.Println("Hello World!")
+	log.Fatal(app.Listen(":3000"))
+}

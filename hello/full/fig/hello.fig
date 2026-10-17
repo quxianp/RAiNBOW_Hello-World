@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=builtin:golf ext=.fig]
 
-// Hello World!
-// Hello World!
+// Fig completion specs are TypeScript files. A spec's `description` is the
+// one free-text field a spec has, so the greeting goes there.
+const completionSpec: Fig.Spec = {
+  name: "hello",
+  description: "Hello World!",
+  args: { name: "world", isOptional: true },
+};
+
+export default completionSpec;

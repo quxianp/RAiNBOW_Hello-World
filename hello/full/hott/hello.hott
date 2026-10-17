@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.hott]
 
-// Hello World!
-// Hello World!
+(* Homotopy Type Theory, as a library in Coq. A term is the content;
+   there is no print in the language to call. *)
+Definition hello : String := "Hello World!".

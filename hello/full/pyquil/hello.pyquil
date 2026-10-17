@@ -3,7 +3,10 @@
 #   layer      : full (byte-balanced rainbow bar)
 #   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 #   reference  : see https://esolangs.org/ and https://rosettacode.org/
-#   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.pyquil]
 
-# Hello World!
-# Hello World!
+from pyquil import Program
+
+# pyquil builds Quil programs. This one prepares |0> for the gate, and
+# printing the program object is how you read its Quil back.
+program = Program("H 0")
+print("Hello World!", program.out())
