@@ -259,6 +259,116 @@ def test_doc_figure_scanner_finds_a_planted_claim_and_flags_it(tmp_path=None):
             f"{known['curated']} curated is exact and was reported stale")
 
 
+def test_banner_checker_passes_on_the_repository_and_catches_planted_defects():
+    """A report nobody has ever seen fail is not a report.
+
+    `check_banners.py` found no defects on its first clean run, which is the
+    opposite of the manifest check's four. That makes it exactly the tool where
+    "it passes" proves nothing, so each check is exercised against a banner that
+    is wrong in one field -- and the assertion is that the checker says so.
+    """
+    if not _ready():
+        return
+    mod = _module("check_banners", ROOT / "scripts" / "check_banners.py")
+
+    # the real thing first, because a checker that cannot pass is useless.
+    # The has-a-program rule comes from the tool rather than from here: the
+    # first version of this test passed `True` unconditionally and produced
+    # fifty false positives on the document-kind files, which have no program
+    # and correctly carry an admission line. A test that reinvents the rule is a
+    # second opinion on the wrong question.
+    kinds = {}
+    classes = ROOT / "data" / "placeholder_classes.json"
+    if classes.exists():
+        kinds = {f["path"]: f.get("kind") for f in
+                 json.loads(classes.read_text(encoding="utf-8"))["files"]}
+    gen = _generator()
+    real = [f for f in json.loads(MANIFEST.read_text(encoding="utf-8"))["files"]
+            if (ROOT / f["path"]).is_file()][:400]
+    assert real, "no manifest entries to check"
+    for entry in real:
+        gen_ok = mod.check(entry, ROOT / entry["path"], gen,
+                           mod.has_program_for(entry, gen, kinds))
+        assert not gen_ok, f"{entry['path']}: {gen_ok}"
+
+    # now the same banner with one field wrong at a time
+    sample = next((e for e in real
+                 if e["path"].endswith("hello.py") and e.get("color")), None)
+    if sample is None:
+        # The manifest is ordered by hue, so Python is not in the first 400.
+        # Take the sample from the whole set rather than from the sample slice.
+        all_files = json.loads(MANIFEST.read_text(encoding="utf-8"))["files"]
+        sample = next((e for e in all_files
+                       if e["path"].endswith("hello.py") and e.get("color")
+                       and (ROOT / e["path"]).is_file()), None)
+    if sample is None:
+        return
+    text = (ROOT / sample["path"]).read_text(encoding="utf-8")
+
+    def problems(body, has_program=None):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            p = pathlib.Path(d) / "probe.py"
+            p.write_text(body, encoding="utf-8")
+            return mod.check(
+                sample, p, gen,
+                mod.has_program_for(sample, gen, kinds)
+                if has_program is None else has_program)
+
+    assert not problems(text)
+    # The manifest's colour may differ from the banner's in case, so replace
+    # whichever form is actually there -- and assert the replacement happened,
+    # because a silent no-op makes the next assertion meaningless. That was the
+    # first version's bug: `.upper()` on "#3572a5" produced a string the banner
+    # never contained, so nothing was planted and the check below was vacuous.
+    wrong = text.replace(sample["color"], "#ff0000")
+    if wrong == text:
+        wrong = text.replace(sample["color"].lower(), "#ff0000")
+    assert wrong != text, f"could not plant a wrong colour in {sample['path']}"
+    assert problems(wrong), "a wrong colour was not reported"
+    assert problems(text.replace(":: RAiNBOW_Hello-World", "", 1)), (
+        "a missing title was not reported")
+    assert problems(text, has_program=False), (
+        "an admission line on a file that has none was not reported")
+
+
+def _generator():
+    """The generator module, loaded the way check_banners.py loads it."""
+    import sys as _sys
+    key = "gen_hello_banner_test"
+    if key in _sys.modules:
+        return _sys.modules[key]
+    spec = importlib.util.spec_from_file_location(
+        key, ROOT / "scripts" / "generate_all_hello.py")
+    mod = importlib.util.module_from_spec(spec)
+    _sys.modules[key] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_check_banners_passes_over_the_whole_repository():
+    if not _ready():
+        return
+    mod = _module("check_banners", ROOT / "scripts" / "check_banners.py")
+    files = json.loads(MANIFEST.read_text(encoding="utf-8"))["files"]
+    gen = mod.load_generator()
+    kinds = {}
+    classes = ROOT / "data" / "placeholder_classes.json"
+    if classes.exists():
+        kinds = {f["path"]: f.get("kind") for f in
+                 json.loads(classes.read_text(encoding="utf-8"))["files"]}
+    bad = []
+    for entry in files:
+        p = ROOT / entry["path"]
+        if not p.is_file():
+            continue
+        _prog, real = gen.program_for(entry["language"],
+                                      entry.get("extension") or "")
+        has = bool(real) and kinds.get(entry["path"]) is None
+        bad.extend(mod.check(entry, p, gen, has))
+    assert not bad, f"{len(bad)} banner problem(s), first: {bad[:3]}"
+
+
 def test_every_runner_mentions_the_file_it_runs():
     """A runner that does not mention {file} does not run anything.
 
