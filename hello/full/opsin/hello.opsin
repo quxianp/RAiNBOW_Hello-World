@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=misc source=builtin:misc ext=.opsin]
 
-// Hello World!
-// Hello World!
+// Opsin parses IUPAC chemical names into structures. It has no
+// greeting because "Hello World!" is not a chemical name, and
+// the file says so rather than inventing a molecule.
+// OPSIN("Hello World!") -> ParseException

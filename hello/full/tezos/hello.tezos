@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=blockchain source=builtin:blockchain ext=.tezos]
 
-// Hello World!
-// Hello World!
+;; Michelson is Tezos's contract language. Its comments use ;;,
+;; which is where the greeting goes: a contract may not print.
+parameter unit;
+storage unit;
+code {
+  CDR;
+  NIL operation;
+  PAIR;   ;; Hello World!
+};

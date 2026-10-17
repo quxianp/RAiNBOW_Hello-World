@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5701,
+  "without_program": 5682,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 270,
+    "program": 251,
     "unknown": 2097
   },
   "reasons": {
@@ -14,24 +14,24 @@
     "unclassified": 2097,
     "group:esoteric": 126,
     "group:chinese": 59,
-    "group:education": 47,
-    "group:golf": 28,
-    "group:dsl_query": 22,
+    "group:education": 43,
+    "group:golf": 25,
     "group:markup_data": 19,
+    "group:dsl_query": 19,
     "group:quantum": 19,
-    "group:academic": 17,
-    "group:ancient": 13,
-    "group:misc": 13,
+    "group:academic": 15,
     "group:template": 12,
     "group:assembly_dialects": 12,
-    "group:logic_constraint": 11,
+    "group:ancient": 12,
+    "group:misc": 11,
+    "group:logic_constraint": 10,
     "group:data_science": 10,
     "group:binary_data": 9,
     "group:functional": 9,
-    "group:blockchain": 8,
     "group:concurrency": 7,
+    "group:blockchain": 6,
     "group:build_config": 4,
-    "group:shell_os": 4,
+    "group:shell_os": 3,
     "type:data": 1,
     "type:programming": 1
   },
@@ -37168,19 +37168,6 @@
       ]
     },
     {
-      "language": "Agda-Coq",
-      "path": "hello/full/agda-coq/hello.agda_coq",
-      "extension": ".agda_coq",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
       "language": "Agda-SProp",
       "path": "hello/full/agda-sprop/hello.agda_sprop",
       "extension": ".agda_sprop",
@@ -37461,32 +37448,6 @@
       ]
     },
     {
-      "language": "BlueJ",
-      "path": "hello/full/bluej/hello.bluej",
-      "extension": ".bluej",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "Boolean Query",
-      "path": "hello/full/boolean-query/hello.boolean_query",
-      "extension": ".boolean_query",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Botley",
       "path": "hello/full/botley/hello.botley",
       "extension": ".botley",
@@ -37595,33 +37556,6 @@
       ]
     },
     {
-      "language": "Cmd",
-      "path": "hello/full/cmd/hello.cmd",
-      "extension": ".cmd",
-      "kind": "program",
-      "reason": "group:shell_os",
-      "groups": [
-        "shell_os"
-      ],
-      "source": [
-        "builtin:shell_os"
-      ]
-    },
-    {
-      "language": "Cobra",
-      "path": "hello/full/cobra/hello.cobra",
-      "extension": ".cobra",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Codecademy",
       "path": "hello/full/codecademy/hello.codecademy",
       "extension": ".codecademy",
@@ -37727,19 +37661,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "Derby",
-      "path": "hello/full/derby/hello.derby",
-      "extension": ".derby",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
       ]
     },
     {
@@ -37917,19 +37838,6 @@
       ]
     },
     {
-      "language": "Fe",
-      "path": "hello/full/fe/hello.fe",
-      "extension": ".fe",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
-      ]
-    },
-    {
       "language": "Fermat",
       "path": "hello/full/fermat/hello.fermat",
       "extension": ".fermat",
@@ -38089,19 +37997,6 @@
       ]
     },
     {
-      "language": "Functional programming language",
-      "path": "hello/full/functional-programming-language/hello.functional_programming_language",
-      "extension": ".functional_programming_language",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient"
-      ],
-      "source": [
-        "builtin:ancient"
-      ]
-    },
-    {
       "language": "GCompris",
       "path": "hello/full/gcompris/hello.gcompris",
       "extension": ".gcompris",
@@ -38244,19 +38139,6 @@
       ],
       "source": [
         "builtin:assembly_dialects"
-      ]
-    },
-    {
-      "language": "Isabelle/HOL",
-      "path": "hello/full/isabelle-hol/hello.isabelle_hol",
-      "extension": ".isabelle_hol",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
       ]
     },
     {
@@ -38738,19 +38620,6 @@
       ]
     },
     {
-      "language": "NXT",
-      "path": "hello/full/nxt/hello.nxt",
-      "extension": ".nxt",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Olive",
       "path": "hello/full/olive/hello.olive",
       "extension": ".olive",
@@ -38790,32 +38659,6 @@
       ]
     },
     {
-      "language": "Opsin",
-      "path": "hello/full/opsin/hello.opsin",
-      "extension": ".opsin",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
-      "language": "Oralux",
-      "path": "hello/full/oralux/hello.oralux",
-      "extension": ".oralux",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Orquest",
       "path": "hello/full/orquest/hello.orquest",
       "extension": ".orquest",
@@ -38839,19 +38682,6 @@
       ],
       "source": [
         "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Pi",
-      "path": "hello/full/pi/hello.pi",
-      "extension": ".pi",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
       ]
     },
     {
@@ -38919,19 +38749,6 @@
         "wikipedia",
         "esolangs",
         "builtin:misc"
-      ]
-    },
-    {
-      "language": "PictoBlox",
-      "path": "hello/full/pictoblox/hello.pictoblox",
-      "extension": ".pictoblox",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -39287,19 +39104,6 @@
       ]
     },
     {
-      "language": "RQL",
-      "path": "hello/full/rql/hello.rql",
-      "extension": ".rql",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Run 2007",
       "path": "hello/full/run-2007/hello.run_2007",
       "extension": ".run_2007",
@@ -39471,20 +39275,6 @@
       ]
     },
     {
-      "language": "SNOBOL4",
-      "path": "hello/full/snobol4/hello.snobol4",
-      "extension": ".snobol4",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "Solid",
       "path": "hello/full/solid/hello.solid",
       "extension": ".solid",
@@ -39536,19 +39326,6 @@
       ],
       "source": [
         "builtin:academic"
-      ]
-    },
-    {
-      "language": "Sqrl",
-      "path": "hello/full/sqrl/hello.sqrl",
-      "extension": ".sqrl",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {
@@ -39630,19 +39407,6 @@
       ]
     },
     {
-      "language": "Teaches",
-      "path": "hello/full/teaches/hello.teaches",
-      "extension": ".teaches",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Temmlet",
       "path": "hello/full/temmlet/hello.temmlet",
       "extension": ".temmlet",
@@ -39653,19 +39417,6 @@
       ],
       "source": [
         "builtin:golf"
-      ]
-    },
-    {
-      "language": "Tezos",
-      "path": "hello/full/tezos/hello.tezos",
-      "extension": ".tezos",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
       ]
     },
     {

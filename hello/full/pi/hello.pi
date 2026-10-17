@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=builtin:golf ext=.pi]
 
-// Hello World!
-// Hello World!
+// Pi is a calculus of mobile processes, so a program is a process
+// that sends a message. The channel is created and then used.
+new(chan!("Hello World!"));

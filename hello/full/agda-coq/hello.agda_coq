@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.agda_coq]
 
-// Hello World!
-// Hello World!
+// Agda-Coq is Coq with Agda's module system. Coq has no output
+// operation, so its Hello World is a definition.
+Definition hello := "Hello World!".
