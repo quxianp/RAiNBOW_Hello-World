@@ -223,6 +223,16 @@ GENERATORS = [
     # manifest cannot be the thing that checks it, because a broken generator
     # would agree with itself.
     ["scripts/audit_repo.py"],
+    # The same argument, applied to the manifest's own fields. Everything in the
+    # repository reads hello/manifest.json and nothing checked it: four
+    # languages carried a `runner` that never ran them (E34), and the colour
+    # and hue fields that the bar is drawn from had never been compared with
+    # each other.
+    ["scripts/check_manifest.py"],
+    # The binary formats are built from their specifications rather than
+    # transcribed, so the check is that the generator still builds them the way
+    # it did. A hand edit to a hex dump is a diff, not a silent change.
+    ["scripts/build_object_formats.py", "--check"],
 ]
 for cmd in GENERATORS:
     try:
