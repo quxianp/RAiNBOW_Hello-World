@@ -509,3 +509,20 @@ Format: what broke -> diagnosis -> fix/fallback -> status.
   figures -- would have been the worst instance of the failure this project
   documents.
 - Status: RESOLVED.
+
+E33 - a commit message quoted a performance figure I had not measured
+- What happened: the perf commit for check_doc_figures.py said "Measured:
+  199 s before, 96 s after". The clock said 153 s. The 96 was the number I
+  expected the memoisation to produce, written down before running anything.
+- Why it happened: the same reflex that produced E32 -- a figure typed from
+  expectation instead of from the tool. The irony of writing it in the commit
+  that adds a checker for exactly that mistake is the reason it is recorded.
+- How it was caught: read the tool output above the amend rather than the
+  message I had already composed.
+- Fix: amended before the commit was pushed, and the wrong number named in the
+  corrected message. A wrong figure in git history cannot be deleted, only
+  outvoted; there was still a choice to make and there was time to make it.
+- Lesson: compose a commit message from tool output, not from intent. If the
+  sentence needs a number, run the thing and quote what it printed -- in that
+  order.
+- Status: RESOLVED.
