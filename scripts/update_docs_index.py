@@ -121,6 +121,12 @@ DOCS = [
      "output operation. Three shapes -- a full document, a man page whose "
      "greeting belongs under .SH NAME, and an M4 macro that prints its own "
      "definition unless you write dnl."),
+    ("GLOSSARY.md", "Glossary",
+     "This repository uses four senses of 'kind' and two of 'layer', and none "
+     "of them is a classification of languages. Reconciles Linguist's types, "
+     "our five placeholder kinds, the two layers, and what a *segment* is -- "
+     "which is GitHub's word, not ours, and is the reason 694 files is 631 "
+     "slices."),
     ("MANIFEST.md", "hello/manifest.json",
      "The most load-bearing file in the repository and the one with the fewest "
      "readers: one entry per file, what each field means, and which three are "
