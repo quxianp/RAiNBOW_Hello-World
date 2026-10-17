@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=education source=builtin:education ext=.cubetto]
 
+// Cubetto is a robot with four actions -- forward, left, right and
+// light -- plus one that speaks: `hello`. It is the whole program,
+// and it is why Cubetto has a Hello World at all.
 // Hello World!
-// Hello World!
+hello

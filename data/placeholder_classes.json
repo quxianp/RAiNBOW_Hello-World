@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5592,
+  "without_program": 5587,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 161,
+    "program": 156,
     "unknown": 2097
   },
   "reasons": {
@@ -14,20 +14,20 @@
     "unclassified": 2097,
     "group:esoteric": 126,
     "group:chinese": 49,
-    "group:education": 24,
-    "group:golf": 20,
+    "group:education": 23,
     "group:markup_data": 19,
+    "group:golf": 19,
     "group:template": 12,
     "group:data_science": 10,
     "group:binary_data": 9,
-    "group:quantum": 9,
     "group:academic": 8,
     "group:functional": 8,
-    "group:assembly_dialects": 7,
+    "group:quantum": 8,
     "group:logic_constraint": 7,
-    "group:dsl_query": 6,
+    "group:assembly_dialects": 6,
     "group:ancient": 6,
     "group:misc": 6,
+    "group:dsl_query": 5,
     "group:concurrency": 5,
     "group:build_config": 4,
     "group:shell_os": 3,
@@ -37409,20 +37409,6 @@
       ]
     },
     {
-      "language": "Charcoal",
-      "path": "hello/full/charcoal/hello.charcoal",
-      "extension": ".charcoal",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "Coro",
       "path": "hello/full/coro/hello.coro",
       "extension": ".coro",
@@ -37433,19 +37419,6 @@
       ],
       "source": [
         "builtin:concurrency"
-      ]
-    },
-    {
-      "language": "Cubetto",
-      "path": "hello/full/cubetto/hello.cubetto",
-      "extension": ".cubetto",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -37671,19 +37644,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "IBM 5100",
-      "path": "hello/full/ibm-5100/hello.ibm_5100",
-      "extension": ".ibm_5100",
-      "kind": "program",
-      "reason": "group:assembly_dialects",
-      "groups": [
-        "assembly_dialects"
-      ],
-      "source": [
-        "builtin:assembly_dialects"
       ]
     },
     {
@@ -38123,19 +38083,6 @@
       ]
     },
     {
-      "language": "Pig Latin",
-      "path": "hello/full/pig-latin/hello.pig_latin",
-      "extension": ".pig_latin",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "PL-360",
       "path": "hello/full/pl-360/hello.pl_360",
       "extension": ".pl_360",
@@ -38264,19 +38211,6 @@
       ],
       "source": [
         "wikipedia",
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Quantum Assembly",
-      "path": "hello/full/quantum-assembly/hello.quantum_assembly",
-      "extension": ".quantum_assembly",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
         "builtin:quantum"
       ]
     },

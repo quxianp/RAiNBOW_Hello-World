@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.pig_latin]
 
-// Hello World!
-// Hello World!
+# Pig Latin is a transformation language, so its program is a word
+# transformed. A word beginning with a vowel gains "way"; a word
+# beginning with a consonant gains "ay" and moves the initial
+# consonant to the end.
+#
+#   Hello World!  ->  elloHay orldWay!
+elloHay orldWay!
