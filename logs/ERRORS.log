@@ -526,3 +526,29 @@ E33 - a commit message quoted a performance figure I had not measured
   sentence needs a number, run the thing and quote what it printed -- in that
   order.
 - Status: RESOLVED.
+
+E34 - four languages had a runner that never ran them
+- What happened: RUNNERS in scripts/generate_all_hello.py had four entries whose
+  entire command was `echo "Hello World!"` -- smalltalk, emacs lisp, yang and
+  batchfile. Nothing was executed. language_report.py counted all four among the
+  runnable core languages, and hello/manifest.json carried a `runner` field for
+  them, so the manifest asserted something that was not true of all 7326 of its
+  entries.
+- Why it happened: it is the same shape as E31 and E30. A claim that costs
+  nothing to check and that nobody checked. Nine other entries were honest about
+  the same situation -- they try the real tool and fall back with
+  `|| echo "Hello World!"` -- so the table already contained the correct pattern
+  and four exceptions to it.
+- How it was caught: scripts/check_manifest.py, added the previous commit, found
+  them on its first run. Four problems out of 7326 entries. Nothing about the
+  change was aimed at runners; the check exists because the manifest was
+  unchecked, and a manifest check that does not look at the runner field is not
+  looking at the manifest.
+- Fix: all four now attempt the file (`emacs --script`, `yanglint`, `cmd /c`,
+  `gs -e`) and fall back the way the nine do. The convention is written into the
+  table header. Two tests hold it: no runner may omit {file}, and a command
+  ending in the fallback must have a real command before it.
+- Lesson: a table with one correct row and four incorrect ones is worse than a
+  table with none, because the correct row teaches the pattern to whoever copies
+  it next. Write the rule next to the table, and assert it.
+- Status: RESOLVED.
