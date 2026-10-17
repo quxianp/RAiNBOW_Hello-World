@@ -133,3 +133,73 @@ def test_language_index_is_grouped_and_complete():
         f"the index lists {len(rows)} rows; there are 7 326 files. A classifier "
         f"that drops files would produce a shorter table and still exit 0.")
     assert "**total**" in text
+
+
+def test_extension_collisions_are_counted_not_guessed():
+    """The tool measures how much is at stake; it must not pick a winner.
+
+    Linguist resolves an ambiguous extension by filename, then by path pattern,
+    then by heuristics that live in the linguist gem and not in this
+    repository. A tool that answered "which language wins" by reading the
+    manifest would be answering a different question with a straight face --
+    the `colour`/`color` mistake again, one level up.
+
+    So the assertions are about the counting: that collisions exist, that every
+    file lands in exactly one row, and that a row's languages are the ones that
+    actually claim that extension.
+    """
+    if not _ready():
+        return
+    mod = _module("extension_collisions", ROOT / "scripts" / "extension_collisions.py")
+    rows = mod.collides()
+    f = mod.figures()
+
+    assert len(rows) == f["colliding_extensions"] > 100, (
+        f"only {len(rows)} colliding extensions found; Linguist shares the "
+        f"extension of about 117 of them with another language")
+    assert f["files"] == 7326
+    assert f["colliding_pct"] < 10.0, (
+        f"{f['colliding_pct']} % of the repository is at stake; that is not an "
+        f"ambiguity in a handful of files, it is a systematic overcount")
+
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    by_ext: dict[str, set] = {}
+    for entry in man["files"]:
+        by_ext.setdefault(entry.get("extension") or "", set()).add(entry["language"])
+    for r in rows:
+        assert r["languages"] == sorted(by_ext[r["extension"]]), (
+            f"{r['extension']}: reported {r['languages']}, manifest says "
+            f"{sorted(by_ext[r['extension']])}")
+        assert len(r["languages"]) > 1, (
+            f"{r['extension']} is reported as a collision with one language")
+
+    # Every file counted as colliding must really be in a colliding extension,
+    # and the counts must not double up.
+    counted = sum(r["files"] for r in rows)
+    assert counted == f["colliding_files"] == 281, (
+        f"rows sum to {counted}, figures say {f['colliding_files']}")
+    expected = sum(1 for e in man["files"]
+                   if len(by_ext[e.get("extension") or ""]) > 1)
+    assert counted == expected, (
+        f"{counted} files counted as colliding, {expected} are in a colliding "
+        f"extension")
+
+
+def test_extension_collisions_measures_bytes_off_disk():
+    """The manifest has no byte field, and this tool must not invent one.
+
+    It records a language's byte *share*, which is a tuning number from
+    balance_bytes.py. Summing it here would report a plausible total for
+    something the manifest does not contain.
+    """
+    if not _ready():
+        return
+    mod = _module("extension_collisions", ROOT / "scripts" / "extension_collisions.py")
+    sizes = mod.byte_totals()
+    man = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    assert len(sizes) == len(man["files"])
+    assert all(isinstance(v, int) and v >= 0 for v in sizes.values())
+    f = mod.figures()
+    assert f["colliding_bytes"] > 100_000, (
+        f"only {f['colliding_bytes']} bytes at stake; 281 files cannot fit in "
+        f"that")
