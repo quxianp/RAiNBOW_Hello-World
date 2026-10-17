@@ -93,6 +93,16 @@ DOCS = [
      "Sixty entries whose canonical program is one to fifteen characters, in "
      "three shapes -- and Actually, whose whole program is fifteen + "
      "characters."),
+    ("../docs/languages/TERMINALS.md", "Terminal output and control languages",
+     "Twenty-odd entries that do not print characters -- they move the cursor "
+     "and set attributes. Worked out: the SGR codes are additive bit flags, "
+     "38;2;r;g;b is the whole of truecolour, and that is the escape run.sh "
+     "draws the rainbow with."),
+    ("../docs/languages/SHELLS.md", "The shell family",
+     "Fifteen entries, one word 'shell' in most of them, and the distinction "
+     "that matters most: a shell script is not a program in the shell. print "
+     "is a ksh and zsh builtin and does not exist in bash, so copying one "
+     "line between three entries produces one that works and two that fail."),
     ("../docs/languages/MARKUP-AND-DOCUMENTS.md",
      "Markup, prose and documents",
      "Four shapes of document, and the one that is not what it looks like: a "
