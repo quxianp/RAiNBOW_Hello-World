@@ -93,6 +93,21 @@ DOCS = [
      "Sixty entries whose canonical program is one to fifteen characters, in "
      "three shapes -- and Actually, whose whole program is fifteen + "
      "characters."),
+    ("../docs/languages/BASIC-FAMILY.md", "The BASIC family",
+     "Ten entries and about six languages. Two require line numbers because the "
+     "ANSI standard's control flow is GOTO; and output is not PRINT in half of "
+     "them -- VBA is a host language where MsgBox is the answer and VBScript's "
+     "is WScript.Echo."),
+    ("../docs/languages/WEB-TEMPLATING.md", "Web templating languages",
+     "Twenty-five entries that are string substitution with a layer of control "
+     "flow. A template with no holes in it does nothing, so the greeting goes "
+     "in an expression. Liquid's tag set is fixed by design, which is why "
+     "{{ 'Hello World!' }} is the most it can do."),
+    ("../docs/languages/TEX-AND-TROFF.md", "The TeX and troff families",
+     "Eight entries that typeset rather than print, and not one of them has an "
+     "output operation. Three shapes -- a full document, a man page whose "
+     "greeting belongs under .SH NAME, and an M4 macro that prints its own "
+     "definition unless you write dnl."),
     ("MANIFEST.md", "hello/manifest.json",
      "The most load-bearing file in the repository and the one with the fewest "
      "readers: one entry per file, what each field means, and which three are "
