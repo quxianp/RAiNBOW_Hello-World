@@ -54,6 +54,7 @@ fast:                     ## the gate without the repository audit
 	$(PY) scripts/run_tests.py
 	$(PY) scripts/check_templates.py
 	$(PY) scripts/check_manifest.py
+	$(PY) scripts/check_banners.py
 	$(PY) scripts/verify_encodings.py
 	$(PY) scripts/build_object_formats.py --check
 
@@ -119,6 +120,7 @@ assets:                   ## re-render the bar and the hero banner
 lint:                     ## the cheap guards, no test suite
 	$(PY) scripts/check_templates.py
 	$(PY) scripts/check_manifest.py
+	$(PY) scripts/check_banners.py
 	$(PY) scripts/check_docs_links.py
 	$(PY) scripts/check_readme_links.py
 	$(PY) scripts/check_doc_figures.py

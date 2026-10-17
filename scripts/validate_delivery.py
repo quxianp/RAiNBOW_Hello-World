@@ -229,6 +229,9 @@ GENERATORS = [
     # and hue fields that the bar is drawn from had never been compared with
     # each other.
     ["scripts/check_manifest.py"],
+    # The banner is what a reader sees when they open a file, so it is checked
+    # against the manifest rather than trusted. Six fields in all 7,326 of them.
+    ["scripts/check_banners.py"],
     # The binary formats are built from their specifications rather than
     # transcribed, so the check is that the generator still builds them the way
     # it did. A hand edit to a hex dump is a diff, not a silent change.
