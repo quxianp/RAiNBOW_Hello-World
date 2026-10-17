@@ -1,12 +1,12 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5682,
+  "without_program": 5667,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 251,
+    "program": 236,
     "unknown": 2097
   },
   "reasons": {
@@ -14,7 +14,7 @@
     "unclassified": 2097,
     "group:esoteric": 126,
     "group:chinese": 59,
-    "group:education": 43,
+    "group:education": 30,
     "group:golf": 25,
     "group:markup_data": 19,
     "group:dsl_query": 19,
@@ -24,10 +24,10 @@
     "group:assembly_dialects": 12,
     "group:ancient": 12,
     "group:misc": 11,
-    "group:logic_constraint": 10,
     "group:data_science": 10,
     "group:binary_data": 9,
-    "group:functional": 9,
+    "group:logic_constraint": 9,
+    "group:functional": 8,
     "group:concurrency": 7,
     "group:blockchain": 6,
     "group:build_config": 4,
@@ -37195,33 +37195,6 @@
       ]
     },
     {
-      "language": "AgentCubes",
-      "path": "hello/full/agentcubes/hello.agentcubes",
-      "extension": ".agentcubes",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "AgentSheets",
-      "path": "hello/full/agentsheets/hello.agentsheets",
-      "extension": ".agentsheets",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Alethe",
       "path": "hello/full/alethe/hello.alethe",
       "extension": ".alethe",
@@ -37289,19 +37262,6 @@
       "source": [
         "esolangs",
         "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "App Inventor",
-      "path": "hello/full/app-inventor/hello.app_inventor",
-      "extension": ".app_inventor",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -37556,45 +37516,6 @@
       ]
     },
     {
-      "language": "Codecademy",
-      "path": "hello/full/codecademy/hello.codecademy",
-      "extension": ".codecademy",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "CodeCombat",
-      "path": "hello/full/codecombat/hello.codecombat",
-      "extension": ".codecombat",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "Codecraft",
-      "path": "hello/full/codecraft/hello.codecraft",
-      "extension": ".codecraft",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "COFF",
       "path": "hello/full/coff/hello.coff",
       "extension": ".coff",
@@ -37605,19 +37526,6 @@
       ],
       "source": [
         "builtin:assembly_dialects"
-      ]
-    },
-    {
-      "language": "Construct",
-      "path": "hello/full/construct/hello.construct",
-      "extension": ".construct",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -37957,19 +37865,6 @@
       ]
     },
     {
-      "language": "FRACK",
-      "path": "hello/full/frack/hello.frack",
-      "extension": ".frack",
-      "kind": "program",
-      "reason": "group:functional",
-      "groups": [
-        "functional"
-      ],
-      "source": [
-        "builtin:functional"
-      ]
-    },
-    {
       "language": "Fritzing",
       "path": "hello/full/fritzing/hello.fritzing",
       "extension": ".fritzing",
@@ -37994,19 +37889,6 @@
       ],
       "source": [
         "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "GCompris",
-      "path": "hello/full/gcompris/hello.gcompris",
-      "extension": ".gcompris",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -38194,19 +38076,6 @@
       ]
     },
     {
-      "language": "Khan Academy",
-      "path": "hello/full/khan-academy/hello.khan_academy",
-      "extension": ".khan_academy",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "Khepera",
       "path": "hello/full/khepera/hello.khepera",
       "extension": ".khepera",
@@ -38339,19 +38208,6 @@
       ]
     },
     {
-      "language": "LogicBlox",
-      "path": "hello/full/logicblox/hello.logicblox",
-      "extension": ".logicblox",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
-      ]
-    },
-    {
       "language": "LOV",
       "path": "hello/full/lov/hello.lov",
       "extension": ".lov",
@@ -38459,32 +38315,6 @@
       ],
       "source": [
         "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "MIT App Inventor",
-      "path": "hello/full/mit-app-inventor/hello.mit_app_inventor",
-      "extension": ".mit_app_inventor",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "MIT Scratch Jr",
-      "path": "hello/full/mit-scratch-jr/hello.mit_scratch_jr",
-      "extension": ".mit_scratch_jr",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
@@ -39249,19 +39079,6 @@
       ]
     },
     {
-      "language": "SimbAgent",
-      "path": "hello/full/simbagent/hello.simbagent",
-      "extension": ".simbagent",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "SMC11",
       "path": "hello/full/smc11/hello.smc11",
       "extension": ".smc11",
@@ -39445,19 +39262,6 @@
       ],
       "source": [
         "builtin:assembly_dialects"
-      ]
-    },
-    {
-      "language": "Thunkable",
-      "path": "hello/full/thunkable/hello.thunkable",
-      "extension": ".thunkable",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
       ]
     },
     {
