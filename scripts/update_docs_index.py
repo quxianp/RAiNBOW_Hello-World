@@ -121,6 +121,21 @@ DOCS = [
      "output operation. Three shapes -- a full document, a man page whose "
      "greeting belongs under .SH NAME, and an M4 macro that prints its own "
      "definition unless you write dnl."),
+    ("../docs/languages/LOGIC-PROGRAMMING.md", "The logic-programming family",
+     "Prolog has no print in its language proper -- write/1 is a library "
+     "predicate and the program is a set of rules. Mercury adds type "
+     "signatures that are not optional, Curry is not Prolog at all despite the "
+     "syntax, and Visual Prolog's .pl file is a diagram."),
+    ("../docs/languages/JAVASCRIPT-FAMILY.md", "The JavaScript family",
+     "Sixteen entries on a JavaScript engine, differing in three places: the "
+     "module system, the type system, and whether the unit is a program or a "
+     "component. CoffeeScript calls without parentheses, Dart has void main(), "
+     "ActionScript's only output was trace(), and JSX renders rather than runs."),
+    ("../docs/languages/C-FAMILY.md", "The C family",
+     "Nine entries whose names start with C and which have less in common than "
+     "the names suggest. C# shares a name and nothing else; C-- is a subset "
+     "whose entry point is proc main(); Cuda cannot print because the output "
+     "is on the host side of the copy."),
     ("GLOSSARY.md", "Glossary",
      "This repository uses four senses of 'kind' and two of 'layer', and none "
      "of them is a classification of languages. Reconciles Linguist's types, "
