@@ -213,6 +213,175 @@ def build_flatgeobuf() -> bytes:
     return out + b"\x00" * 64
 
 
+def build_dos_exe() -> bytes:
+    """A DOS MZ executable: a 28-byte header, a relocation table, a load module.
+
+    `e_cblp` counts 16-byte paragraphs of relocation and `e_cp` counts 512-byte
+    pages of code, and the header's own size plus those two has to account for
+    the file. `e_ip` and `e_cs` point at the entry point within the load module:
+    e_cs is the segment, e_ip the offset, and the usual value for a hand-written
+    one is 0x0000 with e_cp set -- because the code is placed at offset 0x100,
+    which is the first page after the header.
+    """
+    header = struct.pack(
+        "<2s13H",
+        b"MZ",
+        0,      # e_cblp:  final page count -- the whole file fits, so 0
+        1,      # e_cp:    pages in the load module
+        4,      # e_crlc:  relocation entries
+        0,      # e_cparhdr
+        0x0010, # e_minalloc
+        0xFFFF, # e_maxalloc
+        0,      # e_ss
+        0x0100, # e_sp:   stack pointer, at the top of the segment
+        0,      # e_csum:  not checked
+        0x0000, # e_ip:    entry offset within the load module
+        0,      # e_cs
+        0x001C, # e_lfarlc: relocation table at offset 0x1C
+        0,      # e_ovno
+    )
+    assert len(header) == 28, len(header)
+    reloc = struct.pack("<4H", 0, 0, 0, 0)      # four empty relocation entries
+    text = GREETING + b"\r\n$"
+    assert len(text) <= 512, len(text)
+    return header + reloc + text.ljust(512, b"\x90")
+
+
+def build_pe() -> bytes:
+    """A PE32 image: an MZ stub, then a PE signature, a COFF header, an optional
+    header and one section header.
+
+    `e_lfanew` at 0x3C is the interesting field: it is where the PE signature
+    is, and a stub whose e_lfanew disagrees with where the signature actually
+    sits is a file every loader rejects.
+    """
+    stub = bytearray(64)
+    stub[0:2] = b"MZ"
+    e_lfanew = 64
+    struct.pack_into("<I", stub, 0x3C, e_lfanew)
+
+    coff = struct.pack("<HHIIIHH", 0x014C, 1, 0, 0, 0, 224,
+                       0x0102 | 0x0002)          # executable | 32-bit
+    opt = bytearray(224)
+    struct.pack_into("<H", opt, 0, 0x010B)          # PE32
+    struct.pack_into("<B", opt, 2, 14)              # linker version
+    struct.pack_into("<I", opt, 16, 0x1000)         # entry point RVA
+    struct.pack_into("<I", opt, 20, 0x1000)         # base of code
+    struct.pack_into("<I", opt, 28, 0x400000)       # image base
+    struct.pack_into("<I", opt, 32, 0x1000)         # section alignment
+    struct.pack_into("<I", opt, 36, 0x200)          # file alignment
+    struct.pack_into("<I", opt, 56, 0x2000)         # size of image
+    struct.pack_into("<I", opt, 60, 0x200)          # size of headers
+    struct.pack_into("<H", opt, 68, 3)              # subsystem: console
+    struct.pack_into("<I", opt, 72, 16)             # size of stack reserve
+    struct.pack_into("<I", opt, 76, 0x1000)         # size of stack commit
+    struct.pack_into("<I", opt, 80, 0x1000)         # size of heap reserve
+    struct.pack_into("<I", opt, 84, 0x1000)         # size of heap commit
+    section = (
+        b".text\x00\x00\x00"
+        + struct.pack("<IIIIIIHHI",
+                     len(GREETING),        # virtual size
+                     0x1000,               # virtual address
+                     0x200,                # size of raw data
+                     e_lfanew + 4 + len(coff) + 224 + 40,   # pointer to raw data
+                     0, 0, 0, 0,
+                     0x60000020)           # CODE | EXECUTE | READ
+    )
+    return bytes(stub) + b"PE\0\0" + coff + bytes(opt) + section
+
+
+def build_macho() -> bytes:
+    """A 32-bit Mach-O executable header.
+
+    `MH_EXECUTE` is file type 2, and `ncmds` is 0 because an executable header
+    with no load commands is a relocatable object rather than a program -- which
+    is why the checker rejects ncmds == 0 and the builder sets 1.
+    """
+    cpu, sub = 0x01000007, 3            # CPU_TYPE_X86, CPU_SUBTYPE_X86_ALL
+    return struct.pack("<IiiIIII", 0xFEEDFACE, cpu, sub,
+                       2,               # MH_EXECUTE
+                       1,               # ncmds
+                       0,               # sizeofcmds, patched below
+                       0x00000085)      # MH_NOUNDEFS | MH_DYLDLINK | MH_TWOLEVEL
+
+
+def build_dex() -> bytes:
+    """A Dalvik bytecode file: the magic, then a header whose lengths agree.
+
+    `file_size` is the field that matters -- it is the check that catches a
+    truncated dump, and a DEX whose header lies about its own length is rejected
+    by the runtime before a single class is read.
+    """
+    magic = b"dex\n035\0"
+    checksum = 0xDEADBEEF
+    # twenty bytes: a SHA-1 signature is 20 bytes, and writing sixteen shifts
+    # every field after it by four -- which the header_size check caught on the
+    # first run, reporting 305419896 where 112 belongs.
+    signature = bytes(range(20))
+    file_size = 112
+    body = bytearray()
+    body += magic
+    body += struct.pack("<I", checksum)
+    body += signature
+    body += struct.pack("<I", file_size)
+    body += struct.pack("<I", 112)      # header_size
+    body += struct.pack("<I", 0x12345678)   # endian_tag: the constant
+    body += struct.pack("<I", 0)        # link_size
+    body += struct.pack("<I", 0)        # link_off
+    body += struct.pack("<I", 0)        # map_off
+    body += struct.pack("<I", GREETING.__len__())   # string_ids_size
+    body += struct.pack("<I", 0)        # string_ids_off
+    body += struct.pack("<I", 0)        # type_ids_size
+    body += struct.pack("<I", 0)        # type_ids_off
+    body += struct.pack("<I", 0)        # proto_ids_size
+    body += struct.pack("<I", 0)        # proto_ids_off
+    body += struct.pack("<I", 0)        # field_ids_size
+    body += struct.pack("<I", 0)        # field_ids_off
+    body += struct.pack("<I", 0)        # method_ids_size
+    body += struct.pack("<I", 0)        # method_ids_off
+    body += struct.pack("<I", 0)        # class_defs_size
+    body += struct.pack("<I", 112)      # class_defs_off
+    body += GREETING                    # the greeting, after the header
+    body[32:36] = struct.pack("<I", len(body))
+    assert len(body) >= 112
+    return bytes(body)
+
+
+def _uleb(n: int) -> bytes:
+    out = bytearray()
+    while True:
+        b = n & 0x7F
+        n >>= 7
+        if n:
+            out.append(b | 0x80)
+        else:
+            out.append(b)
+            return bytes(out)
+
+
+def build_wasm() -> bytes:
+    """A WebAssembly module: the magic, version 1, and a type section.
+
+    Sections are a one-byte id, a ULEB128 length, and that many bytes. Section 1
+    is the type section, and one type with no parameters and no results is the
+    smallest module that any engine will accept.
+    """
+    body = b"\x60" + _uleb(0) + _uleb(0)      # functype: () -> ()
+    out = b"\x00asm" + struct.pack("<I", 1)
+    out += bytes((1,)) + _uleb(len(body)) + body
+    return out
+
+
+def build_ans() -> bytes:
+    """An ANSI X3.68-1976 record file: fixed-width records, form-feed separated.
+
+    The format is one rule: every record is exactly as wide as the first, records
+    end with a form feed, and so does the file. There is no header and no
+    metadata, which makes the greeting the whole of the first record.
+    """
+    return GREETING.ljust(80, b" ") + b"\x0c"
+
+
 BUILDERS = {
     "coff": ("COFF", build_coff),
     "dwarf": ("DWARF", build_dwarf),
@@ -221,6 +390,13 @@ BUILDERS = {
     "tiff": ("TIFF", build_tiff),
     "shpffil": ("SHPFFIL", build_dbf),
     "flatgeobuf": ("FlatGeobuf", build_flatgeobuf),
+    # executable and bytecode formats
+    "dos_exe": ("DOS executable", build_dos_exe),
+    "pe_format": ("PE format", build_pe),
+    "macho": ("Mach-O", build_macho),
+    "dex": ("Dalvik Bytecode", build_dex),
+    "wasm_binary": ("WebAssembly Binary", build_wasm),
+    "ans": ("ANS", build_ans),
 }
 
 
@@ -309,6 +485,93 @@ def preamble(key: str, buf: bytes) -> str:
             "// whole of its free-text budget, so `Hello World!` gets the ten\n"
             "// characters that fit. The date in bytes 2-4 is there because the\n"
             "// format requires it, and the header ends with a 0x0D.\n"
+            "//\n"
+        ),
+        "dos_exe": (
+            "// DOS executable: the MZ header, 28 bytes, and then two numbers\n"
+            "// that decide everything. e_cblp counts 16-byte paragraphs of\n"
+            "// relocation table and e_cp counts 512-byte pages of load module,\n"
+            "// and the header plus those two has to account for the whole file.\n"
+            "//\n"
+            "// The entry point is a segment and an offset, e_cs and e_ip, and\n"
+            "// the code here starts at offset 0 of the load module -- which is\n"
+            "// why e_ip is 0 rather than 0x100. Nothing prints; the code is in\n"
+            "// the segment.\n"
+            "//\n"
+            "// Hello World! is the load module's own bytes.\n"
+            "//\n"
+        ),
+        "pe_format": (
+            "// PE format: a Portable Executable, which is an MZ stub, a PE\n"
+            "// signature, a COFF header, an optional header and a section\n"
+            "// table. Four headers, and each one has a length field describing\n"
+            "// the one after it.\n"
+            "//\n"
+            "// The field worth knowing is e_lfanew at offset 0x3C: it is where\n"
+            "// the PE signature is. An MZ stub whose e_lfanew disagrees with the\n"
+            "// signature's actual position is a file every loader rejects, and\n"
+            "// it is indistinguishable from correct in a hex dump.\n"
+            "//\n"
+            "// Hello World! is the .text section's raw data.\n"
+            "//\n"
+        ),
+        "macho": (
+            "// Mach-O: Apple's executable format, and a header of seven\n"
+            "// four-byte fields -- magic, cputype, cpusubtype, filetype,\n"
+            "// ncmds, sizeofcmds, flags.\n"
+            "//\n"
+            "// The magic is the constant FEEDFACE written in the *file's* byte\n"
+            "// order, which is why there are four magics and not one. Reading\n"
+            "// the magic wrong way round reads every field after it as a\n"
+            "// byte-swapped number and still succeeds, which is why the\n"
+            "// checker reports the endianness it chose.\n"
+            "//\n"
+            "// filetype 2 is MH_EXECUTE. ncmds is 1 rather than 0, because a\n"
+            "// header with no load commands is a relocatable object.\n"
+            "//\n"
+            "// Hello World! is in the comment above and nowhere in the header,\n"
+            "// because a Mach-O header has no field for prose.\n"
+            "//\n"
+        ),
+        "dex": (
+            "// Dalvik bytecode: the magic `dex\\n035\\0`, a checksum, a 20-byte\n"
+            "// SHA-1 signature, and then a row of lengths that all have to\n"
+            "// agree with each other and with the file.\n"
+            "//\n"
+            "// header_size is 112 and endian_tag is the constant 0x12345678 --\n"
+            "// it is not an endianness, it is a byte-order mark, and a reader\n"
+            "// that got it backwards would know. file_size is the field that\n"
+            "// catches a truncated dump, which is the failure this file is most\n"
+            "// likely to have.\n"
+            "//\n"
+            "// Hello World! follows the header.\n"
+            "//\n"
+        ),
+        "wasm_binary": (
+            "// WebAssembly Binary: the four bytes 00 61 73 6D, a version, and\n"
+            "// then sections -- a one-byte id, a ULEB128 length, that many\n"
+            "// bytes. Every length is ULEB128, which is the only part of a WASM\n"
+            "// file that is not a fixed width.\n"
+            "//\n"
+            "// Section 1 is the type section, and one function type with no\n"
+            "// parameters and no results is the smallest module any engine\n"
+            "// accepts.\n"
+            "//\n"
+            "// Hello World! is in the comment above: a WASM module is a\n"
+            "// compiled artefact and has nowhere to put prose.\n"
+            "//\n"
+        ),
+        "ans": (
+            "// ANS is the ANSI X3.68-1976 record format, and the entire\n"
+            "// specification is one rule: every record is exactly as wide as\n"
+            "// the first, records end with a form feed, and so does the file.\n"
+            "//\n"
+            "// There is no header, no metadata and no version field, which makes\n"
+            "// it the shortest of the formats here at eighty-one bytes and also\n"
+            "// the only one whose payload is entirely text.\n"
+            "//\n"
+            "// Hello World! is the record, left-justified and padded to eighty\n"
+            "// characters, which is what the format requires.\n"
             "//\n"
         ),
         "flatgeobuf": (

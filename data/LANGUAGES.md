@@ -9,14 +9,14 @@ repository but four, and only one of them is unfinished work.
 
 | section | files |
 |---|---:|
-| Carrying a program | 1,895 |
+| Carrying a program | 1,901 |
 | Esoteric languages with no canonical Hello World | 3,279 |
-| Documents and data formats, where the content is the answer | 46 |
-| Binary formats: a magic number and where the greeting would go | 9 |
+| Documents and data formats, where the content is the answer | 45 |
+| Binary formats: a magic number and where the greeting would go | 4 |
 | Index entries that are not languages | 2,097 |
 | **total** | **7,326** |
 
-## Carrying a program (1,895)
+## Carrying a program (1,901)
 
 | language | extension | file |
 |---|---|---|
@@ -108,6 +108,7 @@ repository but four, and only one of them is unfinished work.
 | Anchor | `.anchor` | `hello/full/anchor/hello.anchor` |
 | Unity3D Asset | `.anim` | `hello/core/unity3d-asset/hello.anim` |
 | Animoto | `.animoto` | `hello/full/animoto/hello.animoto` |
+| ANS | `.ans` | `hello/full/ans/hello.ans` |
 | Ansible | `.ansible` | `hello/full/ansible/hello.ansible` |
 | Antlers | `.antlers.html` | `hello/core/antlers/hello.antlers.html` |
 | AnyIO | `.anyio` | `hello/full/anyio/hello.anyio` |
@@ -431,6 +432,7 @@ repository but four, and only one of them is unfinished work.
 | D3 | `.d3` | `hello/full/d3/hello.d3` |
 | D3.js | `.d3_js` | `hello/full/d3-js/hello.d3_js` |
 | COLLADA | `.dae` | `hello/core/collada/hello.dae` |
+| Dalvik Bytecode | `.dalvik_bytecode` | `hello/full/dalvik-bytecode/hello.dalvik_bytecode` |
 | Darcs Patch | `.darcspatch` | `hello/core/darcs-patch/hello.darcspatch` |
 | Dart | `.dart` | `hello/core/dart/hello.dart` |
 | Daslang | `.das` | `hello/core/daslang/hello.das` |
@@ -461,6 +463,7 @@ repository but four, and only one of them is unfinished work.
 | DM | `.dm` | `hello/core/dm/hello.dm` |
 | Stata | `.do` | `hello/core/stata/hello.do` |
 | Dockerfile | `.dockerfile` | `hello/core/dockerfile/hello.dockerfile` |
+| DOS executable | `.dos_executable` | `hello/full/dos-executable/hello.dos_executable` |
 | Graphviz (DOT) | `.dot` | `hello/core/graphviz-dot/hello.dot` |
 | DOT Language | `.dot_language` | `hello/full/dot-language/hello.dot_language` |
 | Drill | `.drill` | `hello/full/drill/hello.drill` |
@@ -936,6 +939,7 @@ repository but four, and only one of them is unfinished work.
 | M4Sugar | `.m4` | `hello/full/m4sugar/hello.m4` |
 | M.NewLisp | `.m_newlisp` | `hello/full/m-newlisp/hello.m_newlisp` |
 | Ma | `.ma` | `hello/full/ma/hello.ma` |
+| Mach-O | `.mach_o` | `hello/full/mach-o/hello.mach_o` |
 | MAD | `.mad` | `hello/full/mad/hello.mad` |
 | Makefile | `.mak` | `hello/core/makefile/hello.mak` |
 | MakeCode | `.makecode` | `hello/full/makecode/hello.makecode` |
@@ -1194,6 +1198,7 @@ repository but four, and only one of them is unfinished work.
 | PDF binary | `.pdf_binary` | `hello/full/pdf-binary/hello.pdf_binary` |
 | PDKSH | `.pdksh` | `hello/full/pdksh/hello.pdksh` |
 | PDP-11 Assembly | `.pdp_11_assembly` | `hello/full/pdp-11-assembly/hello.pdp_11_assembly` |
+| PE format | `.pe_format` | `hello/full/pe-format/hello.pe_format` |
 | PEG.js | `.pegjs` | `hello/core/peg-js/hello.pegjs` |
 | PennyLane | `.pennylane` | `hello/full/pennylane/hello.pennylane` |
 | Pep8 | `.pep` | `hello/core/pep8/hello.pep` |
@@ -1760,6 +1765,7 @@ repository but four, and only one of them is unfinished work.
 | Watcom Assembler | `.watcom_assembler` | `hello/full/watcom-assembler/hello.watcom_assembler` |
 | WCS | `.wcs` | `hello/full/wcs/hello.wcs` |
 | WDL | `.wdl` | `hello/core/wdl/hello.wdl` |
+| WebAssembly Binary | `.webassembly_binary` | `hello/full/webassembly-binary/hello.webassembly_binary` |
 | WebAssembly Text | `.webassembly_text` | `hello/full/webassembly-text/hello.webassembly_text` |
 | WebAssembly text format | `.webassembly_text_format` | `hello/full/webassembly-text-format/hello.webassembly_text_format` |
 | WebGL | `.webgl` | `hello/full/webgl/hello.webgl` |
@@ -5200,11 +5206,10 @@ repository but four, and only one of them is unfinished work.
 | Zyzzogeton | `.zyzzogeton` | `hello/full/zyzzogeton/hello.zyzzogeton` |
 | ZZZ | `.zzz` | `hello/full/zzz/hello.zzz` |
 
-## Documents and data formats, where the content is the answer (46)
+## Documents and data formats, where the content is the answer (45)
 
 | language | extension | file |
 |---|---|---|
-| ANS | `.ans` | `hello/full/ans/hello.ans` |
 | Ant | `.ant` | `hello/full/ant/hello.ant` |
 | Apache Velocity | `.apache_velocity` | `hello/full/apache-velocity/hello.apache_velocity` |
 | AVIF | `.avif` | `hello/full/avif/hello.avif` |
@@ -5251,18 +5256,13 @@ repository but four, and only one of them is unfinished work.
 | XLS | `.xls` | `hello/full/xls/hello.xls` |
 | MiniYAML | `.yaml` | `hello/core/miniyaml/hello.yaml` |
 
-## Binary formats: a magic number and where the greeting would go (9)
+## Binary formats: a magic number and where the greeting would go (4)
 
 | language | extension | file |
 |---|---|---|
 | 7z binary | `.7z_binary` | `hello/full/7z-binary/hello.7z_binary` |
-| Dalvik Bytecode | `.dalvik_bytecode` | `hello/full/dalvik-bytecode/hello.dalvik_bytecode` |
-| DOS executable | `.dos_executable` | `hello/full/dos-executable/hello.dos_executable` |
 | LZ4 binary | `.lz4_binary` | `hello/full/lz4-binary/hello.lz4_binary` |
-| Mach-O | `.mach_o` | `hello/full/mach-o/hello.mach_o` |
-| PE format | `.pe_format` | `hello/full/pe-format/hello.pe_format` |
 | RAR binary | `.rar_binary` | `hello/full/rar-binary/hello.rar_binary` |
-| WebAssembly Binary | `.webassembly_binary` | `hello/full/webassembly-binary/hello.webassembly_binary` |
 | Zstandard binary | `.zstandard_binary` | `hello/full/zstandard-binary/hello.zstandard_binary` |
 
 ## Index entries that are not languages (2,097)

@@ -3,7 +3,31 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.mach_o]
 
-// Hello World!
-// Hello World!
+// Mach-O: Apple's executable format, and a header of seven
+// four-byte fields -- magic, cputype, cpusubtype, filetype,
+// ncmds, sizeofcmds, flags.
+//
+// The magic is the constant FEEDFACE written in the *file's* byte
+// order, which is why there are four magics and not one. Reading
+// the magic wrong way round reads every field after it as a
+// byte-swapped number and still succeeds, which is why the
+// checker reports the endianness it chose.
+//
+// filetype 2 is MH_EXECUTE. ncmds is 1 rather than 0, because a
+// header with no load commands is a relocatable object.
+//
+// Hello World! is in the comment above and nowhere in the header,
+// because a Mach-O header has no field for prose.
+//
+// macho: 28 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// CE FA ED FE 07 00 00 01 03 00 00 00 02 00 00 00 |................|   <- 0000
+// 01 00 00 00 00 00 00 00 85 00 00 00             |............|   <- 0010

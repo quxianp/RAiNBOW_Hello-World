@@ -3,7 +3,30 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : not a programming language; the document itself is the answer [kind=document groups=markup_data source=builtin:markup_data ext=.ans]
 
-// Hello World!
-// Hello World!
+// ANS is the ANSI X3.68-1976 record format, and the entire
+// specification is one rule: every record is exactly as wide as
+// the first, records end with a form feed, and so does the file.
+//
+// There is no header, no metadata and no version field, which makes
+// it the shortest of the formats here at eighty-one bytes and also
+// the only one whose payload is entirely text.
+//
+// Hello World! is the record, left-justified and padded to eighty
+// characters, which is what the format requires.
+//
+// ans: 81 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 48 65 6C 6C 6F 20 57 6F 72 6C 64 21 20 20 20 20 |Hello World!    |   <- 0000
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0010
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0020
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0030
+// 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 |                |   <- 0040
+// 0C                                              |.|   <- 0050

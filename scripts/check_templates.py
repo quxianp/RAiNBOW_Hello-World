@@ -55,7 +55,7 @@ MUST_NOT_INHERIT = {
     # the shared `.v` extension. It now has its own genuine Coq-family
     # template, so the assertion no longer applies -- see MUST_INHERIT.
     "Binary Brainfuck": "the word 'Binary'",
-    "WebAssembly Binary": "WAT text",
+
     # KFramework and WebAssembly Interface Type moved to MUST_INHERIT once each
     # gained its own template; see there.
     # Nim Task moved off this list when it gained a genuine template of its own:
@@ -94,6 +94,13 @@ MUST_INHERIT = [
     # The Go family, same reason and same history: each inherited a whole Go
     # program while its real format is `module x` / `go 1.21`, a module
     # list, a hash line, or `{{ }}`.
+    # WebAssembly Binary moved off MUST_NOT_INHERIT when it gained a real binary
+    # template of its own. Its extension is .webassembly_binary, which is
+    # distinct from the .wast that WebAssembly and WebAssembly text format
+    # share, so there was never anything to inherit from WAT text -- the
+    # assertion was a guess about a shared extension that turned out not to be
+    # shared. Same shape as Rocq Prover above.
+    "WebAssembly Binary",
     "Go Module", "Go Workspace", "Go Checksums", "Go Template",
     "Java Template Engine",
     # Rocq Prover: inherited a V-lang program via `.v` until it gained its own.

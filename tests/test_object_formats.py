@@ -123,14 +123,63 @@ def flatgeobuf() -> bytes:
     return out + b"\x00" * 64
 
 
+def pe() -> bytes:
+    stub = bytearray(64)
+    stub[0:2] = b"MZ"
+    struct.pack_into("<I", stub, 0x3C, 64)
+    coff = struct.pack("<HHIIIHH", 0x014C, 1, 0, 0, 0, 224, 0x0102)
+    opt = bytearray(224)
+    struct.pack_into("<H", opt, 0, 0x010B)
+    return bytes(stub) + b"PE\0\0" + coff + bytes(opt)
+
+
+def macho() -> bytes:
+    return struct.pack("<IiiIIII", 0xFEEDFACE, 0x01000007, 3, 2, 1, 0, 0x85)
+
+
+def dex() -> bytes:
+    out = bytearray(b"dex\n035\0")
+    out += struct.pack("<I", 0xDEADBEEF)
+    out += bytes(range(20))
+    out += struct.pack("<I", 112)      # file_size, patched below
+    out += struct.pack("<I", 112)      # header_size
+    out += struct.pack("<I", 0x12345678)
+    out += b"\x00" * (112 - len(out))
+    out += GREETING
+    out[32:36] = struct.pack("<I", len(out))
+    return bytes(out)
+
+
+def wasm() -> bytes:
+    return b"\x00asm" + struct.pack("<I", 1) + b"\x01\x03\x60\x00\x00"
+
+
+def dos_exe() -> bytes:
+    head = struct.pack("<2s13H", b"MZ", 0, 1, 4, 0, 0x10, 0xFFFF,
+                       0, 0x100, 0, 0, 0, 0x1C, 0)
+    assert len(head) == 28
+    reloc = struct.pack("<4H", 0, 0, 0, 0)          # four empty entries
+    text = (GREETING + b"\r\n$").ljust(512, b"\x90")  # one 512-byte page
+    return head + reloc + text
+
+
+def ans() -> bytes:
+    return GREETING.ljust(80, b" ") + b"\x0c"
+
+
 BUILDERS = {
     "coff": coff, "dwarf": dwarf, "fits": fits, "shapefile": shapefile,
     "tiff": tiff, "dbf": dbf, "flatgeobuf": flatgeobuf,
+    "pe_format": pe, "macho": macho, "dex": dex, "wasm_binary": wasm,
+    "dos_exe": dos_exe, "ans": ans, "shp": shapefile,
 }
 CHECKS = {
     "coff": V.check_coff, "dwarf": V.check_dwarf, "fits": V.check_fits,
     "shapefile": V.check_shapefile, "tiff": V.check_tiff, "dbf": V.check_dbf,
-    "flatgeobuf": V.check_flatgeobuf,
+    "flatgeobuf": V.check_flatgeobuf, "pe_format": V.check_pe,
+    "macho": V.check_macho, "dex": V.check_dex, "wasm_binary": V.check_wasm,
+    "dos_exe": V.check_dos_exe, "ans": V.check_ans,
+    "shp": V.check_shapefile,
 }
 
 
@@ -147,7 +196,7 @@ def test_a_correct_buffer_is_accepted_and_the_greeting_is_found():
 
 
 def test_the_three_that_have_a_text_field_name_it():
-    """COFF, FITS and TIFF can carry the greeting; the other three cannot.
+    """Four have a text field; the rest do not.
 
     Asserted separately because it is the interesting half. A checker that
     reports "structure ok" is right, but a *file* that quietly puts the
@@ -158,12 +207,16 @@ def test_the_three_that_have_a_text_field_name_it():
                          ("tiff", "is the greeting")):
         ok, why = CHECKS[name](BUILDERS[name]())
         assert ok and needle in why, f"{name}: {why}"
-    for name in ("dwarf", "shapefile", "dbf"):
+    for name in ("dwarf", "shapefile", "dbf", "pe_format", "macho", "dex",
+                 "wasm_binary", "dos_exe"):
         ok, why = CHECKS[name](BUILDERS[name]())
         assert ok, f"{name}: {why}"
-    # DWARF and dBASE have a free-text field too -- just not where it looked.
+    # DWARF and dBASE do have a free-text field, just not where it looked.
     assert "producer" in CHECKS["dwarf"](dwarf())[1]
     assert "HelloWorld" in CHECKS["dbf"](dbf())[1]
+    # ANS is the one binary format whose entire payload is text.
+    ok, why = CHECKS["ans"](ans())
+    assert ok and "80 characters" in why, f"ans: {why}"
 
 
 def test_a_wrong_magic_number_is_rejected():
@@ -173,6 +226,11 @@ def test_a_wrong_magic_number_is_rejected():
         "tiff": lambda b: b[:2] + struct.pack("<H", 43) + b[4:],
         "dbf": lambda b: b"\x07" + b[1:],
         "flatgeobuf": lambda b: struct.pack(">I", 0x0A0D0D0B) + b[4:],
+        "pe_format": lambda b: b"ZZ" + b[2:],
+        "macho": lambda b: struct.pack("<I", 0xFEEDFACD) + b[4:],
+        "dex": lambda b: b"dex" + b"x" + b[4:],
+        "wasm_binary": lambda b: b"\x00asx" + b[4:],
+        "dos_exe": lambda b: b"ZZ" + b[2:],
     }
     for name, corrupt in cases.items():
         ok, why = CHECKS[name](corrupt(BUILDERS[name]()))
@@ -185,6 +243,7 @@ def test_a_length_that_disagrees_with_the_file_is_rejected():
         "dwarf": lambda b: b[:4] + struct.pack("<I", 999) + b[8:],
         "dbf": lambda b: b[:8] + struct.pack("<H", 7) + b[10:],
         "fits": lambda b: b[:-1],
+        "dex": lambda b: b[:32] + struct.pack("<I", 9999) + b[36:],
     }
     for name, corrupt in cases.items():
         ok, why = CHECKS[name](corrupt(BUILDERS[name]()))
@@ -235,8 +294,30 @@ def test_the_payload_join_is_not_silent_about_its_assumption():
 
 
 def test_object_formats_are_routed_by_extension():
-    for ext in ("coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf"):
+    for ext in ("coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf",
+                "pe_format", "macho", "dex", "wasm_binary", "dos_exe", "ans"):
         assert ext in V.OBJECT_FORMATS, f"{ext} has no checker registered"
+
+
+def test_the_macho_endianness_is_derived_not_guessed():
+    """Reading the magic the wrong way round succeeds and reports nonsense.
+
+    A Mach-O file writes the constant 0xFEEDFACE in the file's byte order, so
+    the magic a little-endian read returns decides the endianness of everything
+    after it. The first version had the mapping inverted and reported
+    `cpu 117440513, file type 33554432` for a perfectly correct header -- every
+    field a byte-swapped number, and no failure anywhere, because a byte-swapped
+    uint32 is still a uint32.
+
+    So the check is that the values come out as the ones written.
+    """
+    buf = macho()
+    ok, why = V.check_macho(buf)
+    assert ok, why
+    cpu, sub, ftype = struct.unpack_from("<iiI", buf, 4)
+    assert f"cpu {cpu}/{sub}" in why, why
+    assert f"file type {ftype}" in why, why
+    assert ftype == 2, "MH_EXECUTE is file type 2; the builder says otherwise"
 
 
 def test_a_preamble_that_names_the_magic_number_does_not_become_payload():
@@ -318,10 +399,25 @@ def test_the_route_floor_is_each_format_s_own_minimum():
     raise. Each entry therefore carries the length below which a buffer cannot
     be a real file of that format, which is also the length its own checker
     bounds-checks against.
+
+    The buffer handed to the checker is a *truncation* of a valid one, not a
+    buffer of zeros. Zeros fail on the magic number -- correctly, but for the
+    wrong reason -- which is how a test can assert "it rejected it" forever
+    without ever testing the length check it is about.
     """
     for tag, (kind, check, minimum) in V.OBJECT_FORMATS.items():
         assert isinstance(minimum, int) and minimum > 0, tag
-        ok, why = check(bytes(minimum - 1))
-        assert not ok, f"{tag} accepted a {minimum - 1}-byte buffer: {why}"
-        assert str(minimum - 1) in why or "short" in why or "need" in why, (
-            f"{tag} rejected a short buffer without saying how short: {why}")
+        if tag not in BUILDERS:
+            # An alias (`obj` is `coff`, `tif` is `tiff`) -- it shares the
+            # checker's floor, so testing the canonical tag tested it too.
+            assert any(alias in BUILDERS
+                       and V.OBJECT_FORMATS.get(alias, (None,))[1] is check
+                       for alias in V.OBJECT_FORMATS), (
+                f"{tag} has a route floor and a checker but nothing builds it")
+            continue
+        short = BUILDERS[tag]()[:minimum - 1]
+        ok, why = check(short)
+        assert not ok, f"{tag} accepted a {minimum - 1}-byte file: {why}"
+        assert str(minimum - 1) in why or "short" in why or "need" in why \
+            or "empty" in why, (
+                f"{tag} rejected a short buffer without saying how short: {why}")

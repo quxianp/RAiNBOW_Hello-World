@@ -3,7 +3,26 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : a binary format; there is no text to print [kind=binary groups=binary_data source=builtin:binary_data ext=.webassembly_binary]
 
-// Hello World!
-// Hello World!
+// WebAssembly Binary: the four bytes 00 61 73 6D, a version, and
+// then sections -- a one-byte id, a ULEB128 length, that many
+// bytes. Every length is ULEB128, which is the only part of a WASM
+// file that is not a fixed width.
+//
+// Section 1 is the type section, and one function type with no
+// parameters and no results is the smallest module any engine
+// accepts.
+//
+// Hello World! is in the comment above: a WASM module is a
+// compiled artefact and has nowhere to put prose.
+//
+// wasm_binary: 13 bytes, dumped sixteen at a time.
+//
+// The bytes below are not hand-written. They are built from the
+// format's own field widths by scripts/build_object_formats.py, and
+// scripts/verify_encodings.py reads the fields back by name -- the
+// magic number, the lengths, the offsets. A hex dump written from
+// memory is wrong in one byte and looks exactly like a correct one.
+//
+
+// 00 61 73 6D 01 00 00 00 01 03 60 00 00          |.asm......`..|   <- 0000

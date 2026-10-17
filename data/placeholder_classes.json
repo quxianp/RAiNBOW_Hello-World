@@ -1,10 +1,10 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5587,
+  "without_program": 5581,
   "counts": {
-    "binary": 9,
-    "document": 46,
+    "binary": 4,
+    "document": 45,
     "esolang": 3279,
     "program": 156,
     "unknown": 2097
@@ -15,11 +15,10 @@
     "group:esoteric": 126,
     "group:chinese": 49,
     "group:education": 23,
-    "group:markup_data": 19,
     "group:golf": 19,
+    "group:markup_data": 18,
     "group:template": 12,
     "group:data_science": 10,
-    "group:binary_data": 9,
     "group:academic": 8,
     "group:functional": 8,
     "group:quantum": 8,
@@ -29,6 +28,7 @@
     "group:misc": 6,
     "group:dsl_query": 5,
     "group:concurrency": 5,
+    "group:binary_data": 4,
     "group:build_config": 4,
     "group:shell_os": 3,
     "group:blockchain": 2,
@@ -40,32 +40,6 @@
       "language": "7z binary",
       "path": "hello/full/7z-binary/hello.7z_binary",
       "extension": ".7z_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "Dalvik Bytecode",
-      "path": "hello/full/dalvik-bytecode/hello.dalvik_bytecode",
-      "extension": ".dalvik_bytecode",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "DOS executable",
-      "path": "hello/full/dos-executable/hello.dos_executable",
-      "extension": ".dos_executable",
       "kind": "binary",
       "reason": "group:binary_data",
       "groups": [
@@ -89,48 +63,9 @@
       ]
     },
     {
-      "language": "Mach-O",
-      "path": "hello/full/mach-o/hello.mach_o",
-      "extension": ".mach_o",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "PE format",
-      "path": "hello/full/pe-format/hello.pe_format",
-      "extension": ".pe_format",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
       "language": "RAR binary",
       "path": "hello/full/rar-binary/hello.rar_binary",
       "extension": ".rar_binary",
-      "kind": "binary",
-      "reason": "group:binary_data",
-      "groups": [
-        "binary_data"
-      ],
-      "source": [
-        "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "WebAssembly Binary",
-      "path": "hello/full/webassembly-binary/hello.webassembly_binary",
-      "extension": ".webassembly_binary",
       "kind": "binary",
       "reason": "group:binary_data",
       "groups": [
@@ -151,19 +86,6 @@
       ],
       "source": [
         "builtin:binary_data"
-      ]
-    },
-    {
-      "language": "ANS",
-      "path": "hello/full/ans/hello.ans",
-      "extension": ".ans",
-      "kind": "document",
-      "reason": "group:markup_data",
-      "groups": [
-        "markup_data"
-      ],
-      "source": [
-        "builtin:markup_data"
       ]
     },
     {

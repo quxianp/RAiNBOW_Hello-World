@@ -213,9 +213,14 @@ def payload_bytes(text: str) -> bytes:
          offset in front would contribute a byte. The dumps put the offset
          after the gutter, where it cannot be mistaken for data.
 
-      3. The dump is contiguous from offset 0. `hex_runs` drops a run shorter
-         than `minimum`, so build_object_formats.py pads the last line to a
-         full sixteen bytes.
+      3. The dump is contiguous from offset 0, and no line is shorter than
+         the filter. `hex_runs` drops runs shorter than `minimum`, and an ANSI
+         X3.68 record is 81 bytes -- so its last dump line is one byte, the form
+         feed that terminates the file. At a minimum of 4 that byte was dropped,
+         the reassembled payload was 80 bytes, and the checker reported a file
+         that "does not end with a form feed" because the terminator it wanted
+         had been thrown away by the reader looking for it. The gutter is the
+         filter; the length is not.
 
     Named `payload_bytes` rather than `payload` because `check_encoding` uses
     `payload` as a loop variable further down, and a module-level function of
@@ -226,7 +231,7 @@ def payload_bytes(text: str) -> bytes:
     for line in text.splitlines():
         if "|" not in line:
             continue
-        out.extend(hex_runs(line, minimum=4))
+        out.extend(hex_runs(line, minimum=1))
     return b"".join(out)
 
 
@@ -381,6 +386,205 @@ def check_tiff(buf: bytes) -> tuple[bool, str]:
     return True, f"{count} IFD entries parse, none of them the greeting"
 
 
+def check_pe(buf: bytes) -> tuple[bool, str]:
+    """A Portable Executable: an MZ stub, a PE signature and a COFF header.
+
+    The DOS stub is 64 bytes, `e_lfanew` at offset 0x3C says where the PE
+    signature is, and the COFF header follows it. The stub has to agree with
+    e_lfanew: an MZ header that points at a PE signature thirty bytes before the
+    signature's actual position is a file every loader rejects, and it looks
+    correct in a hex dump.
+    """
+    if len(buf) < 64:
+        return False, f"{len(buf)} bytes; a DOS stub alone is 64"
+    if buf[:2] != b"MZ":
+        return False, f"signature {buf[:2]!r}; a PE file starts with MZ"
+    e_lfanew, = struct.unpack_from("<I", buf, 0x3C)
+    if e_lfanew < 64:
+        return False, (f"e_lfanew is {e_lfanew}; it must point past the 64-byte "
+                       f"DOS stub")
+    if e_lfanew + 24 > len(buf):
+        return False, (f"e_lfanew is {e_lfanew}, past the end of a "
+                       f"{len(buf)}-byte file")
+    if buf[e_lfanew:e_lfanew + 4] != b"PE\0\0":
+        return False, (f"no PE signature at e_lfanew={e_lfanew}; found "
+                       f"{buf[e_lfanew:e_lfanew + 4]!r}")
+    machine, nsec, _stamp, symptr, nsym, optsize, chars = struct.unpack_from(
+        "<HHIIIHH", buf, e_lfanew + 4)
+    if nsec == 0:
+        return False, "the COFF header claims no sections"
+    if optsize == 0:
+        return False, ("an image with no optional header is a driver or a "
+                       "system file, not a program")
+    magic, = struct.unpack_from("<H", buf, e_lfanew + 24)
+    if magic not in (0x10B, 0x20B):
+        return False, f"optional header magic 0x{magic:04X}; PE32 is 0x010B"
+    return True, (f"MZ stub, e_lfanew {e_lfanew}, PE signature, machine "
+                  f"0x{machine:04X}, {nsec} section(s), optional header "
+                  f"{optsize} bytes")
+
+
+def check_macho(buf: bytes) -> tuple[bool, str]:
+    """A Mach-O header: a magic, a CPU type, a file type and a load-command count.
+
+    The four magics are 0xFEEDFACE (32-bit), 0xFEEDFACF (64-bit) and the two
+    byte-swapped forms, and which one it is decides the width of everything
+    after it -- so getting it wrong makes the rest of the header unreadable
+    rather than merely incorrect.
+    """
+    if len(buf) < 28:
+        return False, f"{len(buf)} bytes; a Mach-O header is 28 or 32"
+    magic, = struct.unpack_from("<I", buf, 0)
+    # 28 bytes for a 32-bit header, 32 for a 64-bit one: magic, cputype,
+    # cpusubtype, filetype, ncmds, sizeofcmds, flags.
+    #
+    # The endianness follows from the magic read. A Mach-O file writes the
+    # constant 0xFEEDFACE in the *file's* byte order, so a little-endian read
+    # that returns FEEDFACE means the file is little-endian and the rest of the
+    # header is read the same way; a little-endian read that returns CEFAEDFE
+    # means the file is big-endian. Getting this pair the wrong way round reads
+    # every field after the magic as a byte-swapped number and still returns
+    # success, which is why the first run reported cpu 117440513 and file type
+    # 33554432 for a perfectly correct header.
+    WIDTHS = {
+        0xFEEDFACE: (28, "<"),
+        0xCFFAEDFE: (32, "<"),
+        0xCEFAEDFE: (28, ">"),
+        0xFEEDFACF: (32, ">"),
+    }
+    if magic not in WIDTHS:
+        return False, f"magic 0x{magic:08X}; Mach-O is a FEEDFACE family magic"
+    wide, width = WIDTHS[magic]
+    if len(buf) < wide:
+        return False, (f"{len(buf)} bytes; a {wide}-byte Mach-O header is the "
+                       f"minimum for this magic")
+    cpu, sub, ftype, ncmds, sizeofcmds, flags = struct.unpack_from(
+        width + "iiIIII", buf, 4)
+    if ncmds == 0:
+        return False, "no load commands; that is a relocatable object, not a binary"
+    return True, (f"magic ok, {width}-endian, cpu {cpu}/{sub}, file type "
+                  f"{ftype}, {ncmds} load command(s) in {sizeofcmds} bytes, "
+                  f"flags 0x{flags:08X}")
+
+
+def check_dex(buf: bytes) -> tuple[bool, str]:
+    """A Dalvik bytecode header: `dex\n035\0`, then lengths that must agree.
+
+    The header's own `file_size` field is the check that matters -- a DEX file
+    whose header says it is larger than the file is rejected by the runtime, and
+    it is also the field that tells you the dump was truncated.
+    """
+    if len(buf) < 112:
+        return False, f"{len(buf)} bytes; a DEX header is 112"
+    if buf[:8] != b"dex\n035\0":
+        return False, (f"magic {buf[:8]!r}; a DEX file starts with "
+                       f"{b'dex' + bytes([10]) + b'035' + bytes([0])!r}")
+    file_size, = struct.unpack_from("<I", buf, 32)
+    header_size, = struct.unpack_from("<I", buf, 36)
+    endian, = struct.unpack_from("<I", buf, 40)
+    if header_size != 112:
+        return False, f"header_size is {header_size}; the DEX header is 112"
+    if endian != 0x12345678:
+        return False, f"endian_tag is 0x{endian:08X}; it is the constant 0x12345678"
+    if file_size != len(buf):
+        return False, (f"the header says {file_size} bytes and the dump has "
+                       f"{len(buf)}; the file is truncated or the header lies")
+    return True, f"dex 035, header {header_size} bytes, file {file_size} bytes"
+
+
+def check_wasm(buf: bytes) -> tuple[bool, str]:
+    """A WebAssembly module: `\0asm`, version 1, then sections.
+
+    Every section is a one-byte id, a ULEB128 length and that many bytes, and
+    the lengths have to add up -- a module whose first section claims more bytes
+    than the file has is rejected by every engine, and the error names the
+    section rather than the file.
+    """
+    if len(buf) < 8:
+        return False, f"{len(buf)} bytes; a WASM header is 8"
+    if buf[:4] != b"\0asm":
+        return False, f"magic {buf[:4]!r}; a WASM module starts with 00 61 73 6D"
+    version, = struct.unpack_from("<I", buf, 4)
+    if version != 1:
+        return False, f"version {version}; the binary format version is 1"
+    pos, sections = 8, []
+    while pos < len(buf):
+        sec = buf[pos]
+        pos += 1
+        size, pos = _uleb(buf, pos)
+        if pos + size > len(buf):
+            return False, (f"section {sec} claims {size} bytes at offset {pos}, "
+                           f"past the end of a {len(buf)}-byte module")
+        sections.append((sec, size))
+        pos += size
+    return True, (f"magic ok, version 1, {len(sections)} section(s): "
+                  + ", ".join(f"id {i} ({n} bytes)" for i, n in sections))
+
+
+def _uleb(buf: bytes, pos: int) -> tuple[int, int]:
+    """An unsigned LEB128, which is how WASM encodes every length."""
+    result = shift = 0
+    while pos < len(buf):
+        b = buf[pos]
+        pos += 1
+        result |= (b & 0x7F) << shift
+        if not b & 0x80:
+            return result, pos
+        shift += 7
+        if shift > 63:
+            raise ValueError("LEB128 longer than 64 bits")
+    raise ValueError("LEB128 ran off the end")
+
+
+def check_dos_exe(buf: bytes) -> tuple[bool, str]:
+    """A DOS executable: an MZ header, a relocation table, a load module.
+
+    `e_cparhdr` is the number of 16-byte paragraphs in the header and `e_cp` is
+    the number of 512-byte pages in the load module. The header's own size plus
+    the load module's size has to account for the file, which is the field pair
+    that catches a truncated dump.
+    """
+    if len(buf) < 28:
+        return False, f"{len(buf)} bytes; an MZ header is 28"
+    if buf[:2] != b"MZ":
+        return False, f"signature {buf[:2]!r}; a DOS executable starts with MZ"
+    (cblp, cp, crlc, _cparhdr, _minalloc, _maxalloc, _ss, _sp, _csum, _ip,
+     _cs, _lfarlc, _ovno) = struct.unpack_from("<13H", buf, 2)
+    if cblp == 0 and cp == 0:
+        return False, "e_cblp and e_cp are both zero; there is no load module"
+    declared = 28 + cblp * 16 + cp * 512
+    if declared > len(buf):
+        return False, (f"the header describes {declared} bytes and the dump "
+                       f"has {len(buf)}")
+    return True, (f"MZ, {cblp} page(s) of relocation, {cp} page(s) of code, "
+                  f"declared {declared} bytes")
+
+
+def check_ans(buf: bytes) -> tuple[bool, str]:
+    """An ANSI X3.68-1976 record: fixed-length, form-feed separated.
+
+    The whole format is one rule -- every record is exactly `e_ilen` characters,
+    records end with a form feed, and the file ends with one -- and every one of
+    those is checkable, which makes it a better test than it looks.
+    """
+    if len(buf) < 1:
+        return False, "empty; an ANS file is at least a record and a form feed"
+    if buf[-1] != 0x0C:
+        return False, (f"the file does not end with a form feed; last byte is "
+                       f"0x{buf[-1]:02X}")
+    records = buf.split(b"\x0c")
+    if records and records[-1] == b"":
+        records = records[:-1]
+    if not records:
+        return False, "no records"
+    widths = {len(r) for r in records}
+    if len(widths) != 1:
+        return False, f"records are not a uniform length: {sorted(widths)}"
+    width = widths.pop()
+    return True, (f"{len(records)} record(s) of {width} characters, "
+                  f"form-feed terminated")
+
+
 DBASE_VERSIONS = {
     0x03, 0x30, 0x31, 0x32, 0x43, 0x63, 0x7B, 0x83, 0x8B, 0xCB, 0xE5, 0xF5,
     0xFB,
@@ -458,6 +662,15 @@ OBJECT_FORMATS = {
     "tif": ("tiff", check_tiff, 8),
     "shpffil": ("dbf", check_dbf, 33),
     "dbf": ("dbf", check_dbf, 33),
+    # executable and bytecode formats, which are headers like any other
+    "pe_format": ("pe", check_pe, 88),
+    "exe": ("pe", check_pe, 88),
+    "macho": ("macho", check_macho, 28),
+    "dex": ("dex", check_dex, 112),
+    "wasm": ("wasm", check_wasm, 8),
+    "wasm_binary": ("wasm", check_wasm, 8),
+    "dos_exe": ("dos-exe", check_dos_exe, 28),
+    "ans": ("ans", check_ans, 1),
 }
 
 
@@ -528,6 +741,8 @@ def candidates() -> list[pathlib.Path]:
                 "base58", "base62", "base85", "asci85", "deflate", "intel hex",
                 "motorola s-record", "srec", "messagepack", "cbor", "bson",
                 "coff", "dwarf", "wcs", "shp", "tiff", "shpffil", "flatgeobuf",
+                "pe format", "macho", "dalvik bytecode", "webassembly binary",
+                "dos executable", "ans",
             }
         )
         if interesting:
