@@ -44,6 +44,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "hello" / "manifest.json"
 
+_TRUTH: dict | None = None
+
 # Fenced code blocks are quoted output, not claims; tables are tables; block
 # quotes are quotations. None of them is what this tool is for.
 FENCE = re.compile(r"^```.*?^```", re.S | re.M)
@@ -70,7 +72,16 @@ def _load(path: pathlib.Path, name: str):
 
 
 def truth() -> dict:
-    """Every claimable quantity, measured."""
+    """Every claimable quantity, measured.
+
+    Memoised. `truth()` reads the whole manifest through language_table.py,
+    which parses 7 326 files, and two tests calling it turned a five-minute
+    suite into a six-minute one. The quantities do not change while a process
+    is running, so caching them is not a compromise.
+    """
+    global _TRUTH
+    if _TRUTH is not None:
+        return _TRUTH
     out: dict[str, int] = {}
 
     n = 0
@@ -116,6 +127,7 @@ def truth() -> dict:
     # agree with itself forever. The acceptance count is validate_delivery.py's
     # output, which would mean running it. Both are skipped rather than guessed --
     # a checker that agrees with itself is worse than one that says nothing.
+    _TRUTH = out
     return out
 
 
