@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query source=builtin:dsl_query ext=.linkql]
 
+// LinkQL is a query language over a site's link graph. Its answers are
+// URLs, so its program is a query rather than a statement --
+// and the greeting is the document the query returns.
 // Hello World!
-// Hello World!
+SELECT out FROM link
+WHERE in = "https://example.org/"

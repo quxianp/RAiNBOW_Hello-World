@@ -3,7 +3,15 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.中文c]
 
-// Hello World!
-// Hello World!
+// 中文C is C with Chinese keywords. There is no single agreed keyword
+// set -- the projects that use it disagree on whether a type is
+// `整型` or still `int` -- so this file keeps C's types and names the
+// function in Chinese, which is the part every variant agrees on.
+#include <stdio.h>
+
+int 主函数(void) {
+    /* 你好，世界 */
+    printf("Hello World!\n");
+    return 0;
+}

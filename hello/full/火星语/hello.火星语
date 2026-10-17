@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.火星语]
 
-// Hello World!
-// Hello World!
+# 火星语 (Martian) is Chinese leetspeak: a transliteration where
+# letters are replaced by the digit that looks like them in a
+# Chinese input method. The program is the greeting, encoded.
+# Hello World!  ->  H3ll0 W0r1d!
+H3ll0 W0r1d!

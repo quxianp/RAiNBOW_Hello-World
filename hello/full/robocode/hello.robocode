@@ -3,7 +3,14 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=education source=builtin:education ext=.robocode]
 
-// Hello World!
-// Hello World!
+// RoboCode is the Java-based robot simulator every introductory
+// robotics course starts with. A battle file implements
+// AdvancedRobot, and run() is called once per tick.
+import robocode.*;
+
+public class MyFirstRobot extends AdvancedRobot {
+    public void run() {
+        out.println("Hello World!");
+    }
+}

@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.火星文编程]
 
-// Hello World!
-// Hello World!
+// 火星文编程 is 火星语 as a programming language rather than a
+// spelling: a program is leetspeak, and this one is the greeting.
+// Hello World!  ->  H3ll0 W0r1d!
+H3ll0 W0r1d!

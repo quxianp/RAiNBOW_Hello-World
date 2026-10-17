@@ -1,33 +1,33 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5607,
+  "without_program": 5593,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 176,
+    "program": 162,
     "unknown": 2097
   },
   "reasons": {
     "source:esolangs": 3153,
     "unclassified": 2097,
     "group:esoteric": 126,
-    "group:chinese": 58,
-    "group:education": 26,
+    "group:chinese": 49,
+    "group:education": 24,
     "group:golf": 20,
     "group:markup_data": 19,
     "group:template": 12,
     "group:data_science": 10,
-    "group:quantum": 10,
     "group:binary_data": 9,
+    "group:quantum": 9,
     "group:academic": 8,
-    "group:dsl_query": 8,
     "group:functional": 8,
+    "group:dsl_query": 7,
     "group:assembly_dialects": 7,
     "group:logic_constraint": 7,
-    "group:misc": 7,
     "group:ancient": 6,
+    "group:misc": 6,
     "group:concurrency": 5,
     "group:build_config": 4,
     "group:shell_os": 3,
@@ -37844,19 +37844,6 @@
       ]
     },
     {
-      "language": "Kodable",
-      "path": "hello/full/kodable/hello.kodable",
-      "extension": ".kodable",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "KUBO",
       "path": "hello/full/kubo/hello.kubo",
       "extension": ".kubo",
@@ -37867,19 +37854,6 @@
       ],
       "source": [
         "builtin:education"
-      ]
-    },
-    {
-      "language": "LinkQL",
-      "path": "hello/full/linkql/hello.linkql",
-      "extension": ".linkql",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
       ]
     },
     {
@@ -38175,19 +38149,6 @@
       ]
     },
     {
-      "language": "Piston",
-      "path": "hello/full/piston/hello.piston",
-      "extension": ".piston",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "builtin:misc"
-      ]
-    },
-    {
       "language": "PL-360",
       "path": "hello/full/pl-360/hello.pl_360",
       "extension": ".pl_360",
@@ -38333,19 +38294,6 @@
       ]
     },
     {
-      "language": "Quantum Assembly Language",
-      "path": "hello/full/quantum-assembly-language/hello.quantum_assembly_language",
-      "extension": ".quantum_assembly_language",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "Rez",
       "path": "hello/core/rez/hello.r",
       "extension": ".r",
@@ -38373,19 +38321,6 @@
       "language": "Ready",
       "path": "hello/full/ready/hello.ready",
       "extension": ".ready",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "RoboCode",
-      "path": "hello/full/robocode/hello.robocode",
-      "extension": ".robocode",
       "kind": "program",
       "reason": "group:education",
       "groups": [
@@ -38799,71 +38734,6 @@
       ]
     },
     {
-      "language": "\u4e2d\u6587BASIC",
-      "path": "hello/full/\u4e2d\u6587basic/hello.\u4e2d\u6587basic",
-      "extension": ".\u4e2d\u6587basic",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u4e2d\u6587C",
-      "path": "hello/full/\u4e2d\u6587c/hello.\u4e2d\u6587c",
-      "extension": ".\u4e2d\u6587c",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u4e2d\u6587C++",
-      "path": "hello/full/\u4e2d\u6587c++/hello.\u4e2d\u6587c++",
-      "extension": ".\u4e2d\u6587c++",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u4e2d\u6587FoxPro",
-      "path": "hello/full/\u4e2d\u6587foxpro/hello.\u4e2d\u6587foxpro",
-      "extension": ".\u4e2d\u6587foxpro",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u4e2d\u6587Java",
-      "path": "hello/full/\u4e2d\u6587java/hello.\u4e2d\u6587java",
-      "extension": ".\u4e2d\u6587java",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
       "language": "\u4e2d\u6587Pascal",
       "path": "hello/full/\u4e2d\u6587pascal/hello.\u4e2d\u6587pascal",
       "extension": ".\u4e2d\u6587pascal",
@@ -38997,19 +38867,6 @@
       "language": "\u4ed3\u9889\u7f16\u7a0b",
       "path": "hello/full/\u4ed3\u9889\u7f16\u7a0b/hello.\u4ed3\u9889\u7f16\u7a0b",
       "extension": ".\u4ed3\u9889\u7f16\u7a0b",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u4ed3\u9889\u8bed\u8a00",
-      "path": "hello/full/\u4ed3\u9889\u8bed\u8a00/hello.\u4ed3\u9889\u8bed\u8a00",
-      "extension": ".\u4ed3\u9889\u8bed\u8a00",
       "kind": "program",
       "reason": "group:chinese",
       "groups": [
@@ -39332,19 +39189,6 @@
       ]
     },
     {
-      "language": "\u6c49\u5b57\u6b63\u5219",
-      "path": "hello/full/\u6c49\u5b57\u6b63\u5219/hello.\u6c49\u5b57\u6b63\u5219",
-      "extension": ".\u6c49\u5b57\u6b63\u5219",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
       "language": "\u6c49\u5b57\u7f16\u7a0b",
       "path": "hello/full/\u6c49\u5b57\u7f16\u7a0b/hello.\u6c49\u5b57\u7f16\u7a0b",
       "extension": ".\u6c49\u5b57\u7f16\u7a0b",
@@ -39387,32 +39231,6 @@
       "language": "\u6d2a\u8352",
       "path": "hello/full/\u6d2a\u8352/hello.\u6d2a\u8352",
       "extension": ".\u6d2a\u8352",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u706b\u661f\u6587\u7f16\u7a0b",
-      "path": "hello/full/\u706b\u661f\u6587\u7f16\u7a0b/hello.\u706b\u661f\u6587\u7f16\u7a0b",
-      "extension": ".\u706b\u661f\u6587\u7f16\u7a0b",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "\u706b\u661f\u8bed",
-      "path": "hello/full/\u706b\u661f\u8bed/hello.\u706b\u661f\u8bed",
-      "extension": ".\u706b\u661f\u8bed",
       "kind": "program",
       "reason": "group:chinese",
       "groups": [

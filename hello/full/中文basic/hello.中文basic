@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.中文basic]
 
-// Hello World!
-// Hello World!
+' 中文BASIC is a localised BASIC. Its PRINT and END are the two
+' keywords every one of these builds has, whatever it calls
+' its own extensions.
+CLS
+PRINT "Hello World!"
+END

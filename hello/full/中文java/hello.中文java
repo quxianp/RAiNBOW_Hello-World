@@ -3,7 +3,13 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.中文java]
 
-// Hello World!
-// Hello World!
+// 中文Java is Java with Chinese identifiers. Identifiers are the only
+// thing Java localises -- the keywords stay ASCII, because they are
+// lexer tokens rather than names -- so the class is named 你好 and
+// the greeting is printed by println as it always is.
+public class 你好 {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}

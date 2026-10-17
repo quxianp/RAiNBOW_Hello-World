@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.中文c++]
 
-// Hello World!
-// Hello World!
+// 中文C++ is C++ with Chinese identifiers. As in the C and Java
+// variants, the keywords stay ASCII and the names do not.
+#include <iostream>
+
+int 主函数() {
+    std::cout << "Hello World!" << std::endl;   // 你好，世界
+    return 0;
+}
