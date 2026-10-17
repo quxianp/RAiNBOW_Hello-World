@@ -121,6 +121,11 @@ DOCS = [
      "output operation. Three shapes -- a full document, a man page whose "
      "greeting belongs under .SH NAME, and an M4 macro that prints its own "
      "definition unless you write dnl."),
+    ("../docs/languages/RUBY-AND-PHP.md", "The Ruby and PHP families",
+     "Two languages, several dialects each, and the same trap: the dialects are "
+     "close enough that a template copied between them loads and behaves "
+     "differently. Plus the opening tag, which in PHP is the entire difference "
+     "between PHP and a file that echoes its own source."),
     ("../docs/languages/PERL-FAMILY.md", "The Perl family",
      "Perl, Perl 6 and Raku differ in what a sigil means: in Raku $greeting is "
      "a container and string interpolation needs a method, so \"$greeting\" "
