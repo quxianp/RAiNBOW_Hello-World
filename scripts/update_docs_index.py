@@ -63,6 +63,41 @@ DOCS = [
     ("../data/LANGUAGES.md", "Language index",
      "All 7 326 files, grouped by what they contain rather than by directory. "
      "Generated; `scripts/language_table.py --check` fails if it is stale."),
+    ("../docs/languages/FORTRAN-AND-COBOL.md", "Fortran and COBOL families",
+     "Nine Fortran entries, five of which a single inherited program would get "
+     "wrong: fixed form puts the statement number in columns 1-6 and the verb "
+     "in column 7, and free form dropped all of it."),
+    ("../docs/languages/ASSEMBLY.md", "Assembly families",
+     "Eighty-odd entries, each with its own syscall convention -- and that "
+     "convention is the program. Plus the object formats, three of which carry "
+     "checksums."),
+    ("../docs/languages/PROVERS-AND-SOLVERS.md",
+     "Provers, model checkers and solvers",
+     "Three families that look alike on the language bar and none of which can "
+     "print. Coq gets a definition, NuSMV an INVARSPEC, MiniZinc an output "
+     "declaration, and CSP a file that says it has neither."),
+    ("../docs/languages/SQL-AND-QUERIES.md", "SQL and query languages",
+     "Fourteen entries where the keyword is sometimes SELECT, sometimes RETURN "
+     "and sometimes PRINT, and two of which cannot print at all."),
+    ("../docs/languages/CONFIG-FILES.md", "Build, package and CI configuration",
+     "The declaration-form exemption, why it keys on the extension, and why the "
+     "guard has to run in both directions."),
+    ("../docs/languages/BLOCK-LANGUAGES.md", "Visual and block languages",
+     "Seventy entries whose programs are dragged and whose project files are "
+     "JSON. Writing Python into a Scratch project passes every check here and "
+     "Scratch cannot open it."),
+    ("../docs/languages/LISP.md", "The Lisp families",
+     "Ten entries whose entire difference is whether the language appends the "
+     "newline itself."),
+    ("../docs/languages/GOLF.md", "Golf and concatenative languages",
+     "Sixty entries whose canonical program is one to fifteen characters, in "
+     "three shapes -- and Actually, whose whole program is fifteen + "
+     "characters."),
+    ("../docs/languages/MARKUP-AND-DOCUMENTS.md",
+     "Markup, prose and documents",
+     "Four shapes of document, and the one that is not what it looks like: a "
+     "binary format gains a greeting by putting it in the field the format "
+     "itself accepts."),
     ("FAQ.md", "Frequently asked questions",
      "Why the bar looks grey, why COBOL is missing, which of 694 and 631 is "
      "right, and whether all the files actually run."),
