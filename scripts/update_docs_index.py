@@ -121,6 +121,23 @@ DOCS = [
      "output operation. Three shapes -- a full document, a man page whose "
      "greeting belongs under .SH NAME, and an M4 macro that prints its own "
      "definition unless you write dnl."),
+    ("../docs/languages/GIT-FORMATS.md", "The git formats",
+     "Six entries that are not languages and never were. Three shapes for six "
+     "files: pattern lists (.gitattributes, .gitignore, .gitrevlist), a "
+     "key/value file (.gitconfig), and messages (COMMIT_EDITMSG, "
+     ".gitmodules) -- and # is the comment marker in all six, so a greeting in "
+     "a comment is not a workaround."),
+    ("../docs/languages/PYTHON-FAMILY.md", "The Python family",
+     "Fourteen entries of which one is CPython. PyPy is an implementation and "
+     "has no file format of its own; Cython and Jython compile to something "
+     "else and should show what the compilation adds; and a .pyi is a type "
+     "stub, where an ellipsis body is the format rather than a degraded "
+     "Hello World."),
+    ("../docs/languages/PASCAL-AND-ADA.md", "The Pascal and Ada families",
+     "Eleven entries, two languages, two traps: Pascal says program and Ada "
+     "says procedure, and the semicolon goes after `end` in one and after the "
+     "name inside it in the other. Plus the .gpr file, which is a project "
+     "declaration rather than a program."),
     ("../docs/languages/LOGIC-PROGRAMMING.md", "The logic-programming family",
      "Prolog has no print in its language proper -- write/1 is a library "
      "predicate and the program is a set of rules. Mercury adds type "
