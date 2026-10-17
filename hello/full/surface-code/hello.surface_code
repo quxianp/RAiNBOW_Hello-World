@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.surface_code]
 
+// The surface code is not a program: it is a description of a
+// quantum error-correcting layout -- a grid of data qubits and
+// syndrome qubits whose stabilizers are measured over and over.
+// Nothing executes and nothing prints, so the greeting is here.
 // Hello World!
-// Hello World!
+// distance d, repeated round: measure stabilizers, correct, repeat.

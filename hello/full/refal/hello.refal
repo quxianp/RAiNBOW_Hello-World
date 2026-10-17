@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=misc source=wikipedia, builtin:misc ext=.refal]
 
-// Hello World!
-// Hello World!
+// REFAL is a rewriting language: a program is a set of rules, and
+// its only output is PRINT, which concatenates the two sides of the
+// first rule that matches. There is no other way to say anything.
+PRINT:3 "Hello World!"

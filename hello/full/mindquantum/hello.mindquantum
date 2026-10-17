@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.mindquantum]
 
-// Hello World!
-// Hello World!
+# MindQuantum is a Python quantum computing framework, so its Hello
+# World is a Python program. The mindq object is what holds a
+# circuit, and it is what MindQuantum's tutorials greet you with.
+from mindquantum import MQ
+print("Hello World!")

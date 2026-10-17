@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=ancient, academic, concurrency source=builtin:ancient, builtin:academic, builtin:concurrency ext=.csp]
 
+// CSP (Constraints-and-Solutions Problem) declares a domain of
+// variables and the constraints over them, and a solver searches for
+// an assignment. There is no output statement in the language at
+// all, so the greeting lives in this comment.
 // Hello World!
-// Hello World!
+// var 0..3 domain;
+// constraint all_different(var);

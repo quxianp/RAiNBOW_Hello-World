@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=education source=builtin:education ext=.ren_s_py]
 
-// Hello World!
-// Hello World!
+# Ren's Py is the Python-like teaching language from a series of
+# tutorials; its whole point is that `print` is the only thing you
+# need.
+print("Hello World!")

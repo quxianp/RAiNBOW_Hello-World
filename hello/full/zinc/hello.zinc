@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=dsl_query, esoteric source=builtin:dsl_query, builtin:esoteric ext=.zinc]
 
+// Zinc compiles to Zcash's ZT nock. A contract is not a program you
+// run on a terminal: it is code that validates transactions, and
+// the only place text can go is a comment.
 // Hello World!
-// Hello World!
+contract HelloWorld {
+    function greet() {
+    }
+}

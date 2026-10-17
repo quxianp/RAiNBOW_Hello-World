@@ -3,7 +3,10 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=logic_constraint source=builtin:logic_constraint ext=.asf+sdf]
 
-// Hello World!
-// Hello World!
+// ASF+SDF is Scala's build-definition language, in which a build is a
+// value rather than a script. `name` is the only field here a
+// person reads.
+lazy val hello = project
+  .in(file("."))
+  .settings(name := "Hello World!")

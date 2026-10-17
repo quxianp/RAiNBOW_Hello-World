@@ -1,36 +1,36 @@
 {
   "generated_by": "scripts/classify_placeholders.py",
   "total_files": 7326,
-  "without_program": 5648,
+  "without_program": 5624,
   "counts": {
     "binary": 9,
     "document": 46,
     "esolang": 3279,
-    "program": 217,
+    "program": 193,
     "unknown": 2097
   },
   "reasons": {
     "source:esolangs": 3153,
     "unclassified": 2097,
     "group:esoteric": 126,
-    "group:chinese": 59,
-    "group:education": 30,
-    "group:golf": 23,
+    "group:chinese": 58,
+    "group:education": 27,
+    "group:golf": 21,
     "group:markup_data": 19,
-    "group:quantum": 16,
-    "group:academic": 14,
-    "group:dsl_query": 13,
     "group:template": 12,
     "group:assembly_dialects": 12,
+    "group:dsl_query": 11,
+    "group:academic": 10,
     "group:data_science": 10,
-    "group:misc": 10,
+    "group:quantum": 10,
     "group:binary_data": 9,
-    "group:logic_constraint": 9,
-    "group:ancient": 9,
+    "group:misc": 9,
     "group:functional": 8,
+    "group:ancient": 7,
+    "group:logic_constraint": 7,
     "group:concurrency": 5,
-    "group:blockchain": 5,
     "group:build_config": 4,
+    "group:blockchain": 4,
     "group:shell_os": 3,
     "type:data": 1,
     "type:programming": 1
@@ -37252,32 +37252,6 @@
       ]
     },
     {
-      "language": "AQASM",
-      "path": "hello/full/aqasm/hello.aqasm",
-      "extension": ".aqasm",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "ASF+SDF",
-      "path": "hello/full/asf+sdf/hello.asf+sdf",
-      "extension": ".asf+sdf",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "builtin:logic_constraint"
-      ]
-    },
-    {
       "language": "Babylon",
       "path": "hello/full/babylon/hello.babylon",
       "extension": ".babylon",
@@ -37490,19 +37464,6 @@
       ]
     },
     {
-      "language": "CK-12",
-      "path": "hello/full/ck-12/hello.ck_12",
-      "extension": ".ck_12",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
       "language": "COFF",
       "path": "hello/full/coff/hello.coff",
       "extension": ".coff",
@@ -37525,23 +37486,6 @@
         "concurrency"
       ],
       "source": [
-        "builtin:concurrency"
-      ]
-    },
-    {
-      "language": "CSP",
-      "path": "hello/full/csp/hello.csp",
-      "extension": ".csp",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "academic",
-        "concurrency"
-      ],
-      "source": [
-        "builtin:ancient",
-        "builtin:academic",
         "builtin:concurrency"
       ]
     },
@@ -37620,22 +37564,6 @@
         "functional"
       ],
       "source": [
-        "builtin:functional"
-      ]
-    },
-    {
-      "language": "ETA",
-      "path": "hello/full/eta/hello.eta",
-      "extension": ".eta",
-      "kind": "program",
-      "reason": "group:ancient",
-      "groups": [
-        "ancient",
-        "functional"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:ancient",
         "builtin:functional"
       ]
     },
@@ -37755,19 +37683,6 @@
       ],
       "source": [
         "builtin:dsl_query"
-      ]
-    },
-    {
-      "language": "Flow Cadence",
-      "path": "hello/full/flow-cadence/hello.flow_cadence",
-      "extension": ".flow_cadence",
-      "kind": "program",
-      "reason": "group:blockchain",
-      "groups": [
-        "blockchain"
-      ],
-      "source": [
-        "builtin:blockchain"
       ]
     },
     {
@@ -38061,19 +37976,6 @@
       ]
     },
     {
-      "language": "Lattice Surgery",
-      "path": "hello/full/lattice-surgery/hello.lattice_surgery",
-      "extension": ".lattice_surgery",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "LinkQL",
       "path": "hello/full/linkql/hello.linkql",
       "extension": ".linkql",
@@ -38150,33 +38052,6 @@
         "logic_constraint"
       ],
       "source": [
-        "builtin:logic_constraint"
-      ]
-    },
-    {
-      "language": "MindQuantum",
-      "path": "hello/full/mindquantum/hello.mindquantum",
-      "extension": ".mindquantum",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "MiniKanren",
-      "path": "hello/full/minikanren/hello.minikanren",
-      "extension": ".minikanren",
-      "kind": "program",
-      "reason": "group:logic_constraint",
-      "groups": [
-        "logic_constraint"
-      ],
-      "source": [
-        "wikipedia",
         "builtin:logic_constraint"
       ]
     },
@@ -38365,19 +38240,6 @@
       ]
     },
     {
-      "language": "Opensearch",
-      "path": "hello/full/opensearch/hello.opensearch",
-      "extension": ".opensearch",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query"
-      ],
-      "source": [
-        "builtin:dsl_query"
-      ]
-    },
-    {
       "language": "Orquest",
       "path": "hello/full/orquest/hello.orquest",
       "extension": ".orquest",
@@ -38388,45 +38250,6 @@
       ],
       "source": [
         "builtin:quantum"
-      ]
-    },
-    {
-      "language": "PennyLane",
-      "path": "hello/full/pennylane/hello.pennylane",
-      "extension": ".pennylane",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
-      "language": "Pi Calculus",
-      "path": "hello/full/pi-calculus/hello.pi_calculus",
-      "extension": ".pi_calculus",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
-      "language": "pi-calculus",
-      "path": "hello/full/pi-calculus-1/hello.pi_calculus",
-      "extension": ".pi_calculus",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
       ]
     },
     {
@@ -38681,19 +38504,6 @@
       ]
     },
     {
-      "language": "Quil",
-      "path": "hello/full/quil/hello.quil",
-      "extension": ".quil",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "Rez",
       "path": "hello/core/rez/hello.r",
       "extension": ".r",
@@ -38721,33 +38531,6 @@
       "language": "Ready",
       "path": "hello/full/ready/hello.ready",
       "extension": ".ready",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "REFAL",
-      "path": "hello/full/refal/hello.refal",
-      "extension": ".refal",
-      "kind": "program",
-      "reason": "group:misc",
-      "groups": [
-        "misc"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:misc"
-      ]
-    },
-    {
-      "language": "Ren's Py",
-      "path": "hello/full/ren-s-py/hello.ren_s_py",
-      "extension": ".ren_s_py",
       "kind": "program",
       "reason": "group:education",
       "groups": [
@@ -38957,32 +38740,6 @@
       ]
     },
     {
-      "language": "sProp",
-      "path": "hello/full/sprop/hello.sprop",
-      "extension": ".sprop",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
-      "language": "Surface code",
-      "path": "hello/full/surface-code/hello.surface_code",
-      "extension": ".surface_code",
-      "kind": "program",
-      "reason": "group:quantum",
-      "groups": [
-        "quantum"
-      ],
-      "source": [
-        "builtin:quantum"
-      ]
-    },
-    {
       "language": "Swen",
       "path": "hello/full/swen/hello.swen",
       "extension": ".swen",
@@ -39091,20 +38848,6 @@
       ]
     },
     {
-      "language": "Tip",
-      "path": "hello/full/tip/hello.tip",
-      "extension": ".tip",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "esolangs",
-        "builtin:golf"
-      ]
-    },
-    {
       "language": "TRAC",
       "path": "hello/full/trac/hello.trac",
       "extension": ".trac",
@@ -39168,59 +38911,6 @@
       ],
       "source": [
         "builtin:functional"
-      ]
-    },
-    {
-      "language": "Unicode\u4e2d\u6587",
-      "path": "hello/full/unicode\u4e2d\u6587/hello.unicode\u4e2d\u6587",
-      "extension": ".unicode\u4e2d\u6587",
-      "kind": "program",
-      "reason": "group:chinese",
-      "groups": [
-        "chinese"
-      ],
-      "source": [
-        "builtin:chinese"
-      ]
-    },
-    {
-      "language": "UNITY",
-      "path": "hello/full/unity/hello.unity",
-      "extension": ".unity",
-      "kind": "program",
-      "reason": "group:education",
-      "groups": [
-        "education"
-      ],
-      "source": [
-        "wikipedia",
-        "builtin:education"
-      ]
-    },
-    {
-      "language": "VeriCert",
-      "path": "hello/full/vericert/hello.vericert",
-      "extension": ".vericert",
-      "kind": "program",
-      "reason": "group:academic",
-      "groups": [
-        "academic"
-      ],
-      "source": [
-        "builtin:academic"
-      ]
-    },
-    {
-      "language": "Vision",
-      "path": "hello/full/vision/hello.vision",
-      "extension": ".vision",
-      "kind": "program",
-      "reason": "group:golf",
-      "groups": [
-        "golf"
-      ],
-      "source": [
-        "builtin:golf"
       ]
     },
     {
@@ -39291,21 +38981,6 @@
       ],
       "source": [
         "builtin:logic_constraint",
-        "builtin:esoteric"
-      ]
-    },
-    {
-      "language": "Zinc",
-      "path": "hello/full/zinc/hello.zinc",
-      "extension": ".zinc",
-      "kind": "program",
-      "reason": "group:dsl_query",
-      "groups": [
-        "dsl_query",
-        "esoteric"
-      ],
-      "source": [
-        "builtin:dsl_query",
         "builtin:esoteric"
       ]
     },

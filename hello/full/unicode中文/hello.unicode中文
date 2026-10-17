@@ -3,7 +3,12 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=chinese source=builtin:chinese ext=.unicode中文]
 
+// Unicode中文: the language is a list of code points, so a program
+// that says hello is a list of the code points of the greeting.
 // Hello World!
-// Hello World!
+U+0048 U+0065 U+006C U+006C U+006F
+U+0020
+U+0057 U+006F U+0072 U+006C U+0064 U+0021
+
+中文: 你好，世界！

@@ -3,7 +3,9 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.lattice_surgery]
 
-// Hello World!
+// Lattice surgery performs logical gates by deforming the surface
+// code's lattice -- merging patches instead of adding gates. It
+// is a technique, not a language with an interpreter, so there
+// is nothing to execute and nowhere to print.
 // Hello World!

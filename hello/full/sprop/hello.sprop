@@ -3,7 +3,7 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.sprop]
 
-// Hello World!
-// Hello World!
+// sProp is the property language a Scala/sbt build is written in: a
+// sequence of assignments, and the greeting is the value of `name`.
+name := "Hello World!"

@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=academic source=builtin:academic ext=.pi_calculus]
 
-// Hello World!
-// Hello World!
+// The pi calculus is a calculus of mobile processes: a process
+// creates a channel and sends a value on it. Nothing is printed;
+// the value moves.
+new(chan!("Hello World!"));

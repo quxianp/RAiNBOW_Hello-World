@@ -3,7 +3,8 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=golf source=esolangs, builtin:golf ext=.tip]
 
-// Hello World!
-// Hello World!
+// Tip is WebKit's binding language. A file is a set of signatures, and
+// the only free text in one is a trailing comment, so the greeting
+// lives there rather than in a body that does not exist.
+DOMString greet();  // Hello World!

@@ -3,7 +3,11 @@
 //   layer      : full (byte-balanced rainbow bar)
 //   upstream   : https://github.com/quxianp/RAiNBOW_Hello-World
 //   reference  : see https://esolangs.org/ and https://rosettacode.org/
-//   admission  : programming language; a program belongs here and has not been written yet [kind=program groups=quantum source=builtin:quantum ext=.quil]
 
+// Quil has no output instruction. A program declares classical
+// registers, prepares qubits and measures into them; the numbers
+// come back to the host, not out of a printer.
 // Hello World!
-// Hello World!
+DECLARE ro BIT[1]
+H 0
+MEASURE 0 ro[0]
