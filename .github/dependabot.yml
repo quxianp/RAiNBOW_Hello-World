@@ -1,0 +1,45 @@
+# Dependabot keeps the one real dependency chain current.
+#
+# What this repository depends on:
+#
+#   actions/checkout      fetches the tree
+#   actions/setup-python  provides the interpreter the scripts run on
+#   astral-sh/setup-uv   (not used -- the scripts are standard library only)
+#   ffmpeg, vhs           installed by scripts/record_demo.sh, not by Actions
+#
+# There is no package.json, no requirements.txt and no lockfile on purpose:
+# every script under scripts/ and every test under tests/ imports only the
+# Python standard library. That is a deliberate constraint rather than an
+# accident, and it is why this file has three entries instead of thirty.
+#
+# The weekly group is the point. A pinned action that has drifted by four
+# months is how a repository ends up running a version nobody chose.
+
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Etc/UTC
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - ci
+    commit-message:
+      prefix: "ci(deps)"
+    groups:
+      actions:
+        patterns:
+          - "*"
+
+# There is deliberately no second entry. The obvious one to add is `docker`,
+# for the ffmpeg and vhs that scripts/record_demo.sh downloads -- but this
+# repository has no Dockerfile, and a Dependabot ecosystem pointed at a
+# directory with no manifest fails the whole configuration rather than
+# skipping quietly. ffmpeg and vhs are pinned by version inside
+# scripts/record_demo.sh instead, and tests/test_demo_assets.py checks the
+# assets those versions produced.
